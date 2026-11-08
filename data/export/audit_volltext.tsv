@@ -7478,7 +7478,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 222049	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1
 222050	kein Ort						
 222050-01 ST	nur in Anlagen genannt, nicht verortet						
-222050-02	nur in Anlagen genannt, nicht verortet						
 222050-03	nur in Anlagen genannt, nicht verortet						
 222052	Titel ohne gemeinsamen Ort, nicht verortet						
 222053	kein Ort						
@@ -12008,6 +12007,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241401	kein Ort						
 241402	Titel ohne gemeinsamen Ort, nicht verortet						
 241407	kein Ort						
+241409	nur in Anlagen genannt, nicht verortet						
 241412	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
 241414	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
 241414	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	1
@@ -14366,6 +14366,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253931-01 ST	kein Ort						
 253932	kein Ort						
 253932-01 ST	kein Ort						
+253934	kein Ort						
 253935	Liste (10 Ortsteile), nicht verortet	Hauptteil					
 253936	nur in Anlagen genannt, nicht verortet						
 253937	kein Ort						

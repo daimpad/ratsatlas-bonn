@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 705,
+  "count": 704,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -43249,6 +43249,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, wie die Gehwegbreiten im Gebiet WestSide geplant wurden. Der Vorhabenträger baut die Wege nach einem Vertrag von 2017 – auf eigene Kosten. Der Gehweg von Am Propsthof ist 2,20 Meter breit und entspricht den damaligen Regeln.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -44936,6 +44941,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion fragt die Verwaltung: Stehen Teile des Steinwegs im Privatbesitz? Kann dort ohne Grundbuchänderung eine Fahrradstraße eingerichtet werden? Was bedeutet es, wenn die Stadt keine Nutzungsrechte im Grundbuch hat? Darf Anwohnern das Parken auf ihrem Bürgersteig verboten werden, auch ohne Sondernutzungsrecht der Stadt? Betroffen ist der Steinweg.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -45279,6 +45289,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion beantragt, am Viorel-Păun-Platz in Endenich eine Gedenktafel für die neun Opfer des rassistischen Anschlags von Hanau aufzustellen. Die Kosten sollen aus dem Feuerwehrtopf übernommen werden. Die Tafel soll nach Abschluss der Bauarbeiten am Platz angebracht werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -45432,6 +45447,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion beantragt, dass die Verwaltung Pläne vorlegt, um die Gehwege der Theodor-Litt-Straße zwischen Hermann-Wandersleb-Ring und Euskirchener Straße ohne Umbau barrierefrei nutzbar zu machen. Sie sollen mindestens 1,50 Meter breit für Fußgänger freigehalten werden. Der Abschnitt ist aktuell für mobilitätseingeschränkte Menschen schwer passierbar.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -45710,6 +45730,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion fragt nach den Methoden zur Erfassung von Verkehrsdaten auf dem Hermann-Wandersleb-Ring. Die Verwaltung antwortet: Vor dem Verkehrsversuch wurden 16.500 ÖPNV-Fahrgäste modellbasiert ermittelt, 1.400 Radfahrende und 26.000 Kfz durch Zählungen im Juli 2019. Aktuell werden Rad- und Kfz-Verkehr per Video erfasst, ÖPNV-Daten liefert die SWB. Der Erfolg wird anhand Verkehrsstärken, Umgehungsverkehren, Sicherheit und Fahrzeiten bewertet. Die Auswertung soll Anfang 2024 vorliegen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -45860,6 +45885,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion fragt nach der Möglichkeit einer Fahrradstraße im Steinweg. Die Verwaltung kann die Fragen aktuell nicht beantworten, weil interne Abstimmungen fehlen, und bittet um Aufschub. Es handelt sich um eine Stellungnahme der Verwaltung.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -46182,6 +46212,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Bezirksfraktion hatte die Erneuerung der Straßenbeleuchtung Auf dem Hügel gefordert. Die Verwaltung teilt mit, dass die Arbeiten zwischen Kreisverkehr und Siemensstraße bereits begonnen haben und bis Ende März 2024 abgeschlossen sein sollen. Auch zwei Laternen nahe der S-Bahn-Station werden erneuert.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -46315,6 +46350,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Bezirksfraktion hatte den Ausbau der Gehwege in der Effertzstraße gefordert. Die Verwaltung teilt mit, dass dies wegen Personalmangels erst 2027 oder 2028 möglich ist. Bis dahin werden die Gehwege instand gehalten.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -46457,6 +46497,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über den geplanten Neubau und Ausbau der Offenen Ganztagsschule (OGS) an der Matthias-Claudius-Schule. Sie bestätigt, dass erste Planungen laufen, eine Machbarkeitsstudie bald beginnt und eine Übergangslösung für die Mensa geprüft wird. Das Gelände am Cöllenhof soll für die Erweiterung genutzt werden. Die Bezirksvertretung soll die Stellungnahme zur Kenntnis nehmen und den Bürgerantrag damit als abgeschlossen betrachten.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -46607,6 +46652,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen und unabhängige Fraktionen fragten nach der Beleuchtung an der Straße Am Propsthof. Die Verwaltung teilt mit, dass dort alte Laternenmasten und Leuchtenköpfe ausgetauscht und vereinheitlicht werden. Die Arbeiten sollen voraussichtlich im zweiten Quartal 2024 stattfinden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -46743,6 +46793,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, warum sie keine Fußgänger-Überwege in der geplanten Fahrradstraße Röckumstraße einrichten will. Sie sieht keine ausreichende Bündelung von Fußgängern oder nötige Verkehrsstärken und hält die baulichen Voraussetzungen für nicht gegeben. Die Verwaltung empfiehlt, den Bürgerantrag abzulehnen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -46964,6 +47019,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt zu einem Bürgerantrag, dass eine neue Fußgängerquerung an der Endenicher Allee nahe Campusallee, Wiesenweg und Schubertstraße nicht möglich ist. Sie lehnt den Vorschlag ab, weil bestehende Regeln und Pläne dagegenstehen und keine Mittel für Umbauten da sind. Der Antrag soll abgelehnt und der Antragsteller informiert werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -47107,6 +47167,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, warum ein Zebrastreifen an der Endenicher Straße nicht möglich ist: Die Verkehrsregeln erlauben ihn dort nicht, weil zu wenige Autos fahren. Stattdessen schlägt der Antragsteller Parkverbote vor, doch die Verwaltung rät auch davon ab – Parkplätze werden gebraucht, und es gibt keine Hinweise auf gefährliche Situationen. Sie empfiehlt, den Antrag abzulehnen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -47277,6 +47342,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass die Entwässerung der Autobahn 565 technisch veraltet ist. Beim Ausbau auf sechs Spuren soll ein modernes System mit Filterbecken gebaut werden. Kurzfristig ist ein größeres Rückhaltebecken mit Wasserreinigung geplant. Die Planungen werden mit der Autobahn GmbH abgestimmt. Betroffen sind der Endenicher und Rheindorfer Bach.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -47399,6 +47469,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion beantragt, zwei historische Wegekreuze in der Röckumstraße instand zu setzen. Eines an der Ecke zur Sebastianstraße soll saniert, ein anderes am Kapellenweg wieder aufgestellt werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -47546,6 +47621,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion fragt nach der Erfassung des Verkehrs auf dem Hermann-Wandersleb-Ring. Sie will wissen, wie vor und während des Verkehrsversuchs die Zahlen zu ÖPNV-Fahrgästen, Radfahrenden (1.400) und Autos (26.000) erhoben wurden. Außerdem fragt sie nach den Erfolgskriterien und dem Zeitplan der Auswertung.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -47851,6 +47931,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Bezirksfraktion beantragt, die Gehwege an der Effertzstraße zwischen Steinweg und Hermann-Wandersleb-Ring beidseitig mit Gehwegplatten zu erneuern oder zumindest provisorisch mit neuem Asphalt zu versehen. Die Westseite soll erstmals einen ordnungsgemäßen Belag erhalten. Die Maßnahme betrifft Anwohner und Fußgänger vor Ort.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -47998,6 +48083,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen im Bezirksrat fragen, warum die neuen Gehwege im Neubaugebiet WestSide schmaler als die empfohlenen 2,50 Meter gebaut wurden. Sie nennen die Simone-Veil-Straße und den Václav-Havel-Platz als betroffene Orte. Die Anfrage bezieht sich auf die Vorgaben des Regelwerks für Straßenbau.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -48176,6 +48266,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion fragt nach dem Stand der Beleuchtung in der Hainstraße und Provinzialstraße. Die Verwaltung erklärt, dass die Planung wegen eines geplanten Regenrückhaltebeckens und Verhandlungen mit der Autobahn GmbH noch nicht abgeschlossen ist. Eine Beleuchtung wird derzeit von der Autobahn GmbH abgelehnt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -57236,210 +57331,6 @@
    },
    "kurzfassung": {
     "text": "Die Verwaltung teilt mit, dass der Bürgersteig in der Hainstraße am Friedhof auf 1,60 Meter verbreitert und erneuert wurde. Die Bäume blieben erhalten, doch eine weitere Verbreiterung ist wegen des gesetzlichen Alleenschutzes nicht möglich. Zudem wird die angrenzende Grünfläche in eine Blühwiese umgewandelt.",
-    "modell": "mistral-large-latest",
-    "erzeugt": "2026-11-06"
-   }
-  },
-  {
-   "reference": "230981",
-   "name": "Informationsbrief: Veränderte Verkehrsregelung in der Max-Bruch-Straße",
-   "paper_type": "Informationsbrief",
-   "date": "2023-05-17",
-   "amt": "Stabsstellle Bürgerbeteiligung",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012280",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2519908&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "Stabsstellle Bürgerbeteiligung",
-     "name": "Stabsstellle Bürgerbeteiligung"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/321",
-     "method": "paper_type",
-     "evidence": "Informationsbrief",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Ausschuss für Mobilität und Verkehr",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    },
-    {
-     "position": 1,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Rat",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    },
-    {
-     "position": 2,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    },
-    {
-     "position": 3,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": null,
-     "gremium": "Hauptausschuss",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    }
-   ],
-   "superordinated": [],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Max-Bruch-Straße",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.078083,
-     "lat": 50.726372,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Max-Bruch-Straße",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
-   "stand": "offen",
-   "themes": [
-    {
-     "theme": "verkehr",
-     "method": "gremium",
-     "evidence": "Ausschuss für Mobilität und Verkehr",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Informationsbrief",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2023-05-17",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Ausschuss für Mobilität und Verkehr",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
-     "typ": "beratung",
-     "label": "Rat",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
-     "typ": "beratung",
-     "label": "Hauptausschuss",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    }
-   ],
-   "soll": {
-    "verfahren": "mitteilung",
-    "sicherheit": "hoch",
-    "grund": "Vorlagenart „Informationsbrief“",
-    "passung": "passt",
-    "ist": [
-     "aus",
-     "bv",
-     "rat"
-    ],
-    "abweichung": []
-   },
-   "kurzfassung": {
-    "text": "Die Stadt Bonn informiert Anwohner der Max-Bruch-Straße über neue Verkehrsregeln. Ab sofort ist Parken auf beiden Gehwegen verboten, um die Mindestbreite von 1,50 Metern freizuhalten. Stattdessen darf nur noch einseitig am Fahrbahnrand geparkt werden. Kontrollen beginnen ab Juni 2023 mit Bußgeldern.",
     "modell": "mistral-large-latest",
     "erzeugt": "2026-11-06"
    }
@@ -96000,6 +95891,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung und die Stadtwerke Bonn antworten auf eine Anfrage: Wasserstoff ist ein wichtiger Baustein der Energiewende. Eine Arbeitsgruppe prüft mögliche Nutzungen, etwa in der Müllverbrennungsanlage oder für Fahrzeuge. Eine Wasserstoffstrategie wird entwickelt. Die Stadtwerke sind Mitglied im Netzwerk HyCologne.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {
@@ -122087,6 +121983,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, die Fällung einer Himalaja-Zeder auf einem Grundstück am Steinweg zu erlauben. Der Baum steht zu nah am Haus und hebt den Gehweg an, weshalb er entfernt werden soll. Als Ersatz muss ein junger, heimischer Laubbaum gepflanzt werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-07"
    }
   },
   {

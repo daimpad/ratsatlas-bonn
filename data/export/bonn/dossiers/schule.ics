@@ -6,19 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sitzungen Rat\, Ausschüsse und Bezirksvertretungen Bonn
 X-WR-TIMEZONE:Europe/Berlin
 BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005745
-DTSTAMP:20261008T160000Z
-DTSTART:20261008T160000Z
-DTEND:20261008T162800Z
-SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
-DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
- be\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=
- 2005745\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=1
- 08&DOLFDNR=3222207&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
-STATUS:CONFIRMED
-URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005745
-END:VEVENT
-BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005621
 DTSTAMP:20261013T150000Z
 DTSTART:20261013T150000Z

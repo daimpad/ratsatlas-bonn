@@ -3,18 +3,26 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-hochkreuz</id>
 <title>Ratsatlas Bonn – Hochkreuz</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Hochkreuz</subtitle>
-<updated>2026-11-03T00:00:00Z</updated>
+<updated>2026-11-04T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-hochkreuz.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029639#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261775-01 ST FDP-Prüfauftrag: Oberirdische Zisternen als Sofortmaßnahme zur Wasserversorgung von Parks und als Löschwasserreserve</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261775-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029639"/>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030156#vorlage</id>
 <title>Neue Vorlage 261555-05 ST: BSW/SBI- Änderungsantrag: Optimierung der Toilettensituation im Bereich Herbert-Wehner-Platz/Haupteingang Rheinaue; Stellungnahme zu 261555-04AA</title>
 <updated>2026-11-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261555-05%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030156"/>
-<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029850#vorlage</id>
@@ -22,7 +30,7 @@
 <updated>2026-10-19T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261555-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029850"/>
-<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029639#vorlage</id>
@@ -30,7 +38,7 @@
 <updated>2026-10-15T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261775-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029639"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029886#vorlage</id>
@@ -38,7 +46,7 @@
 <updated>2026-10-14T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261555-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029886"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029702#vorlage</id>
@@ -46,7 +54,7 @@
 <updated>2026-10-01T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261555-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029702"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029360#vorlage</id>
@@ -62,7 +70,7 @@
 <updated>2026-09-16T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261425-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029038"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029226#vorlage</id>
@@ -74,7 +82,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029226#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 261207-01 AA Änderungsantrag CDU-SPD-FDP: Nutzungsänderung der Bauteile A und B1 von Büro- zur Wohnnutzung - Antrag zur Vorlage 261207</title>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 261207-01 AA Änderungsantrag CDU-SPD-FDP: Nutzungsänderung der Bauteile A und B1 von Büro- zur Wohnnutzung - Antrag zur Vorlage 261207</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261207-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029226"/>
@@ -742,7 +750,7 @@
 <updated>2024-01-30T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#240150"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015753"/>
-<summary>Informationsbrief · federführend: Stabsstellle Bürgerbeteiligung · Stand: offen</summary>
+<summary>Informationsbrief · federführend: Stabsstellle Bürgerbeteiligung · Stand: offen · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Stadt Bonn informiert Anwohner der Martin-Luther-King-Straße über Umbauarbeiten am Pumpwerk Haus Carstanjen. Der Gehweg vor der Bonn International School wird von März 2024 bis Januar 2025 gesperrt, eine Umleitung ist ausgeschildert. Die Arbeiten sind nötig, um die Abwasserbeseitigung zu sichern.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015697#vorlage</id>
@@ -750,7 +758,7 @@
 <updated>2024-01-24T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#231972-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015697"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die FDP- und BBB-Fraktion beantragen, die Planungsräume für Kindertagesstätten in Bonn neu zu gliedern. Die Verwaltung soll mit Kitas und Grundschulen zusammenarbeiten, um reale Einzugsgebiete zu ermitteln. Die Änderungen sollen in den Bedarfsplan 2023–2027 eingearbeitet werden.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015697#beratung-2024-01-24-Bezirksvertretung%20Beuel</id>
@@ -766,7 +774,7 @@
 <updated>2024-01-20T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#240029-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015586"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die FDP-Fraktion und andere beantragen, einen Kreisverkehr an der Kreuzung Ludwig-Erhard-Allee, Heinemannstraße und Herbert-Wehner-Platz in der Rheinaue zu prüfen. Die Verwaltung gibt ihre Einschätzung dazu ab und würde bei Zustimmung die Machbarkeit untersuchen. Der Ort liegt linksrheinisch.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2015476#vorlage</id>
@@ -782,7 +790,7 @@
 <updated>2023-12-22T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#232294"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015249"/>
-<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: entschieden</summary>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, eine neue Zufahrtsstraße nahe der Ludwig-Erhard-Allee in Bad Godesberg „Am Europäischen Wetterzentrum“ zu nennen. Die Straße erschließt das neue Gebäude des Europäischen Zentrums für mittelfristige Wettervorhersage. Die Bezirksvertretung kann eine Empfehlung abgeben, der Hauptausschuss entscheidet.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014789#beratung-2023-12-06-Bezirksvertretung%20Beuel</id>
@@ -795,14 +803,6 @@
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2014789#beratung-2023-11-28-Naturschutzbeirat</id>
 <title>Naturschutzbeirat: „nicht abgestimmt“ – 231582-02 AA FDP-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
-<updated>2023-11-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#231582-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014789"/>
-<summary>Anregung am 2023-11-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2014789#beratung-2023-11-28-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „ohne Votum“ – 231582-02 AA FDP-Änderungsantrag: Neufassung der Bonner Baumschutzsatzung (BSchS) Antrag zur Vorlage 231582</title>
 <updated>2023-11-28T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#231582-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014789"/>

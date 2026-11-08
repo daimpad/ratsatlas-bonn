@@ -3,17 +3,25 @@
 <id>tag:allris-bonn,2026:feed/vorlage/260787-01-st</id>
 <title>Vorlage 260787-01 ST: FDP-Große Anfrage: Bauliche Maßnahmen Heisterbachst. / Ecke Rheinufer</title>
 <subtitle>Verlauf der Vorlage 260787-01 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-09-21T00:00:00Z</updated>
+<updated>2026-11-04T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/260787-01-st.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#260787-01%20ST"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029172#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260787-01 ST FDP-Große Anfrage: Bauliche Maßnahmen Heisterbachst. / Ecke Rheinufer</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#260787-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029172"/>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029172#vorlage</id>
 <title>Neue Vorlage 260787-01 ST: FDP-Große Anfrage: Bauliche Maßnahmen Heisterbachst. / Ecke Rheinufer</title>
 <updated>2026-09-21T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#260787-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029172"/>
-<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: in Beratung</summary>
 </entry>
 </feed>
