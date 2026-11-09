@@ -1748,7 +1748,8 @@
         <br><span class="meta">Fundstelle: „${esc(x.evidence)}“</span>
         ${planIndexUrl() ? `<br><button type="button" class="link-btn" data-open-plan="${esc(x.nr)}">Planchronik öffnen</button>` : ""}</li>`).join("")}</ul>` : ""}
       <p class="links">${link(reportLink(p), "Verortung falsch? Hinweis geben", "btn btn-secondary")}
-        ${hasPaperFeed(p) ? `<a class="btn btn-soft" href="${BONN}feeds/vorlagen/${slug(p.reference)}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Diesen Vorgang abonnieren</a>` : ""}</p>
+        ${hasPaperFeed(p) ? `<a class="btn btn-soft" href="${BONN}feeds/vorlagen/${slug(p.reference)}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Diesen Vorgang abonnieren</a>` : ""}
+        ${p.seite ? `<a class="btn btn-soft" href="vorgang/${slug(p.reference)}/">Seite zu dieser Vorlage</a>` : ""}</p>
       ${p.superordinated.length ? `<details class="acc"><summary>Bezieht sich auf (${p.superordinated.length})</summary><ul class="related">${rel(p.superordinated)}</ul></details>` : ""}
       <details class="acc"><summary>Quellen dieser Vorlage</summary><ul>
         <li>Quellobjekt: ${link(p.source_object, esc(p.source_object)) || esc(p.source_object)}</li>
