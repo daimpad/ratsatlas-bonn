@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/thema/soziales</id>
 <title>Ratsatlas Bonn – Soziales, Gesundheit und Integration</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Soziales, Gesundheit und Integration (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-06T00:00:00Z</updated>
+<updated>2026-11-08T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/soziales.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/soziales-gesundheit-und-integration/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030325#vorlage</id>
+<title>Neue Vorlage 261610-02 ST: Vertagungsbitte zur Großen Anfrage der Linke-Fraktion: Maßnahmen der Stadt Bonn zur Prävention von Rechtsextremismus und zum Schutz von Betroffenen rechter Gewalt</title>
+<updated>2026-11-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261610-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030325"/>
+<summary>Stellungnahme der Verwaltung · federführend: 05 Amt für Integration und Vielfalt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030216#vorlage</id>
+<title>Neue Vorlage 261865-01 ST: Entwicklung einer kommunalen Strategie „Moderne Seniorenpolitik“ in der Bundesstadt Bonn Zukunft braucht Erfahrung – Moderne Seniorenpolitik als Querschnittsaufgabe</title>
+<updated>2026-11-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261865-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030216"/>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030309#vorlage</id>
 <title>Neue Vorlage 262111: FDP und CDU Große Anfrage: Kosten externer Beratung</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261428"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028698"/>
 <summary>Anhörung am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028693#beratung-2026-09-03-Ausschuss%20f%C3%BCr%20Chancengerechtigkeit%20und%20Integration</id>
-<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 261424 Zuschuss an die Fraueninitiative für Bildung und Erziehung FIBEr e.V. für das Projekt "Kreativ-Werkstatt"</title>
-<updated>2026-09-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261424"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028693"/>
-<summary>Anhörung am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028617#beratung-2026-09-03-Ausschuss%20f%C3%BCr%20Chancengerechtigkeit%20und%20Integration</id>
-<title>Ausschuss für Chancengerechtigkeit und Integration: „abgelehnt“ – 242237-02 GfB-Antrag: Aufhebung des Beschlusses (Drucks-Nr.:242237) vom 25.02.2025 und die Streichung §12 Abs.4 der GeschO</title>
-<updated>2026-09-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#242237-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028617"/>
-<summary>Entscheidung am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

@@ -986,6 +986,11 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 230987	beratung: Bezirksvertretung Bonn (Entscheidung)	2023-05-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 230871-01 ST	datum_vorlage	2023-05-19	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 230871-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2023-05-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+230981	datum_vorlage	2023-05-17	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+230981	beratung: Ausschuss für Mobilität und Verkehr (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+230981	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+230981	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+230981	beratung: Hauptausschuss (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 230947	datum_vorlage	2023-05-15	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 230947	beratung: Bezirksvertretung Bonn (Entscheidung)	2023-05-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 230947	folgevorlage: 230987	2023-05-23	oparl-bonn	belegt	Dringlichkeitsantrag

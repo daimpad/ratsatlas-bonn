@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 704,
+  "count": 705,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -39144,6 +39144,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über den Bebauungsplan „Universitäts-Campus Endenich“ zwischen mehreren Straßen in Endenich. Sie hat beschlossen, die Öffentlichkeit frühzeitig zu beteiligen, darunter eine Bürgerversammlung. Der Flächennutzungsplan wird angepasst, ein alter Bebauungsplan aufgehoben.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -39602,6 +39607,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, den Bebauungsplan Nr. 7522-77 für das Gebiet „Am Bleichgraben“ in Endenich aufzuheben und öffentlich bekannt zu machen. Der Plan ist unwirksam, weil er 1969 in nicht-öffentlicher Sitzung beschlossen wurde. Das Gebiet bleibt vorerst unbebaut.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -40875,6 +40885,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion schlägt vor, am Vili-Viorel-Păun-Platz eine Gedenktafel für die Opfer des rassistischen Terroranschlags von Hanau anzubringen. Die Verwaltung unterstützt dies, da ein kleines Zusatzschild nicht ausreicht. Sie will den Standort klären und prüft die Kosten sowie eine Finanzierung aus dem Feuerwehrtopf.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -41237,6 +41252,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, die Planung für die Neugestaltung des Endenicher Parks fortzusetzen. Sie soll Gutachten einholen, Genehmigungen beantragen und später die Entwurfsplanung zur Entscheidung vorlegen. Der Park in Endenich soll barrierefrei, ökologisch und mit mehr Sportangeboten umgestaltet werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -41742,6 +41762,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion fragt in einer Großen Anfrage nach Reisezeiten auf wichtigen Straßen. Die Verwaltung erklärt, dass sie zwar Rohdaten hat, diese aber nicht zwischen Autos, Bussen und Fahrrädern unterscheiden können. Für eine genaue Auswertung – etwa für die Oxfordstraße – braucht sie zusätzliche Daten und Zeit. Eine schnelle Antwort ist daher nicht möglich.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -42064,6 +42089,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über den Stand der dynamischen Fahrgastinformationssysteme. Die Installation der Anzeiger aus dem DFI2-Projekt verzögert sich bis 2024, unter anderem wegen Lieferproblemen und nötigen Neuplanungen an Haltestellen wie An der Dransdorfer Burg oder Euskirchener Straße. Das DFI3-Projekt mit 200 solarbetriebenen Anzeigern in der ganzen Stadt wurde bereits abgeschlossen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -42616,6 +42646,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert, dass eine Machbarkeitsstudie für den Neubau der Schule und Mensa an der Matthias-Claudius-Schule beauftragt wurde. Ergebnisse werden in etwa zwei Monaten erwartet. Wann die Planung fertig ist, steht noch nicht fest. Die Verwaltung wird später weiter berichten.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -42904,6 +42939,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, einen Bauantrag für einen Anbau an ein Wohnhaus in der Theodor-Litt-Straße in Bonn-Endenich abzulehnen. Der geplante Anbau mit 20 Wohnungen widerspricht den Regeln für Außenbereiche und passt nicht zur Umgebung. Das Grundstück grenzt an ein Landschaftsschutzgebiet.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -43099,6 +43139,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion fragt nach dem Stand der Planung für die Fußgängerunterführung Thomasstraße/Endenicher Straße. Sie will wissen, wie weit die Arbeiten sind und ob es Pläne gibt, wie die Unterführung später von allen genutzt werden kann, besonders am Alten Friedhof.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -43390,6 +43435,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, welche Flächen am Heinz-Stelling-Weg der Stadt gehören. Sie zeigt, wo eine kleine Verbreiterung für Fußgänger und Radfahrer theoretisch möglich wäre, löst aber nicht das Problem der Enge auf der gesamten Strecke. Eine vollständige Verbreiterung scheitert an privaten Grundstücken, fehlender Zustimmung der Anlieger und Naturschutzauflagen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -43934,6 +43984,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, warum der Geh- und Radweg am Endenicher Ei während der Brückenbaustelle gesperrt bleiben muss. Sie prüfte Alternativen wie eine verlängerte Umweltspur, lehnt diese aber aus Sicherheitsgründen ab. Die Bezirksvertretung soll die Stellungnahme zur Kenntnis nehmen und den Bürgerantrag ablehnen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -44205,6 +44260,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, warum die Straße Am Klostergarten nicht mit zusätzlichen Schwellen („Kissen“) ausgestattet wird: Sie erfülle bereits die Regeln für sichere Straßen und höhere Aufpflasterungen würden Lärm und Abgase verstärken. Stattdessen wird das bestehende Verkehrszeichen besser sichtbar versetzt und ein zweites Schild aufgestellt. Die Bezirksvertretung soll dies zur Kenntnis nehmen und die Lösung unterstützen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -44341,6 +44401,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion beantragt, die Gehwege der Theodor-Litt-Straße so zu gestalten, dass sie ohne Umbauten besser für Fußgänger nutzbar sind. Die Verwaltung gibt dazu eine Stellungnahme ab und prüft mögliche Maßnahmen. Die Straße ist betroffen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -44539,6 +44604,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, 200.000 Euro für die Planung des Umzugs der Gedenkstätte und des NS-Dokumentationszentrums auf das Gelände des ehemaligen Klosters in Endenich bereitzustellen. Das Geld soll für Architekten und Fachplaner verwendet werden, um genaue Kosten zu ermitteln. Die Mittel fehlen bisher im Haushalt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {
@@ -57331,6 +57401,210 @@
    },
    "kurzfassung": {
     "text": "Die Verwaltung teilt mit, dass der Bürgersteig in der Hainstraße am Friedhof auf 1,60 Meter verbreitert und erneuert wurde. Die Bäume blieben erhalten, doch eine weitere Verbreiterung ist wegen des gesetzlichen Alleenschutzes nicht möglich. Zudem wird die angrenzende Grünfläche in eine Blühwiese umgewandelt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-06"
+   }
+  },
+  {
+   "reference": "230981",
+   "name": "Informationsbrief: Veränderte Verkehrsregelung in der Max-Bruch-Straße",
+   "paper_type": "Informationsbrief",
+   "date": "2023-05-17",
+   "amt": "Stabsstellle Bürgerbeteiligung",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012280",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2519908&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "Stabsstellle Bürgerbeteiligung",
+     "name": "Stabsstellle Bürgerbeteiligung"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/321",
+     "method": "paper_type",
+     "evidence": "Informationsbrief",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Ausschuss für Mobilität und Verkehr",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Rat",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    },
+    {
+     "position": 2,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    },
+    {
+     "position": 3,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Hauptausschuss",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Max-Bruch-Straße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.078083,
+     "lat": 50.726372,
+     "stage": "B",
+     "method": "strasse",
+     "confidence": "mittel",
+     "evidence": "Max-Bruch-Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
+   "stand": "offen",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "gremium",
+     "evidence": "Ausschuss für Mobilität und Verkehr",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Informationsbrief",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2023-05-17",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2012280",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Mobilität und Verkehr",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    },
+    {
+     "typ": "beratung",
+     "label": "Hauptausschuss",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    }
+   ],
+   "soll": {
+    "verfahren": "mitteilung",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Informationsbrief“",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "bv",
+     "rat"
+    ],
+    "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Stadt Bonn informiert Anwohner der Max-Bruch-Straße über neue Verkehrsregeln. Ab sofort ist Parken auf beiden Gehwegen verboten, um die Mindestbreite von 1,50 Metern freizuhalten. Stattdessen darf nur noch einseitig am Fahrbahnrand geparkt werden. Kontrollen beginnen ab Juni 2023 mit Bußgeldern.",
     "modell": "mistral-large-latest",
     "erzeugt": "2026-11-06"
    }
@@ -85260,6 +85534,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, auf dem Hermann-Wandersleb-Ring zwischen „Auf dem Hügel/Frongasse“ und „Provinzialstraße/Rochusstraße“ einen Verkehrsversuch mit „Umweltspuren“ für Busse und Radfahrer durchzuführen. Der Versuch soll mindestens zehn Monate dauern.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-08"
    }
   },
   {

@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/thema/digital</id>
 <title>Ratsatlas Bonn – Digitale Verwaltung</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Digitale Verwaltung (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-06T00:00:00Z</updated>
+<updated>2026-11-08T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/digital.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/digitale-verwaltung/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030234#vorlage</id>
+<title>Neue Vorlage 262070: Ergebnisse der Dunkelfeldbefragung und Online-Begleitbefragung zu Gewalterfahrungen bei jungen Menschen in Bonn</title>
+<updated>2026-11-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262070"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030234"/>
+<summary>Mitteilungsvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030350#vorlage</id>
 <title>Neue Vorlage 262130: Volt-Dringlichkeitsantrag: Aktionsplan Dachstrategie Digitale Transformation</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260989-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028344"/>
 <summary>Kenntnisnahme am 2026-06-30; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028343#vorlage</id>
-<title>Neue Vorlage 260068-02 ST: Vertagungsbitte zum Grüne-Antrag: Digitalisierungsstrategie</title>
-<updated>2026-06-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260068-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028343"/>
-<summary>Stellungnahme der Verwaltung · federführend: Dezernat OB · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

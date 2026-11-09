@@ -1614,6 +1614,13 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 230871-01 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 230871-01 ST	veroeffentlichung	Datum der Vorlage	belegt	2023-05-19		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012199	ungeprüft
 230871-01 ST	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt	2023-05-23	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012199	ungeprüft
+230981	initiierung	Informationsbrief	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012280	ungeprüft
+230981	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
+230981	veroeffentlichung	Datum der Vorlage	belegt	2023-05-17		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012280	ungeprüft
+230981	beratung	Ausschuss für Mobilität und Verkehr (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012280	ungeprüft
+230981	beratung	Rat (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012280	ungeprüft
+230981	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012280	ungeprüft
+230981	beratung	Hauptausschuss (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012280	ungeprüft
 230947	initiierung	Dringlichkeitsantrag	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012214	ungeprüft
 230947	veroeffentlichung	Datum der Vorlage	belegt	2023-05-15		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012214	ungeprüft
 230947	entscheidung	Bezirksvertretung Bonn (Entscheidung)	belegt	2023-05-23	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2012214	ungeprüft

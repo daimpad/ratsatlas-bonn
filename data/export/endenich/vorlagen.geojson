@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 704,
+  "count": 705,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -9732,6 +9732,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012199"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.078083,
+     50.726372
+    ]
+   },
+   "properties": {
+    "reference": "230981",
+    "name": "Informationsbrief: Veränderte Verkehrsregelung in der Max-Bruch-Straße",
+    "paper_type": "Informationsbrief",
+    "date": "2023-05-17",
+    "amt": "Stabsstellle Bürgerbeteiligung",
+    "place": "Max-Bruch-Straße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012280"
    }
   },
   {

@@ -6057,7 +6057,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 221416	2022	Antrag	antrag-rat	hoch	Antrag mit Beratung in Rat oder Ausschuss	3	bv,rat	aus,bv,rat	passt	
 221417	2022	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	2	bv	aus,bv	passt	
 221418	2022	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	2	aus,rat	aus,bv,rat	passt	
-221419	2022	Antrag	antrag-rat	hoch	Antrag mit Beratung in Rat oder Ausschuss	3	bv,rat	aus,bv,rat	passt	
+221419	2022	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	4	bv	aus,bv	passt	
 221420	2022	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	2	bv	aus,bv	passt	
 221421	2022	Bürgerbrief			kein Verfahren im Regelwerk für „Bürgerbrief“	1	aus,bv,rat		ohne Soll	
 221423	2022	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	2	bv	aus,bv	passt	
@@ -7365,7 +7365,6 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 230462	2023	Bürgerantrag § 24 GO - Öffentlich	buergerantrag	hoch	Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)	3	bv	aus,bv,rat	passt	
 230463	2023	Beschlussvorlage: Einleitung	ausschuss-entscheidung	hoch	verbindlich entscheidet ein Ausschuss	1	aus	aus,bv,rat	passt	
 230464	2023	Beschlussvorlage: Einleitung	ausschuss-entscheidung	hoch	verbindlich entscheidet ein Ausschuss	1	aus	aus,bv,rat	passt	
-230465	2023	Informationsbrief	mitteilung	hoch	Vorlagenart „Informationsbrief“	1	aus,bv,rat	aus,bv,rat	passt	
 230466	2023	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 230467	2023	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	1	aus,rat	aus,bv,rat	passt	
 230468	2023	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	5	aus	aus,bv,rat	passt	
@@ -7658,6 +7657,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 230787	2023	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	rat	aus,bv,rat	passt	
 230788	2023	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 230789	2023	Bürgerantrag § 24 GO - Öffentlich	buergerantrag	hoch	Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)	2	bv	aus,bv,rat	passt	
+230790	2023	Informationsbrief	mitteilung	hoch	Vorlagenart „Informationsbrief“	1	aus,bv,rat	aus,bv,rat	passt	
 230791	2023	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 230792	2023	Beschlussvorlage	ausschuss-entscheidung	hoch	verbindlich entscheidet ein Ausschuss	1	aus	aus,bv,rat	passt	
 230793	2023	Beschlussvorlage	ausschuss-entscheidung	hoch	verbindlich entscheidet ein Ausschuss	1	aus	aus,bv,rat	passt	
@@ -7822,6 +7822,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 230978	2023	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus,rat	aus,bv,rat	passt	
 230979	2023	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 230980	2023	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
+230981	2023	Informationsbrief	mitteilung	hoch	Vorlagenart „Informationsbrief“	1	aus,bv,rat	aus,bv,rat	passt	
 230982	2023	Informationsbrief	mitteilung	hoch	Vorlagenart „Informationsbrief“	1	aus,bv,rat	aus,bv,rat	passt	
 230984	2023	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	2	bv,rat	aus,bv,rat	passt	
 230985	2023	Bürgerantrag § 24 GO - Öffentlich	buergerantrag	hoch	Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)	2	bv	aus,bv,rat	passt	
@@ -7882,6 +7883,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 231050	2023	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	1	aus,rat	aus,bv,rat	passt	
 231054	2023	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	2	aus,rat	aus,bv,rat	passt	
 231055	2023	Tagesordnungspunkte in nichtöffentlicher Sitzung	nichtoeffentlich	hoch	nichtöffentliche Tagesordnungspunkte	1	aus	aus,bv,rat	passt	
+231056	2023	Informationsbrief	mitteilung	hoch	Vorlagenart „Informationsbrief“	1	aus,bv,rat	aus,bv,rat	passt	
 231057	2023	Bürgerantrag § 24 GO - Öffentlich	buergerantrag	hoch	Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)	2	bv	aus,bv,rat	passt	
 231058	2023	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 231059	2023	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	3	bv	aus,bv,rat	passt	
@@ -10424,7 +10426,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 241632	2024	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	2	bv	aus,bv	passt	
 241633	2024	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	2	bv	aus,bv	passt	
 241634	2024	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	2	bv	aus,bv,rat	passt	
-241635	2024	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	3	aus,rat	aus,bv,rat	passt	
+241635	2024	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	2	aus,rat	aus,bv,rat	passt	
 241636	2024	Dringlichkeitsantrag	dringlichkeitsantrag	hoch	Vorlagenart „Dringlichkeitsantrag“	2	bv	aus,bv,rat	passt	
 241639	2025	Beschlussvorlage	beschlussvorlage	mittel	die Bezirksvertretung entscheidet selbst	1	aus,bv	aus,bv,rat	passt	
 241641	2024	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	2	aus,rat	aus,bv,rat	passt	
@@ -10882,7 +10884,6 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 242170	2024	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 242171	2024	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	4	bv	aus,bv	passt	
 242172	2024	Dringlichkeitsantrag	dringlichkeitsantrag	hoch	Vorlagenart „Dringlichkeitsantrag“	1	aus,rat	aus,bv,rat	passt	
-242173	2024	Tagesordnungspunkte in nichtöffentlicher Sitzung	nichtoeffentlich	hoch	nichtöffentliche Tagesordnungspunkte	1	aus	aus,bv,rat	passt	
 242175	2024	Dringlichkeitsantrag	dringlichkeitsantrag	hoch	Vorlagenart „Dringlichkeitsantrag“	1	bv	aus,bv,rat	passt	
 242176	2024	Informationsbrief	mitteilung	hoch	Vorlagenart „Informationsbrief“	1	aus,bv,rat	aus,bv,rat	passt	
 242177	2024	Beschlussvorlage	ausschuss-entscheidung	hoch	verbindlich entscheidet ein Ausschuss	1	aus	aus,bv,rat	passt	
@@ -11052,7 +11053,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 252372	2025	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	3	aus,bv,rat	aus,bv,rat	passt	
 252373	2025	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	1	aus,bv,rat	aus,bv,rat	passt	
 252376	2025	Kleine Anfrage	kleine-anfrage	hoch	Vorlagenart „Kleine Anfrage“	2	bv,rat	aus,bv,rat	passt	
-252377	2025	Kleine Anfrage	kleine-anfrage	hoch	Vorlagenart „Kleine Anfrage“	1	bv,rat	aus,bv,rat	passt	
+252377	2025	Kleine Anfrage	kleine-anfrage	hoch	Vorlagenart „Kleine Anfrage“	2	bv,rat	aus,bv,rat	passt	
 252378	2025	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	2	bv	aus,bv	passt	
 252379	2025	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	3	bv	aus,bv	passt	
 252380	2025	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	2	bv	aus,bv	passt	
@@ -11607,6 +11608,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 253015	2025	Informationsbrief	mitteilung	hoch	Vorlagenart „Informationsbrief“	1	aus,bv,rat	aus,bv,rat	passt	
 253016	2025	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 253017	2025	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	2	aus	aus,bv,rat	passt	
+253018	2025	Informationsbrief	mitteilung	hoch	Vorlagenart „Informationsbrief“	1	aus,bv,rat	aus,bv,rat	passt	
 253019	2025	Beschlussvorlage	bauleitplanung	mittel	Bauleitplanung (Titel)	1	aus,bv,rat	aus,bv,rat	passt	
 253021	2025	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 253022	2025	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
@@ -12454,7 +12456,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 254005	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 254006	2025	Beschlussvorlage	bauleitplanung	hoch	Bauleitplanung (Titel)	1	aus,bv	aus,bv,rat	passt	
 254007	2025	Tagesordnungspunkte in nichtöffentlicher Sitzung	nichtoeffentlich	hoch	nichtöffentliche Tagesordnungspunkte	1	bv	aus,bv,rat	passt	
-254008	2025	Stellungnahme der Verwaltung	beschlussvorlage	mittel	kein eigenes Verfahren für „Stellungnahme der Verwaltung“	1	bv	aus,bv,rat	passt	
+254008	2025	Anregungen und Beschwerden	buergerantrag	hoch	Vorlagenart „Anregungen und Beschwerden“ (§ 24 GO NRW)	2	bv	aus,bv,rat	passt	
 254011	2025	Einwohnerfrage	einwohnerfrage	hoch	Vorlagenart „Einwohnerfrage“	2	bv	bv	passt	
 254012	2026	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	1	rat	aus,bv,rat	passt	
 254013	2025	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	2	bv	aus,bv,rat	passt	
@@ -13463,7 +13465,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 261137	2026	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	1	rat	aus,bv,rat	passt	
 261140	2026	Beschlussvorlage	beschlussvorlage	mittel	die Bezirksvertretung entscheidet selbst	1	bv	aus,bv,rat	passt	
 261141	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus,rat	aus,bv,rat	passt	
-261142	2026	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	3	aus,rat	aus,bv,rat	passt	
+261142	2026	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	4	aus,rat	aus,bv,rat	passt	
 261144	2026	Tagesordnungspunkte in nichtöffentlicher Sitzung	nichtoeffentlich	hoch	nichtöffentliche Tagesordnungspunkte	1	aus	aus,bv,rat	passt	
 261145	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus,bv	aus,bv,rat	passt	
 261146	2026	Kleine Anfrage	kleine-anfrage	hoch	Vorlagenart „Kleine Anfrage“	2	bv,rat	aus,bv,rat	passt	
@@ -13876,7 +13878,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 261607	2026	Antrag	antrag-rat	hoch	Antrag mit Beratung in Rat oder Ausschuss	2	aus,rat	aus,bv,rat	passt	
 261608	2026	Anregungen und Beschwerden	buergerantrag	hoch	Vorlagenart „Anregungen und Beschwerden“ (§ 24 GO NRW)	2	bv	aus,bv,rat	passt	
 261609	2026	Beschlussvorlage	bauleitplanung	hoch	Bauleitplanung (Titel)	1	aus,bv,rat	aus,bv,rat	passt	
-261610	2026	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	2	aus	aus,bv,rat	passt	
+261610	2026	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	3	aus	aus,bv,rat	passt	
 261611	2026	Antrag	antrag-rat	mittel	Antrag ohne bekanntes Gremium; angenommen: Rat oder Ausschuss	2		aus,bv,rat	nur Beirat	
 261612	2026	Beschlussvorlage	beschlussvorlage	mittel	die Bezirksvertretung entscheidet selbst	1	bv	aus,bv,rat	passt	
 261613	2026	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	1	aus,rat	aus,bv,rat	passt	
@@ -13907,7 +13909,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 261646	2026	Beschlussvorlage	beschlussvorlage	mittel	die Bezirksvertretung entscheidet selbst	2	bv	aus,bv,rat	passt	
 261647	2026	Beschlussvorlage	beschlussvorlage	hoch	verbindlich entscheidet der Rat	4	aus,rat	aus,bv,rat	passt	
 261648	2026	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	2	bv	aus,bv,rat	passt	
-261649	2026	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	1	bv	aus,bv,rat	passt	
+261649	2026	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	2	bv	aus,bv,rat	passt	
 261650	2026	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	1	bv	aus,bv	passt	
 261651	2026	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	1	bv	aus,bv	passt	
 261654	2026	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	2	bv	aus,bv,rat	passt	
@@ -14085,7 +14087,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 261861	2026	Dringlichkeitsantrag	dringlichkeitsantrag	hoch	Vorlagenart „Dringlichkeitsantrag“	1	aus,rat	aus,bv,rat	passt	
 261862	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1		aus,bv,rat	nur Beirat	
 261863	2026	Tagesordnungspunkte in nichtöffentlicher Sitzung	nichtoeffentlich	hoch	nichtöffentliche Tagesordnungspunkte	1		aus,bv,rat	nur Beirat	
-261865	2026	Antrag	antrag-rat	hoch	Antrag mit Beratung in Rat oder Ausschuss	1	aus,rat	aus,bv,rat	passt	
+261865	2026	Antrag	antrag-rat	hoch	Antrag mit Beratung in Rat oder Ausschuss	2	aus,rat	aus,bv,rat	passt	
 261866	2026	Informationsbrief	mitteilung	hoch	Vorlagenart „Informationsbrief“	1	aus,bv,rat	aus,bv,rat	passt	
 261869	2026	Beschlussvorlage	beschlussvorlage	mittel	die Bezirksvertretung entscheidet selbst	2	bv	aus,bv,rat	passt	
 261870	2026	Beschlussvorlage	beschlussvorlage	mittel	die Bezirksvertretung entscheidet selbst	1	bv	aus,bv,rat	passt	
@@ -14133,6 +14135,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 261933	2026	Tagesordnungspunkte in nichtöffentlicher Sitzung	nichtoeffentlich	hoch	nichtöffentliche Tagesordnungspunkte	1	aus	aus,bv,rat	passt	
 261934	2026	Antrag	antrag-rat	hoch	Antrag mit Beratung in Rat oder Ausschuss	1	aus	aus,bv,rat	passt	
 261937	2026	Tagesordnungspunkte in nichtöffentlicher Sitzung	nichtoeffentlich	hoch	nichtöffentliche Tagesordnungspunkte	1	bv	aus,bv,rat	passt	
+261939	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	bv	aus,bv,rat	passt	
 261940	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 261941	2026	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	1	aus	aus,bv,rat	passt	
 261942	2026	Beschlussvorlage	beschlussvorlage	mittel	entscheidendes Gremium noch nicht bekannt	1	aus	aus,bv,rat	passt	
@@ -14159,7 +14162,7 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 261978	2026	Tagesordnungspunkte in nichtöffentlicher Sitzung	nichtoeffentlich	hoch	nichtöffentliche Tagesordnungspunkte	1	aus	aus,bv,rat	passt	
 261979	2026	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	1	bv	aus,bv	passt	
 261980	2026	Kleine Anfrage	kleine-anfrage	hoch	Vorlagenart „Kleine Anfrage“	2	aus,rat	aus,bv,rat	passt	
-261981	2026	Antrag	antrag-rat	hoch	Antrag mit Beratung in Rat oder Ausschuss	1	aus,rat	aus,bv,rat	passt	
+261981	2026	Antrag	antrag-rat	hoch	Antrag mit Beratung in Rat oder Ausschuss	2	aus,rat	aus,bv,rat	passt	
 261982	2026	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	1	aus,rat	aus,bv,rat	passt	
 261983	2026	Beschlussvorlage	beschlussvorlage	mittel	entscheidendes Gremium noch nicht bekannt	1	aus	aus,bv,rat	passt	
 261984	2026	Tagesordnungspunkte in nichtöffentlicher Sitzung	nichtoeffentlich	hoch	nichtöffentliche Tagesordnungspunkte	1	aus	aus,bv,rat	passt	
@@ -14220,8 +14223,10 @@ stammnummer	jahr	typ	verfahren	sicherheit	grund	dokumente	ist_bahnen	soll_bahnen
 262064	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 262065	2026	Tagesordnungspunkte in nichtöffentlicher Sitzung	nichtoeffentlich	hoch	nichtöffentliche Tagesordnungspunkte	1	aus	aus,bv,rat	passt	
 262067	2026	Beschlussvorlage	beschlussvorlage	mittel	entscheidendes Gremium noch nicht bekannt	1		aus,bv,rat	nur Beirat	
+262070	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
 262071	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	bv	aus,bv,rat	passt	
 262074	2026	Mitteilungsvorlage	mitteilung	hoch	Vorlagenart „Mitteilungsvorlage“	1	aus	aus,bv,rat	passt	
+262075	2026	Beschlussvorlage: Einleitung	ausschuss-entscheidung	hoch	verbindlich entscheidet ein Ausschuss	1	aus	aus,bv,rat	passt	
 262076	2026	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	1	bv	aus,bv	passt	
 262077	2026	Antrag	antrag-bv	hoch	Antrag, beraten nur in Bezirksvertretungen	2	bv	aus,bv	passt	
 262079	2026	Große Anfrage	grosse-anfrage	hoch	Vorlagenart „Große Anfrage“	1	aus	aus,bv,rat	passt	
