@@ -7478,7 +7478,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 222049	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1
 222050	kein Ort						
 222050-01 ST	nur in Anlagen genannt, nicht verortet						
-222050-02	nur in Anlagen genannt, nicht verortet						
 222050-03	nur in Anlagen genannt, nicht verortet						
 222052	Titel ohne gemeinsamen Ort, nicht verortet						
 222053	kein Ort						
@@ -12194,6 +12193,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241633	kein Ort						
 241633-01 ST	kein Ort						
 241635	nur in Anlagen genannt, nicht verortet						
+241635-01 AA	kein Ort						
 241635-02	kein Ort						
 241636	verortet	Hauptteil	volltext_strasse	Lambareneweg	Nordstadt	mittel	2
 241636	verortet	Hauptteil	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	1
@@ -12681,6 +12681,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242171-02 AA	kein Ort						
 242171-03	kein Ort						
 242172	kein Ort						
+242173	Titel ohne gemeinsamen Ort, nicht verortet						
 242177	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
 242178	kein Ort						
 242178-01 AA	kein Ort						

@@ -36748,6 +36748,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen fragen, wie die Verbindung zwischen dem WestSide-Gelände, der Bus-Haltestelle und dem Spielplatz Auf dem Hügel verbessert werden kann. Die Verwaltung erklärt, dass der Weg zum Baugebiet gehört und erst nach Fertigstellung der Gebäude an die Stadt übergeben wird. Wann das passiert, ist unklar – bis dahin entscheidet der Bauherr, ob der Weg öffentlich nutzbar ist.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-09"
    }
   },
   {
@@ -36911,6 +36916,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, drei geschützte Bäume an der Straße Am Probsthof für den Bau einer neuen Erschließungsstraße zu fällen. Dies ist nötig, um den Bebauungsplan umzusetzen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-09"
    }
   },
   {
@@ -37124,6 +37134,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, die frühzeitige Bürgerbeteiligung für den Bebauungsplan „Universitäts-Campus Endenich“ in Endenich durchzuführen. Geplant sind eine Bürgerversammlung und die Vorstellung der Ziele, darunter eine Mensa, Wohnungen für Studierende und mehr Grünflächen. Der Flächennutzungsplan soll angepasst werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-09"
    }
   },
   {
@@ -37295,6 +37310,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über mehrere Vorlagen, die Denkmäler oder deren Umgebung betreffen. Dazu gehören Pläne für Solaranlagen, Landschaftsprojekte, Gebührenänderungen und Bebauungspläne in Endenich. Auch Anfragen zur Begegnungsstätte im Haus Vogt in Muffendorf und Anträge zur Poppelsdorfer Allee werden genannt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-09"
    }
   },
   {
@@ -37834,6 +37854,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Koalition beantragt, die Vorplanung für die Siemensstraße zwischen Kolpingstraße und Am Propsthof zu ändern. Die Verwaltung soll die Umgestaltung nach Variante 2 umsetzen, aber die Bushaltestelle „Václav-Havel-Platz“ näher am Platz oder westlich beim alten Pförtnergebäude einrichten. Die Flächen vor den Läden in der Siemensstraße sollen für Kunden erhalten bleiben.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-09"
    }
   },
   {
@@ -38183,6 +38208,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Koalition schlägt vor, den Bürgerantrag zur Verkehrssituation an der Baustelle Endenicher Ei möglichst umzusetzen. Bei der nächsten Erneuerung der Nordspur soll eine separate Spur für Fußgänger und Radfahrer ohne Umwege eingerichtet werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-09"
    }
   },
   {
@@ -38506,6 +38536,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass sie keine Vorgaben zur Sanierung der Straßenwand in der Alfred-Bucherer-Straße kennt. Weder im Bebauungsplan noch im städtebaulichen Vertrag gibt es dazu Regelungen. Eine Stellungnahme ist daher nicht möglich.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-09"
    }
   },
   {
@@ -95012,6 +95047,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert den Integrationsrat über Folgen der Corona-Krise für Bonns Bildungssystem. Besonders Kinder mit Behinderung und Familien mit Bildungs- und Teilhabeleistungen waren betroffen, etwa durch Schulschließungen oder fehlende Therapien. Integrationsassistenzen halfen mit digitalen Angeboten oder Hausbesuchen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-09"
    }
   },
   {
@@ -95937,6 +95977,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über den Stand der Planung für geschützte Radwege (Protected Bike Lanes) oder Umweltspuren (für Radfahrer und Busse) in Bonn. Geprüft werden vor allem vierspurige Straßen, wo eine Autospur umgewidmet werden könnte. Für mehrere Strecken – darunter Adenauerallee, Welschnonnenstraße und Hermann-Wandersleb-Ring – laufen Planungen oder Abstimmungen, Ergebnisse werden 2021 erwartet.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-09"
    }
   },
   {
