@@ -78,13 +78,15 @@ class Auffindbarkeit(unittest.TestCase):
             json.loads(h.ld[0])  # bleibt gültiges JSON
             robots = (site / "robots.txt").read_text(encoding="utf-8")
             self.assertIn("Sitemap: https://ris-bonn.example/sitemap.xml", robots)
-            urls = [e.text for e in ET.parse(site / "sitemap.xml").getroot().iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
+            index = [e.text for e in ET.parse(site / "sitemap.xml").getroot().iter(f"{{{seo.NS}}}loc")]
+            self.assertEqual(index, ["https://ris-bonn.example/sitemap-seiten.xml"])   # ohne Gebietsdaten keine Vorgänge
+            urls = [e.text for e in ET.parse(site / seo.SITEMAP_SEITEN).getroot().iter(f"{{{seo.NS}}}loc")]
             # ohne Gebietsdaten keine Gebiets- und Themenseiten; haushalt/ beruht auf data/haushalt/ im Repository
             self.assertEqual(urls, ["https://ris-bonn.example/", "https://ris-bonn.example/datenschutz.html",
                                     "https://ris-bonn.example/haushalt/", "https://ris-bonn.example/rss/",
                             "https://ris-bonn.example/begriffe/", "https://ris-bonn.example/einfach/",
                     "https://ris-bonn.example/technik/"])
-            self.assertIsNone(re.search(r"lastmod", (site / "sitemap.xml").read_text(encoding="utf-8")))
+            self.assertIsNone(re.search(r"lastmod", (site / seo.SITEMAP_SEITEN).read_text(encoding="utf-8")))
 
 
 class Gebietsseiten(unittest.TestCase):
@@ -108,7 +110,7 @@ class Gebietsseiten(unittest.TestCase):
             self.assertIn('href="../../?gebiet=ortsteil:endenich#261856"', page)
             self.assertFalse((site / "ortsteil" / "leer").exists())
             self.assertIn('href="../ortsteil/endenich/"', (site / "gebiete" / "index.html").read_text(encoding="utf-8"))
-            urls = [e.text for e in ET.parse(site / "sitemap.xml").getroot().iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
+            urls = [e.text for e in ET.parse(site / seo.SITEMAP_SEITEN).getroot().iter(f"{{{seo.NS}}}loc")]
             self.assertIn("https://ris-bonn.example/ortsteil/endenich/", urls)
             self.assertIn("https://ris-bonn.example/gebiete/", urls)
 

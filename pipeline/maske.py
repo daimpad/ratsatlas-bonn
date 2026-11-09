@@ -68,8 +68,9 @@ class Maske:
         return self._betroffen(titel, ref) and bool(self.rx.search(titel) or WORT.search(titel))
 
 
-def aus_db(db, strassen=None):
-    """Maske für alle Vorlagen der Datenbank (Einwohnerschaft, Bauordnung, Naturschutz und verbundene Vorlagen)."""
+def vorlagen(db):
+    """Alle Vorlagen der Datenbank mit Art, Titel (ungekürzt), federführender Stelle und Beziehungen, wie
+    chat.einwohner sie erwartet."""
     spalten = {r[1] for r in db.execute("PRAGMA table_info(paper)")}
     amt = ("(SELECT name FROM organization o WHERE o.id = paper.under_direction_of)"
            if "under_direction_of" in spalten else "NULL")
@@ -81,4 +82,9 @@ def aus_db(db, strassen=None):
         if parent in papers and child in papers:
             papers[child]["superordinated"].append({"reference": papers[parent]["reference"]})
             papers[parent]["subordinated"].append({"reference": papers[child]["reference"]})
-    return Maske(chat.einwohner(list(papers.values()), auch=privat), strassen)
+    return list(papers.values())
+
+
+def aus_db(db, strassen=None):
+    """Maske für alle Vorlagen der Datenbank (Einwohnerschaft, Bauordnung, Naturschutz und verbundene Vorlagen)."""
+    return Maske(chat.einwohner(vorlagen(db), auch=privat), strassen)
