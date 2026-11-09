@@ -183,10 +183,18 @@ def export_all():
     out = config.EXPORT / "bonn"
     shutil.rmtree(out, ignore_errors=True)
     cache = {}
+    sources = [dict(r) for r in db.execute("SELECT * FROM source")]
+    stand = next((s["retrieved_at"] for s in sources if s["name"] == "oparl-bonn"), None) or ""
+    since = f"{int((stand or datetime.now(timezone.utc).isoformat())[:4]) - 1}-01-01"   # Vorjahr des Datenstands
+    # Seiten je Vorgang (vorgangsseiten.py, publish.has_page): Feld „seite“ in den Gebietsdateien
+    einwohner = set(chat.einwohner(maske.vorlagen(db)))
 
     def detail(pid):
         if pid not in cache:
-            cache[pid] = _paper_detail(db, pid)
+            d = _paper_detail(db, pid)
+            if publish.has_page(d, since, einwohner):
+                d["seite"] = True
+            cache[pid] = d
         return cache[pid]
 
     order = "ORDER BY p.date DESC, p.reference"
@@ -263,10 +271,7 @@ def export_all():
     for key, ids in areas.items():
         for pid in ids:
             home.setdefault(pid, key)
-    sources = [dict(r) for r in db.execute("SELECT * FROM source")]
-    stand = next((s["retrieved_at"] for s in sources if s["name"] == "oparl-bonn"), None) or ""
-    year = int((stand or datetime.now(timezone.utc).isoformat())[:4])
-    publish.write_feeds(out / "feeds", areas, cache, names, home, slug, f"{year - 1}-01-01")
+    publish.write_feeds(out / "feeds", areas, cache, names, home, slug, since)
     meetings = _meetings(db)
     publish.write_calendar(out / "termine.ics", meetings)
     n_points = publish.write_geojson(out / "vorlagen.geojson", cache,

@@ -66,8 +66,8 @@ SCHRITTE = {
     "anliegen-seite": ("Mängelmelder", "Zählt die Meldungen der letzten 90 Tage je Ortsteil aus dem eigenen Archiv."),
     "verify": ("Abgleich", "Vergleicht eine Stichprobe der aufbereiteten Daten mit der OParl-API der Stadt."),
     "package": ("Datenpaket", "Packt Daten, Prüfprotokolle und Lizenzen in ein Zip-Paket zum Herunterladen."),
-    "seo": ("Statische Seiten", "Schreibt Themen-, Gebiets- und Erklärseiten wie diese, dazu robots.txt und "
-                                "sitemap.xml."),
+    "seo": ("Statische Seiten", "Schreibt Themen-, Gebiets- und Erklärseiten wie diese, eine Seite je Vorgang "
+                                "(seit dem Vorjahr oder noch offen), dazu robots.txt und die Sitemaps."),
     "kurzfassungen": ("Kurzfassungen", "Lässt nach dem Veröffentlichen neue Kurzfassungen mit Mistral schreiben "
                                        "(gekennzeichnet, mit Prüfung auf wörtliche Übernahmen). Sie erscheinen mit dem "
                                        "nächsten Lauf."),

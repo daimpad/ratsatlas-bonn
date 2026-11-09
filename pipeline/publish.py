@@ -85,6 +85,12 @@ def has_paper_feed(p, since):
     return (p["date"] or "") >= since or p["stand"] in OPEN
 
 
+def has_page(p, since, einwohner):
+    """Seite je Vorgang (vorgangsseiten.py): Regel der Vorgangsfeeds, ohne Vorlagen aus der Einwohnerschaft und ihre
+    verbundenen Vorlagen (einwohner: Drucksachen aus chat.einwohner; Entscheidungen des Auftraggebers 09.11.2026)."""
+    return has_paper_feed(p, since) and p["reference"] not in einwohner
+
+
 def feed_url(name):
     return f"{config.SITE_URL}data/export/bonn/feeds/{name}.xml"
 

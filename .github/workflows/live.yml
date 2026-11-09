@@ -67,7 +67,12 @@ jobs:
             fi
           done
           check https://bonn.ratsatlas.de/robots.txt "Sitemap: https://bonn.ratsatlas.de/sitemap.xml"
-          check https://bonn.ratsatlas.de/sitemap.xml "<urlset"
+          check https://bonn.ratsatlas.de/sitemap.xml "<sitemapindex"
+          check https://bonn.ratsatlas.de/sitemap-seiten.xml "<urlset"
+          # Seiten je Vorgang (seit 09.11.2026): die erste Seite der Sitemap muss erreichbar sein
+          check https://bonn.ratsatlas.de/sitemap-vorgaenge.xml "<urlset"
+          seite=$(curl -fsSL --retry 3 --retry-delay 10 https://bonn.ratsatlas.de/sitemap-vorgaenge.xml | grep -o '<loc>[^<]*' | head -1 | cut -c6-) || seite=""
+          if [ -n "$seite" ]; then check "$seite" "Beratungsfolge"; else echo "::error::sitemap-vorgaenge.xml ohne Seiten"; fail=1; fi
           # Datenstand höchstens zwei Tage alt
           stand=$(curl -fsSL https://bonn.ratsatlas.de/data/export/bonn/index.json | python3 -c 'import json,sys;print(json.load(sys.stdin)["meta"]["generated_at"][:10])') || stand=""
           if [ -z "$stand" ] || [ $(( ( $(date -u +%s) - $(date -u -d "$stand" +%s) ) / 86400 )) -gt 2 ]; then

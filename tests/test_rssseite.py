@@ -37,7 +37,7 @@ class Seite(unittest.TestCase):
             site = _site(tmp)
             seo.write(site, "https://ris-bonn.example/")
             html = (site / "rss" / "index.html").read_text(encoding="utf-8")
-            sitemap = (site / "sitemap.xml").read_text(encoding="utf-8")
+            sitemap = (site / seo.SITEMAP_SEITEN).read_text(encoding="utf-8")
             gebiet = (site / "ortsteil" / "endenich" / "index.html").read_text(encoding="utf-8")
         url = "https://ris-bonn.example/data/export/bonn/feeds/ganz-bonn.xml"
         self.assertIn("<h1>Inhalte abonnieren und weiterverwenden</h1>", html)

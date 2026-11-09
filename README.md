@@ -24,7 +24,7 @@ Der Ratsatlas zeigt die Vorlagen aus dem Ratsinformationssystem der Stadt Bonn a
 |---|---|---|
 | 🗺️ | **Karte und Liste** | Vorlagen je Ortsteil und Stadtbezirk. Die Flächen zeigen, wo in den letzten zwölf Monaten viel beraten wurde. |
 | 🕒 | **Zeitleiste** | Vorlagen je Monat, Sitzungen und Wahlperioden; ein Zeitraum filtert Karte und Liste. |
-| 📄 | **Vorgang** | Eine Vorlage mit ihren Stationen: Einreichung, Beratungen mit Ergebnis, Folgevorlagen – und was das Regelwerk vorsieht. |
+| 📄 | **Vorgang** | Eine Vorlage mit ihren Stationen: Einreichung, Beratungen mit Ergebnis, Folgevorlagen – und was das Regelwerk vorsieht. Vorlagen seit dem Vorjahr und noch offene haben eine eigene Seite unter `vorgang/<Drucksache>/`. |
 | ⚖️ | **Prozesse** | Wer entscheidet was? Verfahren mit Schritten und Fristen, Gremien mit Besetzung, Ämter. |
 | 🏷️ | **Themenseiten** | Kunst und Kultur, Verkehr und Mobilität, Schule und Bildung, Wohnen und Bauen, Klima und Umwelt, Kinder, Jugend und Familie, Soziales, Gesundheit und Integration, Sicherheit und Ordnung, Wirtschaft und Wissenschaft, Digitale Verwaltung – mit Zeitleiste und nächsten Sitzungen. |
 | 💶 | **Haushalt auf einen Blick** | Aufwendungen und Erträge der Stadt als Kacheln, Plan und Ist bis 2024; ein Klick zoomt bis zu Produktgruppen, Aufwands- und Ertragsarten. Dazu Veränderung und Investitionen je Produktbereich. |
@@ -102,7 +102,7 @@ Lizenzen je Datei: [`data/LICENSE-DATA.md`](data/LICENSE-DATA.md). Der Code steh
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m pipeline all          # Abruf, Aufbereitung, Export, Prüfung, Datenpaket
-.venv/bin/python -m pipeline seo          # statische Seiten (Gebiete, Themen, Haushalt, rss/)
+.venv/bin/python -m pipeline seo          # statische Seiten (Gebiete, Themen, Haushalt, rss/, je Vorgang), Sitemaps
 .venv/bin/python -m unittest discover tests
 node --test tests/js/*.test.mjs           # Werkzeuge des Ratsassistenten
 ```

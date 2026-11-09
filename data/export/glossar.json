@@ -276,8 +276,8 @@
   },
   {
    "begriff": "Stand eines Vorgangs",
-   "erklaerung": "Von der RIS-Karte aus der Beratungsfolge abgeleitet: entschieden, beraten ohne Entscheidung, in Beratung, offen oder ohne Beratungsfolge. Maßgeblich ist das Original.",
-   "fundstelle": "abgeleitet (RIS-Karte)",
+   "erklaerung": "Vom Ratsatlas aus der Beratungsfolge abgeleitet: entschieden, beraten ohne Entscheidung, in Beratung, offen oder ohne Beratungsfolge. Maßgeblich ist das Original.",
+   "fundstelle": "abgeleitet (Ratsatlas)",
    "gruppe": "verfahren",
    "anker": "stand-eines-vorgangs"
   },
