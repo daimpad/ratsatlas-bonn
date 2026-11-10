@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/bezirk-bad-godesberg</id>
 <title>Ratsatlas Bonn – Stadtbezirk Bad Godesberg, ohne genaueren Ort</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Stadtbezirk Bad Godesberg, ohne genaueren Ort</subtitle>
-<updated>2026-11-04T00:00:00Z</updated>
+<updated>2026-11-09T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/bezirk-bad-godesberg.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029921#vorlage</id>
+<title>Neue Vorlage 261912: Marktverzeichnis für den Stadtbezirk Bad Godesberg 2027</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261912"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029921"/>
+<summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030247#vorlage</id>
 <title>Neue Vorlage 260127-33 AA: CDU-Änderungsantrag: Zukunft des Schauspiels in Bad Godesberg Antrag zur Vorlage 260127-32</title>
@@ -15,6 +23,22 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#260127-33%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030247"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030145#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260585-03 Volt/Grüne Dringlichkeitsantrag zu DS 260585-02 „Bonner Mitmachbudget 2025/2026 - Projekt „Discgolf in Bad Godesberg“</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#260585-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030145"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029829#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260127-32 BBB-Antrag Zukunft des Schauspiels in Bad Godesberg Drucksachengruppe 260127</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#260127-32"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029829"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029752#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
@@ -33,20 +57,28 @@
 <summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029551#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 261801 Bürgerantrag: Antrag auf finanzielle Förderung des kleinen theaters Bad Godesberg aus bezirklichen Mitteln</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261801"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029551"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029427#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261501-03 ST FDP - Große Anfrage: Abriss und Neubau der Stadthalle Bad Godesberg, Sanierung der Stadthalle Bad Godesberg (DS-Nr. 261501-02)</title>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261501-03 ST FDP - Große Anfrage: Abriss und Neubau der Stadthalle Bad Godesberg, Sanierung der Stadthalle Bad Godesberg (DS-Nr. 261501-02)</title>
 <updated>2026-11-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261501-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029427"/>
-<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028871#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261501-01 ST SPD-Große Anfrage: Sanierung der Stadthalle Bad Godesberg</title>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261501-01 ST SPD-Große Anfrage: Sanierung der Stadthalle Bad Godesberg</title>
 <updated>2026-11-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261501-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028871"/>
-<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030248#vorlage</id>
@@ -230,7 +262,7 @@
 <updated>2026-10-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261501-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029427"/>
-<summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025312#beratung-2026-10-06-Kulturausschuss</id>
@@ -326,7 +358,7 @@
 <updated>2026-09-18T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261501-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028871"/>
-<summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029300#vorlage</id>
@@ -334,7 +366,7 @@
 <updated>2026-09-09T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261501-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029300"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029133#vorlage</id>
@@ -642,11 +674,11 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028847#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261501 SPD-Große Anfrage: Sanierung der Stadthalle Bad Godesberg</title>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261501 SPD-Große Anfrage: Sanierung der Stadthalle Bad Godesberg</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261501"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028847"/>
-<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028846#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
@@ -775,37 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261322"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028419"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028202#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261262 Erstellung eines Image- und Marketingkonzeptes für das Bad Godesberger Zentrum</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261262"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028202"/>
-<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028188#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261093-01 ST Sanierungskosten bei der Stadthalle Bad Godesberg - Vertagungsbitte</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261093-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028188"/>
-<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028133#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 260909-01 ST Volt-Anfrage: Mitmachbudget Bad Godesberg — Transparenz und Weiterentwicklung</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#260909-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028133"/>
-<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028101#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260127-21 ST Stellungnahme der Verwaltung zu: 260127-01 FDP - Große Anfrage: Zukunft Bonner Bühnen und zu 260127-02 - Große Anfrage  BBB-Anfrage Zukunft Bonner Bühnen - Grundsatzbeschluss: Bauliche Zukunft der Theaterliegenschaften</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#260127-21%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028101"/>
-<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

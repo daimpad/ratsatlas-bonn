@@ -7478,6 +7478,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 222049	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1
 222050	kein Ort						
 222050-01 ST	nur in Anlagen genannt, nicht verortet						
+222050-02	nur in Anlagen genannt, nicht verortet						
 222050-03	nur in Anlagen genannt, nicht verortet						
 222052	Titel ohne gemeinsamen Ort, nicht verortet						
 222053	kein Ort						
@@ -10241,7 +10242,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 232211-08	kein Ort						
 232211-09 ST	kein Ort						
 232212	kein Ort						
-232212-01 ST	kein Ort						
 232214	Titel ohne gemeinsamen Ort, nicht verortet						
 232218	kein Ort						
 232219	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -11386,7 +11386,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240886	verortet	Hauptteil	volltext_strasse+kreuzung	Heinrich-Brüning-Straße	Gronau	mittel	1
 240886	verortet	Hauptteil	volltext_strasse+kreuzung	Winston-Churchill-Straße	Gronau	mittel	1
 240888	nur in Anlagen genannt, nicht verortet						
-240889	kein Ort						
 240889-01 AA	kein Ort						
 240889-02	kein Ort						
 240890	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -12667,7 +12666,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242149-01 ST	kein Ort						
 242149-02 ST	kein Ort						
 242149-03	kein Ort						
-242151	kein Ort						
 242153	Titel ohne gemeinsamen Ort, nicht verortet						
 242155	Titel ohne gemeinsamen Ort, nicht verortet						
 242157	kein Ort						
@@ -13411,7 +13409,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252900	kein Ort						
 252903	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
 252903	verortet	Hauptteil	volltext_ortsteil_name	Vilich	Vilich	niedrig	1
-252903-01	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
 252903-02 ST	kein Ort						
 252903-03 ST	kein Ort						
 252904	verortet	Hauptteil	volltext_ortsteil_adjektiv	Endenich	Endenich	niedrig	1

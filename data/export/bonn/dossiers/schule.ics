@@ -233,6 +233,15 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006751
+DTSTAMP:20270216T160000Z
+DTSTART:20270216T160000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006549
 DTSTAMP:20270217T160000Z
 DTSTART:20270217T160000Z
@@ -298,6 +307,15 @@ DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006752
+DTSTAMP:20270317T160000Z
+DTSTART:20270317T160000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006486
 DTSTAMP:20270318T170000Z
 DTSTART:20270318T170000Z
@@ -340,6 +358,15 @@ DTSTART:20270420T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
  öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006753
+DTSTAMP:20270421T150000Z
+DTSTART:20270421T150000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -407,6 +434,15 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006754
+DTSTAMP:20270525T150000Z
+DTSTART:20270525T150000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006595
 DTSTAMP:20270601T160000Z
 DTSTART:20270601T160000Z
@@ -468,6 +504,15 @@ DTSTART:20270617T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006755
+DTSTAMP:20270624T150000Z
+DTSTART:20270624T150000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -609,6 +654,15 @@ DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006756
+DTSTAMP:20271012T150000Z
+DTSTART:20271012T150000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006481
 DTSTAMP:20271014T150000Z
 DTSTART:20271014T150000Z
@@ -650,6 +704,15 @@ DTSTAMP:20271117T160000Z
 DTSTART:20271117T160000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006757
+DTSTAMP:20271123T160000Z
+DTSTART:20271123T160000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
  röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT

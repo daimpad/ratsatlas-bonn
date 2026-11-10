@@ -191,6 +191,16 @@ DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006741
+DTSTAMP:20270121T170000Z
+DTSTART:20270121T170000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006592
 DTSTAMP:20270126T170000Z
 DTSTART:20270126T170000Z
@@ -314,6 +324,16 @@ DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006742
+DTSTAMP:20270406T160000Z
+DTSTART:20270406T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006551
 DTSTAMP:20270407T150000Z
 DTSTART:20270407T150000Z
@@ -398,6 +418,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006743
+DTSTAMP:20270512T160000Z
+DTSTART:20270512T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006477
 DTSTAMP:20270513T150000Z
 DTSTART:20270513T150000Z
@@ -440,6 +470,16 @@ DTSTART:20270608T160000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
  tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006744
+DTSTAMP:20270610T160000Z
+DTSTART:20270610T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -516,6 +556,16 @@ DTSTART:20270714T150000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
  röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006745
+DTSTAMP:20270714T160000Z
+DTSTART:20270714T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -613,6 +663,16 @@ DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006746
+DTSTAMP:20271013T160000Z
+DTSTART:20271013T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006481
 DTSTAMP:20271014T150000Z
 DTSTART:20271014T150000Z
@@ -694,6 +754,16 @@ DTSTART:20271202T170000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
  tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006747
+DTSTAMP:20271208T170000Z
+DTSTART:20271208T170000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

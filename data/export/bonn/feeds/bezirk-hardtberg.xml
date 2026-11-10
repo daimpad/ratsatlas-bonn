@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/bezirk-hardtberg</id>
 <title>Ratsatlas Bonn – Stadtbezirk Hardtberg, ohne genaueren Ort</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Stadtbezirk Hardtberg, ohne genaueren Ort</subtitle>
-<updated>2026-11-04T00:00:00Z</updated>
+<updated>2026-11-09T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/bezirk-hardtberg.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029924#vorlage</id>
+<title>Neue Vorlage 261915: Marktverzeichnis für den Stadtbezirk Hardtberg 2027</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#261915"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029924"/>
+<summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029357#vorlage</id>
 <title>Neue Vorlage 261654-01 ST: Großen Anfrage der Grüne-Bezirksfraktion: Kühle Orte in Hardtberg</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253641"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023946"/>
 <summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024641#vorlage</id>
-<title>Neue Vorlage 253951-01 ST: CDU-Anfrage: Umgang mit Baumpflanzungen und -ersatzmaßnahmen im Stadtbezirk Hardtberg – Auswirkungen auf private Anlieger und Transparenz der Entscheidungsprozesse Hier: Vertagungsbitte</title>
-<updated>2025-11-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253951-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024641"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

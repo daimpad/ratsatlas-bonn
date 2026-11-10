@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/thema/kultur</id>
 <title>Ratsatlas Bonn – Kunst und Kultur</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Kunst und Kultur (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-06T00:00:00Z</updated>
+<updated>2026-11-09T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/kultur.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/kunst-und-kultur/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030099#vorlage</id>
+<title>Neue Vorlage 262010: Bonner Mitmachbudget 2025/2026 – nicht umsetzbare Projekte aufgrund der aktuellen Haushaltssperre</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262010"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030099"/>
+<summary>Mitteilungsvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030309#vorlage</id>
 <title>Neue Vorlage 262111: FDP und CDU Große Anfrage: Kosten externer Beratung</title>
@@ -39,6 +47,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261892-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029987"/>
 <summary>Stellungnahme der Verwaltung · federführend: Dezernat IV · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029829#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260127-32 BBB-Antrag Zukunft des Schauspiels in Bad Godesberg Drucksachengruppe 260127</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#260127-32"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029829"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030144#vorlage</id>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261279-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028518"/>
 <summary>Kenntnisnahme am 2026-07-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028517#vorlage</id>
-<title>Neue Vorlage 260127-23: Mitteilungsvorlage: ergänzende Informationen zur Vorlage 260127 - Zukunft Bonner Bühnen - Grundsatzbeschluss: Bauliche Zukunft der Theaterliegenschaften</title>
-<updated>2026-07-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-ost#260127-23"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028517"/>
-<summary>Mitteilungsvorlage · federführend: Dezernat IV · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028517#beratung-2026-07-15-Kulturausschuss</id>
-<title>Kulturausschuss: „zur Kenntnis genommen“ – 260127-23 Mitteilungsvorlage: ergänzende Informationen zur Vorlage 260127 - Zukunft Bonner Bühnen - Grundsatzbeschluss: Bauliche Zukunft der Theaterliegenschaften</title>
-<updated>2026-07-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-ost#260127-23"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028517"/>
-<summary>Aktuelle Informationen der Verwaltung am 2026-07-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

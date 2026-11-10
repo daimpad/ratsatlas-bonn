@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 705,
+  "count": 706,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -37,6 +37,131 @@
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
  },
  "papers": [
+  {
+   "reference": "261992",
+   "name": "Straßenplanung für die Straße \"Am Schwanenmorgen\" (Umlegungsgebiet U 43) gemäß dem tatsächlichen Ausbau",
+   "paper_type": "Beschlussvorlage",
+   "date": "2026-11-09",
+   "amt": "66 Tiefbauamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030064",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3241797&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "66 Tiefbauamt",
+     "name": "66 Tiefbauamt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/35",
+     "method": "paper_type",
+     "evidence": "Beschlussvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": null,
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Am Schwanenmorgen",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07078,
+     "lat": 50.728764,
+     "stage": "B",
+     "method": "strasse",
+     "confidence": "mittel",
+     "evidence": "Am Schwanenmorgen",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030064",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030064",
+   "stand": "offen",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "66 Tiefbauamt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Beschlussvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030064",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2026-11-09",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030064",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    }
+   ],
+   "soll": {
+    "verfahren": "beschlussvorlage",
+    "sicherheit": "mittel",
+    "grund": "die Bezirksvertretung entscheidet selbst",
+    "passung": "passt",
+    "ist": [
+     "bv"
+    ],
+    "abweichung": []
+   }
+  },
   {
    "reference": "260640-02",
    "name": "Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum",
@@ -36323,6 +36448,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion hatte eine Bordsteinabsenkung am Rexkino in der Frongasse beantragt. Die Verwaltung teilt mit, dass stattdessen ein anderer Standort in der Frongasse gewählt wird, weil er besser geeignet ist.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-09"
    }
   },
   {

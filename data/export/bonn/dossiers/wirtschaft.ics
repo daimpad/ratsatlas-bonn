@@ -228,6 +228,16 @@ DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006758
+DTSTAMP:20270210T170000Z
+DTSTART:20270210T170000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006559
 DTSTAMP:20270216T160000Z
 DTSTART:20270216T160000Z
@@ -262,6 +272,16 @@ DTSTART:20270224T160000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
  röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006759
+DTSTAMP:20270310T170000Z
+DTSTART:20270310T170000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -338,6 +358,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006760
+DTSTAMP:20270420T160000Z
+DTSTART:20270420T160000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006594
 DTSTAMP:20270427T160000Z
 DTSTART:20270427T160000Z
@@ -411,6 +441,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006761
+DTSTAMP:20270602T160000Z
+DTSTART:20270602T160000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006488
 DTSTAMP:20270608T160000Z
 DTSTART:20270608T160000Z
@@ -445,6 +485,16 @@ DTSTART:20270617T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006762
+DTSTAMP:20270701T160000Z
+DTSTART:20270701T160000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -540,6 +590,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006763
+DTSTAMP:20270928T160000Z
+DTSTART:20270928T160000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006730
 DTSTAMP:20271005T160000Z
 DTSTART:20271005T160000Z
@@ -620,6 +680,16 @@ SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
  be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
  Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006765
+DTSTAMP:20271125T170000Z
+DTSTART:20271125T170000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

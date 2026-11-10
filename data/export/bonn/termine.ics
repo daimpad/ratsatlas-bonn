@@ -541,6 +541,16 @@ DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006741
+DTSTAMP:20270121T170000Z
+DTSTART:20270121T170000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006698
 DTSTAMP:20270122T150000Z
 DTSTART:20270122T150000Z
@@ -617,6 +627,16 @@ DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006758
+DTSTAMP:20270210T170000Z
+DTSTART:20270210T170000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006600
 DTSTAMP:20270211T170000Z
 DTSTART:20270211T170000Z
@@ -643,6 +663,15 @@ DTSTART:20270216T160000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
  öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006751
+DTSTAMP:20270216T160000Z
+DTSTART:20270216T160000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -741,6 +770,16 @@ DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006759
+DTSTAMP:20270310T170000Z
+DTSTART:20270310T170000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006578
 DTSTAMP:20270311T170000Z
 DTSTART:20270311T170000Z
@@ -790,12 +829,31 @@ DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006752
+DTSTAMP:20270317T160000Z
+DTSTART:20270317T160000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006486
 DTSTAMP:20270318T170000Z
 DTSTART:20270318T170000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
  tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006742
+DTSTAMP:20270406T160000Z
+DTSTART:20270406T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -851,6 +909,25 @@ DTSTART:20270420T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
  öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006760
+DTSTAMP:20270420T160000Z
+DTSTART:20270420T160000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006753
+DTSTAMP:20270421T150000Z
+DTSTART:20270421T150000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -960,6 +1037,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006743
+DTSTAMP:20270512T160000Z
+DTSTART:20270512T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006477
 DTSTAMP:20270513T150000Z
 DTSTART:20270513T150000Z
@@ -984,6 +1071,15 @@ DTSTART:20270525T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
  öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006754
+DTSTAMP:20270525T150000Z
+DTSTART:20270525T150000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1024,6 +1120,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006761
+DTSTAMP:20270602T160000Z
+DTSTART:20270602T160000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006587
 DTSTAMP:20270603T160000Z
 DTSTART:20270603T160000Z
@@ -1057,6 +1163,16 @@ DTSTAMP:20270609T160000Z
 DTSTART:20270609T160000Z
 SUMMARY:Ausschuss für Umwelt\, Klima und Lokale Agenda
 DESCRIPTION:Sitzung des Ausschusses für Umwelt\, Klima und Lokale Agenda\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006744
+DTSTAMP:20270610T160000Z
+DTSTART:20270610T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
  Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
   (CC0 1.0)
 STATUS:CONFIRMED
@@ -1099,6 +1215,15 @@ DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006755
+DTSTAMP:20270624T150000Z
+DTSTART:20270624T150000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006694
 DTSTAMP:20270625T140000Z
 DTSTART:20270625T140000Z
@@ -1134,6 +1259,16 @@ SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
 DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
  ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
  adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006762
+DTSTAMP:20270701T160000Z
+DTSTART:20270701T160000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1192,6 +1327,16 @@ DTSTART:20270714T150000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
  röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006745
+DTSTAMP:20270714T160000Z
+DTSTART:20270714T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1307,6 +1452,16 @@ DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006763
+DTSTAMP:20270928T160000Z
+DTSTART:20270928T160000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006581
 DTSTAMP:20270929T160000Z
 DTSTART:20270929T160000Z
@@ -1372,6 +1527,25 @@ DTSTART:20271007T160000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
  tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006756
+DTSTAMP:20271012T150000Z
+DTSTART:20271012T150000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006746
+DTSTAMP:20271013T160000Z
+DTSTART:20271013T160000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1441,6 +1615,15 @@ DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006757
+DTSTAMP:20271123T160000Z
+DTSTART:20271123T160000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006557
 DTSTAMP:20271124T160000Z
 DTSTART:20271124T160000Z
@@ -1467,6 +1650,16 @@ SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
 DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
  on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
  Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006765
+DTSTAMP:20271125T170000Z
+DTSTART:20271125T170000Z
+SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
+DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
+ beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
+ t Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1523,6 +1716,16 @@ SUMMARY:Ausschuss für Beteiligung der Bürgerinnen und Bürger
 DESCRIPTION:Sitzung des Ausschusses für Beteiligung der Bürgerinnen und B
  ürger\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der St
  adt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006747
+DTSTAMP:20271208T170000Z
+DTSTART:20271208T170000Z
+SUMMARY:Ausschuss für Planen\, Bauen und Denkmalschutz
+DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
+ Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
+  (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

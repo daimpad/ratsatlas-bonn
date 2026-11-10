@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-muffendorf</id>
 <title>Ratsatlas Bonn – Muffendorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Muffendorf</subtitle>
-<updated>2026-11-02T00:00:00Z</updated>
+<updated>2026-11-04T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-muffendorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026373#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „vertagt - mit Maßgabe“ – 260581 Grüne-Antrag: Goldbergweg</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#260581"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026373"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030212#vorlage</id>
 <title>Neue Vorlage 261778-01 AA: BBB-Antrag: Bebauungsplan Nr. 8215-44, „Siebengebirgsterrassen“, Deutschherrenstraße, Fuß- und Fahrradweg zur Saint-Cloud-Straße; Drucksachen 1410552, 212209 und 261778</title>
@@ -66,7 +74,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028554#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 260913-01 ST BBB-Antrag: Abmarkierung von öffentlichen Kfz-Stellflächen in der  Klosterbergstraße</title>
+<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen“ – 260913-01 ST BBB-Antrag: Abmarkierung von öffentlichen Kfz-Stellflächen in der  Klosterbergstraße</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#260913-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028554"/>
@@ -87,14 +95,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#260913"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027406"/>
 <summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026373#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „vertagt - mit Maßgabe“ – 260581 Grüne-Antrag: Goldbergweg</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#260581"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026373"/>
-<summary>Entscheidung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028734#vorlage</id>

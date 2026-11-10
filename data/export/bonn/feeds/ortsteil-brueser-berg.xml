@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-brueser-berg</id>
 <title>Ratsatlas Bonn – Brüser Berg</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Brüser Berg</subtitle>
-<updated>2026-11-02T00:00:00Z</updated>
+<updated>2026-11-09T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-brueser-berg.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030339#vorlage</id>
+<title>Neue Vorlage 261753-02 ST: Stellungnahme der Verwaltung zum CDU/SPD-Antrag: Öffentliche Toilette am Nachbarschaftszentrum Berg</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#261753-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030339"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030201#vorlage</id>
 <title>Neue Vorlage 261753-01 AA: Änderungsantrag der Grünen: CDU/SPD-Antrag: Öffentliche Toilette am Nachbarschaftszentrum Berg Antrag zur Vorlage 261753</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#253317"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023201"/>
 <summary>Empfehlung am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024051#vorlage</id>
-<title>Neue Vorlage 253690: Bürgerantrag: Anbringung eines zusätzlichen oder größeren Mülleimers im Bereich der Katholischen Kita St. Rochus in Duisdorf</title>
-<updated>2025-08-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#253690"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024051"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
 </entry>
 </feed>

@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-endenich</id>
 <title>Ratsatlas Bonn – Endenich</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Endenich</subtitle>
-<updated>2026-11-03T00:00:00Z</updated>
+<updated>2026-11-09T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-endenich.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030064#vorlage</id>
+<title>Neue Vorlage 261992: Straßenplanung für die Straße "Am Schwanenmorgen" (Umlegungsgebiet U 43) gemäß dem tatsächlichen Ausbau</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261992"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030064"/>
+<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030144#vorlage</id>
 <title>Neue Vorlage 260640-02: Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#260576"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026368"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026347#vorlage</id>
-<title>Neue Vorlage 260567: CDU-Bezirksfraktion-Antrag: Überprüfung Fußgängerampel Theodor-Litt-Straße Ecke Hermann-Wandersleb-Ring</title>
-<updated>2026-03-31T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#260567"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026347"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 </feed>

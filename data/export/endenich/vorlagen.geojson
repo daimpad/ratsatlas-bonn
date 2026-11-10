@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 705,
+  "count": 706,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -38,6 +38,30 @@
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
  },
  "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07078,
+     50.728764
+    ]
+   },
+   "properties": {
+    "reference": "261992",
+    "name": "Straßenplanung für die Straße \"Am Schwanenmorgen\" (Umlegungsgebiet U 43) gemäß dem tatsächlichen Ausbau",
+    "paper_type": "Beschlussvorlage",
+    "date": "2026-11-09",
+    "amt": "66 Tiefbauamt",
+    "place": "Am Schwanenmorgen",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030064"
+   }
+  },
   {
    "type": "Feature",
    "geometry": {

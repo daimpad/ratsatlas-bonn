@@ -9,12 +9,36 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030362#vorlage</id>
+<title>Neue Vorlage 262136: Tagesordnungspunkte in nichtöffentlicher Sitzung des Ausschusses für Kinder, Jugend und Familie am 25.11.2026</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262136"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030362"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030351#vorlage</id>
 <title>Neue Vorlage 262131: Dringlichkeitsantrag - Grüne: Sicherstellung der Projektförderung für die erste Jahreshälfte 2027</title>
 <updated>2026-11-09T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262131"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030351"/>
 <summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030349#vorlage</id>
+<title>Neue Vorlage 262129: CDU-SPD Bezirksfraktionen: Beleuchtung der Rad- und Fußwege zur Südbrücke</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262129"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030349"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030339#vorlage</id>
+<title>Neue Vorlage 261753-02 ST: Stellungnahme der Verwaltung zum CDU/SPD-Antrag: Öffentliche Toilette am Nachbarschaftszentrum Berg</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#261753-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030339"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030334#vorlage</id>
@@ -25,6 +49,70 @@
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030329#vorlage</id>
+<title>Neue Vorlage 262120: Große Anfrage Grüne-Fraktion - Nordbrückensperrung - Verbreiterung Gleisbereich auf der Kennedybrücke</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262120"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030329"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030324#vorlage</id>
+<title>Neue Vorlage 262117: Bewilligung über- und außerplanmäßiger Aufwendungen und Auszahlungen gemäß § 83 (1) GO NRW bzw. § 85 (1) GO NRW durch den Stadtkämmerer - Liste 8/2026</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262117"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030324"/>
+<summary>Mitteilungsvorlage · federführend: 20 Stadtkämmerei · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030321#vorlage</id>
+<title>Neue Vorlage 261729-01: Erteilte Befreiung (Vorsitzendenbeteiligung) für die Errichtung zweier provisorischer Aufgangstürme an der Friedrich-Ebert-Brücke</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-castell#261729-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030321"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030294#vorlage</id>
+<title>Neue Vorlage 262102: Klärschlammverbrennung auf der Kläranlage Salierweg bis 2029: Auftreten schwerwiegender Mängel während der Sanierung und dem Betrieb der Wirbelschichtöfen 1 und 2</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#262102"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030294"/>
+<summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030290#vorlage</id>
+<title>Neue Vorlage 261970-01 ST: Grüne-Große Anfrage: Wartezeiten und Termine beim Ausländeramt</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261970-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030290"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030278#vorlage</id>
+<title>Neue Vorlage 262093: Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262093"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030278"/>
+<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030249#vorlage</id>
+<title>Neue Vorlage 261979-01 ST: CDU/SPD-Antrag: Fehlende Flächenmarkierung im Straßenbereich "Villemombler Straße / Ecke Im Hohnderfeld" in 53127 Bonn- Lengsdorf</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261979-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030249"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030223#vorlage</id>
+<title>Neue Vorlage 261853-01 ST: BBB-Anfrage:  „Amtshilfeersuchen der städtischen Ausländerbehörde Bonn“</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261853-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030223"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030209#vorlage</id>
 <title>Neue Vorlage 261981-01 ST: Antrag der Ratsgruppe BSW/SBI: Schutz der Brandbetroffenen in Tannenbusch Mitte (Oppelnerstr. 59) und Bereitstellung geeigneten, bezahlbaren Ersatzwohnraums</title>
 <updated>2026-11-09T00:00:00Z</updated>
@@ -33,12 +121,100 @@
 <summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030195#vorlage</id>
+<title>Neue Vorlage 261578-03 ST: Wirtschaftsplan SGB 2027; hier: Veränderungen/Anpassungen zu DS 261578</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261578-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030195"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030099#vorlage</id>
+<title>Neue Vorlage 262010: Bonner Mitmachbudget 2025/2026 – nicht umsetzbare Projekte aufgrund der aktuellen Haushaltssperre</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262010"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030099"/>
+<summary>Mitteilungsvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030064#vorlage</id>
+<title>Neue Vorlage 261992: Straßenplanung für die Straße "Am Schwanenmorgen" (Umlegungsgebiet U 43) gemäß dem tatsächlichen Ausbau</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261992"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030064"/>
+<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029953#vorlage</id>
+<title>Neue Vorlage 261142-04 ST: Handlungskonzept Wohnen Bonn hier: Stellungnahme zu den Ergänzungsanträgen 261142-02 AA und 261142-03 AA</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261142-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029953"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029952#vorlage</id>
 <title>Neue Vorlage 261930: Flächennutzungsplan der Bundesstadt Bonn hier: Absicht zur Neuaufstellung des Flächennutzungsplans inkl. Prozessvorschlag</title>
 <updated>2026-11-09T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261930"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029952"/>
 <summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029924#vorlage</id>
+<title>Neue Vorlage 261915: Marktverzeichnis für den Stadtbezirk Hardtberg 2027</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#261915"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029924"/>
+<summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029923#vorlage</id>
+<title>Neue Vorlage 261914: Marktverzeichnis für den Stadtbezirk Bonn 2027</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261914"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029923"/>
+<summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029921#vorlage</id>
+<title>Neue Vorlage 261912: Marktverzeichnis für den Stadtbezirk Bad Godesberg 2027</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261912"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029921"/>
+<summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029849#vorlage</id>
+<title>Neue Vorlage 261554-01 ST: Grüne-Prüfauftrag: Zukunft des Sommerfestivals im Biergarten der Rheinaue</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261554-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029849"/>
+<summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029779#vorlage</id>
+<title>Neue Vorlage 261868: Die Verwaltung informiert über die im Zeitraum Mai 2026 bis September 2026 im Rahmen der Verkehrssicherungspflicht durchgeführten Fällungen von Gefahrenbäumen.</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261868"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029779"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029666#vorlage</id>
+<title>Neue Vorlage 231880-05 ST: BBB-Anfrage: Mountainbike-Konzept für die Bundesstadt Bonn Drucksachengruppe 231880</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#231880-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029666"/>
+<summary>Stellungnahme der Verwaltung · federführend: 52 Sport- und Bäderamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029187#vorlage</id>
+<title>Neue Vorlage 261645: Derletalfest mit Rock im Tal 2027</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261645"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029187"/>
+<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030325#vorlage</id>
@@ -87,14 +263,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261939"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029979"/>
 <summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029953#vorlage</id>
-<title>Neue Vorlage 261142-04 ST: Handlungskonzept Wohnen Bonn hier: Stellungnahme zu den Ergänzungsanträgen 261142-02 AA und 261142-03 AA</title>
-<updated>2026-11-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261142-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029953"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030350#vorlage</id>
@@ -297,12 +465,28 @@
 <summary>Empfehlung am 2026-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029395#beratung-2026-11-05-Hauptausschuss</id>
+<title>Hauptausschuss: „ohne Votum“ – 261720 Erstellung des Sustainable Urban Mobility Plan (SUMP) für die Bundesstadt Bonn</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261720"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029395"/>
+<summary>Empfehlung am 2026-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029364#beratung-2026-11-05-Hauptausschuss</id>
 <title>Hauptausschuss: „zur Kenntnis genommen“ – 261624-01 ST BBB-Anfrage Einsatz der K 5000-Bahnen</title>
 <updated>2026-11-05T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#261624-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029364"/>
 <summary>Kenntnisnahme am 2026-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029086#beratung-2026-11-05-Hauptausschuss</id>
+<title>Hauptausschuss: „zurückgezogen“ – 261613 Personalbedarf für politisch beschlossene semistationäre Messanlagen</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261613"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029086"/>
+<summary>Empfehlung am 2026-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028091#beratung-2026-11-05-Hauptausschuss</id>
@@ -545,14 +729,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030223#vorlage</id>
-<title>Neue Vorlage 261853-01 ST: BBB-Anfrage:  „Amtshilfeersuchen der städtischen Ausländerbehörde Bonn“</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261853-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030223"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030219#vorlage</id>
 <title>Neue Vorlage 261991-01 ST: Antrag von BSW/SBI: Bonn für das Völkerrecht – Solidarität mit dem Internationalen Strafgerichtshof (IStGH)</title>
 <updated>2026-11-04T00:00:00Z</updated>
@@ -583,6 +759,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261762-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030171"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030145#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 260585-03 Volt/Grüne Dringlichkeitsantrag zu DS 260585-02 „Bonner Mitmachbudget 2025/2026 - Projekt „Discgolf in Bad Godesberg“</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#260585-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030145"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030138#vorlage</id>
@@ -623,189 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:roettgen#261534-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030103"/>
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030077#vorlage</id>
-<title>Neue Vorlage 261885-01 ST: FDP/Grüne-Antrag: Freier ÖPNV am 05. und 06. Dezember 2026 (verkaufsoffener Sonntag)</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261885-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030077"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030076#vorlage</id>
-<title>Neue Vorlage 261961-01 ST: Grüner Antrag: Überprüfung und Verlegung von Mülleimern im Derletal</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261961-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030076"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030022#vorlage</id>
-<title>Neue Vorlage 231226-02: Neubau des Schulzentrums Tannenbusch, Hirschberger Straße 3, 53119 Bonn: Einsatz einer aktiven Kühlung über die geplante Lüftungsanlage</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#231226-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030022"/>
-<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029999#vorlage</id>
-<title>Neue Vorlage 261950: Bilanzielle Übertragung von Anlagen der Mietereinbauten Radstation Quantiusstraße von der Verwaltung zum SGB</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261950"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029999"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029987#vorlage</id>
-<title>Neue Vorlage 261892-01 ST: CDU-Große Anfrage: Auftritte von Anna Netrebko an der Oper Bonn - Haltung der Stadtverwaltung und Umgang mit den politischen Kontroversen</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261892-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029987"/>
-<summary>Stellungnahme der Verwaltung · federführend: Dezernat IV · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029899#vorlage</id>
-<title>Neue Vorlage 261700-02 ST: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2027</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#261700-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029899"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029884#beratung-2026-11-04-Schulausschuss</id>
-<title>Schulausschuss: „geändert beschlossen“ – 261901 Antrag der Grünen Ratsfraktion: Weiterentwicklung des Anmeldeverfahrens an weiterführenden Schulen</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261901"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029884"/>
-<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029883#beratung-2026-11-04-Schulausschuss</id>
-<title>Schulausschuss: „vertagt - mit Maßgabe“ – 261900 Antrag der Grünen Ratsfraktion: Elternbefragung zum Bedarf an Gesamtschulplätzen in Bonn</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261900"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029883"/>
-<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029765#vorlage</id>
-<title>Neue Vorlage 260000-12: Ersatzbenennungen zu Ratsausschüssen und sonstigen Gremien</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260000-12"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029765"/>
-<summary>Mitteilungsvorlage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029761#beratung-2026-11-04-Schulausschuss</id>
-<title>Schulausschuss: „geändert beschlossen“ – 260945-03 Konzept zur flexiblen und rechtssicheren Schulbuchbeschaffung gem. § 75a GO NRW</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260945-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029761"/>
-<summary>Empfehlung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029752#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261511-01 ST Stellungnahme zum BBB-Antrag: Bad Godesberger Innenstadt Nutzung von E-Scootern in der Fußgängerzone unterbinden</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261511-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029752"/>
-<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029740#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 220712-06 ST Stellungnahme zum BBB-Antrag: Beseitigung von Schrottfahrrädern am Bad Godesberger Bahnhof Drucksachengruppe 220712</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#220712-06%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029740"/>
-<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029737#vorlage</id>
-<title>Neue Vorlage 261860: Evaluation Beueler Osterkirmes (30.03 bis 12.04.2026)</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#261860"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029737"/>
-<summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029684#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261510-01 ST Stellungnahme zu BBB-Antrag: Erschließung des Bahnhofes Bad Godesberg zum Von-Groote-Platz   Hier: Entfernen von an den Handlauf der Treppenanlage angeschlossenen Fahrrädern</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ruengsdorf#261510-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029684"/>
-<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029639#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261775-01 ST FDP-Prüfauftrag: Oberirdische Zisternen als Sofortmaßnahme zur Wasserversorgung von Parks und als Löschwasserreserve</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261775-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029639"/>
-<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029638#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „ungeändert beschlossen - mit Protokollnotiz“ – 261829 Fällgenehmigung für einen Feld-Ahorn auf dem Baugrundstück Eltviller Str. [Hausnummer ausgelassen], 53175 Bonn im Rahmen eines Baugenehmigungsverfahrens</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#261829"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029638"/>
-<summary>Genehmigung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029625#vorlage</id>
-<title>Neue Vorlage 261823: Fällgenehmigung für zwei Himalaya-Zedern auf dem Grundstück Saynstr. [Hausnummer ausgelassen], 53229 Bonn</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#261823"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029625"/>
-<summary>Dringlichkeitsentscheidung BV · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029542#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 231014-07 ST Stellungnahme zur BBB-Große Anfrage „Zukunft des Sportplatzes auf dem Heiderhof“ – DS-Folge 231014</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:heiderhof#231014-07%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029542"/>
-<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029527#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261473-01 ST Bürgerantrag: Antrag auf eine dauerhafte Verkehrsberuhigung im Bereich Am Kurpark [Hausnummer ausgelassen]</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261473-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029527"/>
-<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029493#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261775 FDP-Prüfauftrag: Oberirdische Zisternen als Sofortmaßnahme zur Wasserversorgung von Parks und als Löschwasserreserve</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261775"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029493"/>
-<summary>Empfehlung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029484#vorlage</id>
-<title>Neue Vorlage 260001-02: Nachbenennung - Ausschussvorsitze nach § 58 Abs. 5 GO NRW</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260001-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029484"/>
-<summary>Mitteilungsvorlage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029427#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 261501-03 ST FDP - Große Anfrage: Abriss und Neubau der Stadthalle Bad Godesberg, Sanierung der Stadthalle Bad Godesberg (DS-Nr. 261501-02)</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261501-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029427"/>
-<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029357#vorlage</id>
-<title>Neue Vorlage 261654-01 ST: Großen Anfrage der Grüne-Bezirksfraktion: Kühle Orte in Hardtberg</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#261654-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029357"/>
-<summary>Stellungnahme der Verwaltung · federführend: 53 Gesundheitsamt · Stand: offen</summary>
 </entry>
 </feed>
