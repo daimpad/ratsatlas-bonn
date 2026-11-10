@@ -32,6 +32,7 @@ Der Ratsatlas zeigt die Vorlagen aus dem Ratsinformationssystem der Stadt Bonn a
 | 🏗️ | **Bebauungspläne und Baustellen** | Geltungsbereiche der Pläne mit Planchronik, gemeldete Baustellen der Stadt. |
 | 🙋 | **Mitmachen** | Nächste Sitzungen, berechnete Fristen und alle Wege, sich einzubringen – mit Rechtsgrundlage. |
 | 📰 | **Feeds und Kalender** | Neues für ganz Bonn, je Gebiet, Thema oder Vorgang im Feed-Reader; Sitzungen als Kalenderdatei. |
+| 🖼️ | **Teilen** | Bilder zum Ratsatlas für Beiträge, Präsentationen und Presse in sechs Formaten, auch für den Druck; frei nutzbar unter CC BY 4.0 (`teilen/`). |
 | 🔍 | **Suche** | Nach Titel und Drucksache in ganz Bonn, auf Wunsch auch im Text der Dokumente. |
 | 📖 | **Verstehen** | Die Seite in Einfacher Sprache, Begriffe in einfachen Worten, wie verlässlich die Angaben sind und „So funktioniert der Ratsatlas“ mit Datenfluss, Zeitplan und Technik. |
 | 🤖 | **Ratsassistent** | Fragen in eigenen Worten; ein Sprachmodell antwortet nur mit den Daten der Seite (eigener Schlüssel nötig). |
