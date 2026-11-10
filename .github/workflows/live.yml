@@ -112,3 +112,12 @@ jobs:
             "301 https://bonn.ratsatlas.de/thema/") echo "ok  ris-bonn.datenatlas.de leitet weiter";;
             *) echo "::warning::ris-bonn.datenatlas.de/thema/ leitet nicht dauerhaft auf bonn.ratsatlas.de/thema/ weiter ($ziel)";;
           esac
+          # Strukturdatenatlas der Statistikstelle (data/strukturdaten/, seit 10.11.2026): neuer Stand der Quelle als
+          # Hinweis; neu abrufen mit `python -m pipeline strukturdaten` (lokal, auf Knopfdruck)
+          neu=$(curl -fsSI --retry 3 --retry-delay 10 https://www2.bonn.de/statistik/Strukturdatenatlas/data.js | tr -d '\r' \
+            | sed -n 's/^[Ll]ast-[Mm]odified: //p' | xargs -I{} date -u -d "{}" +%F || true)
+          alt=$(curl -fsSL "https://raw.githubusercontent.com/${{ github.repository }}/main/data/strukturdaten/meta.json" \
+            | python3 -c 'import json,sys;print(json.load(sys.stdin)["datenstand"])' || true)
+          if [ -n "$neu" ] && [ -n "$alt" ] && [ "$neu" != "$alt" ]; then
+            echo "::warning::Strukturdatenatlas mit neuem Stand $neu (im Repository $alt): python -m pipeline strukturdaten ausführen"
+          else echo "ok  Strukturdatenatlas ${alt:-unbekannt}"; fi
