@@ -128,7 +128,12 @@ class ThemaOhnePhasen(unittest.TestCase):
         html = dossier.body(SCHULE, self.d, "../../")
         self.assertNotIn("Terminplan", html)
         self.assertNotIn("So entsteht", html)
-        self.assertIn("Die Monate ab Juli 2026 sind breiter gezeichnet. Punkte und Sitzungen lassen sich", html)
+        self.assertIn("(abgeleitet). Die Monate ab Juli 2026 sind breiter gezeichnet.", html)
+        self.assertIn("Punkte und Sitzungen lassen sich anklicken", html)
+        # Metaangaben eingeklappt (Entscheidung 10.11.2026): Regel je Strang, Quellen, Grenzen
+        self.assertIn('<summary>Wie zugeordnet?</summary>\n      <p>Regel (abgeleitet): Titel nennt Neubau', html)
+        self.assertIn("<summary>Quellen und Methode</summary>", html)
+        self.assertNotIn('<p class="meta">Regel', html)
         self.assertIn('href="../../data/export/bonn/dossiers/schule.ics"', html)
         self.assertIn("Neue Vorlagen und Beratungsergebnisse zu Schulen im Feed-Reader.", html)
         svg = prozessbild.svg(SCHULE, self.d)

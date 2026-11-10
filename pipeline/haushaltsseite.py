@@ -426,7 +426,7 @@ def ergebnis(d, root):
     {legende("am Zuschussbedarf")}
 {tabelle("ergebnis", "erg", "Ordentliches Ergebnis vor internen Leistungen (Zeile 18); negativ heißt Zuschussbedarf, positiv Überschuss", "Zusammen (ordentliches Ergebnis)")}
 {tabelle("ertrag", None, "Ordentliche Erträge (Zeile 10)", "Zusammen")}
-    <p class="meta">Je Einwohner ist abgeleitet: Betrag geteilt durch die Einwohnerzahl laut IT.NRW, für das Ist {ew_ist}, für den Plan der jüngste Stand {ew(ew_plan)} (31.12.{max(EINWOHNER)}). Die Haushaltssatzung nennt mit der Fortschreibung der Stadt 340.226 Einwohner (31.12.2024); damit wären die Werte je Einwohner rund 5 % kleiner. Bei Steuern und Transfers an bestimmte Gruppen ist „je Einwohner“ keine Last je Person.</p>"""
+    <details class="hh-mehr meta-acc"><summary>So ist „je Einwohner“ berechnet</summary><p>Je Einwohner ist abgeleitet: Betrag geteilt durch die Einwohnerzahl laut IT.NRW, für das Ist {ew_ist}, für den Plan der jüngste Stand {ew(ew_plan)} (31.12.{max(EINWOHNER)}). Die Haushaltssatzung nennt mit der Fortschreibung der Stadt 340.226 Einwohner (31.12.2024); damit wären die Werte je Einwohner rund 5 % kleiner. Bei Steuern und Transfers an bestimmte Gruppen ist „je Einwohner“ keine Last je Person.</p></details>"""
 
 
 def _td(inhalt, spalte):
@@ -473,7 +473,7 @@ def veraenderung(d):
         <tr class="hh-summe"><th scope="row">Zusammen</th>{summe}</tr>
       </tbody>
     </table>
-    <p class="meta">Abgeleitet aus den Beträgen oben. Alle Werte sind nominal, ohne Ausgleich der Preissteigerung. Der Ansatz 2024 ist der Betrag der Satzung (Haushaltsplan 2023/2024, zusammen {escape(_mio(satzung["betrag"]))}); der Jahresabschluss nennt einen fortgeschriebenen Ansatz mit Übertragungen aus dem Vorjahr ({escape(_mio(fort))}). Umgliederungen zwischen Produktbereichen und der globale Minderaufwand können Veränderungen einzelner Bereiche erklären, die keine Änderung der Aufgabe sind. Ohne Prozent, wenn der Ausgangswert 0 € oder negativ ist.</p>"""
+    <details class="hh-mehr meta-acc"><summary>So ist die Veränderung berechnet</summary><p>Abgeleitet aus den Beträgen oben. Alle Werte sind nominal, ohne Ausgleich der Preissteigerung. Der Ansatz 2024 ist der Betrag der Satzung (Haushaltsplan 2023/2024, zusammen {escape(_mio(satzung["betrag"]))}); der Jahresabschluss nennt einen fortgeschriebenen Ansatz mit Übertragungen aus dem Vorjahr ({escape(_mio(fort))}). Umgliederungen zwischen Produktbereichen und der globale Minderaufwand können Veränderungen einzelner Bereiche erklären, die keine Änderung der Aufgabe sind. Ohne Prozent, wenn der Ausgangswert 0 € oder negativ ist.</p></details>"""
 
 
 def investitionen(d):
@@ -521,7 +521,7 @@ def investitionen(d):
 {zeilen}
       </tbody>
     </table>
-    <p class="meta">Das Ist liegt oft deutlich unter dem Ansatz, weil Maßnahmen später beginnen oder länger dauern; nicht verbrauchte Mittel kann die Stadt in das Folgejahr übertragen. Finanzanlagen sind Auszahlungen etwa für Beteiligungen und Ausleihungen; die größten Beträge stehen bei den Produktgruppen 1.01.29 Gebäudemanagement (SGB) und 1.16.04 Forderungsverwaltung. Die Bauten des Städtischen Gebäudemanagements stehen in seinem eigenen Wirtschaftsplan. Verpflichtungsermächtigungen und die Finanzplanung ab 2027 sind nicht übernommen.{f" Ohne Teilfinanzrechnung im Jahresabschluss 2024: {ohne_text}." if ohne else ""}</p>"""
+    <details class="hh-mehr meta-acc"><summary>Zum Lesen der Investitionen</summary><p>Das Ist liegt oft deutlich unter dem Ansatz, weil Maßnahmen später beginnen oder länger dauern; nicht verbrauchte Mittel kann die Stadt in das Folgejahr übertragen. Finanzanlagen sind Auszahlungen etwa für Beteiligungen und Ausleihungen; die größten Beträge stehen bei den Produktgruppen 1.01.29 Gebäudemanagement (SGB) und 1.16.04 Forderungsverwaltung. Die Bauten des Städtischen Gebäudemanagements stehen in seinem eigenen Wirtschaftsplan. Verpflichtungsermächtigungen und die Finanzplanung ab 2027 sind nicht übernommen.{f" Ohne Teilfinanzrechnung im Jahresabschluss 2024: {ohne_text}." if ohne else ""}</p></details>"""
 
 
 def treemap_gruppen(p, ansicht, format_):
@@ -633,7 +633,7 @@ def ertragsarten(t, ansichten, spalten, ref, tabelle, anteil_spalte=True):
           <table class="hh-tabelle {tabelle}">
             <thead><tr><th scope="col">Ertragsart</th>{kopf}</tr></thead>
             <tbody>{"".join(zeilen)}</tbody>
-          </table>{f'<p class="meta">{" ".join(hinweis)}</p>' if hinweis else ""}"""
+          </table>{f'<details class="hh-mehr meta-acc"><summary>Hinweise zu den Erträgen</summary><p>{" ".join(hinweis)}</p></details>' if hinweis else ""}"""
     return html, werte_alle + werte_summe
 
 
@@ -693,7 +693,7 @@ def zoom(d, p):
             <thead><tr><th scope="col">Produktgruppe</th>{kopf}<th scope="col">Anteil {escape(ref["titel"])}</th><th scope="col">Seite im Haushaltsplan {escape(neu)}</th></tr></thead>
             <tbody>{"".join(gruppen)}{summenzeile}{zelle(_fundstelle(d, pb, summe, ausgabe=neu))}</tr></tbody>
           </table>
-          <p class="meta">{" ".join(hinweise)}</p>
+          <details class="hh-mehr meta-acc"><summary>Fundstelle und Hinweise</summary><p>{" ".join(hinweise)}</p></details>
         </section>"""
 
 
@@ -724,7 +724,7 @@ def gruppe(d, p, g):
           {f'<p class="meta">{" · ".join(angaben)}</p>' if angaben else ""}
           {_balken(g["aufwandsarten"], ansichten, betraege=True)}
           <table class="hh-tabelle hh-pg-tabelle"><thead><tr><th scope="col">Aufwandsart</th>{kopf}</tr></thead><tbody>{"".join(zeilen)}</tbody></table>{ertrag_html}
-          <p class="meta">Fundstelle: {_fundstelle(d, p["pb"], alle + summe + ertrag_werte, datei=True)}.{hinweis}</p>
+          <details class="hh-mehr meta-acc"><summary>Fundstelle und Hinweise</summary><p>Fundstelle: {_fundstelle(d, p["pb"], alle + summe + ertrag_werte, datei=True)}.{hinweis}</p></details>
         </section>"""
 
 

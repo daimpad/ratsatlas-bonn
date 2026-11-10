@@ -138,7 +138,9 @@ jobs:
       - name: Aufzeichnungen des letzten Laufs
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
         with:
-          path: data/raw/aufzeichnungen.json
+          path: |
+            data/raw/aufzeichnungen.json
+            data/raw/aufzeichnungen_stichworte.json
           key: aufzeichnungen-${{ github.run_id }}
           restore-keys: aufzeichnungen-
 
@@ -177,6 +179,9 @@ jobs:
           # abbrechen, die veröffentlichte Seite bleibt auf dem letzten Stand (Code-Prüfung 24.10.2026)
           if [ ! -d _kurzfassungen/.git ]; then echo "Branch kurzfassungen nicht geladen – Abbruch"; exit 1; fi
           python -m pipeline build
+          # Stichwort für die Suche in den Ratstranskripten: nur, wenn die Suche einen Treffer in derselben Sitzung hat;
+          # höchstens 8 Minuten je Lauf, ein Ausfall hält die Seite nicht auf (Entscheidung des Auftraggebers 10.11.2026)
+          python -m pipeline transkript-stichworte || echo "Stichwörter der Ratstranskripte nicht aktualisiert"
           python -m pipeline stufe-c
           python -m pipeline export
           python -m pipeline kontext

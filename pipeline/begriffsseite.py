@@ -56,16 +56,19 @@ def body(root):
     sprung = " · ".join(f'<a href="#{k}">{escape(t)}</a>' for k, t, _, _ in teile)
     html = [f"""    <h1>Begriffe</h1>
     <p class="lead">Was bedeuten die Wörter im Ratsatlas? Hier stehen Vorlagenarten, Gremien, Ergebnisse und Kürzel in einfachen Worten, jeweils mit Fundstelle.</p>
-    <p class="meta">Die Erklärungen sind allgemein und keine Rechtsberatung. Maßgeblich sind die Gemeindeordnung NRW, die Geschäftsordnung des Rates und die Originale im Ratsinformationssystem. Wo eine Vorlagenart in keinem Regelwerk beschrieben ist, ist die Erklärung aus den Daten erschlossen; das steht bei der Fundstelle.</p>
     <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> {sprung}</nav>"""]
     for key, titel, einleitung, eintraege in teile:
         html.append(f'    <h2 id="{key}">{escape(titel)}</h2>')
         if einleitung:
             html.append(f"    <p>{escape(einleitung)}</p>")
         html.append(_dl(eintraege))
-    html.append(f'    <p class="meta">Quelle: Glossar des Ratsatlas (<a href="{root}data/export/glossar.json">glossar.json</a>), '
-                "das auch der Ratsassistent nutzt. <a href=\"" + root + "\">Zur Karte</a> · <a href=\"" + root
-                + "thema/\">Themenseiten</a></p>")
+    html.append('    <details class="hh-mehr meta-acc"><summary>Quellen und Hinweise</summary><p>Die Erklärungen sind '
+                "allgemein und keine Rechtsberatung. Maßgeblich sind die Gemeindeordnung NRW, die Geschäftsordnung des "
+                "Rates und die Originale im Ratsinformationssystem. Wo eine Vorlagenart in keinem Regelwerk beschrieben "
+                "ist, ist die Erklärung aus den Daten erschlossen; das steht bei der Fundstelle.</p>"
+                f'<p>Quelle: Glossar des Ratsatlas (<a href="{root}data/export/glossar.json">glossar.json</a>), das auch '
+                "der Ratsassistent nutzt.</p></details>")
+    html.append(f'    <p><a href="{root}">Zur Karte</a> · <a href="{root}thema/">Themenseiten</a></p>')
     return "\n".join(html)
 
 

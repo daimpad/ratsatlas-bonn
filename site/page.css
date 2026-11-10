@@ -307,7 +307,9 @@ i.hh-e9, tr.hh-e9 > th::before { background: #b0a48a; }
 .page ol.einfach-weg li::before { content: counter(weg); position: absolute; left: 12px; top: 10px; width: 28px; height: 28px; border-radius: 50%;
   background: var(--accent-fill); color: #fff; font-weight: 700; display: grid; place-items: center; }
 .page ol.einfach-weg li:not(:last-child)::after { content: ""; position: absolute; left: 25px; bottom: -11px; width: 2px; height: 10px; background: var(--accent-fill); }
-.page .einfach-fach { font-size: 0.875rem; color: var(--muted); border-left: 3px solid var(--line); padding-left: 8px; }
+.page .einfach-fach { font-size: 0.875rem; color: var(--muted); border-left: 3px solid var(--line); padding-left: 8px; margin: 8px 0; }
+.page .einfach-fach summary { font-size: 0.875rem; padding: 2px 0; }
+.page .einfach-fach p { margin: 4px 0 0; }
 /* Seite technik/ (pipeline/technikseite.py): Grafiken aus Kästen, Farben je Spalte mit Kontrast ≥ 4,5 für die Schrift */
 .tk-grafik { margin: 12px 0 8px; }
 .tk-svg { display: block; width: 100%; height: auto; font-family: "Inter", system-ui, sans-serif; font-size: 13px; }
@@ -331,3 +333,32 @@ i.hh-e9, tr.hh-e9 > th::before { background: #b0a48a; }
 .tk-liste li { margin: 4px 0; scroll-margin-top: 16px; }
 .tk-svg.hh-hoch { display: none; }
 @media (max-width: 600px) { .tk-svg.hh-breit { display: none; } .tk-svg.hh-hoch { display: block; } }
+
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Aufzeichnungen der Sitzungen (Ratstranskripte, bonn.biz): Kasten mit Symbol (Entscheidung 10.11.2026) */
+.aufz-karte { display: flex; gap: 10px; align-items: flex-start; margin: 8px 0 4px; padding: 10px 12px; border-radius: 12px;
+  background: rgba(124, 58, 237, 0.07); border: 1px solid rgba(124, 58, 237, 0.22); color: var(--text); }
+.aufz-symbol { flex: none; width: 22px; height: 22px; margin-top: 1px; color: var(--accent-ink); }
+.aufz-inhalt { min-width: 0; flex: 1; }
+.aufz-inhalt p { margin: 0; }
+.aufz-titel { font-weight: 600; font-size: 14px; }
+.aufz-kurz { font-weight: 400; font-size: 12px; color: var(--muted-aufz, #5a5a68); margin-left: 4px; }
+.aufz-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px !important; }
+.aufz-knopf { display: inline-block; font-weight: 600; font-size: 13px; text-decoration: none; padding: 5px 10px; border-radius: 10px;
+  background: var(--accent-ink); color: #fff; }
+.aufz-knopf:hover { background: #5b21b6; }
+.aufz-knopf-leise { background: #fff; color: var(--accent-ink); border: 1px solid rgba(124, 58, 237, 0.35); }
+.aufz-knopf-leise:hover { background: rgba(124, 58, 237, 0.1); }
+.aufz-mehr { margin-top: 6px; font-size: 13px; }
+.aufz-mehr summary { cursor: pointer; font-weight: 600; color: var(--accent-ink); font-size: 13px; padding: 2px 0; }
+.aufz-mehr p { margin-top: 4px !important; color: var(--muted-aufz, #5a5a68); }
+
+/* Metaangaben eingeklappt (pipeline/akkordeon.py, Entscheidung 10.11.2026): leiser als Inhalt */
+.page .meta-acc { background: transparent; border-color: var(--line); }
+.page .meta-acc > summary { font-size: 14px; font-weight: 600; color: var(--muted); }
+.page .meta-acc > summary:hover { color: var(--accent-ink); }
+.page .meta-acc p, .page .meta-acc li { font-size: 14px; color: var(--muted); }
+.page .regel-acc { border: 0; padding: 0; margin: 2px 0 8px; }
+.page .regel-acc > summary { font-size: 13px; padding: 2px 0; }
+.page .regel-acc[open] { padding-bottom: 4px; }

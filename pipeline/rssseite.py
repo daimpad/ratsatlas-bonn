@@ -133,7 +133,7 @@ def body(site, site_url, root):
       <p>Damit Browser und Reader den Feed auf Ihrer Seite finden, genügt eine Zeile im Kopf (<code>&lt;head&gt;</code>) der Seite:</p>
       <pre class="rss-code" id="rss-head" tabindex="0"><code>{escape(einbinden)}</code></pre>
       <p class="rss-weiter"><button type="button" class="rss-knopf rss-zweit" data-kopieren="#rss-head" hidden>Zeile kopieren</button> <a href="#technik">Technische Angaben</a></p>
-      <p class="meta">Bitte nennen Sie die Quelle „Ratsatlas Bonn“. Ergebnisse der Beratungen stammen aus OParl-Lite Bonn (machdenstaat, CC BY 4.0), die übrigen Angaben aus dem Ratsinformationssystem der Stadt Bonn (CC0 1.0); maßgeblich ist das Original. Einzelheiten in der <a href="https://github.com/daimpad/ratsatlas-bonn/blob/main/data/LICENSE-DATA.md">Lizenz der Daten</a>.</p>
+      <details class="hh-mehr meta-acc"><summary>Quelle und Lizenz</summary><p>Bitte nennen Sie die Quelle „Ratsatlas Bonn“. Ergebnisse der Beratungen stammen aus OParl-Lite Bonn (machdenstaat, CC BY 4.0), die übrigen Angaben aus dem Ratsinformationssystem der Stadt Bonn (CC0 1.0); maßgeblich ist das Original. Einzelheiten in der <a href="https://github.com/daimpad/ratsatlas-bonn/blob/main/data/LICENSE-DATA.md">Lizenz der Daten</a>.</p></details>
     </section>
 
     <section class="rss-zugang rss-technik" id="technik" aria-labelledby="technik-t">

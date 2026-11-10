@@ -14,7 +14,7 @@ from datetime import date, timedelta
 from html import escape
 from urllib.parse import quote
 
-from . import dossier
+from . import akkordeon, dossier
 
 W, LINKS, RECHTS, OBEN, BAHN = 1100, 170, 16, 62, 52
 MONATE = "Jan Feb Mär Apr Mai Jun Jul Aug Sep Okt Nov Dez".split()
@@ -393,7 +393,8 @@ def abschnitt(t, d, root):
     a, name = Achse(t), bild_name(t)
     phasen = f" Phasen geplant laut Terminplan {escape(t.terminplan)}." if d["phasen"] else ""
     return f"""    <h2>Auf einen Blick</h2>
-    <p class="meta">Wo steht das Verfahren, was ist entschieden, wo kann man sich einbringen? Lage der Punkte nach der letzten Beratung mit Ergebnis, sonst nach der nächsten (abgeleitet);{phasen} Die Monate ab {a.monat(a.knick)} sind breiter gezeichnet. {"Punkte, Sitzungen und Phasen" if d["phasen"] else "Punkte und Sitzungen"} lassen sich anklicken, auch mit der Tabulatortaste.</p>
+    <p>Wo steht das Verfahren, was ist entschieden, wo kann man sich einbringen? {"Punkte, Sitzungen und Phasen" if d["phasen"] else "Punkte und Sitzungen"} lassen sich anklicken, auch mit der Tabulatortaste.</p>
+{akkordeon.mehr("So ist das Bild gezeichnet", f"<p>Lage der Punkte nach der letzten Beratung mit Ergebnis, sonst nach der nächsten (abgeleitet).{phasen} Die Monate ab {a.monat(a.knick)} sind breiter gezeichnet.</p>")}
 {schalter(t, d)}
     <div class="pb-rahmen pb-breit" tabindex="0" role="region" aria-label="Zeitleiste, waagerecht verschiebbar" data-start="{a.x(d["heute"]) / W:.3f}">
       {svg(t, d, root)}

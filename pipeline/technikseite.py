@@ -53,6 +53,9 @@ SCHRITTE = {
     "fetch-aufzeichnungen": ("Aufzeichnungen", "Prüft, welche Sitzungen des Rates eine Videoaufzeichnung haben "
                              "(Ratstranskripte, bonn.biz); nur Video-Adresse und Dauer, nur neue Sitzungen und solche ohne "
                              "Aufzeichnung aus dem letzten Jahr."),
+    "transkript-stichworte": ("Stichwörter", "Prüft je Beratung im Rat ein Wort aus dem Titel: Nur wenn die Suche in "
+                              "den Ratstranskripten damit einen Treffer in derselben Sitzung hat, ist der Suchlink im "
+                              "Vorgang vorbefüllt. Gespeichert werden nur Wort und Zahlen, kein Text."),
     "fetch-lite": ("Beratungen", "Holt Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (CC BY 4.0); daraus "
                                  "entsteht die Prozesslinie einer Vorlage."),
     "build": ("Datenbank und Verortung", "Baut eine SQLite-Datenbank aus Vorlagen, Beratungen, Sitzungen, Gremien und "

@@ -35,7 +35,7 @@ WOERTER = [
 
 
 def _fach(text):
-    return f'    <p class="einfach-fach"><strong>Für Fachleute:</strong> {text}</p>'
+    return f'    <details class="einfach-fach"><summary>Für Fachleute</summary><p>{text}</p></details>'
 
 
 def body(root):
@@ -114,7 +114,8 @@ def body(root):
     <p>E-Mail: <a href="mailto:contact@nozilla.de">contact@nozilla.de</a></p>
     <p>Haben Sie einen Fehler gefunden? Schreiben Sie uns. Oder klicken Sie auf der Karte im Vorgang auf „Verortung falsch? Hinweis geben“.</p>
     </div>
-    <p class="meta">Diese Seite ist in Einfacher Sprache geschrieben, nicht in Leichter Sprache: Eine Prüfgruppe hat sie nicht geprüft. <a href="{root}">Zur Karte</a> · <a href="{root}begriffe/">Begriffe</a></p>"""
+    <details class="hh-mehr meta-acc"><summary>Über diese Seite</summary><p>Diese Seite ist in Einfacher Sprache geschrieben, nicht in Leichter Sprache: Eine Prüfgruppe hat sie nicht geprüft.</p></details>
+    <p><a href="{root}">Zur Karte</a> · <a href="{root}begriffe/">Begriffe</a></p>"""
 
 
 def write(site, site_url, page):
