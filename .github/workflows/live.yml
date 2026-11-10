@@ -18,20 +18,36 @@ jobs:
   live:
     runs-on: ubuntu-latest
     steps:
+      # Ist main inzwischen weiter, folgt ein neuerer Lauf mit eigener Prüfung. Diese Prüfung entfällt dann: Sie
+      # würde den älteren Stand mit den Erwartungen des neueren vergleichen, und eine vom neueren Lauf ersetzte
+      # Veröffentlichung auf GitHub Pages als Fehler melden (beides am 10.11.2026 geschehen).
+      - name: Neuerer Stand auf main?
+        id: stand
+        run: |
+          if [ "${{ github.event_name }}" != "workflow_run" ]; then echo "aktuell=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          kopf=$(git ls-remote "https://github.com/${{ github.repository }}" refs/heads/main | cut -f1)
+          lauf="${{ github.event.workflow_run.head_sha }}"
+          if [ -n "$kopf" ] && [ "$kopf" != "$lauf" ]; then
+            echo "::notice::main ist weiter ($lauf → $kopf); die Prüfung folgt nach dem neueren Lauf"
+            echo "aktuell=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "aktuell=true" >> "$GITHUB_OUTPUT"
+          fi
+
       # abgebrochen heißt: ein neuerer Lauf hat ihn ersetzt; dessen Prüfung folgt (keine Fehlermeldung)
       - name: Veröffentlichung abgeschlossen?
-        if: github.event_name == 'workflow_run' && !contains(fromJSON('["success", "cancelled"]'), github.event.workflow_run.conclusion)
+        if: steps.stand.outputs.aktuell == 'true' && github.event_name == 'workflow_run' && !contains(fromJSON('["success", "cancelled"]'), github.event.workflow_run.conclusion)
         run: |
           echo "::error::Der Lauf „Daten aktualisieren und Seite veröffentlichen“ endete mit ${{ github.event.workflow_run.conclusion }}"
           exit 1
 
       # Der eigene Server holt den Branch deploy per Webhook; etwas Zeit lassen
       - name: Warten auf die Bereitstellung
-        if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
+        if: steps.stand.outputs.aktuell == 'true' && github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
         run: sleep 180
 
       - name: Hauptadresse und Spiegel prüfen
-        if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+        if: steps.stand.outputs.aktuell == 'true' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
         run: |
           set -u
           fail=0
@@ -96,7 +112,7 @@ jobs:
       # deploy/htaccess setzt Sicherheitskopfzeilen und CORS; nginx liefert statische Dateien auf der Hauptadresse
       # derzeit ohne sie aus (Plesk, beim Auftraggeber offen). Bis zur Umstellung nur ein Hinweis, kein Fehler.
       - name: Kopfzeilen der Hauptadresse (Hinweis)
-        if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+        if: steps.stand.outputs.aktuell == 'true' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
         run: |
           # mit GET wie ein Browser: HEAD-Anfragen beantwortet der Server auf einem anderen Weg (mit Kopfzeilen)
           kopf() {  # Adresse, Kopfzeile
