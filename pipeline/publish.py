@@ -293,6 +293,12 @@ def write_dcat(path, data_start, modified, kurzfassungen=False):
                    "Kitas (Land NRW), Hitze (Klimaanalyse NRW), Überschwemmungsgebiete (Land NRW), Wahlbeteiligung der Ratswahl 2025 "
                    "(geschätzt; IT.NRW, Zuordnung über das Straßenverzeichnis 2020 der Stadt); auf Ortsteile umgerechnet "
                    "(abgeleitet), je Kennzahl mit Quelle, Lizenz und Stand.")]
-             if (config.ROOT / "data" / "kontext" / "STAND.json").exists() else []),
+             if (config.ROOT / "data" / "kontext" / "STAND.json").exists() else [])
+          + ([dist("Strukturdaten je statistischem Bezirk (JSON)", "bonn/strukturdaten.json", "application/json", "cc0",
+                   "Ausgewählte Kennzahlen des Strukturdatenatlas der Statistikstelle der Bundesstadt Bonn je statistischem "
+                   "Bezirk, Stadtbezirk und ganz Bonn als Zeitreihe; je Ortsteil nur für sauber zusammengesetzte Ortsteile "
+                   "(abgeleitet); Vergleich mit Köln und Wuppertal aus dem Wegweiser Kommune (CC0). Freigabe der Stadt: "
+                   "CC0 bzw. dl-de/zero-2.0. Vollständige Ablage nach dem Datenvertrag im Datenpaket.")]
+             if (config.ROOT / "data" / "strukturdaten" / "meta.json").exists() else []),
     }
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")

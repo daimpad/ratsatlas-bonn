@@ -43,6 +43,8 @@ SCHRITTE = {
                                              "Vorlagen über ihren Titel zu verorten."),
     "strukturdaten": ("Strukturdaten", "Holt auf Knopfdruck den Strukturdatenatlas der Stadt und Vergleichswerte aus dem "
                                        "Wegweiser Kommune und legt sie nach dem gemeinsamen Datenvertrag ab."),
+    "strukturdaten-verifikation": ("Prüfung der Strukturdaten", "Vergleicht einmalig eine Stichprobe von 20 Werten mit den "
+                                                                 "PDF-Blättern der Statistikstelle und dem Wegweiser."),
     "strukturdaten-seite": ("Strukturdaten für die Seite", "Fasst die Strukturdaten der Statistikstelle für Karte und "
                                                          "Steckbrief zusammen."),
     "fetch-haltestellen": ("Haltestellen", "Holt am 1. des Monats die Haltestellen des VRS für die Zahlen je Ortsteil."),

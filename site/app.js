@@ -868,7 +868,8 @@
     const b = sBezirk(id), i = sJahrIdx(k), w = struktur.werte[k], jahr = struktur.ind[k].jahre[i];
     const sb = w.s[STADTBEZIRK_ID[b.stadtbezirk]] || [];
     return `<strong>${esc(b.id)} ${esc(b.name)}</strong> <span class="nav-dim">· statistischer Bezirk${b.ortsteil ? ` · Ortsteil ${esc(b.ortsteil)}` : ""}</span>
-      <br><span class="nav-big">${sFmt(k, (w.b[id] || [])[i])}</span> ${esc(STRUKTUR_FARBE[k])} ${esc(jahr)}
+      <br>${(struktur.meta.zusammengefasst || {})[id] ? `<span class="nav-dim">ohne eigenen Wert: in Bezirk ${esc(struktur.meta.zusammengefasst[id])} enthalten</span>`
+        : `<span class="nav-big">${sFmt(k, (w.b[id] || [])[i])}</span> ${esc(STRUKTUR_FARBE[k])} ${esc(jahr)}`}
       <br><span class="nav-dim">Stadtbezirk ${esc(b.stadtbezirk)} ${sFmt(k, sb[i])} · ganz Bonn ${sFmt(k, w.g[i])} · Statistikstelle</span>
       <br><span class="nav-dim">${b.ortsteil ? `Klick zeigt den Ortsteil ${esc(b.ortsteil)}` : "Bezirk auf mehrere Ortsteile verteilt"}</span>`;
   }
@@ -911,7 +912,7 @@
         <option value="fest"${sFest ? " selected" : ""}>feste Grenzen über alle Jahre</option></select></label></div>
       <ol class="nav-ramp">${sRanges(k, sBr).map((r, j) => `<li><span class="nav-sw nav-sw${j}" aria-hidden="true"></span>${r}</li>`).join("")}
         <li><span class="nav-sw nav-sw-hatch" aria-hidden="true"></span>nicht veröffentlicht (statistische Geheimhaltung)</li>
-        <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>ohne Wert (u. a. nahezu unbewohnte Bezirke)</li></ol>
+        <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>ohne eigenen Wert (u. a. drei nahezu unbewohnte Bezirke, die die Quelle mit dem Nachbarbezirk zusammen ausweist)</li></ol>
       <p>Je statistischem Bezirk (65), ${esc(d.jahre[i])}; ganz Bonn ${sFmt(k, struktur.werte[k].g[i])}. ${STRUKTUR_HINWEIS}</p>
       <details class="acc"><summary>Was die Zahl bedeutet</summary><p>${esc(d.metatext)}${d.geheimhaltung ? ` Geheimhaltung: ${esc(d.geheimhaltung)}.` : ""}</p></details>
       <details class="acc" id="s-tabelle-acc"><summary>Tabelle aller Bezirke</summary><div id="s-tabelle">${sTabelle(k)}</div></details>

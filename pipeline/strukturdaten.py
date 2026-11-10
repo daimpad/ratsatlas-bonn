@@ -53,8 +53,11 @@ NENNUNG_WW = "Bertelsmann Stiftung, wegweiser-kommune.de"
 
 STATUS = ("ok", "geheim", "fehlt", "abgeleitet")
 TYPEN = ("anzahl", "anteil", "quote", "dichte", "mittelwert", "kategorie")
-# nahezu unbewohnt (Zensus 2022: 23, 24, 69 Einwohner); NaN dort als `fehlt` mit Hinweis (Entscheidung 10.11.2026)
-UNBEWOHNT = {"129", "380", "389"}
+# nahezu unbewohnt (Zensus 2022: 23, 24, 69 Einwohner); die Statistikstelle weist sie mit dem Nachbarbezirk aus
+# (Jahresübersicht „Bevölkerung in Bonn“: „127 Röttgen u. Kottenforst (129)“, „381 Geislar u. Siegaue (380)“,
+# „388 Holtorf u. Ennert (389)“; geprüft in Phase 4). NaN dort als `fehlt` mit Hinweis (Entscheidung 10.11.2026)
+ZUSAMMENGEFASST = {"129": "127", "380": "381", "389": "388"}
+UNBEWOHNT = set(ZUSAMMENGEFASST)
 # Quellfehler: Werte nicht übernehmen (Indikator, Jahr) → Grund
 AUSGESCHLOSSEN = {("i24", "2017"): "Summe der Bezirke 239.986, ganz Bonn 170.072; elf Bezirke mit vielfachen Werten "
                                    "(z. B. 495 Lengsdorf 62.116 statt rund 2.600); Rückmeldung an die Statistikstelle"}
@@ -622,7 +625,9 @@ def aufbereiten(dl=DL, out=OUT, stand=None):
         "hinweise": [
             "Werte unverändert aus der Quelle; keine Schätzung. „geheim“: in der Quelle nicht ausgewiesen, nach dem Metatext "
             "wegen Fallzahl unter 10 (Daten der Bundesagentur für Arbeit). „fehlt“: in der Quelle ohne Wert.",
-            "Bezirke 129 Kottenforst, 380 Siegaue, 389 Ennert: nahezu unbewohnt, in der Quelle ohne Werte.",
+            "Bezirke 129 Kottenforst, 380 Siegaue, 389 Ennert: nahezu unbewohnt, in der Quelle ohne eigene Werte; "
+            "ihre Einwohner sind in den Werten der Bezirke 127, 381 und 388 enthalten (so ausgewiesen in der "
+            "Jahresübersicht „Bevölkerung in Bonn“ der Statistikstelle).",
             f"Werte je Ortsteil (Status „abgeleitet“) nur für {len(sauber)} von {len(namen)} Ortsteilen, deren Einwohner zu "
             f"mindestens {ORTSTEIL_SAUBER:.0%} in Bezirken wohnen, die zu mindestens {BEZIRK_IN_ORTSTEIL:.0%} im Ortsteil liegen "
             "(zuordnung.tsv); ein Bezirk: Wert übernommen; mehrere: Anzahlen summiert, Anteile nur aus Zähler und Nenner. "
@@ -736,7 +741,7 @@ def seite(src=OUT, out=None):
                  "lizenz": LIZENZ_BONN, "namensnennung": NENNUNG_BONN, "url": ATLAS,
                  "wegweiser": {"lizenz": LIZENZ_WW, "namensnennung": NENNUNG_WW,
                                "url": "https://www.wegweiser-kommune.de/open-data", "abrufdatum": meta["abrufdatum"]},
-                 "farbe": list(FARBE), "steckbrief": list(STECKBRIEF), "unbewohnt": sorted(UNBEWOHNT)},
+                 "farbe": list(FARBE), "steckbrief": list(STECKBRIEF), "zusammengefasst": dict(sorted(ZUSAMMENGEFASST.items()))},
         "ind": ind, "werte": werte, "bezirke": bezirke, "ortsteile": ortsteile, "geo": flaechen_geo, "wegweiser": ww,
     }
     out.mkdir(parents=True, exist_ok=True)
@@ -744,3 +749,151 @@ def seite(src=OUT, out=None):
     (out / SEITE).write_text(text, encoding="utf-8")
     print(f"Strukturdaten für die Seite: {len(ind)} Kennzahlen, {len(bezirke)} Bezirke, {len(ww)} Vergleiche, "
           f"{len(text) // 1024} KB → {out / SEITE}")
+
+
+# --- Verifikation (Phase 4) -------------------------------------------------------------------------------------
+
+# Stichprobe von 20 Werten gegen zweite Veröffentlichungen der Statistikstelle (PDF, ausgelesen mit pdftotext) und
+# einen zweiten Abrufweg des Wegweisers (CSV-Export); einmalig, lokal (Schritt `strukturdaten-verifikation`)
+VERIFIKATION = "audit_verifikation.tsv"
+SEED = 20261110
+# Zeile im Bezirksblatt „Soziodemographische Indikatoren“ (Stichtag 31.12.2025) → Kennzahl, Spalte (Wert oder Anteil)
+BLATT = {"i0": ("1. Bevölkerung", "wert"), "i1": ("2. Bevölkerungsdichte", "wert"), "i9": ("12. Durchschnittsalter", "wert"),
+         "i10": ("19. Altenquotient", "wert"), "i11": ("20. Jugendquotient", "wert"), "i12": ("13.   unter 6 Jahre", "anteil"),
+         "i17": ("18.   75 Jahre und älter", "anteil"), "i24": ("30. Haushalte", "wert"),
+         "i26": ("31. Ein-Personen-Haushalte", "anteil"), "i29": ("45. Arbeitslose ", "anteil"),
+         "i43": ("36. Wohnungsbestand", "wert")}
+# Spalten der Jahresübersicht „Bevölkerung in Bonn“ (2020, 2024): Index der Zahl in der Zeile eines Bezirks
+JAHRESBLATT = {"i0": 0, "i1": 1, "i24": 12, "i25": 14}
+
+
+def _zahl(t):
+    t = t.strip("()").replace(".", "").replace(",", ".").replace(" ", "")
+    return float(t)
+
+
+def _pdftext(pfad):
+    import subprocess
+    return subprocess.run(["pdftotext", "-layout", str(pfad), "-"], capture_output=True, text=True, check=True).stdout
+
+
+def blattwerte(text, kennzahl):
+    """Wert, Stadtbezirk und Stadt Bonn einer Zeile des Bezirksblatts (Anteile in Klammern)."""
+    label, spalte = BLATT[kennzahl]
+    zeile = next(z for z in text.splitlines() if z.strip().startswith(label.strip()) and label in z)
+    rest = re.split(r"\d{2}\.\d{2}\.\d{4}", zeile, maxsplit=1)[1]
+    werte = re.findall(r"\(-?\d[\d.]*(?:,\d+)?\)|-?\d[\d.]*(?:,\d+)?", rest)
+    zahlen = [w for w in werte if not w.startswith("(")]
+    klammern = [w for w in werte if w.startswith("(")]
+    if spalte == "anteil":
+        return {"wert": _zahl(klammern[0]), "stadtbezirk": _zahl(klammern[2]) if len(klammern) > 3 else None,
+                "stadt": _zahl(klammern[3]) if len(klammern) > 3 else None}
+    return {"wert": _zahl(zahlen[0]), "stadtbezirk": _zahl(zahlen[2]), "stadt": _zahl(zahlen[3])}
+
+
+def jahreswert(text, bezirk, kennzahl):
+    zeile = next(z for z in text.splitlines() if re.match(rf"^{bezirk} ", z))
+    rest = re.split(r"\s{2,}", zeile.strip(), maxsplit=1)[1]
+    rest = re.sub(r"([+-])\s+(?=\d)", r"\1", rest)
+    zahlen = re.findall(r"[+-]?\d[\d.]*(?:,\d+)?", rest)
+    return _zahl(zahlen[JAHRESBLATT[kennzahl]])
+
+
+def verifikation(src=OUT, dl=DL):
+    import random
+    rnd = random.Random(SEED)
+    with open(src / "werte.tsv", encoding="utf-8") as f:
+        W = {(r["raumebene"], r["raum_id"], r["indikator_id"], r["jahr"]): r for r in csv.DictReader(f, delimiter="\t")}
+    with open(src / "gesamtstadt.tsv", encoding="utf-8") as f:
+        G = {(r["kommune"], r["wegweiser_friendly_url"], r["jahr"]): r for r in csv.DictReader(f, delimiter="\t")}
+    namen = {f["id"]: f["name"].split(" ", 1)[1] for f in _json(dl / "atlas" / "data.js")["geographies"][0]["features"]}
+    audit, pdfs = [], {}
+
+    def pdf(name):
+        if name not in pdfs:
+            ziel = dl / "verifikation" / name
+            if not ziel.exists():
+                ok, _ = _hole(ATLAS + urllib.request.quote(name), ziel, [], "Verifikation")
+                if not ok:
+                    raise SystemExit(f"Verifikation: {name} nicht abrufbar")
+            pdfs[name] = _pdftext(ziel)
+        return pdfs[name]
+
+    def zeile(ebene, rid, iid, jahr, gegen, url, fundstelle, toleranz=0.051, stellen=None):
+        """stellen: Nachkommastellen der Gegenquelle (die Jahresübersicht nennt die Dichte ganzzahlig)."""
+        r = W.get((ebene, rid, f"bonn-sda-{iid}", jahr)) or {}
+        ist = float(r["wert"]) if r.get("wert") else None
+        gleich = ist is not None and gegen is not None and abs(ist - gegen) <= toleranz
+        gerundet = (not gleich and ist is not None and gegen is not None and stellen is not None
+                    and round(ist, stellen) == round(gegen, stellen))
+        audit.append({"nr": len(audit) + 1, "raumebene": ebene, "raum_id": rid, "indikator_id": f"bonn-sda-{iid}",
+                      "jahr": jahr, "wert_ratsatlas": r.get("wert", ""), "status_ratsatlas": r.get("status", ""),
+                      "wert_gegenquelle": "" if gegen is None else _wert(round(gegen, 3)), "gegenquelle": url,
+                      "fundstelle": fundstelle,
+                      "ergebnis": "gleich" if gleich else "gleich (gerundet)" if gerundet else "abweichend",
+                      "bemerkung": f"Gegenquelle mit {stellen} Nachkommastellen" if gerundet else ""})
+
+    bewohnt = [b for b in namen if b not in UNBEWOHNT and b != "127"]
+    # A: vier Bezirke × zwei Kennzahlen aus dem Bezirksblatt 2025
+    for b in rnd.sample(bewohnt, 4):
+        name = f"{b} {namen[b]}.pdf"
+        for k in rnd.sample(sorted(BLATT), 2):
+            zeile("statistischer_bezirk", b, k, "2025", blattwerte(pdf(name), k)["wert"], ATLAS + name,
+                  f"Bezirksblatt, Zeile „{BLATT[k][0].strip()}“, Spalte {'Anteil' if BLATT[k][1] == 'anteil' else 'Wert'}")
+    # B: Jahresübersicht 2020 und 2024, je drei Werte
+    for jahr in ("2020", "2024"):
+        name = f"100100001{jahr}1231.pdf"
+        for b, k in [(rnd.choice(bewohnt), rnd.choice(sorted(JAHRESBLATT))) for _ in range(3)]:
+            zeile("statistischer_bezirk", b, k, jahr, jahreswert(pdf(name), b, k), ATLAS + name,
+                  f"Jahresübersicht „Bevölkerung in Bonn“ {jahr}, Zeile {b}, Spalte {JAHRESBLATT[k] + 1}",
+                  stellen=0 if k == "i1" else None)
+    # B2: zusammengefasste Bezirke – Zeile der Jahresübersicht 2024 nennt den kleinen Bezirk in Klammern
+    name = "10010000120241231.pdf"
+    text = pdf(name)
+    for klein, gross in sorted(ZUSAMMENGEFASST.items()):
+        z = next(z for z in text.splitlines() if re.match(rf"^{gross} ", z))
+        gegen = jahreswert(text, gross, "i0") if f"({klein})" in z else None
+        zeile("statistischer_bezirk", gross, "i0", "2024", gegen, ATLAS + name,
+              f"Jahresübersicht „Bevölkerung in Bonn“ 2024, Zeile „{re.split(r'\s{2,}', z.strip())[0]}“", toleranz=0)
+        audit[-1]["bemerkung"] = f"Bezirk {klein} ist in der Quelle in {gross} enthalten"
+    # C: abgeleitete Werte für Endenich aus den Bezirksblättern 120 und 121
+    t120, t121 = pdf("120 Neu-Endenich.pdf"), pdf("121 Alt-Endenich.pdf")
+    ew = blattwerte(t120, "i0")["wert"] + blattwerte(t121, "i0")["wert"]
+
+    def auslaender(t):
+        z = next(z for z in t.splitlines() if "11. Ausländer" in z)
+        return _zahl(re.findall(r"-?\d[\d.]*(?:,\d+)?", re.split(r"\d{2}\.\d{2}\.\d{4}", z, maxsplit=1)[1])[0])
+    zeile("ortsteil", "endenich", "i0", "2025", ew, ATLAS + "120 Neu-Endenich.pdf",
+          "Summe der Bezirksblätter 120 und 121, Zeile „1. Bevölkerung“", toleranz=0)
+    zeile("ortsteil", "endenich", "i23", "2025", (auslaender(t120) + auslaender(t121)) / ew * 100,
+          ATLAS + "121 Alt-Endenich.pdf", "Bezirksblätter 120 und 121, Ausländer (Zeile 11) je Bevölkerung × 100")
+    # D: Vergleichswerte Stadtbezirk und ganz Bonn aus einem Bezirksblatt
+    b = rnd.choice(bewohnt)
+    name = f"{b} {namen[b]}.pdf"
+    sid = {v: k for k, v in STADTBEZIRKE.items()}[next(f["filters"][0]["name"] for f in _json(dl / "atlas" / "data.js")["geographies"][0]["features"]
+                               if f["id"] == b).removeprefix("Stadtbezirk ")]
+    zeile("stadtbezirk", sid, "i0", "2025", blattwerte(pdf(name), "i0")["stadtbezirk"], ATLAS + name,
+          "Bezirksblatt, Zeile „1. Bevölkerung“, Spalte Stadtbezirk", toleranz=0)
+    zeile("gesamtstadt", "bonn", "i9", "2025", blattwerte(pdf(name), "i9")["stadt"], ATLAS + name,
+          "Bezirksblatt, Zeile „12. Durchschnittsalter“, Spalte Stadt Bonn")
+    # E: Wegweiser über den CSV-Export (zweiter Abrufweg)
+    for fu, kommune, jahr in (("altenquotient", "bonn", "2023"), ("bevoelkerung", "koeln", "2023")):
+        url = f"{WW}export/{fu}+{kommune}+{jahr}.csv?charset=UTF-8"
+        ziel = dl / "verifikation" / f"{fu}_{kommune}_{jahr}.csv"
+        _hole(url, ziel, [], "Verifikation")
+        # eine Kommune, ein Jahr: der Export steht quer („Indikator;Wert“)
+        z = next(l for l in ziel.read_text(encoding="utf-8").splitlines() if re.search(r";-?\d[\d.]*(?:,\d+)?$", l))
+        gegen = _zahl(z.rsplit(";", 1)[1])
+        r = G.get((kommune, fu, jahr), {})
+        gleich = r and abs(float(r["wert"]) - gegen) <= 0.051
+        audit.append({"nr": len(audit) + 1, "raumebene": "gemeinde", "raum_id": kommune, "indikator_id": f"wk-{fu}",
+                      "jahr": jahr, "wert_ratsatlas": r.get("wert", ""), "status_ratsatlas": "ok" if r else "",
+                      "wert_gegenquelle": _wert(gegen), "gegenquelle": url, "fundstelle": "CSV-Export des Wegweisers",
+                      "ergebnis": "gleich" if gleich else "abweichend", "bemerkung": ""})
+    felder = ["nr", "raumebene", "raum_id", "indikator_id", "jahr", "wert_ratsatlas", "status_ratsatlas",
+              "wert_gegenquelle", "gegenquelle", "fundstelle", "ergebnis", "bemerkung"]
+    _tsv(src / VERIFIKATION, felder, audit)
+    n = sum(a["ergebnis"].startswith("gleich") for a in audit)
+    print(f"Verifikation: {n} von {len(audit)} Werten gleich (davon "
+          f"{sum(a['ergebnis'] == 'gleich (gerundet)' for a in audit)} gerundet) → {src / VERIFIKATION}")
+    return audit

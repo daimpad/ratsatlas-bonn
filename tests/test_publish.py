@@ -122,6 +122,8 @@ class Dcat(unittest.TestCase):
             self.assertIn("Sprachmodell", dists["kurzfassungen.tsv"]["dct:description"]["@value"])
             # Kontextdaten je Ortsteil mit Namensnennung (Zensus, Kitas)
             self.assertTrue(dists["kontext.json"]["dct:license"]["@id"].endswith("dl-by-de/2.0"))
+            # Strukturdaten: Freigabe der Stadt ohne Namensnennung
+            self.assertTrue(dists["strukturdaten.json"]["dct:license"]["@id"].endswith("CC0"))
 
 
 if __name__ == "__main__":
