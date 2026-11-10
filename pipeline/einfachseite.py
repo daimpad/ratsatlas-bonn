@@ -91,12 +91,13 @@ def body(root):
     <h2 id="mitmachen">Wie kann ich mitmachen?</h2>
     <ul>
       <li><strong>Sitzungen besuchen:</strong> Die Sitzungen sind meistens öffentlich. Jede Person kann zuhören. Die Termine stehen auf der Karte unter „Mitmachen“.</li>
+      <li><strong>Sitzungen ansehen:</strong> Viele Sitzungen des Rates gibt es als Video. Im Vorgang steht dann ein Link „Video der Sitzung“. Die Mitschrift ist von einem Computer erstellt. Sie kann Fehler haben.</li>
       <li><strong>Fragen stellen:</strong> In den Bezirksvertretungen gibt es eine Einwohnerfragestunde. Sie können bis zu 2 Fragen stellen. Reichen Sie die Fragen spätestens 21 Tage vor der Sitzung ein.</li>
       <li><strong>Bürgerantrag:</strong> Sie können sich schriftlich mit einer Anregung oder Beschwerde an den Rat oder an Ihre Bezirksvertretung wenden. <a href="{BUERGERANTRAG}">So geht der Bürgerantrag bei der Stadt Bonn</a></li>
       <li><strong>Informiert bleiben:</strong> Mit einem <a href="{root}rss/">Feed</a> erfahren Sie, wenn es Neues gibt.</li>
     </ul>
     <p>Wichtig: Der Ratsatlas ist keine Stelle der Stadt. Fragen und Anträge gehen an die Stadt Bonn.</p>
-{_fach("Öffentlichkeit der Sitzungen § 48 GO NRW; Einwohnerfragestunde § 26 der Geschäftsordnung des Rates; Anregungen und Beschwerden § 24 GO NRW.")}
+{_fach("Öffentlichkeit der Sitzungen § 48 GO NRW; Einwohnerfragestunde § 26 der Geschäftsordnung des Rates; Anregungen und Beschwerden § 24 GO NRW. Videos und Ratstranskripte: bonn.biz (Mika Baumeister), automatisch erkannt, nicht amtlich; im Ratsatlas nur verlinkt.")}
 
     <h2 id="grenzen">Was die Karte nicht kann</h2>
     <ul>

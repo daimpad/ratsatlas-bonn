@@ -24,9 +24,9 @@ Der Ratsatlas zeigt die Vorlagen aus dem Ratsinformationssystem der Stadt Bonn a
 |---|---|---|
 | 🗺️ | **Karte und Liste** | Vorlagen je Ortsteil und Stadtbezirk. Die Flächen zeigen, wo in den letzten zwölf Monaten viel beraten wurde. |
 | 🕒 | **Zeitleiste** | Vorlagen je Monat, Sitzungen und Wahlperioden; ein Zeitraum filtert Karte und Liste. |
-| 📄 | **Vorgang** | Eine Vorlage mit ihren Stationen: Einreichung, Beratungen mit Ergebnis, Folgevorlagen – und was das Regelwerk vorsieht. Vorlagen seit dem Vorjahr und noch offene haben eine eigene Seite unter `vorgang/<Drucksache>/`. |
-| ⚖️ | **Prozesse** | Wer entscheidet was? Verfahren mit Schritten und Fristen, Gremien mit Besetzung, Ämter. |
-| 🏷️ | **Themenseiten** | Kunst und Kultur, Verkehr und Mobilität, Schule und Bildung, Wohnen und Bauen, Klima und Umwelt, Kinder, Jugend und Familie, Soziales, Gesundheit und Integration, Sicherheit und Ordnung, Wirtschaft und Wissenschaft, Digitale Verwaltung – mit Zeitleiste und nächsten Sitzungen. |
+| 📄 | **Vorgang** | Eine Vorlage mit ihren Stationen: Einreichung, Beratungen mit Ergebnis, Folgevorlagen – und was das Regelwerk vorsieht. Bei Beratungen im Rat führen Links zum Video der Sitzung und zur Suche in den Ratstranskripten von bonn.biz. Vorlagen seit dem Vorjahr und noch offene haben eine eigene Seite unter `vorgang/<Drucksache>/`. |
+| ⚖️ | **Prozesse** | Wer entscheidet was? Verfahren mit Schritten und Fristen, Gremien mit Besetzung und, beim Rat, Aufzeichnungen der Sitzungen, Ämter. |
+| 🏷️ | **Themenseiten** | Kunst und Kultur, Verkehr und Mobilität, Schule und Bildung, Wohnen und Bauen, Klima und Umwelt, Kinder, Jugend und Familie, Soziales, Gesundheit und Integration, Sicherheit und Ordnung, Wirtschaft und Wissenschaft, Digitale Verwaltung – mit Zeitleiste, nächsten Sitzungen und Suchlinks „Im Rat gesagt“. |
 | 💶 | **Haushalt auf einen Blick** | Aufwendungen und Erträge der Stadt als Kacheln, Plan und Ist bis 2024; ein Klick zoomt bis zu Produktgruppen, Aufwands- und Ertragsarten. Dazu Veränderung und Investitionen je Produktbereich. |
 | 📊 | **Zahlen zum Gebiet** | Einwohner, Mieten, Bodenrichtwerte, Haltestellen, Kitas, Hitze, Überschwemmungsgebiete, Wahlbeteiligung, Meldungen im Mängelmelder; Strukturdaten der Statistikstelle je statistischem Bezirk (Alter, Haushalte, Arbeitsmarkt, SGB II) und ein Vergleich mit Köln und Wuppertal. |
 | 🏗️ | **Bebauungspläne und Baustellen** | Geltungsbereiche der Pläne mit Planchronik, gemeldete Baustellen der Stadt. |
@@ -78,6 +78,7 @@ flowchart LR
 - Ein Straßenpunkt steht für die ganze Straße, nicht für ein Gebäude.
 - Berechnete Fristen beruhen auf den Sitzungsterminen; maßgeblich sind Einladung und Geschäftsordnung.
 - Das Soll nach Regelwerk ist ein vereinfachtes Modell und keine Rechtsauskunft.
+- Aufzeichnungen gibt es nur für Sitzungen des Rates und einzelne des Hauptausschusses (Lücken 2023 und 2024). Die Transkripte bei bonn.biz sind automatisch erkannt und nicht amtlich; der Ratsatlas verlinkt sie nur.
 
 ## 📚 Datenquellen und Lizenzen
 

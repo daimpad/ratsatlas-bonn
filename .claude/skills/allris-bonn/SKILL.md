@@ -21,7 +21,7 @@ Projektauftrag, Entscheidungen und offene Punkte stehen in `CLAUDE.md` (Abschnit
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m pipeline all            # fetch → build → export → check → verify → package
-.venv/bin/python -m pipeline <schritt>      # fetch-papers | fetch-organizations | fetch-meetings | fetch-plans | fetch-lite | fetch-streets | gazetteer | build | export | check | verify | package | seo | baustellen | kandidaten | baustellen-seite
+.venv/bin/python -m pipeline <schritt>      # fetch-papers | fetch-organizations | fetch-meetings | fetch-plans | fetch-lite | fetch-aufzeichnungen | fetch-streets | gazetteer | build | export | check | verify | package | seo | baustellen | kandidaten | baustellen-seite
 ```
 
 | Modul | Aufgabe |
