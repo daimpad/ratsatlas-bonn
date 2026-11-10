@@ -131,3 +131,14 @@ Vorschlag für die Vergleichsebene; die Friendly-URLs sind aus `rest/indicator/l
 - Der Raumabgleich beruht auf der Geometrie von 2016 und auf Zensus-Zellen von 2022 (Mittelpunktregel). Er ist vorläufig, bis die aktuelle Geometrie erreichbar ist.
 - Die Typvorschläge sind aus Namen und Metatexten erschlossen und nicht von der Statistikstelle bestätigt.
 - Werte stehen in diesem Bericht nur als Beispiele für Prüfungen. Die Wegweiser-Werte habe ich nur für Bevölkerung und Durchschnittsalter 2023 abgerufen.
+
+## 9 Entscheidungen des Auftraggebers (10.11.2026)
+
+1. Weg C: Ablage nach dem Datenvertrag „Strukturdaten v1“, Darstellung in der vorhandenen Ebene „Zahlen“ (Flächenauswahl und Steckbrief) mit wählbarer Raumebene.
+2. Werte je Ortsteil nur für die 30 sauber zusammengesetzten Ortsteile; für die übrigen nennt die Seite die beteiligten statistischen Bezirke mit ihren Werten.
+3. Regeln wie vorgeschlagen:
+   - NaN bei Daten der Bundesagentur gilt als `geheim`, sonst als `fehlt`.
+   - Die drei nahezu unbewohnten Bezirke erhalten `fehlt` mit Hinweis.
+   - Die Haushalte 2017 werden nicht übernommen.
+   - Rückmeldung an die Statistikstelle: `strukturdaten/RUECKMELDUNG_statistikstelle.md`, versendet der Auftraggeber.
+4. Wanderungsdaten folgen später in einem eigenen Schritt, sobald der Bezugsweg klar ist.
