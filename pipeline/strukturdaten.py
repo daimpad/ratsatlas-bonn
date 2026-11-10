@@ -28,7 +28,7 @@ from pathlib import Path
 
 from . import config
 
-VERTRAG = "1.0-entwurf"
+VERTRAG = "1.1-entwurf"   # 1.1: Spalte einwohneranteil in zuordnung.tsv (Entscheidung des Auftraggebers 10.11.2026)
 OUT = config.ROOT / "data" / "strukturdaten"
 DL = Path(os.environ.get("STRUKTURDATEN_DL", config.ROOT / "_strukturdaten_dl"))
 
@@ -82,8 +82,19 @@ NICHT_SUMMIERBAR = {"i20"}
 # Verteilungen: Kategorien stehen in der Quelle im Feld des Jahres, Stichtag 31.12.2025 → je Kategorie ein Anteil
 VERTEILUNG = {"i44", "i45", "i47"}
 VERTEILUNG_JAHR = "2025"
-# Zähler und Nenner, wo beide im Atlas stehen (für die Aggregation in Phase 2)
-BRUCH = {"i19": ("i18", "i0"), "i23": ("i22", "i0"), "i38": ("i36", "i24"), "i57": ("i56", "i43")}
+# Zähler, Nenner und Faktor, wo beide im Atlas stehen und sich der Wert der Quelle daraus nachrechnen lässt (geprüft
+# 10.11.2026 an allen Bezirken und Jahren, Abweichung ≤ 0,05). Nicht aufgenommen: Bedarfsgemeinschaften je 1.000
+# Haushalte (i38), in 2012, 2013, 2017, 2021 und 2023 mit anderer Zahl der Haushalte berechnet
+BRUCH = {"i19": ("i18", "i0", 100), "i23": ("i22", "i0", 100), "i57": ("i56", "i43", 100)}
+# Raumabgleich (Phase 2): ein Bezirk liegt in einem Ortsteil, wenn dort mindestens 97 % seiner Einwohner wohnen; ein
+# Ortsteil ist sauber zusammengesetzt, wenn mindestens 95 % seiner Einwohner in solchen Bezirken wohnen
+BEZIRK_IN_ORTSTEIL = 0.97
+ORTSTEIL_SAUBER = 0.95
+ZUORDNUNG_FELDER = ["von_ebene", "von_id", "nach_ebene", "nach_id", "flaechenanteil", "einwohneranteil", "methode",
+                    "konfidenz"]
+RAUM_AUDIT_FELDER = ["einheit", "name", "ziel", "flaechenanteil", "einwohneranteil", "methode", "konfidenz", "pruefstatus"]
+METHODE = ("Verschneidung der Flächen; Einwohner aus dem Zensus 2022 (100-m-Zellen, Mittelpunkt im Gebiet); "
+           "Geometrie der Bezirke siehe meta.json")
 
 INDIKATOR_FELDER = ["indikator_id", "name", "thema", "einheit", "typ", "zaehler_id", "nenner_id", "raumebenen", "jahre",
                     "quelle", "datenhalter", "lizenz", "lizenz_url", "namensnennung", "metatext", "geheimhaltung",
@@ -402,6 +413,126 @@ def wegweiser(roh, abrufdatum):
     return indikatoren, gesamt
 
 
+# --- Raumabgleich (Phase 2) -------------------------------------------------------------------------------------
+
+ZENSUS = config.ROOT / "data" / "kontext" / "zensus_bonn.tsv"
+
+
+def raumabgleich(bezirke_geo, ortsteile_geo=None, zensus=ZENSUS):
+    """Statistischer Bezirk → Ortsteil nach Fläche und Einwohnern (Zensus-Zellen, Mittelpunkt im Gebiet).
+
+    Gibt (zuordnung, audit, saubere Ortsteile {slug: [Bezirke]}, Namen der Ortsteile) zurück. Geteilte Bezirke werden
+    gemeldet, nicht stillschweigend zugeordnet (Prompt Strukturdaten, Phase 2)."""
+    from shapely import make_valid
+    from shapely.geometry import Point, shape
+    ortsteile_geo = ortsteile_geo or _json(config.ORTSTEILE)
+    O = [(_slug(f["properties"]["ortsteil_bez"]), f["properties"]["ortsteil_bez"], make_valid(shape(f["geometry"])))
+         for f in ortsteile_geo["features"]]
+    B = [(f["properties"]["raum_id"], f["properties"]["name"], make_valid(shape(f["geometry"])))
+         for f in bezirke_geo["features"]]
+    ew, ew_b, ew_o = {}, {}, {}
+    with open(zensus, encoding="utf-8") as f:
+        for r in csv.DictReader(f, delimiter="\t"):
+            e = float(r["einwohner"] or 0)
+            if not e:
+                continue
+            pt = Point(float(r["lon"]), float(r["lat"]))
+            b = next((i for i, _, g in B if g.contains(pt)), None)
+            o = next((i for i, _, g in O if g.contains(pt)), None)
+            if b and o:
+                ew[(b, o)] = ew.get((b, o), 0) + e
+                ew_b[b] = ew_b.get(b, 0) + e
+            if o:
+                ew_o[o] = ew_o.get(o, 0) + e
+    zuordnung, audit, haupt = [], [], {}
+    for bid, bname, g in B:
+        teile = []
+        for oid, oname, og in O:
+            fa = g.intersection(og).area / g.area
+            ea = ew.get((bid, oid), 0) / ew_b[bid] if ew_b.get(bid) else 0.0
+            if fa >= 0.001 or ea > 0:
+                teile.append((oid, oname, fa, ea))
+        teile.sort(key=lambda t: (-t[3], -t[2]))
+        liegt = bool(ew_b.get(bid)) and teile[0][3] >= BEZIRK_IN_ORTSTEIL
+        if liegt:
+            haupt[bid] = teile[0][0]
+        for oid, oname, fa, ea in teile:
+            konf = "hoch" if ea >= BEZIRK_IN_ORTSTEIL else ("mittel" if ea >= 0.5 else "niedrig")
+            zuordnung.append({"von_ebene": "statistischer_bezirk", "von_id": bid, "nach_ebene": "ortsteil", "nach_id": oid,
+                              "flaechenanteil": f"{fa:.4f}", "einwohneranteil": f"{ea:.4f}", "methode": METHODE,
+                              "konfidenz": konf})
+            status = ("ohne Einwohner im Zensus" if not ew_b.get(bid) else
+                      "liegt im Ortsteil" if liegt and oid == teile[0][0] else
+                      "Randanteil, nicht zugeordnet" if liegt else "geteilt, nicht zugeordnet")
+            audit.append({"einheit": bid, "name": bname, "ziel": oname, "flaechenanteil": f"{fa:.4f}",
+                          "einwohneranteil": f"{ea:.4f}", "methode": METHODE, "konfidenz": konf, "pruefstatus": status})
+    sauber = {}
+    for oid, oname, _ in O:
+        mitglieder = sorted(b for b, o in haupt.items() if o == oid)
+        drin = sum(ew.get((b, oid), 0) for b in mitglieder)
+        if mitglieder and ew_o.get(oid) and drin / ew_o[oid] >= ORTSTEIL_SAUBER:
+            sauber[oid] = mitglieder
+    return zuordnung, audit, sauber, {oid: oname for oid, oname, _ in O}
+
+
+def ortsteilwerte(werte, indikatoren, sauber, unbewohnt=UNBEWOHNT):
+    """Werte je sauber zusammengesetztem Ortsteil (Status `abgeleitet`): ein Bezirk → Wert übernommen; mehrere Bezirke →
+    Anzahlen summiert, Anteile aus Zähler und Nenner (BRUCH); übrige Kennzahlen nicht gebildet. Nahezu unbewohnte
+    Bezirke ohne Werte zählen in Summen nicht mit."""
+    typ = {i["indikator_id"]: i["typ"] for i in indikatoren}
+    bez = {}
+    for w in werte:
+        if w["raumebene"] == "statistischer_bezirk":
+            bez[(w["indikator_id"], w["jahr"], w["raum_id"])] = w
+    reihen = sorted({(w["indikator_id"], w["jahr"]) for w in bez.values()})
+    out = []
+    for oid, mitglieder in sorted(sauber.items()):
+        quelle = f"zuordnung.tsv: statistischer_bezirk {'+'.join(mitglieder)} → ortsteil {oid}"
+        for iid, jahr in reihen:
+            teile = [bez.get((iid, jahr, b)) for b in mitglieder]
+            if any(t is None for t in teile):
+                continue
+            q = iid.removeprefix("bonn-sda-")
+            zeile = {"raumebene": "ortsteil", "raum_id": oid, "indikator_id": iid, "jahr": jahr, "quellobjekt": quelle}
+            if len(teile) == 1:
+                t = teile[0]
+                out.append({**zeile, "wert": t["wert"], "status": "abgeleitet" if t["status"] == "ok" else t["status"]})
+                continue
+            gezaehlt = [t for t in teile if not (t["raum_id"] in unbewohnt and t["status"] == "fehlt")]
+            if typ.get(iid) == "anzahl" and q not in NICHT_SUMMIERBAR:
+                if all(t["status"] == "ok" for t in gezaehlt):
+                    out.append({**zeile, "wert": _wert(round(sum(float(t["wert"]) for t in gezaehlt), 3)),
+                                "status": "abgeleitet"})
+                else:
+                    out.append({**zeile, "wert": "", "status": "fehlt"})
+            elif q in BRUCH:
+                z, n, faktor = BRUCH[q]
+                zs = [bez.get((f"bonn-sda-{z}", jahr, b)) for b in mitglieder]
+                ns = [bez.get((f"bonn-sda-{n}", jahr, b)) for b in mitglieder]
+                paare = [(a, b) for a, b in zip(zs, ns) if a and b and not (a["raum_id"] in unbewohnt and a["status"] == "fehlt")]
+                if paare and all(a["status"] == "ok" and b["status"] == "ok" for a, b in paare) and \
+                        sum(float(b["wert"]) for _, b in paare):
+                    wert = sum(float(a["wert"]) for a, _ in paare) / sum(float(b["wert"]) for _, b in paare) * faktor
+                    out.append({**zeile, "wert": _wert(round(wert, 1)), "status": "abgeleitet"})
+                else:
+                    out.append({**zeile, "wert": "", "status": "fehlt"})
+    return out
+
+
+def ortsteile_geo(path=None):
+    """raum/ortsteil.geojson (Flächen der Stadt Bonn, CC0); eltern_id = Stadtbezirk wie im Atlas."""
+    eltern = {name: sid for sid, name in STADTBEZIRKE.items()}
+    feats = []
+    for f in _json(path or config.ORTSTEILE)["features"]:
+        p = f["properties"]
+        feats.append({"type": "Feature", "geometry": f["geometry"], "properties": {
+            "raum_id": _slug(p["ortsteil_bez"]), "name": p["ortsteil_bez"], "raumebene": "ortsteil",
+            "eltern_id": eltern.get(p["bezirk_bez"], ""),
+            "quelle": "https://opendata.bonn.de/dataset/flächen-der-ortsteile", "lizenz": "CC0 1.0 (Stadt Bonn)"}})
+    feats.sort(key=lambda f: f["properties"]["raum_id"])
+    return {"type": "FeatureCollection", "features": feats}
+
+
 # --- Prüfung ----------------------------------------------------------------------------------------------------
 
 def pruefen(out=OUT):
@@ -429,7 +560,11 @@ def pruefen(out=OUT):
     for r in lies("gesamtstadt.tsv"):
         if r["indikator_id"] not in ind or not r["wegweiser_friendly_url"]:
             fehler.append(f"gesamtstadt: {r['indikator_id']}")
+    for r in lies("zuordnung.tsv"):
+        if r["konfidenz"] not in ("hoch", "mittel", "niedrig") or not (0 <= float(r["einwohneranteil"]) <= 1):
+            fehler.append(f"zuordnung {r['von_id']} → {r['nach_id']}")
     for f in [*_json(out / "raum" / "statistischer_bezirk.geojson")["features"],
+              *_json(out / "raum" / "ortsteil.geojson")["features"],
               *_json(out / "raum" / "stadtbezirk.geojson")["features"]]:
         if set(f["properties"]) != {"raum_id", "name", "raumebene", "eltern_id", "quelle", "lizenz"}:
             fehler.append(f"Geometrie {f['properties'].get('raum_id')}: Properties")
@@ -448,13 +583,23 @@ def aufbereiten(dl=DL, out=OUT, stand=None):
     ind, werte, plaus = atlas(dl / "atlas", abrufdatum)
     ind_ww, gesamt = wegweiser(dl / "wegweiser", abrufdatum)
     geo = geometrie(dl / "atlas", dl / "statistische_bezirke.geojson", stand.get("geometrie", "atlas"))
+    zuordnung, audit_raum, sauber, namen = raumabgleich(geo)
+    werte_ot = ortsteilwerte(werte, ind, sauber)
+    ot_ind = {w["indikator_id"] for w in werte_ot}
+    for i in ind:
+        if i["indikator_id"] in ot_ind:
+            i["raumebenen"] = "statistischer_bezirk;ortsteil;stadtbezirk;gesamtstadt"
     _tsv(out / "indikatoren.tsv", INDIKATOR_FELDER, ind + ind_ww)
-    _tsv(out / "werte.tsv", WERT_FELDER, werte)
+    _tsv(out / "werte.tsv", WERT_FELDER, werte + werte_ot)
+    _tsv(out / "zuordnung.tsv", ZUORDNUNG_FELDER, zuordnung)
+    _tsv(out / "audit_raumabgleich.tsv", RAUM_AUDIT_FELDER, audit_raum)
     _tsv(out / "gesamtstadt.tsv", GESAMT_FELDER, gesamt)
     _tsv(out / "audit_plausibilitaet.tsv", ["indikator_id", "jahr", "befund", "grund"], plaus)
     (out / "raum").mkdir(parents=True, exist_ok=True)
     (out / "raum" / "statistischer_bezirk.geojson").write_text(
         json.dumps(geo, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    (out / "raum" / "ortsteil.geojson").write_text(
+        json.dumps(ortsteile_geo(), ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     (out / "raum" / "stadtbezirk.geojson").write_text(
         json.dumps(stadtbezirke(), ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     meta = {
@@ -478,6 +623,10 @@ def aufbereiten(dl=DL, out=OUT, stand=None):
             "Werte unverändert aus der Quelle; keine Schätzung. „geheim“: in der Quelle nicht ausgewiesen, nach dem Metatext "
             "wegen Fallzahl unter 10 (Daten der Bundesagentur für Arbeit). „fehlt“: in der Quelle ohne Wert.",
             "Bezirke 129 Kottenforst, 380 Siegaue, 389 Ennert: nahezu unbewohnt, in der Quelle ohne Werte.",
+            f"Werte je Ortsteil (Status „abgeleitet“) nur für {len(sauber)} von {len(namen)} Ortsteilen, deren Einwohner zu "
+            f"mindestens {ORTSTEIL_SAUBER:.0%} in Bezirken wohnen, die zu mindestens {BEZIRK_IN_ORTSTEIL:.0%} im Ortsteil liegen "
+            "(zuordnung.tsv); ein Bezirk: Wert übernommen; mehrere: Anzahlen summiert, Anteile nur aus Zähler und Nenner. "
+            "Grundlage: Geometrie siehe oben, Einwohner Zensus 2022; wird mit der aktuellen Geometrie der Stadt neu berechnet.",
             "Gesamtstädtische Werte aus dem Wegweiser und kleinräumige Werte der Statistikstelle unterscheiden sich in "
             "Definition und Stichtag (z. B. Einwohner: amtliche Fortschreibung bzw. Melderegister); nicht vermischen.",
         ],
@@ -488,7 +637,8 @@ def aufbereiten(dl=DL, out=OUT, stand=None):
         raise SystemExit("Strukturdaten: " + "; ".join(fehler[:10]))
     n_ind = len(ind) + len(ind_ww)
     print(f"Strukturdaten: {n_ind} Indikatoren, {len(werte)} Werte, {len(gesamt)} Vergleichswerte, "
-          f"{len(geo['features'])} Bezirke ({meta['geometrie']}), {len(plaus)} Plausibilitätshinweise → {out}")
+          f"{len(geo['features'])} Bezirke ({meta['geometrie']}), {len(plaus)} Plausibilitätshinweise; Raumabgleich: "
+          f"{len(sauber)} von {len(namen)} Ortsteilen sauber, {len(werte_ot)} Werte je Ortsteil → {out}")
 
 
 def schritt():

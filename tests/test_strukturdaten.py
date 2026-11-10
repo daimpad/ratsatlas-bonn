@@ -79,7 +79,8 @@ class Atlas(unittest.TestCase):
 
     def test_typ_aus_metatext_nicht_aus_namen(self):
         self.assertEqual(sd.TYP["i39"], ("quote", "je 1.000 Einwohner"))
-        self.assertEqual(sd.BRUCH["i19"], ("i18", "i0"))
+        self.assertEqual(sd.BRUCH["i19"], ("i18", "i0", 100))
+        self.assertNotIn("i38", sd.BRUCH)   # in fünf Jahren mit anderer Zahl der Haushalte berechnet
 
     def test_summenpruefung(self):
         # i0: Summe 35 = ganz Bonn 35, kein Hinweis; i36: Summe 4,5 ≠ 10, Hinweis
@@ -138,3 +139,62 @@ class DateienImRepository(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def _quadrat(x0, y0, x1, y1):
+    return {"type": "Polygon", "coordinates": [[[x0, y0], [x1, y0], [x1, y1], [x0, y1], [x0, y0]]]}
+
+
+class Raumabgleich(unittest.TestCase):
+    """Zwei Ortsteile A (links) und B (rechts); Bezirke 1 und 2 in A, Bezirk 3 über beiden mit je 4 Einwohnern."""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        ot = {"features": [
+            {"properties": {"ortsteil_bez": "A-Dorf", "bezirk_bez": "Bonn"}, "geometry": _quadrat(0, 0, 2, 2)},
+            {"properties": {"ortsteil_bez": "Bü", "bezirk_bez": "Beuel"}, "geometry": _quadrat(2, 0, 4, 2)}]}
+        bz = {"features": [
+            {"properties": {"raum_id": "1", "name": "Eins"}, "geometry": _quadrat(0, 0, 1, 2)},
+            {"properties": {"raum_id": "2", "name": "Zwei"}, "geometry": _quadrat(1, 0, 2, 1)},
+            {"properties": {"raum_id": "3", "name": "Drei"}, "geometry": _quadrat(1, 1, 4, 2)}]}
+        zensus = Path(self._tmp.name) / "z.tsv"
+        zellen = [(0.5, 1, 100), (1.5, 0.5, 100), (1.5, 1.5, 4), (3, 1.5, 4)]
+        zensus.write_text("gitter_id\tlon\tlat\teinwohner\n" + "".join(f"x\t{x}\t{y}\t{e}\n" for x, y, e in zellen))
+        self.zu, self.audit, self.sauber, self.namen = sd.raumabgleich(bz, ot, zensus)
+
+    def tearDown(self):
+        self._tmp.cleanup()
+
+    def test_sauber_nur_mit_ganzen_bezirken(self):
+        # A: 200 von 204 Einwohnern in Bezirken, die ganz in A liegen (98 %); B: Bezirk 3 geteilt
+        self.assertEqual(self.sauber, {"a-dorf": ["1", "2"]})
+        self.assertEqual(self.namen["bue"], "Bü")
+
+    def test_geteilter_bezirk_gemeldet_nicht_zugeordnet(self):
+        drei = {r["ziel"]: r for r in self.audit if r["einheit"] == "3"}
+        self.assertEqual({r["pruefstatus"] for r in drei.values()}, {"geteilt, nicht zugeordnet"})
+        self.assertEqual(drei["Bü"]["einwohneranteil"], "0.5000")
+        eins = [r for r in self.zu if r["von_id"] == "1"]
+        self.assertEqual((eins[0]["nach_id"], eins[0]["konfidenz"], eins[0]["einwohneranteil"]), ("a-dorf", "hoch", "1.0000"))
+
+    def test_ortsteilwerte(self):
+        ind = [{"indikator_id": "bonn-sda-i0", "typ": "anzahl"}, {"indikator_id": "bonn-sda-i22", "typ": "anzahl"},
+               {"indikator_id": "bonn-sda-i23", "typ": "anteil"}, {"indikator_id": "bonn-sda-i9", "typ": "mittelwert"}]
+        w = lambda iid, rid, wert, status="ok": {"raumebene": "statistischer_bezirk", "raum_id": rid,
+                                                  "indikator_id": iid, "jahr": "2025", "wert": wert, "status": status}
+        werte = [w("bonn-sda-i0", "1", "100"), w("bonn-sda-i0", "2", "300"), w("bonn-sda-i22", "1", "10"),
+                 w("bonn-sda-i22", "2", "50"), w("bonn-sda-i23", "1", "10"), w("bonn-sda-i23", "2", "16.7"),
+                 w("bonn-sda-i9", "1", "40"), w("bonn-sda-i9", "2", "44"), w("bonn-sda-i9", "3", "38")]
+        out = {(r["raum_id"], r["indikator_id"]): r for r in sd.ortsteilwerte(werte, ind, {"a": ["1", "2"], "b": ["3"]})}
+        self.assertEqual((out[("a", "bonn-sda-i0")]["wert"], out[("a", "bonn-sda-i0")]["status"]), ("400", "abgeleitet"))
+        self.assertEqual(out[("a", "bonn-sda-i23")]["wert"], "15")        # 60 / 400 × 100, nicht Mittel der Anteile
+        self.assertNotIn(("a", "bonn-sda-i9"), out)                       # Mittelwert ohne Zähler und Nenner
+        self.assertEqual(out[("b", "bonn-sda-i9")]["wert"], "38")         # ein Bezirk: Wert übernommen
+        self.assertIn("statistischer_bezirk 1+2 → ortsteil a", out[("a", "bonn-sda-i0")]["quellobjekt"])
+
+    def test_summe_mit_geheimem_teil_fehlt(self):
+        ind = [{"indikator_id": "bonn-sda-i36", "typ": "anzahl"}]
+        werte = [{"raumebene": "statistischer_bezirk", "raum_id": r, "indikator_id": "bonn-sda-i36", "jahr": "2013",
+                  "wert": v, "status": s} for r, v, s in (("1", "", "geheim"), ("2", "7", "ok"))]
+        r = sd.ortsteilwerte(werte, ind, {"a": ["1", "2"]})[0]
+        self.assertEqual((r["wert"], r["status"]), ("", "fehlt"))

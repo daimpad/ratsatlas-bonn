@@ -1,5 +1,5 @@
 {
- "vertrag_version": "1.0-entwurf",
+ "vertrag_version": "1.1-entwurf",
  "datenstand": "2026-02-03",
  "abrufdatum": "2026-11-10",
  "veroeffentlichen": true,
@@ -28,6 +28,7 @@
  "hinweise": [
   "Werte unverändert aus der Quelle; keine Schätzung. „geheim“: in der Quelle nicht ausgewiesen, nach dem Metatext wegen Fallzahl unter 10 (Daten der Bundesagentur für Arbeit). „fehlt“: in der Quelle ohne Wert.",
   "Bezirke 129 Kottenforst, 380 Siegaue, 389 Ennert: nahezu unbewohnt, in der Quelle ohne Werte.",
+  "Werte je Ortsteil (Status „abgeleitet“) nur für 30 von 51 Ortsteilen, deren Einwohner zu mindestens 95% in Bezirken wohnen, die zu mindestens 97% im Ortsteil liegen (zuordnung.tsv); ein Bezirk: Wert übernommen; mehrere: Anzahlen summiert, Anteile nur aus Zähler und Nenner. Grundlage: Geometrie siehe oben, Einwohner Zensus 2022; wird mit der aktuellen Geometrie der Stadt neu berechnet.",
   "Gesamtstädtische Werte aus dem Wegweiser und kleinräumige Werte der Statistikstelle unterscheiden sich in Definition und Stichtag (z. B. Einwohner: amtliche Fortschreibung bzw. Melderegister); nicht vermischen."
  ]
 }
