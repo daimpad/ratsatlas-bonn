@@ -146,4 +146,5 @@ THEMA = Thema(
            '<path d="M5.5 17 9.5 9h6l3 8M9.5 9l3 8h-7M13.5 6H17"/>',
     produktbereich="12",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
     fachausschuss=MOBIL[0],  # Kasten „Wer berät mit“ (Besetzung, Fraktion abgeleitet)
+    transkript_begriffe=('Nordbrücke', 'Radverkehr', 'Parkgebühren'),  # Kasten „Im Rat gesagt“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
 )

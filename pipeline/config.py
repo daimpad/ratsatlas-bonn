@@ -68,6 +68,11 @@ SOURCES = {
         "url": "https://opendata.bonn.de/dataset/lage-der-bebauungspläne",
         "license": "CC0 1.0 (Stadt Bonn, Datensatz „Lage der Bebauungspläne“)",
     },
+    "transkripte": {
+        "url": "https://bonn.biz/ratstranskripte",
+        "license": "CC BY-NC 4.0 (Ratstranskripte, Datenquelle: OParl Bonn | Mika Baumeister); nur verlinkt, übernommen "
+                   "werden nur Video-Adresse und Dauer je Sitzung",
+    },
     "hnr-bonn": {
         "url": "https://opendata.bonn.de/dataset/strassenliste-straßennamen-straßenverzeichnis-hausnummern-georeferenziert",
         "license": "CC0 1.0 (Stadt Bonn, Datensatz „Hausnummern georeferenziert“)",

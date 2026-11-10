@@ -12,6 +12,7 @@ Lücken werden als eigene Schritte ausgegeben, nicht weggelassen.
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+from . import aufzeichnungen
 from .actors import EINWOHNER_TYPES, POLITIK_TYPES, VERWALTUNG_TYPES
 
 BERLIN = ZoneInfo("Europe/Berlin")
@@ -110,6 +111,10 @@ def steps(p):
             step["note"] = "datum_vor_vorlage"
         if s["result"] and any(k in s["result"] for k in SCHLEIFE):
             step["schleife"] = True
+        # Aufzeichnung der Sitzung (Ratstranskripte, bonn.biz): nur Verweis auf das Video, Ebene der Sitzung,
+        # nicht bei nichtöffentlichen Tagesordnungspunkten (transkripte/KONZEPT.md)
+        if s.get("public") != 0 and aufzeichnungen.video(s.get("meeting_id")):
+            step["aufzeichnung"] = aufzeichnungen.video(s["meeting_id"])
         if s["authoritative"] and s["result"] and any(k in s["result"] for k in VOLLZUG):
             decided = True
         out.append(step)

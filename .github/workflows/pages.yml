@@ -133,6 +133,20 @@ jobs:
         run: python -m pipeline fetch-lite
         continue-on-error: true
 
+      # Aufzeichnungen der Sitzungen (Ratstranskripte, bonn.biz): nur Video-Adresse und Dauer je Sitzung; Bestand im
+      # Repository und im Zwischenspeicher, abgefragt werden nur neue Sitzungen und solche ohne Aufzeichnung
+      - name: Aufzeichnungen des letzten Laufs
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
+        with:
+          path: data/raw/aufzeichnungen.json
+          key: aufzeichnungen-${{ github.run_id }}
+          restore-keys: aufzeichnungen-
+
+      - name: Abruf Aufzeichnungen (Ratstranskripte, nach den Sitzungen)
+        run: python -m pipeline fetch-aufzeichnungen
+        timeout-minutes: 15
+        continue-on-error: true
+
       # Sprachmodell (Mistral, gekennzeichnet): Bestand im Branch kurzfassungen; auf der Seite erst nach Freigabe
       # (kurzfassung.FREIGEGEBEN, stufe_c.FREIGEGEBEN). Neue Kurzfassungen entstehen seit 26.10.2026 erst nach dem
       # Veröffentlichen (Job kurzfassungen); die Seite erscheint so etwa 20 Minuten früher, neue Kurzfassungen erst mit

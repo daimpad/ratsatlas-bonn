@@ -50,6 +50,9 @@ SCHRITTE = {
     "fetch-haltestellen": ("Haltestellen", "Holt am 1. des Monats die Haltestellen des VRS für die Zahlen je Ortsteil."),
     "fetch-texts": ("Texte der Dokumente", "Holt Texte von Hauptdokumenten über OParl-Lite, höchstens 3.000 je Lauf. Sie "
                                            "dienen nur der Verortung und werden nicht veröffentlicht."),
+    "fetch-aufzeichnungen": ("Aufzeichnungen", "Prüft, welche Sitzungen des Rates eine Videoaufzeichnung haben "
+                             "(Ratstranskripte, bonn.biz); nur Video-Adresse und Dauer, nur neue Sitzungen und solche ohne "
+                             "Aufzeichnung aus dem letzten Jahr."),
     "fetch-lite": ("Beratungen", "Holt Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (CC BY 4.0); daraus "
                                  "entsteht die Prozesslinie einer Vorlage."),
     "build": ("Datenbank und Verortung", "Baut eine SQLite-Datenbank aus Vorlagen, Beratungen, Sitzungen, Gremien und "
@@ -110,6 +113,8 @@ QUELLEN = {
     "geo-bonn": ("Ortsteile und Stadtbezirke", "Flächen der 51 Ortsteile und 4 Stadtbezirke aus dem Open-Data-Portal "
                                                "der Stadt."),
     "bplan-bonn": ("Bebauungspläne", "Geltungsbereiche der rechtskräftigen Bebauungspläne der Stadt."),
+    "transkripte": ("Ratstranskripte", "Welche Sitzungen eine Videoaufzeichnung haben (bonn.biz); der Ratsatlas verlinkt "
+                    "Video und Suche, Texte übernimmt er nicht."),
     "hnr-bonn": ("Hausnummern", "Georeferenzierte Hausnummern der Stadt, nur zur Bestimmung des Ortsteils."),
 }
 WEITERE_QUELLEN = [

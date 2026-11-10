@@ -12,7 +12,7 @@ import json
 from html import escape
 from urllib.parse import quote
 
-from . import begriffsseite, glossar
+from . import aufzeichnungen, begriffsseite, glossar
 from .export import slug
 from .gebietsseiten import _date
 
@@ -81,6 +81,11 @@ def _beratung(s):
         teile.append("– nicht öffentlich")
     else:
         teile.append("– noch ohne Ergebnis")
+    # Aufzeichnung der Sitzung (Ratstranskripte, bonn.biz): nur Verweise, Ebene der Sitzung (transkripte/KONZEPT.md)
+    if str(s.get("aufzeichnung") or "").startswith("https://www.youtube.com/"):
+        teile.append(f'<br><span class="pb-aufz">▶ <a href="{escape(s["aufzeichnung"])}" target="_blank" rel="noopener">Video '
+                     f'der Sitzung</a> · <a href="{aufzeichnungen.SUCHE}" target="_blank" rel="noopener">Transkript '
+                     'durchsuchen</a> (automatisch erkannt, nicht amtlich)</span>')
     return "        <li>" + " ".join(teile) + "</li>"
 
 

@@ -166,4 +166,5 @@ THEMA = Thema(
     symbol='<path d="M12 20s-7-4.4-7-9.6A4 4 0 0 1 12 8a4 4 0 0 1 7 2.4C19 15.6 12 20 12 20z"/><path d="M12 11v4M10 13h4"/>',
     produktbereich="05",  # Haushalt: Soziale Leistungen (Entscheidung 02.11.2026)
     fachausschuss=(SOZIAL, ACI),  # Kasten „Wer berät mit“: beide Ausschüsse (Entscheidung 02.11.2026)
+    transkript_begriffe=('Obdachlosigkeit', 'Integration', 'Pflege'),  # Kasten „Im Rat gesagt“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
 )

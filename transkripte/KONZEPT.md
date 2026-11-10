@@ -1,4 +1,6 @@
-# Ratstranskripte im Ratsatlas – UX-Konzept (Entwurf)
+# Ratstranskripte im Ratsatlas – UX-Konzept
+
+> Umgesetzt 10.11.2026 (`PHASE1.md`): Suche ohne Vorbefüllung, im Vorgang zwei kurze Zeilen mit sichtbarem Hinweis.
 
 Stand 10.11.2026 · Entscheidungen des Auftraggebers vom 10.11.2026:
 - nur Verweise, keine Texte;

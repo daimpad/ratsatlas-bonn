@@ -12,6 +12,8 @@ import { mitwirken } from "../mitwirken.js";
 export const PAGE = 10;
 export const MAX_CHARS = 12000;
 const TITLE_MAX = 180;
+const YT = /^https:\/\/www\.youtube\.com\//;   // Aufzeichnungen der Sitzungen: nur Video-Adressen bei YouTube
+const TRANSKRIPTE = "https://bonn.biz/ratstranskripte";
 const EINWOHNER = new Set(["Bürgerantrag § 24 GO - Öffentlich", "Anregungen und Beschwerden", "Einwohnerfrage", "Bürgerbrief"]);
 const EINWOHNER_TITEL = /bürgerantrag|einwohner|anregung|beschwerde/i;
 // höchstens drei Ziffern: Plannummern wie „7923-2“ sind keine Hausnummern
@@ -83,6 +85,19 @@ export const TOOLS = [
         gremium: { type: "string", description: "Name oder Namensteil des Gremiums" },
         von: DATUM, bis: DATUM,
         zeitraum: { type: "string", enum: ["kommende", "vergangene", "alle"] },
+        seite: SEITE,
+      },
+    },
+  },
+  {
+    name: "suche_aufzeichnungen",
+    description: "Vergangene Sitzungen mit Videoaufzeichnung (bisher Rat und einzelne Sitzungen des Hauptausschusses seit 2021) und ein Link zur Suche in den Ratstranskripten (bonn.biz, automatisch erkannt, nicht amtlich). Liefert nur Verweise, keine Inhalte von Redebeiträgen.",
+    parameters: {
+      type: "object", additionalProperties: false,
+      properties: {
+        gremium: { type: "string", description: "Name oder Namensteil des Gremiums" },
+        von: DATUM, bis: DATUM,
+        stichwort: { type: "string", description: "Wort für den Link zur Transkriptsuche (wird nicht ausgewertet)" },
         seite: SEITE,
       },
     },
@@ -392,6 +407,7 @@ export function createTools({ load, today: fest = null } = {}) {
         if (x.actors?.length) { o.einreichende = x.actors; o.einreichende_status = x.actors_status; }
         if (x.reference) { o.drucksache = x.reference; o.titel = short(mask(x.title, x.label, x.reference)); }
         if (x.note) o.hinweis = g.hinweise[x.note] ?? x.note;
+        if (YT.test(x.aufzeichnung || "")) o.aufzeichnung = x.aufzeichnung;   // Video der Sitzung (nur Verweis)
         return o;
       });
       return {
@@ -454,9 +470,30 @@ export function createTools({ load, today: fest = null } = {}) {
         anfrage: { gremium: names ? [...names] : null, von, bis, zeitraum, heute: today() },
         treffer_gesamt: p.treffer_gesamt, seite: p.seite, seiten: p.seiten,
         sitzungen: p.items.map((m) => ({ datum: m.date, uhrzeit: m.time, gremium: m.gremium, name: m.name, abgesagt: m.cancelled,
-          status: m.state, tagesordnung: m.web, einladung: m.invitation, tagesordnungspunkte: m.agenda_items || null, quelle_id: m.source_object })),
+          status: m.state, tagesordnung: m.web, einladung: m.invitation, tagesordnungspunkte: m.agenda_items || null, quelle_id: m.source_object,
+          ...(YT.test(m.video || "") ? { aufzeichnung: m.video } : {}) })),
         hinweise: ["Tagesordnung und Einladung erscheinen etwa zwei Wochen vor der Sitzung; künftige Termine können sich ändern."],
         quelle: "OParl-API Stadt Bonn (CC0)",
+      };
+    },
+
+    async suche_aufzeichnungen(a) {
+      const z = await get("bonn/zeit.json");
+      const von = dateBound(a.von, false), bis = dateBound(a.bis, true);
+      let names = null;
+      if (a.gremium) names = new Set(resolve([...new Set(z.meetings.map((m) => m.gremium))].sort(), a.gremium, "Gremium"));
+      const list = z.meetings.filter((m) => YT.test(m.video || "") && (!names || names.has(m.gremium)) &&
+        (!von || m.date >= von) && (!bis || m.date <= bis)).reverse();
+      const p = page(list, a.seite);
+      const wort = String(a.stichwort ?? "").trim().slice(0, 80);
+      return {
+        anfrage: { gremium: names ? [...names] : null, von, bis, stichwort: wort || null },
+        treffer_gesamt: p.treffer_gesamt, seite: p.seite, seiten: p.seiten,
+        sitzungen: p.items.map((m) => ({ datum: m.date, gremium: m.gremium, name: m.name, aufzeichnung: m.video, quelle_id: m.source_object })),
+        transkript_suche: TRANSKRIPTE + (wort ? `?q=${encodeURIComponent(wort)}` : ""),
+        hinweise: ["Transkripte automatisch aus den Videoaufzeichnungen erkannt, nicht amtlich; maßgeblich sind Video und Niederschrift.",
+          "Der Ratsatlas wertet die Transkripte nicht aus und nennt keine Inhalte von Redebeiträgen; die Stelle zu einer Vorlage ist nicht zugeordnet."],
+        quelle: "Ratstranskripte von Mika Baumeister (bonn.biz, CC BY-NC 4.0), nur verlinkt; Sitzungen: OParl-API Stadt Bonn (CC0)",
       };
     },
 

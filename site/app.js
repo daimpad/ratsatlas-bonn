@@ -58,6 +58,7 @@
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   // nur http(s)-Adressen aus den Daten werden zu Links
+  const TRANSKRIPTE = "https://bonn.biz/ratstranskripte";
   const safeUrl = (u) => (/^https?:\/\//i.test(String(u || "")) ? esc(u) : null);
   // heutiges Datum in Bonn (nicht UTC: zwischen 0 und 2 Uhr wäre es sonst der Vortag), bei jedem Aufruf neu
   const heute = () => new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(new Date());
@@ -1470,13 +1471,18 @@
     const box = s.note && (status === "nicht_öffentlich" || status === "unklar" || s.note === "ohne_sitzung")
       ? `<div class="blackbox">${esc(NOTES[s.note])}</div>` : (s.note ? `<div class="hint">${esc(NOTES[s.note])}</div>` : "");
     const cls = s.date_status === "abgeleitet" ? " date-derived" : "";
+    // Aufzeichnung der Sitzung (Ratstranskripte, bonn.biz): nur Verweise, Ebene der Sitzung (transkripte/KONZEPT.md)
+    const aufz = /^https:\/\/www\.youtube\.com\//.test(s.aufzeichnung || "") ? `<div class="aufz"><span aria-hidden="true">▶</span>
+      <a href="${esc(s.aufzeichnung)}" target="_blank" rel="noopener">Video der Sitzung<span class="visually-hidden"> (YouTube, neuer Tab)</span></a> ·
+      <a href="${TRANSKRIPTE}" target="_blank" rel="noopener">Transkript durchsuchen<span class="visually-hidden"> (bonn.biz, neuer Tab)</span></a>
+      <span class="aufz-hint">automatisch erkannt, nicht amtlich</span></div>` : "";
     const gremium = index && (s.typ === "beratung" || s.typ === "entscheidung") && s.label && s.status !== "nicht_öffentlich";
     const label = s.label && s.label !== STEP_LABEL[s.typ]
       ? ": " + (gremium ? `<button type="button" class="link-btn" data-gremium-name="${esc(s.label)}" title="Zuständigkeit und Besetzung im Reiter Prozesse">${esc(s.label)}</button>` : esc(s.label)) : "";
     return `<li class="step${cls}" data-status="${esc(status)}">
       <span class="mark mark-${esc(status)}" aria-hidden="true">${mark}</span>
       <div class="step-head">${esc(STEP_LABEL[s.typ] || s.typ)}${label}<span class="step-status">${esc(STATUS[status])}</span></div>
-      <div class="step-body">${body.join("<br>")}${box}</div></li>`;
+      <div class="step-body">${body.join("<br>")}${box}${aufz}</div></li>`;
   }
   function legend() {
     return `<details class="acc"><summary>Legende Evidenzstatus</summary><div class="legend">${["belegt", "abgeleitet", "nicht_öffentlich", "unklar"]

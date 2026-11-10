@@ -6,7 +6,7 @@ import random
 import sqlite3
 from collections import Counter
 
-from . import actors, config
+from . import actors, aufzeichnungen, config
 from .geo import Ortsteile
 from .geocode import Gazetteer, plan_numbers
 from .plans import Plans, plan_locations
@@ -110,6 +110,7 @@ def build():
                                              if config.BPLAN.exists() else None),
         "hnr-bonn": stand.get("hausnummern") or (json.loads(config.HAUSNUMMERN.read_text())["meta"].get("retrieved_at")
                                                  if config.HAUSNUMMERN.exists() else None),
+        "transkripte": aufzeichnungen.stand(),
     }
     db.executemany("INSERT INTO source VALUES (?,?,?,?)",
                    [(k, v["url"], v["license"], retrieved[k]) for k, v in config.SOURCES.items()])

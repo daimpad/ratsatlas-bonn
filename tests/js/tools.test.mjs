@@ -120,9 +120,9 @@ const tools = () => createTools({
   load: async (p) => { if (!(p in FILES)) throw new Error(`HTTP 404 ${p}`); return structuredClone(FILES[p]); },
 });
 
-test("Werkzeugdefinitionen: elf Werkzeuge mit Objekt-Schema", () => {
-  assert.equal(TOOLS.length, 11);
-  assert.equal(new Set(TOOLS.map((t) => t.name)).size, 11);
+test("Werkzeugdefinitionen: zwölf Werkzeuge mit Objekt-Schema", () => {
+  assert.equal(TOOLS.length, 12);
+  assert.equal(new Set(TOOLS.map((t) => t.name)).size, 12);
   for (const t of TOOLS) {
     assert.equal(t.parameters.type, "object");
     assert.ok(t.description.length > 30, t.name);
@@ -386,4 +386,23 @@ test("echter Export: alle Werkzeuge, Größe, Datenschutz", { skip: !REAL && "ke
       for (const x of r.treffer) assert.doesNotMatch(x.titel, rx, `${x.drucksache}: ${x.titel}`);
     }
   }
+});
+
+// Aufzeichnungen (Ratstranskripte, bonn.biz): nur Verweise, nur YouTube-Adressen, keine Inhalte (transkripte/KONZEPT.md)
+test("suche_aufzeichnungen: Sitzungen mit Video, Suchlink, keine fremden Adressen", async () => {
+  const zeit = { meetings: [
+    { date: "2026-03-12", gremium: "Rat", name: "Sitzung des Rates", source_object: "o/m/10", video: "https://www.youtube.com/watch?v=abc" },
+    { date: "2026-05-07", gremium: "Rat", name: "Sitzung des Rates", source_object: "o/m/11", video: "https://example.org/fremd" },
+    { date: "2026-06-01", gremium: "Bezirksvertretung Bonn", name: "Sitzung der Bezirksvertretung Bonn", source_object: "o/m/12" },
+  ] };
+  const t = createTools({ today: "2026-10-18", load: async (p) => (p === "bonn/zeit.json" ? structuredClone(zeit) : FILES[p]) });
+  const r = await t.run("suche_aufzeichnungen", { stichwort: "Nordbrücke & Co" });
+  assert.deepEqual(r.sitzungen.map((m) => [m.quelle_id, m.aufzeichnung]), [["o/m/10", "https://www.youtube.com/watch?v=abc"]]);
+  assert.equal(r.transkript_suche, "https://bonn.biz/ratstranskripte?q=Nordbr%C3%BCcke%20%26%20Co");
+  assert.match(r.hinweise.join(" "), /nicht amtlich/);
+  const ohne = await t.run("suche_aufzeichnungen", {});
+  assert.equal(ohne.transkript_suche, "https://bonn.biz/ratstranskripte");
+  const l = await t.run("liste_sitzungen", { zeitraum: "vergangene" });
+  assert.equal(l.sitzungen.find((m) => m.quelle_id === "o/m/10").aufzeichnung, "https://www.youtube.com/watch?v=abc");
+  assert.equal(l.sitzungen.find((m) => m.quelle_id === "o/m/11").aufzeichnung, undefined);
 });

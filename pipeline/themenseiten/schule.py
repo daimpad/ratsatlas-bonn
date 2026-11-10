@@ -104,4 +104,5 @@ THEMA = Thema(
     symbol='<path d="M2 9 12 4l10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v5"/>',
     produktbereich="03",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
     fachausschuss=SCHULGREMIEN[0],  # Kasten „Wer berät mit“ (Besetzung, Fraktion abgeleitet)
+    transkript_begriffe=('Schulen', 'Gesamtschule'),  # Kasten „Im Rat gesagt“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
 )
