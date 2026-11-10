@@ -91,3 +91,10 @@ Abgleich mit den vorhandenen Regeln der Stufe B (`Gazetteer.locate`: Straßenver
 4. Darstellung: Option 1, 2 oder 3; bei 3 auch Bäche und Bebauungspläne (Geltungsbereich) verorten?
 5. Abkürzungen (BK, FH, ABK, BgA, S 13; 149-mal „BK“) erklären nur mit Fundstelle, sonst unaufgelöst lassen?
 6. Ist 2024 der Einzelmaßnahmen: ob der Jahresabschluss 2024 eine Teilfinanzrechnung B enthält, ist nicht geprüft.
+
+## Entscheidungen des Auftraggebers (10.11.2026)
+- Darstellung: Option 2 (Liste auf `haushalt/` je Produktgruppe, dazu die Maßnahmen des zugeordneten Produktbereichs auf den Themenseiten); keine Kartenebene.
+- Umfang: nur Maßnahmen mit Ansatz 2025 oder 2026 (315); kein Vergleich mit 2023/2024.
+- Spalten: Ansatz 2025 und 2026, dazu Gesamtkosten; ohne Verpflichtungsermächtigungen und ohne Planung 2027–2029.
+- „Leibrenten“ und „Intendantenvertrag“ nur in der Summe der Produktgruppe, mit Hinweis; Prüfung im Leser.
+- Offen bis zum Plan der Phase 1: Abkürzungen (Vorschlag: nur mit Fundstelle erklären), Ist 2024 der Einzelmaßnahmen.
