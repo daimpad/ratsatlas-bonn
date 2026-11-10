@@ -1,0 +1,24 @@
+nr	raumebene	raum_id	indikator_id	jahr	wert_ratsatlas	status_ratsatlas	wert_gegenquelle	gegenquelle	fundstelle	ergebnis	bemerkung
+1	statistischer_bezirk	132	bonn-sda-i26	2025	44.9	ok	44.9	https://www2.bonn.de/statistik/Strukturdatenatlas/132 Neu-Tannenbusch.pdf	Bezirksblatt, Zeile „31. Ein-Personen-Haushalte“, Spalte Anteil	gleich	
+2	statistischer_bezirk	132	bonn-sda-i17	2025	5.6	ok	5.6	https://www2.bonn.de/statistik/Strukturdatenatlas/132 Neu-Tannenbusch.pdf	Bezirksblatt, Zeile „18.   75 Jahre und älter“, Spalte Anteil	gleich	
+3	statistischer_bezirk	269	bonn-sda-i17	2025	13.3	ok	13.3	https://www2.bonn.de/statistik/Strukturdatenatlas/269 Heiderhof.pdf	Bezirksblatt, Zeile „18.   75 Jahre und älter“, Spalte Anteil	gleich	
+4	statistischer_bezirk	269	bonn-sda-i10	2025	41.1	ok	41.1	https://www2.bonn.de/statistik/Strukturdatenatlas/269 Heiderhof.pdf	Bezirksblatt, Zeile „19. Altenquotient“, Spalte Wert	gleich	
+5	statistischer_bezirk	121	bonn-sda-i29	2025	6.2	ok	6.2	https://www2.bonn.de/statistik/Strukturdatenatlas/121 Alt-Endenich.pdf	Bezirksblatt, Zeile „45. Arbeitslose“, Spalte Anteil	gleich	
+6	statistischer_bezirk	121	bonn-sda-i17	2025	7.6	ok	7.6	https://www2.bonn.de/statistik/Strukturdatenatlas/121 Alt-Endenich.pdf	Bezirksblatt, Zeile „18.   75 Jahre und älter“, Spalte Anteil	gleich	
+7	statistischer_bezirk	264	bonn-sda-i11	2025	29.5	ok	29.5	https://www2.bonn.de/statistik/Strukturdatenatlas/264 Muffendorf.pdf	Bezirksblatt, Zeile „20. Jugendquotient“, Spalte Wert	gleich	
+8	statistischer_bezirk	264	bonn-sda-i17	2025	11.8	ok	11.8	https://www2.bonn.de/statistik/Strukturdatenatlas/264 Muffendorf.pdf	Bezirksblatt, Zeile „18.   75 Jahre und älter“, Spalte Anteil	gleich	
+9	statistischer_bezirk	262	bonn-sda-i25	2020	1.8	ok	1.8	https://www2.bonn.de/statistik/Strukturdatenatlas/10010000120201231.pdf	Jahresübersicht „Bevölkerung in Bonn“ 2020, Zeile 262, Spalte 15	gleich	
+10	statistischer_bezirk	262	bonn-sda-i1	2020	5812.9	ok	5813	https://www2.bonn.de/statistik/Strukturdatenatlas/10010000120201231.pdf	Jahresübersicht „Bevölkerung in Bonn“ 2020, Zeile 262, Spalte 2	gleich (gerundet)	Gegenquelle mit 0 Nachkommastellen
+11	statistischer_bezirk	497	bonn-sda-i24	2020	3348	ok	3348	https://www2.bonn.de/statistik/Strukturdatenatlas/10010000120201231.pdf	Jahresübersicht „Bevölkerung in Bonn“ 2020, Zeile 497, Spalte 13	gleich	
+12	statistischer_bezirk	373	bonn-sda-i25	2024	1.9	ok	1.9	https://www2.bonn.de/statistik/Strukturdatenatlas/10010000120241231.pdf	Jahresübersicht „Bevölkerung in Bonn“ 2024, Zeile 373, Spalte 15	gleich	
+13	statistischer_bezirk	381	bonn-sda-i25	2024	2.2	ok	2.2	https://www2.bonn.de/statistik/Strukturdatenatlas/10010000120241231.pdf	Jahresübersicht „Bevölkerung in Bonn“ 2024, Zeile 381, Spalte 15	gleich	
+14	statistischer_bezirk	387	bonn-sda-i1	2024	1268.8	ok	1269	https://www2.bonn.de/statistik/Strukturdatenatlas/10010000120241231.pdf	Jahresübersicht „Bevölkerung in Bonn“ 2024, Zeile 387, Spalte 2	gleich (gerundet)	Gegenquelle mit 0 Nachkommastellen
+15	statistischer_bezirk	127	bonn-sda-i0	2024	5498	ok	5498	https://www2.bonn.de/statistik/Strukturdatenatlas/10010000120241231.pdf	Jahresübersicht „Bevölkerung in Bonn“ 2024, Zeile „127 Röttgen u. Kottenforst (129)“	gleich	Bezirk 129 ist in der Quelle in 127 enthalten
+16	statistischer_bezirk	381	bonn-sda-i0	2024	2876	ok	2876	https://www2.bonn.de/statistik/Strukturdatenatlas/10010000120241231.pdf	Jahresübersicht „Bevölkerung in Bonn“ 2024, Zeile „381 Geislar u. Siegaue (380)“	gleich	Bezirk 380 ist in der Quelle in 381 enthalten
+17	statistischer_bezirk	388	bonn-sda-i0	2024	1896	ok	1896	https://www2.bonn.de/statistik/Strukturdatenatlas/10010000120241231.pdf	Jahresübersicht „Bevölkerung in Bonn“ 2024, Zeile „388 Holtorf u. Ennert (389)“	gleich	Bezirk 389 ist in der Quelle in 388 enthalten
+18	ortsteil	endenich	bonn-sda-i0	2025	14847	abgeleitet	14847	https://www2.bonn.de/statistik/Strukturdatenatlas/120 Neu-Endenich.pdf	Summe der Bezirksblätter 120 und 121, Zeile „1. Bevölkerung“	gleich	
+19	ortsteil	endenich	bonn-sda-i23	2025	20.8	abgeleitet	20.839	https://www2.bonn.de/statistik/Strukturdatenatlas/121 Alt-Endenich.pdf	Bezirksblätter 120 und 121, Ausländer (Zeile 11) je Bevölkerung × 100	gleich	
+20	stadtbezirk	1	bonn-sda-i0	2025	159412	ok	159412	https://www2.bonn.de/statistik/Strukturdatenatlas/121 Alt-Endenich.pdf	Bezirksblatt, Zeile „1. Bevölkerung“, Spalte Stadtbezirk	gleich	
+21	gesamtstadt	bonn	bonn-sda-i9	2025	42.6	ok	42.6	https://www2.bonn.de/statistik/Strukturdatenatlas/121 Alt-Endenich.pdf	Bezirksblatt, Zeile „12. Durchschnittsalter“, Spalte Stadt Bonn	gleich	
+22	gemeinde	bonn	wk-altenquotient	2023	30.1	ok	30.1	https://www.wegweiser-kommune.de/data-api/rest/export/altenquotient+bonn+2023.csv?charset=UTF-8	CSV-Export des Wegweisers	gleich	
+23	gemeinde	koeln	wk-bevoelkerung	2023	1087353	ok	1087353	https://www.wegweiser-kommune.de/data-api/rest/export/bevoelkerung+koeln+2023.csv?charset=UTF-8	CSV-Export des Wegweisers	gleich	

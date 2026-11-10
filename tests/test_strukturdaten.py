@@ -1,5 +1,6 @@
 """Strukturdaten (pipeline/strukturdaten.py): Regeln des Datenvertrags an erfundenen Daten und Prüfung der Dateien im
 Repository (data/strukturdaten/)."""
+import csv
 import json
 import tempfile
 import unittest
@@ -135,6 +136,23 @@ class DateienImRepository(unittest.TestCase):
         meta = json.loads((sd.OUT / "meta.json").read_text(encoding="utf-8"))
         self.assertTrue(meta["veroeffentlichen"])
         self.assertEqual(meta["vertrag_version"], sd.VERTRAG)
+
+    def test_verifikation_ohne_abweichung(self):
+        """Phase 4: Stichprobe gegen zweite Veröffentlichungen der Statistikstelle und den CSV-Export des Wegweisers."""
+        path = sd.OUT / sd.VERIFIKATION
+        if not path.exists():
+            self.skipTest("audit_verifikation.tsv fehlt")
+        with open(path, encoding="utf-8") as f:
+            zeilen = list(csv.DictReader(f, delimiter="\t"))
+        self.assertGreaterEqual(len(zeilen), 20)
+        self.assertEqual([z["nr"] for z in zeilen if not z["ergebnis"].startswith("gleich")], [])
+        # gerundete Gleichheit nur mit Begründung
+        self.assertTrue(all(z["bemerkung"] for z in zeilen if z["ergebnis"] == "gleich (gerundet)"))
+        # die drei mit dem Nachbarbezirk zusammengefassten Bezirke sind belegt
+        belegt = {z["raum_id"] for z in zeilen if "enthalten" in z["bemerkung"]}
+        self.assertEqual(belegt, set(sd.ZUSAMMENGEFASST.values()))
+        meta = json.loads((sd.OUT / "meta.json").read_text(encoding="utf-8"))
+        self.assertTrue(any("127, 381 und 388 enthalten" in h for h in meta["hinweise"]))
 
 
 if __name__ == "__main__":

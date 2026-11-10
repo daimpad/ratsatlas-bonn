@@ -21,7 +21,9 @@ class Datenpaket(unittest.TestCase):
                      "baustellen_archiv/protokoll.tsv", "baustellen_archiv/STAND.json", "berichte/PHASE0.md", "berichte/PHASE3.md",
                      "soll/verfahren.json", "soll/ergaenzungen.json", "soll/QUELLE.md", "soll/LICENSE-bonn-entscheidet",
                      "soll/stichprobe_soll.tsv", "soll/vorpruefung_soll.tsv", "berichte/soll/PHASE3.md",
-                     "soll/pruefung/belege_ergaenzungen.tsv"):
+                     "soll/pruefung/belege_ergaenzungen.tsv", "strukturdaten/indikatoren.tsv", "strukturdaten/werte.tsv",
+                     "strukturdaten/raum/statistischer_bezirk.geojson", "strukturdaten/audit_verifikation.tsv",
+                     "berichte/strukturdaten/PHASE0.md", "berichte/strukturdaten/PHASE4.md"):
             self.assertIn("allris-bonn/" + name, names)
         self.assertFalse(any("/feeds/" in n or "/chat/" in n for n in names))
         self.assertFalse(any(n.endswith(".zip") for n in names))

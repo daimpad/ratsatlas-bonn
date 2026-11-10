@@ -178,6 +178,19 @@ Soll-Modell der Prozessebene
   KI-Vorprüfung und Prüfvermerk von Hand
 - berichte/soll/: Berichte der Phasen 1 bis 4
 
+Strukturdaten (Statistikstelle der Bundesstadt Bonn, Wegweiser Kommune)
+- strukturdaten/: Ablage nach dem Datenvertrag „Strukturdaten v1“ (Entwurf 1.1) – indikatoren.tsv, werte.tsv
+  (statistische Bezirke, Stadtbezirke, ganz Bonn; je Ortsteil nur für sauber zusammengesetzte Ortsteile, Status
+  „abgeleitet“), raum/*.geojson, zuordnung.tsv (statistischer Bezirk → Ortsteil mit Flächen- und Einwohneranteil),
+  gesamtstadt.tsv (Wegweiser Kommune: Bonn, Köln, Wuppertal), meta.json (Quellen, Lizenzen, Hinweise)
+- strukturdaten/audit_abruf.tsv, audit_plausibilitaet.tsv, audit_raumabgleich.tsv: Abruf, Summen- und
+  Bruchprüfung, Zuordnung je Bezirk; audit_verifikation.tsv: Stichprobe gegen die Bezirksblätter und
+  Jahresübersichten der Statistikstelle und den CSV-Export des Wegweisers (zweiter Abrufweg)
+- bonn/strukturdaten.json: Auszug für die Seite (zwölf Kennzahlen für die Flächenfarbe, Steckbrief)
+- berichte/strukturdaten/: Berichte der Phasen 0 bis 4
+Werte unverändert aus der Quelle, keine Schätzung; Kennzahlen beschreiben Gebiete, nicht Personen
+(kein Schluss von Gebiet auf Einzelne).
+
 Grenzen: Eine Baustelle ist kein Beleg für die Umsetzung eines Beschlusses. Termine sind laut Quelle
 unverbindlich; die Historie der Baustellen beginnt mit dem Archiv (19.10.2026). Pläne im Verfahren
 sind im Datensatz der Stadt nicht enthalten.
@@ -224,4 +237,13 @@ def package(target=None, archive=None):
             z.write(path, "allris-bonn/berichte/soll/" + path.name)
         for path in sorted((config.ROOT / "soll" / "pruefung").glob("*.tsv")):
             z.write(path, "allris-bonn/soll/pruefung/" + path.name)
+        # Strukturdaten nach dem Datenvertrag „Strukturdaten v1“ mit Audits und Berichten der Phasen 0 bis 4
+        sd = config.ROOT / "data" / "strukturdaten"
+        for path in sorted(sd.rglob("*")):
+            if path.is_file():
+                z.write(path, "allris-bonn/strukturdaten/" + str(path.relative_to(sd)))
+        berichte = config.ROOT / "strukturdaten"
+        for path in [berichte / "phase0" / "BERICHT_strukturdaten_phase0.md", *sorted(berichte.glob("PHASE*.md"))]:
+            if path.exists():
+                z.write(path, "allris-bonn/berichte/strukturdaten/" + ("PHASE0.md" if path.parent.name == "phase0" else path.name))
     print(f"Datenpaket → {target} ({target.stat().st_size // 1024} KB)")
