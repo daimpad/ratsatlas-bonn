@@ -34,7 +34,7 @@ import os
 from collections import defaultdict
 from html import escape
 
-from . import haushaltsplan
+from . import haushaltsplan, massnahmen
 from .dossier import _date, _mio
 from .themenseiten import ALLE as THEMEN
 
@@ -256,6 +256,9 @@ def daten(rows=None, aufwand=None, gruppen=None):
                 for a, v in stand["ausgaben"].items()}
     out = {"produktbereiche": pbs, "ansichten": ansichten, "abruf": stand["abruf"], "lizenz": stand["lizenz"],
            "zoom": bool(aufwand and gruppen), "ausgaben": ausgaben}
+    mn = massnahmen.daten() if aufwand and gruppen and erweitert else {}   # gehört zu den Investitionen
+    if mn:   # Einzelmaßnahmen aus Teilfinanzplan B (Option 7, freigegeben 10.11.2026)
+        out["massnahmen"] = mn
     if erweitert:
         url = stand["jahresabschluss"]["datei"]["url"]
         ausgaben[JA] = {"seite": stand["jahresabschluss"]["seite"], "dateien": {p["pb"]: url for p in pbs}}
@@ -697,6 +700,38 @@ def zoom(d, p):
         </section>"""
 
 
+MN_SPALTEN = ((4, "Ansatz 2025"), (6, "Ansatz 2026"), (12, "Gesamt, alle Jahre"))
+
+
+def massnahmen_tabelle(d, pb, liste, root="", link_pg=False):
+    """Tabelle der Einzelmaßnahmen (Teilfinanzplan B): Auszahlungen je Spalte, Einzahlungen klein darunter, Seite im
+    Haushaltsplan 2025/2026. Bezeichnungen wie im PDF (höchstens 40 Zeichen, Abkürzungen nicht aufgelöst)."""
+    url = d["ausgaben"][massnahmen.AUSGABE]["dateien"][pb]
+    def zelle(m, sp):
+        a, e = m["aus"][sp], m["ein"][sp]
+        text = _euro(a) if a else "–"
+        return text + (f'<br><small>Einzahlungen {_euro(e).replace(" ", chr(160))}</small>' if e else "")
+    zeilen = []
+    for m in liste:
+        name = escape(m["bezeichnung"])
+        if link_pg:
+            name = f'<a href="{root}haushalt/#{_anker(m["pg"])}">{name}</a>'
+        if m["vermerk"].startswith("Bezeichnung abgeleitet"):
+            name += " <small>(Bezeichnung abgeleitet)</small>"
+        zeilen.append(f'<tr><th scope="row">{name}</th>' + "".join(_td(zelle(m, sp), t) for sp, t in MN_SPALTEN)
+                      + _td(f'<a href="{escape(url)}#page={m["seite"]}">S. {m["seite"]}</a>', "Seite") + "</tr>")
+    kopf = "".join(f'<th scope="col">{t}</th>' for _, t in MN_SPALTEN)
+    return (f'<table class="hh-tabelle hh-mn-tabelle"><thead><tr><th scope="col">Maßnahme</th>{kopf}'
+            f'<th scope="col">Haushaltsplan {massnahmen.AUSGABE}</th></tr></thead><tbody>{"".join(zeilen)}</tbody></table>')
+
+
+MN_LESEHILFE = ("Auszahlungen für Bau, Erwerb und Ausstattung laut Teilfinanzplan B (Investitionseinzelmaßnahmen), "
+                "Ansatz 2025 und 2026; „Gesamt“ umfasst alle Jahre einschließlich bisher bereitgestellter Mittel und der "
+                "Planung bis 2029. Einzahlungen, etwa Fördermittel, stehen klein darunter. Nur Maßnahmen mit Ansatz 2025 "
+                "oder 2026; Bezeichnungen wie im Haushaltsplan (höchstens 40 Zeichen, teils gekürzt, Abkürzungen nicht "
+                "aufgelöst).")
+
+
 def gruppe(d, p, g):
     """Ebene 3, Abschnitt #pg-1-XX-YY: Aufwandsarten einer Produktgruppe als Balken je Ansicht und Tabelle; mit Skript
     zeichnet site/haushalt.js aus den Balken Kacheln (keine Treemap im HTML, damit die Seite klein bleibt)."""
@@ -723,9 +758,43 @@ def gruppe(d, p, g):
           <h2 id="{t_}">Produktgruppe {escape(g["nr"])} {escape(g["name"])}</h2>
           {f'<p class="meta">{" · ".join(angaben)}</p>' if angaben else ""}
           {_balken(g["aufwandsarten"], ansichten, betraege=True)}
-          <table class="hh-tabelle hh-pg-tabelle"><thead><tr><th scope="col">Aufwandsart</th>{kopf}</tr></thead><tbody>{"".join(zeilen)}</tbody></table>{ertrag_html}
+          <table class="hh-tabelle hh-pg-tabelle"><thead><tr><th scope="col">Aufwandsart</th>{kopf}</tr></thead><tbody>{"".join(zeilen)}</tbody></table>{ertrag_html}{_massnahmen_pg(d, p, g)}
           <details class="hh-mehr meta-acc"><summary>Fundstelle und Hinweise</summary><p>Fundstelle: {_fundstelle(d, p["pb"], alle + summe + ertrag_werte, datei=True)}.{hinweis}</p></details>
         </section>"""
+
+
+def _massnahmen_pg(d, p, g):
+    liste = d.get("massnahmen", {}).get(g["nr"])
+    if not liste:
+        return ""
+    n = len(liste)
+    return (f'\n          <details class="hh-mn"><summary>Investitionsmaßnahmen ({n})</summary>'
+            f'<p class="meta">Auszahlungen in Euro laut Teilfinanzplan B; Einzahlungen klein darunter. Zum Lesen: Abschnitt '
+            f'„Einzelne Maßnahmen“ unter „Investitionen“.</p>{massnahmen_tabelle(d, p["pb"], liste)}</details>')
+
+
+def massnahmen_uebersicht(d, root=""):
+    """Absatz im Abschnitt „Investitionen“: Zahl der Maßnahmen und die zehn mit den höchsten Auszahlungen 2026."""
+    mn = d.get("massnahmen")
+    if not mn:
+        return ""
+    alle = [m for liste in mn.values() for m in liste]
+    groesste = sorted(alle, key=lambda m: (-m["aus"][6], -m["aus"][4], m["bezeichnung"]))[:10]
+    zeilen = []
+    for m in groesste:
+        url = d["ausgaben"][massnahmen.AUSGABE]["dateien"][m["pb"]]
+        zeilen.append(f'<tr><th scope="row"><a href="#{_anker(m["pg"])}">{escape(m["bezeichnung"])}</a>'
+                      f'<br><small>Produktgruppe {escape(m["pg"])}</small></th>'
+                      + "".join(_td(_euro(m["aus"][sp]) if m["aus"][sp] else "–", t) for sp, t in MN_SPALTEN)
+                      + _td(f'<a href="{escape(url)}#page={m["seite"]}">S. {m["seite"]}</a>', "Seite") + "</tr>")
+    kopf = "".join(f'<th scope="col">{t}</th>' for _, t in MN_SPALTEN)
+    return f"""    <h3 id="massnahmen">Einzelne Maßnahmen</h3>
+    <p>Der Haushaltsplan {massnahmen.AUSGABE} nennt {len(alle)} Investitionsmaßnahmen mit einem Ansatz für 2025 oder 2026. Sie stehen bei ihrer Produktgruppe (ein Klick auf eine Fläche, dann „Investitionsmaßnahmen“). Die zehn mit den höchsten Auszahlungen 2026:</p>
+    <table class="hh-tabelle hh-mn-tabelle">
+      <thead><tr><th scope="col">Maßnahme</th>{kopf}<th scope="col">Haushaltsplan {massnahmen.AUSGABE}</th></tr></thead>
+      <tbody>{"".join(zeilen)}</tbody>
+    </table>
+    <details class="hh-mehr meta-acc"><summary>Zum Lesen der Maßnahmen</summary><p>{MN_LESEHILFE} Kleinere Beträge stehen in Sammelposten wie „Beschaffungen …“. Zwei Posten zu Verträgen mit Einzelpersonen zeigt die Seite nicht einzeln; im aktuellen Haushalt haben beide keinen Ansatz. Die Summen der Maßnahmen je Produktgruppe treffen den Teilfinanzplan A (ohne Finanzanlagen) bis auf Rundungen von höchstens 2 €.</p></details>"""
 
 
 def body(d, root):
@@ -767,7 +836,10 @@ def body(d, root):
     ertrag_grenze = ("Ertragsarten stehen je Produktbereich und Produktgruppe; einzelne Steuern, Gebühren oder Zuweisungen "
                      "zeigt die Seite nicht." if mit_er else
                      "Erträge und Ergebnis stehen nur je Produktbereich, ohne Aufteilung nach Ertragsarten und Produktgruppen.")
-    invest_grenze = ("Investitionen stehen nur je Produktbereich, ohne einzelne Maßnahmen und ohne Verpflichtungsermächtigungen."
+    invest_grenze = ("Investitionen stehen je Produktbereich und, für den Haushaltsplan 2025/2026, je Maßnahme mit Ansatz "
+                     "2025 oder 2026; ohne Verpflichtungsermächtigungen und ohne Finanzplanung je Jahr."
+                     if d.get("massnahmen") else
+                     "Investitionen stehen nur je Produktbereich, ohne einzelne Maßnahmen und ohne Verpflichtungsermächtigungen."
                      if d.get("erweiterung") else "Investitionen stehen getrennt in den Teilfinanzplänen.")
     abweichung = ("" if not d.get("erweiterung") else
                   "\n        <li><strong>Abweichungen im Jahresabschluss:</strong> Zwei Summen im Jahresabschluss 2024 weichen von "
@@ -786,7 +858,11 @@ def body(d, root):
                     + (" Für das Ist 2024 und die Investitionen gilt dasselbe mit zwei Prüfbögen mit zusammen 44 Zellen "
                        "(44 von 44 gleich, freigegeben 03.11.2026); die Prüfsummen von Jahresabschluss und Teilfinanzplänen "
                        "gehen bis auf die zwei unter „Was diese Seite nicht zeigt“ genannten Abweichungen auf."
-                       if d.get("erweiterung") else ""))
+                       if d.get("erweiterung") else "")
+                    + (" Die Einzelmaßnahmen (Teilfinanzplan B, 2025/2026) ergeben je Produktgruppe den Teilfinanzplan A "
+                       "ohne Finanzanlagen; ein Prüfbogen mit 29 Zellen wurde über einen zweiten Leseweg gegengeprüft "
+                       "(28 von 28 verglichenen gleich) und am 10.11.2026 freigegeben."
+                       if d.get("massnahmen") else ""))
         begriffe = f"""
         <dt>Ebenen</dt><dd>Produktbereich, Produktgruppe, Aufwandsart. Die Produktgruppen eines Bereichs ergeben zusammen seine ordentlichen Aufwendungen, ebenso seine sechs Aufwandsarten.</dd>
         <dt>Aufwandsarten</dt><dd>{HINWEIS}</dd>
@@ -833,7 +909,7 @@ def body(d, root):
       </tbody>
     </table>
 {ergebnis(d, root)}
-{veraenderung(d) + chr(10) + investitionen(d) if d.get("erweiterung") else ""}
+{veraenderung(d) + chr(10) + investitionen(d) + chr(10) + massnahmen_uebersicht(d, root) if d.get("erweiterung") else ""}
     <details class="hh-mehr">
       <summary>Was diese Seite nicht zeigt</summary>
       <ul>

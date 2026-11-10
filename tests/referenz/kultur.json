@@ -109,6 +109,85 @@
    }
   ],
   "lizenz": "Keine Lizenzangabe der Stadt Bonn; Haushaltsplan als Teil der Haushaltssatzung, amtliches Werk nach § 5 UrhG (Einschätzung)",
+  "massnahmen": {
+   "ausgabe": "2025/2026",
+   "datei": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB04.pdf",
+   "liste": [
+    {
+     "ansatz_2025": 404789,
+     "ansatz_2026": 412885,
+     "bezeichnung": "Festwerte Stadtbibliothek",
+     "gesamt": 7816512,
+     "pg": "1.04.06",
+     "seite": 28,
+     "vermerk": ""
+    },
+    {
+     "ansatz_2025": 236500,
+     "ansatz_2026": 236500,
+     "bezeichnung": "Ersatzbeschaffungen Orchester",
+     "gesamt": 1999087,
+     "pg": "1.04.10",
+     "seite": 46,
+     "vermerk": ""
+    },
+    {
+     "ansatz_2025": 125750,
+     "ansatz_2026": 118500,
+     "bezeichnung": "Beschaffungen Kunstmuseum",
+     "gesamt": 826537,
+     "pg": "1.04.09",
+     "seite": 41,
+     "vermerk": ""
+    },
+    {
+     "ansatz_2025": 33000,
+     "ansatz_2026": 103000,
+     "bezeichnung": "Beschaffungen Stadtmuseum",
+     "gesamt": 496770,
+     "pg": "1.04.08",
+     "seite": 37,
+     "vermerk": ""
+    },
+    {
+     "ansatz_2025": 3640,
+     "ansatz_2026": 88640,
+     "bezeichnung": "Beschaffungen Stadtarchiv",
+     "gesamt": 216516,
+     "pg": "1.04.07",
+     "seite": 32,
+     "vermerk": ""
+    },
+    {
+     "ansatz_2025": 13000,
+     "ansatz_2026": 13000,
+     "bezeichnung": "Beschaffungen Musikschule",
+     "gesamt": 261301,
+     "pg": "1.04.05",
+     "seite": 24,
+     "vermerk": ""
+    },
+    {
+     "ansatz_2025": 8200,
+     "ansatz_2026": 8200,
+     "bezeichnung": "Sammlungsgegenstände Stadtmuseum",
+     "gesamt": 112076,
+     "pg": "1.04.08",
+     "seite": 37,
+     "vermerk": ""
+    },
+    {
+     "ansatz_2025": 7655,
+     "ansatz_2026": 7655,
+     "bezeichnung": "Stadtgeschichtliche Dokumente",
+     "gesamt": 113187,
+     "pg": "1.04.07",
+     "seite": 32,
+     "vermerk": ""
+    }
+   ],
+   "zahl": 13
+  },
   "name": "Kultur und Wissenschaft",
   "produktbereich": "04",
   "zeile": "Ordentliche Aufwendungen (Zeile 17 des Teilergebnisplans)"

@@ -10,6 +10,9 @@ Grundlage: `haushalt/phase0/EINZELMASSNAHMEN.md` mit den Entscheidungen des Auft
 - Prüfbogen `data/export/haushalt/pruefbogen_haushalt_massnahmen.tsv` (Schritt `haushalt-pruefbogen-massnahmen`): 29 Zellen (größte und kleinste Ansätze, Einzahlungen, negativer Wert, Saldo, Ausnahmen, gekürzte und doppelte Bezeichnungen, leere Zelle, Stichprobe je Produktbereich), mit Link auf die Seite und dem Ergebnis eines zweiten Lesewegs über `pdftotext -layout`: 28 von 28 verglichenen Zellen gleich, eine nicht verglichen (abgeleitete Bezeichnung).
 - `FREIGEGEBEN = False`: noch keine Anzeige. Tests `tests/test_massnahmen.py`.
 
-## Offen
-- Prüfung des Prüfbogens im Gespräch, danach Anzeige (Phase 1b).
-- Abkürzungen (z. B. „BK“): Fundstellen suchen, sonst unaufgelöst.
+## Phase 1b: Anzeige (10.11.2026)
+- Prüfbogen vom Auftraggeber im Gespräch freigegeben am 10.11.2026 (Spalte `pruefung`), `FREIGEGEBEN = True`.
+- `haushalt/`: je Produktgruppe (Ebene 3) aufklappbare Liste „Investitionsmaßnahmen (n)“ mit Ansatz 2025, Ansatz 2026 und Gesamt (Auszahlungen in Euro, Einzahlungen klein darunter) und Link auf die Seite im PDF; unter „Investitionen“ der Abschnitt „Einzelne Maßnahmen“ mit den zehn größten nach Auszahlungen 2026 und der Lesehilfe; Grenzen und Prüfung ergänzt. Nur zusammen mit den Investitionen (`ERWEITERUNG_FREIGEGEBEN`). Seite gepackt etwa 17 KB größer.
+- Themenseiten mit Produktbereich: Abschnitt „Investitionsmaßnahmen im Produktbereich“ mit den acht größten und Link auf alle (`dossier._massnahmen`); Digitales ohne Produktbereich ohne Abschnitt.
+- Abkürzungen (z. B. „BK“) bleiben unaufgelöst, da keine Fundstelle der Stadt vorliegt (Entscheidung 10.11.2026: nur mit Fundstelle erklären).
+- Geprüft: Browser bei 1440 und 390 px, axe ohne Verstöße, kein waagerechter Bildlauf; Tests.

@@ -315,3 +315,35 @@ class Ertragsarten(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Massnahmen(unittest.TestCase):
+    """Einzelmaßnahmen aus Teilfinanzplan B (Option 7, freigegeben 10.11.2026): nur mit den Investitionen."""
+    @classmethod
+    def setUpClass(cls):
+        cls.d = daten(True, erweiterung=True)
+        cls.html = hs.body(cls.d, "../")
+
+    def test_nur_mit_investitionen(self):
+        self.assertNotIn("massnahmen", daten(True))
+        self.assertIn("massnahmen", self.d)
+
+    def test_liste_je_produktgruppe(self):
+        z = abschnitt(self.html, "pg-1-12-01")
+        self.assertIn('<details class="hh-mn"><summary>Investitionsmaßnahmen (', z)
+        self.assertIn("<th scope=\"row\">Viktoriabrücke BN</th>", z)
+        self.assertIn('<td data-l="Ansatz 2025">12.300.000 €<br><small>Einzahlungen 8.000.000 €</small></td>', z)
+        self.assertIn("PB12.pdf#page=15", z)
+        self.assertIn("Auerberger-Mitte BN <small>(Bezeichnung abgeleitet)</small>", self.html)
+
+    def test_alle_uebernommenen_einmal(self):
+        self.assertEqual(self.html.count('<details class="hh-mn">'), len(self.d["massnahmen"]))
+        self.assertEqual(sum(map(len, self.d["massnahmen"].values())), 315)
+        self.assertNotRegex(self.html, r"Leibrente|Intendantenvertrag")
+
+    def test_uebersicht_und_grenzen(self):
+        teil = self.html.split('<h3 id="massnahmen">')[1].split("</details>")[0]
+        self.assertEqual(teil.count('<tr><th scope="row">'), 10)
+        self.assertIn("nennt 315 Investitionsmaßnahmen", teil)
+        self.assertIn("je Maßnahme mit Ansatz 2025 oder 2026", self.html)
+        self.assertIn("28 von 28 verglichenen gleich", self.html)
