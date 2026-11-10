@@ -353,6 +353,34 @@
     "@type": "dct:RightsStatement",
     "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://bonn.ratsatlas.de/data/LICENSE-DATA.md"
    }
+  },
+  {
+   "@id": "https://bonn.ratsatlas.de/data/export/bonn/strukturdaten.json",
+   "@type": "dcat:Distribution",
+   "dct:title": {
+    "@language": "de",
+    "@value": "Strukturdaten je statistischem Bezirk (JSON)"
+   },
+   "dct:description": {
+    "@language": "de",
+    "@value": "Ausgewählte Kennzahlen des Strukturdatenatlas der Statistikstelle der Bundesstadt Bonn je statistischem Bezirk, Stadtbezirk und ganz Bonn als Zeitreihe; je Ortsteil nur für sauber zusammengesetzte Ortsteile (abgeleitet); Vergleich mit Köln und Wuppertal aus dem Wegweiser Kommune (CC0). Freigabe der Stadt: CC0 bzw. dl-de/zero-2.0. Vollständige Ablage nach dem Datenvertrag im Datenpaket."
+   },
+   "dcat:accessURL": {
+    "@id": "https://bonn.ratsatlas.de/data/export/bonn/strukturdaten.json"
+   },
+   "dcat:downloadURL": {
+    "@id": "https://bonn.ratsatlas.de/data/export/bonn/strukturdaten.json"
+   },
+   "dcat:mediaType": {
+    "@id": "https://www.iana.org/assignments/media-types/application/json"
+   },
+   "dct:license": {
+    "@id": "http://publications.europa.eu/resource/authority/licence/CC0"
+   },
+   "dct:rights": {
+    "@type": "dct:RightsStatement",
+    "rdfs:label": "Gemischte Lizenz: Felder aus der OParl-API der Stadt Bonn CC0 1.0; Sitzungen, Tagesordnungspunkte und Ergebnisse aus OParl-Lite (machdenstaat) CC BY 4.0; Ortsbezüge aus OpenStreetMap ODbL 1.0. Einzelheiten: https://bonn.ratsatlas.de/data/LICENSE-DATA.md"
+   }
   }
  ]
 }

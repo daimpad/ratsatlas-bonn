@@ -705,6 +705,7 @@
     const grads = RAMP.map(([h, l, a], k) => `<linearGradient id="nav-c${k}" x1="0" y1="0" x2="1" y2="1">${stops([[0, `hsl(${h},80%,${l + 6}%)`, a], [1, `hsl(${h + 6},65%,${l - 8}%)`, a * 0.8]])}</linearGradient>`).join("");
     const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
     defs.innerHTML = `${grads}<linearGradient id="nav-glass" x1="0" y1="0" x2="0.6" y2="1">${stops([[0, "#ffffff", 0.62], [0.45, "#ffffff", 0.3], [1, "#ede9fe", 0.22]])}</linearGradient>
+      <pattern id="nav-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#f4f4f5"/><line x1="0" y1="0" x2="0" y2="6" stroke="#71717a" stroke-width="2"/></pattern>
       <filter id="nav-glow" x="-15%" y="-15%" width="130%" height="130%"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="b"/>
         <feFlood flood-color="#ffffff" flood-opacity="0.9"/><feComposite in2="b" operator="in" result="g"/>
         <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>`;
@@ -812,6 +813,201 @@
       <tbody>${rows}</tbody></table>
       <p class="hint">Einordnung, kein Beleg für die Vorlage und kein Urteil über den Ortsteil. Auswahl nach dem abgeleiteten Thema; Werte auf Ortsteile umgerechnet.${v.einwohner < kontext.meta.mindest_einwohner ? ` Unter ${de(kontext.meta.mindest_einwohner)} Einwohnern keine Anteile und Mittelwerte.` : ""} Quellen: ${qs}.</p></section>`;
   }
+  // Strukturdaten der Statistikstelle (strukturdaten.json, pipeline/strukturdaten.py; strukturdaten/PHASE1–3.md):
+  // Flächen der 65 statistischen Bezirke nach zwölf ausgewählten relativen Kennzahlen, Steckbrief je Gebiet, Vergleich
+  // Bonn – Köln – Wuppertal (Wegweiser Kommune). Werte unverändert aus der Quelle; Werte je Ortsteil abgeleitet.
+  // Einordnung, kein Urteil: keine Rangfolgen, gleichzeitige Lage begründet keinen Zusammenhang.
+  const STRUKTUR_FARBE = { i1: "Bevölkerungsdichte", i9: "Durchschnittsalter", i11: "Jugendquotient", i10: "Altenquotient",
+    i12: "Anteil Kinder unter 6 Jahren", i17: "Anteil 75 Jahre und älter", i23: "Ausländeranteil", i26: "Einpersonenhaushalte",
+    i27: "Haushalte mit Kindern", i28: "Haushalte mit Alleinerziehenden", i29: "Arbeitslosenquote",
+    i41: "Leistungsberechtigte nach SGB II" };
+  const STADTBEZIRK_ID = { Bonn: "1", "Bad Godesberg": "2", Beuel: "3", Hardtberg: "4" };
+  const STRUKTUR_HINWEIS = "Zur Einordnung, kein Urteil über das Gebiet und keine Rangfolge. Dass Vorlagen und Kennzahlen am selben Ort zusammentreffen, begründet keinen Zusammenhang.";
+  let struktur = null, strukturLaden = null, navStat = null, sJahr = null, sFest = false, sSort = { spalte: "bezirk", ab: false };   // Vorgabe: nach Nummer, keine Rangfolge
+  const sKey = (m) => ((m || "").startsWith("struktur-") ? m.slice(9) : null);
+  function ladeStruktur() {
+    if (!strukturLaden) {
+      strukturLaden = fetch(BONN + "strukturdaten.json").then((r) => (r.ok ? r.json() : null)).catch(() => null)
+        .then((d) => { struktur = d && d.ind ? d : null; if (!struktur) strukturLaden = null; return struktur; });
+    }
+    return strukturLaden;
+  }
+  const SZAHL = new Intl.NumberFormat("de-DE", { maximumFractionDigits: 1 });
+  // Wert mit Einheit; „g“ = in der Quelle geheim gehalten, null = ohne Wert
+  function sFmt(k, v, mitEinheit = true) {
+    if (v === "g") return "nicht veröffentlicht (Geheimhaltung)";
+    if (v == null) return "–";
+    if (typeof v === "string") return esc(v);
+    const e = struktur.ind[k].einheit, n = SZAHL.format(v);
+    if (!mitEinheit) return n;
+    return e === "%" ? `${n} %` : /^(Personen|Haushalte|Wohnungen|Gebäude)$/.test(e) ? n : `${n} ${esc(e)}`;
+  }
+  // jüngstes Jahr mit Werten für die Bezirke
+  function sLetztes(k) {
+    const j = struktur.ind[k].jahre;
+    for (let i = j.length - 1; i >= 0; i--) if (Object.values(struktur.werte[k].b).some((r) => typeof r[i] === "number")) return i;
+    return j.length - 1;
+  }
+  const sJahrIdx = (k) => { const i = struktur.ind[k].jahre.indexOf(sJahr); return i >= 0 ? i : sLetztes(k); };
+  // fünf Stufen: Quintile der Bezirke im gewählten Jahr oder feste Grenzen über alle Jahre (für Zeitvergleiche)
+  function sBreaks(k) {
+    const reihen = Object.values(struktur.werte[k].b), i = sJahrIdx(k);
+    const v = (sFest ? reihen.flat() : reihen.map((r) => r[i])).filter((x) => typeof x === "number").sort((a, b) => a - b);
+    if (!v.length) return [];
+    const st = v[v.length - 1] >= 100 ? 1 : 0.1;
+    return [...new Set([0.2, 0.4, 0.6, 0.8].map((q) => Math.round(Math.ceil(v[Math.floor(q * (v.length - 1))] / st) * st * 10) / 10))];
+  }
+  const sRanges = (k, br) => [0, ...br].map((lo, j) => (j === 0 ? `unter ${sFmt(k, br[0])}` : j === br.length ? `ab ${sFmt(k, lo)}`
+    : `${sFmt(k, lo, false)} bis unter ${sFmt(k, br[j])}`));
+  function sFill(k, id, br) {
+    const v = (struktur.werte[k].b[id] || [])[sJahrIdx(k)];
+    return v === "g" ? "url(#nav-hatch)" : typeof v === "number" ? step(klass(v, br)) : NAV_NONE;
+  }
+  const sBezirk = (id) => struktur.bezirke.find((b) => b.id === id);
+  function sTip(k, id) {
+    const b = sBezirk(id), i = sJahrIdx(k), w = struktur.werte[k], jahr = struktur.ind[k].jahre[i];
+    const sb = w.s[STADTBEZIRK_ID[b.stadtbezirk]] || [];
+    return `<strong>${esc(b.id)} ${esc(b.name)}</strong> <span class="nav-dim">· statistischer Bezirk${b.ortsteil ? ` · Ortsteil ${esc(b.ortsteil)}` : ""}</span>
+      <br>${(struktur.meta.zusammengefasst || {})[id] ? `<span class="nav-dim">ohne eigenen Wert: in Bezirk ${esc(struktur.meta.zusammengefasst[id])} enthalten</span>`
+        : `<span class="nav-big">${sFmt(k, (w.b[id] || [])[i])}</span> ${esc(STRUKTUR_FARBE[k])} ${esc(jahr)}`}
+      <br><span class="nav-dim">Stadtbezirk ${esc(b.stadtbezirk)} ${sFmt(k, sb[i])} · ganz Bonn ${sFmt(k, w.g[i])} · Statistikstelle</span>
+      <br><span class="nav-dim">${b.ortsteil ? `Klick zeigt den Ortsteil ${esc(b.ortsteil)}` : "Bezirk auf mehrere Ortsteile verteilt"}</span>`;
+  }
+  function initStat() {
+    if (navStat || !struktur) return;
+    navStat = L.geoJSON(struktur.geo, {
+      pane: "gebiete", renderer: navRenderer, style: NAV_LINE,
+      onEachFeature(f, layer) {
+        const id = f.properties.id;
+        layer.bindTooltip(() => sTip(sKey(navMetric), id), { sticky: true, className: "nav-tip" });
+        layer.on({ mouseover: () => glassOn(layer), mouseout: () => glassOff(layer, statStyle(layer)) });
+        layer.on("click", () => {
+          const b = sBezirk(id), o = b && b.ortsteil && index.ortsteile.find((x) => x.name === b.ortsteil);
+          if (o && !(area && area.kind === "ortsteil" && area.key === o.slug)) chooseArea(`ortsteil:${o.slug}`);
+        });
+      },
+    });
+  }
+  let sBr = [];
+  const statStyle = (layer) => ({ ...NAV_LINE, opacity: 0.55, fillColor: sFill(sKey(navMetric), layer.feature.properties.id, sBr) });
+  // Tabelle aller Bezirke als gleichwertige Alternative zur Karte, sortierbar
+  function sTabelle(k) {
+    const i = sJahrIdx(k), w = struktur.werte[k];
+    const zeilen = struktur.bezirke.map((b) => ({ b, v: (w.b[b.id] || [])[i] }));
+    const wert = (v) => (typeof v === "number" ? v : -Infinity);
+    zeilen.sort((x, y) => (sSort.spalte === "wert" ? wert(x.v) - wert(y.v) : x.b.id.localeCompare(y.b.id)) * (sSort.ab ? -1 : 1));
+    const kopf = (spalte, text) => {
+      const an = sSort.spalte === spalte;
+      return `<th scope="col" aria-sort="${an ? (sSort.ab ? "descending" : "ascending") : "none"}"><button type="button" class="link-btn" data-ssort="${spalte}">${text}${an ? (sSort.ab ? " ▼" : " ▲") : ""}</button></th>`;
+    };
+    return `<table class="kontext-table struktur-tabelle"><caption class="visually-hidden">${esc(STRUKTUR_FARBE[k])} ${esc(struktur.ind[k].jahre[i])} je statistischem Bezirk</caption>
+      <thead><tr>${kopf("bezirk", "Bezirk")}<th scope="col">Ortsteil</th>${kopf("wert", esc(struktur.ind[k].jahre[i]))}</tr></thead>
+      <tbody>${zeilen.map(({ b, v }) => `<tr><th scope="row">${esc(b.id)} ${esc(b.name)}</th><td>${esc(b.ortsteil || "mehrere")}</td><td>${sFmt(k, v)}</td></tr>`).join("")}</tbody></table>`;
+  }
+  function sLegende(k) {
+    const d = struktur.ind[k], i = sJahrIdx(k), m = struktur.meta;
+    const jahre = d.jahre.map((j, x) => `<option value="${esc(j)}"${x === i ? " selected" : ""}>${esc(j)}</option>`).join("");
+    return `<div class="struktur-steuer"><label>Jahr <select id="s-jahr">${jahre}</select></label>
+        <label>Stufen <select id="s-stufen"><option value="jahr"${sFest ? "" : " selected"}>Fünftel der Bezirke im Jahr</option>
+        <option value="fest"${sFest ? " selected" : ""}>feste Grenzen über alle Jahre</option></select></label></div>
+      <ol class="nav-ramp">${sRanges(k, sBr).map((r, j) => `<li><span class="nav-sw nav-sw${j}" aria-hidden="true"></span>${r}</li>`).join("")}
+        <li><span class="nav-sw nav-sw-hatch" aria-hidden="true"></span>nicht veröffentlicht (statistische Geheimhaltung)</li>
+        <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>ohne eigenen Wert (u. a. drei nahezu unbewohnte Bezirke, die die Quelle mit dem Nachbarbezirk zusammen ausweist)</li></ol>
+      <p>Je statistischem Bezirk (65), ${esc(d.jahre[i])}; ganz Bonn ${sFmt(k, struktur.werte[k].g[i])}. ${STRUKTUR_HINWEIS}</p>
+      <details class="acc"><summary>Was die Zahl bedeutet</summary><p>${esc(d.metatext)}${d.geheimhaltung ? ` Geheimhaltung: ${esc(d.geheimhaltung)}.` : ""}</p></details>
+      <details class="acc" id="s-tabelle-acc"><summary>Tabelle aller Bezirke</summary><div id="s-tabelle">${sTabelle(k)}</div></details>
+      <p>Quelle: <a href="${safeUrl(m.url)}">Strukturdatenatlas der Statistikstelle der Bundesstadt Bonn</a>, Stand ${fmtDate(m.datenstand)}; Flächen: ${esc(m.geometrie)}.</p>`;
+  }
+  function sLegendeBinden(k) {
+    const body = navLegend.querySelector(".nav-legend-body");
+    body.querySelector("#s-jahr").addEventListener("change", (e) => { sJahr = e.target.value; updateNav(true); syncUrl(); body.querySelector("#s-jahr")?.focus(); });
+    body.querySelector("#s-stufen").addEventListener("change", (e) => { sFest = e.target.value === "fest"; updateNav(true); syncUrl(); body.querySelector("#s-stufen")?.focus(); });
+    body.querySelector("#s-tabelle").addEventListener("click", (e) => {
+      const b = e.target.closest("[data-ssort]");
+      if (!b) return;
+      sSort = { spalte: b.dataset.ssort, ab: sSort.spalte === b.dataset.ssort ? !sSort.ab : b.dataset.ssort === "wert" };
+      body.querySelector("#s-tabelle").innerHTML = sTabelle(k);
+      body.querySelector(`[data-ssort="${b.dataset.ssort}"]`)?.focus();
+    });
+  }
+  // Karte im Strukturmodus: die Bezirke statt Stadtbezirken und Ortsteilen
+  function updateStat() {
+    const k = sKey(navMetric);
+    if (!struktur) {
+      navLegend.querySelector(":scope > summary").textContent = STRUKTUR_FARBE[k];
+      navLegend.querySelector(".nav-legend-body").innerHTML = "<p>Strukturdaten werden geladen …</p>";
+      ladeStruktur().then((d) => { if (d && sKey(navMetric) === k) updateNav(true); else if (!d) navLegend.querySelector(".nav-legend-body").innerHTML = "<p>Strukturdaten nicht verfügbar.</p>"; });
+      return;
+    }
+    initStat();
+    navOrtsteile.remove();
+    navBezirke.remove();
+    navStat.addTo(map);
+    navDefs();
+    sBr = sBreaks(k);
+    navStat.eachLayer((l) => l.setStyle(statStyle(l)));
+    if (navLabels) { navLabels.remove(); navLabels = null; }
+    navLegend.querySelector(":scope > summary").textContent = `${STRUKTUR_FARBE[k]} (Statistikstelle)`;
+    navLegend.querySelector(".nav-legend-body").innerHTML = sLegende(k);
+    sLegendeBinden(k);
+  }
+  // kleine Linie für die Zeitreihe; der Text daneben nennt Anfang und Ende für Vorleseprogramme
+  function sLinie(k, reihe) {
+    const j = struktur.ind[k].jahre, p = reihe.map((v, x) => [x, v]).filter(([, v]) => typeof v === "number");
+    if (p.length < 2) return "";
+    const lo = Math.min(...p.map(([, v]) => v)), hi = Math.max(...p.map(([, v]) => v)), w = 56, h = 16;
+    const xy = p.map(([x, v]) => `${(x / (j.length - 1) * w).toFixed(1)},${(h - 2 - (hi > lo ? (v - lo) / (hi - lo) : 0.5) * (h - 4)).toFixed(1)}`).join(" ");
+    const [a, b] = [p[0], p[p.length - 1]];
+    return `<svg class="s-linie" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true"><polyline points="${xy}"/></svg>
+      <span class="visually-hidden">Verlauf ${esc(j[a[0]])} bis ${esc(j[b[0]])}: von ${sFmt(k, a[1])} auf ${sFmt(k, b[1])}</span>`;
+  }
+  // Zeile: Kennzahl mit Jahr (aufklappbare Erklärung), Werte; unter dem ersten Wert die Linie seiner Zeitreihe
+  const sZeile = (k, spalten) => {
+    const i = sLetztes(k), d = struktur.ind[k];
+    const einheit = /^(Personen|Haushalte|Wohnungen|Gebäude)$/.test(d.einheit) ? "" : `${d.einheit}, `;
+    const name = `<details class="s-def"><summary>${esc(d.name)} <span class="kontext-note">${esc(einheit)}${esc(d.jahre[i])}</span></summary><span>${esc(d.metatext)}</span></details>`;
+    const zelle = (v) => (v === "g" ? `<span class="kontext-note">nicht veröffentlicht</span>` : sFmt(k, v, false));
+    return `<tr><th scope="row">${name}</th>${spalten.map((r, x) => `<td>${zelle((r || [])[i])}${x === 0 ? sLinie(k, r || []) : ""}</td>`).join("")}</tr>`;
+  };
+  const sKopf = (namen) => `<thead><tr><th scope="col">Kennzahl</th>${namen.map((n) => `<th scope="col">${esc(n).replace("Stadtbezirk ", "Stadt&shy;bezirk ")}</th>`).join("")}</tr></thead>`;
+  async function fillStruktur() {
+    const box = $("#struktur-box");
+    if (!box) return;
+    if (!area || !["ortsteil", "bezirk", "bonn"].includes(area.kind)) { box.hidden = true; return; }
+    const d = await ladeStruktur();
+    if (!d || !area) { box.hidden = true; return; }
+    const m = d.meta, W = d.werte, ids = m.steckbrief, gesamt = (k) => W[k].g;
+    let inhalt = "";
+    if (area.kind === "ortsteil") {
+      const ot = d.ortsteile[area.name], bez = areaBezirk(), sid = STADTBEZIRK_ID[bez];
+      if (!ot) { box.hidden = true; return; }
+      const beteiligt = ot.bezirke.filter(([, a]) => a >= 0.05).map(([id, a]) => ({ b: sBezirk(id), a }));
+      const bezTabelle = `<table class="kontext-table s-tab s-bezirke">${sKopf(beteiligt.map(({ b }) => `${b.id} ${b.name}`))}
+        <tbody>${ids.map((k) => sZeile(k, beteiligt.map(({ b }) => W[k].b[b.id]))).join("")}</tbody></table>
+        <p class="hint">Anteil der Einwohner des Bezirks, die in ${esc(area.name)} wohnen: ${beteiligt.map(({ b, a }) => `${esc(b.id)} ${esc(b.name)} ${Math.round(a * 100)} %`).join(", ")} (Zensus 2022, abgeleitet).</p>`;
+      inhalt = ot.sauber
+        ? `<table class="kontext-table s-tab">${sKopf([area.name, `Stadtbezirk ${bez}`, "ganz Bonn"])}
+            <tbody>${ids.map((k) => sZeile(k, [W[k].o[ot.slug], W[k].s[sid], gesamt(k)])).join("")}</tbody></table>
+          <p class="hint">Werte für ${esc(area.name)} <span class="derived">abgeleitet</span>: ${beteiligt.length > 1 ? "Anzahlen der Bezirke summiert, Anteile aus Zähler und Nenner; übrige Kennzahlen nur je Bezirk (unten)" : "aus einem statistischen Bezirk übernommen"}.</p>
+          ${beteiligt.length > 1 ? `<details class="acc"><summary>Statistische Bezirke in ${esc(area.name)}</summary>${bezTabelle}</details>` : ""}`
+        : `<p class="hint">Die statistischen Bezirke decken sich nicht mit ${esc(area.name)}, deshalb gibt es keine eigenen Werte für den Ortsteil. Die Bezirke mit Einwohnern hier:</p>${bezTabelle}`;
+    } else if (area.kind === "bezirk") {
+      const sid = STADTBEZIRK_ID[area.name];
+      inhalt = `<table class="kontext-table s-tab">${sKopf([`Stadtbezirk ${area.name}`, "ganz Bonn"])}<tbody>${ids.map((k) => sZeile(k, [W[k].s[sid], gesamt(k)])).join("")}</tbody></table>`;
+    } else {
+      const ww = d.wegweiser.map((x) => `<tr><th scope="row">${esc(x.name)} <span class="kontext-note">${esc(x.einheit)}</span></th>
+        ${["bonn", "koeln", "wuppertal"].map((k) => `<td>${SZAHL.format(x.werte[k])}</td>`).join("")}<td>${esc(x.jahr)}</td></tr>`).join("");
+      inhalt = `<table class="kontext-table s-tab">${sKopf(["ganz Bonn"])}<tbody>${ids.map((k) => sZeile(k, [gesamt(k)])).join("")}</tbody></table>
+        <h4 class="s-h">Bonn, Köln und Wuppertal im Vergleich</h4>
+        <table class="kontext-table s-ww"><thead><tr><th scope="col">Kennzahl</th><th scope="col">Bonn</th><th scope="col">Köln</th><th scope="col">Wuppertal</th><th scope="col">Jahr</th></tr></thead><tbody>${ww}</tbody></table>
+        <p class="hint">Quelle: <a href="${safeUrl(m.wegweiser.url)}">Wegweiser Kommune</a> (Bertelsmann Stiftung, ${esc(m.wegweiser.lizenz)}), Abruf ${fmtDate(m.wegweiser.abrufdatum)}. Amtliche Zahlen der Länder, andere Definitionen und Stichtage als die Statistikstelle (z. B. Einwohner nach Fortschreibung statt Melderegister); die beiden Quellen nicht miteinander verrechnen.</p>`;
+    }
+    box.innerHTML = `<summary>Strukturdaten zu ${area.kind === "bonn" ? "ganz Bonn" : esc(area.name)}</summary>
+      <p class="hint">${STRUKTUR_HINWEIS} Melderegister und Bundesagentur für Arbeit, aufbereitet von der Statistikstelle; andere Stichtage als der Zensus 2022 unter „Zahlen zu …“. Ein Klick auf eine Kennzahl erklärt sie.</p>
+      ${inhalt}
+      <p class="hint">Quelle: <a href="${safeUrl(m.url)}">Strukturdatenatlas der Statistikstelle der Bundesstadt Bonn</a>, Stand ${fmtDate(m.datenstand)}, ${esc(m.lizenz.replace(/\s*\(.*\)$/, ""))}. „nicht veröffentlicht“: Fallzahl unter 10 (Bundesagentur für Arbeit). Flächenfarbe auf der Karte: „Flächen färben nach“.</p>`;
+    box.hidden = false;
+  }
   // Stufengrenzen: Ortsteile nach Quintilen, Stadtbezirke in gleichen Abständen bis zum Höchstwert
   function quintiles(values) {
     const v = [...values].sort((a, b) => a - b);
@@ -828,6 +1024,7 @@
   }
   const shareRanges = (br) => [0, ...br].map((lo, k) => (k === br.length ? `ab ${pct(lo)}` : `${pct(lo)} bis unter ${pct(br[k])}`));
   function navBreaks() {
+    if (sKey(navMetric)) return;   // Strukturdaten: Stufen in updateStat
     if (kKey(navMetric)) {
       otBreaks = bzBreaks = kBreaks(kKey(navMetric));
     } else if (!navMetric) {
@@ -929,6 +1126,12 @@
     const f = new URLSearchParams(location.search).get("flaechen");
     if (Object.hasOwn(THEMES, f || "") && index.zahlen?.themen_bonn) navMetric = f;
     if (kontext && Object.hasOwn(KONTEXT_FARBE, kKey(f) || "")) navMetric = f;
+    if (Object.hasOwn(STRUKTUR_FARBE, sKey(f) || "")) {
+      navMetric = f;
+      const q = new URLSearchParams(location.search);
+      sJahr = q.get("sjahr");
+      sFest = q.get("sstufen") === "fest";
+    }
     navBreaks();
     navBezirke.eachLayer((l) => l.setStyle(bzStyle(l)));
     // Legende der Flächen: Stufen der jeweils sichtbaren Ebene; oben im Stapel der Legenden, eingeklappt
@@ -939,10 +1142,12 @@
     navLegend.innerHTML = `<summary></summary>${themes.length || kx.length ? `<label class="nav-metric">Flächen färben nach
       <select id="nav-metric"><option value="">Zahl der Vorlagen (12 Monate)</option>
       ${themes.length ? `<optgroup label="Anteil eines Themas (seit 2019)">${themes.map(([k, v]) => opt(k, v)).join("")}</optgroup>` : ""}
-      ${kx.length ? `<optgroup label="Zahlen zum Gebiet (abgeleitet)">${kx.map(([k, v]) => opt(`kontext-${k}`, v)).join("")}</optgroup>` : ""}</select></label>` : ""}
+      ${kx.length ? `<optgroup label="Zahlen zum Gebiet (abgeleitet)">${kx.map(([k, v]) => opt(`kontext-${k}`, v)).join("")}</optgroup>` : ""}
+      <optgroup label="Strukturdaten (statistische Bezirke)">${Object.entries(STRUKTUR_FARBE).map(([k, v]) => opt(`struktur-${k}`, v)).join("")}</optgroup></select></label>` : ""}
       <div class="nav-legend-body"></div>`;
     navLegend.querySelector("#nav-metric")?.addEventListener("change", (e) => {
       navMetric = e.target.value;
+      if (!sKey(navMetric)) sJahr = null;
       navBreaks();
       navBezirke.eachLayer((l) => l.setStyle(bzStyle(l)));
       updateNav(true);
@@ -989,6 +1194,8 @@
   }
   function updateNav(force) {
     if (!navOrtsteile) return;
+    if (sKey(navMetric)) { if (force || navMode !== "struktur") { navMode = "struktur"; updateStat(); } return; }
+    if (navStat) navStat.remove();
     const z = map.getZoom(), whole = wholeZoom();
     if (z < whole) { navDeep = false; navFocus = null; }
     const mode = !navDeep && z <= whole ? "bezirke" : navFocus ? "fokus:" + navFocus : "ortsteile";
@@ -1002,7 +1209,7 @@
     if (navLegend) {
       const z = index.zahlen || {}, br = far ? bzBreaks : otBreaks;
       const kk = kKey(navMetric), kd = kk && kQuelle(kk);
-      navLegend.querySelector("summary").textContent = kk ? kd.titel : navMetric ? `Anteil: ${THEMES[navMetric]}` : "Vorlagen der letzten 12 Monate";
+      navLegend.querySelector(":scope > summary").textContent = kk ? kd.titel : navMetric ? `Anteil: ${THEMES[navMetric]}` : "Vorlagen der letzten 12 Monate";
       navLegend.querySelector(".nav-legend-body").innerHTML = kk
         ? `<ol class="nav-ramp">${kRanges(br, kk).map((r, k) => `<li><span class="nav-sw nav-sw${k}" aria-hidden="true"></span>${r}</li>`).join("")}
             <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>${kOhne(kk)}</li></ol>
@@ -1837,7 +2044,7 @@
     if (!index || area.kind === "bonn") {
       box.innerHTML = index ? `<a class="btn btn-soft" href="${BONN}feeds/ganz-bonn.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Neues aus ganz Bonn abonnieren</a>` : "";
       box.hidden = !index;
-      fillMitmachen(); fillKontext(); return;
+      fillMitmachen(); fillKontext(); fillStruktur(); return;
     }
     const href = `${BONN}feeds/${area.kind}-${area.key}.xml`;
     const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
@@ -1845,6 +2052,7 @@
     box.hidden = false;
     fillMitmachen();
     fillKontext();
+    fillStruktur();
     const l = document.createElement("link");
     Object.assign(l, { rel: "alternate", type: "application/atom+xml", href, title: `Ratsatlas Bonn – ${where}` });
     l.dataset.gebiet = `${area.kind}:${area.key}`;
@@ -2100,6 +2308,8 @@
     const state = { thema: $("#f-theme").value, partei: $("#f-party").value, suche: scope() === "bonn" ? "bonn" : "" };
     state.farbe = colorBy === "thema" ? "thema" : "";
     state.flaechen = navMetric;
+    state.sjahr = sKey(navMetric) && sJahr ? sJahr : "";
+    state.sstufen = sKey(navMetric) && sFest ? "fest" : "";
     state.plaene = planOn ? "1" : "";
     state.plan = !selected && shownPlan ? shownPlan : "";
     state.baustellen = bauOn ? "1" : "";
