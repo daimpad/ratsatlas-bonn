@@ -27635,6 +27635,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, die Autobahn GmbH zu bitten, bessere Fuß- und Radwege am Endenicher Ei während der Bauarbeiten zu prüfen. Außerdem soll geprüft werden, ob die Rampe zur Reuterstraße früher geöffnet werden kann. Die B56 in Bonn-Endenich ist betroffen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -27782,6 +27787,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion schlägt vor, die Ampelschaltung an der Kreuzung Hermann-Wandersleb-Ring/Rochusstraße zu ändern, um Fußgänger besser zu schützen. Die Verwaltung erklärt, dass die aktuelle Regelung nach Verkehrsrichtlinien nötig ist und keine Teilabschaltung möglich ist. Die Kreuzung bleibt nachts in Betrieb.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -27928,6 +27938,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, warum die Ampel an der Kreuzung Hermann-Wandersleb-Ring/Rochusstraße so geschaltet ist. Fußgänger müssen bei Grün für Linksabbieger Rot haben, weil sonst gefährliche Situationen entstehen. Eine Abschaltung der Ampel – auch nachts – ist nicht erlaubt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
