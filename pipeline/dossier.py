@@ -15,7 +15,7 @@ from datetime import date, timedelta
 from html import escape
 from urllib.parse import quote
 
-from . import akkordeon, aufzeichnungen, begriffsseite, besetzung, config, haushaltsplan, maske, process as proc
+from . import akkordeon, aufzeichnungen, begriffsseite, besetzung, config, haushaltsplan, maske, massnahmen, process as proc
 
 FRIST_TAGE = 21  # Anträge, Bürgeranträge und Einwohnerfragen spätestens 21 Tage vor der Sitzung (GeschO §§ 26, 27)
 PUNKT_ARTEN = ("Beschlussvorlage", "Antrag", "Dringlichkeitsantrag")  # Punkte: Beschlüsse und Anträge
@@ -389,8 +389,21 @@ def _betraege(pb):
             if j["jahr"] == 2024 and not j["ist"]:
                 j["ist"] = ist
         ausgaben[ist["ausgabe"]] = {"seite": stand["jahresabschluss"]["seite"], "dateien": {pb: stand["jahresabschluss"]["datei"]["url"]}}
-    return {"produktbereich": pb, "name": name, "zeile": "Ordentliche Aufwendungen (Zeile 17 des Teilergebnisplans)",
-            "jahre": jahre, "ausgaben": ausgaben, "abruf": stand["abruf"], "lizenz": stand["lizenz"]}
+    out = {"produktbereich": pb, "name": name, "zeile": "Ordentliche Aufwendungen (Zeile 17 des Teilergebnisplans)",
+           "jahre": jahre, "ausgaben": ausgaben, "abruf": stand["abruf"], "lizenz": stand["lizenz"]}
+    mn = [m for liste in massnahmen.daten().values() for m in liste if m["pb"] == pb]
+    if mn and haushaltsplan.EBENEN_FREIGEGEBEN:   # Einzelmaßnahmen (Option 7, freigegeben 10.11.2026)
+        mn.sort(key=lambda m: (-m["aus"][6], -m["aus"][4], m["bezeichnung"]))
+        out["massnahmen"] = {
+            "zahl": len(mn), "ausgabe": massnahmen.AUSGABE,
+            "datei": stand["ausgaben"][massnahmen.AUSGABE]["dateien"][pb]["url"],
+            "liste": [{"bezeichnung": m["bezeichnung"], "pg": m["pg"], "seite": m["seite"], "vermerk": m["vermerk"],
+                       "ansatz_2025": m["aus"][4], "ansatz_2026": m["aus"][6], "gesamt": m["aus"][12]}
+                      for m in mn[:MASSNAHMEN_THEMA]]}
+    return out
+
+
+MASSNAHMEN_THEMA = 8   # Themenseiten: die Maßnahmen mit den höchsten Auszahlungen 2026, Link auf alle
 
 
 # --- Seite --------------------------------------------------------------------------------------------
@@ -493,7 +506,36 @@ def _haushalt(d, root=""):
       </tbody>
     </table>
     <p><a href="{root}haushalt/#{"zoom" if haushaltsplan.EBENEN_FREIGEGEBEN else "pb"}-{escape(h["produktbereich"])}">Produktgruppen dieses Bereichs und alle Produktbereiche im Vergleich: Haushalt auf einen Blick</a></p>
-{akkordeon.mehr("Quelle und Grenzen", quelle)}"""
+{_massnahmen(h, root)}{akkordeon.mehr("Quelle und Grenzen", quelle)}"""
+
+
+def _massnahmen(h, root):
+    """Investitionsmaßnahmen des Produktbereichs (Teilfinanzplan B): die mit den höchsten Auszahlungen 2026."""
+    mn = h.get("massnahmen")
+    if not mn:
+        return ""
+    euro = lambda x: f"{x:,}".replace(",", ".") + " €" if x else "–"
+    zeilen = []
+    for m in mn["liste"]:
+        name = f'<a href="{root}haushalt/#pg-{m["pg"].replace(".", "-")}">{escape(m["bezeichnung"])}</a>'
+        if m["vermerk"].startswith("Bezeichnung abgeleitet"):
+            name += " <small>(Bezeichnung abgeleitet)</small>"
+        zeilen.append(f'        <tr><th scope="row">{name}</th><td data-l="Ansatz 2025">{euro(m["ansatz_2025"])}</td>'
+                      f'<td data-l="Ansatz 2026">{euro(m["ansatz_2026"])}</td><td data-l="Gesamt, alle Jahre">{euro(m["gesamt"])}</td>'
+                      f'<td data-l="Seite"><a href="{escape(mn["datei"])}#page={m["seite"]}">S. {m["seite"]}</a></td></tr>')
+    n, k = mn["zahl"], len(mn["liste"])
+    auswahl = f"Die {k} mit den höchsten Auszahlungen 2026" if n > k else "Alle"
+    return f"""    <h3 id="haushalt-massnahmen">Investitionsmaßnahmen im Produktbereich</h3>
+    <p>Der Haushaltsplan {escape(mn["ausgabe"])} nennt für diesen Bereich {n} Investitionsmaßnahmen mit Ansatz 2025 oder 2026 (Teilfinanzplan B). {auswahl}, Auszahlungen in Euro:</p>
+    <table class="hh-tabelle hh-mn-tabelle">
+      <thead><tr><th scope="col">Maßnahme</th><th scope="col">Ansatz 2025</th><th scope="col">Ansatz 2026</th><th scope="col">Gesamt, alle Jahre</th><th scope="col">Haushaltsplan {escape(mn["ausgabe"])}</th></tr></thead>
+      <tbody>
+{chr(10).join(zeilen)}
+      </tbody>
+    </table>
+    <p><a href="{root}haushalt/#zoom-{escape(h["produktbereich"])}">{"Alle " + str(n) + " Maßnahmen" if n > k else "Die Maßnahmen"} je Produktgruppe auf „Haushalt auf einen Blick“</a></p>
+{akkordeon.mehr("Zum Lesen der Maßnahmen", "<p>Bezeichnungen wie im Haushaltsplan (höchstens 40 Zeichen, teils gekürzt, Abkürzungen nicht aufgelöst). „Gesamt“ umfasst alle Jahre einschließlich bisher bereitgestellter Mittel und der Planung bis 2029. Einzahlungen, etwa Fördermittel, stehen auf der Seite „Haushalt auf einen Blick“. Der Produktbereich deckt sich nicht genau mit dem Thema dieser Seite; einzelnen Vorlagen ordnet die Seite keine Maßnahmen zu.</p>")}
+"""
 
 
 ZAHLWORT = {2: "zwei", 3: "drei", 4: "vier"}

@@ -106,8 +106,8 @@ class Dateien(unittest.TestCase):
         with open(mn.TSV, encoding="utf-8") as f:
             self.rows = list(csv.DictReader(f, delimiter="\t"))
 
-    def test_nicht_freigegeben(self):
-        self.assertFalse(mn.FREIGEGEBEN)
+    def test_freigegeben(self):
+        self.assertTrue(mn.FREIGEGEBEN)   # Prüfbogen im Gespräch freigegeben am 10.11.2026
 
     def test_regeln(self):
         self.assertTrue(all(r["spalte"] in ("4", "6", "12") and r["ausgabe"] == mn.AUSGABE for r in self.rows))

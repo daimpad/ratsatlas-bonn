@@ -64,7 +64,7 @@ jobs:
           # Unterseiten und Feed über ganz Bonn (seit 01.11.2026; Themen- und Haushaltsseite, Seite rss/, eine Gebietsseite)
           for base in https://bonn.ratsatlas.de/ https://daimpad.github.io/ratsatlas-bonn/; do
             check "${base}rss/" "Inhalte abonnieren und weiterverwenden"
-            check "${base}haushalt/" "Haushalt auf einen Blick"
+            check "${base}haushalt/" "Investitionsmaßnahmen"
             check "${base}thema/" "<h1>Themen"
             check "${base}ortsteil/endenich/" "Ratsvorlagen in Endenich"
             check "${base}teilen/" "Bilder zum Ratsatlas Bonn"

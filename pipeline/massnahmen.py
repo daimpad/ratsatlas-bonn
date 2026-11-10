@@ -34,7 +34,7 @@ AUSGABE = "2025/2026"
 TSV = hp.ORDNER / "massnahmen.tsv"
 KOPF = ["ausgabe", "produktbereich", "produktgruppe", "pg_name", "position", "bezeichnung", "zeile", "zeile_name",
         "spalte", "jahr", "art", "betrag", "datei", "seite", "vermerk"]
-FREIGEGEBEN = False   # Anzeige auf haushalt/ und den Themenseiten erst nach Prüfung des Prüfbogens im Gespräch
+FREIGEGEBEN = True    # Prüfbogen im Gespräch freigegeben am 10.11.2026 (haushalt/PHASE7.md)
 PRUEFBOGEN = config.EXPORT / "haushalt" / "pruefbogen_haushalt_massnahmen.tsv"
 TOLERANZ = 2          # Euro (Rundung im PDF; Phase 0: Abweichungen von 1–2 € in 17 Zeilen)
 
@@ -444,3 +444,26 @@ def pruefbogen(pdf_ordner=None):
         wr.writerows(out)
     gleich = sum(o[12] == "gleich" for o in out)
     print(f"Prüfbogen Einzelmaßnahmen: {len(out)} Zellen, zweiter Leseweg gleich {gleich} → {PRUEFBOGEN}")
+
+
+def daten():
+    """Für die Seiten: {Produktgruppe: [Maßnahme]} aus massnahmen.tsv, je Produktgruppe absteigend nach den Auszahlungen
+    im Ansatz 2026 (dann 2025). Je Maßnahme Auszahlungen (Zeilen 6–10) und Einzahlungen (Zeilen 1–4) in den Spalten
+    Ansatz 2025, Ansatz 2026 und Gesamt, dazu Datei, Seite und Vermerk. Ohne Freigabe oder ohne Datei {}."""
+    if not FREIGEGEBEN or not TSV.exists():
+        return {}
+    je = {}
+    for r in hp.lesen(TSV):
+        k = (r["produktgruppe"], int(r["seite"]), int(r["position"]))
+        m = je.setdefault(k, {"pg": r["produktgruppe"], "pb": r["produktbereich"], "bezeichnung": r["bezeichnung"],
+                              "datei": r["datei"], "seite": int(r["seite"]), "vermerk": r["vermerk"],
+                              "aus": {4: 0, 6: 0, 12: 0}, "ein": {4: 0, 6: 0, 12: 0}})
+        nr, sp, b = int(r["zeile"]), int(r["spalte"]), int(r["betrag"])
+        if nr in AUSZAHLUNG:
+            m["aus"][sp] += b
+        elif nr in EINZAHLUNG:
+            m["ein"][sp] += b
+    out = {}
+    for m in sorted(je.values(), key=lambda m: (-m["aus"][6], -m["aus"][4], -m["ein"][6], m["bezeichnung"])):
+        out.setdefault(m["pg"], []).append(m)
+    return out

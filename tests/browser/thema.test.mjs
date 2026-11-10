@@ -263,7 +263,7 @@ test("Haushalt: Klick führt zu den Produktgruppen und weiter zu den Aufwandsart
     assert.deepEqual(await treemaps(page, true), ["Ist 2023: Aufwandsarten der Produktgruppe 1.04.07 Stadtarchiv"]);
     assert.equal(await page.locator(`#pg-1-04-07 .hh-v${v} .hh-${format} rect`).count(), 5, "Transfers leer: fünf Kacheln");
     assert.equal(await page.locator("#pg-1-04-07 .hh-balken:not(.hh-eb)").filter({ visible: true }).count(), 0, "Balken nur ohne Skript");
-    assert.equal(await page.locator("#pg-1-04-07 table:first-of-type tbody tr").count(), 7);
+    assert.equal(await page.locator("#pg-1-04-07 > table:first-of-type tbody tr").count(), 7);   // ohne die Liste der Maßnahmen
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     assert.deepEqual(await axe(page), []);
     // Brotkrumen: zurück zu Ebene 2, dann zu allen Produktbereichen; die Ansicht bleibt gewählt
@@ -315,6 +315,22 @@ test("Haushalt: Begriffe, Grenzen und Quellen in zugeklappten Akkordeons", async
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 390);
   assert.deepEqual(await axe(page), []);
   await page.close();
+});
+
+test("Haushalt: Investitionsmaßnahmen je Produktgruppe aufklappbar, zehn größte unter Investitionen, ohne Verstöße", async () => {
+  for (const width of [1440, 390]) {
+    const page = await browser.newPage({ viewport: { width, height: 900 }, bypassCSP: true });
+    await page.goto(SITE + "haushalt/#pg-1-12-01", { waitUntil: "networkidle" });
+    const mn = page.locator("#pg-1-12-01 details.hh-mn");
+    assert.equal(await mn.evaluate((d) => d.open), false);
+    await mn.locator("summary").click();
+    assert.match(await mn.textContent(), /Viktoriabrücke BN/);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    assert.deepEqual(await axe(page), []);
+    await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
+    assert.equal(await page.locator("#massnahmen + p + table tbody tr").count(), 10);
+    await page.close();
+  }
 });
 
 test("Haushalt: negative und leere Werte ohne Fläche und Balkenstück, 0 € nur in der Tabelle, Tastatur", async () => {
