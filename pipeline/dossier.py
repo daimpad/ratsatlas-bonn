@@ -15,7 +15,7 @@ from datetime import date, timedelta
 from html import escape
 from urllib.parse import quote
 
-from . import begriffsseite, besetzung, config, haushaltsplan, maske, process as proc
+from . import aufzeichnungen, begriffsseite, besetzung, config, haushaltsplan, maske, process as proc
 
 FRIST_TAGE = 21  # Anträge, Bürgeranträge und Einwohnerfragen spätestens 21 Tage vor der Sitzung (GeschO §§ 26, 27)
 PUNKT_ARTEN = ("Beschlussvorlage", "Antrag", "Dringlichkeitsantrag")  # Punkte: Beschlüsse und Anträge
@@ -106,6 +106,8 @@ class Thema:
     produktbereich: str = None  # Haushalt: Produktbereich mit Ist und Plan (Entscheidung 27.10.2026: je Thema einer)
     # Kasten „Wer berät mit“: Besetzung des Fachausschusses (Fraktion abgeleitet); ein Name oder ein Tupel von Namen
     fachausschuss: object = None
+    # Kasten „Im Rat gesagt“: feste Suchwörter für die Ratstranskripte (bonn.biz); nur Verweise (transkripte/KONZEPT.md)
+    transkript_begriffe: tuple = ()
 
     @property
     def stichprobe_pfad(self):
@@ -530,6 +532,18 @@ def _kasten(a, root, h, anker, ueberschrift):
 """
 
 
+def _transkripte(t):
+    """Kasten „Im Rat gesagt“: Links zur Suche in den Ratstranskripten (bonn.biz) mit festen Wörtern; kein Text."""
+    if not t.transkript_begriffe:
+        return ""
+    links = " · ".join(f'<a href="{aufzeichnungen.SUCHE}?q={quote(w)}" target="_blank" rel="noopener">{escape(w)}</a>'
+                       for w in t.transkript_begriffe)
+    return f"""    <h2 id="transkripte">Im Rat gesagt</h2>
+    <p>Was in Sitzungen des Rates dazu gesagt wurde, lässt sich in den Ratstranskripten suchen: {links}</p>
+    <p class="meta">Automatisch erkannt aus den Videoaufzeichnungen, nicht amtlich; maßgeblich sind Video und Niederschrift. Ratstranskripte von Mika Baumeister (bonn.biz, CC BY-NC 4.0), hier nur verlinkt. Die Suchwörter sind fest gewählt; die Treffer stammen aus allen Sitzungen seit 2021.</p>
+"""
+
+
 def body(t, d, root):
     from . import prozessbild
     vg = d.get("vergleich")
@@ -556,6 +570,7 @@ def body(t, d, root):
     h, a = d.get("haushalt_betraege"), d.get("fachausschuss") or d.get("fachausschuesse")
     ziele = ([("haushalt-produktbereich", f'Haushalt (Produktbereich {escape(h["produktbereich"])})')] if h else []) \
         + ([("fachausschuss", "Wer berät mit")] if a else []) \
+        + ([("transkripte", "Im Rat gesagt")] if t.transkript_begriffe else []) \
         + [("sitzungen", "Nächste Sitzungen"), ("mitwirken", "Mitwirken"), ("vorlagen", "Vorlagen nach Strang")]
     sprung = " · ".join(f'<a href="#{k}">{x}</a>' for k, x in ziele)
     nicht = "\n".join(f"      <li>{x}</li>" for x in t.nicht_gezeigt)
@@ -573,7 +588,7 @@ def body(t, d, root):
     <p class="meta">Die Seite beschreibt Verfahren; sie bewertet keine Entscheidungen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
     <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> {sprung}</nav>
 {prozessbild.abschnitt(t, d, root)}
-{_schritte(t, d, root)}{_haushalt(d, root)}{vergleich}{_ausschuss(d, root)}    <h2 id="sitzungen">Nächste Sitzungen</h2>
+{_schritte(t, d, root)}{_haushalt(d, root)}{vergleich}{_ausschuss(d, root)}{_transkripte(t)}    <h2 id="sitzungen">Nächste Sitzungen</h2>
     <p>Sitzungen sind in der Regel öffentlich. Die Tagesordnung erscheint etwa zwei Wochen vorher. Die Frist (21 Tage vorher, GeschO §§ 26, 27) ist berechnet.</p>
     <ul>
 {sitzungen}

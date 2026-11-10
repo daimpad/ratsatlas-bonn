@@ -79,6 +79,13 @@
    "anker": "vorlage"
   },
   {
+   "begriff": "Ratstranskript",
+   "erklaerung": "Automatisch erkannte Mitschrift aus der Videoaufzeichnung einer Sitzung (Ratstranskripte von Mika Baumeister auf bonn.biz). Nicht amtlich; maßgeblich sind Video und Niederschrift. Der Ratsatlas verlinkt nur das Video und die Suche.",
+   "fundstelle": "https://bonn.biz/ratstranskripte/erhebung",
+   "gruppe": "verfahren",
+   "anker": "ratstranskript"
+  },
+  {
    "begriff": "Drucksachennummer",
    "erklaerung": "Kennung einer Vorlage, z. B. 261798. Zusätze wie „-01“ kennzeichnen zugehörige Folgevorlagen.",
    "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Feld „reference“",

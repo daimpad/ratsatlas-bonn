@@ -9,7 +9,7 @@ import shutil
 import sqlite3
 from datetime import date, datetime, timezone
 
-from . import chat, config, dossier, flaechen, prozessbild, gebietszahlen, glossar, maske, plans, process as proc, prozessarten, publish, soll, topics
+from . import aufzeichnungen, chat, config, dossier, flaechen, prozessbild, gebietszahlen, glossar, maske, plans, process as proc, prozessarten, publish, soll, topics
 from .themenseiten import ALLE as THEMENSEITEN
 
 DERIVED_NOTE = (
@@ -523,6 +523,8 @@ def _meetings(db):
                     "web": m.get("web"), "invitation": m.get("invitation"),
                     "agenda_items": m.get("agenda_items") or 0, "start": m["start"], "end": m.get("end"),
                     "source_object": m["id"]})
+        if aufzeichnungen.video(m["id"]):   # Aufzeichnung (Ratstranskripte, bonn.biz): nur Verweis auf das Video
+            out[-1]["video"] = aufzeichnungen.video(m["id"])
     return sorted(out, key=lambda x: x["date"])
 
 

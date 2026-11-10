@@ -260,6 +260,8 @@ dl.facts dd { min-width: 0; overflow-wrap: anywhere; } dl.facts dd .derived { di
 .step-status { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; margin-left: 6px; color: var(--text-muted); }
 .step-body { font-size: 13px; color: var(--text-muted); }
 .step-body q { color: var(--text); }
+.aufz { margin-top: 6px; color: var(--text); }
+.aufz-hint { display: block; color: var(--text-muted); font-size: 12px; }
 .blackbox { margin-top: 4px; padding: 6px 8px; border-radius: 10px; background: rgba(90, 90, 104, 0.08); border: 1px dashed rgba(90, 90, 104, 0.4); font-size: 12px; color: var(--text); }
 .step .jump { border: 0; background: none; color: var(--accent-ink); padding: 0; font-size: 12px; cursor: pointer; text-decoration: underline; }
 .legend { display: grid; gap: 6px; font-size: 13px; }

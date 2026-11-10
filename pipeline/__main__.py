@@ -1,7 +1,7 @@
-"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-besetzung|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|gazetteer|build|export|check|verify|package|seo|baustellen|anliegen|anliegen-seite|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|wahlen-rohdaten|wahlen-ausschnitt|haushalt-ausschnitt|haushalt-pruefbogen|haushalt-ebenen|haushalt-pruefbogen-ebenen|haushalt-ist2024|haushalt-investitionen|haushalt-pruefbogen-erweiterung|haushalt-ist2024-investitionen|haushalt-pruefbogen-erweiterung-finanz|haushalt-ertragsarten|haushalt-pruefbogen-ertragsarten|strukturdaten|strukturdaten-seite|strukturdaten-verifikation|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|klima-stichprobe|kinder-stichprobe|soziales-stichprobe|sicherheit-stichprobe|wirtschaft-stichprobe|digital-stichprobe|all}"""
+"""Aufruf: python -m pipeline {fetch|fetch-papers|fetch-organizations|fetch-besetzung|fetch-lite|fetch-meetings|fetch-plans|fetch-housenumbers|fetch-objects|fetch-texts|fetch-streets|fetch-aufzeichnungen|gazetteer|build|export|check|verify|package|seo|baustellen|anliegen|anliegen-seite|kandidaten|baustellen-seite|kurzfassungen|stufe-c|soll|kontext-ausschnitte|wahlen-rohdaten|wahlen-ausschnitt|haushalt-ausschnitt|haushalt-pruefbogen|haushalt-ebenen|haushalt-pruefbogen-ebenen|haushalt-ist2024|haushalt-investitionen|haushalt-pruefbogen-erweiterung|haushalt-ist2024-investitionen|haushalt-pruefbogen-erweiterung-finanz|haushalt-ertragsarten|haushalt-pruefbogen-ertragsarten|strukturdaten|strukturdaten-seite|strukturdaten-verifikation|fetch-haltestellen|kontext|kultur-stichprobe|verkehr-stichprobe|schule-stichprobe|wohnen-stichprobe|klima-stichprobe|kinder-stichprobe|soziales-stichprobe|sicherheit-stichprobe|wirtschaft-stichprobe|digital-stichprobe|all}"""
 import sys
 
-from . import anliegen, baustellen, besetzung, build, check, dossier, export, fetch, geocode, kandidaten, kontext, haushaltsplan, kurzfassung, seo, soll, strukturdaten, stufe_c, verify, wahlen
+from . import anliegen, aufzeichnungen, baustellen, besetzung, build, check, dossier, export, fetch, geocode, kandidaten, kontext, haushaltsplan, kurzfassung, seo, soll, strukturdaten, stufe_c, verify, wahlen
 from .themenseiten import digital, kinder, klima, kultur, schule, sicherheit, soziales, verkehr, wirtschaft, wohnen
 
 STEPS = {
@@ -16,6 +16,7 @@ STEPS = {
     "fetch-objects": fetch.fetch_objects,
     "fetch-texts": fetch.fetch_texts,
     "fetch-streets": fetch.fetch_streets,
+    "fetch-aufzeichnungen": aufzeichnungen.fetch,  # Aufzeichnungen der Sitzungen (Ratstranskripte, nur Angaben zum Video)
     "gazetteer": geocode.write_gazetteer,
     "build": build.build,
     "export": export.export,

@@ -17,7 +17,7 @@ test("Datumsformat TT.MM.JJJJ, Tagesgrenze in Bonn", () => {
 
 test("Prompt: alle Platzhalter befüllt, Version, Änderungsvermerk außerhalb des Prompts", async () => {
   const p = await loadSystemPrompt({ loadText: async () => MD, status: STATUS, now: new Date("2026-10-18T10:00:00Z") });
-  assert.equal(p.version, "0.7");
+  assert.equal(p.version, "0.8");
   assert.doesNotMatch(p.text, /\{[A-ZÄÖÜ_]+\}/);
   assert.match(p.text, /Heute ist der 18\.10\.2026\. Der Datenstand ist der 18\.10\.2026\. Die Daten umfassen Vorlagen ab dem 07\.10\.2019\./);
   assert.match(p.text, /höchstens 8 Aufrufe/);

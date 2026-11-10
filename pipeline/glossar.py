@@ -94,6 +94,9 @@ GRUPPEN = [("vorlagen", "Vorlagen und Vorlagenarten"), ("gremium", "Gremien und 
 BEGRIFFE = [
     ("Vorlage", "Schriftstück, über das Rat, Bezirksvertretungen oder Ausschüsse beraten, etwa ein Antrag, eine "
                 "Beschlussvorlage oder ein Bürgerantrag.", DATENFELD + ", Objekt „Paper“"),
+    ("Ratstranskript", "Automatisch erkannte Mitschrift aus der Videoaufzeichnung einer Sitzung (Ratstranskripte von Mika "
+                       "Baumeister auf bonn.biz). Nicht amtlich; maßgeblich sind Video und Niederschrift. Der Ratsatlas "
+                       "verlinkt nur das Video und die Suche.", "https://bonn.biz/ratstranskripte/erhebung"),
     ("Drucksachennummer", "Kennung einer Vorlage, z. B. 261798. Zusätze wie „-01“ kennzeichnen zugehörige "
                           "Folgevorlagen.", DATENFELD + ", Feld „reference“"),
     ("Beschlussvorlage", "Vorlage der Verwaltung mit einem Beschlussvorschlag, über den ein Gremium entscheidet.",
@@ -180,7 +183,7 @@ BEGRIFFE = [
     ("Bebauungsplan", "Satzung der Gemeinde, die festlegt, wie Grundstücke in einem Gebiet bebaut und genutzt werden "
      "dürfen.", "§§ 8, 10 BauGB"),
 ]
-GRUPPE = {"Rat": "gremium", "Bezirksvertretung": "gremium", "Ausschuss": "gremium", "Hauptausschuss": "gremium",
+GRUPPE = {"Ratstranskript": "verfahren", "Rat": "gremium", "Bezirksvertretung": "gremium", "Ausschuss": "gremium", "Hauptausschuss": "gremium",
           "Fraktion": "gremium", "Anregungen und Beschwerden (Bürgerantrag)": "gremium", "Einwohnerantrag": "gremium",
           "Einwohnerfragestunde": "gremium", "Einwohnerfrage": "gremium",
           "Dringlichkeitsentscheidung": "verfahren", "Eilentscheidung (Hauptausschuss)": "verfahren",

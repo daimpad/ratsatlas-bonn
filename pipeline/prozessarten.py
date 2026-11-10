@@ -12,7 +12,7 @@ import json
 import re
 import unicodedata
 
-from . import actors, besetzung, config, maske, soll
+from . import actors, aufzeichnungen, besetzung, config, maske, soll
 
 # Gremienarten der OParl-API, die Entscheidungen treffen oder beraten (ohne Fraktionen, Gruppen und interne Gremien)
 ARTEN = {"Rat": "rat", "Ratsgremien": "ausschuss", "Bezirksvertretungen": "bezirksvertretung",
@@ -93,6 +93,17 @@ def gremien(db, meetings, zusto, today, term_start, besetzt=None):
             continue
         for oid in m.get("organization") or []:
             upcoming.setdefault(oid, {"datum": day, "web": m.get("web")})
+    # Aufzeichnungen (Ratstranskripte, bonn.biz): Zahl der Sitzungen mit Video und jüngste je Gremium (nur Verweise)
+    aufz = {}
+    for m in meetings:
+        v = aufzeichnungen.video(m.get("id"))
+        if v:
+            for oid in m.get("organization") or []:
+                a = aufz.setdefault(oid, {"anzahl": 0, "letzte": None})
+                a["anzahl"] += 1
+                day = (m.get("start") or "")[:10]
+                if not a["letzte"] or day > a["letzte"]["datum"]:
+                    a["letzte"] = {"datum": day, "video": v}
     out = []
     for oid, name, cls, end, web in db.execute(
             "SELECT id, name, classification, end_date, web FROM organization WHERE org_type = 'Gremium'"):
@@ -107,6 +118,8 @@ def gremien(db, meetings, zusto, today, term_start, besetzt=None):
         key = name if name in zusto else ZUSTO_ALIAS.get(name)
         g = {"id": oid.rsplit("/", 1)[-1], "name": name, "art": a, "aktuell": aktuell, "beratungen": n, "vorlagen": k,
              "letzte": last, "naechste": nxt, "aufgeloest": end if ended else None, "web": web}
+        if oid in aufz:
+            g["aufzeichnungen"] = aufz[oid]
         if aktuell and (besetzt or {}).get(besetzung._kurz(oid)):
             g["besetzung"] = besetzt[besetzung._kurz(oid)]   # Mitglieder, Sitze nach Fraktion (abgeleitet)
         if key in zusto:

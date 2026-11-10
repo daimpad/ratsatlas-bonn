@@ -171,4 +171,5 @@ THEMA = Thema(
     symbol='<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M10 8l-2 2 2 2M14 8l2 2-2 2"/>',
     produktbereich=None,  # kein Haushaltsabschnitt (Entscheidung 02.11.2026): Produktbereich 01 umfasst fast alles
     fachausschuss=DIGITAL,  # Kasten „Wer berät mit“
+    transkript_begriffe=('Digitalisierung', 'Digitale Verwaltung'),  # Kasten „Im Rat gesagt“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
 )
