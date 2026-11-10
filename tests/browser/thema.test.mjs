@@ -306,7 +306,7 @@ test("Haushalt: Zoom beim Wechsel der Ebene, ohne Bewegung bei reduzierter Beweg
 test("Haushalt: Begriffe, Grenzen und Quellen in zugeklappten Akkordeons", async () => {
   const page = await browser.newPage({ viewport: { width: 390, height: 900 }, bypassCSP: true });
   await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
-  const mehr = page.locator("details.hh-mehr");
+  const mehr = page.locator("details.hh-mehr:not(.meta-acc)");   // Metaangaben je Abschnitt eigens eingeklappt (10.11.2026)
   assert.deepEqual(await mehr.locator("summary").allTextContents(), ["So lesen Sie die Zahlen", "Was diese Seite nicht zeigt", "Quellen, Prüfung und Lizenz"]);
   assert.deepEqual(await mehr.evaluateAll((ds) => ds.map((d) => d.open)), [false, false, false]);
   await page.locator("#lesen summary").focus();
