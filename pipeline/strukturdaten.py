@@ -87,14 +87,16 @@ TYP = {"i0": ("anzahl", "Personen"), "i1": ("dichte", "Einwohner je km²"), "i9"
        "i53": ("anzahl", "Wohnungen (Zugangssaldo)"), "i54": ("anzahl", "Gebäude"), "i55": ("anzahl", "Gebäude"),
        "i56": ("anzahl", "Wohnungen"), "i57": ("quote", "je 100 Wohnungen")}
 # Anzahlen, die sich nicht über Gebiete summieren lassen (verschiedene Staatsangehörigkeiten); Einheit sagt es
-NICHT_SUMMIERBAR = {"i20"}
+NICHT_SUMMIERBAR = {"i20", "bonn-wan-zuzuege_innen", "bonn-wan-fortzuege_innen"}   # Umzüge innerhalb Bonns: zwischen
+# zwei Bezirken desselben Ortsteils zählten sie in der Summe doppelt; der Saldo bleibt richtig
 # Verteilungen: Kategorien stehen in der Quelle im Feld des Jahres, Stichtag 31.12.2025 → je Kategorie ein Anteil
 VERTEILUNG = {"i44", "i45", "i47"}
 VERTEILUNG_JAHR = "2025"
 # Zähler, Nenner und Faktor, wo beide im Atlas stehen und sich der Wert der Quelle daraus nachrechnen lässt (geprüft
 # 10.11.2026 an allen Bezirken und Jahren, Abweichung ≤ 0,05). Nicht aufgenommen: Bedarfsgemeinschaften je 1.000
 # Haushalte (i38), in 2012, 2013, 2017, 2021 und 2023 mit anderer Zahl der Haushalte berechnet
-BRUCH = {"i19": ("i18", "i0", 100), "i23": ("i22", "i0", 100), "i57": ("i56", "i43", 100)}
+BRUCH = {"i19": ("i18", "i0", 100), "i23": ("i22", "i0", 100), "i57": ("i56", "i43", 100),
+         "bonn-wan-saldo_je_1000": ("bonn-wan-saldo", "i0", 1000)}
 # Raumabgleich (Phase 2): ein Bezirk liegt in einem Ortsteil, wenn dort mindestens 97 % seiner Einwohner wohnen; ein
 # Ortsteil ist sauber zusammengesetzt, wenn mindestens 95 % seiner Einwohner in solchen Bezirken wohnen
 BEZIRK_IN_ORTSTEIL = 0.97
@@ -541,6 +543,10 @@ def raumabgleich(bezirke_geo, ortsteile_geo=None, zensus=ZENSUS):
     return zuordnung, audit, sauber, {oid: oname for oid, oname, _ in O}
 
 
+def _iid(k):
+    return k if k.startswith("bonn-") else f"bonn-sda-{k}"
+
+
 def ortsteilwerte(werte, indikatoren, sauber, unbewohnt=UNBEWOHNT):
     """Werte je sauber zusammengesetztem Ortsteil (Status `abgeleitet`): ein Bezirk → Wert übernommen; mehrere Bezirke →
     Anzahlen summiert, Anteile aus Zähler und Nenner (BRUCH); übrige Kennzahlen nicht gebildet. Nahezu unbewohnte
@@ -566,17 +572,17 @@ def ortsteilwerte(werte, indikatoren, sauber, unbewohnt=UNBEWOHNT):
                 continue
             gezaehlt = [t for t in teile if not (t["raum_id"] in unbewohnt and t["status"] == "fehlt")]
             if typ.get(iid) == "anzahl" and q not in NICHT_SUMMIERBAR:
-                if all(t["status"] == "ok" for t in gezaehlt):
+                if all(t["status"] in ("ok", "abgeleitet") for t in gezaehlt):
                     out.append({**zeile, "wert": _wert(round(sum(float(t["wert"]) for t in gezaehlt), 3)),
                                 "status": "abgeleitet"})
                 else:
                     out.append({**zeile, "wert": "", "status": "fehlt"})
             elif q in BRUCH:
                 z, n, faktor = BRUCH[q]
-                zs = [bez.get((f"bonn-sda-{z}", jahr, b)) for b in mitglieder]
-                ns = [bez.get((f"bonn-sda-{n}", jahr, b)) for b in mitglieder]
+                zs = [bez.get((_iid(z), jahr, b)) for b in mitglieder]
+                ns = [bez.get((_iid(n), jahr, b)) for b in mitglieder]
                 paare = [(a, b) for a, b in zip(zs, ns) if a and b and not (a["raum_id"] in unbewohnt and a["status"] == "fehlt")]
-                if paare and all(a["status"] == "ok" and b["status"] == "ok" for a, b in paare) and \
+                if paare and all(a["status"] in ("ok", "abgeleitet") and b["status"] == "ok" for a, b in paare) and \
                         sum(float(b["wert"]) for _, b in paare):
                     wert = sum(float(a["wert"]) for a, _ in paare) / sum(float(b["wert"]) for _, b in paare) * faktor
                     out.append({**zeile, "wert": _wert(round(wert, 1)), "status": "abgeleitet"})
@@ -711,12 +717,149 @@ def pruefen(out=OUT):
     return fehler
 
 
+# --- Wanderung (Lieferung der Statistikstelle) ----------------------------------------------------------------
+# Freigegeben von der Stadt (Mitteilung des Auftraggebers 10.11.2026), Bezugsweg offen. Vorbereitet nach den
+# Entscheidungen vom 10.11.2026: Zu- und Fortzüge und Saldo je statistischem Bezirk und Jahr als Indikatoren des
+# Datenvertrags; Format laut strukturdaten/wanderung/LIEFERVORLAGE.md. Liegt keine Lieferung vor, ändert sich nichts.
+
+WANDERUNG_DATEI = "lieferung/wanderung.tsv"   # unter data/strukturdaten/, von der Stadt geliefert (CC0)
+WANDERUNG_STAND = "lieferung/STAND.json"      # {"wanderung": {"lieferdatum", "datenstand", "quelle", "url"}}
+WANDERUNG_SPALTEN = {
+    "zuzuege_aussen": ("Zuzüge über die Stadtgrenze", "Personen, die im Jahr von außerhalb Bonns in den Bezirk zogen"),
+    "fortzuege_aussen": ("Fortzüge über die Stadtgrenze", "Personen, die im Jahr aus dem Bezirk aus Bonn fortzogen"),
+    "zuzuege_innen": ("Zuzüge aus anderen Bezirken Bonns", "Umzüge innerhalb Bonns in den Bezirk"),
+    "fortzuege_innen": ("Fortzüge in andere Bezirke Bonns", "Umzüge innerhalb Bonns aus dem Bezirk"),
+}
+WANDERUNG_GEHEIM = {"*", "x", "X", "."}   # Zeichen der Statistik für nicht veröffentlichte Werte (kleine Fallzahlen)
+
+
+def _lies_lieferung(path):
+    """Gibt (Spalten, Zeilen) zurück; Trennzeichen Tabulator, Semikolon oder Komma."""
+    text = path.read_text(encoding="utf-8-sig")
+    kopf = text.splitlines()[0] if text.strip() else ""
+    trenner = "\t" if "\t" in kopf else ";" if ";" in kopf else ","
+    leser = csv.DictReader(text.splitlines(), delimiter=trenner)
+    return [s.strip() for s in (leser.fieldnames or [])], list(leser)
+
+
+def _ganzzahl(t):
+    t = t.strip().replace("\u202f", "").replace(" ", "")
+    if re.fullmatch(r"\d{1,3}(\.\d{3})+", t):
+        t = t.replace(".", "")
+    if not re.fullmatch(r"\d+", t):
+        raise ValueError(t)
+    return int(t)
+
+
+def wanderung(path, atlas_meta, werte_atlas, abrufdatum, stand=None):
+    """Lieferung der Statistikstelle → (indikatoren, werte, plausibilitaet) nach dem Vertrag.
+
+    Je Zeile: raumebene (statistischer_bezirk, stadtbezirk, gesamtstadt), raum_id, jahr und die vier Zählungen. Leer =
+    fehlt, „*“ = geheim. Abgeleitet: Saldo (Zu- minus Fortzüge, innen und außen) und Saldo je 1.000 Einwohner (Einwohner
+    des Atlas am 31.12. desselben Jahres). Unbekannte Gebiete oder Jahre, negative oder unlesbare Zahlen brechen ab."""
+    stand = stand or {}
+    quelle = stand.get("quelle", "Wanderungsstatistik der Statistikstelle der Bundesstadt Bonn (Lieferung)")
+    url = stand.get("url", "") or f"lieferung/{path.name}"
+    gueltig = {"statistischer_bezirk": {f["id"] for f in atlas_meta["geographies"][0]["features"]},
+               "stadtbezirk": set(STADTBEZIRKE), "gesamtstadt": {"bonn"}}
+    spalten, zeilen = _lies_lieferung(path)
+    fehlend = {"raumebene", "raum_id", "jahr", *WANDERUNG_SPALTEN} - set(spalten)
+    if fehlend:
+        raise SystemExit(f"Wanderung: Spalten fehlen: {', '.join(sorted(fehlend))}")
+    ew = {(w["raumebene"], w["raum_id"], w["jahr"]): float(w["wert"]) for w in werte_atlas
+          if w["indikator_id"] == "bonn-sda-i0" and w["status"] == "ok"}
+    werte, plaus, jahre, gesehen = [], [], {}, set()
+    for nr, z in enumerate(zeilen, start=2):
+        ebene, rid, jahr = z["raumebene"].strip(), z["raum_id"].strip(), z["jahr"].strip()
+        if ebene == "statistischer_bezirk":
+            rid = rid.zfill(3)
+        if rid not in gueltig.get(ebene, set()) or not re.fullmatch(r"(19|20)\d\d", jahr):
+            raise SystemExit(f"Wanderung, Zeile {nr}: Gebiet „{ebene} {rid}“ oder Jahr „{jahr}“ unbekannt")
+        if (ebene, rid, jahr) in gesehen:
+            raise SystemExit(f"Wanderung, Zeile {nr}: {ebene} {rid} {jahr} doppelt")
+        gesehen.add((ebene, rid, jahr))
+        obj = f"{url}#Zeile {nr}"
+        zahl = {}
+        for k in WANDERUNG_SPALTEN:
+            roh = (z.get(k) or "").strip()
+            if roh in WANDERUNG_GEHEIM:
+                wert, status = "", "geheim"
+            elif roh == "":
+                wert, status = "", "fehlt"
+            else:
+                try:
+                    zahl[k] = _ganzzahl(roh)
+                except ValueError:
+                    raise SystemExit(f"Wanderung, Zeile {nr}: „{roh}“ in {k} ist keine ganze Zahl ≥ 0") from None
+                wert, status = str(zahl[k]), "ok"
+            werte.append({"raumebene": ebene, "raum_id": rid, "indikator_id": f"bonn-wan-{k}", "jahr": jahr,
+                          "wert": wert, "status": status, "quellobjekt": obj})
+            jahre.setdefault(f"bonn-wan-{k}", set()).add(jahr)
+        abl = f"{obj} (abgeleitet: Zu- minus Fortzüge)"
+        if len(zahl) == 4:
+            saldo = zahl["zuzuege_aussen"] + zahl["zuzuege_innen"] - zahl["fortzuege_aussen"] - zahl["fortzuege_innen"]
+            werte.append({"raumebene": ebene, "raum_id": rid, "indikator_id": "bonn-wan-saldo", "jahr": jahr,
+                          "wert": str(saldo), "status": "abgeleitet", "quellobjekt": abl})
+            e = ew.get((ebene, rid, jahr))
+            if e:
+                werte.append({"raumebene": ebene, "raum_id": rid, "indikator_id": "bonn-wan-saldo_je_1000", "jahr": jahr,
+                              "wert": _wert(round(saldo / e * 1000, 1)), "status": "abgeleitet",
+                              "quellobjekt": abl + " je Einwohner (bonn-sda-i0) × 1.000"})
+                jahre.setdefault("bonn-wan-saldo_je_1000", set()).add(jahr)
+        else:
+            werte.append({"raumebene": ebene, "raum_id": rid, "indikator_id": "bonn-wan-saldo", "jahr": jahr,
+                          "wert": "", "status": "fehlt", "quellobjekt": abl})
+        jahre.setdefault("bonn-wan-saldo", set()).add(jahr)
+    # Plausibilität: Umzüge innerhalb Bonns gleichen sich über alle Bezirke aus; Summen gegen gelieferte Gesamtstadt
+    W = {(w["raumebene"], w["raum_id"], w["indikator_id"], w["jahr"]): w for w in werte}
+    for jahr in sorted({j for js in jahre.values() for j in js}):
+        def summe(k):
+            ws = [w for (e, _, i, j), w in W.items() if e == "statistischer_bezirk" and i == f"bonn-wan-{k}" and j == jahr]
+            return sum(int(w["wert"]) for w in ws) if ws and all(w["status"] == "ok" for w in ws) else None
+        zi, fi = summe("zuzuege_innen"), summe("fortzuege_innen")
+        if zi is not None and fi is not None and zi != fi:
+            plaus.append({"indikator_id": "bonn-wan-zuzuege_innen", "jahr": jahr, "befund": "Hinweis",
+                          "grund": f"Zuzüge innerhalb Bonns {zi}, Fortzüge innerhalb Bonns {fi}: sollten gleich sein"})
+        for k in ("zuzuege_aussen", "fortzuege_aussen"):
+            s_, g = summe(k), W.get(("gesamtstadt", "bonn", f"bonn-wan-{k}", jahr))
+            if s_ is not None and g and g["status"] == "ok" and int(g["wert"]) != s_:
+                plaus.append({"indikator_id": f"bonn-wan-{k}", "jahr": jahr, "befund": "Hinweis",
+                              "grund": f"Summe der Bezirke {s_}, ganz Bonn laut Lieferung {g['wert']}"})
+    texte = {**{k: (n, "anzahl", "Personen", m) for k, (n, m) in WANDERUNG_SPALTEN.items()},
+             "saldo": ("Wanderungssaldo", "anzahl", "Personen",
+                       "Zuzüge minus Fortzüge, über die Stadtgrenze und innerhalb Bonns (abgeleitet)"),
+             "saldo_je_1000": ("Wanderungssaldo je 1.000 Einwohner", "quote", "je 1.000 Einwohner",
+                               "Wanderungssaldo je 1.000 Einwohner am 31.12. desselben Jahres laut Strukturdatenatlas "
+                               "(abgeleitet)")}
+    ind = []
+    for k, (name, typ, einheit, metatext) in texte.items():
+        iid = f"bonn-wan-{k}"
+        if iid not in jahre:
+            continue
+        ebenen = sorted({w["raumebene"] for w in werte if w["indikator_id"] == iid})
+        ind.append({"indikator_id": iid, "name": name, "thema": "Bevölkerung - Wanderung", "einheit": einheit,
+                    "typ": typ, "zaehler_id": "bonn-wan-saldo" if k == "saldo_je_1000" else "",
+                    "nenner_id": "bonn-sda-i0" if k == "saldo_je_1000" else "", "raumebenen": ";".join(ebenen),
+                    "jahre": ";".join(sorted(jahre[iid])), "quelle": quelle,
+                    "datenhalter": "Bundesstadt Bonn, Statistikstelle", "lizenz": LIZENZ_BONN, "lizenz_url": LIZENZ_BONN_URL,
+                    "namensnennung": NENNUNG_BONN.split(" – ")[0], "metatext": metatext,
+                    "geheimhaltung": "„*“ in der Lieferung: nicht veröffentlicht (kleine Fallzahl)",
+                    "quell_url": url, "abrufdatum": stand.get("lieferdatum", abrufdatum)})
+    return ind, werte, plaus
+
+
 # --- Schritt ----------------------------------------------------------------------------------------------------
 
 def aufbereiten(dl=DL, out=OUT, stand=None):
     stand = stand or (_json(out / "meta.json") if (out / "meta.json").exists() else {})
     abrufdatum = stand.get("abrufdatum", "")
     ind, werte, plaus = atlas(dl / "atlas", abrufdatum)
+    lieferung = None
+    if (out / WANDERUNG_DATEI).exists():
+        lieferung = _json(out / WANDERUNG_STAND).get("wanderung", {}) if (out / WANDERUNG_STAND).exists() else {}
+        ind_wan, werte_wan, plaus_wan = wanderung(out / WANDERUNG_DATEI, _json(dl / "atlas" / "data.js"), werte,
+                                                  abrufdatum, lieferung)
+        ind, werte, plaus = ind + ind_wan, werte + werte_wan, plaus + plaus_wan
     ind_ww, gesamt = wegweiser(dl / "wegweiser", abrufdatum)
     geo_atlas = geometrie(dl / "atlas", dl / "statistische_bezirke.geojson", "atlas")
     stadt_status = stand.get("geometrie_stadt", "nicht erreichbar")
@@ -734,7 +877,9 @@ def aufbereiten(dl=DL, out=OUT, stand=None):
     ot_ind = {w["indikator_id"] for w in werte_ot}
     for i in ind:
         if i["indikator_id"] in ot_ind:
-            i["raumebenen"] = "statistischer_bezirk;ortsteil;stadtbezirk;gesamtstadt"
+            ebenen = i["raumebenen"].split(";")
+            i["raumebenen"] = ";".join(e for e in ("statistischer_bezirk", "ortsteil", "stadtbezirk", "gesamtstadt")
+                                       if e in ebenen or e == "ortsteil")
     _tsv(out / "indikatoren.tsv", INDIKATOR_FELDER, ind + ind_ww)
     _tsv(out / "werte.tsv", WERT_FELDER, werte + werte_ot)
     _tsv(out / "zuordnung.tsv", ZUORDNUNG_FELDER, zuordnung)
@@ -769,7 +914,10 @@ def aufbereiten(dl=DL, out=OUT, stand=None):
              "lizenz": LIZENZ_GEO},
             {"name": "Wegweiser Kommune (Bertelsmann Stiftung)", "url": "https://www.wegweiser-kommune.de/open-data",
              "lizenz": LIZENZ_WW, "namensnennung": NENNUNG_WW},
-        ],
+        ] + ([{"name": lieferung.get("quelle", "Wanderungsstatistik der Statistikstelle der Bundesstadt Bonn (Lieferung)"),
+               "url": lieferung.get("url", "") or WANDERUNG_DATEI, "lizenz": LIZENZ_BONN,
+               "lieferdatum": lieferung.get("lieferdatum", ""), "datenstand": lieferung.get("datenstand", "")}]
+             if lieferung is not None else []),
         "hinweise": [
             "Werte unverändert aus der Quelle; keine Schätzung. „geheim“: in der Quelle nicht ausgewiesen, nach dem Metatext "
             "wegen Fallzahl unter 10 (Daten der Bundesagentur für Arbeit). „fehlt“: in der Quelle ohne Wert.",

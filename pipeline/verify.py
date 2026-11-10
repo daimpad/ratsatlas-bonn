@@ -188,6 +188,8 @@ Strukturdaten (Statistikstelle der Bundesstadt Bonn, Wegweiser Kommune)
   Jahresübersichten der Statistikstelle und den CSV-Export des Wegweisers (zweiter Abrufweg)
   audit_geometrie_vergleich.tsv (sobald die Geometrie der Stadt erreichbar ist): Fläche, Überdeckung, Einwohner und
   Ortsteil je Bezirk sowie geänderte Werte je Ortsteil, alte Kartengeometrie des Atlas gegen die Geometrie der Stadt
+- strukturdaten/lieferung/ (sobald geliefert): Wanderungsdaten der Statistikstelle je Bezirk und Jahr, in werte.tsv als
+  Indikatoren bonn-wan-… (Zu- und Fortzüge unverändert, Saldo und Saldo je 1.000 Einwohner abgeleitet)
 - bonn/strukturdaten.json: Auszug für die Seite (zwölf Kennzahlen für die Flächenfarbe, Steckbrief)
 - berichte/strukturdaten/: Berichte der Phasen 0 bis 4
 Werte unverändert aus der Quelle, keine Schätzung; Kennzahlen beschreiben Gebiete, nicht Personen
@@ -245,7 +247,7 @@ def package(target=None, archive=None):
             if path.is_file():
                 z.write(path, "allris-bonn/strukturdaten/" + str(path.relative_to(sd)))
         berichte = config.ROOT / "strukturdaten"
-        for path in [berichte / "phase0" / "BERICHT_strukturdaten_phase0.md", *sorted(berichte.glob("PHASE*.md")), berichte / "GEOMETRIE.md"]:
+        for path in [berichte / "phase0" / "BERICHT_strukturdaten_phase0.md", *sorted(berichte.glob("PHASE*.md")), berichte / "GEOMETRIE.md", berichte / "WANDERUNG.md"]:
             if path.exists():
                 z.write(path, "allris-bonn/berichte/strukturdaten/" + ("PHASE0.md" if path.parent.name == "phase0" else path.name))
     print(f"Datenpaket → {target} ({target.stat().st_size // 1024} KB)")
