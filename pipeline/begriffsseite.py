@@ -56,7 +56,7 @@ def body(root):
     sprung = " · ".join(f'<a href="#{k}">{escape(t)}</a>' for k, t, _, _ in teile)
     html = [f"""    <h1>Begriffe</h1>
     <p class="lead">Was bedeuten die Wörter im Ratsatlas? Hier stehen Vorlagenarten, Gremien, Ergebnisse und Kürzel in einfachen Worten, jeweils mit Fundstelle.</p>
-    <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> {sprung}</nav>"""]
+    <nav class="thema-sprung" aria-labelledby="sprung-h"><h2 id="sprung-h">Auf dieser Seite</h2><p>{sprung}</p></nav>"""]
     for key, titel, einleitung, eintraege in teile:
         html.append(f'    <h2 id="{key}">{escape(titel)}</h2>')
         if einleitung:

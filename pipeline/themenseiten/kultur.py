@@ -106,5 +106,5 @@ THEMA = Thema(
     symbol='<path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>',
     produktbereich="04",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
     fachausschuss="Kulturausschuss",  # Kasten „Wer berät mit“ (Besetzung, Fraktion abgeleitet)
-    transkript_begriffe=('Beethovenhalle', 'Oper', 'Kultur'),  # Kasten „Im Rat gesagt“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
+    transkript_begriffe=('Beethovenhalle', 'Oper', 'Kultur'),  # Kasten „Transkription der Ratssitzung“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
 )

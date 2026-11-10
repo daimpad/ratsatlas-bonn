@@ -224,8 +224,8 @@ def suchlink(w=None):
 
 # Hinweis im Akkordeon „Mehr über die Ratstranskripte erfahren“ (Wortlaut des Auftraggebers 10.11.2026)
 HINWEIS = ("Automatisch erkannt aus den Videoaufzeichnungen, nicht amtlich; maßgeblich sind Video und Niederschrift. "
-           "Ratstranskripte von Mika Baumeister (bonn.biz, CC BY-NC 4.0), hier nur verlinkt.")
-HINWEIS_THEMA = "Die Suchwörter sind fest gewählt; die Treffer stammen aus allen Sitzungen seit 2021."
+           "Quelle: verlinkte Ratstranskriptionen von Mika Baumeister auf bonn.biz von Christoph Görn | CC BY-NC 4.0.")
+HINWEIS_THEMA = ""
 HINWEIS_VORGANG = ("Das Suchwort stammt aus dem Titel der Vorlage; es ist nur gesetzt, wenn die Suche damit einen Treffer "
                    "in dieser Sitzung findet. Die Treffer stammen aus allen Sitzungen seit 2021.")
 # Video-Symbol (Linien, viewBox 0 0 24 24), gleich in site/app.js
@@ -250,7 +250,7 @@ def karte(video=None, w=None, links=None, ueberschrift="Aufzeichnung dieser Sitz
             f'<p class="aufz-titel">{ueberschrift} <span class="aufz-kurz">nicht amtlich</span></p>'
             f'<p class="aufz-links">{links}</p>'
             f'<details class="aufz-mehr"><summary>Mehr über die Ratstranskripte erfahren</summary>'
-            f'<p>{escape(HINWEIS)} {escape(zusatz)}</p></details></div></div>')
+            f'<p>{escape(HINWEIS)}{" " + escape(zusatz) if zusatz else ""}</p></details></div></div>')
 
 
 @lru_cache(maxsize=1)

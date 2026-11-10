@@ -106,7 +106,7 @@ class Thema:
     produktbereich: str = None  # Haushalt: Produktbereich mit Ist und Plan (Entscheidung 27.10.2026: je Thema einer)
     # Kasten „Wer berät mit“: Besetzung des Fachausschusses (Fraktion abgeleitet); ein Name oder ein Tupel von Namen
     fachausschuss: object = None
-    # Kasten „Im Rat gesagt“: feste Suchwörter für die Ratstranskripte (bonn.biz); nur Verweise (transkripte/KONZEPT.md)
+    # Kasten „Transkription der Ratssitzung“: feste Suchwörter für die Ratstranskripte (bonn.biz); nur Verweise (transkripte/KONZEPT.md)
     transkript_begriffe: tuple = ()
 
     @property
@@ -537,7 +537,7 @@ def _kasten(a, root, h, anker, ueberschrift):
 
 
 def _transkripte(t):
-    """Kasten „Im Rat gesagt“: Links zur Suche in den Ratstranskripten (bonn.biz) mit festen Wörtern; kein Text."""
+    """Kasten „Transkription der Ratssitzung“: Links zur Suche in den Ratstranskripten (bonn.biz) mit festen Wörtern; kein Text."""
     if not t.transkript_begriffe:
         return ""
     links = " ".join(f'<a class="aufz-knopf aufz-knopf-leise" href="{aufzeichnungen.suchlink(w)}" target="_blank" '
@@ -545,8 +545,7 @@ def _transkripte(t):
                      for w in t.transkript_begriffe)
     karte = aufzeichnungen.karte(links=links, ueberschrift="In den Ratstranskripten suchen",
                                  zusatz=aufzeichnungen.HINWEIS_THEMA)
-    return f"""    <h2 id="transkripte">Im Rat gesagt</h2>
-    <p>Was in Sitzungen des Rates dazu gesagt wurde, lässt sich in den Ratstranskripten suchen.</p>
+    return f"""    <h2 id="transkripte">Transkription der Ratssitzung</h2>
     {karte}
 """
 
@@ -576,7 +575,7 @@ def body(t, d, root):
     h, a = d.get("haushalt_betraege"), d.get("fachausschuss") or d.get("fachausschuesse")
     ziele = ([("haushalt-produktbereich", f'Haushalt (Produktbereich {escape(h["produktbereich"])})')] if h else []) \
         + ([("fachausschuss", "Wer berät mit")] if a else []) \
-        + ([("transkripte", "Im Rat gesagt")] if t.transkript_begriffe else []) \
+        + ([("transkripte", "Transkription der Ratssitzung")] if t.transkript_begriffe else []) \
         + [("sitzungen", "Nächste Sitzungen"), ("mitwirken", "Mitwirken"), ("vorlagen", "Vorlagen nach Strang")]
     sprung = " · ".join(f'<a href="#{k}">{x}</a>' for k, x in ziele)
     nicht = "".join(f"<li>{x}</li>" for x in t.nicht_gezeigt)
@@ -591,7 +590,7 @@ def body(t, d, root):
       <h1>{escape(t.titel)}</h1>
     </div>
     <p class="lead">{escape(t.lead.format(seit=_date(d["meta"]["seit"])))}</p>
-    <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> {sprung}</nav>
+    <nav class="thema-sprung" aria-labelledby="sprung-h"><h2 id="sprung-h">Auf dieser Seite</h2><p>{sprung}</p></nav>
 {prozessbild.abschnitt(t, d, root)}
 {_schritte(t, d, root)}{_haushalt(d, root)}{vergleich}{_ausschuss(d, root)}{_transkripte(t)}    <h2 id="sitzungen">Nächste Sitzungen</h2>
     <p>Sitzungen sind in der Regel öffentlich. Die Tagesordnung erscheint etwa zwei Wochen vorher.</p>

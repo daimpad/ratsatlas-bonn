@@ -64,7 +64,7 @@
   const TRANSKRIPTE = "https://bonn.biz/ratstranskripte";
   // Wortlaut wie pipeline/aufzeichnungen.py (HINWEIS, HINWEIS_VORGANG, SYMBOL)
   const AUFZ_HINWEIS = "Automatisch erkannt aus den Videoaufzeichnungen, nicht amtlich; maßgeblich sind Video und Niederschrift. " +
-    "Ratstranskripte von Mika Baumeister (bonn.biz, CC BY-NC 4.0), hier nur verlinkt. Das Suchwort stammt aus dem Titel der " +
+    "Quelle: verlinkte Ratstranskriptionen von Mika Baumeister auf bonn.biz von Christoph Görn | CC BY-NC 4.0. Das Suchwort stammt aus dem Titel der " +
     "Vorlage; es ist nur gesetzt, wenn die Suche damit einen Treffer in dieser Sitzung findet. Die Treffer stammen aus allen " +
     "Sitzungen seit 2021.";
   const AUFZ_SYMBOL = '<svg class="aufz-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +

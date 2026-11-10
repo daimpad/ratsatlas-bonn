@@ -313,13 +313,6 @@ def _karte(icon, titel, text, aktionen):
 
 
 def aufrufe(t, d, root):
-    heute = d["heute"]
-    offen = sorted((s for s in d["sitzungen"] if s["frist"] >= heute), key=lambda s: s["frist"])
-    naechste = d["sitzungen"][0] if d["sitzungen"] else None
-    frist = (f"Nächste offene Frist: {_datum(offen[0]['frist'])} für {escape(offen[0]['gremium'])} "
-             f"am {_datum(offen[0]['date'])} (berechnet, abgeleitet)." if offen else
-             "Für die eingetragenen Sitzungen sind die Fristen abgelaufen.")
-    bv = next((s for s in offen if s["bahn"] == "bv"), None)
     karten = [
         _karte("calendar", "Termine in den Kalender",
                "Die Sitzungen dieser Seite als Kalenderdatei, mit Link zur Tagesordnung, sobald sie erscheint.",
@@ -329,13 +322,11 @@ def aufrufe(t, d, root):
                f'<a class="pb-knopf" href="{root}data/export/bonn/dossiers/{t.key}.xml">Feed abonnieren</a>'),
         _karte("people", "Sitzung besuchen",
                "Rat, Ausschüsse und Bezirksvertretungen tagen in der Regel öffentlich; Ratssitzungen werden live "
-               "übertragen." + (f" Nächste Sitzung: {escape(naechste['gremium'])} am {_datum(naechste['date'])}."
-                                if naechste else ""),
+               "übertragen.",
                '<a class="pb-knopf" href="#sitzungen">Alle Termine</a>'),
         _karte("hand", "Frage oder Anregung einreichen",
                "Einwohnerfrage in einer Bezirksvertretung (GeschO § 26) oder Bürgerantrag an Rat oder "
-               "Bezirksvertretung (§ 24 GO NRW), spätestens 21 Tage vor der Sitzung. " + frist
-               + (f" Für Fragen: {escape(bv['gremium'])} bis {_datum(bv['frist'])}." if bv and bv is not offen[0] else ""),
+               "Bezirksvertretung (§ 24 GO NRW).",
                '<a class="pb-knopf" href="https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-'
                'gemaess-24-gemeindeordnung-nrw.php">Bürgerantrag bei der Stadt</a> '
                f'<a class="pb-knopf pb-knopf-leise" href="{root}?mitmachen=1">Alle Wege und Fristen</a>'),
@@ -363,7 +354,7 @@ def schalter(t, d):
                       f'{escape(titel.get(k, k))}</button>' for k in t.punkt_straenge
                       if any(p.get("strang") == k for p in d["punkte"]))
     return (f'    <div class="pb-filter" role="group" aria-label="Stränge im Bild ein- und ausblenden" hidden>'
-            f'<span class="pb-filter-text">Stränge im Bild:</span>{knoepfe}</div>')
+            f'<h3 class="pb-filter-text">Stränge im Bild</h3>{knoepfe}</div>')
 
 
 def detaildaten(t, d, root):

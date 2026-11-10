@@ -96,7 +96,10 @@ class Prozessbild(unittest.TestCase):
 
     def test_aufrufe_und_balken(self):
         html = prozessbild.abschnitt(K, self.d, "../../")
-        self.assertIn("Nächste offene Frist: 05.11.2026 für Ausschuss für Finanzen", html)
+        # Kacheln ohne tagesaktuelle Termine und Fristen (Rückmeldung des Auftraggebers 10.11.2026)
+        self.assertNotIn("Nächste offene Frist", html)
+        self.assertNotIn("Nächste Sitzung:", html)
+        self.assertIn('<h3 class="pb-filter-text">Stränge im Bild</h3>', html)
         self.assertIn('href="../../data/export/bonn/dossiers/kultur.ics"', html)
         self.assertIn('href="../../?gebiet=ortsteil:endenich#261285"', html)
         self.assertIn('title="1 entschieden"', html)

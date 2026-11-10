@@ -114,5 +114,5 @@ THEMA = Thema(
     symbol='<path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/>',
     produktbereich="10",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
     fachausschuss=PLANUNG,  # Kasten „Wer berät mit“ (Besetzung, Fraktion abgeleitet)
-    transkript_begriffe=('Bebauungsplan', 'Wohnraum', 'Wohnungslosigkeit'),  # Kasten „Im Rat gesagt“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
+    transkript_begriffe=('Bebauungsplan', 'Wohnraum', 'Wohnungslosigkeit'),  # Kasten „Transkription der Ratssitzung“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
 )

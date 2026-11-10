@@ -141,5 +141,5 @@ THEMA = Thema(
            '<path d="M17 12v4M15 14h4M17 16l-1.5 4M17 16l1.5 4"/>',
     produktbereich="06",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 02.11.2026), Link in Kachel 06
     fachausschuss=AUSSCHUSS,  # Kasten „Wer berät mit“ (Besetzung, Fraktion abgeleitet)
-    transkript_begriffe=('Kita', 'Jugendhilfe', 'Spielplatz'),  # Kasten „Im Rat gesagt“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
+    transkript_begriffe=('Kita', 'Jugendhilfe', 'Spielplatz'),  # Kasten „Transkription der Ratssitzung“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
 )

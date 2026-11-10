@@ -53,15 +53,31 @@ def _page(site_url, path, title, description, body, root, head=""):
 </head>
 <body>
   <header class="page-head">
-    <a class="page-brand" href="{root}"><img src="{root}favicon.svg?v=2" width="32" height="32" alt="">Ratsatlas <span>Bonn</span></a>
+    <a class="page-brand" href="{root}"><img src="{root}favicon.svg?v=2" width="32" height="32" alt=""><span class="marke">Ratsatlas <span class="ort">Bonn</span></span></a>
     <a class="page-back" href="{root}">Zur Karte</a>
   </header>
   <main class="page">
 {body}
   </main>
   <footer class="page-foot">
-    Teil des <a href="https://ratsatlas.de/">Ratsatlas</a> – Ratsentscheidungen vor der eigenen Haustür.<br>
-    <a href="{root}einfach/">Einfache Sprache</a> · <a href="{root}gebiete/">Alle Gebiete</a> · <a href="{root}rss/">Abonnieren (RSS)</a> · <a href="https://nozilla.de/impressum/">Impressum</a> · <a href="{root}datenschutz.html">Datenschutz</a> · <a href="mailto:contact@nozilla.de">Kontakt</a>
+    <div class="page-foot-inner">
+      <div class="page-foot-marke">
+        <a class="page-brand" href="{root}"><img src="{root}favicon.svg?v=2" width="28" height="28" alt=""><span class="marke">Ratsatlas <span class="ort">Bonn</span></span></a>
+        <p>Teil des <a href="https://ratsatlas.de/">Ratsatlas</a></p>
+      </div>
+      <nav class="page-foot-nav" aria-label="Weitere Seiten">
+        <ul>
+          <li><a href="{root}einfach/">Einfache Sprache</a></li>
+          <li><a href="{root}gebiete/">Alle Gebiete</a></li>
+          <li><a href="{root}rss/">Abonnieren (RSS)</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://nozilla.de/impressum/">Impressum</a></li>
+          <li><a href="{root}datenschutz.html">Datenschutz</a></li>
+          <li><a href="mailto:contact@nozilla.de">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>

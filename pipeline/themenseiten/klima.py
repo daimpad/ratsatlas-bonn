@@ -120,5 +120,5 @@ THEMA = Thema(
     symbol='<path d="M5 19C5 10 11 5 20 4c-1 9-6 15-15 15z"/><path d="M5 19 13 11"/>',
     produktbereich="13",  # Haushalt: Ist und Plan dieses Produktbereichs (Entscheidung 27.10.2026)
     fachausschuss=UMWELT,  # Kasten „Wer berät mit“ (Besetzung, Fraktion abgeleitet)
-    transkript_begriffe=('Klimaschutz', 'Klimaneutralität', 'Bäume'),  # Kasten „Im Rat gesagt“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
+    transkript_begriffe=('Klimaschutz', 'Klimaneutralität', 'Bäume'),  # Kasten „Transkription der Ratssitzung“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
 )

@@ -106,7 +106,7 @@ def body(site, site_url, root):
       <p class="meta">Neue Vorlagen und Beratungsergebnisse aus allen Gebieten, die letzten 100 Einträge, aktualisiert {AKTUALISIERUNG}. Ohne Kopierknopf: Adresse im Feld markieren und kopieren (Strg+C, am Mac ⌘+C).</p>
     </section>
 
-    <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> <a href="#abonnieren">Einfach abonnieren</a> · <a href="#einbinden">In eine Website einbinden</a> · <a href="#technik">Automatisiert weiterverarbeiten</a></nav>
+    <nav class="thema-sprung" aria-labelledby="sprung-h"><h2 id="sprung-h">Auf dieser Seite</h2><p><a href="#abonnieren">Einfach abonnieren</a> · <a href="#einbinden">In eine Website einbinden</a> · <a href="#technik">Automatisiert weiterverarbeiten</a></p></nav>
 
     <section class="rss-zugang" id="abonnieren" aria-labelledby="abonnieren-t">
       <p class="rss-fuer">Für alle, ohne Vorkenntnisse</p>
