@@ -37,7 +37,7 @@
       text: "Ein Beispiel aus dem Gebiet: Drucksache, Art, Datum, federführendes Amt, Stand und Themen – und der Link zum Original im Ratsinformationssystem. Maßgeblich ist immer das Original." },
     { before: (ui) => ui.panel("panel-prozesse", false), target: "#detail .steps", clip: "#detail", scroll: true,
       title: "Die Prozesslinie",
-      text: "Die Stationen des Verfahrens: Einreichung, Beratungen in den Gremien mit Datum und Ergebnis, Folgevorlagen. Ergebnisse stehen wörtlich wie in der Quelle. Jede Station trägt ihren Evidenzstatus: belegt, abgeleitet, nicht öffentlich oder unklar." },
+      text: "Die Stationen des Verfahrens: Einreichung, Beratungen in den Gremien mit Datum und Ergebnis, Folgevorlagen. Ergebnisse stehen wörtlich wie in der Quelle. Jede Station trägt ihren Evidenzstatus: belegt, abgeleitet, nicht öffentlich oder unklar. Gibt es von einer Sitzung des Rates ein Video, führt ein Link dorthin und zur Suche in den Ratstranskripten von bonn.biz (automatisch erkannt, nicht amtlich)." },
     { before: (ui) => ui.panel("panel-prozesse", true), target: "#panel-prozesse", beacons: ["#tab-pz-gremien", "#tab-pz-aemter", ".pz-view"],
       title: "Prozesse: Wer entscheidet was?",
       text: "Alle Verfahrensarten – vom Bürgerantrag bis zum Bebauungsplan – mit ihren Schritten, Fristen und Rechtsgrundlagen und der Zahl der Vorgänge in Bonn. Unter „Gremien“ stehen Rat, Ausschüsse, Bezirksvertretungen und Beiräte mit ihren Zuständigkeiten und nächsten Sitzungen, unter „Ämter“ die Verwaltung mit ihren Abteilungen und den Vorlagen, für die sie federführend ist. Mit „Schaubild“ und „Liste“ wechseln Sie die Darstellung." },
