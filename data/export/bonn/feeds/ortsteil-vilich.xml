@@ -369,14 +369,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029084#vorlage</id>
-<title>Neue Vorlage 252903-01: Große Anfrage der BBB-Fraktion: Sanierung der rechtsrheinischen Bahnstrecke auf dem Abschnitt Troisdorf – Wiesbaden vom 10. Juli bis 12. Dezember 2026; hier Ausfall der RB 30  zwischen Remagen und Bonn Hbf und der Verstärkertakte der Linie RB 48 zwischen Köln und Bonn</title>
-<updated>2026-08-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#252903-01"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029084"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028173#vorlage</id>
 <title>Neue Vorlage 260985-01 ST: SPD-Große Anfrage: Einbindung der neuen rechtsrheinischen S-Bahn in das ÖPNV-Netz</title>
 <updated>2026-08-25T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260955"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027512"/>
 <summary>Beschlussvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026525#vorlage</id>
+<title>Neue Vorlage 260655: P+R-Anlage Vilich: Ergebnisse der Vorplanung, Einplanungsantrag und weiteres Vorgehen</title>
+<updated>2026-05-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260655"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026525"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
 </entry>
 </feed>

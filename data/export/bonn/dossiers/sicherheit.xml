@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/thema/sicherheit</id>
 <title>Ratsatlas Bonn – Sicherheit und Ordnung</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Sicherheit und Ordnung (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-09T00:00:00Z</updated>
+<updated>2026-11-10T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/sicherheit.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/sicherheit-und-ordnung/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030377#vorlage</id>
+<title>Neue Vorlage 261220-06 AA: BSW/SBI Änderungsantrag: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums, insbesondere Crack, und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn Antrag zur Vorlage DS 261220</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030377"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029924#vorlage</id>
 <title>Neue Vorlage 261915: Marktverzeichnis für den Stadtbezirk Hardtberg 2027</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261610"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029081"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028592#vorlage</id>
-<title>Neue Vorlage 261382: Berichte und Aussprache über die Vorbereitung des Pützchens Marktes 2026</title>
-<updated>2026-08-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ramersdorf#261382"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028592"/>
-<summary>Mitteilungsvorlage · federführend: Bezirksverwaltungsstelle Beuel · Stand: offen</summary>
 </entry>
 </feed>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242151</id>
+<title>Vorlage 242151: Bericht über das Kita-Anmeldeverfahren für das Kitajahr 2024/25</title>
+<subtitle>Verlauf der Vorlage 242151: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-11-26T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242151.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242151"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020405#vorlage</id>
+<title>Neue Vorlage 242151: Bericht über das Kita-Anmeldeverfahren für das Kitajahr 2024/25</title>
+<updated>2024-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242151"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020405"/>
+<summary>Mitteilungsvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+</entry>
+</feed>

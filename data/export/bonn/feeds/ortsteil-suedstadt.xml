@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-suedstadt</id>
 <title>Ratsatlas Bonn – Südstadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Südstadt</subtitle>
-<updated>2026-11-06T00:00:00Z</updated>
+<updated>2026-11-10T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-suedstadt.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:suedstadt"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030377#vorlage</id>
+<title>Neue Vorlage 261220-06 AA: BSW/SBI Änderungsantrag: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums, insbesondere Crack, und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn Antrag zur Vorlage DS 261220</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:suedstadt#261220-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030377"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030330#vorlage</id>
 <title>Neue Vorlage 262121: Große Anfrage Grüne/Linke/Volt - Nordbrückensperrung - Fragen zum Verwaltungsgerichtsbeschluss zur Oxfordstraße und Folgen für die Adenauerallee</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:suedstadt#220806-10%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027907"/>
 <summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027771#vorlage</id>
-<title>Neue Vorlage 260852-02 ST: Antrag von CDU, SPD und FDP: Safe Cities Initiative</title>
-<updated>2026-06-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:suedstadt#260852-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027771"/>
-<summary>Stellungnahme der Verwaltung · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/thema/soziales</id>
 <title>Ratsatlas Bonn – Soziales, Gesundheit und Integration</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Soziales, Gesundheit und Integration (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-09T00:00:00Z</updated>
+<updated>2026-11-10T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/soziales.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/soziales-gesundheit-und-integration/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030377#vorlage</id>
+<title>Neue Vorlage 261220-06 AA: BSW/SBI Änderungsantrag: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums, insbesondere Crack, und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn Antrag zur Vorlage DS 261220</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030377"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030290#vorlage</id>
 <title>Neue Vorlage 261970-01 ST: Grüne-Große Anfrage: Wartezeiten und Termine beim Ausländeramt</title>
@@ -798,14 +806,6 @@
 <updated>2026-09-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261451"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028750"/>
-<summary>Anhörung am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028749#beratung-2026-09-03-Ausschuss%20f%C3%BCr%20Chancengerechtigkeit%20und%20Integration</id>
-<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 261450 Zuschuss an die Fraueninitiative für Bildung und Erziehung FIBEr e.V. für das Projekt “Kulturelle Rituale am Ende des Lebens"</title>
-<updated>2026-09-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:auerberg#261450"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028749"/>
 <summary>Anhörung am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>
