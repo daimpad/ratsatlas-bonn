@@ -13122,7 +13122,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Samansstraße	Küdinghoven	mittel	7
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Vinzenzstraße	Pützchen/Bechlinghoven	mittel	1
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Wehrhausweg	Küdinghoven	mittel	11
-252646	kein Ort						
 252646-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252647	Titel ohne gemeinsamen Ort, nicht verortet						
 252648	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -14882,6 +14881,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260302	Titel ohne gemeinsamen Ort, nicht verortet						
 260303	kein Ort						
 260305	kein Ort						
+260305-01 ST	kein Ort						
 260306	kein Ort						
 260307	kein Ort						
 260308	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
@@ -16016,7 +16016,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261281-07 AA	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	1
 261281-08 AA	kein Ort						
 261281-09 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
-261281-10 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
 261281-11 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
 261285	kein Ort						
 261285-01 ST	kein Ort						

@@ -28376,6 +28376,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion schlägt vor, die Ampel an der Kreuzung Hermann-Wandersleb-Ring/Rochusstraße außerhalb der Bürozeiten durch gelbes Blinklicht zu ersetzen. Montags bis freitags soll das von 18 bis 6 Uhr gelten, an Wochenenden und Feiertagen ganztägig. Die Ampel betrifft vor allem die Ausfahrt einer Tiefgarage.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -28777,6 +28782,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion fordert, dass die Verwaltung bis Frühjahr/Sommer 2025 einen provisorischen Fußweg zwischen der Wohnsiedlung WestSide (Simone-Veil-Straße) und dem Spielplatz „Auf dem Hügel“ sowie der Bushaltestelle Verweyenstraße fertigstellt. Der Weg soll eine bestehende Lücke von etwa 100 Metern schließen. Es geht um ein Neubaugebiet in Endenich.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
