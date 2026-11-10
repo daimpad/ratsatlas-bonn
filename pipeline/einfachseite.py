@@ -42,7 +42,7 @@ def body(root):
     woerter = "\n".join(f"      <dt>{w}</dt><dd>{e}</dd>" for w, e in WOERTER)
     return f"""    <h1>Der Ratsatlas in Einfacher Sprache</h1>
     <p class="lead">Auf dieser Seite erklären wir den Ratsatlas in Einfacher Sprache. Sie erfahren: Was zeigt die Karte? Wer entscheidet in Bonn? Und wie können Sie mitmachen?</p>
-    <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> <a href="#was">Was ist der Ratsatlas?</a> · <a href="#wer">Wer entscheidet?</a> · <a href="#ablauf">Wie läuft eine Sache ab?</a> · <a href="#woerter">Was bedeuten die Wörter?</a> · <a href="#benutzen">Wie benutze ich die Karte?</a> · <a href="#mitmachen">Wie kann ich mitmachen?</a> · <a href="#grenzen">Was die Karte nicht kann</a> · <a href="#kontakt">Kontakt</a></nav>
+    <nav class="thema-sprung" aria-labelledby="sprung-h"><h2 id="sprung-h">Auf dieser Seite</h2><p><a href="#was">Was ist der Ratsatlas?</a> · <a href="#wer">Wer entscheidet?</a> · <a href="#ablauf">Wie läuft eine Sache ab?</a> · <a href="#woerter">Was bedeuten die Wörter?</a> · <a href="#benutzen">Wie benutze ich die Karte?</a> · <a href="#mitmachen">Wie kann ich mitmachen?</a> · <a href="#grenzen">Was die Karte nicht kann</a> · <a href="#kontakt">Kontakt</a></p></nav>
     <div class="einfach">
     <h2 id="was">Was ist der Ratsatlas?</h2>
     <p>Der Rat der Stadt Bonn und andere Gremien beraten über viele Themen. Zum Beispiel über Straßen, Schulen oder Spielplätze.</p>

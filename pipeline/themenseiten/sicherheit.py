@@ -179,5 +179,5 @@ THEMA = Thema(
     symbol='<path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/>',
     produktbereich="02",  # Haushalt: Sicherheit und Ordnung (Entscheidung 5)
     fachausschuss=SICHERHEIT,  # Kasten „Wer berät mit“ (Besetzung, Fraktion abgeleitet)
-    transkript_begriffe=('Feuerwehr', 'Stadtordnungsdienst'),  # Kasten „Im Rat gesagt“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
+    transkript_begriffe=('Feuerwehr', 'Stadtordnungsdienst'),  # Kasten „Transkription der Ratssitzung“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
 )

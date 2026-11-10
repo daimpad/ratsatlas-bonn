@@ -186,5 +186,5 @@ THEMA = Thema(
     symbol='<path d="M3 20h18"/><path d="M6 16v-3M10.5 16V9M15 16v-5M19.5 16V5"/><path d="M5 9l5-4 4 3 6-5"/>',
     produktbereich="15",  # Haushalt: Wirtschaft und Tourismus (Entscheidung 02.11.2026)
     fachausschuss=(WIRTSCHAFT, WISSENSCHAFT),  # Kasten „Wer berät mit“: beide Ausschüsse (Entscheidung 02.11.2026)
-    transkript_begriffe=('Wirtschaftsförderung', 'Universität', 'Wissenschaft'),  # Kasten „Im Rat gesagt“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
+    transkript_begriffe=('Wirtschaftsförderung', 'Universität', 'Wissenschaft'),  # Kasten „Transkription der Ratssitzung“: Suche in den Ratstranskripten (Treffer geprüft 10.11.2026)
 )

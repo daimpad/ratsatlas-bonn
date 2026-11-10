@@ -49,6 +49,8 @@ Entscheidungen des Auftraggebers 10.11.2026: Suche vorbefüllt nur, wenn geprüf
 - Metaangaben in Akkordeons (`pipeline/akkordeon.py`): Themenseiten (Regel je Strang „Wie zugeordnet?“, Zuordnung, Quelle von Haushalt und Ausschuss, Bildbeschreibung, Grenzen, „Quellen und Methode“), Übersicht `thema/`, Seiten je Vorgang, Gebietsseiten, Haushalt (je Einwohner, Veränderung, Investitionen, Fundstellen der Ebenen), Begriffe, Einfache Sprache („Für Fachleute“), RSS (Quelle und Lizenz). Sichtbar bleiben kurze Markierungen „abgeleitet“ an einzelnen Werten.
 - Schritt 2 (Karte): Metaangaben im Vorgang, bei Plänen und Baustellen, im Reiter „Prozesse“, in „Mitmachen“, bei Wegen und Terminen eingeklappt (`metaAcc` in `site/app.js`, Klasse `acc-meta`). Sichtbar bleiben die Rechtsgrundlage je Schritt (kurze Fundstelle am Schritt), der Hinweis vor der Suche im Text der Dokumente (Datenschutz) und die KI-Hinweise bei Kurzfassung und Assistent.
 
+- Rückmeldung 10.11.2026: Abschnitt der Themenseiten heißt „Transkription der Ratssitzung“; Einleitungssatz und Satz zu den Suchwörtern entfallen; Quelle im Akkordeon: „Quelle: verlinkte Ratstranskriptionen von Mika Baumeister auf bonn.biz von Christoph Görn | CC BY-NC 4.0.“
+
 ## Offen
 
 - Lücken bei bonn.biz: Rat 2023 und 2024 nur zum Teil. Der tägliche Lauf fragt Sitzungen des letzten Jahres erneut ab; ältere nur mit `--alle`.
