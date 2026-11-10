@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/thema/klima</id>
 <title>Ratsatlas Bonn – Klima und Umwelt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Klima und Umwelt (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-09T00:00:00Z</updated>
+<updated>2026-11-10T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/klima.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/klima-und-umwelt/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030316#vorlage</id>
+<title>Neue Vorlage 262114: Volt-Anfrage: Feinstaubbelastung (PM2,5 und NO₂), Gesundheitsschutz und planerische Vorsorge in Bonn</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262114"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030316"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029625#vorlage</id>
+<title>Neue Vorlage 261823: Fällgenehmigung für zwei Himalaya-Zedern auf dem Grundstück Saynstr. [Hausnummer ausgelassen], 53229 Bonn</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#261823"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029625"/>
+<summary>Dringlichkeitsentscheidung BV · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030321#vorlage</id>
 <title>Neue Vorlage 261729-01: Erteilte Befreiung (Vorsitzendenbeteiligung) für die Errichtung zweier provisorischer Aufgangstürme an der Friedrich-Ebert-Brücke</title>
@@ -167,14 +183,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#261829"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029638"/>
 <summary>Genehmigung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029625#vorlage</id>
-<title>Neue Vorlage 261823: Fällgenehmigung für zwei Himalaya-Zedern auf dem Grundstück Saynstr. [Hausnummer ausgelassen], 53229 Bonn</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#261823"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029625"/>
-<summary>Dringlichkeitsentscheidung BV · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029493#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261074"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027797"/>
 <summary>Anhörung am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026931#beratung-2026-10-07-Betriebsausschuss%20SGB</id>
-<title>Betriebsausschuss SGB: „zur Kenntnis genommen - mit Protokollnotiz“ – 260845 CDU/FDP Große Anfrage: Energieverbrauch kommunaler Liegenschaften</title>
-<updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260845"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026931"/>
-<summary>Kenntnisnahme am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

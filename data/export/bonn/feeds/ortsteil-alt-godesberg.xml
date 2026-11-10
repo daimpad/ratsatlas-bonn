@@ -417,14 +417,6 @@
 <summary>Beschlussvorlage · federführend: 52 Sport- und Bäderamt · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029085#vorlage</id>
-<title>Neue Vorlage 240255-18: Große Anfrage der BBB-Fraktion: Schutz der Bonner Bevölkerung vor den Emissionen der Eisenbahnstrecken des Bundes, hier: Erhöhtes Güterverkehrsaufkommen auf der linksrheinischen DB-Strecke durch Bonn</title>
-<updated>2026-08-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#240255-18"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029085"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028913#vorlage</id>
 <title>Neue Vorlage 231592-06 ST: Volt - Große Anfrage: Busvorrangschaltung an der Kreuzung Burgstraße / Winterstraße - Stand der Umsetzung</title>
 <updated>2026-08-24T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#260608-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026644"/>
 <summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023331#beratung-2026-05-27-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 253280-01 ST CDU-Große Anfrage: Schwerpunkte der Arbeit des Zentrenmanagements</title>
+<updated>2026-05-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#253280-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023331"/>
+<summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

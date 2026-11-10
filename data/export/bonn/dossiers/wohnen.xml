@@ -49,14 +49,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 53 Gesundheitsamt · Stand: offen</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030299#vorlage</id>
-<title>Neue Vorlage 262105: Informationsbrief - Einladung zur frühzeitigen Öffentlichkeitsbeteiligung zum vorhabenbezogenen Bebauungsplanverfahren Nr. 6823-2 "Gartenstraße" im Stadtbezirk Beuel, Ortsteil Vilich</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262105"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030299"/>
-<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030281#vorlage</id>
 <title>Neue Vorlage 261791-03 AA: SPD-Änderungsantrag: Erarbeitung eines modifizierten Raum- und Nutzungsprogramms für eine finanzierbare Sanierung der Stadthalle sowie Überprüfung des Denkmalstatus Antrag zur Vorlage 261791</title>
 <updated>2026-11-04T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#211204-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029198"/>
 <summary>Kenntnisnahme am 2026-09-22; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028088#vorlage</id>
+<title>Neue Vorlage 261218: CDU/SPD-Dringlichkeitsantrag: Einrichtung eines Quartiersmanagements für Medinghoven</title>
+<updated>2026-09-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261218"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028088"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

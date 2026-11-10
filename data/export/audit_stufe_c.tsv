@@ -368,7 +368,6 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 241723	keine Änderung						mistral-large-latest
 252572-01	keine Änderung						mistral-large-latest
 252883-01	geändert	bestätigt	volltext_ortsteil_name	Ramersdorf	Ramersdorf	mittel	mistral-large-latest
-252903-02 ST	keine Änderung						mistral-large-latest
 252903-03 ST	keine Änderung						mistral-large-latest
 253147-04	geändert	neu	llm_objekt	Bonn Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
 253147-04	geändert	neu	llm_strasse	Am Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest

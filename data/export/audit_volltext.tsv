@@ -10613,7 +10613,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240255-15 AA	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 240255-16	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 240255-17 ST	kein Ort						
-240255-18	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	1
 240255-19	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 240255-20 ST	kein Ort						
 240255-21 ST	kein Ort						
@@ -13413,7 +13412,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252903	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
 252903	verortet	Hauptteil	volltext_ortsteil_name	Vilich	Vilich	niedrig	1
 252903-01	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
-252903-02 ST	kein Ort						
 252903-03 ST	kein Ort						
 252904	verortet	Hauptteil	volltext_ortsteil_adjektiv	Endenich	Endenich	niedrig	1
 252905	kein Ort						

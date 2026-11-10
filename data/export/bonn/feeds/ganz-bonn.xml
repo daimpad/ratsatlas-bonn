@@ -33,6 +33,30 @@
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030366#vorlage</id>
+<title>Neue Vorlage 262138: Termine 2027 für den Ausschuss für Wirtschaft, Liegenschaften und Arbeit</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262138"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030366"/>
+<summary>Mitteilungsvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030316#vorlage</id>
+<title>Neue Vorlage 262114: Volt-Anfrage: Feinstaubbelastung (PM2,5 und NO₂), Gesundheitsschutz und planerische Vorsorge in Bonn</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262114"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030316"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029625#vorlage</id>
+<title>Neue Vorlage 261823: Fällgenehmigung für zwei Himalaya-Zedern auf dem Grundstück Saynstr. [Hausnummer ausgelassen], 53229 Bonn</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#261823"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029625"/>
+<summary>Dringlichkeitsentscheidung BV · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030362#vorlage</id>
 <title>Neue Vorlage 262136: Tagesordnungspunkte in nichtöffentlicher Sitzung des Ausschusses für Kinder, Jugend und Familie am 25.11.2026</title>
 <updated>2026-11-09T00:00:00Z</updated>
@@ -569,14 +593,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030299#vorlage</id>
-<title>Neue Vorlage 262105: Informationsbrief - Einladung zur frühzeitigen Öffentlichkeitsbeteiligung zum vorhabenbezogenen Bebauungsplanverfahren Nr. 6823-2 "Gartenstraße" im Stadtbezirk Beuel, Ortsteil Vilich</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262105"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030299"/>
-<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030291#vorlage</id>
 <title>Neue Vorlage 262099: Bürgerantrag: Fällung eines Lindenbaumes im Bereich Rheinaustraße [Hausnummer ausgelassen]</title>
 <updated>2026-11-04T00:00:00Z</updated>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#260585-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030145"/>
 <summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030138#vorlage</id>
-<title>Neue Vorlage 262030: 48. Satzung zur Änderung der Beitrags- und Gebührenordnung für die Inanspruchnahme der öffentlichen Abwasseranlage (Kanalabgabensatzung)</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262030"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030138"/>
-<summary>Beschlussvorlage · federführend: 21 Kassen- und Steueramt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030124#vorlage</id>
-<title>Neue Vorlage 261804-01 ST: Feinstaubbelastung im Umfeld der Bauarbeiten A 565</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261804-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030124"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
 </feed>

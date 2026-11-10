@@ -17,6 +17,22 @@
 <summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: Bezirksverwaltungsstelle Bonn · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030366#vorlage</id>
+<title>Neue Vorlage 262138: Termine 2027 für den Ausschuss für Wirtschaft, Liegenschaften und Arbeit</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262138"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030366"/>
+<summary>Mitteilungsvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030316#vorlage</id>
+<title>Neue Vorlage 262114: Volt-Anfrage: Feinstaubbelastung (PM2,5 und NO₂), Gesundheitsschutz und planerische Vorsorge in Bonn</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262114"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030316"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030362#vorlage</id>
 <title>Neue Vorlage 262136: Tagesordnungspunkte in nichtöffentlicher Sitzung des Ausschusses für Kinder, Jugend und Familie am 25.11.2026</title>
 <updated>2026-11-09T00:00:00Z</updated>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261690-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030053"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030196#vorlage</id>
-<title>Neue Vorlage 262057: Tagesordnungspunkte zur Beratung in nicht öffentlicher Sitzung</title>
-<updated>2026-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262057"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030196"/>
-<summary>Mitteilungsvorlage · federführend: 52 Sport- und Bäderamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030189#vorlage</id>
-<title>Neue Vorlage 262051: Grüne-Bezirksfraktion-Antrag: Wiederherstellung der Fahrbahnschwellen und Verbesserung der Verkehrsberuhigung im Bereich der Montessori-Schule</title>
-<updated>2026-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262051"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030189"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 </feed>
