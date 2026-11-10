@@ -14,7 +14,7 @@
 </head>
 <body>
   <header class="page-head">
-    <a class="page-brand" href="../"><img src="../favicon.svg?v=2" width="32" height="32" alt="">Ratsatlas <span>Bonn</span></a>
+    <a class="page-brand" href="../"><img src="../favicon.svg?v=2" width="32" height="32" alt=""><span class="marke">Ratsatlas <span class="ort">Bonn</span></span></a>
     <a class="page-back" href="../">Zur Karte</a>
   </header>
   <main class="page">
@@ -33,7 +33,7 @@
       <p class="meta">Neue Vorlagen und Beratungsergebnisse aus allen Gebieten, die letzten 100 Einträge, aktualisiert einmal am Tag, frühmorgens. Ohne Kopierknopf: Adresse im Feld markieren und kopieren (Strg+C, am Mac ⌘+C).</p>
     </section>
 
-    <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> <a href="#abonnieren">Einfach abonnieren</a> · <a href="#einbinden">In eine Website einbinden</a> · <a href="#technik">Automatisiert weiterverarbeiten</a></nav>
+    <nav class="thema-sprung" aria-labelledby="sprung-h"><h2 id="sprung-h">Auf dieser Seite</h2><p><a href="#abonnieren">Einfach abonnieren</a> · <a href="#einbinden">In eine Website einbinden</a> · <a href="#technik">Automatisiert weiterverarbeiten</a></p></nav>
 
     <section class="rss-zugang" id="abonnieren" aria-labelledby="abonnieren-t">
       <p class="rss-fuer">Für alle, ohne Vorkenntnisse</p>
@@ -101,8 +101,24 @@ for eintrag in feed.findall(&quot;a:entry&quot;, ATOM):
     <script src="../rss.js" defer></script>
   </main>
   <footer class="page-foot">
-    Teil des <a href="https://ratsatlas.de/" target="_blank" rel="noopener">Ratsatlas</a> – Ratsentscheidungen vor der eigenen Haustür.<br>
-    <a href="../einfach/">Einfache Sprache</a> · <a href="../gebiete/">Alle Gebiete</a> · <a href="../rss/">Abonnieren (RSS)</a> · <a href="https://nozilla.de/impressum/" target="_blank" rel="noopener">Impressum</a> · <a href="../datenschutz.html">Datenschutz</a> · <a href="mailto:contact@nozilla.de">Kontakt</a>
+    <div class="page-foot-inner">
+      <div class="page-foot-marke">
+        <a class="page-brand" href="../"><img src="../favicon.svg?v=2" width="28" height="28" alt=""><span class="marke">Ratsatlas <span class="ort">Bonn</span></span></a>
+        <p>Teil des <a href="https://ratsatlas.de/" target="_blank" rel="noopener">Ratsatlas</a></p>
+      </div>
+      <nav class="page-foot-nav" aria-label="Weitere Seiten">
+        <ul>
+          <li><a href="../einfach/">Einfache Sprache</a></li>
+          <li><a href="../gebiete/">Alle Gebiete</a></li>
+          <li><a href="../rss/">Abonnieren (RSS)</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://nozilla.de/impressum/" target="_blank" rel="noopener">Impressum</a></li>
+          <li><a href="../datenschutz.html">Datenschutz</a></li>
+          <li><a href="mailto:contact@nozilla.de">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
