@@ -31,7 +31,7 @@ Datei `aufzeichnungen.json`, je Sitzung: Sitzung der Stadt (ID), Video-Adresse, 
 | Ort | Element | Text (Vorschlag) |
 |---|---|---|
 | Vorgang, Prozesslinie | An Stationen in Sitzungen mit Aufzeichnung: Zeile unter der Station mit Symbol ▶ und Text | „Aufzeichnung dieser Sitzung: Video (YouTube) · Transkript durchsuchen (bonn.biz)“ |
-| Vorgang | Suchlink mit der Drucksachennummer, vorbefüllt | „Im Transkript nach 260127 suchen“; darunter klein: „Treffer aus allen Sitzungen, die Stelle ist nicht zugeordnet.“ |
+| Vorgang | ~~Suchlink mit der Drucksachennummer~~ entfällt (Schritt 0: 0 von 20 Vorlagen mit Treffer); Vorbefüllung der Suche offen | – |
 | Sitzungskalender, Reiter „Prozesse“ (Gremien) | vergangene Sitzungen mit Aufzeichnung: Symbol ▶ und „Aufzeichnung“ als Link | „Aufzeichnung (Video und Transkript)“ |
 | Themenseiten | Kasten „Im Rat gesagt“ unter „Wer berät mit“: zwei bis drei feste Suchbegriffe je Strang (in der Themenbeschreibung festgelegt) | „Was im Rat zu ‚Nordbrücke‘ gesagt wurde – Suche in den Ratstranskripten“ |
 | Ratsassistent | Werkzeug `suche_aufzeichnungen`: nennt Sitzungen mit Aufzeichnung und gibt Suchlinks; kein Inhalt. Neue Regel im Systemprompt: keine Aussagen über den Inhalt von Redebeiträgen | Antwortkarte „Aufzeichnung · Transkriptsuche“ |
@@ -45,7 +45,7 @@ Datei `aufzeichnungen.json`, je Sitzung: Sitzung der Stadt (ID), Video-Adresse, 
 ## 6. Grenzen (auf der Seite genannt)
 
 - Nur Rat und Hauptausschuss; Bezirksvertretungen und Fachausschüsse fehlen in der Quelle.
-- Die Suche nach der Drucksachennummer findet oft nichts, weil Nummern selten gesprochen werden. Ein Titelwort führt eher zum Ziel, und der Suchbegriff lässt sich auf bonn.biz ändern.
+- Aufzeichnungen gibt es für 50 von 66 Sitzungen des Rates seit 2021 (Lücken 2023 und 2024), im Hauptausschuss nur 2021 (Schritt 0, `phase0/BERICHT.md`).
 - Die Transkripte sind automatisch erkannt; der Ratsatlas prüft sie nicht.
 
 ## 7. Schritte (je mit Freigabe)
