@@ -29308,6 +29308,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die FDP-Fraktion schlägt vor, die Verkehrsführung am Endenicher Ei während der Bauarbeiten 2025/2026 durch eine Hilfsbrücke zu verbessern. Die Autobahn GmbH entscheidet unabhängig.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -30456,6 +30461,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion schlägt vor, mit der Universität Bonn zu klären, ob Anwohner des Steinwegs den Parkplatz Immenburg mitnutzen dürfen. Die Verwaltung soll die Machbarkeit prüfen, falls der Antrag angenommen wird.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
