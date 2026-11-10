@@ -85,7 +85,7 @@ class Auffindbarkeit(unittest.TestCase):
             self.assertEqual(urls, ["https://ris-bonn.example/", "https://ris-bonn.example/datenschutz.html",
                                     "https://ris-bonn.example/haushalt/", "https://ris-bonn.example/rss/",
                             "https://ris-bonn.example/begriffe/", "https://ris-bonn.example/einfach/",
-                    "https://ris-bonn.example/technik/"])
+                    "https://ris-bonn.example/technik/", "https://ris-bonn.example/teilen/"])
             self.assertIsNone(re.search(r"lastmod", (site / seo.SITEMAP_SEITEN).read_text(encoding="utf-8")))
 
 

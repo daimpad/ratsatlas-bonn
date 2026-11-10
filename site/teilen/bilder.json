@@ -1,0 +1,860 @@
+{
+ "formate": {
+  "vorschau": {
+   "w": 1200,
+   "h": 630,
+   "name": "Link-Vorschau",
+   "zweck": "Vorschaubild beim Teilen eines Links"
+  },
+  "quadrat": {
+   "w": 1080,
+   "h": 1080,
+   "name": "Quadrat",
+   "zweck": "Beiträge in sozialen Medien"
+  },
+  "hoch": {
+   "w": 1080,
+   "h": 1350,
+   "name": "Hochformat 4:5",
+   "zweck": "Beiträge in sozialen Medien"
+  },
+  "story": {
+   "w": 1080,
+   "h": 1920,
+   "name": "Story 9:16",
+   "zweck": "Stories und Kurzvideos"
+  },
+  "breit": {
+   "w": 1920,
+   "h": 1080,
+   "name": "Breitbild 16:9",
+   "zweck": "Präsentationen und Bildschirme"
+  },
+  "banner": {
+   "w": 1500,
+   "h": 500,
+   "name": "Banner 3:1",
+   "zweck": "Kopfbild für Profile und Websites"
+  }
+ },
+ "druck_breite": 3000,
+ "stand": "2026-11-10",
+ "motive": [
+  {
+   "key": "marke",
+   "titel": "Wortmarke",
+   "zeile": "Was Rat und Bezirksvertretungen beraten",
+   "text": "Logo und Name auf violettem Grund.",
+   "osm": false,
+   "dateien": {
+    "vorschau": {
+     "jpg": {
+      "datei": "marke-vorschau.jpg",
+      "bytes": 22902
+     },
+     "webp": {
+      "datei": "marke-vorschau.webp",
+      "bytes": 12610
+     },
+     "png": {
+      "datei": "marke-vorschau.png",
+      "bytes": 256777
+     },
+     "svg": {
+      "datei": "marke-vorschau.svg",
+      "bytes": 3015
+     }
+    },
+    "quadrat": {
+     "jpg": {
+      "datei": "marke-quadrat.jpg",
+      "bytes": 42334
+     },
+     "webp": {
+      "datei": "marke-quadrat.webp",
+      "bytes": 22252
+     },
+     "png": {
+      "datei": "marke-quadrat.png",
+      "bytes": 409281
+     },
+     "svg": {
+      "datei": "marke-quadrat.svg",
+      "bytes": 3087
+     },
+     "druck": {
+      "datei": "marke-quadrat-druck.jpg",
+      "bytes": 176457
+     }
+    },
+    "hoch": {
+     "jpg": {
+      "datei": "marke-hoch.jpg",
+      "bytes": 46279
+     },
+     "webp": {
+      "datei": "marke-hoch.webp",
+      "bytes": 23306
+     },
+     "png": {
+      "datei": "marke-hoch.png",
+      "bytes": 501943
+     },
+     "svg": {
+      "datei": "marke-hoch.svg",
+      "bytes": 3088
+     },
+     "druck": {
+      "datei": "marke-hoch-druck.jpg",
+      "bytes": 192919
+     }
+    },
+    "story": {
+     "jpg": {
+      "datei": "marke-story.jpg",
+      "bytes": 48525
+     },
+     "webp": {
+      "datei": "marke-story.webp",
+      "bytes": 23868
+     },
+     "png": {
+      "datei": "marke-story.png",
+      "bytes": 692930
+     },
+     "svg": {
+      "datei": "marke-story.svg",
+      "bytes": 3091
+     }
+    },
+    "breit": {
+     "jpg": {
+      "datei": "marke-breit.jpg",
+      "bytes": 47926
+     },
+     "webp": {
+      "datei": "marke-breit.webp",
+      "bytes": 24270
+     },
+     "png": {
+      "datei": "marke-breit.png",
+      "bytes": 561655
+     },
+     "svg": {
+      "datei": "marke-breit.svg",
+      "bytes": 3027
+     },
+     "druck": {
+      "datei": "marke-breit-druck.jpg",
+      "bytes": 98739
+     }
+    },
+    "banner": {
+     "jpg": {
+      "datei": "marke-banner.jpg",
+      "bytes": 22328
+     },
+     "webp": {
+      "datei": "marke-banner.webp",
+      "bytes": 12586
+     },
+     "png": {
+      "datei": "marke-banner.png",
+      "bytes": 236267
+     },
+     "svg": {
+      "datei": "marke-banner.svg",
+      "bytes": 3017
+     }
+    }
+   }
+  },
+  {
+   "key": "punkte",
+   "titel": "Bonn in Punkten",
+   "zeile": "Wo beraten wird",
+   "text": "Jeder Punkt ist ein Ort, auf den sich eine Vorlage bezieht; dazu die vier Stadtbezirke.",
+   "osm": true,
+   "dateien": {
+    "vorschau": {
+     "jpg": {
+      "datei": "punkte-vorschau.jpg",
+      "bytes": 60484
+     },
+     "webp": {
+      "datei": "punkte-vorschau.webp",
+      "bytes": 35112
+     },
+     "svg": {
+      "datei": "punkte-vorschau.svg",
+      "bytes": 108770
+     }
+    },
+    "quadrat": {
+     "jpg": {
+      "datei": "punkte-quadrat.jpg",
+      "bytes": 91812
+     },
+     "webp": {
+      "datei": "punkte-quadrat.webp",
+      "bytes": 51268
+     },
+     "svg": {
+      "datei": "punkte-quadrat.svg",
+      "bytes": 111838
+     },
+     "druck": {
+      "datei": "punkte-quadrat-druck.jpg",
+      "bytes": 396733
+     }
+    },
+    "hoch": {
+     "jpg": {
+      "datei": "punkte-hoch.jpg",
+      "bytes": 109589
+     },
+     "webp": {
+      "datei": "punkte-hoch.webp",
+      "bytes": 59290
+     },
+     "svg": {
+      "datei": "punkte-hoch.svg",
+      "bytes": 115066
+     },
+     "druck": {
+      "datei": "punkte-hoch-druck.jpg",
+      "bytes": 458529
+     }
+    },
+    "story": {
+     "jpg": {
+      "datei": "punkte-story.jpg",
+      "bytes": 128560
+     },
+     "webp": {
+      "datei": "punkte-story.webp",
+      "bytes": 66754
+     },
+     "svg": {
+      "datei": "punkte-story.svg",
+      "bytes": 118749
+     }
+    },
+    "breit": {
+     "jpg": {
+      "datei": "punkte-breit.jpg",
+      "bytes": 123852
+     },
+     "webp": {
+      "datei": "punkte-breit.webp",
+      "bytes": 65258
+     },
+     "svg": {
+      "datei": "punkte-breit.svg",
+      "bytes": 121323
+     },
+     "druck": {
+      "datei": "punkte-breit-druck.jpg",
+      "bytes": 245745
+     }
+    },
+    "banner": {
+     "jpg": {
+      "datei": "punkte-banner.jpg",
+      "bytes": 51065
+     },
+     "webp": {
+      "datei": "punkte-banner.webp",
+      "bytes": 31310
+     },
+     "svg": {
+      "datei": "punkte-banner.svg",
+      "bytes": 109569
+     }
+    }
+   }
+  },
+  {
+   "key": "themen",
+   "titel": "Themen in Farbe",
+   "zeile": "Worum es geht",
+   "text": "Dieselben Orte, gefärbt nach dem Thema des federführenden Amtes.",
+   "osm": true,
+   "dateien": {
+    "vorschau": {
+     "jpg": {
+      "datei": "themen-vorschau.jpg",
+      "bytes": 57330
+     },
+     "webp": {
+      "datei": "themen-vorschau.webp",
+      "bytes": 36964
+     },
+     "svg": {
+      "datei": "themen-vorschau.svg",
+      "bytes": 80842
+     }
+    },
+    "quadrat": {
+     "jpg": {
+      "datei": "themen-quadrat.jpg",
+      "bytes": 95546
+     },
+     "webp": {
+      "datei": "themen-quadrat.webp",
+      "bytes": 57912
+     },
+     "svg": {
+      "datei": "themen-quadrat.svg",
+      "bytes": 83551
+     },
+     "druck": {
+      "datei": "themen-quadrat-druck.jpg",
+      "bytes": 398717
+     }
+    },
+    "hoch": {
+     "jpg": {
+      "datei": "themen-hoch.jpg",
+      "bytes": 112991
+     },
+     "webp": {
+      "datei": "themen-hoch.webp",
+      "bytes": 65780
+     },
+     "svg": {
+      "datei": "themen-hoch.svg",
+      "bytes": 86429
+     },
+     "druck": {
+      "datei": "themen-hoch-druck.jpg",
+      "bytes": 455088
+     }
+    },
+    "story": {
+     "jpg": {
+      "datei": "themen-story.jpg",
+      "bytes": 131131
+     },
+     "webp": {
+      "datei": "themen-story.webp",
+      "bytes": 74188
+     },
+     "svg": {
+      "datei": "themen-story.svg",
+      "bytes": 90253
+     }
+    },
+    "breit": {
+     "jpg": {
+      "datei": "themen-breit.jpg",
+      "bytes": 126471
+     },
+     "webp": {
+      "datei": "themen-breit.webp",
+      "bytes": 73928
+     },
+     "svg": {
+      "datei": "themen-breit.svg",
+      "bytes": 91993
+     },
+     "druck": {
+      "datei": "themen-breit-druck.jpg",
+      "bytes": 243697
+     }
+    },
+    "banner": {
+     "jpg": {
+      "datei": "themen-banner.jpg",
+      "bytes": 54404
+     },
+     "webp": {
+      "datei": "themen-banner.webp",
+      "bytes": 37014
+     },
+     "svg": {
+      "datei": "themen-banner.svg",
+      "bytes": 80564
+     }
+    }
+   }
+  },
+  {
+   "key": "flaechen",
+   "titel": "Ortsteile",
+   "zeile": "Was im Viertel passiert",
+   "text": "Die 51 Ortsteile, je dunkler, desto mehr Vorlagen mit Ortsbezug seit 2019.",
+   "osm": false,
+   "dateien": {
+    "vorschau": {
+     "jpg": {
+      "datei": "flaechen-vorschau.jpg",
+      "bytes": 51177
+     },
+     "webp": {
+      "datei": "flaechen-vorschau.webp",
+      "bytes": 29986
+     },
+     "svg": {
+      "datei": "flaechen-vorschau.svg",
+      "bytes": 77649
+     }
+    },
+    "quadrat": {
+     "jpg": {
+      "datei": "flaechen-quadrat.jpg",
+      "bytes": 82634
+     },
+     "webp": {
+      "datei": "flaechen-quadrat.webp",
+      "bytes": 45762
+     },
+     "svg": {
+      "datei": "flaechen-quadrat.svg",
+      "bytes": 84300
+     },
+     "druck": {
+      "datei": "flaechen-quadrat-druck.jpg",
+      "bytes": 326827
+     }
+    },
+    "hoch": {
+     "jpg": {
+      "datei": "flaechen-hoch.jpg",
+      "bytes": 100288
+     },
+     "webp": {
+      "datei": "flaechen-hoch.webp",
+      "bytes": 54654
+     },
+     "svg": {
+      "datei": "flaechen-hoch.svg",
+      "bytes": 92404
+     },
+     "druck": {
+      "datei": "flaechen-hoch-druck.jpg",
+      "bytes": 395817
+     }
+    },
+    "story": {
+     "jpg": {
+      "datei": "flaechen-story.jpg",
+      "bytes": 122948
+     },
+     "webp": {
+      "datei": "flaechen-story.webp",
+      "bytes": 66384
+     },
+     "svg": {
+      "datei": "flaechen-story.svg",
+      "bytes": 100720
+     }
+    },
+    "breit": {
+     "jpg": {
+      "datei": "flaechen-breit.jpg",
+      "bytes": 104085
+     },
+     "webp": {
+      "datei": "flaechen-breit.webp",
+      "bytes": 57266
+     },
+     "svg": {
+      "datei": "flaechen-breit.svg",
+      "bytes": 104231
+     },
+     "druck": {
+      "datei": "flaechen-breit-druck.jpg",
+      "bytes": 202503
+     }
+    },
+    "banner": {
+     "jpg": {
+      "datei": "flaechen-banner.jpg",
+      "bytes": 46969
+     },
+     "webp": {
+      "datei": "flaechen-banner.webp",
+      "bytes": 28058
+     },
+     "svg": {
+      "datei": "flaechen-banner.svg",
+      "bytes": 75481
+     }
+    }
+   }
+  },
+  {
+   "key": "haushalt",
+   "titel": "Haushalt",
+   "zeile": "Wofür das Geld da ist",
+   "text": "Die 17 Produktbereiche des städtischen Haushalts nach ihren geplanten Aufwendungen 2026.",
+   "osm": false,
+   "dateien": {
+    "vorschau": {
+     "jpg": {
+      "datei": "haushalt-vorschau.jpg",
+      "bytes": 30945
+     },
+     "webp": {
+      "datei": "haushalt-vorschau.webp",
+      "bytes": 10802
+     },
+     "svg": {
+      "datei": "haushalt-vorschau.svg",
+      "bytes": 4128
+     }
+    },
+    "quadrat": {
+     "jpg": {
+      "datei": "haushalt-quadrat.jpg",
+      "bytes": 53955
+     },
+     "webp": {
+      "datei": "haushalt-quadrat.webp",
+      "bytes": 19178
+     },
+     "svg": {
+      "datei": "haushalt-quadrat.svg",
+      "bytes": 4129
+     },
+     "druck": {
+      "datei": "haushalt-quadrat-druck.jpg",
+      "bytes": 209463
+     }
+    },
+    "hoch": {
+     "jpg": {
+      "datei": "haushalt-hoch.jpg",
+      "bytes": 59054
+     },
+     "webp": {
+      "datei": "haushalt-hoch.webp",
+      "bytes": 19978
+     },
+     "svg": {
+      "datei": "haushalt-hoch.svg",
+      "bytes": 4132
+     },
+     "druck": {
+      "datei": "haushalt-hoch-druck.jpg",
+      "bytes": 235092
+     }
+    },
+    "story": {
+     "jpg": {
+      "datei": "haushalt-story.jpg",
+      "bytes": 66123
+     },
+     "webp": {
+      "datei": "haushalt-story.webp",
+      "bytes": 21336
+     },
+     "svg": {
+      "datei": "haushalt-story.svg",
+      "bytes": 4145
+     }
+    },
+    "breit": {
+     "jpg": {
+      "datei": "haushalt-breit.jpg",
+      "bytes": 59796
+     },
+     "webp": {
+      "datei": "haushalt-breit.webp",
+      "bytes": 19302
+     },
+     "svg": {
+      "datei": "haushalt-breit.svg",
+      "bytes": 4148
+     },
+     "druck": {
+      "datei": "haushalt-breit-druck.jpg",
+      "bytes": 115655
+     }
+    },
+    "banner": {
+     "jpg": {
+      "datei": "haushalt-banner.jpg",
+      "bytes": 31249
+     },
+     "webp": {
+      "datei": "haushalt-banner.webp",
+      "bytes": 10524
+     },
+     "svg": {
+      "datei": "haushalt-banner.svg",
+      "bytes": 4133
+     }
+    }
+   }
+  },
+  {
+   "key": "prozess",
+   "titel": "Prozesslinie",
+   "zeile": "Wie entschieden wird",
+   "text": "Der Weg einer Vorlage durch die Gremien, Station für Station.",
+   "osm": false,
+   "dateien": {
+    "vorschau": {
+     "jpg": {
+      "datei": "prozess-vorschau.jpg",
+      "bytes": 25085
+     },
+     "webp": {
+      "datei": "prozess-vorschau.webp",
+      "bytes": 14582
+     },
+     "svg": {
+      "datei": "prozess-vorschau.svg",
+      "bytes": 4687
+     }
+    },
+    "quadrat": {
+     "jpg": {
+      "datei": "prozess-quadrat.jpg",
+      "bytes": 47653
+     },
+     "webp": {
+      "datei": "prozess-quadrat.webp",
+      "bytes": 24270
+     },
+     "svg": {
+      "datei": "prozess-quadrat.svg",
+      "bytes": 4687
+     },
+     "druck": {
+      "datei": "prozess-quadrat-druck.jpg",
+      "bytes": 192977
+     }
+    },
+    "hoch": {
+     "jpg": {
+      "datei": "prozess-hoch.jpg",
+      "bytes": 49935
+     },
+     "webp": {
+      "datei": "prozess-hoch.webp",
+      "bytes": 25354
+     },
+     "svg": {
+      "datei": "prozess-hoch.svg",
+      "bytes": 4690
+     },
+     "druck": {
+      "datei": "prozess-hoch-druck.jpg",
+      "bytes": 209381
+     }
+    },
+    "story": {
+     "jpg": {
+      "datei": "prozess-story.jpg",
+      "bytes": 60756
+     },
+     "webp": {
+      "datei": "prozess-story.webp",
+      "bytes": 30724
+     },
+     "svg": {
+      "datei": "prozess-story.svg",
+      "bytes": 4704
+     }
+    },
+    "breit": {
+     "jpg": {
+      "datei": "prozess-breit.jpg",
+      "bytes": 52785
+     },
+     "webp": {
+      "datei": "prozess-breit.webp",
+      "bytes": 26854
+     },
+     "svg": {
+      "datei": "prozess-breit.svg",
+      "bytes": 4719
+     },
+     "druck": {
+      "datei": "prozess-breit-druck.jpg",
+      "bytes": 109042
+     }
+    },
+    "banner": {
+     "jpg": {
+      "datei": "prozess-banner.jpg",
+      "bytes": 27899
+     },
+     "webp": {
+      "datei": "prozess-banner.webp",
+      "bytes": 15758
+     },
+     "svg": {
+      "datei": "prozess-banner.svg",
+      "bytes": 4707
+     }
+    }
+   }
+  },
+  {
+   "key": "karte",
+   "titel": "Karte auf dem Telefon",
+   "zeile": "Bonn auf einen Blick",
+   "text": "Bildschirmfoto der Karte in einem Telefonrahmen.",
+   "osm": true,
+   "dateien": {
+    "vorschau": {
+     "jpg": {
+      "datei": "karte-vorschau.jpg",
+      "bytes": 54291
+     },
+     "webp": {
+      "datei": "karte-vorschau.webp",
+      "bytes": 29236
+     }
+    },
+    "quadrat": {
+     "jpg": {
+      "datei": "karte-quadrat.jpg",
+      "bytes": 92749
+     },
+     "webp": {
+      "datei": "karte-quadrat.webp",
+      "bytes": 47944
+     },
+     "druck": {
+      "datei": "karte-quadrat-druck.jpg",
+      "bytes": 412000
+     }
+    },
+    "hoch": {
+     "jpg": {
+      "datei": "karte-hoch.jpg",
+      "bytes": 117946
+     },
+     "webp": {
+      "datei": "karte-hoch.webp",
+      "bytes": 59234
+     },
+     "druck": {
+      "datei": "karte-hoch-druck.jpg",
+      "bytes": 523976
+     }
+    },
+    "story": {
+     "jpg": {
+      "datei": "karte-story.jpg",
+      "bytes": 190535
+     },
+     "webp": {
+      "datei": "karte-story.webp",
+      "bytes": 92774
+     }
+    },
+    "breit": {
+     "jpg": {
+      "datei": "karte-breit.jpg",
+      "bytes": 127379
+     },
+     "webp": {
+      "datei": "karte-breit.webp",
+      "bytes": 62424
+     },
+     "druck": {
+      "datei": "karte-breit-druck.jpg",
+      "bytes": 271610
+     }
+    },
+    "banner": {
+     "jpg": {
+      "datei": "karte-banner.jpg",
+      "bytes": 46095
+     },
+     "webp": {
+      "datei": "karte-banner.webp",
+      "bytes": 24810
+     }
+    }
+   }
+  },
+  {
+   "key": "themenseite",
+   "titel": "Themenseite",
+   "zeile": "Themen im Überblick",
+   "text": "Bildschirmfoto der Themenseite „Verkehr und Mobilität“ in einem Browserrahmen.",
+   "osm": true,
+   "dateien": {
+    "vorschau": {
+     "jpg": {
+      "datei": "themenseite-vorschau.jpg",
+      "bytes": 58587
+     },
+     "webp": {
+      "datei": "themenseite-vorschau.webp",
+      "bytes": 30968
+     }
+    },
+    "quadrat": {
+     "jpg": {
+      "datei": "themenseite-quadrat.jpg",
+      "bytes": 102580
+     },
+     "webp": {
+      "datei": "themenseite-quadrat.webp",
+      "bytes": 53036
+     },
+     "druck": {
+      "datei": "themenseite-quadrat-druck.jpg",
+      "bytes": 401289
+     }
+    },
+    "hoch": {
+     "jpg": {
+      "datei": "themenseite-hoch.jpg",
+      "bytes": 104609
+     },
+     "webp": {
+      "datei": "themenseite-hoch.webp",
+      "bytes": 53700
+     },
+     "druck": {
+      "datei": "themenseite-hoch-druck.jpg",
+      "bytes": 418450
+     }
+    },
+    "story": {
+     "jpg": {
+      "datei": "themenseite-story.jpg",
+      "bytes": 108790
+     },
+     "webp": {
+      "datei": "themenseite-story.webp",
+      "bytes": 57734
+     }
+    },
+    "breit": {
+     "jpg": {
+      "datei": "themenseite-breit.jpg",
+      "bytes": 117008
+     },
+     "webp": {
+      "datei": "themenseite-breit.webp",
+      "bytes": 61196
+     },
+     "druck": {
+      "datei": "themenseite-breit-druck.jpg",
+      "bytes": 235605
+     }
+    },
+    "banner": {
+     "jpg": {
+      "datei": "themenseite-banner.jpg",
+      "bytes": 64379
+     },
+     "webp": {
+      "datei": "themenseite-banner.webp",
+      "bytes": 33366
+     }
+    }
+   }
+  }
+ ]
+}

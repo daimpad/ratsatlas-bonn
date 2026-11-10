@@ -51,6 +51,7 @@ jobs:
             check "${base}haushalt/" "Haushalt auf einen Blick"
             check "${base}thema/" "<h1>Themen"
             check "${base}ortsteil/endenich/" "Ratsvorlagen in Endenich"
+            check "${base}teilen/" "Bilder zum Ratsatlas Bonn"
             feed="${base}data/export/bonn/feeds/ganz-bonn.xml"
             n=$(curl -fsSL --retry 3 --retry-delay 10 "$feed" | python3 -c 'import sys, xml.etree.ElementTree as ET
           r = ET.parse(sys.stdin).getroot(); a = "{http://www.w3.org/2005/Atom}"
