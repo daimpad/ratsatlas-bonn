@@ -29611,6 +29611,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt in einer Beschlussvorlage vor, den Bebauungsplan Nr. 7522-77 für das Gebiet „Am Bleichgraben“ in Endenich aufzuheben. Einige Stellungnahmen von Bürgern und Verbänden werden nicht berücksichtigt, andere zur Kenntnis genommen. Der Plan wird aufgehoben, weil er wegen eines Verfahrensfehlers unwirksam ist.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -31729,6 +31734,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Fraktion beantragt, den Zebrastreifen in der Pastoratsgasse zu verlegen. Die Verwaltung teilt mit, dass dies erst geprüft wird, wenn ein anderes Vorhaben (DS 231164) umgesetzt ist. Eine Entscheidung steht noch aus.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
