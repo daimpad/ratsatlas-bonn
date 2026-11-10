@@ -850,5 +850,105 @@
   },
   "toleranz_euro": 1500,
   "toleranz_cent": 2
+ },
+ "massnahmen": {
+  "abruf": "2026-11-10",
+  "ausgabe": "2025/2026",
+  "dateien": {
+   "01": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB01.pdf",
+    "sha256": "d82e8891ae66d69e10240ed13954bd0ec475a280d9adcdb5035b9a8d3ab4840e"
+   },
+   "02": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB02.pdf",
+    "sha256": "de7ac5aede03bb1485bc2bd4d7bf5a77b50e23ac645d19d315fdff3a1480c3b8"
+   },
+   "03": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB03.pdf",
+    "sha256": "aa1a54b8d7569eea3f0d2648687ebe8dfe8c1d9bd86288be1805c898ddef35fc"
+   },
+   "04": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB04.pdf",
+    "sha256": "834a66c5b5bc0c85b3bbb6ddb01c6104d01442a47cda5e9a031aaed7196440fb"
+   },
+   "05": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB05.pdf",
+    "sha256": "4c68c8a347da54b93c60f59a20b0954f8040f0e24e68b2137852b860404c010b"
+   },
+   "06": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB06.pdf",
+    "sha256": "6fee2127586ae9e3e6d76ea233a3638d38998dd3bbce6a8d36c03579069519ba"
+   },
+   "07": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB07.pdf",
+    "sha256": "41161a187a424f17cd36962e917da2da63c3c274fc3d7dbb9a7b37df38ceae2e"
+   },
+   "08": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB08.pdf",
+    "sha256": "a1f0102e63acc8532aa1f1ece99272332cf6bb272e74b6a534ba646745c2ad8e"
+   },
+   "09": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB09.pdf",
+    "sha256": "ab3588a4090f883bef06aeccb17c6b407255e950709b14d7a46111f21e9cc078"
+   },
+   "10": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB10.pdf",
+    "sha256": "015f6cf11960cb415ce761d3fa666656828468fb8cbeafe4503fb64ee2c191fe"
+   },
+   "11": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB11.pdf",
+    "sha256": "cde2e45cb72f60d9993c4111486fae5313ebcb307dbdc98b52eb3c2fde245584"
+   },
+   "12": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB12.pdf",
+    "sha256": "5987d6f2244a9ed1e6ef1e54434b007f74fa8e642e34fc0c630d627fabf63ac3"
+   },
+   "13": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB13.pdf",
+    "sha256": "636657270cac0eef190a11fa7dc09bb27e4372e4bb811eb9a2b03ad48a895ca0"
+   },
+   "14": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB14.pdf",
+    "sha256": "986005297757f4c42ec19f173f1de48bd84f00a3d73c0b1e249f92a50befa48e"
+   },
+   "15": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB15.pdf",
+    "sha256": "d236527707028976d3094f6cf632cd88b51e39492c379cf8b91dd0314818f332"
+   },
+   "16": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB16.pdf",
+    "sha256": "25431c71f8a976c33a51d2eb52f802892fd2ff8f5cd9ca8d2c00f2fbe264602b"
+   },
+   "17": {
+    "url": "https://www.bonn.de/medien-global/amt-20-und-21/haushaltsdaten/haushaltsplan-2025-2026/produktbereiche/PB17.pdf",
+    "sha256": "ffe189b9e6d29f71cb876c2f1ca41e687901d624c12f08926e25ca4bc92e38f8"
+   }
+  },
+  "gelesen": 882,
+  "uebernommen": 315,
+  "nur_in_der_summe": 0,
+  "regel": "nur Maßnahmen mit Ansatz 2025 oder 2026; Spalten Ansatz 2025, Ansatz 2026, Gesamt; ohne VE und Planung; Leibrenten und Intendantenvertrag nur in der Summe (Entscheidungen 10.11.2026)",
+  "pruefsummen": {
+   "spalte_12_je_zeile": {
+    "pruefungen": 1986,
+    "groesste_abweichung_euro": 1
+   },
+   "saldo_je_massnahme": {
+    "pruefungen": 10572,
+    "groesste_abweichung_euro": 1
+   },
+   "produktgruppen_teil_a": {
+    "pruefungen": 4080,
+    "groesste_abweichung_euro": 2
+   }
+  },
+  "toleranz_euro": 2,
+  "ausnahmen": [
+   "PB02.pdf S. 42, Block 3: Saldo nachgerechnet (Saldozeile im PDF getrennt)",
+   "PB12.pdf S. 18, Block 4: Bezeichnung abgeleitet (im PDF über dem vorigen Block; Beleg Haushaltsplan 2023/2024, pb12.pdf S. 18)",
+   "PB12.pdf S. 48, Block 3: Block ohne Bezeichnung, Spalten unsicher (nur Planung, nicht übernommen)",
+   "PB12.pdf S. 13: Bezeichnung „Effertzstr. BN“ ohne eigene Zeilen",
+   "PB12.pdf S. 18: Bezeichnung „Auerberger-Mitte BN“ ohne eigene Zeilen"
+  ]
  }
 }
