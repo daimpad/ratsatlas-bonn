@@ -1,0 +1,61 @@
+ausgabe	pb	pg	datei	seite	nummer	bezeichnung	jahr	betrag_ansatz	ortsbezug	erkannter_ort	methode
+2025/2026	01	1.01.28	PB01.pdf	90	1	Grundstücksmanagement	2026	6055000	nein		
+2025/2026	01	1.01.28	PB01.pdf	91	3	BK Verlagerung Kleingartenanlage	2026	400000	nein		Ort nicht genannt
+2025/2026	01	1.01.30	PB01.pdf	102	2	Sondermaßnahmen BezVSt Bonn	2026	55000	unklar	Stadtbezirk Bonn	nur Stadtbezirk
+2025/2026	01	1.01.32	PB01.pdf	112	2	Sondermaßnahmen BezVSt Beuel	2026	10000	unklar	Stadtbezirk Beuel	nur Stadtbezirk
+2025/2026	03	1.03.04	PB03.pdf	20	1	Beschaffungen Gymnasien	2026	70000	nein		
+2025/2026	03	1.03.10	PB03.pdf	46	1	Spielgeräte auf Schulhöfen	2026	150000	nein		
+2025/2026	04	1.04.09	PB04.pdf	41	2	Beschaffungen Kunstmuseum	2026	118500	ja	Kunstmuseum Bonn (Gronau)	Gebäude, automatisch
+2025/2026	06	1.06.04	PB06.pdf	21	3	Ausstattung - Spielhäuser	2026	12500	nein		
+2025/2026	06	1.06.06	PB06.pdf	40	2	Beschaffungen intern. Begegnungsstätte	2026	3000	unklar		Einrichtung ohne Ortsangabe
+2025/2026	08	1.08.01	PB08.pdf	9	3	Sportplatz Endenich BN	2026	300000	ja	Endenich	Ortsteil, automatisch
+2025/2026	08	1.08.01	PB08.pdf	11	3	Sportanlagen Schulen GO	2026	12600	unklar	Stadtbezirk Bad Godesberg	nur Stadtbezirk (Kürzel)
+2025/2026	08	1.08.03	PB08.pdf	25	1	Beschaffungen Bäder	2026	20000	nein		
+2025/2026	08	1.08.03	PB08.pdf	27	2	Rüngsdorf GO	2026	5000	ja	Rüngsdorf	Ortsteil, automatisch
+2025/2026	09	1.09.02	PB09.pdf	14	1	Kölnstraße Städtebauförderung	2026	350000	unklar	Kölnstraße	Straßenname in mehreren Stadtbezirken, ohne Kürzel
+2025/2026	09	1.09.02	PB09.pdf	15	1	Kaiserplatz Neugestaltung	2026	72500	ja	Kaiserplatz (Bonn-Zentrum/Südstadt)	Straße, automatisch
+2025/2026	09	1.09.07	PB09.pdf	32	1	Ersatzbeschaffungen Geoinformation	2026	60000	nein		
+2025/2026	10	1.10.05	PB10.pdf	14	2	Ankauf von Belegungsrechten	2026	689000	nein		
+2025/2026	11	1.11.03	PB11.pdf	60	2	Hangelarer Weg (Wohnpark 2) BE	2026	500000	ja	Hangelarer Weg (Vilich-Müldorf)	Straße, automatisch
+2025/2026	12	1.12.01	PB12.pdf	12	3	Am Hauptbahnhof BN	2026	1000	ja	Am Hauptbahnhof (Bonn-Zentrum)	Straße, automatisch
+2025/2026	12	1.12.01	PB12.pdf	19	2	Ollenhauerstr. BN	2026	150000	ja	Ollenhauerstraße (Gronau)	Straße, automatisch
+2025/2026	12	1.12.01	PB12.pdf	21	2	Eduard-Otto-Str. BN	2026	1000	ja	Eduard-Otto-Straße (Kessenich)	Straße, automatisch
+2025/2026	12	1.12.01	PB12.pdf	35	3	Friedrich-Breuer-Str. BE	2026	1000	ja	Friedrich-Breuer-Straße (Beuel-Mitte)	Straße, automatisch
+2025/2026	12	1.12.01	PB12.pdf	38	3	Maarstr. BE	2026	1000	ja	Maarstraße (Beuel-Ost/Pützchen-Bechlinghoven)	Straße, automatisch
+2025/2026	12	1.12.01	PB12.pdf	43	4	Ausbau S 13 BE	2026	3000000	unklar	Stadtbezirk Beuel	Strecke, nicht im Straßenverzeichnis
+2025/2026	12	1.12.01	PB12.pdf	45	3	Villemombler Straße HA	2026	50000	ja	Villemombler Straße (Duisdorf/Lengsdorf)	Straße, automatisch
+2025/2026	12	1.12.01	PB12.pdf	46	1	An der Ohligsmühle HA	2026	1000	ja	An der Ohligsmühle (Lengsdorf)	Straße, automatisch
+2025/2026	12	1.12.03	PB12.pdf	59	1	L 83, Siegburger Str. BE	2026	50000	ja	Siegburger Straße (Beuel)	Straße, automatisch
+2025/2026	12	1.12.04	PB12.pdf	63	2	B 56, Endenicher Str. BN	2026	1000	ja	Endenicher Straße (Endenich/Weststadt)	Straße, automatisch
+2025/2026	13	1.13.02	PB13.pdf	27	1	Asphaltdecken Forst	2026	250000	nein		
+2025/2026	13	1.13.02	PB13.pdf	27	2	Herstellung von Ausgleichsflächen	2026	30000	nein		
+2025/2026	13	1.13.03	PB13.pdf	36	3	Baumersatzpflanzungen Friedhöfe	2026	160000	nein		
+2025/2026	13	1.13.03	PB13.pdf	37	1	Wege BN	2026	120000	unklar	Stadtbezirk Bonn	nur Stadtbezirk (Kürzel)
+2025/2026	13	1.13.03	PB13.pdf	37	3	Bauliche Anlagen BN	2026	80000	unklar	Stadtbezirk Bonn	nur Stadtbezirk (Kürzel)
+2025/2026	13	1.13.08	PB13.pdf	53	2	Umsetzung Wasserrahmenrichtlinie	2026	100000	nein		
+2025/2026	13	1.13.08	PB13.pdf	54	3	Venusbergbach BN	2026	10000	ja	Venusbergbach	Gewässer, nicht im Verzeichnis (von Hand)
+2025/2026	13	1.13.08	PB13.pdf	54	4	Engelsbach BN	2026	50000	ja	Engelsbach	Gewässer, nicht im Verzeichnis (von Hand)
+2025/2026	14	1.14.01	PB14.pdf	7	1	Beschaffungen Umweltschutz	2026	16000	nein		
+2025/2026	14	1.14.03	PB14.pdf	16	1	Klimanotstand - Umsetzung von Maßnahmen	2026	76750	nein		
+2025/2026	15	1.15.07	PB15.pdf	19	2	WCCB-Bestandsbauten	2026	300000	ja	WCCB	Gebäude, nicht im Verzeichnis erkannt (von Hand)
+2025/2026	15	1.15.07	PB15.pdf	20	1	Fertigstellung Konferenzzentrum	2026	1350000	unklar		Gebäude ohne Namen
+2023/2024	01	1.01.23	pb01.pdf	72	1	Nachrüstungen Fahrzeug-/Gerätebestand	2024	100000	nein		
+2023/2024	01	1.01.28	pb01.pdf	87	4	BK Stadthalle GO	2024	15000000	ja	Stadthalle Bad Godesberg	Gebäude, nicht automatisch erkannt (von Hand)
+2023/2024	02	1.02.19	pb02.pdf	43	2	Einsatzleitsystem - Brandschutz	2024	576300	nein		
+2023/2024	02	1.02.21	pb02.pdf	55	1	Einsatzleitsystem - Rettungsdienst	2024	983100	nein		
+2023/2024	03	1.03.01	pb03.pdf	7	3	Anschaffungen Schulbudget GS	2024	1000	nein		
+2023/2024	03	1.03.02	pb03.pdf	13	1	Beschaffungen Hauptschulen	2024	10000	nein		
+2023/2024	03	1.03.03	pb03.pdf	18	2	Anschaffungen Schulbudget RS	2024	10000	nein		
+2023/2024	04	1.04.07	pb04.pdf	33	1	Sammlungsgegenstände Stadtmuseum	2024	8200	ja	StadtMuseum Bonn (Bonn-Zentrum)	Gebäude, automatisch
+2023/2024	04	1.04.07	pb04.pdf	33	3	Beschaffungen Stadtarchiv	2024	3624	ja	Stadtarchiv	Gebäude, nicht automatisch erkannt (von Hand)
+2023/2024	04	1.04.11	pb04.pdf	51	1	Theater Zuschuss gem Intendantenvertrag	2024	5088462	nein		Sonderfall: Vertrag mit einer Einzelperson (Abschnitt 4)
+2023/2024	08	1.08.01	pb08.pdf	9	1	Sportanlage Buschdorf	2024	80000	ja	Buschdorf	Ortsteil, automatisch
+2023/2024	08	1.08.03	pb08.pdf	29	2	Melbbad BN	2024	3005000	ja	Melbbad	Gebäude, nicht automatisch erkannt (von Hand)
+2023/2024	08	1.08.03	pb08.pdf	30	1	Freibad Friesdorf GO	2024	5000	ja	Freibad Friesdorf (Friesdorf)	Gebäude, automatisch
+2023/2024	11	1.11.03	pb11.pdf	72	4	'An den Lappenstrünken',B-Plan 7520-20HA	2024	1000	ja	B-Plan 7520-20	Planummer, Geltungsbereich nicht im Datensatz der rechtskräftigen Pläne
+2023/2024	12	1.12.01	pb12.pdf	9	1	Straßenmobiliar	2024	10000	nein		
+2023/2024	12	1.12.01	pb12.pdf	18	3	Mondorfer Str. BN	2024	500000	ja	Mondorfer Straße (Nordstadt)	Straße, automatisch
+2023/2024	12	1.12.02	pb12.pdf	51	1	K 1, Thomastr. BN	2024	810000	ja	Thomastraße (Nordstadt)	Straße, automatisch
+2023/2024	13	1.13.03	pb13.pdf	42	3	Baumersatzpflanzungen Friedhöfe	2024	140000	nein		
+2023/2024	13	1.13.08	pb13.pdf	61	4	Hochwasserschutzkonzept	2024	10000	nein		
+2023/2024	14	1.14.02	pb14.pdf	12	2	Digitalisierung	2024	75000	nein		
