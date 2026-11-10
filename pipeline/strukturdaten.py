@@ -644,3 +644,103 @@ def aufbereiten(dl=DL, out=OUT, stand=None):
 def schritt():
     stand = abrufen()
     aufbereiten(stand=stand)
+
+
+# --- Seite (Phase 3) --------------------------------------------------------------------------------------------
+
+# Flächenfarbe: ausgewählte relative Kennzahlen (Entscheidung des Auftraggebers 10.11.2026); im Steckbrief dazu die
+# Grundzahlen. Übrige Kennzahlen bleiben in data/strukturdaten/ und im Datenpaket.
+FARBE = ("i1", "i9", "i11", "i10", "i12", "i17", "i23", "i26", "i27", "i28", "i29", "i41")
+STECKBRIEF = ("i0", "i24", "i43", *FARBE)
+SEITE = "strukturdaten.json"
+
+
+def _num(w):
+    if w["status"] == "geheim":
+        return "g"
+    if w["status"] == "fehlt" or w["wert"] == "":
+        return None
+    try:
+        return float(w["wert"]) if "." in w["wert"] else int(w["wert"])
+    except ValueError:
+        return w["wert"]
+
+
+def seite(src=OUT, out=None):
+    """export/bonn/strukturdaten.json: kompakte Fassung für die Seite (Flächen der Bezirke, Steckbrief, Vergleich)."""
+    from . import flaechen
+    out = out or config.EXPORT / "bonn"
+    if not (src / "meta.json").exists():
+        print("Strukturdaten: data/strukturdaten/ fehlt, keine Datei für die Seite")
+        return
+
+    def lies(name):
+        with open(src / name, encoding="utf-8") as f:
+            return list(csv.DictReader(f, delimiter="\t"))
+    meta = _json(src / "meta.json")
+    alle = {r["indikator_id"]: r for r in lies("indikatoren.tsv")}
+    ids = {f"bonn-sda-{i}": i for i in STECKBRIEF}
+    ind = {}
+    for vid, kurz in ids.items():
+        r = alle[vid]
+        ind[kurz] = {"name": r["name"], "thema": r["thema"], "einheit": r["einheit"], "typ": r["typ"],
+                     "metatext": r["metatext"], "geheimhaltung": r["geheimhaltung"],
+                     "jahre": [j for j in r["jahre"].split(";") if j]}
+    ebene = {"statistischer_bezirk": "b", "ortsteil": "o", "stadtbezirk": "s", "gesamtstadt": "g"}
+    werte = {k: {"b": {}, "o": {}, "s": {}, "g": {}} for k in ind}
+    for w in lies("werte.tsv"):
+        kurz = ids.get(w["indikator_id"])
+        if not kurz:
+            continue
+        jahre = ind[kurz]["jahre"]
+        reihe = werte[kurz][ebene[w["raumebene"]]].setdefault(w["raum_id"], [None] * len(jahre))
+        reihe[jahre.index(w["jahr"])] = _num(w)
+    for k in werte:   # ganz Bonn als Liste, nicht als Abbildung
+        werte[k]["g"] = werte[k]["g"].get("bonn", [])
+    geo = _json(src / "raum" / "statistischer_bezirk.geojson")
+    zu = lies("zuordnung.tsv")
+    haupt = {}
+    for r in zu:
+        if float(r["einwohneranteil"]) > float(haupt.get(r["von_id"], {}).get("einwohneranteil", -1)):
+            haupt[r["von_id"]] = r
+    namen_ot = {f["properties"]["raum_id"]: f["properties"]["name"] for f in _json(src / "raum" / "ortsteil.geojson")["features"]}
+    sauber = {r["raum_id"] for r in lies("werte.tsv") if r["raumebene"] == "ortsteil"}
+    bezirke = [{"id": f["properties"]["raum_id"], "name": f["properties"]["name"],
+                "stadtbezirk": STADTBEZIRKE[f["properties"]["eltern_id"]],
+                "ortsteil": namen_ot.get(haupt.get(f["properties"]["raum_id"], {}).get("nach_id"), ""),
+                "anteil": round(float(haupt.get(f["properties"]["raum_id"], {}).get("einwohneranteil", 0)), 3)}
+               for f in geo["features"]]
+    ortsteile = {}
+    for slug, name in namen_ot.items():
+        teile = sorted(((r["von_id"], round(float(r["einwohneranteil"]), 3)) for r in zu
+                        if r["nach_id"] == slug and float(r["einwohneranteil"]) >= 0.01), key=lambda t: -t[1])
+        ortsteile[name] = {"slug": slug, "sauber": slug in sauber, "bezirke": teile}
+    flaechen_geo = flaechen.simplify({"type": "FeatureCollection", "features": [
+        {"type": "Feature", "properties": {"id": f["properties"]["raum_id"]}, "geometry": f["geometry"]}
+        for f in geo["features"]]}, toleranz=0.00005)
+    ww = []
+    gesamt = lies("gesamtstadt.tsv")
+    for r in alle.values():
+        if not r["indikator_id"].startswith("wk-"):
+            continue
+        reihen = {}
+        for g in gesamt:
+            if g["indikator_id"] == r["indikator_id"]:
+                reihen.setdefault(g["jahr"], {})[g["kommune"]] = float(g["wert"])
+        jahr = max((j for j, v in reihen.items() if len(v) == len(WW_KOMMUNEN)), default=None)
+        if jahr:
+            ww.append({"name": r["name"], "einheit": r["einheit"], "jahr": jahr, "werte": reihen[jahr],
+                       "friendly_url": r["indikator_id"][3:], "datenhalter": r["datenhalter"]})
+    daten = {
+        "meta": {"datenstand": meta["datenstand"], "abrufdatum": meta["abrufdatum"], "geometrie": meta["geometrie"],
+                 "lizenz": LIZENZ_BONN, "namensnennung": NENNUNG_BONN, "url": ATLAS,
+                 "wegweiser": {"lizenz": LIZENZ_WW, "namensnennung": NENNUNG_WW,
+                               "url": "https://www.wegweiser-kommune.de/open-data", "abrufdatum": meta["abrufdatum"]},
+                 "farbe": list(FARBE), "steckbrief": list(STECKBRIEF), "unbewohnt": sorted(UNBEWOHNT)},
+        "ind": ind, "werte": werte, "bezirke": bezirke, "ortsteile": ortsteile, "geo": flaechen_geo, "wegweiser": ww,
+    }
+    out.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(daten, ensure_ascii=False, separators=(",", ":"))
+    (out / SEITE).write_text(text, encoding="utf-8")
+    print(f"Strukturdaten für die Seite: {len(ind)} Kennzahlen, {len(bezirke)} Bezirke, {len(ww)} Vergleiche, "
+          f"{len(text) // 1024} KB → {out / SEITE}")

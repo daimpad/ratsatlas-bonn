@@ -198,3 +198,24 @@ class Raumabgleich(unittest.TestCase):
                   "wert": v, "status": s} for r, v, s in (("1", "", "geheim"), ("2", "7", "ok"))]
         r = sd.ortsteilwerte(werte, ind, {"a": ["1", "2"]})[0]
         self.assertEqual((r["wert"], r["status"]), ("", "fehlt"))
+
+
+class Seite(unittest.TestCase):
+    def test_kompakte_datei_aus_den_dateien_im_repository(self):
+        if not (sd.OUT / "meta.json").exists():
+            self.skipTest("data/strukturdaten/ fehlt")
+        with tempfile.TemporaryDirectory() as tmp:
+            sd.seite(sd.OUT, Path(tmp))
+            d = json.loads((Path(tmp) / sd.SEITE).read_text(encoding="utf-8"))
+        self.assertEqual(d["meta"]["farbe"], list(sd.FARBE))
+        self.assertEqual(set(d["ind"]), set(sd.STECKBRIEF))
+        self.assertEqual(len(d["bezirke"]), 65)
+        self.assertEqual(len(d["geo"]["features"]), 65)
+        i23 = d["werte"]["i23"]
+        self.assertEqual(len(i23["g"]), len(d["ind"]["i23"]["jahre"]))
+        self.assertIn("endenich", i23["o"])                      # sauber zusammengesetzt, aus Zähler und Nenner
+        self.assertTrue(d["ortsteile"]["Endenich"]["sauber"])
+        self.assertFalse(d["ortsteile"]["Beuel-Mitte"]["sauber"])
+        self.assertEqual({w["friendly_url"] for w in d["wegweiser"]}, set(sd.WW_INDIKATOREN))
+        # Relative Kennzahlen für die Farbe, keine Anzahlen
+        self.assertTrue(all(d["ind"][k]["typ"] != "anzahl" for k in sd.FARBE))
