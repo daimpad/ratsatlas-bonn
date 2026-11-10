@@ -81,12 +81,10 @@ def _beratung(s):
         teile.append("– nicht öffentlich")
     else:
         teile.append("– noch ohne Ergebnis")
-    # Aufzeichnung der Sitzung (Ratstranskripte, bonn.biz): nur Verweise, Ebene der Sitzung (transkripte/KONZEPT.md)
-    if str(s.get("aufzeichnung") or "").startswith("https://www.youtube.com/"):
-        teile.append(f'<br><span class="pb-aufz">▶ <a href="{escape(s["aufzeichnung"])}" target="_blank" rel="noopener">Video '
-                     f'der Sitzung</a> · <a href="{aufzeichnungen.SUCHE}" target="_blank" rel="noopener">Transkript '
-                     'durchsuchen</a> (automatisch erkannt, nicht amtlich)</span>')
-    return "        <li>" + " ".join(teile) + "</li>"
+    # Aufzeichnung der Sitzung (Ratstranskripte, bonn.biz): nur Verweise, Ebene der Sitzung (transkripte/KONZEPT.md);
+    # Kasten mit Symbol, Hinweis im Akkordeon (Entscheidungen des Auftraggebers 10.11.2026)
+    karte = aufzeichnungen.karte(s.get("aufzeichnung"), s.get("transkript_q"))
+    return "        <li>" + " ".join(teile) + karte + "</li>"
 
 
 def _bezug(r, seiten):
@@ -126,8 +124,8 @@ def body(p, key, seiten, ortsteile):
 
     beratungen = [s for s in p.get("steps") or [] if s.get("typ") in ("beratung", "entscheidung")]
     folge = ("    <h2>Beratungsfolge</h2>\n      <ol class=\"pb-folge\">\n" + "\n".join(_beratung(s) for s in beratungen)
-             + "\n      </ol>\n    <p class=\"meta\">Gremien und Termine laut Ratsinformationssystem, Ergebnisse wörtlich aus "
-               "OParl-Lite. Die Reihenfolge folgt den Terminen.</p>\n") if beratungen else (
+             + "\n      </ol>\n    <details class=\"hh-mehr meta-acc\"><summary>Quelle der Beratungsfolge</summary><p>Gremien und Termine laut Ratsinformationssystem, Ergebnisse wörtlich aus "
+               "OParl-Lite. Die Reihenfolge folgt den Terminen.</p></details>\n") if beratungen else (
         "    <h2>Beratungsfolge</h2>\n    <p>Für diese Vorlage ist keine Beratung in einem Gremium erfasst.</p>\n")
     bezuege = ""
     if p.get("superordinated"):
@@ -151,7 +149,7 @@ def body(p, key, seiten, ortsteile):
     <dl class="pb-angaben">
 {chr(10).join(angaben)}
     </dl>
-{folge}{bezuege}{begriffe}    <p class="meta">Quelle: OParl-API der Stadt Bonn (CC0, Quellobjekt <a href="{escape(p["source_object"])}">{escape(p["source_object"])}</a>), Sitzungen und Ergebnisse aus OParl-Lite (CC BY 4.0). Mit „abgeleitet“ markierte Angaben sind erschlossen, etwa der Ort aus dem Titel; Fundstellen und die ganze Prozesslinie stehen im Vorgang auf der Karte. Maßgeblich ist das Original im Ratsinformationssystem.</p>"""
+{folge}{bezuege}{begriffe}    <details class="hh-mehr meta-acc"><summary>Quellen und Methode</summary><p>Quelle: OParl-API der Stadt Bonn (CC0, Quellobjekt <a href="{escape(p["source_object"])}">{escape(p["source_object"])}</a>), Sitzungen und Ergebnisse aus OParl-Lite (CC BY 4.0). Mit „abgeleitet“ markierte Angaben sind erschlossen, etwa der Ort aus dem Titel; Fundstellen und die ganze Prozesslinie stehen im Vorgang auf der Karte. Maßgeblich ist das Original im Ratsinformationssystem.</p></details>"""
 
 
 def _kurz(text):

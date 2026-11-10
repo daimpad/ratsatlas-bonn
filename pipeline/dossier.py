@@ -15,7 +15,7 @@ from datetime import date, timedelta
 from html import escape
 from urllib.parse import quote
 
-from . import aufzeichnungen, begriffsseite, besetzung, config, haushaltsplan, maske, process as proc
+from . import akkordeon, aufzeichnungen, begriffsseite, besetzung, config, haushaltsplan, maske, process as proc
 
 FRIST_TAGE = 21  # Anträge, Bürgeranträge und Einwohnerfragen spätestens 21 Tage vor der Sitzung (GeschO §§ 26, 27)
 PUNKT_ARTEN = ("Beschlussvorlage", "Antrag", "Dringlichkeitsantrag")  # Punkte: Beschlüsse und Anträge
@@ -440,7 +440,7 @@ def _nach_bezirk(root, vorlagen):
     folge = sorted(gruppen, key=lambda b: (b in ("mehrere Stadtbezirke", "ohne Ortsbezug"), b == "ohne Ortsbezug", b))
     teile = [f"    <details>\n      <summary>{escape(b)} ({len(gruppen[b])})</summary>\n"
              + _tabelle("\n".join(_row(root, r) for r in gruppen[b])) + "\n    </details>" for b in folge]
-    return "    <p class=\"meta\">Nach Stadtbezirk (aus den Ortsbezügen, abgeleitet).</p>\n" + "\n".join(teile)
+    return "\n".join(teile)
 
 
 def _schritte(t, d, root):
@@ -453,11 +453,11 @@ def _schritte(t, d, root):
     tp_link = (f'Mitteilungsvorlage {_ref(root, tp)}' + (f' (<a href="{escape(tp["web"])}">Original</a>)' if tp.get("web") else "")
                if tp else f"Mitteilungsvorlage {t.terminplan}")
     return f"""    <h2>{escape(t.schritte_titel)}</h2>
-    <p>Zusammengefasst aus der {tp_link} (abgeleitet, keine Zitate). Die Zeitangaben sind geplant; Abweichungen sind möglich.</p>
+    <p>Zusammengefasst (abgeleitet). Die Zeitangaben sind geplant; Abweichungen sind möglich.</p>
     <ol>
 {schritte}
     </ol>
-"""
+{akkordeon.mehr("Quelle", f"<p>Zusammengefasst aus der {tp_link}, ohne Zitate.</p>")}"""
 
 
 def _mio(x):
@@ -479,6 +479,11 @@ def _haushalt(d, root=""):
         quellen += f', <a href="{escape(h["ausgaben"][ja]["dateien"][h["produktbereich"]])}">Teilergebnisrechnung im {ja}</a>'
     rows = "\n".join(f'        <tr><th scope="row">{j["jahr"]}</th><td>{zelle(j["ist"])}</td><td>{zelle(j["plan"])}</td></tr>'
                      for j in h["jahre"])
+    quelle = (f'<p>Ausgelesen aus den Haushaltsplänen{" und dem Jahresabschluss 2024" if ja in h["ausgaben"] else ""} der '
+              f'Stadt Bonn (PDF: {quellen}; Abruf {_date(h["abruf"])}); die Summe aller Produktbereiche trifft je Spalte den '
+              'Gesamtergebnisplan. Der Produktbereich deckt sich nicht genau mit dem Thema dieser Seite; interne Leistungen '
+              'und Umgliederungen verschieben Beträge. Die Finanzplanung ab 2027 ist nicht übernommen; der Entwurf des '
+              'Haushalts 2027/2028 ist noch nicht eingebracht. Zu einzelnen Vorlagen nennt die Seite keine Beträge.</p>')
     return f"""    <h2 id="haushalt-produktbereich">Haushalt im Produktbereich {escape(h["produktbereich"])} {escape(h["name"])}</h2>
     <p>{escape(h["zeile"])}, in Mio. € ohne Preisbereinigung. Ergebnis heißt tatsächlich angefallen (Ist), Ansatz heißt geplant (Plan); beide weichen oft voneinander ab.</p>
     <table class="haushalt">
@@ -487,9 +492,8 @@ def _haushalt(d, root=""):
 {rows}
       </tbody>
     </table>
-    <p class="meta">Ausgelesen aus den Haushaltsplänen{" und dem Jahresabschluss 2024" if ja in h["ausgaben"] else ""} der Stadt Bonn (PDF: {quellen}; Abruf {_date(h["abruf"])}); die Summe aller Produktbereiche trifft je Spalte den Gesamtergebnisplan. Der Produktbereich deckt sich nicht genau mit dem Thema dieser Seite; interne Leistungen und Umgliederungen verschieben Beträge. Die Finanzplanung ab 2027 ist nicht übernommen; der Entwurf des Haushalts 2027/2028 ist noch nicht eingebracht. Zu einzelnen Vorlagen nennt die Seite keine Beträge.</p>
     <p><a href="{root}haushalt/#{"zoom" if haushaltsplan.EBENEN_FREIGEGEBEN else "pb"}-{escape(h["produktbereich"])}">Produktgruppen dieses Bereichs und alle Produktbereiche im Vergleich: Haushalt auf einen Blick</a></p>
-"""
+{akkordeon.mehr("Quelle und Grenzen", quelle)}"""
 
 
 ZAHLWORT = {2: "zwei", 3: "drei", 4: "vier"}
@@ -524,23 +528,26 @@ def _kasten(a, root, h, anker, ueberschrift):
     vorsitz = "; ".join(f'{escape(v["rolle"])}: {escape(v["name"])}' + (f' ({escape(v["fraktion"])})' if v["fraktion"] else "")
                         for v in a["vorsitz"])
     return f"""    <{h} id="{anker}">{ueberschrift}</{h}>
-    <p>{a["mitglieder"]} Mitglieder{f". {vorsitz}" if vorsitz else ""}. Sitze nach Fraktion <span class="meta">(abgeleitet aus der Mitgliedschaft in einer Fraktion; die Quelle nennt nicht, für wen jemand im Ausschuss sitzt)</span>:</p>
+    <p>{a["mitglieder"]} Mitglieder{f". {vorsitz}" if vorsitz else ""}. Sitze nach Fraktion <span class="meta">(abgeleitet)</span>:</p>
     <ul>
 {sitze}{ohne}
     </ul>
-    <p class="meta">Laufende Mitgliedschaften laut OParl-API der Stadt Bonn (CC0), Stand {_date(a["stichtag"])}. <a href="{root}?prozesse=gremien&amp;gremium={escape(a["id"])}">Alle Mitglieder mit Namen im Reiter „Prozesse“</a></p>
-"""
+    <p><a href="{root}?prozesse=gremien&amp;gremium={escape(a["id"])}">Alle Mitglieder mit Namen im Reiter „Prozesse“</a></p>
+{akkordeon.mehr("Quelle", f'<p>Laufende Mitgliedschaften laut OParl-API der Stadt Bonn (CC0), Stand {_date(a["stichtag"])}. Die Fraktion ist aus der Mitgliedschaft in einer Fraktion abgeleitet; die Quelle nennt nicht, für wen jemand im Ausschuss sitzt.</p>')}"""
 
 
 def _transkripte(t):
     """Kasten „Im Rat gesagt“: Links zur Suche in den Ratstranskripten (bonn.biz) mit festen Wörtern; kein Text."""
     if not t.transkript_begriffe:
         return ""
-    links = " · ".join(f'<a href="{aufzeichnungen.SUCHE}?q={quote(w)}" target="_blank" rel="noopener">{escape(w)}</a>'
-                       for w in t.transkript_begriffe)
+    links = " ".join(f'<a class="aufz-knopf aufz-knopf-leise" href="{aufzeichnungen.suchlink(w)}" target="_blank" '
+                     f'rel="noopener">{escape(w)}<span class="visually-hidden"> (bonn.biz, neuer Tab)</span></a>'
+                     for w in t.transkript_begriffe)
+    karte = aufzeichnungen.karte(links=links, ueberschrift="In den Ratstranskripten suchen",
+                                 zusatz=aufzeichnungen.HINWEIS_THEMA)
     return f"""    <h2 id="transkripte">Im Rat gesagt</h2>
-    <p>Was in Sitzungen des Rates dazu gesagt wurde, lässt sich in den Ratstranskripten suchen: {links}</p>
-    <p class="meta">Automatisch erkannt aus den Videoaufzeichnungen, nicht amtlich; maßgeblich sind Video und Niederschrift. Ratstranskripte von Mika Baumeister (bonn.biz, CC BY-NC 4.0), hier nur verlinkt. Die Suchwörter sind fest gewählt; die Treffer stammen aus allen Sitzungen seit 2021.</p>
+    <p>Was in Sitzungen des Rates dazu gesagt wurde, lässt sich in den Ratstranskripten suchen.</p>
+    {karte}
 """
 
 
@@ -564,8 +571,7 @@ def body(t, d, root):
             tabelle = (f"    <details>\n      <summary>Alle {len(s['vorlagen'])} Vorlagen anzeigen</summary>\n"
                        f"{tabelle}\n    </details>")
         straenge.append(f"""    <h3 id="{s['key']}">{escape(s['titel'])} ({len(s['vorlagen'])})</h3>
-    <p class="meta">Regel (abgeleitet): {escape(s['regel'].rstrip('.'))}.</p>
-""" + tabelle)
+{akkordeon.mehr("Wie zugeordnet?", f"<p>Regel (abgeleitet): {escape(s['regel'].rstrip('.'))}." + (" Gliederung nach Stadtbezirk aus den Ortsbezügen (abgeleitet)." if rows and any("bezirk" in r for r in s["vorlagen"]) else "") + "</p>", klasse="hh-mehr meta-acc regel-acc")}""" + tabelle)
     inhalt = " · ".join(f'<a href="#{s["key"]}">{escape(s["titel"])}</a>' for s in d["straenge"])
     h, a = d.get("haushalt_betraege"), d.get("fachausschuss") or d.get("fachausschuesse")
     ziele = ([("haushalt-produktbereich", f'Haushalt (Produktbereich {escape(h["produktbereich"])})')] if h else []) \
@@ -573,7 +579,7 @@ def body(t, d, root):
         + ([("transkripte", "Im Rat gesagt")] if t.transkript_begriffe else []) \
         + [("sitzungen", "Nächste Sitzungen"), ("mitwirken", "Mitwirken"), ("vorlagen", "Vorlagen nach Strang")]
     sprung = " · ".join(f'<a href="#{k}">{x}</a>' for k, x in ziele)
-    nicht = "\n".join(f"      <li>{x}</li>" for x in t.nicht_gezeigt)
+    nicht = "".join(f"<li>{x}</li>" for x in t.nicht_gezeigt)
     # Akkordeon „Begriffe auf dieser Seite“ (Entscheidung 02.11.2026): Vorlagenarten, Stände und Ergebnisse der Seite
     texte = [x for s in d["straenge"] for r in s["vorlagen"]
              for x in (r.get("paper_type"), r.get("stand"), (r.get("letzte_beratung") or {}).get("result"))]
@@ -585,11 +591,10 @@ def body(t, d, root):
       <h1>{escape(t.titel)}</h1>
     </div>
     <p class="lead">{escape(t.lead.format(seit=_date(d["meta"]["seit"])))}</p>
-    <p class="meta">Die Seite beschreibt Verfahren; sie bewertet keine Entscheidungen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
     <nav class="thema-sprung" aria-label="Auf dieser Seite"><span>Auf dieser Seite:</span> {sprung}</nav>
 {prozessbild.abschnitt(t, d, root)}
 {_schritte(t, d, root)}{_haushalt(d, root)}{vergleich}{_ausschuss(d, root)}{_transkripte(t)}    <h2 id="sitzungen">Nächste Sitzungen</h2>
-    <p>Sitzungen sind in der Regel öffentlich. Die Tagesordnung erscheint etwa zwei Wochen vorher. Die Frist (21 Tage vorher, GeschO §§ 26, 27) ist berechnet.</p>
+    <p>Sitzungen sind in der Regel öffentlich. Die Tagesordnung erscheint etwa zwei Wochen vorher.</p>
     <ul>
 {sitzungen}
     </ul>
@@ -602,13 +607,8 @@ def body(t, d, root):
     </ul>
     <h2 id="vorlagen">Vorlagen nach Strang</h2>
     <p>{inhalt}</p>
-    <p class="meta">Jede Vorlage steht in höchstens einem Strang. Die Zuordnung folgt festen Regeln (Amt, Gremium, Wörter im Titel, Drucksachennummer); der Grund steht je Vorlage dabei. {t.pruefung_text} Der Stand ist aus der Beratungsfolge abgeleitet, Ergebnisse stehen wörtlich wie in der Quelle.</p>
-{chr(10).join(straenge)}
-{begriffe}    <h2>Was diese Seite nicht zeigt</h2>
-    <ul>
-{nicht}
-    </ul>
-    <p class="meta">Quelle: OParl-API der Stadt Bonn (CC0), Sitzungen und Ergebnisse aus OParl-Lite (CC BY 4.0). Die Daten als JSON: <a href="{root}data/export/bonn/dossiers/{t.key}.json">{t.key}.json</a>.</p>"""
+{akkordeon.mehr("Wie die Vorlagen zugeordnet sind", f"<p>Jede Vorlage steht in höchstens einem Strang. Die Zuordnung folgt festen Regeln (Amt, Gremium, Wörter im Titel, Drucksachennummer); der Grund steht je Vorlage dabei. {t.pruefung_text} Der Stand ist aus der Beratungsfolge abgeleitet, Ergebnisse stehen wörtlich wie in der Quelle.</p>")}{chr(10).join(straenge)}
+{begriffe}{akkordeon.mehr("Was diese Seite nicht zeigt", f"<ul>{nicht}</ul>")}{akkordeon.mehr("Quellen und Methode", f'<p>Quelle: OParl-API der Stadt Bonn (CC0), Sitzungen und Ergebnisse aus OParl-Lite (CC BY 4.0). Die Daten als JSON: <a href="{root}data/export/bonn/dossiers/{t.key}.json">{t.key}.json</a>.</p><p>Die Seite beschreibt Verfahren; sie bewertet keine Entscheidungen. Maßgeblich sind die Originale im Ratsinformationssystem.</p><p>Die Frist für Anträge und Fragen (21 Tage vor der Sitzung, GeschO §§ 26, 27) ist berechnet.</p>')}"""
 
 
 def write(t, site, site_url, page):
@@ -733,8 +733,7 @@ def uebersicht(themen, site, site_url, page):
       <li><strong>{len(kacheln)}</strong> Themen</li>
       <li>Stand <strong>{_date(stand)}</strong></li>
     </ul>
-    <p class="meta">Die Zuordnung ist abgeleitet: feste Regeln je Thema, je Vorlage mit Grund, an einer Stichprobe von Hand geprüft. Eine Vorlage kann auf mehreren Themenseiten stehen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>
-    </div>
+{akkordeon.mehr("Wie die Themen zugeordnet sind", "<p>Die Zuordnung ist abgeleitet: feste Regeln je Thema, je Vorlage mit Grund, an einer Stichprobe von Hand geprüft. Eine Vorlage kann auf mehreren Themenseiten stehen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>")}    </div>
     <ul class="kacheln">
 {chr(10).join(kacheln)}
     </ul>

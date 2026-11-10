@@ -232,6 +232,7 @@ Die Zahlen gibt `python -m pipeline check` aus.
 
 - `fetch-aufzeichnungen` (`pipeline/aufzeichnungen.py`, täglich nach `fetch-lite`): je Sitzung von Rat und Hauptausschuss seit 2021 über die GraphQL-Schnittstelle von OParl-Lite (`meetingByIdRef` → `transcriptPassages`) Video-Adresse, Dauer und Zahl der Abschnitte der Ratstranskripte (bonn.biz, Mika Baumeister); kein Text. Zwischenspeicher `data/raw/aufzeichnungen.json` (im Repository und im Zwischenspeicher des Workflows); neu abgefragt werden nur Sitzungen ohne Eintrag und Sitzungen des letzten Jahres ohne Aufzeichnung, `--alle` fragt alle erneut ab; nur YouTube-Adressen; nach fünf Fehlern bleibt der Stand.
 - Verwendet in `process.py` (Feld `aufzeichnung` je öffentlichem Schritt), `export.py` (`video` je Sitzung in `zeit.json`), `prozessarten.py` (`aufzeichnungen` je Gremium), `vorgangsseiten.py`, `dossier.py` (Kasten „Im Rat gesagt“ mit `Thema.transkript_begriffe`) und im Werkzeug `suche_aufzeichnungen` des Assistenten. Konzept und Prüfung: `transkripte/`.
+- `transkript-stichworte` (nach `build`, höchstens `AUFZEICHNUNGEN_BUDGET` = 480 s je Lauf): je öffentlicher Beratung im Rat mit Aufzeichnung ein Wort aus dem Titel (`aufzeichnungen.wort`), je Wort eine Suche `transcriptPassageSearch` (bis 400 Treffer); `data/raw/aufzeichnungen_stichworte.json` (Zwischenspeicher wie `aufzeichnungen.json`). Nur bei einem Treffer in derselben Sitzung trägt der Schritt `transkript_q` und der Suchlink ist vorbefüllt; ohne Einwohnerschaft und ihre Folgevorlagen.
 
 ## Haushalt und Quellen auf Knopfdruck
 

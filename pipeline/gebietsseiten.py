@@ -102,7 +102,7 @@ def _area_body(kind_label, name, bezirk, key, papers, root):
 {rows}
       </tbody>
     </table>
-{begriffe}    <p class="meta">Quelle: OParl-API der Stadt Bonn (CC0), Sitzungen und Ergebnisse aus OParl-Lite (CC BY 4.0). Der Ortsbezug ist teils aus dem Titel erschlossen; Einzelheiten und Fundstellen stehen im Vorgang auf der Karte. Maßgeblich ist das Original im Ratsinformationssystem.</p>"""
+{begriffe}    <details class="hh-mehr meta-acc"><summary>Quellen und Methode</summary><p>Quelle: OParl-API der Stadt Bonn (CC0), Sitzungen und Ergebnisse aus OParl-Lite (CC BY 4.0). Der Ortsbezug ist teils aus dem Titel erschlossen; Einzelheiten und Fundstellen stehen im Vorgang auf der Karte. Maßgeblich ist das Original im Ratsinformationssystem.</p></details>"""
 
 
 def write(site, site_url):

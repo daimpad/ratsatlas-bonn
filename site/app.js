@@ -59,6 +59,14 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   // nur http(s)-Adressen aus den Daten werden zu Links
   const TRANSKRIPTE = "https://bonn.biz/ratstranskripte";
+  // Wortlaut wie pipeline/aufzeichnungen.py (HINWEIS, HINWEIS_VORGANG, SYMBOL)
+  const AUFZ_HINWEIS = "Automatisch erkannt aus den Videoaufzeichnungen, nicht amtlich; maßgeblich sind Video und Niederschrift. " +
+    "Ratstranskripte von Mika Baumeister (bonn.biz, CC BY-NC 4.0), hier nur verlinkt. Das Suchwort stammt aus dem Titel der " +
+    "Vorlage; es ist nur gesetzt, wenn die Suche damit einen Treffer in dieser Sitzung findet. Die Treffer stammen aus allen " +
+    "Sitzungen seit 2021.";
+  const AUFZ_SYMBOL = '<svg class="aufz-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+    '<rect x="2.5" y="5.5" width="13" height="13" rx="2.5"/><path d="M15.5 10.5 21 7.5v9l-5.5-3"/></svg>';
   const safeUrl = (u) => (/^https?:\/\//i.test(String(u || "")) ? esc(u) : null);
   // heutiges Datum in Bonn (nicht UTC: zwischen 0 und 2 Uhr wäre es sonst der Vortag), bei jedem Aufruf neu
   const heute = () => new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(new Date());
@@ -1471,11 +1479,14 @@
     const box = s.note && (status === "nicht_öffentlich" || status === "unklar" || s.note === "ohne_sitzung")
       ? `<div class="blackbox">${esc(NOTES[s.note])}</div>` : (s.note ? `<div class="hint">${esc(NOTES[s.note])}</div>` : "");
     const cls = s.date_status === "abgeleitet" ? " date-derived" : "";
-    // Aufzeichnung der Sitzung (Ratstranskripte, bonn.biz): nur Verweise, Ebene der Sitzung (transkripte/KONZEPT.md)
-    const aufz = /^https:\/\/www\.youtube\.com\//.test(s.aufzeichnung || "") ? `<div class="aufz"><span aria-hidden="true">▶</span>
-      <a href="${esc(s.aufzeichnung)}" target="_blank" rel="noopener">Video der Sitzung<span class="visually-hidden"> (YouTube, neuer Tab)</span></a> ·
-      <a href="${TRANSKRIPTE}" target="_blank" rel="noopener">Transkript durchsuchen<span class="visually-hidden"> (bonn.biz, neuer Tab)</span></a>
-      <span class="aufz-hint">automatisch erkannt, nicht amtlich</span></div>` : "";
+    // Aufzeichnung der Sitzung (Ratstranskripte, bonn.biz): nur Verweise, Ebene der Sitzung (transkripte/KONZEPT.md);
+    // Kasten mit Symbol, Suchwort nur, wenn geprüft, Hinweis im Akkordeon (Entscheidungen des Auftraggebers 10.11.2026)
+    const q = typeof s.transkript_q === "string" && s.transkript_q ? s.transkript_q : "";
+    const aufz = /^https:\/\/www\.youtube\.com\//.test(s.aufzeichnung || "") ? `<div class="aufz-karte">${AUFZ_SYMBOL}<div class="aufz-inhalt">
+      <p class="aufz-titel">Aufzeichnung dieser Sitzung <span class="aufz-kurz">nicht amtlich</span></p>
+      <p class="aufz-links"><a class="aufz-knopf" href="${esc(s.aufzeichnung)}" target="_blank" rel="noopener">Video der Sitzung<span class="visually-hidden"> (YouTube, neuer Tab)</span></a>
+      <a class="aufz-knopf aufz-knopf-leise" href="${esc(q ? TRANSKRIPTE + "?q=" + encodeURIComponent(q) : TRANSKRIPTE)}" target="_blank" rel="noopener">${q ? `Im Transkript suchen: „${esc(q)}“` : "Im Transkript suchen"}<span class="visually-hidden"> (bonn.biz, neuer Tab)</span></a></p>
+      <details class="aufz-mehr"><summary>Mehr über die Ratstranskripte erfahren</summary><p>${esc(AUFZ_HINWEIS)}</p></details></div></div>` : "";
     const gremium = index && (s.typ === "beratung" || s.typ === "entscheidung") && s.label && s.status !== "nicht_öffentlich";
     const label = s.label && s.label !== STEP_LABEL[s.typ]
       ? ": " + (gremium ? `<button type="button" class="link-btn" data-gremium-name="${esc(s.label)}" title="Zuständigkeit und Besetzung im Reiter Prozesse">${esc(s.label)}</button>` : esc(s.label)) : "";

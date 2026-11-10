@@ -38,6 +38,16 @@ Stand 10.11.2026 · Entscheidungen des Auftraggebers vom 10.11.2026:
 - Tests: `tests/test_aufzeichnungen.py` mit nachgebildeter Schnittstelle. Geprüft werden Auswahl der Sitzungen, Zwischenspeicher, Fehler und Verweise. In `tests/js/tools.test.mjs` sind fremde Adressen ausgeschlossen und der Suchlink kodiert. Die Referenz der Kulturseite ist neu erzeugt; geändert sind nur der Kasten und der Sprunglink.
 - Browser bei 1440 und 390 px (Vorgang 252458, Vorgangsseite, Gremium Rat, Themenseite Verkehr): Links vorhanden, axe ohne Verstöße, kein waagrechter Bildlauf, keine Skriptfehler.
 
+## Nachtrag 10.11.2026: Stichwort im Vorgang, Kasten mit Symbol, Metaangaben eingeklappt
+
+Entscheidungen des Auftraggebers 10.11.2026: Suche vorbefüllt nur, wenn geprüft; kleiner Kasten mit Symbol; „nicht amtlich“ bleibt sichtbar, der Hinweis mit Quelle und Lizenz steht im Akkordeon „Mehr über die Ratstranskripte erfahren“; Metaangaben aller statischen Seiten eingeklappt (Karte folgt in Schritt 2).
+
+- Stichprobe `phase0/stichwort.py` → `phase0/stichwort.tsv` (30 Vorlagen ohne Einwohnerschaft): längstes Wort des Titels 21 von 30 mit Treffer in derselben Sitzung, Ortsname 3 von 4, beide 22 von 30. Bei etwa 6 Treffern ist das Wort allgemein (Einschätzung, Treffer nicht gelesen); diese Wörter stehen seither in der Liste der Verfahrenswörter (an der Stichprobe angepasst).
+- Schritt `transkript-stichworte` (nach `build`, höchstens 8 Minuten je Lauf): je Beratung im Rat mit Aufzeichnung das Wort aus `aufzeichnungen.wort`; je Wort eine Suche (bis 400 Treffer), gespeichert nur Wort, Gesamtzahl und Sitzungen mit Treffer in `data/raw/aufzeichnungen_stichworte.json`. Ohne Treffer in derselben Sitzung bleibt die Suche leer. Vorlagen der Einwohnerschaft und ihre Folgevorlagen erhalten kein Stichwort.
+- Prozessschritte tragen `transkript_q`; Vorgang auf der Karte und Seite je Vorgang zeigen „Im Transkript suchen: „…““.
+- Kasten `aufz-karte` (Symbol Kamera, Schaltflächen) in `pipeline/aufzeichnungen.karte` und `site/app.js`; Themenseiten mit den festen Suchwörtern als Schaltflächen.
+- Metaangaben in Akkordeons (`pipeline/akkordeon.py`): Themenseiten (Regel je Strang „Wie zugeordnet?“, Zuordnung, Quelle von Haushalt und Ausschuss, Bildbeschreibung, Grenzen, „Quellen und Methode“), Übersicht `thema/`, Seiten je Vorgang, Gebietsseiten, Haushalt (je Einwohner, Veränderung, Investitionen, Fundstellen der Ebenen), Begriffe, Einfache Sprache („Für Fachleute“), RSS (Quelle und Lizenz). Sichtbar bleiben kurze Markierungen „abgeleitet“ an einzelnen Werten.
+
 ## Offen
 
 - Lücken bei bonn.biz: Rat 2023 und 2024 nur zum Teil. Der tägliche Lauf fragt Sitzungen des letzten Jahres erneut ab; ältere nur mit `--alle`.

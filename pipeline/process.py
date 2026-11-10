@@ -115,6 +115,9 @@ def steps(p):
         # nicht bei nichtöffentlichen Tagesordnungspunkten (transkripte/KONZEPT.md)
         if s.get("public") != 0 and aufzeichnungen.video(s.get("meeting_id")):
             step["aufzeichnung"] = aufzeichnungen.video(s["meeting_id"])
+            # geprüftes Stichwort: die Suche hat damit einen Treffer in derselben Sitzung (Entscheidung 10.11.2026)
+            if aufzeichnungen.stichwort(p.get("reference"), s.get("meeting_id")):
+                step["transkript_q"] = aufzeichnungen.stichwort(p["reference"], s["meeting_id"])
         if s["authoritative"] and s["result"] and any(k in s["result"] for k in VOLLZUG):
             decided = True
         out.append(step)
