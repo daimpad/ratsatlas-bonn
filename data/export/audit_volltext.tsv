@@ -9127,7 +9127,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 231117	verortet	Hauptteil	volltext_strasse	Clemens-August-Platz	Poppelsdorf	niedrig	2
 231117	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Südstadt	niedrig	1
 231117	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Weststadt	niedrig	1
-231123	Liste (16 Ortsteile), nicht verortet	Hauptteil					
 231124	kein Ort						
 231128	kein Ort						
 231130	nur in Anlagen genannt, nicht verortet						
@@ -12529,8 +12528,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241951	kein Ort						
 241951-01 ST	kein Ort						
 241951-02	nur in Anlagen genannt, nicht verortet						
-241952-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	1
-241952-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	mittel	1
 241955	kein Ort						
 241964	Liste (12 Ortsteile), nicht verortet	Hauptteil					
 241964-01 ST	kein Ort						
@@ -14885,7 +14882,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260302	Titel ohne gemeinsamen Ort, nicht verortet						
 260303	kein Ort						
 260305	kein Ort						
-260305-01 ST	kein Ort						
 260306	kein Ort						
 260307	kein Ort						
 260308	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1

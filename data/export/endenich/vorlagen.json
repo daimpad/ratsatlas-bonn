@@ -9112,7 +9112,8 @@
      "result": "nicht abgestimmt",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=XU9KjU35Rw8"
+     "aufzeichnung": "https://www.youtube.com/watch?v=XU9KjU35Rw8",
+     "transkript_q": "Umweltspuren"
     }
    ],
    "soll": {
@@ -9638,7 +9639,8 @@
      "result_source": "oparl-lite",
      "note": "datum_vor_vorlage",
      "schleife": true,
-     "aufzeichnung": "https://www.youtube.com/watch?v=gECYOS9-Gfs"
+     "aufzeichnung": "https://www.youtube.com/watch?v=gECYOS9-Gfs",
+     "transkript_q": "Umweltspuren"
     },
     {
      "typ": "folgevorlage",
@@ -9704,7 +9706,8 @@
      "result": "geändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=XU9KjU35Rw8"
+     "aufzeichnung": "https://www.youtube.com/watch?v=XU9KjU35Rw8",
+     "transkript_q": "Umweltspuren"
     },
     {
      "typ": "vollzug",
@@ -13364,7 +13367,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=mwxGtGCKqmw"
+     "aufzeichnung": "https://www.youtube.com/watch?v=mwxGtGCKqmw",
+     "transkript_q": "Erhaltungssatzungen"
     },
     {
      "typ": "beratung",
@@ -15261,7 +15265,8 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=mwxGtGCKqmw"
+     "aufzeichnung": "https://www.youtube.com/watch?v=mwxGtGCKqmw",
+     "transkript_q": "Erhaltungssatzungen"
     },
     {
      "typ": "beratung",
@@ -16607,7 +16612,8 @@
      "result": "geändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=M7Ma79uZTUk"
+     "aufzeichnung": "https://www.youtube.com/watch?v=M7Ma79uZTUk",
+     "transkript_q": "Mobilitätsmanagements"
     },
     {
      "typ": "beratung",
@@ -17877,7 +17883,8 @@
      "result": "geändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=chEOKLQaKhM"
+     "aufzeichnung": "https://www.youtube.com/watch?v=chEOKLQaKhM",
+     "transkript_q": "Oberbürgermeisterin"
     },
     {
      "typ": "beratung",
@@ -24039,7 +24046,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=G6rs02Y3zys"
+     "aufzeichnung": "https://www.youtube.com/watch?v=G6rs02Y3zys",
+     "transkript_q": "Verkehrsführung"
     }
    ],
    "soll": {
@@ -24493,7 +24501,8 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=G6rs02Y3zys"
+     "aufzeichnung": "https://www.youtube.com/watch?v=G6rs02Y3zys",
+     "transkript_q": "Verkehrsführung"
     },
     {
      "typ": "vollzug",
@@ -25935,7 +25944,8 @@
      "result": "geändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=G6rs02Y3zys"
+     "aufzeichnung": "https://www.youtube.com/watch?v=G6rs02Y3zys",
+     "transkript_q": "Verkehrsführung"
     },
     {
      "typ": "vollzug",
@@ -28194,6 +28204,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über den Stand der Maßnahmen zum Schutz der Bäche in Bonn-Lengsdorf. Die Autobahn GmbH soll nun eine Filteranlage für die Autobahnentwässerung der A 565 planen, die auch kleine Gewässer wie den Lengsdorfer Bach schützt. Eine Genehmigung wird beantragt, doch bis dahin bleibt das Risiko von Verunreinigungen bestehen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -29827,6 +29842,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion fordert, die Beleuchtung in Bus-Wartehäuschen zu verbessern. Die Verwaltung teilt mit, dass sie und der Stadtwerke Bonn-Verkehr (SWBV) dies prüfen und später darüber berichten, falls der Antrag angenommen wird.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -30119,6 +30139,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion fragt nach dem Stand der Straßenarbeiten im WestSide-Gebiet. Die Verwaltung teilt mit: Die Bauarbeiten begannen im Oktober 2024. Zuerst wird ein Gehweg an der Planstraße A bis zum Swisslife-Gebäude MI2 gebaut und beleuchtet. Gleichzeitig entstehen Plätze, beginnend mit dem Quartierplatz und dann dem Pförtnerplatz. Die Fertigstellung ist für Mai 2025 geplant.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -30625,6 +30650,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Fraktionen Volt und RheinGrün beantragen, dass die Verwaltung prüft, ob an der Alfred-Bucherer-Straße ein Parkplatz für Handwerker und Pflegedienste sinnvoll ist. Sie soll darlegen, ob die Einrichtung möglich wäre. Der Bereich ist betroffen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -39869,7 +39899,8 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=i8CxP6mL6KI"
+     "aufzeichnung": "https://www.youtube.com/watch?v=i8CxP6mL6KI",
+     "transkript_q": "Aufstellungsbeschluss"
     },
     {
      "typ": "vollzug",
@@ -42034,7 +42065,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=i8CxP6mL6KI"
+     "aufzeichnung": "https://www.youtube.com/watch?v=i8CxP6mL6KI",
+     "transkript_q": "Hauptverkehrsachsen"
     }
    ],
    "soll": {
@@ -42615,7 +42647,8 @@
      "result": "abgelehnt",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=IiO36QmqrCY"
+     "aufzeichnung": "https://www.youtube.com/watch?v=IiO36QmqrCY",
+     "transkript_q": "Verkehrspolitik"
     }
    ],
    "soll": {
@@ -51745,7 +51778,8 @@
      "result": "abgelehnt",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=e2-bDasxt1k"
+     "aufzeichnung": "https://www.youtube.com/watch?v=e2-bDasxt1k",
+     "transkript_q": "Schnellbuslinie"
     }
    ],
    "soll": {
@@ -55660,7 +55694,8 @@
      "stand": "beraten",
      "result_source": "oparl-lite",
      "note": "datum_vor_vorlage",
-     "aufzeichnung": "https://www.youtube.com/watch?v=bJk6NNxR3Bw"
+     "aufzeichnung": "https://www.youtube.com/watch?v=bJk6NNxR3Bw",
+     "transkript_q": "Beschleunigung"
     },
     {
      "typ": "veroeffentlichung",
@@ -59164,7 +59199,8 @@
      "result": "abgelehnt",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=2P5_FGTAOkM"
+     "aufzeichnung": "https://www.youtube.com/watch?v=2P5_FGTAOkM",
+     "transkript_q": "Haushaltskonsolidierung"
     }
    ],
    "soll": {
@@ -67166,7 +67202,8 @@
      "result": "geändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=KdsZSXE2t7s"
+     "aufzeichnung": "https://www.youtube.com/watch?v=KdsZSXE2t7s",
+     "transkript_q": "Bebauungsplanes"
     },
     {
      "typ": "vollzug",
@@ -73207,7 +73244,8 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=HOuXf4nh2HE"
+     "aufzeichnung": "https://www.youtube.com/watch?v=HOuXf4nh2HE",
+     "transkript_q": "Aufgabenbewältigung"
     },
     {
      "typ": "vollzug",
@@ -73793,7 +73831,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=HOuXf4nh2HE"
+     "aufzeichnung": "https://www.youtube.com/watch?v=HOuXf4nh2HE",
+     "transkript_q": "Nahverkehrsplans"
     }
    ],
    "soll": {
@@ -81947,7 +81986,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=8uFsLvrK0do"
+     "aufzeichnung": "https://www.youtube.com/watch?v=8uFsLvrK0do",
+     "transkript_q": "Wiederherstellung"
     },
     {
      "typ": "beratung",
@@ -82980,7 +83020,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=8uFsLvrK0do"
+     "aufzeichnung": "https://www.youtube.com/watch?v=8uFsLvrK0do",
+     "transkript_q": "Wiederherstellung"
     },
     {
      "typ": "beratung",
@@ -83680,7 +83721,8 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=_4Q4Gbd9r4c"
+     "aufzeichnung": "https://www.youtube.com/watch?v=_4Q4Gbd9r4c",
+     "transkript_q": "Qualifizierungsverfahren"
     },
     {
      "typ": "vollzug",
@@ -85312,7 +85354,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=C_iRzx1XTAw"
+     "aufzeichnung": "https://www.youtube.com/watch?v=C_iRzx1XTAw",
+     "transkript_q": "Westbahn"
     },
     {
      "typ": "beratung",
@@ -89450,7 +89493,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=Kp0hJWwC0r0"
+     "aufzeichnung": "https://www.youtube.com/watch?v=Kp0hJWwC0r0",
+     "transkript_q": "Linienwegs"
     },
     {
      "typ": "beratung",
@@ -90045,7 +90089,8 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=Kp0hJWwC0r0"
+     "aufzeichnung": "https://www.youtube.com/watch?v=Kp0hJWwC0r0",
+     "transkript_q": "Fahrplanwechsel"
     }
    ],
    "soll": {
@@ -90711,7 +90756,8 @@
      "result": "geändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=mFJlgJHSNlw"
+     "aufzeichnung": "https://www.youtube.com/watch?v=mFJlgJHSNlw",
+     "transkript_q": "Realisierungswettbewerb"
     },
     {
      "typ": "vollzug",
@@ -96489,7 +96535,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=SLPQAiHta5s"
+     "aufzeichnung": "https://www.youtube.com/watch?v=SLPQAiHta5s",
+     "transkript_q": "Wasserstoffstrategie"
     },
     {
      "typ": "beratung",
@@ -97013,7 +97060,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=817DbMnTRrU"
+     "aufzeichnung": "https://www.youtube.com/watch?v=817DbMnTRrU",
+     "transkript_q": "Bezirksbibliotheken"
     }
    ],
    "soll": {
@@ -97377,7 +97425,8 @@
      "result": "erledigt durch Stellungnahme der Verwaltung",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=817DbMnTRrU"
+     "aufzeichnung": "https://www.youtube.com/watch?v=817DbMnTRrU",
+     "transkript_q": "Bezirksbibliotheken"
     }
    ],
    "soll": {
@@ -98255,7 +98304,8 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=VmtqNaRXqB4"
+     "aufzeichnung": "https://www.youtube.com/watch?v=VmtqNaRXqB4",
+     "transkript_q": "Dringlichkeitsentscheidung"
     },
     {
      "typ": "vollzug",
@@ -98894,7 +98944,8 @@
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=VmtqNaRXqB4"
+     "aufzeichnung": "https://www.youtube.com/watch?v=VmtqNaRXqB4",
+     "transkript_q": "Pilotprojekt"
     }
    ],
    "soll": {
@@ -99085,7 +99136,8 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite",
-     "aufzeichnung": "https://www.youtube.com/watch?v=817DbMnTRrU"
+     "aufzeichnung": "https://www.youtube.com/watch?v=817DbMnTRrU",
+     "transkript_q": "Kindertageseinrichtung"
     },
     {
      "typ": "vollzug",

@@ -84,9 +84,12 @@ UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005620
 DTSTAMP:20261124T160000Z
 DTSTART:20261124T160000Z
 SUMMARY:Bezirksvertretung Bonn
-DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
- öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung: https://www.b
+ onn.sitzung-online.de/public/TO010?SILFDNR=2005620\nEinladung: https://www
+ .bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3257436&OTYP=41\nQue
+ lle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005620
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005746

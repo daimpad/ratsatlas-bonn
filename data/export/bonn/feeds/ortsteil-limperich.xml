@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-limperich</id>
 <title>Ratsatlas Bonn – Limperich</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Limperich</subtitle>
-<updated>2026-11-03T00:00:00Z</updated>
+<updated>2026-11-10T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-limperich.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:limperich"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030408#vorlage</id>
+<title>Neue Vorlage 262157: CDU-SPD Bezirksfraktionen: Verkehrssicherheit in der Straße „Auf dem Grendt“ verbessern</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:limperich#262157"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030408"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028232#vorlage</id>
 <title>Neue Vorlage 261179-01: Linke-Antrag: Errichtung einer Calisthenics-Anlage im Bereich des Rheinauenparks in Bonn-Limperich</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:limperich#241411"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018669"/>
 <summary>Entscheidung am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018749#beratung-2024-09-25-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 241187-01 ST Antrag CDU Bezirksfraktion Beuel: Wohnbebauung Königswinterer Str. [Hausnummer ausgelassen]</title>
-<updated>2024-09-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:limperich#241187-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018749"/>
-<summary>Kenntnisnahme am 2024-09-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
