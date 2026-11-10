@@ -159,6 +159,79 @@ class StadtGeometrie(unittest.TestCase):
         self.assertFalse(sd.GEOMETRIE_FREIGEGEBEN)
 
 
+class Wanderung(unittest.TestCase):
+    """Lieferung der Statistikstelle (Format laut strukturdaten/wanderung/LIEFERVORLAGE.md); Zahlen erfunden."""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        roh = _atlas(self._tmp.name)
+        self.meta = json.loads((roh / "data.js").read_text(encoding="utf-8-sig"))
+        _, self.werte_atlas, _ = sd.atlas(roh, "2026-11-10")   # Einwohner 2024: 110 → 10, 129 → NaN, 495 → 25
+        self.datei = Path(self._tmp.name) / "wanderung.tsv"
+
+    def tearDown(self):
+        self._tmp.cleanup()
+
+    def _lies(self, text, trenner="\t"):
+        self.datei.write_text(text.replace("\t", trenner), encoding="utf-8")
+        return sd.wanderung(self.datei, self.meta, self.werte_atlas, "2026-11-10", {"lieferdatum": "2026-12-01"})
+
+    KOPF = "raumebene\traum_id\tjahr\tzuzuege_aussen\tfortzuege_aussen\tzuzuege_innen\tfortzuege_innen\n"
+
+    def test_werte_saldo_und_geheimhaltung(self):
+        ind, werte, plaus = self._lies(self.KOPF + "statistischer_bezirk\t110\t2024\t5\t2\t3\t1\n"
+                                       "statistischer_bezirk\t495\t2024\t1.200\t4\t*\t3\n"
+                                       "gesamtstadt\tbonn\t2024\t1205\t6\t3\t4\n")
+        w = {(r["raum_id"], r["indikator_id"]): r for r in werte}
+        self.assertEqual((w[("110", "bonn-wan-zuzuege_aussen")]["wert"], w[("110", "bonn-wan-zuzuege_aussen")]["status"]),
+                         ("5", "ok"))
+        self.assertEqual(w[("495", "bonn-wan-zuzuege_aussen")]["wert"], "1200")          # Tausenderpunkt
+        self.assertEqual((w[("110", "bonn-wan-saldo")]["wert"], w[("110", "bonn-wan-saldo")]["status"]), ("5", "abgeleitet"))
+        self.assertEqual(w[("110", "bonn-wan-saldo_je_1000")]["wert"], "500")            # 5 / 10 Einwohner × 1.000
+        self.assertEqual((w[("495", "bonn-wan-zuzuege_innen")]["status"], w[("495", "bonn-wan-saldo")]["status"]),
+                         ("geheim", "fehlt"))
+        self.assertTrue(w[("110", "bonn-wan-zuzuege_aussen")]["quellobjekt"].endswith("#Zeile 2"))
+        i = {r["indikator_id"]: r for r in ind}
+        self.assertEqual(i["bonn-wan-saldo_je_1000"]["typ"], "quote")
+        self.assertEqual(i["bonn-wan-saldo"]["abrufdatum"], "2026-12-01")
+        self.assertEqual(i["bonn-wan-zuzuege_aussen"]["raumebenen"], "gesamtstadt;statistischer_bezirk")
+        self.assertEqual(plaus, [])   # innen nicht vollständig (geheim) → keine Ausgleichsprüfung; Summen stimmen
+
+    def test_plausibilitaet_und_csv_mit_semikolon(self):
+        _, _, plaus = self._lies(self.KOPF + "statistischer_bezirk\t110\t2024\t5\t2\t3\t1\n"
+                                 "statistischer_bezirk\t495\t2024\t7\t4\t2\t3\n"
+                                 "gesamtstadt\tbonn\t2024\t13\t6\t5\t4\n", ";")
+        gruende = [p["grund"] for p in plaus]
+        self.assertIn("Zuzüge innerhalb Bonns 5, Fortzüge innerhalb Bonns 4: sollten gleich sein", gruende)
+        self.assertIn("Summe der Bezirke 12, ganz Bonn laut Lieferung 13", gruende)
+
+    def test_fehler_brechen_ab(self):
+        for zeile, meldung in (("statistischer_bezirk\t999\t2024\t1\t1\t1\t1", "unbekannt"),
+                               ("statistischer_bezirk\t110\t2024\t-1\t1\t1\t1", "keine ganze Zahl"),
+                               ("statistischer_bezirk\t110\tJahr\t1\t1\t1\t1", "unbekannt")):
+            with self.subTest(meldung), self.assertRaisesRegex(SystemExit, meldung):
+                self._lies(self.KOPF + zeile + "\n")
+        with self.assertRaisesRegex(SystemExit, "Spalten fehlen: fortzuege_innen"):
+            self._lies("raumebene\traum_id\tjahr\tzuzuege_aussen\tfortzuege_aussen\tzuzuege_innen\n")
+
+    def test_ortsteil_ohne_summe_der_umzuege_innerhalb_bonns(self):
+        ind, werte, _ = self._lies(self.KOPF + "statistischer_bezirk\t110\t2024\t5\t2\t3\t1\n"
+                                   "statistischer_bezirk\t495\t2024\t7\t4\t1\t3\n")
+        ind_alle = ind + [{"indikator_id": "bonn-sda-i0", "typ": "anzahl"}]
+        out = {r["indikator_id"]: r for r in sd.ortsteilwerte(self.werte_atlas + werte, ind_alle, {"a": ["110", "495"]})
+               if r["jahr"] == "2024"}
+        self.assertEqual(out["bonn-wan-zuzuege_aussen"]["wert"], "12")
+        self.assertNotIn("bonn-wan-zuzuege_innen", out)                 # zwischen 110 und 495 doppelt gezählt
+        self.assertEqual((out["bonn-wan-saldo"]["wert"], out["bonn-wan-saldo"]["status"]), ("6", "abgeleitet"))
+        self.assertEqual(out["bonn-wan-saldo_je_1000"]["wert"], "171.4")  # 6 / 35 Einwohner × 1.000
+
+    def test_vorlage_wird_gelesen(self):
+        vorlage = Path(__file__).resolve().parent.parent / "strukturdaten" / "wanderung" / "vorlage_wanderung.tsv"
+        spalten, zeilen = sd._lies_lieferung(vorlage)
+        self.assertEqual(set(spalten), {"raumebene", "raum_id", "jahr", *sd.WANDERUNG_SPALTEN})
+        self.assertEqual(len(zeilen), 4)
+
+
 class Wegweiser(unittest.TestCase):
     def test_reihen_je_kommune_und_jahr(self):
         with tempfile.TemporaryDirectory() as tmp:

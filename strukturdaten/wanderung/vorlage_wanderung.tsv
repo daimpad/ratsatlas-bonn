@@ -1,0 +1,5 @@
+raumebene	raum_id	jahr	zuzuege_aussen	fortzuege_aussen	zuzuege_innen	fortzuege_innen
+statistischer_bezirk	110	2024	1000	900	800	850
+statistischer_bezirk	111	2024	500	450	*	400
+stadtbezirk	1	2024	10000	9000	6000	6200
+gesamtstadt	bonn	2024	20000	18000	30000	30000
