@@ -1,0 +1,33 @@
+{
+ "vertrag_version": "1.0-entwurf",
+ "datenstand": "2026-02-03",
+ "abrufdatum": "2026-11-10",
+ "veroeffentlichen": true,
+ "lizenzstatus": "freigegeben: CC0 1.0 bzw. dl-de/zero-2.0 (Freigabe der Stadt Bonn, Mitteilung des Auftraggebers 10.11.2026)",
+ "geometrie": "Kartengeometrie des Strukturdatenatlas, Stand 2016 (stadtplan.bonn.de beim Abruf nicht erreichbar)",
+ "wegweiser_version": "3.12.0",
+ "quellen": [
+  {
+   "name": "Strukturdatenatlas der Bundesstadt Bonn",
+   "url": "https://www2.bonn.de/statistik/Strukturdatenatlas/",
+   "lizenz": "CC0 1.0 bzw. dl-de/zero-2.0 (Freigabe der Stadt Bonn, Mitteilung des Auftraggebers 10.11.2026)",
+   "namensnennung": "Bundesstadt Bonn, Statistikstelle – Strukturdatenatlas"
+  },
+  {
+   "name": "Statistische Bezirke (Geometrie)",
+   "url": "https://opendata.bonn.de/dataset/statistische-bezirke",
+   "lizenz": "CC0 1.0 (Stadt Bonn, Datensatz „Statistische Bezirke“)"
+  },
+  {
+   "name": "Wegweiser Kommune (Bertelsmann Stiftung)",
+   "url": "https://www.wegweiser-kommune.de/open-data",
+   "lizenz": "CC0 1.0",
+   "namensnennung": "Bertelsmann Stiftung, wegweiser-kommune.de"
+  }
+ ],
+ "hinweise": [
+  "Werte unverändert aus der Quelle; keine Schätzung. „geheim“: in der Quelle nicht ausgewiesen, nach dem Metatext wegen Fallzahl unter 10 (Daten der Bundesagentur für Arbeit). „fehlt“: in der Quelle ohne Wert.",
+  "Bezirke 129 Kottenforst, 380 Siegaue, 389 Ennert: nahezu unbewohnt, in der Quelle ohne Werte.",
+  "Gesamtstädtische Werte aus dem Wegweiser und kleinräumige Werte der Statistikstelle unterscheiden sich in Definition und Stichtag (z. B. Einwohner: amtliche Fortschreibung bzw. Melderegister); nicht vermischen."
+ ]
+}
