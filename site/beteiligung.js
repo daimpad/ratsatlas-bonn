@@ -48,7 +48,7 @@ function gelegenheiten(bz, today) {
   ].filter(Boolean);
   return `<section class="bt-next" aria-labelledby="bt-next-h"><h3 id="bt-next-h">Nächste Gelegenheiten im Stadtbezirk ${esc(bz)}</h3>
     ${items.length ? `<ul class="bt-dates">${items.join("")}</ul>` : '<p class="hint">Im Sitzungskalender ist noch keine kommende Sitzung eingetragen.</p>'}
-    <p class="hint"><span class="derived">abgeleitet</span> Fristen berechnet aus den Sitzungsterminen (21 Tage vor der Sitzung); maßgeblich sind Einladung und Geschäftsordnung.</p>
+    <p class="hint">Fristen <span class="derived">abgeleitet</span></p><details class="acc acc-meta"><summary>So sind die Fristen berechnet</summary><p class="hint">Fristen berechnet aus den Sitzungsterminen (21 Tage vor der Sitzung); maßgeblich sind Einladung und Geschäftsordnung.</p></details>
     <p class="bt-actions"><button type="button" class="btn btn-soft" id="bt-termine">Alle kommenden Sitzungen</button></p></section>`;
 }
 
@@ -56,7 +56,7 @@ function zeitstrahl() {
   const fr = soll.fristen || [];
   return `<section aria-labelledby="bt-fristen-h"><h3 id="bt-fristen-h">Fristen rund um eine Sitzung</h3>
     <ol class="bt-line">${fr.map((f) => `<li class="${f.t === 0 ? "bt-day" : ""}"><span class="bt-dot" aria-hidden="true"></span><strong>${esc(f.label)}</strong><span>${esc(f.was)}</span></li>`).join("")}</ol>
-    <p class="hint">T ist der Sitzungstag. Rechtsgrundlagen: ${[...new Map(fr.flatMap((f) => f.links || []).map((l) => [l.url, l])).values()].map((l) => `<a href="${href(l.url)}" target="_blank" rel="noopener">${esc(l.label.replace(/\s*§.*$/, ""))}<span class="visually-hidden"> (neuer Tab)</span></a>`).join(" · ")}</p></section>`;
+    <p class="hint">T ist der Sitzungstag.</p><details class="acc acc-meta"><summary>Rechtsgrundlagen</summary><p class="hint">${[...new Map(fr.flatMap((f) => f.links || []).map((l) => [l.url, l])).values()].map((l) => `<a href="${href(l.url)}" target="_blank" rel="noopener">${esc(l.label.replace(/\s*§.*$/, ""))}<span class="visually-hidden"> (neuer Tab)</span></a>`).join(" · ")}</p></details></section>`;
 }
 
 function wege(bz, today) {
@@ -84,7 +84,7 @@ function render() {
   const today = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(new Date()), bz = state.bezirk;
   body.innerHTML = `<label class="bt-pick">Ihr Stadtbezirk <select id="bt-bezirk">${BEZIRKE.map((b) => `<option${b === bz ? " selected" : ""}>${esc(b)}</option>`).join("")}</select></label>
     ${gelegenheiten(bz, today)}${zeitstrahl()}${wege(bz, today)}
-    <p class="hint">Vereinfachte Darstellung nach der Geschäftsordnung des Rates, der Hauptsatzung, der Gemeindeordnung NRW und dem Baugesetzbuch; keine Rechtsauskunft. Welche Wege bei einem bestimmten Vorgang offen sind, zeigt dort der Abschnitt „Selbst mitwirken“.</p>`;
+    <p class="hint">Welche Wege bei einem bestimmten Vorgang offen sind, zeigt dort der Abschnitt „Selbst mitwirken“.</p><details class="acc acc-meta"><summary>Grundlage</summary><p class="hint">Vereinfachte Darstellung nach der Geschäftsordnung des Rates, der Hauptsatzung, der Gemeindeordnung NRW und dem Baugesetzbuch; keine Rechtsauskunft.</p></details>`;
   ctx.onState({ ...state });
 }
 

@@ -99,7 +99,7 @@ function renderVerfahren() {
   const ids = Object.keys(soll.verfahren);
   const count = (id) => (data.verfahren[id] || {}).vorgaenge || 0;
   if (state.view === "liste") {
-    return `<p class="hint">${ids.length} Verfahrensarten nach dem Regelwerk der Stadt Bonn (vereinfachtes Modell, keine Rechtsauskunft).</p>
+    return `<p class="hint">${ids.length} Verfahrensarten.</p><details class="pz-more acc-meta"><summary>Grundlage</summary><p class="hint">Verfahrensarten nach dem Regelwerk der Stadt Bonn (vereinfachtes Modell, keine Rechtsauskunft).</p></details>
       ${ids.map((id) => `<details class="pz-item" data-verfahren="${esc(id)}"${state.verfahren === id ? " open" : ""}><summary><span class="pz-title">${esc(soll.verfahren[id].titel)}</span>
         <span class="pz-meta">${num(count(id))} Vorgänge</span></summary>${verfahrenBody(id, soll.verfahren[id])}</details>`).join("")}${fristen()}`;
   }
@@ -118,7 +118,7 @@ function zustaendig(g) {
     return `<h4>Zuständigkeit laut Zuständigkeitsordnung (Abschnitt ${esc(z.nr)})</h4>
       ${g.zusto_hinweis ? `<p class="hint">${esc(g.zusto_hinweis)}</p>` : ""}
       ${groups.map(([label, rs]) => `<details class="pz-more"><summary>${esc(g.name)} ${esc(label)} (${rs.length})</summary><ul class="pz-recht">${rs.map((r) => `<li><span class="pz-nr">${esc(r.nr)}</span> ${esc(r.inhalt)}${r.an_bezirksvertretung ? ' <span class="hint">(Bezirksvertretung wird beteiligt)</span>' : ""}</li>`).join("")}</ul></details>`).join("")}
-      <p class="hint">Quelle: <a href="${href(soll.meta.zusto_url)}" target="_blank" rel="noopener">Zuständigkeitsordnung der Stadt Bonn<span class="visually-hidden"> (neuer Tab)</span></a>, Stand ${esc(soll.meta.zusto_stand || "")}.</p>`;
+      <details class="pz-more acc-meta"><summary>Quelle</summary><p class="hint">Quelle: <a href="${href(soll.meta.zusto_url)}" target="_blank" rel="noopener">Zuständigkeitsordnung der Stadt Bonn<span class="visually-hidden"> (neuer Tab)</span></a>, Stand ${esc(soll.meta.zusto_stand || "")}.</p></details>`;
   }
   const rule = (re) => (soll.zustaendigkeit || []).filter((z) => re.test(`${z.frage} ${z.antwort}`));
   const rules = g.art === "bezirksvertretung" ? rule(/Bezirk|BV/) : g.art === "rat" || g.art === "hauptausschuss" ? rule(/Rat|Hauptausschuss/) : [];
@@ -148,8 +148,7 @@ function besetzung(g) {
       <tbody>${zeilen}</tbody></table></details>` : ""}
     ${beratend}
     ${rest ? `<p class="hint">Außerdem: ${rest}.</p>` : ""}
-    ${b.ordentlich.some((e) => e.rolle === "Mitglied (Stv.)") ? '<p class="hint">„Mitglied (Stv.)“ bezeichnet laut Quelle Stadtverordnete als Mitglied des Gremiums, keine Stellvertretung (Deutung abgeleitet).</p>' : ""}
-    <p class="hint">${esc(data.meta.besetzung_hinweis || "")}</p>`;
+    <details class="pz-more acc-meta"><summary>Quelle und Hinweise zur Besetzung</summary><p class="hint">${esc(data.meta.besetzung_hinweis || "")}</p>${b.ordentlich.some((e) => e.rolle === "Mitglied (Stv.)") ? '<p class="hint">„Mitglied (Stv.)“ bezeichnet laut Quelle Stadtverordnete als Mitglied des Gremiums, keine Stellvertretung (Deutung abgeleitet).</p>' : ""}</details>`;
 }
 // Aufzeichnungen (Ratstranskripte, bonn.biz): nur Verweise, Ebene der Sitzung (transkripte/KONZEPT.md)
 function aufzeichnungen(g) {
@@ -206,7 +205,7 @@ function renderGremien() {
       ${by("unterausschuss").length + by("wahlausschuss").length ? `<section class="org-beirat" aria-label="Weitere Gremien"><h3 class="org-h">Weitere Gremien</h3>
         <div class="org-grid">${[...by("unterausschuss"), ...by("wahlausschuss")].map(nodeBtn).join("")}</div></section>` : ""}
     </div>
-    <p class="hint">Gezeigt sind die Gremien der laufenden Wahlperiode (seit ${deDate(data.meta.wahlperiode_seit)}); frühere stehen in der Liste. Der Rat entscheidet grundsätzlich; Ausschüsse und Bezirksvertretungen, soweit ihnen Aufgaben übertragen sind.</p>
+    <details class="pz-more acc-meta"><summary>Was das Schaubild zeigt</summary><p class="hint">Gezeigt sind die Gremien der laufenden Wahlperiode (seit ${deDate(data.meta.wahlperiode_seit)}); frühere stehen in der Liste. Der Rat entscheidet grundsätzlich; Ausschüsse und Bezirksvertretungen, soweit ihnen Aufgaben übertragen sind.</p></details>
     <div id="pz-detail" class="pz-detail" aria-live="polite">${sel ? `<h3 class="pz-h" tabindex="-1">${esc(sel.name)}</h3>${gremiumBody(sel)}` : `<p class="hint">Wählen Sie ein Gremium, um seine Zuständigkeit und Sitzungen zu sehen.</p>`}</div>`;
 }
 
@@ -242,8 +241,8 @@ function renderAemter() {
   const cur = all.filter((a) => a.aktuell);
   const sel = all.find((a) => a.id === state.amt);
   const groups = (list) => (data.amt_gruppen || []).map((g) => [g, list.filter((a) => a.gruppe === g.id)]).filter(([, as]) => as.length);
-  const intro = `<p class="hint">Ämter und Federführung stammen aus der OParl-API der Stadt Bonn. Die Gruppen folgen der Amtsnummer
-    <span class="derived">abgeleitet</span>; eine Zuordnung zu den Dezernaten enthält die Quelle nicht.</p>`;
+  const intro = `<details class="pz-more acc-meta"><summary>Quelle</summary><p class="hint">Ämter und Federführung stammen aus der OParl-API der Stadt Bonn. Die Gruppen folgen der Amtsnummer
+    <span class="derived">abgeleitet</span>; eine Zuordnung zu den Dezernaten enthält die Quelle nicht.</p></details>`;
   if (state.view === "liste") {
     const q = state.q.trim().toLowerCase();
     const shown = (state.frueher ? all : cur).filter((a) => !q || a.name.toLowerCase().includes(q) || a.abteilungen.some((x) => x.name.toLowerCase().includes(q)));
@@ -256,7 +255,7 @@ function renderAemter() {
       ${groups(cur).map(([g, as]) => `<section class="org-beirat" aria-label="${esc(g.label)}"><h3 class="org-h">${esc(g.label)}</h3>
         <div class="org-grid">${as.map(amtBtn).join("")}</div></section>`).join("")}
     </div>
-    <p class="hint">Gezeigt sind die aktiven Ämter und Stellen; frühere stehen in der Liste. Die Zahl nennt die Vorlagen, bei denen das Amt laut Quelle federführend ist.</p>
+    <details class="pz-more acc-meta"><summary>Was das Schaubild zeigt</summary><p class="hint">Gezeigt sind die aktiven Ämter und Stellen; frühere stehen in der Liste. Die Zahl nennt die Vorlagen, bei denen das Amt laut Quelle federführend ist.</p></details>
     <div id="pz-detail" class="pz-detail" aria-live="polite">${sel ? `<h3 class="pz-h" tabindex="-1">${esc(sel.name)}</h3>${amtBody(sel)}` : `<p class="hint">Wählen Sie ein Amt, um seine Abteilungen, Vorlagen und die beratenden Gremien zu sehen.</p>`}</div>`;
 }
 
