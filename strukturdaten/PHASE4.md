@@ -34,6 +34,6 @@ Die Jahresübersicht weist drei nahezu unbewohnte Bezirke zusammen mit dem Nachb
 
 ## Offen
 
-- Neuberechnung des Raumabgleichs mit der aktuellen Geometrie, sobald `stadtplan.bonn.de/geojson?OD=4859` antwortet.
+- Neuberechnung des Raumabgleichs mit der aktuellen Geometrie, sobald `stadtplan.bonn.de/geojson?OD=4859` antwortet (vorbereitet, `strukturdaten/GEOMETRIE.md`).
 - Genaue Lizenzbezeichnung aus der schriftlichen Antwort der Stadt.
 - Wanderungsdaten (Bezugsweg).

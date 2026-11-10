@@ -109,6 +109,56 @@ class Geometrie(unittest.TestCase):
         self.assertEqual(g["features"][2]["properties"]["name"], "Beuel")
 
 
+def _streifen(ids, lon0=7.0, lon1=7.23, lat0=50.62, lat1=50.79):
+    """Erfundene Bezirke als senkrechte Streifen über dem Stadtgebiet (decken es ganz ab)."""
+    schritt = (lon1 - lon0) / len(ids)
+    return [_quadrat(lon0 + i * schritt, lat0, lon0 + (i + 1) * schritt, lat1) for i in range(len(ids))]
+
+
+class StadtGeometrie(unittest.TestCase):
+    """Geometrie der Stadt (OD=4859): Feldnamen unbekannt, daher strenge Prüfung statt Raten."""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.atlas = json.loads((_atlas(self._tmp.name) / "data.js").read_text(encoding="utf-8-sig"))
+        self.datei = Path(self._tmp.name) / "stadt.geojson"
+
+    def tearDown(self):
+        self._tmp.cleanup()
+
+    def _pruefe(self, feats):
+        self.datei.write_text(json.dumps({"type": "FeatureCollection", "features": feats}))
+        return sd.stadt_geometrie(self.datei, self.atlas)
+
+    def test_nummer_als_zahl_oder_text_unter_beliebigem_feldnamen(self):
+        flaechen = _streifen(["110", "129", "495"])
+        geo = self._pruefe([{"properties": {"STAT_BEZ": int(i), "NAME": "x"}, "geometry": g}
+                            for i, g in zip(("110", "129", "495"), flaechen)])
+        self.assertEqual(sorted(geo), ["110", "129", "495"])
+        geo = self._pruefe([{"properties": {"name": "x", "nr": i}, "geometry": g}
+                            for i, g in zip(("110", "129", "495"), flaechen)])
+        self.assertEqual(geo["129"], flaechen[1])
+
+    def test_abweichungen_fuehren_zum_abbruch(self):
+        flaechen = _streifen(["110", "129", "495"])
+        faelle = {
+            "2 statt 3 Flächen": [{"properties": {"nr": i}, "geometry": g} for i, g in zip(("110", "129"), flaechen)],
+            "kein Feld": [{"properties": {"nr": i}, "geometry": g} for i, g in zip(("110", "129", "496"), flaechen)],
+            "nicht in WGS84": [{"properties": {"nr": i}, "geometry": _quadrat(365000, 5620000, 366000, 5621000)}
+                               for i in ("110", "129", "495")],
+            "decken nur": [{"properties": {"nr": i}, "geometry": _quadrat(7.0, 50.62, 7.01, 50.63)}
+                           for i in ("110", "129", "495")],
+        }
+        for meldung, feats in faelle.items():
+            with self.subTest(meldung):
+                with self.assertRaisesRegex(sd.GeometrieFehler, meldung):
+                    self._pruefe(feats)
+
+    def test_freigabe_noch_offen(self):
+        # Entscheidung 10.11.2026: erst Vergleich, Übernahme erst nach Freigabe
+        self.assertFalse(sd.GEOMETRIE_FREIGEGEBEN)
+
+
 class Wegweiser(unittest.TestCase):
     def test_reihen_je_kommune_und_jahr(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -209,6 +259,29 @@ class Raumabgleich(unittest.TestCase):
         self.assertNotIn(("a", "bonn-sda-i9"), out)                       # Mittelwert ohne Zähler und Nenner
         self.assertEqual(out[("b", "bonn-sda-i9")]["wert"], "38")         # ein Bezirk: Wert übernommen
         self.assertIn("statistischer_bezirk 1+2 → ortsteil a", out[("a", "bonn-sda-i0")]["quellobjekt"])
+
+    def test_vergleich_alter_und_neuer_geometrie(self):
+        bz = lambda drei, zwei: {"features": [
+            {"properties": {"raum_id": "1", "name": "Eins"}, "geometry": _quadrat(0, 0, 1, 2)},
+            {"properties": {"raum_id": "2", "name": "Zwei"}, "geometry": zwei},
+            {"properties": {"raum_id": "3", "name": "Drei"}, "geometry": drei}]}
+        alt = bz(_quadrat(1, 1, 4, 2), _quadrat(1, 0, 2, 1))
+        neu = bz(_quadrat(2, 1, 4, 2), _quadrat(1, 0, 2, 2))   # Bezirk 3 nur noch in B
+        ind = [{"indikator_id": "bonn-sda-i0", "typ": "anzahl"}]
+        werte = [{"raumebene": "statistischer_bezirk", "raum_id": r, "indikator_id": "bonn-sda-i0", "jahr": "2025",
+                  "wert": v, "status": "ok"} for r, v in (("1", "100"), ("2", "104"), ("3", "4"))]
+        ot = {"features": [
+            {"properties": {"ortsteil_bez": "A-Dorf", "bezirk_bez": "Bonn"}, "geometry": _quadrat(0, 0, 2, 2)},
+            {"properties": {"ortsteil_bez": "Bü", "bezirk_bez": "Beuel"}, "geometry": _quadrat(2, 0, 4, 2)}]}
+        zeilen, summe = sd.geometrie_vergleich(alt, neu, werte, ind, ot, Path(self._tmp.name) / "z.tsv")
+        z = {(r["raum_id"], r["merkmal"]): r for r in zeilen}
+        self.assertEqual((z[("1", "ueberdeckung")]["neu"], z[("1", "ueberdeckung")]["befund"]), ("1.000", "gleich"))
+        self.assertEqual((z[("3", "ueberdeckung")]["neu"], z[("3", "ueberdeckung")]["befund"]), ("0.667", "abweichend"))
+        self.assertEqual((z[("3", "ortsteil")]["alt"], z[("3", "ortsteil")]["neu"]), ("geteilt oder ohne Einwohner", "bue"))
+        self.assertEqual((z[("bue", "bezirke")]["alt"], z[("bue", "bezirke")]["neu"]), ("nicht sauber", "3"))
+        self.assertEqual(z[("a-dorf", "werte_geaendert")]["neu"], "0")
+        self.assertEqual(summe, {"saubere_ortsteile": {"alt": 1, "neu": 2}, "bezirke_ueberdeckung_unter_95": 2,
+                                 "bezirke_anderer_ortsteil": 1, "werte_je_ortsteil_geaendert": 1})
 
     def test_summe_mit_geheimem_teil_fehlt(self):
         ind = [{"indikator_id": "bonn-sda-i36", "typ": "anzahl"}]

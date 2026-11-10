@@ -35,6 +35,12 @@ DL = Path(os.environ.get("STRUKTURDATEN_DL", config.ROOT / "_strukturdaten_dl"))
 ATLAS = "https://www2.bonn.de/statistik/Strukturdatenatlas/"
 ATLAS_DATEIEN = ["data.js", "_STA_2016.shp1.js", *[f"Statistische_Bezirke-t{i}.js" for i in range(9)]]
 GEOMETRIE_URL = "https://stadtplan.bonn.de/geojson?OD=4859"
+# Aktuelle Geometrie der Stadt: erst Vergleich mit der Kartengeometrie des Atlas (audit_geometrie_vergleich.tsv), Übernahme
+# erst nach Freigabe des Auftraggebers (Entscheidung 10.11.2026); bis dahin bleibt die Geometrie des Atlas (Stand 2016)
+GEOMETRIE_FREIGEGEBEN = False
+GEOMETRIE_VERGLEICH = "audit_geometrie_vergleich.tsv"
+BONN_BBOX = (6.95, 50.60, 7.25, 50.80)   # lon/lat; liegt die Datei außerhalb, ist sie nicht in WGS84
+GEOMETRIE_DECKUNG = 0.95   # Anteil des Stadtgebiets; die Kartengeometrie des Atlas (Pixelraster) erreicht 96,4 %
 WW = "https://www.wegweiser-kommune.de/data-api/rest/"
 WW_OPENAPI = "https://www.wegweiser-kommune.de/openapi?format=JSON"
 WW_KOMMUNEN = ("bonn", "koeln", "wuppertal")
@@ -181,8 +187,19 @@ def abrufen(dl=DL, out=OUT):
             raise SystemExit(f"Strukturdatenatlas: {name} nicht abrufbar, Lauf abgebrochen (audit_abruf.tsv)")
         if name == "data.js" and lm:
             stand["atlas_last_modified"] = parsedate_to_datetime(lm).date().isoformat()
-    ok, _ = _hole(GEOMETRIE_URL, dl / "statistische_bezirke.geojson", audit, "Statistische Bezirke (Geometrie)")
-    stand["geometrie"] = "stadtplan" if ok and _gueltige_geometrie(dl / "statistische_bezirke.geojson") else "atlas"
+    ziel = dl / "statistische_bezirke.geojson"
+    ziel.unlink(missing_ok=True)   # kein alter Stand aus einem früheren Abruf
+    ok, _ = _hole(GEOMETRIE_URL, ziel, audit, "Statistische Bezirke (Geometrie)")
+    if not ok:
+        status = audit[-1]["http_status"]
+        stand["geometrie_stadt"] = "nicht erreichbar, " + (f"HTTP {status}" if isinstance(status, int) else str(status))
+    else:
+        try:
+            stadt_geometrie(ziel, _json(dl / "atlas" / "data.js"))
+            stand["geometrie_stadt"] = "geprüft"
+        except GeometrieFehler as e:
+            stand["geometrie_stadt"] = f"ungültig: {e}"
+    print(f"Geometrie der Stadt (OD=4859): {stand['geometrie_stadt']}")
     # Wegweiser: Version der Schnittstelle prüfen, dann je Indikator alle Jahre für die drei Kommunen
     ok, _ = _hole(WW_OPENAPI, dl / "wegweiser" / "openapi.json", audit, "Wegweiser Kommune (OpenAPI)")
     if not ok:
@@ -207,11 +224,61 @@ def abrufen(dl=DL, out=OUT):
     return stand
 
 
-def _gueltige_geometrie(path):
+class GeometrieFehler(ValueError):
+    pass
+
+
+def _koordinaten(g):
+    c = g["coordinates"]
+    tiefe = {"Polygon": 1, "MultiPolygon": 2}.get(g["type"])
+    if tiefe is None:
+        raise GeometrieFehler(f"Geometrietyp {g['type']}")
+    for _ in range(tiefe):
+        c = [x for t in c for x in t]
+    return c
+
+
+def stadt_geometrie(path, atlas_meta):
+    """Geometrie der Stadt (OD=4859) → {Bezirksnummer: Geometrie}; streng geprüft, sonst GeometrieFehler.
+
+    Die Feldnamen der Datei sind nicht bekannt (seit Phase 0 nicht erreichbar). Als Nummer gilt das Feld, dessen Werte
+    (dreistellig aufgefüllt) genau die 65 Nummern des Atlas ergeben; Koordinaten müssen in WGS84 im Raum Bonn liegen,
+    jede Fläche gültig sein und die Bezirke zusammen das Stadtgebiet abdecken."""
+    from shapely import make_valid
+    from shapely.geometry import shape
+    from shapely.ops import unary_union
     try:
-        return len(_json(path).get("features", [])) == 65
-    except (ValueError, OSError):
-        return False
+        feats = _json(path)["features"]
+    except (ValueError, OSError, KeyError, TypeError) as e:
+        raise GeometrieFehler(f"keine GeoJSON-Datei ({e.__class__.__name__})") from None
+    soll = {f["id"] for f in atlas_meta["geographies"][0]["features"]}
+    if len(feats) != len(soll):
+        raise GeometrieFehler(f"{len(feats)} statt {len(soll)} Flächen")
+
+    def nummer(v):
+        if isinstance(v, float) and v.is_integer():
+            v = int(v)
+        return str(v).strip().zfill(3) if isinstance(v, (int, str)) else None
+    felder = [k for k in feats[0].get("properties") or {}
+              if {nummer((f.get("properties") or {}).get(k)) for f in feats} == soll]
+    if not felder:
+        raise GeometrieFehler("kein Feld mit genau den 65 Nummern des Atlas")
+    geo = {}
+    for f in feats:
+        g = f.get("geometry") or {}
+        xy = _koordinaten(g)
+        if not all(BONN_BBOX[0] <= x <= BONN_BBOX[2] and BONN_BBOX[1] <= y <= BONN_BBOX[3] for x, y, *_ in xy):
+            raise GeometrieFehler("Koordinaten nicht in WGS84 im Raum Bonn")
+        form = make_valid(shape(g))
+        if form.is_empty or form.area <= 0:
+            raise GeometrieFehler(f"Bezirk {nummer(f['properties'][felder[0]])}: leere Fläche")
+        geo[nummer(f["properties"][felder[0]])] = g
+    gesamt = unary_union([make_valid(shape(f["geometry"])) for f in _json(config.STADTBEZIRKE)["features"]])
+    bezirke = unary_union([make_valid(shape(g)) for g in geo.values()])
+    deckung = bezirke.intersection(gesamt).area / gesamt.area
+    if deckung < GEOMETRIE_DECKUNG:
+        raise GeometrieFehler(f"Bezirke decken nur {deckung:.1%} des Stadtgebiets")
+    return geo
 
 
 # --- Aufbereitung: Atlas ----------------------------------------------------------------------------------------
@@ -345,11 +412,7 @@ def geometrie(roh_atlas, stadtplan, quelle):
     meta = _json(roh_atlas / "data.js")["geographies"][0]
     eltern = {name: sid for sid, name in STADTBEZIRKE.items()}
     if quelle == "stadtplan":
-        geo = {}
-        for f in _json(stadtplan)["features"]:
-            p = f["properties"]
-            rid = str(next(v for k, v in p.items() if re.fullmatch(r"(stat(istischer)?_?bezirk|bezirk_?nr|id|nr)", k, re.I)))
-            geo[rid.zfill(3)] = f["geometry"]
+        geo = stadt_geometrie(stadtplan, _json(roh_atlas / "data.js"))
         herkunft, lizenz = GEOMETRIE_URL, LIZENZ_GEO
     else:
         geo = _atlas_geometrie(roh_atlas / "_STA_2016.shp1.js")
@@ -522,6 +585,76 @@ def ortsteilwerte(werte, indikatoren, sauber, unbewohnt=UNBEWOHNT):
     return out
 
 
+VERGLEICH_FELDER = ["ebene", "raum_id", "name", "merkmal", "alt", "neu", "befund"]
+KM2_JE_GRAD2 = 111.32 * math.cos(math.radians(50.72)) * 110.57   # genähert für Bonn (Breite 50,72°)
+
+
+def _einwohner_je_bezirk(geo, zensus=ZENSUS):
+    from shapely import make_valid
+    from shapely.geometry import Point, shape
+    B = [(f["properties"]["raum_id"], make_valid(shape(f["geometry"]))) for f in geo["features"]]
+    ew = {}
+    with open(zensus, encoding="utf-8") as f:
+        for r in csv.DictReader(f, delimiter="\t"):
+            e = float(r["einwohner"] or 0)
+            if e:
+                pt = Point(float(r["lon"]), float(r["lat"]))
+                b = next((i for i, g in B if g.contains(pt)), None)
+                if b:
+                    ew[b] = ew.get(b, 0) + e
+    return ew
+
+
+def geometrie_vergleich(alt, neu, werte, indikatoren, ortsteile_geo=None, zensus=ZENSUS):
+    """Vergleich Kartengeometrie des Atlas (alt) ↔ Geometrie der Stadt (neu): je Bezirk Fläche, Überdeckung, Einwohner
+    (Zensus 2022) und Ortsteil; je Ortsteil die zusammengesetzten Bezirke und die Werte je Ortsteil. Gibt (Zeilen,
+    Zusammenfassung) zurück; ändert nichts an den veröffentlichten Daten."""
+    from shapely import make_valid
+    from shapely.geometry import shape
+    ergebnis = {}
+    for name, geo in (("alt", alt), ("neu", neu)):
+        zuordnung, _, sauber, namen = raumabgleich(geo, ortsteile_geo, zensus)
+        haupt = {z["von_id"]: z["nach_id"] for z in zuordnung if float(z["einwohneranteil"]) >= BEZIRK_IN_ORTSTEIL}
+        ot = {(w["raum_id"], w["indikator_id"], w["jahr"]): (w["wert"], w["status"])
+              for w in ortsteilwerte(werte, indikatoren, sauber)}
+        ergebnis[name] = {"haupt": haupt, "sauber": sauber, "namen": namen, "ot": ot,
+                          "ew": _einwohner_je_bezirk(geo, zensus),
+                          "form": {f["properties"]["raum_id"]: make_valid(shape(f["geometry"])) for f in geo["features"]}}
+    A, N = ergebnis["alt"], ergebnis["neu"]
+    zeilen = []
+
+    def zeile(ebene, rid, name, merkmal, a, n, befund=None):
+        zeilen.append({"ebene": ebene, "raum_id": rid, "name": name, "merkmal": merkmal, "alt": a, "neu": n,
+                       "befund": befund or ("gleich" if a == n else "geändert")})
+    for f in alt["features"]:
+        rid, name = f["properties"]["raum_id"], f["properties"]["name"]
+        ga, gn = A["form"][rid], N["form"][rid]
+        zeile("statistischer_bezirk", rid, name, "flaeche_km2_genaehert", f"{ga.area * KM2_JE_GRAD2:.2f}",
+              f"{gn.area * KM2_JE_GRAD2:.2f}")
+        ueber = ga.intersection(gn).area / ga.union(gn).area
+        zeile("statistischer_bezirk", rid, name, "ueberdeckung", "", f"{ueber:.3f}",
+              "gleich" if ueber >= 0.95 else "abweichend")
+        zeile("statistischer_bezirk", rid, name, "einwohner_zensus_2022", f"{A['ew'].get(rid, 0):.0f}",
+              f"{N['ew'].get(rid, 0):.0f}")
+        zeile("statistischer_bezirk", rid, name, "ortsteil", A["haupt"].get(rid, "geteilt oder ohne Einwohner"),
+              N["haupt"].get(rid, "geteilt oder ohne Einwohner"))
+    for oid, oname in sorted(A["namen"].items()):
+        zeile("ortsteil", oid, oname, "bezirke", "+".join(A["sauber"].get(oid, [])) or "nicht sauber",
+              "+".join(N["sauber"].get(oid, [])) or "nicht sauber")
+        ka = {k: v for k, v in A["ot"].items() if k[0] == oid}
+        kn = {k: v for k, v in N["ot"].items() if k[0] == oid}
+        geaendert = sum(ka.get(k) != kn.get(k) for k in set(ka) | set(kn))
+        zeile("ortsteil", oid, oname, "werte_je_ortsteil", str(len(ka)), str(len(kn)))
+        zeile("ortsteil", oid, oname, "werte_geaendert", "", str(geaendert), "gleich" if not geaendert else "geändert")
+    zusammenfassung = {
+        "saubere_ortsteile": {"alt": len(A["sauber"]), "neu": len(N["sauber"])},
+        "bezirke_ueberdeckung_unter_95": sum(z["befund"] == "abweichend" for z in zeilen if z["merkmal"] == "ueberdeckung"),
+        "bezirke_anderer_ortsteil": sum(z["befund"] == "geändert" for z in zeilen if z["merkmal"] == "ortsteil"),
+        "werte_je_ortsteil_geaendert": sum(int(z["neu"]) for z in zeilen if z["merkmal"] == "werte_geaendert"),
+    }
+    return zeilen, zusammenfassung
+
+
 def ortsteile_geo(path=None):
     """raum/ortsteil.geojson (Flächen der Stadt Bonn, CC0); eltern_id = Stadtbezirk wie im Atlas."""
     eltern = {name: sid for sid, name in STADTBEZIRKE.items()}
@@ -585,7 +718,17 @@ def aufbereiten(dl=DL, out=OUT, stand=None):
     abrufdatum = stand.get("abrufdatum", "")
     ind, werte, plaus = atlas(dl / "atlas", abrufdatum)
     ind_ww, gesamt = wegweiser(dl / "wegweiser", abrufdatum)
-    geo = geometrie(dl / "atlas", dl / "statistische_bezirke.geojson", stand.get("geometrie", "atlas"))
+    geo_atlas = geometrie(dl / "atlas", dl / "statistische_bezirke.geojson", "atlas")
+    stadt_status = stand.get("geometrie_stadt", "nicht erreichbar")
+    stadt_ok = stadt_status == "geprüft" and (dl / "statistische_bezirke.geojson").exists()
+    vergleich = stand.get("geometrie_vergleich") if (out / GEOMETRIE_VERGLEICH).exists() else None
+    if stadt_ok:
+        geo_stadt = geometrie(dl / "atlas", dl / "statistische_bezirke.geojson", "stadtplan")
+        zeilen, zusammenfassung = geometrie_vergleich(geo_atlas, geo_stadt, werte, ind)
+        _tsv(out / GEOMETRIE_VERGLEICH, VERGLEICH_FELDER, zeilen)
+        vergleich = {"abrufdatum": abrufdatum, **zusammenfassung}
+    stadt = stadt_ok and GEOMETRIE_FREIGEGEBEN
+    geo = geo_stadt if stadt else geo_atlas
     zuordnung, audit_raum, sauber, namen = raumabgleich(geo)
     werte_ot = ortsteilwerte(werte, ind, sauber)
     ot_ind = {w["indikator_id"] for w in werte_ot}
@@ -611,8 +754,13 @@ def aufbereiten(dl=DL, out=OUT, stand=None):
         "abrufdatum": abrufdatum,
         "veroeffentlichen": True,
         "lizenzstatus": "freigegeben: " + LIZENZ_BONN,
-        "geometrie": ("stadtplan.bonn.de (aktuell)" if stand.get("geometrie") == "stadtplan" else
-                      "Kartengeometrie des Strukturdatenatlas, Stand 2016 (stadtplan.bonn.de beim Abruf nicht erreichbar)"),
+        "geometrie": (f"Geometrie der Stadt Bonn (stadtplan.bonn.de, abgerufen {abrufdatum})" if stadt else
+                      "Kartengeometrie des Strukturdatenatlas, Stand 2016 (aktuelle Geometrie der Stadt liegt vor, "
+                      f"Vergleich in {GEOMETRIE_VERGLEICH}, Übernahme nach Freigabe)" if stadt_ok else
+                      f"Kartengeometrie des Strukturdatenatlas, Stand 2016 (stadtplan.bonn.de beim Abruf {stadt_status})"),
+        "geometrie_quelle": "stadtplan" if stadt else "atlas",
+        "geometrie_stadt": stadt_status,
+        **({"geometrie_vergleich": vergleich} if vergleich else {}),
         "wegweiser_version": stand.get("wegweiser_version", ""),
         "quellen": [
             {"name": "Strukturdatenatlas der Bundesstadt Bonn", "url": ATLAS, "lizenz": LIZENZ_BONN,
@@ -631,7 +779,8 @@ def aufbereiten(dl=DL, out=OUT, stand=None):
             f"Werte je Ortsteil (Status „abgeleitet“) nur für {len(sauber)} von {len(namen)} Ortsteilen, deren Einwohner zu "
             f"mindestens {ORTSTEIL_SAUBER:.0%} in Bezirken wohnen, die zu mindestens {BEZIRK_IN_ORTSTEIL:.0%} im Ortsteil liegen "
             "(zuordnung.tsv); ein Bezirk: Wert übernommen; mehrere: Anzahlen summiert, Anteile nur aus Zähler und Nenner. "
-            "Grundlage: Geometrie siehe oben, Einwohner Zensus 2022; wird mit der aktuellen Geometrie der Stadt neu berechnet.",
+            "Grundlage: Geometrie siehe oben, Einwohner Zensus 2022" + ("." if stadt else
+            "; wird mit der aktuellen Geometrie der Stadt neu berechnet (Vergleich vor der Übernahme)."),
             "Gesamtstädtische Werte aus dem Wegweiser und kleinräumige Werte der Statistikstelle unterscheiden sich in "
             "Definition und Stichtag (z. B. Einwohner: amtliche Fortschreibung bzw. Melderegister); nicht vermischen.",
         ],
