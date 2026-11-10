@@ -28071,6 +28071,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung bestätigt, dass Autofahrer und Radfahrer an der Kreuzung Endenicher Straße/Frongasse oft bei Rot rechts abbiegen, ohne zu halten. Sie sieht ein Sicherheitsrisiko für Fußgänger und schlägt vor, den grünen Rechtsabbiegepfeil dort abzuschaffen. Der Bürgerantrag wird damit unterstützt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -29458,6 +29463,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion beantragt, am Viorel-Păun-Platz in Endenich eine Gedenktafel auf einem Findling zum ersten Jahrestag des Hanau-Anschlags aufzustellen. Die Kosten sollen aus dem Feuerwehrtopf kommen. Zudem soll der Platz für Adressen genutzt und ein zentraler Gedenkort in Bonn mit Opferfamilien und Integrationsrat gesucht werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
