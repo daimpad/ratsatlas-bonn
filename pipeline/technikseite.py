@@ -43,6 +43,8 @@ SCHRITTE = {
                                              "Vorlagen über ihren Titel zu verorten."),
     "strukturdaten": ("Strukturdaten", "Holt auf Knopfdruck den Strukturdatenatlas der Stadt und Vergleichswerte aus dem "
                                        "Wegweiser Kommune und legt sie nach dem gemeinsamen Datenvertrag ab."),
+    "strukturdaten-seite": ("Strukturdaten für die Seite", "Fasst die Strukturdaten der Statistikstelle für Karte und "
+                                                         "Steckbrief zusammen."),
     "fetch-haltestellen": ("Haltestellen", "Holt am 1. des Monats die Haltestellen des VRS für die Zahlen je Ortsteil."),
     "fetch-texts": ("Texte der Dokumente", "Holt Texte von Hauptdokumenten über OParl-Lite, höchstens 3.000 je Lauf. Sie "
                                            "dienen nur der Verortung und werden nicht veröffentlicht."),

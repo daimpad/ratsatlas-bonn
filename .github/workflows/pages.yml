@@ -166,6 +166,7 @@ jobs:
           python -m pipeline stufe-c
           python -m pipeline export
           python -m pipeline kontext
+          python -m pipeline strukturdaten-seite
           python -m pipeline check
           python -m pipeline soll
 

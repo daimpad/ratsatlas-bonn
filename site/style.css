@@ -760,6 +760,23 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .nav-sw0 { background: hsla(262, 80%, 92%, 0.9); } .nav-sw1 { background: hsla(262, 80%, 84%, 0.9); } .nav-sw2 { background: hsla(264, 75%, 74%, 0.9); }
 .nav-sw3 { background: hsla(266, 70%, 62%, 0.9); } .nav-sw4 { background: hsla(268, 65%, 48%, 0.9); }
 .nav-sw-none { background: hsl(240, 6%, 82%); border-color: rgba(0, 0, 0, 0.15); }
+/* Strukturdaten (statistische Bezirke): schraffiert = in der Quelle geheim gehalten */
+.nav-sw-hatch { background: repeating-linear-gradient(45deg, #f4f4f5 0 3px, #71717a 3px 5px); border-color: rgba(0, 0, 0, 0.25); }
+.struktur-steuer { display: grid; gap: 6px; margin: 6px 0; }
+.struktur-steuer label { display: grid; gap: 2px; font-size: 12px; color: var(--text-muted); }
+.struktur-tabelle { margin-top: 4px; }
+.struktur-tabelle th:first-child { width: 52%; }
+.struktur-tabelle .link-btn { font: inherit; color: var(--accent-ink); }
+.kontext-table .s-def summary { cursor: pointer; list-style: none; }
+.kontext-table .s-def summary::-webkit-details-marker { display: none; }
+.kontext-table .s-def summary::before { content: "▸ "; color: var(--text-muted); }
+.kontext-table .s-def[open] summary::before { content: "▾ "; }
+.kontext-table .s-def span:not(.kontext-note) { display: block; margin-top: 2px; font-size: 12px; line-height: 1.35; color: var(--text-muted); }
+.s-linie { display: block; margin: 2px 0 0 auto; }
+.s-linie polyline { fill: none; stroke: #6d28d9; stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+.s-h { margin: 12px 0 4px; font-size: 13px; }
+.kontext-table.s-tab th:first-child { width: 40%; }
+.kontext-table.s-tab thead th { overflow-wrap: normal; hyphens: manual; }
 .nav-metric { display: grid; gap: 3px; margin: 8px 0 2px; font-size: 11px; color: var(--text-muted); }
 .nav-metric select { font: inherit; font-size: 12px; color: var(--text); padding: 4px 6px; border-radius: 8px;
   border: 1px solid var(--border-alt); background: var(--surface); width: 100%; box-sizing: border-box; min-width: 0; }
