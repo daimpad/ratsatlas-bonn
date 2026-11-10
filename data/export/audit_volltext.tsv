@@ -10613,6 +10613,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240255-15 AA	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 240255-16	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 240255-17 ST	kein Ort						
+240255-18	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	1
 240255-19	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 240255-20 ST	kein Ort						
 240255-21 ST	kein Ort						
@@ -11574,7 +11575,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240986-50 ST	kein Ort						
 240986-52	kein Ort						
 240986-53 ST	kein Ort						
-240986-54 AA	kein Ort						
 240986-55 AA	kein Ort						
 240986-56 ST	kein Ort						
 240986-58 AA	verortet	Hauptteil	volltext_strasse	Aennchenstraße	Alt-Godesberg	mittel	2
@@ -12090,7 +12090,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241495-01 ST	nur in Anlagen genannt, nicht verortet						
 241496	Titel ohne gemeinsamen Ort, nicht verortet						
 241497	kein Ort						
-241501-01	kein Ort						
 241502	nur in Anlagen genannt, nicht verortet						
 241503	verortet	Hauptteil	volltext_strasse+hausnummer	Graf-Stauffenberg-Straße	Kessenich	niedrig	1
 241503	verortet	Hauptteil	volltext_strasse+hausnummer	Heinrich-Lützeler-Straße	Poppelsdorf	niedrig	1
@@ -12959,10 +12958,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252468	kein Ort						
 252471	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252472	nur in Anlagen genannt, nicht verortet						
-252474	verortet	Hauptteil	volltext_strasse	Josefstraße	Bonn-Zentrum	mittel	1
-252474	verortet	Hauptteil	volltext_strasse	Lindenallee	Rüngsdorf	niedrig	1
-252475	Titel ohne gemeinsamen Ort, nicht verortet						
-252476	kein Ort						
 252477	nur in Anlagen genannt, nicht verortet						
 252478	kein Ort						
 252479	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -13412,6 +13407,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252903	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
 252903	verortet	Hauptteil	volltext_ortsteil_name	Vilich	Vilich	niedrig	1
 252903-01	verortet	Hauptteil	volltext_ortsteil_name	Mehlem	Mehlem	niedrig	1
+252903-02 ST	kein Ort						
 252903-03 ST	kein Ort						
 252904	verortet	Hauptteil	volltext_ortsteil_adjektiv	Endenich	Endenich	niedrig	1
 252905	kein Ort						

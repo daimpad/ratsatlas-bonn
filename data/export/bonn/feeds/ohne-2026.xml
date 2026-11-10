@@ -9,6 +9,22 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030398#vorlage</id>
+<title>Neue Vorlage 261142-05 AA: Grüner Änderungsantrag: Wohnen in Bonn hier: Handlungskonzept Wohnen Bonn zu DS-261142</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261142-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030398"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030395#vorlage</id>
+<title>Neue Vorlage 261865-02 AA: Grüner Änderungsantrag: Entwicklung einer kommunalen Strategie „Moderne Seniorenpolitik“ in der Bundesstadt Bonn; Zukunft braucht Erfahrung – Moderne Seniorenpolitik als Querschnittsaufgabe</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261865-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030395"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030378#vorlage</id>
 <title>Neue Vorlage 262143: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
 <updated>2026-11-10T00:00:00Z</updated>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261891"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029866"/>
 <summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029395#vorlage</id>
-<title>Neue Vorlage 261720: Erstellung des Sustainable Urban Mobility Plan (SUMP) für die Bundesstadt Bonn</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261720"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029395"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030053#vorlage</id>
-<title>Neue Vorlage 261690-01 ST: BBB-Anfrage Genehmigung privater Feuerwerke</title>
-<updated>2026-10-31T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261690-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030053"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
 </entry>
 </feed>

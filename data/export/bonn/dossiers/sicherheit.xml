@@ -9,6 +9,14 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030396#vorlage</id>
+<title>Neue Vorlage 261220-07 AA: Änderungsantrag-Grüne: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn. Hier: Einrichtung einer AG</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-07%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030396"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030377#vorlage</id>
 <title>Neue Vorlage 261220-06 AA: BSW/SBI Änderungsantrag: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums, insbesondere Crack, und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn Antrag zur Vorlage DS 261220</title>
 <updated>2026-11-10T00:00:00Z</updated>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261585-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029098"/>
 <summary>Stellungnahme der Verwaltung · federführend: 37 Feuerwehr und Rettungsdienst · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029081#vorlage</id>
-<title>Neue Vorlage 261610: Große Anfrage der Linke-Fraktion: Maßnahmen der Stadt Bonn zur Prävention von Rechtsextremismus und zum Schutz von Betroffenen rechter Gewalt</title>
-<updated>2026-08-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261610"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029081"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
 </feed>

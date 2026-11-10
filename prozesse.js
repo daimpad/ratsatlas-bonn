@@ -151,6 +151,15 @@ function besetzung(g) {
     ${b.ordentlich.some((e) => e.rolle === "Mitglied (Stv.)") ? '<p class="hint">„Mitglied (Stv.)“ bezeichnet laut Quelle Stadtverordnete als Mitglied des Gremiums, keine Stellvertretung (Deutung abgeleitet).</p>' : ""}
     <p class="hint">${esc(data.meta.besetzung_hinweis || "")}</p>`;
 }
+// Aufzeichnungen (Ratstranskripte, bonn.biz): nur Verweise, Ebene der Sitzung (transkripte/KONZEPT.md)
+function aufzeichnungen(g) {
+  const a = g.aufzeichnungen;
+  if (!a || !/^https:\/\/www\.youtube\.com\//.test(a.letzte?.video || "")) return "";
+  return `<li>Aufzeichnungen: ${num(a.anzahl)} Sitzungen seit 2021; jüngste vom ${deDate(a.letzte.datum)}:
+    <a href="${esc(a.letzte.video)}" target="_blank" rel="noopener">Video der Sitzung<span class="visually-hidden"> (YouTube, neuer Tab)</span></a> ·
+    <a href="https://bonn.biz/ratstranskripte" target="_blank" rel="noopener">Transkript durchsuchen<span class="visually-hidden"> (bonn.biz, neuer Tab)</span></a>
+    <span class="aufz-hint">automatisch erkannt, nicht amtlich</span></li>`;
+}
 function gremiumBody(g) {
   return `<p><span class="pz-art">${esc(ART[g.art] || g.art)}</span>${g.aktuell ? "" : ' <span class="derived">nicht in der laufenden Wahlperiode</span>'}</p>
     <ul class="pz-facts">
@@ -158,6 +167,7 @@ function gremiumBody(g) {
       ${g.letzte ? `<li>Letzte Sitzung: ${deDate(g.letzte)}</li>` : ""}
       ${g.naechste ? `<li>Nächste Sitzung: ${g.naechste.web ? `<a href="${href(g.naechste.web)}" target="_blank" rel="noopener">${deDate(g.naechste.datum)}<span class="visually-hidden"> (Tagesordnung, neuer Tab)</span></a>` : deDate(g.naechste.datum)}</li>` : ""}
       ${g.aufgeloest ? `<li>Aufgelöst: ${deDate(g.aufgeloest)}</li>` : ""}
+      ${aufzeichnungen(g)}
     </ul>
     ${besetzung(g)}
     ${zustaendig(g)}
