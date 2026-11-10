@@ -261,8 +261,10 @@ i.hh-e9, tr.hh-e9 > th::before { background: #b0a48a; }
 .hh-svg.hh-zoom text { opacity: 0; transition: none; }
 @media (prefers-reduced-motion: reduce) { .hh-svg text { transition: none; } }
 /* Akkordeons: Begriffe oben, Grenzen und Quellen unten, zugeklappt */
-.hh-mehr { margin: 12px 0; padding: 2px 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
-.hh-mehr[open] { padding-bottom: 12px; }
+.hh-mehr, .hh-mn { margin: 12px 0; padding: 2px 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.hh-mehr[open], .hh-mn[open] { padding-bottom: 12px; }
+.hh-mn > summary { font-weight: 600; } .hh-mn .meta { margin: 6px 0 8px; }
+.page table.hh-mn-tabelle td { white-space: nowrap; } .page table.hh-mn-tabelle td small { white-space: normal; }
 .hh-mehr ul { margin: 4px 0 0; padding-left: 20px; } .hh-mehr p { margin: 6px 0 0; font-size: 15px; }
 .hh-mehr dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 4px 0 0; font-size: 15px; }
 .hh-mehr dt { font-weight: 600; } .hh-mehr dd { margin: 0; }

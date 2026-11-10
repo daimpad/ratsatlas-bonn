@@ -27323,6 +27323,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen-Fraktion fordert eine bessere Fußweg-Verbindung zwischen dem Gebiet WestSide und Auf dem Hügel. Die Verwaltung erklärt, dass nicht der WestSide-Betreiber, sondern ein anderer Vorhabenträger für den Weg zuständig ist – frühestens 2028 fertig. Die Stadt prüft, ob der Weg früher freigegeben werden kann, sieht aber keine Eile.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-10"
    }
   },
   {
