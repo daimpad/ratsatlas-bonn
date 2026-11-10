@@ -47,6 +47,7 @@ Entscheidungen des Auftraggebers 10.11.2026: Suche vorbefüllt nur, wenn geprüf
 - Prozessschritte tragen `transkript_q`; Vorgang auf der Karte und Seite je Vorgang zeigen „Im Transkript suchen: „…““.
 - Kasten `aufz-karte` (Symbol Kamera, Schaltflächen) in `pipeline/aufzeichnungen.karte` und `site/app.js`; Themenseiten mit den festen Suchwörtern als Schaltflächen.
 - Metaangaben in Akkordeons (`pipeline/akkordeon.py`): Themenseiten (Regel je Strang „Wie zugeordnet?“, Zuordnung, Quelle von Haushalt und Ausschuss, Bildbeschreibung, Grenzen, „Quellen und Methode“), Übersicht `thema/`, Seiten je Vorgang, Gebietsseiten, Haushalt (je Einwohner, Veränderung, Investitionen, Fundstellen der Ebenen), Begriffe, Einfache Sprache („Für Fachleute“), RSS (Quelle und Lizenz). Sichtbar bleiben kurze Markierungen „abgeleitet“ an einzelnen Werten.
+- Schritt 2 (Karte): Metaangaben im Vorgang, bei Plänen und Baustellen, im Reiter „Prozesse“, in „Mitmachen“, bei Wegen und Terminen eingeklappt (`metaAcc` in `site/app.js`, Klasse `acc-meta`). Sichtbar bleiben die Rechtsgrundlage je Schritt (kurze Fundstelle am Schritt), der Hinweis vor der Suche im Text der Dokumente (Datenschutz) und die KI-Hinweise bei Kurzfassung und Assistent.
 
 ## Offen
 

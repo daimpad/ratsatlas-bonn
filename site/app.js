@@ -56,6 +56,9 @@
     <p><a href="einfach/">Der Ratsatlas in Einfacher Sprache</a></p></div>${LIMITS}`;
 
   const $ = (s) => document.querySelector(s);
+  // Metaangaben eingeklappt (Entscheidung des Auftraggebers 10.11.2026; wie pipeline/akkordeon.py): Quellen, Regeln,
+  // Methode; kurze Markierungen „abgeleitet“ an einzelnen Werten bleiben sichtbar
+  const metaAcc = (titel, html) => `<details class="acc acc-meta"><summary>${titel}</summary><p class="hint">${html}</p></details>`;
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   // nur http(s)-Adressen aus den Daten werden zu Links
   const TRANSKRIPTE = "https://bonn.biz/ratstranskripte";
@@ -820,7 +823,7 @@
     return `<section class="kontext-vorgang" aria-labelledby="kontext-h"><h4 id="kontext-h">Zum Ortsteil ${esc(ot)} <span class="derived">abgeleitet</span></h4>
       <table class="kontext-table"><thead><tr><th scope="col">Kennzahl</th><th scope="col">${esc(ot)}</th><th scope="col">Stadtbezirk ${esc(bez)}</th></tr></thead>
       <tbody>${rows}</tbody></table>
-      <p class="hint">Einordnung, kein Beleg für die Vorlage und kein Urteil über den Ortsteil. Auswahl nach dem abgeleiteten Thema; Werte auf Ortsteile umgerechnet.${v.einwohner < kontext.meta.mindest_einwohner ? ` Unter ${de(kontext.meta.mindest_einwohner)} Einwohnern keine Anteile und Mittelwerte.` : ""} Quellen: ${qs}.</p></section>`;
+      ${metaAcc("Quellen und Hinweise", `Einordnung, kein Beleg für die Vorlage und kein Urteil über den Ortsteil. Auswahl nach dem abgeleiteten Thema; Werte auf Ortsteile umgerechnet.${v.einwohner < kontext.meta.mindest_einwohner ? ` Unter ${de(kontext.meta.mindest_einwohner)} Einwohnern keine Anteile und Mittelwerte.` : ""} Quellen: ${qs}.`)}</section>`;
   }
   // Strukturdaten der Statistikstelle (strukturdaten.json, pipeline/strukturdaten.py; strukturdaten/PHASE1–3.md):
   // Flächen der 65 statistischen Bezirke nach zwölf ausgewählten relativen Kennzahlen, Steckbrief je Gebiet, Vergleich
@@ -1678,7 +1681,7 @@
       <dl class="facts">${ortsteile.length ? `<dt>Ortsteile</dt><dd>${esc(ortsteile.join(", "))}</dd>` : ""}
         ${match ? `<dt>Zuordnung</dt><dd>${esc(match)} <span class="derived">abgeleitet, Plannummer im Titel</span></dd>` : ""}</dl>
       ${reg ? `<h4>Planchronik</h4>
-        <p class="hint">Verfahrensschritte nach BauGB als Soll; eine Vorlage ist einem Schritt zugeordnet, wenn ihr Titel ihn nennt (abgeleitet). Vereinfachte Verfahren (§§ 13, 13a BauGB) kennen weniger Schritte. „soll“ heißt: keine Vorlage seit Oktober 2019 nennt den Schritt – nicht, dass er fehlt.</p>
+        ${metaAcc("So ist die Planchronik gebildet", "Verfahrensschritte nach BauGB als Soll; eine Vorlage ist einem Schritt zugeordnet, wenn ihr Titel ihn nennt (abgeleitet). Vereinfachte Verfahren (§§ 13, 13a BauGB) kennen weniger Schritte. „soll“ heißt: keine Vorlage seit Oktober 2019 nennt den Schritt – nicht, dass er fehlt.")}
         <ol class="steps">${steps}${final}</ol>
         <h4>Vorlagen mit dieser Plannummer (${vorlagen.length})</h4>
         ${vorlagen.length ? `<ol class="related plan-papers">${vorlagen.map(item).join("")}</ol>` : "<p>Keine Vorlage seit Oktober 2019 nennt diese Plannummer im Titel.</p>"}` : ""}
@@ -1704,7 +1707,7 @@
     highlight();
     $("#detail-heading").textContent = "Bebauungspläne";
     $("#detail").innerHTML = `<h3 tabindex="-1">Bebauungspläne mit Vorlagen · ${esc(area.name || "")}</h3>
-      <p class="hint">Pläne, deren Nummer im Titel einer Vorlage dieses Gebiets steht. Die Karte zeigt alle rechtskräftigen Pläne der Stadt.</p>
+      ${metaAcc("Welche Pläne hier stehen", "Pläne, deren Nummer im Titel einer Vorlage dieses Gebiets steht. Die Karte zeigt alle rechtskräftigen Pläne der Stadt.")}
       ${list.length ? `<ul class="related">${list.map((e) => `<li><button type="button" class="link-btn" data-open-plan="${esc(e.nr)}">Bebauungsplan ${esc(e.nr)}</button> · ${e.vorlagen.length} ${e.vorlagen.length === 1 ? "Vorlage" : "Vorlagen"}</li>`).join("")}</ul>` : "<p>Keine Vorlage dieses Gebiets nennt eine Plannummer.</p>"}`;
     if (MOBILE.matches || $("#panel-detail").hidden) setPanel("panel-detail", true);
     $("#detail h3").focus();
@@ -1780,7 +1783,7 @@
       </dl>
       ${changes ? `<h4>Geänderte Termine</h4><ul class="related">${changes}</ul>` : ""}
       <h4>Mögliche Umsetzung</h4>
-      ${b.kandidaten.length ? `<p class="hint"><span class="derived">abgeleitet</span> ${esc(UMSETZUNG_HINT)}</p><ul class="related plan-papers">${b.kandidaten.map((c) => candHtml(c)).join("")}</ul>`
+      ${b.kandidaten.length ? `<p class="hint"><span class="derived">abgeleitet</span></p>${metaAcc("Wie die möglichen Umsetzungen gefunden werden", esc(UMSETZUNG_HINT))}<ul class="related plan-papers">${b.kandidaten.map((c) => candHtml(c)).join("")}</ul>`
         : `<p>${b.fremd ? "Für Baustellen anderer Träger werden keine Beschlüsse gesucht." : "Kein Beschluss erfüllt alle Kriterien (räumlich, zeitlich, gleiche Straße, Tiefbau oder Verkehr, Bau-Stichwort, Baubeschluss)."}</p>`}
       <details class="acc"><summary>Was diese Angaben nicht zeigen</summary><ul>${bau.meta.hinweise.map((h) => `<li>${esc(h)}</li>`).join("")}</ul></details>
       <details class="acc"><summary>Quellen</summary><ul>
@@ -1801,7 +1804,7 @@
     highlight();
     $("#detail-heading").textContent = "Baustellen";
     $("#detail").innerHTML = `<h3 tabindex="-1">Baustellen · ${esc(area.name || "ganz Bonn")}</h3>
-      <p class="hint">Gemeldete Baustellen mit Einfluss auf den Verkehr; Termine unverbindlich.</p>
+      ${metaAcc("Quelle und Hinweise", "Gemeldete Baustellen mit Einfluss auf den Verkehr; Termine unverbindlich.")}
       ${list.length ? `<ul class="related plan-papers">${list.map((b) => `<li><button type="button" class="link-btn" data-open-site="${esc(b.id)}">${esc(b.bezeichnung)}</button> · ${esc(b.massnahme || "")} · ${fmtDate(b.von)} – ${fmtDate(b.bis)} · ${SITE_STATE[siteState(b)]}${b.fremd ? " · anderer Träger" : ""}${b.kandidaten.length ? ' · <span class="derived">mögliche Umsetzung</span>' : ""}</li>`).join("")}</ul>` : "<p>In diesem Gebiet ist derzeit keine Baustelle gemeldet.</p>"}`;
     if (MOBILE.matches || $("#panel-detail").hidden) setPanel("panel-detail", true);
     $("#detail h3").focus();
@@ -1848,7 +1851,7 @@
       : s.passung === "ohne Beratung" ? '<p class="hint">In den Daten ist keine Beratung verzeichnet; ein Abgleich entfällt.</p>' : "";
     const body = v ? `<p><strong>${esc(v.titel)}</strong>${v.kurz ? ` – ${esc(v.kurz)}` : ""}<br>
         <span class="derived">Zuordnung abgeleitet: ${esc(s.grund)}; Sicherheit ${esc(s.sicherheit)}</span></p>${befund}
-      <p class="hint">Schritte nach Regelwerk. Nicht jeder Schritt kommt in jedem Fall vor. Abgeglichen wird nur, ob ein Gremium dieser Art beraten hat.</p>
+      ${metaAcc("So ist das Soll gebildet", "Schritte nach Regelwerk. Nicht jeder Schritt kommt in jedem Fall vor. Abgeglichen wird nur, ob ein Gremium dieser Art beraten hat.")}
       <ol class="steps">${v.schritte.map((st) => sollStep(st, d, ist)).join("")}</ol>`
       : `<p>Vorlagenart „${esc(p.paper_type)}“: ${esc(d.ohne_soll[p.paper_type] || "kein Verfahren im Regelwerk; kein Soll angenommen.")}</p>`;
     const zusto = zustoHtml(p, d);
@@ -1870,7 +1873,7 @@
     return `<li class="step" data-status="abgeleitet"><span class="mark mark-abgeleitet" aria-hidden="true"></span>
       <div class="step-head">Mögliche Umsetzung<span class="step-status">abgeleitet</span></div>
       <div class="step-body">${hits.map(({ b, c }) => `Baustelle <button type="button" class="link-btn" data-open-site="${esc(b.id)}">${esc(b.bezeichnung)}</button>, ${esc(b.massnahme || "")}, ${fmtDate(b.von)} – ${fmtDate(b.bis)} (unverbindlich)<ul class="related">${candHtml(c, true)}</ul>`).join("")}
-        <div class="hint">${esc(UMSETZUNG_HINT)} Ob und wie die Verwaltung den Beschluss umsetzt, bleibt unklar.</div></div></li>`;
+        ${metaAcc("Wie die mögliche Umsetzung gefunden wird", `${esc(UMSETZUNG_HINT)} Ob und wie die Verwaltung den Beschluss umsetzt, bleibt unklar.`)}</div></li>`;
   }
 
   // Beteiligung: nächste Sitzung eines beteiligten Gremiums (laut Sitzungsliste der Stadt), Bürgerantrag
@@ -1888,7 +1891,7 @@
       ${meeting}${done}
       ${p.soll?.verfahren === "buergerantrag" ? "" : `<li data-generic="buergerantrag">Mit einem <a href="${BUERGERANTRAG}" target="_blank" rel="noopener">Bürgerantrag nach § 24 GO NRW<span class="visually-hidden"> (Seite der Stadt Bonn, neuer Tab)</span></a> bringen Sie Anregungen und Beschwerden selbst ein.</li>`}
       ${hasPaperFeed(p) ? "<li data-generic=\"feed\">Mit dem Feed „Diesen Vorgang abonnieren“ (unten) erfahren Sie von neuen Beratungen und Ergebnissen.</li>" : ""}
-    </ul><p class="hint mitwirken-hint" hidden></p></section>`;
+    </ul><details class="acc acc-meta mitwirken-hint" hidden><summary>Grundlage der Hinweise</summary><p class="hint"></p></details></section>`;
   }
   // Mitwirkung nach Regelwerk (site/mitwirken.js): ersetzt die allgemeinen Hinweise, wo eine Regel genauer ist
   let mitwirkenMod = null;
@@ -1913,7 +1916,7 @@
     const feed = ul.querySelector('[data-generic="feed"]');
     if (feed) feed.insertAdjacentHTML("beforebegin", items); else ul.insertAdjacentHTML("beforeend", items);
     const hint = document.querySelector("#detail .mitwirken-hint");
-    hint.textContent = "Hinweise nach dem Regelwerk: vereinfachtes Modell aus „Bonn entscheidet“, Anrede angepasst. Stand und Termin sind aus den Daten abgeleitet. Keine Rechtsauskunft.";
+    hint.querySelector("p").textContent = "Hinweise nach dem Regelwerk: vereinfachtes Modell aus „Bonn entscheidet“, Anrede angepasst. Stand und Termin sind aus den Daten abgeleitet. Keine Rechtsauskunft.";
     hint.hidden = false;
   }
 
@@ -2032,7 +2035,7 @@
     box.dataset.loaded = "1";
     const types = data.types.filter((t) => t.count >= 20).length ? data.types.filter((t) => t.count >= 20) : data.types;
     box.innerHTML = `<label class="filters">Vorlagenart <select id="wege-type">${types.map((t) => `<option>${esc(t.paper_type)}</option>`).join("")}</select></label>
-      <p class="hint">Weg = Folge der Beratungen (Gremium und Rolle) laut OParl-API. Am Ende steht das Ergebnis der entscheidenden Beratung, wörtlich aus der Quelle (in Anführungszeichen), oder ersatzweise der Stand des Verfahrens. Ganz Bonn.</p>
+      <p class="hint">Ganz Bonn.</p>${metaAcc("So sind die Wege gebildet", "Weg = Folge der Beratungen (Gremium und Rolle) laut OParl-API. Am Ende steht das Ergebnis der entscheidenden Beratung, wörtlich aus der Quelle (in Anführungszeichen), oder ersatzweise der Stand des Verfahrens.")}
       <div id="wege-list"></div>${LIMITS}`;
     const draw = () => {
       const t = types.find((x) => x.paper_type === $("#wege-type").value);
@@ -2111,7 +2114,7 @@
         ${ps.length ? `<div class="agenda"><span>Aus ${esc(where)} auf der Tagesordnung:</span><ul>${ps.map((p) => `<li><button type="button" class="linkish" data-ref="${esc(p.reference)}">${esc(p.reference)} – ${esc(p.name)}</button></li>`).join("")}</ul></div>` : ""}
       </div>`;
     }).join("");
-    box.innerHTML = `<p class="hint">Sitzungen von Rat, Ausschüssen, Beiräten und Bezirksvertretungen laut OParl-API der Stadt. Sie sind in der Regel öffentlich; Ort und Tagesordnung stehen in der Einladung, die etwa zwei Wochen vorher erscheint.</p>
+    box.innerHTML = `<p class="hint">Sitzungen sind in der Regel öffentlich; Ort und Tagesordnung stehen in der Einladung, die etwa zwei Wochen vorher erscheint.</p>${metaAcc("Quelle", "Sitzungen von Rat, Ausschüssen, Beiräten und Bezirksvertretungen laut OParl-API der Stadt Bonn (CC0).")}
       <div class="filters termine-filters"><label>Gremien
         <select id="termine-scope"><option value="gebiet"${scope === "gebiet" ? " selected" : ""}>${bezirk ? `Rat, Ausschüsse und Bezirksvertretung ${esc(bezirk)}` : "alle (kein Stadtbezirk gewählt)"}</option>
         <option value="alle"${scope === "alle" ? " selected" : ""}>alle Gremien</option></select></label>
