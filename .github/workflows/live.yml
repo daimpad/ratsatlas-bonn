@@ -121,3 +121,17 @@ jobs:
           if [ -n "$neu" ] && [ -n "$alt" ] && [ "$neu" != "$alt" ]; then
             echo "::warning::Strukturdatenatlas mit neuem Stand $neu (im Repository $alt): python -m pipeline strukturdaten ausführen"
           else echo "ok  Strukturdatenatlas ${alt:-unbekannt}"; fi
+          # Aktuelle Geometrie der statistischen Bezirke (stadtplan.bonn.de, OD=4859; am 10.11.2026 nicht erreichbar):
+          # Hinweis, sobald sie 65 Flächen liefert und das Repository noch die Kartengeometrie des Atlas nutzt; Übernahme
+          # erst nach Vergleich und Freigabe (GEOMETRIE_FREIGEGEBEN in pipeline/strukturdaten.py, Entscheidung 10.11.2026)
+          ng=$(curl -fsSL --max-time 120 "https://stadtplan.bonn.de/geojson?OD=4859" \
+            | python3 -c 'import json,sys;print(len(json.load(sys.stdin)["features"]))' 2>/dev/null) || ng=""
+          gm=$(curl -fsSL "https://raw.githubusercontent.com/${{ github.repository }}/main/data/strukturdaten/meta.json" \
+            | python3 -c 'import json,sys;m=json.load(sys.stdin);print(m.get("geometrie_quelle",""), m.get("geometrie_stadt",""))' || true)
+          if [ "${ng:-0}" = "65" ] && [ "${gm%% *}" != "stadtplan" ]; then
+            if [ "${gm#* }" = "geprüft" ]; then
+              echo "::warning::Geometrie der statistischen Bezirke erreichbar, Vergleich liegt vor (audit_geometrie_vergleich.tsv): Freigabe offen"
+            else
+              echo "::warning::Geometrie der statistischen Bezirke wieder erreichbar (65 Flächen): python -m pipeline strukturdaten ausführen und den Vergleich prüfen"
+            fi
+          else echo "ok  Geometrie der statistischen Bezirke (Stadt: ${ng:-nicht erreichbar} Flächen; im Repository: ${gm%% *})"; fi
