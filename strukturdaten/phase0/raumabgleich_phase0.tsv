@@ -1,0 +1,109 @@
+stat_bezirk	name	ortsteil	flaechenanteil	einwohneranteil	einordnung
+110	Zentrum-Rheinviertel	Bonn-Zentrum	0.997	1.000	liegt im Ortsteil
+111	Zentrum-Münsterviertel	Bonn-Zentrum	0.998	1.000	liegt im Ortsteil
+112	Wichelshof	Bonn-Castell	0.999	1.000	liegt im Ortsteil
+113	Vor dem Sterntor	Nordstadt	0.997	1.000	liegt im Ortsteil
+114	Rheindorfer Vorstadt	Bonn-Castell	0.800	0.740	geteilt
+114	Rheindorfer Vorstadt	Nordstadt	0.199	0.260	geteilt
+115	Ellerviertel	Nordstadt	0.919	0.959	geteilt
+115	Ellerviertel	Tannenbusch	0.073	0.030	geteilt
+115	Ellerviertel	Weststadt	0.005	0.011	geteilt
+116	Bonn-Güterbahnhof	Weststadt	0.998	1.000	liegt im Ortsteil
+117	Baumschulviertel	Weststadt	0.991	0.995	liegt im Ortsteil
+117	Baumschulviertel	Endenich	0.001	0.005	liegt im Ortsteil
+117	Baumschulviertel	Poppelsdorf	0.008	0.000	liegt im Ortsteil
+118	Bonner Talviertel	Südstadt	0.999	1.000	liegt im Ortsteil
+119	Vor dem Koblenzer Tor	Südstadt	0.589	0.511	geteilt
+119	Vor dem Koblenzer Tor	Gronau	0.403	0.489	geteilt
+119	Vor dem Koblenzer Tor	Bonn-Zentrum	0.008	0.000	geteilt
+120	Neu-Endenich	Endenich	0.995	1.000	liegt im Ortsteil
+121	Alt-Endenich	Endenich	0.999	1.000	liegt im Ortsteil
+122	Poppelsdorf	Poppelsdorf	0.914	0.988	liegt im Ortsteil
+122	Poppelsdorf	Endenich	0.083	0.011	liegt im Ortsteil
+123	Kessenich	Kessenich	0.979	0.970	liegt im Ortsteil
+123	Kessenich	Dottendorf	0.020	0.030	liegt im Ortsteil
+124	Dottendorf	Dottendorf	1.000	1.000	liegt im Ortsteil
+125	Venusberg	Venusberg	0.999	1.000	liegt im Ortsteil
+126	Ippendorf	Ippendorf	0.999	1.000	liegt im Ortsteil
+127	Röttgen	Röttgen	0.998	1.000	liegt im Ortsteil
+128	Ückesdorf	Ückesdorf	0.994	1.000	liegt im Ortsteil
+128	Ückesdorf	Brüser Berg	0.005	0.000	liegt im Ortsteil
+129	Kottenforst	Röttgen	0.999	1.000	liegt im Ortsteil
+131	Alt-Tannenbusch	Tannenbusch	1.000	1.000	liegt im Ortsteil
+132	Neu-Tannenbusch	Tannenbusch	0.994	1.000	liegt im Ortsteil
+133	Buschdorf	Buschdorf	0.998	1.000	liegt im Ortsteil
+134	Auerberg	Auerberg	0.999	1.000	liegt im Ortsteil
+135	Grau-Rheindorf	Graurheindorf	0.993	1.000	liegt im Ortsteil
+135	Grau-Rheindorf	Auerberg	0.006	0.000	liegt im Ortsteil
+136	Dransdorf	Dransdorf	0.933	0.992	liegt im Ortsteil
+136	Dransdorf	Lessenich/Meßdorf	0.055	0.008	liegt im Ortsteil
+136	Dransdorf	Tannenbusch	0.011	0.001	liegt im Ortsteil
+137	Lessenich/Meßdorf	Lessenich/Meßdorf	0.953	1.000	liegt im Ortsteil
+137	Lessenich/Meßdorf	Dransdorf	0.045	0.000	liegt im Ortsteil
+141	Gronau-Bundesviertel	Gronau	0.997	1.000	liegt im Ortsteil
+242	Hochkreuz-Bundesviertel	Hochkreuz	0.864	0.871	geteilt
+242	Hochkreuz-Bundesviertel	Friesdorf	0.109	0.115	geteilt
+242	Hochkreuz-Bundesviertel	Plittersdorf	0.025	0.013	geteilt
+251	Godesberg-Zentrum	Alt-Godesberg	0.999	0.994	liegt im Ortsteil
+251	Godesberg-Zentrum	Godesberg-Villenviertel	0.001	0.006	liegt im Ortsteil
+252	Godesberg-Kurviertel	Alt-Godesberg	0.866	0.996	liegt im Ortsteil
+252	Godesberg-Kurviertel	Heiderhof	0.132	0.004	liegt im Ortsteil
+253	Schweinheim	Schweinheim	0.925	1.000	liegt im Ortsteil
+253	Schweinheim	Heiderhof	0.070	0.000	liegt im Ortsteil
+254	Godesberg-Nord	Godesberg-Nord	0.998	1.000	liegt im Ortsteil
+255	Godesberg-Villenviertel	Godesberg-Villenviertel	0.932	0.892	geteilt
+255	Godesberg-Villenviertel	Rüngsdorf	0.068	0.108	geteilt
+260	Friesdorf	Friesdorf	0.995	0.998	liegt im Ortsteil
+261	Neu-Plittersdorf	Plittersdorf	0.997	1.000	liegt im Ortsteil
+262	Alt-Plittersdorf	Plittersdorf	0.999	0.976	liegt im Ortsteil
+262	Alt-Plittersdorf	Godesberg-Villenviertel	0.001	0.024	liegt im Ortsteil
+263	Rüngsdorf	Rüngsdorf	0.998	0.980	liegt im Ortsteil
+263	Rüngsdorf	Pennenfeld	0.001	0.020	liegt im Ortsteil
+264	Muffendorf	Muffendorf	0.998	1.000	liegt im Ortsteil
+265	Pennenfeld	Pennenfeld	0.980	0.987	liegt im Ortsteil
+265	Pennenfeld	Lannesdorf	0.019	0.013	liegt im Ortsteil
+266	Lannesdorf	Lannesdorf	0.996	1.000	liegt im Ortsteil
+267	Mehlem-Rheinaue	Mehlem	0.998	1.000	liegt im Ortsteil
+268	Obermehlem	Mehlem	0.998	1.000	liegt im Ortsteil
+269	Heiderhof	Heiderhof	0.998	1.000	liegt im Ortsteil
+371	Beuel-Zentrum	Beuel-Mitte	0.999	1.000	liegt im Ortsteil
+372	Vilich/Rheindorf	Schwarzrheindorf / Vilich-Rheindorf	0.664	0.789	geteilt
+372	Vilich/Rheindorf	Vilich	0.284	0.195	geteilt
+372	Vilich/Rheindorf	Beuel-Mitte	0.052	0.016	geteilt
+373	Beuel-Ost	Vilich	0.410	0.621	geteilt
+373	Beuel-Ost	Beuel-Ost	0.507	0.357	geteilt
+373	Beuel-Ost	Küdinghoven	0.066	0.016	geteilt
+373	Beuel-Ost	Limperich	0.015	0.006	geteilt
+374	Beuel-Süd	Limperich	0.568	0.577	geteilt
+374	Beuel-Süd	Beuel-Mitte	0.323	0.423	geteilt
+374	Beuel-Süd	Ramersdorf	0.108	0.000	geteilt
+380	Siegaue	Schwarzrheindorf / Vilich-Rheindorf	0.422	0.833	geteilt
+380	Siegaue	Geislar	0.578	0.167	geteilt
+381	Geislar	Geislar	0.998	1.000	liegt im Ortsteil
+382	Vilich-Müldorf	Vilich- Müldorf	0.994	0.996	liegt im Ortsteil
+383	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	0.996	1.000	liegt im Ortsteil
+384	Limperich/Küdinghoven/Ramersdorf	Küdinghoven	0.350	0.440	geteilt
+384	Limperich/Küdinghoven/Ramersdorf	Limperich	0.367	0.311	geteilt
+384	Limperich/Küdinghoven/Ramersdorf	Ramersdorf	0.282	0.248	geteilt
+385	Oberkassel	Oberkassel	0.788	0.974	liegt im Ortsteil
+385	Oberkassel	Ramersdorf	0.210	0.026	liegt im Ortsteil
+386	Holzlar	Holzlar	0.997	1.000	liegt im Ortsteil
+387	Hoholz	Holzlar	0.497	0.703	geteilt
+387	Hoholz	Hoholz	0.502	0.297	geteilt
+388	Holtorf	Holtorf	0.822	1.000	liegt im Ortsteil
+388	Holtorf	Oberkassel	0.177	0.000	liegt im Ortsteil
+389	Ennert	Holtorf	0.319	0.913	geteilt
+389	Ennert	Küdinghoven	0.192	0.087	geteilt
+389	Ennert	Oberkassel	0.284	0.000	geteilt
+389	Ennert	Ramersdorf	0.205	0.000	geteilt
+491	Duisdorf-Zentrum	Duisdorf	1.000	1.000	liegt im Ortsteil
+492	Finkenhof	Duisdorf	0.998	1.000	liegt im Ortsteil
+493	Medinghoven	Duisdorf	0.999	1.000	liegt im Ortsteil
+494	Brüser Berg	Brüser Berg	0.623	0.947	geteilt
+494	Brüser Berg	Duisdorf	0.171	0.050	geteilt
+494	Brüser Berg	Hardthöhe	0.205	0.003	geteilt
+495	Lengsdorf	Lengsdorf	0.999	1.000	liegt im Ortsteil
+496	Duisdorf-Nord	Duisdorf	0.997	0.967	geteilt
+496	Duisdorf-Nord	Lessenich/Meßdorf	0.003	0.033	geteilt
+497	Neu-Duisdorf	Duisdorf	0.705	0.729	geteilt
+497	Neu-Duisdorf	Lengsdorf	0.290	0.271	geteilt
