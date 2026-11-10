@@ -852,3 +852,10 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .aufz-mehr { margin-top: 6px; font-size: 13px; }
 .aufz-mehr summary { cursor: pointer; font-weight: 600; color: var(--accent-ink); font-size: 13px; padding: 2px 0; }
 .aufz-mehr p { margin-top: 4px !important; color: var(--muted-aufz, #5a5a68); }
+
+/* Metaangaben eingeklappt (metaAcc in app.js, Entscheidung 10.11.2026): leiser als Inhalt */
+.acc-meta { background: transparent; }
+.acc-meta > summary { font-size: 13px; color: var(--text-muted); padding: 6px 12px; }
+.acc-meta > summary:hover { color: var(--accent-ink); }
+.acc-meta > p.hint { margin: 0; }
+.pz-more.acc-meta > summary { padding: 6px 0; font-size: 13px; }
