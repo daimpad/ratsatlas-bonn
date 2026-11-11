@@ -10,6 +10,11 @@ on:
   schedule:
     - cron: "17 4 * * *"
   workflow_dispatch:
+    inputs:
+      indexnow_alle:
+        description: "IndexNow: alle Adressen der Sitemaps melden (einmalig), nicht nur die geänderten"
+        type: boolean
+        default: false
 
 # Rechte je Job (Härtung 01.11.2026): Lesen als Vorgabe, Schreiben nur, wo ein Job es braucht
 permissions:
@@ -22,6 +27,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      deploy_sha: ${{ steps.deploy.outputs.sha }}
     permissions:
       contents: write   # Branches deploy und kurzfassungen
       pages: read       # configure-pages liest die Einstellungen von GitHub Pages
@@ -269,6 +276,7 @@ jobs:
       # Ohne Datenpaket (Zip, täglich vollständig neu), damit die Historie nur um die Änderungen
       # wächst; auf dem eigenen Server verweist der Link auf das Paket bei GitHub Pages.
       - name: Fertige Seite in den Branch deploy schreiben
+        id: deploy
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -290,9 +298,15 @@ jobs:
           sed -i 's|href="data/export/allris-bonn-export.zip"|href="https://daimpad.github.io/ratsatlas-bonn/data/export/allris-bonn-export.zip"|' _deploy/index.html _deploy/datenschutz.html
           cd _deploy
           git add -A
-          if git diff --cached --quiet; then echo "Seite unverändert"; exit 0; fi
+          if git diff --cached --quiet; then
+            echo "Seite unverändert"
+            # beim einmaligen Melden aller Seiten auch ohne neuen Stand
+            if [ "${{ inputs.indexnow_alle }}" = "true" ]; then echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"; fi
+            exit 0
+          fi
           git commit -q -m "Seite aus ${GITHUB_SHA::7}, erzeugt $(date -u +%F)"
           git push -q "$url" HEAD:deploy
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b  # v5.0.0
 
@@ -317,6 +331,36 @@ jobs:
         # („syncing_files“); die Seite auf der Hauptadresse hängt davon nicht ab.
         with:
           timeout: 1200000
+
+  # IndexNow (Entscheidungen des Auftraggebers 11.11.2026): eigener Job, damit GitHub Pages nicht wartet; nur bei einem
+  # neuen Stand von deploy; meldet die geänderten Seiten, sobald die Hauptadresse ihn zeigt (höchstens 10 Minuten).
+  # Fehler bei IndexNow sind Warnungen. Auf Knopfdruck mit indexnow_alle einmalig alle Adressen der Sitemaps.
+  indexnow:
+    needs: build
+    if: needs.build.outputs.deploy_sha != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Abhängigkeiten
+        run: pip install -r requirements.txt
+
+      - name: Stand von deploy mit Vorgänger holen
+        run: |
+          git init -q _deploy
+          git -C _deploy fetch -q --depth 2 "https://github.com/${{ github.repository }}.git" "${{ needs.build.outputs.deploy_sha }}"
+          git -C _deploy checkout -q FETCH_HEAD
+
+      - name: Geänderte Seiten an IndexNow melden
+        run: python -m pipeline indexnow
+        env:
+          DEPLOY_DIR: _deploy
+          INDEXNOW_ALLE: ${{ inputs.indexnow_alle }}
 
   # Neue Kurzfassungen (Mistral; täglich höchstens 500, nach einem Merge 50) nach dem Veröffentlichen, damit die Seite
   # nicht auf das Sprachmodell wartet; sie erscheinen mit dem nächsten Lauf. Rohdaten und Volltexte aus dem Zwischen-

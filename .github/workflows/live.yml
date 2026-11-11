@@ -90,6 +90,10 @@ jobs:
           check https://bonn.ratsatlas.de/sitemap-vorgaenge.xml "<urlset"
           seite=$(curl -fsSL --retry 3 --retry-delay 10 https://bonn.ratsatlas.de/sitemap-vorgaenge.xml | grep -o '<loc>[^<]*' | head -1 | cut -c6-) || seite=""
           if [ -n "$seite" ]; then check "$seite" "Beratungsfolge"; else echo "::error::sitemap-vorgaenge.xml ohne Seiten"; fail=1; fi
+          # IndexNow-Schlüssel (seit 11.11.2026): Datei <schlüssel>.txt mit dem Schlüssel aus pipeline/indexnow.py
+          key=$(curl -fsSL "https://raw.githubusercontent.com/${{ github.repository }}/main/pipeline/indexnow.py" | sed -n 's/^SCHLUESSEL = "\([0-9a-f]*\)".*/\1/p') || key=""
+          if [ -z "$key" ]; then echo "::error::Schlüssel in pipeline/indexnow.py nicht gefunden"; fail=1
+          else check "https://bonn.ratsatlas.de/$key.txt" "$key"; fi
           # Datenstand höchstens zwei Tage alt
           stand=$(curl -fsSL https://bonn.ratsatlas.de/data/export/bonn/index.json | python3 -c 'import json,sys;print(json.load(sys.stdin)["meta"]["generated_at"][:10])') || stand=""
           if [ -z "$stand" ] || [ $(( ( $(date -u +%s) - $(date -u -d "$stand" +%s) ) / 86400 )) -gt 2 ]; then
