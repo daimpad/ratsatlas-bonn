@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-godesberg-villenviertel</id>
 <title>Ratsatlas Bonn – Godesberg-Villenviertel</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Godesberg-Villenviertel</subtitle>
-<updated>2026-10-14T00:00:00Z</updated>
+<updated>2026-11-11T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-godesberg-villenviertel.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030337#vorlage</id>
+<title>Neue Vorlage 262124: Fällgenehmigung für eine Italienische Zypresse und einen Riesen-Lebensbaum auf dem Grundstück Scharnhorststr. [Hausnummer ausgelassen], 53173 Bonn</title>
+<updated>2026-11-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#262124"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030337"/>
+<summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029839#vorlage</id>
 <title>Neue Vorlage 261880: Einwohnerfrage: Trafostation und Glasfaserverteiler am Hohenzollernplatz</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#241264"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018386"/>
 <summary>Entscheidung am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019848#vorlage</id>
-<title>Neue Vorlage 241719-01 ST: CDU-Antrag: Anlage einer insektenfreundlichen Bepflanzung auf dem Grünstreifen in der Mitte der Augustastraße in Bad Godesberg</title>
-<updated>2024-10-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#241719-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019848"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die CDU-Fraktion schlägt vor, auf dem Mittelstreifen der Augustastraße in Bad Godesberg zwischen Jahnallee und Welfenstraße insektenfreundliche Pflanzen und Bäume zu setzen, um die Artenvielfalt zu erhöhen. Die Verwaltung unterstützt den Antrag mit Änderungen: Statt Stauden sollen gezielt Blumen gepflanzt und etwa sechs bis sieben Bäume – angepasst an Leitungen – gesetzt werden. Eine Genehmigung des Denkmalschutzes ist nötig.</summary>
 </entry>
 </feed>

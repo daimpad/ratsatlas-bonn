@@ -3,11 +3,35 @@
 <id>tag:allris-bonn,2026:feed/bezirk-beuel</id>
 <title>Ratsatlas Bonn – Stadtbezirk Beuel, ohne genaueren Ort</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Stadtbezirk Beuel, ohne genaueren Ort</subtitle>
-<updated>2026-11-10T00:00:00Z</updated>
+<updated>2026-11-11T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/bezirk-beuel.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030432#vorlage</id>
+<title>Neue Vorlage 262169: BBB-Anfrage Übermittagsbetreuung für Kinder</title>
+<updated>2026-11-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#262169"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030432"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030415#vorlage</id>
+<title>Neue Vorlage 262162: Linke-Antrag: Errichtung zusätzlicher Trinkbrunnen im Stadtbezirk Beuel</title>
+<updated>2026-11-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#262162"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030415"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030414#vorlage</id>
+<title>Neue Vorlage 262161: Linke Große Anfrage: Veränderung der Verkehrsflüsse im Stadtbezirk Beuel infolge der Sperrung der A565 (Nordbrücke)</title>
+<updated>2026-11-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#262161"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030414"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030250#vorlage</id>
 <title>Neue Vorlage 261954-01 ST: Stellungnahme zur Volt-Anfrage: Hitzeschutz für Wohnungslose</title>
@@ -242,7 +266,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028269#beratung-2026-09-22-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „vertagt“ – 261281 Fortschreibung des Rahmenplans zur Neuordnung der Bonner Bäderlandschaft</title>
+<title>Bezirksvertretung Hardtberg: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261281 Fortschreibung des Rahmenplans zur Neuordnung der Bonner Bäderlandschaft</title>
 <updated>2026-09-22T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#261281"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028269"/>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#260932"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027450"/>
 <summary>Anhörung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028412#vorlage</id>
-<title>Neue Vorlage 261319: BBB-Dringlichkeitsantrag: Maßnahmen in Beuel im Zusammenhang mit der Sperrung der Nordbrücke</title>
-<updated>2026-07-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#261319"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028412"/>
-<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028412#beratung-2026-07-01-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „abgelehnt“ – 261319 BBB-Dringlichkeitsantrag: Maßnahmen in Beuel im Zusammenhang mit der Sperrung der Nordbrücke</title>
-<updated>2026-07-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#261319"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028412"/>
-<summary>Entscheidung am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028397#vorlage</id>
-<title>Neue Vorlage 260932-05 AA: Grüne-ÄA: 16. Änderung der Parkgebührenordnung Antrag zur Vorlage 260932</title>
-<updated>2026-07-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#260932-05%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028397"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 </feed>

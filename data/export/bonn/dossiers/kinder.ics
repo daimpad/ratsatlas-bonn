@@ -84,6 +84,7 @@ BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005627
 DTSTAMP:20261110T170000Z
 DTSTART:20261110T170000Z
+DTEND:20261110T190900Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung: https://
  www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005627\nEinladung: https:
@@ -122,9 +123,11 @@ DTSTAMP:20261125T170000Z
 DTSTART:20261125T170000Z
 SUMMARY:Ausschuss für Kinder\, Jugend und Familie
 DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
- sordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC
- 0 1.0)
+ sordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006028\
+ nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFD
+ NR=3258323&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006028
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005746

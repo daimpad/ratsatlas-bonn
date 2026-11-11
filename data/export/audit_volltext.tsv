@@ -15118,6 +15118,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260494-01 AA	kein Ort						
 260495	verortet	Hauptteil	volltext_strasse	Brühler Straße	Nordstadt	mittel	2
 260495	verortet	Hauptteil	volltext_strasse	Justus-von-Liebig-Straße	Dransdorf	mittel	2
+260498	kein Ort						
 260498-01 ST	kein Ort						
 260500	verortet	Hauptteil	volltext_ortsteil_name	Plittersdorf	Plittersdorf	niedrig	1
 260502	verortet	Hauptteil	volltext_strasse+bezirk	Kölnstraße	Auerberg	mittel	2
@@ -16239,6 +16240,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261518-01 ST	kein Ort						
 261519	kein Ort						
 261519-01 ST	kein Ort						
+261520	nur in Anlagen genannt, nicht verortet						
 261522	kein Ort						
 261524	Titel ohne gemeinsamen Ort, nicht verortet						
 261525	kein Ort						
@@ -16543,6 +16545,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261837	verortet	Hauptteil	volltext_strasse+hausnummer	Kaiser-Karl-Ring	Bonn-Castell	mittel	2
 261838	Titel ohne gemeinsamen Ort, nicht verortet						
 261840	kein Ort						
+261840-01 AA	kein Ort						
 261842	kein Ort						
 261845	kein Ort						
 261845-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	niedrig	1
@@ -16561,6 +16564,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261865-02 AA	kein Ort						
 261868	Liste (9 Ortsteile), nicht verortet	Hauptteil					
 261871	kein Ort						
+261871-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	niedrig	1
+261871-01 ST	verortet	Hauptteil	volltext_strasse	Neckarstraße	Plittersdorf	niedrig	1
+261871-01 ST	verortet	Hauptteil	volltext_strasse+ortsteil	Christ-König-Straße	Holzlar	niedrig	1
 261876	kein Ort						
 261876-01 AA	kein Ort						
 261876-02 ST	kein Ort						
@@ -16570,6 +16576,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261883	kein Ort						
 261885	kein Ort						
 261885-01 ST	kein Ort						
+261885-03 AA	kein Ort						
 261886	kein Ort						
 261888	kein Ort						
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Südstadt	niedrig	1
@@ -16633,6 +16640,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261953	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
 261953	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
 261954	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
+261954-01 ST	Liste (8 Ortsteile), nicht verortet	Hauptteil					
 261954-02 ST	kein Ort						
 261965	Titel ohne gemeinsamen Ort, nicht verortet						
 261969	kein Ort						
@@ -16717,6 +16725,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262119	kein Ort						
 262120	kein Ort						
 262122	kein Ort						
+262126	kein Ort						
 262129	verortet	Hauptteil	volltext_strasse+kreuzung	Joseph-Schumpeter-Allee	Oberkassel	mittel	1
 262129	verortet	Hauptteil	volltext_strasse+kreuzung	Joseph-Schumpeter-Allee	Ramersdorf	mittel	1
 262129	verortet	Hauptteil	volltext_strasse+kreuzung	Landgrabenweg	Ramersdorf	mittel	2
@@ -16727,4 +16736,11 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262138	kein Ort						
 262139	kein Ort						
 262143	Titel ohne gemeinsamen Ort, nicht verortet						
+262154	kein Ort						
 262159	Titel ohne gemeinsamen Ort, nicht verortet						
+262163	kein Ort						
+262165	verortet	Hauptteil	volltext_strasse+ortsteil	Beueler Straße	Vilich- Müldorf	mittel	4
+262165	verortet	Hauptteil	volltext_strasse+ortsteil	Schultheißstraße	Vilich	mittel	4
+262166	verortet	Hauptteil	volltext_strasse	Theaterplatz	Alt-Godesberg	mittel	1
+262168	Titel ohne gemeinsamen Ort, nicht verortet						
+262169	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1

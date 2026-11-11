@@ -185,6 +185,7 @@ BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005627
 DTSTAMP:20261110T170000Z
 DTSTART:20261110T170000Z
+DTEND:20261110T190900Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung: https://
  www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005627\nEinladung: https:
@@ -195,8 +196,9 @@ URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005627
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005812
-DTSTAMP:20261110T170000Z
-DTSTART:20261110T170000Z
+DTSTAMP:20261110T170300Z
+DTSTART:20261110T170300Z
+DTEND:20261110T203200Z
 SUMMARY:Ausschuss für Soziales\, Migration\, Gesundheit\, Wohnen und Senio
  ren
 DESCRIPTION:Sitzung des Ausschusses für Soziales\, Migration\, Gesundheit\
@@ -322,9 +324,11 @@ DTSTAMP:20261125T170000Z
 DTSTART:20261125T170000Z
 SUMMARY:Ausschuss für Umwelt\, Klima und Lokale Agenda
 DESCRIPTION:Sitzung des Ausschusses für Umwelt\, Klima und Lokale Agenda\n
- Tagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn
-  (CC0 1.0)
+ Tagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005
+ 826\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&D
+ OLFDNR=3258369&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005826
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006028
@@ -332,18 +336,23 @@ DTSTAMP:20261125T170000Z
 DTSTART:20261125T170000Z
 SUMMARY:Ausschuss für Kinder\, Jugend und Familie
 DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
- sordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC
- 0 1.0)
+ sordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006028\
+ nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFD
+ NR=3258323&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006028
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006102
 DTSTAMP:20261125T160000Z
 DTSTART:20261125T160000Z
 SUMMARY:Naturschutzbeirat
-DESCRIPTION:Sitzung des Naturschutzbeirates\nTagesordnung noch nicht veröf
- fentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung des Naturschutzbeirates\nTagesordnung: https://www.bonn
+ .sitzung-online.de/public/TO010?SILFDNR=2006102\nEinladung: https://www.bo
+ nn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3258720&OTYP=41\nQuelle
+ : OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006102
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005746

@@ -3,7 +3,7 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-friesdorf</id>
 <title>Ratsatlas Bonn – Friesdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Friesdorf</subtitle>
-<updated>2026-11-05T00:00:00Z</updated>
+<updated>2026-11-11T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-friesdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
@@ -11,7 +11,7 @@
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030116#vorlage</id>
 <title>Neue Vorlage 262018: Neubau von zwei 4-gruppigen Kindertagesstätten in der Neckarstraße und Margaretenstraße und einer Mensa für die Servatiusschule</title>
-<updated>2026-11-05T00:00:00Z</updated>
+<updated>2026-11-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#262018"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030116"/>
 <summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
@@ -114,7 +114,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028269#beratung-2026-09-22-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „vertagt“ – 261281 Fortschreibung des Rahmenplans zur Neuordnung der Bonner Bäderlandschaft</title>
+<title>Bezirksvertretung Hardtberg: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261281 Fortschreibung des Rahmenplans zur Neuordnung der Bonner Bäderlandschaft</title>
 <updated>2026-09-22T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#261281"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028269"/>

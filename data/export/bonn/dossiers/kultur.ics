@@ -59,6 +59,7 @@ BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005627
 DTSTAMP:20261110T170000Z
 DTSTART:20261110T170000Z
+DTEND:20261110T190900Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung: https://
  www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005627\nEinladung: https:
