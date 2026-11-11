@@ -22408,6 +22408,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt zur Anfrage der CDU-Fraktion: Der Steinweg gehört größtenteils der Stadt, nur ein kleiner Abschnitt vor einer Garageneinfahrt ist privat. Eine Fahrradstraße ist trotzdem möglich, ohne das Grundbuch zu ändern. Parkverbote auf Gehwegen gelten nur auf öffentlichen Flächen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -24138,6 +24143,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung gibt eine ergänzende Stellungnahme zum Bebauungsplan „Universitäts-Campus Endenich“ ab. Sie passt die Pläne an: Zwei Wohngebäude für Studierende an der Straße Auf dem Hügel werden auf sieben Geschosse erhöht, ein drittes entfällt. Ein Bürogebäude (G11) wird gestrichen, ein anderes (G01) um ein Geschoss aufgestockt. Der Campus in Endenich ist betroffen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -24310,6 +24320,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, warum der Steinweg in Endenich als Fahrradstraße wichtig ist: Er soll Teil eines überregionalen Radwegs werden und ist bereits jetzt eine wichtige Verbindung. Die Verwaltung lehnt den Bürgerantrag ab, die Umbenennung auszusetzen, weil der Radverkehr dort Vorrang haben soll – auch wenn Anwohner weniger Parkplätze haben.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -25052,6 +25067,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, was sie zur Einrichtung eines Wirtschaftsparkplatzes an der Alfred-Bucherer-Straße geprüft hat. Sie berichtet über das Ergebnis dieser Prüfung. Es handelt sich um eine Stellungnahme zu einem Antrag der Fraktionen Volt und RheinGrün.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -25285,6 +25305,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung gibt ihre Stellungnahme zur Neugestaltung des Endenicher Parks ab. Sie schlägt vor, dem Start des Vergabeverfahrens für die Bauarbeiten zuzustimmen – allerdings nur, wenn alle nötigen Genehmigungen vorliegen. Der Endenicher Park ist betroffen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -25467,6 +25492,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass sie zu einem Bürgerantrag für ein Gutachten über Gesundheitsfolgen durch den Ausbau der A 565 und den Campus Endenich noch keine Stellungnahme abgeben kann. Sie bittet um Aufschub, weil weitere Prüfungen nötig sind. Betroffen sind Endenich, Weststadt und Nordstadt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -25638,6 +25668,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über ein Projekt von zwei Bonner Bürgerinnen und Bürgern. Sie sammeln ausrangierte, aber noch brauchbare Friedhofspflanzen in speziellen Körben, um sie weiterzuverwenden. Das Projekt startete in Endenich und läuft jetzt auf mehreren Bonner Friedhöfen, darunter Beuel, Südfriedhof, Friesdorf und Rüngsdorf. Über 2.000 Pflanzen wurden so bereits gerettet.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -25831,6 +25866,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung berichtet über die Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof. Sie soll eine neue Planung vorlegen, die Parkplätze für Gewerbetreibende, Bushaltestellen und die Kolpingstraße berücksichtigt. Aktuell sind nur acht Parkplätze möglich, weitere Änderungen hängen von neuen Verkehrsdaten ab. Die Bushaltestellen werden nahe dem ehemaligen Pförtnerhäuschen geplant.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -26034,6 +26074,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung und die SWB Bus und Bahn teilen mit, dass neue Wartehäuschen an Bushaltestellen in Bonn grundsätzlich beleuchtet werden sollen. Ausnahmen gibt es nur, wenn kein Stromanschluss möglich ist oder andere Lichtquellen vorhanden sind. Einige Haltestellen wie „Auf dem Hügel“ oder „Mozartstraße“ sollen in den nächsten Monaten beleuchtet werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -26353,6 +26398,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, einen früheren Ratsbeschluss zur Verkehrsführung am Endenicher Ei aufzuheben. Statt einer aufwendigen Lösung soll ab Februar 2025 ein neuer Rad- und Gehweg auf dem südlichen Brückenteil mit 2,5 Metern Breite eingerichtet werden. Die Autobahn GmbH warnt vor zusätzlichen Kosten für die Stadt, falls der Vorschlag abgelehnt wird.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -27144,6 +27194,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Koalition schlägt vor, die Verkehrsführung am Endenicher Ei während der Bauphase 2025/2026 zu verbessern. Gibt es keine Einigung, bleibt die bestehende Behelfsbrücke stehen und wird für Fußgänger und Radfahrer genutzt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
@@ -27504,6 +27559,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass die Planung für die Umgestaltung der Siemensstraße zwischen Kolpingstraße und Am Propsthof vertagt wird. Sie braucht Zeit für interne Klärungen und wird den Punkt später neu einbringen. Die Bushaltestelle „Václav-Havel-Platz“ soll in der Nähe der heutigen südlichen Haltestelle oder westlich davon geplant werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
