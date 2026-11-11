@@ -313,6 +313,10 @@ jobs:
       - name: Auf GitHub Pages veröffentlichen
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346  # v5.0.1
+        # 20 statt 10 Minuten: GitHub übernahm die Dateien am 10.11.2026 in drei von acht Läufen nicht rechtzeitig
+        # („syncing_files“); die Seite auf der Hauptadresse hängt davon nicht ab.
+        with:
+          timeout: 1200000
 
   # Neue Kurzfassungen (Mistral; täglich höchstens 500, nach einem Merge 50) nach dem Veröffentlichen, damit die Seite
   # nicht auf das Sprachmodell wartet; sie erscheinen mit dem nächsten Lauf. Rohdaten und Volltexte aus dem Zwischen-
