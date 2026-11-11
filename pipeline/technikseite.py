@@ -80,6 +80,9 @@ SCHRITTE = {
     "package": ("Datenpaket", "Packt Daten, Prüfprotokolle und Lizenzen in ein Zip-Paket zum Herunterladen."),
     "seo": ("Statische Seiten", "Schreibt Themen-, Gebiets- und Erklärseiten wie diese, eine Seite je Vorgang "
                                 "(seit dem Vorjahr oder noch offen), dazu robots.txt und die Sitemaps."),
+    "indexnow": ("Meldung an Suchmaschinen", "Meldet neue, geänderte und entfernte Seiten über IndexNow an Bing (und "
+                                             "darüber DuckDuckGo und Ecosia), sobald die Hauptadresse den neuen Stand "
+                                             "zeigt. Nur Adressen aus den Sitemaps."),
     "kurzfassungen": ("Kurzfassungen", "Lässt nach dem Veröffentlichen neue Kurzfassungen mit Mistral schreiben "
                                        "(gekennzeichnet, mit Prüfung auf wörtliche Übernahmen). Sie erscheinen mit dem "
                                        "nächsten Lauf."),
