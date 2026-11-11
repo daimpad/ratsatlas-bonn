@@ -647,6 +647,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 261281-09 AA	geändert	bestätigt	volltext_stadtbezirk_name	Hardtberg		mittel	mistral-large-latest
 261281-09 AA	geändert	neu	llm_objekt	OGS der Ludwig-Richter-Schule	Duisdorf	niedrig	mistral-large-latest
 261281-09 AA	geändert	neu	llm_objekt	Schwimmhalle Hardtbergbad	Duisdorf	niedrig	mistral-large-latest
+261281-10 AA	geändert	herabgestuft	volltext_stadtbezirk_name	Hardtberg		niedrig	mistral-large-latest
 261281-11 AA	geändert	bestätigt	volltext_stadtbezirk_name	Hardtberg		mittel	mistral-large-latest
 261281-11 AA	geändert	neu	llm_objekt	OGS der Ludwig-Richter-Schule	Duisdorf	niedrig	mistral-large-latest
 261290-01 ST	keine Änderung						mistral-large-latest

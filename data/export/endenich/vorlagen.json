@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 706,
+  "count": 708,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -42,6 +42,184 @@
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
  },
  "papers": [
+  {
+   "reference": "262114",
+   "name": "Volt-Anfrage: Feinstaubbelastung (PM2,5 und NO₂), Gesundheitsschutz und planerische Vorsorge in Bonn",
+   "paper_type": "Große Anfrage",
+   "date": "2026-11-10",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030316",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3249089&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Volt",
+     "actor_type": "Fraktion/Gruppe",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/358",
+     "method": "title",
+     "evidence": "Volt-Anfrage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Rat",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    },
+    {
+     "position": 1,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Ausschuss für Umwelt, Klima und Lokale Agenda",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030316",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Nordstadt",
+     "ortsteil": "Nordstadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.084052,
+     "lat": 50.743387,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Nordstadt",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030316",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Weststadt",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.084696,
+     "lat": 50.732289,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Weststadt",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030316",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030316",
+   "stand": "offen",
+   "themes": [
+    {
+     "theme": "umwelt",
+     "method": "gremium",
+     "evidence": "Ausschuss für Umwelt, Klima und Lokale Agenda",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "soziales",
+     "method": "stichwort",
+     "evidence": "gesundheit",
+     "confidence": "niedrig"
+    }
+   ],
+   "parties": [
+    "Volt"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Große Anfrage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030316",
+     "actors": [
+      "Volt"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2026-11-10",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030316",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Umwelt, Klima und Lokale Agenda",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    }
+   ],
+   "soll": {
+    "verfahren": "grosse-anfrage",
+    "sicherheit": "hoch",
+    "grund": "Vorlagenart „Große Anfrage“",
+    "passung": "passt",
+    "ist": [
+     "aus",
+     "rat"
+    ],
+    "abweichung": []
+   }
+  },
   {
    "reference": "261992",
    "name": "Straßenplanung für die Straße \"Am Schwanenmorgen\" (Umlegungsgebiet U 43) gemäß dem tatsächlichen Ausbau",
@@ -163,6 +341,217 @@
     "passung": "passt",
     "ist": [
      "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "262093",
+   "name": "Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung",
+   "paper_type": "Beschlussvorlage",
+   "date": "2026-11-09",
+   "amt": "05 Amt für Integration und Vielfalt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030278",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3247682&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "05 Amt für Integration und Vielfalt",
+     "name": "05 Amt für Integration und Vielfalt"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/148",
+     "method": "paper_type",
+     "evidence": "Beschlussvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Anhörung",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Ausschuss für Chancengerechtigkeit und Integration",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    },
+    {
+     "position": 1,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": null,
+     "gremium": "Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030278",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Lengsdorf",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.06959,
+     "lat": 50.710105,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Lengsdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030278",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Röttgen",
+     "ortsteil": "Röttgen",
+     "stadtbezirk": "Bonn",
+     "lon": 7.065814,
+     "lat": 50.660943,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Röttgen",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030278",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Weststadt",
+     "ortsteil": "Weststadt",
+     "stadtbezirk": "Bonn",
+     "lon": 7.084696,
+     "lat": 50.732289,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Weststadt",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030278",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Ückesdorf",
+     "ortsteil": "Ückesdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.068418,
+     "lat": 50.693511,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Ückesdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030278",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030278",
+   "stand": "offen",
+   "themes": [
+    {
+     "theme": "soziales",
+     "method": "gremium",
+     "evidence": "Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "beteiligung",
+     "method": "amt",
+     "evidence": "05 Amt für Integration und Vielfalt",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Beschlussvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030278",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2026-11-09",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030278",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Chancengerechtigkeit und Integration",
+     "role": "Anhörung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    }
+   ],
+   "soll": {
+    "verfahren": "ausschuss-entscheidung",
+    "sicherheit": "hoch",
+    "grund": "verbindlich entscheidet ein Ausschuss",
+    "passung": "passt",
+    "ist": [
+     "aus"
     ],
     "abweichung": []
    }

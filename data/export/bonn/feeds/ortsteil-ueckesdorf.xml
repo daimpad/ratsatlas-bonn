@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-ueckesdorf</id>
 <title>Ratsatlas Bonn – Ückesdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Ückesdorf</subtitle>
-<updated>2026-10-02T00:00:00Z</updated>
+<updated>2026-11-09T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-ueckesdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ueckesdorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030278#vorlage</id>
+<title>Neue Vorlage 262093: Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ueckesdorf#262093"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030278"/>
+<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029699#vorlage</id>
 <title>Neue Vorlage 261847: Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Reichsstraße [Hausnummer ausgelassen] in Bonn-Röttgen</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ueckesdorf#240293"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016010"/>
 <summary>Entscheidung am 2024-03-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2016010#vorlage</id>
-<title>Neue Vorlage 240293: Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
-<updated>2024-02-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ueckesdorf#240293"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016010"/>
-<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: entschieden</summary>
 </entry>
 </feed>

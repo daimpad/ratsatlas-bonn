@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-puetzchen-bechlinghoven</id>
 <title>Ratsatlas Bonn – Pützchen/Bechlinghoven</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Pützchen/Bechlinghoven</subtitle>
-<updated>2026-11-04T00:00:00Z</updated>
+<updated>2026-11-09T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-puetzchen-bechlinghoven.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:puetzchen-bechlinghoven"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030099#vorlage</id>
+<title>Neue Vorlage 262010: Bonner Mitmachbudget 2025/2026 – nicht umsetzbare Projekte aufgrund der aktuellen Haushaltssperre</title>
+<updated>2026-11-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:puetzchen-bechlinghoven#262010"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030099"/>
+<summary>Mitteilungsvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030275#vorlage</id>
 <title>Neue Vorlage 262091: Bürgerantrag: Anpassung und erneute Prüfung der Beschlussvorlage 261294 - Baureife Planung zum Ausbau der Straßen Bröhlweg und Im Bonnet in Pützchen/Bechlinghoven</title>
@@ -578,7 +586,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026357#beratung-2026-05-28-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
-<title>Ausschuss für Mobilität und Verkehr: „ungeändert beschlossen“ – 260572 Ausbau eines Radweges zwischen Adelheidisplatz und Kreisel Niederholtorf</title>
+<title>Ausschuss für Mobilität und Verkehr: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260572 Ausbau eines Radweges zwischen Adelheidisplatz und Kreisel Niederholtorf</title>
 <updated>2026-05-28T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:puetzchen-bechlinghoven#260572"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026357"/>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:puetzchen-bechlinghoven#253605-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024913"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Koalition beantragt, alle Container auf der Marktwiese (Sebastianusstraße/Holzlarer Weg) zu entfernen. BonnOrange soll einen besser erreichbaren Ersatzstandort prüfen, etwa Tiefcontainer nahe der Marktwiese. Die Verwaltung soll erklären, wie Anwohner über Beschwerdemöglichkeiten informiert wurden und wann Nachbesserungen erfolgen.</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024913#beratung-2025-12-10-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „vertagt“ – 253605-02 AA Interfraktioneller-Änderungsantrag: Entfernung sämtlicher Container auf der Marktwiese Sebastianusstraße/Holzlarer Weg Antrag zur Vorlage 253605</title>
-<updated>2025-12-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:puetzchen-bechlinghoven#253605-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024913"/>
-<summary>Entscheidung am 2025-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

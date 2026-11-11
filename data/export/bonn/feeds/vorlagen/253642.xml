@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/253642</id>
+<title>Vorlage 253642: CDU-Große Anfrage: Hochwasser- und Starkregenschutz im Stadtbezirk Hardtberg</title>
+<subtitle>Verlauf der Vorlage 253642: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-10-01T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/253642.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253642"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023947#folge-253642-02</id>
+<title>Mitteilungsvorlage 253642-02: Hochwasser- und Starkregenschutz im Stadtbezirk Hardtberg; hier: Nachfragen zur Eigenvorsorge</title>
+<updated>2025-10-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253642"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023947"/>
+<summary>Folgevorlage zu 253642</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023947#beratung-2025-09-02-Bezirksvertretung%20Hardtberg</id>
+<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 253642 CDU-Große Anfrage: Hochwasser- und Starkregenschutz im Stadtbezirk Hardtberg</title>
+<updated>2025-09-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253642"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023947"/>
+<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023947#folge-253642-01%20ST</id>
+<title>Stellungnahme der Verwaltung 253642-01 ST: CDU-Große Anfrage: Hochwasser- und Starkregenschutz im Stadtbezirk Hardtberg</title>
+<updated>2025-08-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253642"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023947"/>
+<summary>Folgevorlage zu 253642</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023947#vorlage</id>
+<title>Neue Vorlage 253642: CDU-Große Anfrage: Hochwasser- und Starkregenschutz im Stadtbezirk Hardtberg</title>
+<updated>2025-08-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253642"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023947"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

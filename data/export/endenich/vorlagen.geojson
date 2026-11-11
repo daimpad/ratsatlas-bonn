@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 706,
+  "count": 708,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -48,6 +48,30 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "262114",
+    "name": "Volt-Anfrage: Feinstaubbelastung (PM2,5 und NO₂), Gesundheitsschutz und planerische Vorsorge in Bonn",
+    "paper_type": "Große Anfrage",
+    "date": "2026-11-10",
+    "amt": "01-2 Ratsbüro",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030316"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.07078,
      50.728764
     ]
@@ -65,6 +89,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030064"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "262093",
+    "name": "Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung",
+    "paper_type": "Beschlussvorlage",
+    "date": "2026-11-09",
+    "amt": "05 Amt für Integration und Vielfalt",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030278"
    }
   },
   {

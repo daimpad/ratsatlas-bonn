@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/thema/verkehr</id>
 <title>Ratsatlas Bonn – Verkehr und Mobilität</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Verkehr und Mobilität (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-10T00:00:00Z</updated>
+<updated>2026-11-11T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/verkehr.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/verkehr-und-mobilitaet/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030370#vorlage</id>
+<title>Neue Vorlage 261720-01 ST: Ergänzende Stellungnahme zur Erstellung des Sustainable Urban Mobility Plan (SUMP) für die Bundesstadt Bonn</title>
+<updated>2026-11-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261720-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030370"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030411#vorlage</id>
 <title>Neue Vorlage 262159: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
@@ -36,7 +44,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030349#vorlage</id>
 <title>Neue Vorlage 262129: CDU-SPD Bezirksfraktionen: Beleuchtung der Rad- und Fußwege zur Südbrücke</title>
 <updated>2026-11-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262129"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:oberkassel#262129"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030349"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -100,7 +108,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030239#vorlage</id>
 <title>Neue Vorlage 262075: Einleitung des Vergabeverfahrens zur Durchführung der stationären Geschwindigkeitsüberwachung im Stadtgebiet Bonn</title>
 <updated>2026-11-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262075"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:roettgen#262075"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030239"/>
 <summary>Beschlussvorlage: Einleitung · federführend: 33 Bürgerdienste · Stand: offen</summary>
 </entry>
@@ -108,7 +116,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029979#vorlage</id>
 <title>Neue Vorlage 261939: Mitteilung über den Stand der Prüfung der Maßnahmen aus dem Fußverkehrs-Check 2023</title>
 <updated>2026-11-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261939"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-castell#261939"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029979"/>
 <summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
@@ -313,6 +321,14 @@
 <summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029426#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 261736 Bürgerantrag: Einrichtung von kostenpflichtigen Parken 24/7 in der gesamten Brunnenallee in Bonn Bad Godesberg</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261736"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029426"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029395#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
 <title>Ausschuss für Mobilität und Verkehr: „ohne Votum“ – 261720 Erstellung des Sustainable Urban Mobility Plan (SUMP) für die Bundesstadt Bonn</title>
 <updated>2026-11-04T00:00:00Z</updated>
@@ -359,6 +375,30 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261479"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028800"/>
 <summary>Empfehlung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028778#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 261469 Bürgerantrag: Maßnahmen zur Einhaltung von Tempo 30 auf der Brunhildstraße</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#261469"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028778"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027862#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Protokollnotiz“ – 231642-02 BBB-Große Anfrage: Überwachung des Verkehrs auf der Koblenzer Straße Drucksachengruppe 231642</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#231642-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027862"/>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027418#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „ohne Votum“ – 260919 Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027418"/>
+<summary>Empfehlung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026912#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
@@ -767,45 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:auerberg#261544-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029211"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029002#vorlage</id>
-<title>Neue Vorlage 260743-01 ST: Bürgerantrag: Optimierung Parksituation im Bereich der Stiftsschule</title>
-<updated>2026-10-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#260743-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029002"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030066#vorlage</id>
-<title>Neue Vorlage 261994: Antrag- Grüne: Weiterentwicklung der Task Force Nordbrücke zum Bonner Mobilitätsrat</title>
-<updated>2026-10-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261994"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030066"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029931#vorlage</id>
-<title>Neue Vorlage 261469-01 ST: Bürgerantrag: Maßnahmen zur Einhaltung von Tempo 30 auf der Brunhildstraße</title>
-<updated>2026-10-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#261469-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029931"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030040#vorlage</id>
-<title>Neue Vorlage 261977: CDU/SPD-Antrag: Wiederherstellung des öffentlichen Verbindungsfußweg zwischen Hubert-Maurer-Straße und Enggasse in 53127 Bonn - Lengsdorf</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261977"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030040"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030035#vorlage</id>
-<title>Neue Vorlage 261973: CDU/SPD-Antrag: Geschwindigkeitsüberwachung auf der B56/Am Burgweiher</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261973"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030035"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 </feed>

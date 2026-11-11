@@ -3,16 +3,24 @@
 <id>tag:allris-bonn,2026:feed/thema/klima</id>
 <title>Ratsatlas Bonn – Klima und Umwelt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Klima und Umwelt (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-10T00:00:00Z</updated>
+<updated>2026-11-11T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/klima.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/klima-und-umwelt/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030343#vorlage</id>
+<title>Neue Vorlage 262126: Teilnahme der Stadt Bonn am Projekt "Nachhaltige Kommune NRW“ der Landesarbeitsgemeinschaft Agenda 21 NRW (LAG 21 NRW) zur Fortschreibung der Bonner Nachhaltigkeitsstrategie</title>
+<updated>2026-11-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262126"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030343"/>
+<summary>Mitteilungsvorlage · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030316#vorlage</id>
 <title>Neue Vorlage 262114: Volt-Anfrage: Feinstaubbelastung (PM2,5 und NO₂), Gesundheitsschutz und planerische Vorsorge in Bonn</title>
 <updated>2026-11-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262114"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#262114"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030316"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -76,7 +84,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030303#vorlage</id>
 <title>Neue Vorlage 262107: Große Anfrage Grüne-Fraktion - Zustand und Perspektiven des Landschaftsschutzgebietes Fragen Lausacker</title>
 <updated>2026-11-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262107"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:auerberg#262107"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030303"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -84,7 +92,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030302#vorlage</id>
 <title>Neue Vorlage 262106: Große Anfrage Grüne-Fraktion - Vierte Reinigungsstufe an den Bonner Kläranlagen</title>
 <updated>2026-11-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262106"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#262106"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030302"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -172,7 +180,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029899#vorlage</id>
 <title>Neue Vorlage 261700-02 ST: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2027</title>
 <updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#261700-02%20ST"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:dransdorf#261700-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029899"/>
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
@@ -252,7 +260,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030006#vorlage</id>
 <title>Neue Vorlage 261953: Titelerneuerung 2026 für die Fair Trade Town Bonn</title>
 <updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261953"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261953"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030006"/>
 <summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
@@ -287,6 +295,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf#261820"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029620"/>
 <summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029547#vorlage</id>
+<title>Neue Vorlage 261799: Zielbeschluss über die Entwicklung der Flächen „Telekom Dome“ im Stadtbezirk Hardtberg, Ortsteil Duisdorf</title>
+<updated>2026-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261799"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029547"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030023#vorlage</id>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261611"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029082"/>
 <summary>Empfehlung am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027906#beratung-2026-10-07-Naturschutzbeirat</id>
-<title>Naturschutzbeirat: „zur Kenntnis genommen“ – 260611-02 ST Kleingartenentwicklungsplan hier: Nachreichung der Anlage von der Präsentation im PBD am 20.05.2026</title>
-<updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260611-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027906"/>
-<summary>Kenntnisnahme am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027797#beratung-2026-10-07-Naturschutzbeirat</id>
-<title>Naturschutzbeirat: „ungeändert beschlossen“ – 261074 Einführung einer Allgemeinverfügung zum Verbot der nächtlichen Inbetriebnahme von Mährobotern im Stadtgebiet Bonn</title>
-<updated>2026-10-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261074"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027797"/>
-<summary>Anhörung am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

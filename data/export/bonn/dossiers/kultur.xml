@@ -28,7 +28,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030099#vorlage</id>
 <title>Neue Vorlage 262010: Bonner Mitmachbudget 2025/2026 – nicht umsetzbare Projekte aufgrund der aktuellen Haushaltssperre</title>
 <updated>2026-11-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262010"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lannesdorf#262010"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030099"/>
 <summary>Mitteilungsvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: offen</summary>
 </entry>
@@ -214,6 +214,14 @@
 <updated>2026-10-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-ost#260127-30%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029755"/>
+<summary>Empfehlung am 2026-10-06; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029741#beratung-2026-10-06-Kulturausschuss</id>
+<title>Kulturausschuss: „geändert beschlossen“ – 261861 Grünen-Antrag: Zukunft des Schauspiels</title>
+<updated>2026-10-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261861"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029741"/>
 <summary>Empfehlung am 2026-10-06; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-ost#260127-24%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028551"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028538#vorlage</id>
-<title>Neue Vorlage 261122-03 ST: Stellungnahme zur Großen Anfrage der Grünen: Einsparung der Vermittlungsstelle im Kunstmuseum Bonn – Hintergründe, Auswirkungen und kulturpolitische Bewertung</title>
-<updated>2026-07-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#261122-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028538"/>
-<summary>Stellungnahme der Verwaltung · federführend: 45 Leistungszentrum Kunstmuseum Bonn · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

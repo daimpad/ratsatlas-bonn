@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-nordstadt</id>
 <title>Ratsatlas Bonn – Nordstadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Nordstadt</subtitle>
-<updated>2026-11-04T00:00:00Z</updated>
+<updated>2026-11-10T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-nordstadt.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030316#vorlage</id>
+<title>Neue Vorlage 262114: Volt-Anfrage: Feinstaubbelastung (PM2,5 und NO₂), Gesundheitsschutz und planerische Vorsorge in Bonn</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#262114"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030316"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029979#vorlage</id>
+<title>Neue Vorlage 261939: Mitteilung über den Stand der Prüfung der Maßnahmen aus dem Fußverkehrs-Check 2023</title>
+<updated>2026-11-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261939"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029979"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030264#vorlage</id>
 <title>Neue Vorlage 262087: FDP-Antrag: Kleinspielfeld am Spielplatz Maxstraße auch sonntags öffnen</title>
@@ -79,6 +95,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261887"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029857"/>
 <summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028904#beratung-2026-10-13-Bezirksvertretung%20Bonn</id>
+<title>Bezirksvertretung Bonn: „vertagt“ – 261530 Grüne-Antrag: Nordbrückensperrung - Kurzfristige Maßnahmen zum Schutz der Anwohnenden auf den Ausweichrouten</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261530"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028904"/>
+<summary>Entscheidung am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028800#vorlage</id>
@@ -782,30 +806,6 @@
 <updated>2026-05-28T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#260528"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026283"/>
-<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026280#beratung-2026-05-28-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
-<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 210766-03 ST Stellungnahme zu Große Anfrage der Volt-Gruppe: Bordsteinabsenkungen</title>
-<updated>2026-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#210766-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026280"/>
-<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026148#beratung-2026-05-28-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
-<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 254068-03 Pilotprojekt: Integration von Bordsteinladesäulen in das Stadtgebiet</title>
-<updated>2026-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#254068-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026148"/>
-<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025295#beratung-2026-05-28-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
-<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 253419-04 ST Besuchstickets in Gebieten mit flächendeckender kostenpflichtiger Parkraumbewirtschaftung</title>
-<updated>2026-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#253419-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025295"/>
 <summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

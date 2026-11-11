@@ -25,14 +25,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030252#vorlage</id>
-<title>Neue Vorlage 261281-12 AA: SPD-Änderungsantrag: Fortschreibung des Rahmenplans zur Neuordnung der Bonner Bäderlandschaft Antrag zur Vorlage 261281</title>
-<updated>2026-11-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261281-12%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030252"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030022#vorlage</id>
 <title>Neue Vorlage 231226-02: Neubau des Schulzentrums Tannenbusch, Hirschberger Straße 3, 53119 Bonn: Einsatz einer aktiven Kühlung über die geplante Lüftungsanlage</title>
 <updated>2026-11-04T00:00:00Z</updated>
@@ -47,6 +39,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261980-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030166"/>
 <summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030006#vorlage</id>
+<title>Neue Vorlage 261953: Titelerneuerung 2026 für die Fair Trade Town Bonn</title>
+<updated>2026-11-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261953"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030006"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030023#vorlage</id>
@@ -119,22 +119,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#253210-05%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029591"/>
 <summary>Entscheidung am 2026-09-24; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029518#vorlage</id>
-<title>Neue Vorlage 261281-10 AA: BBB-Änderungsantrag zur Vorlage 261281-01 AA Bonner Bäderlandschaft</title>
-<updated>2026-09-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261281-10%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029518"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029518#beratung-2026-09-22-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „vertagt“ – 261281-10 AA BBB-Änderungsantrag zur Vorlage 261281-01 AA Bonner Bäderlandschaft</title>
-<updated>2026-09-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261281-10%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029518"/>
-<summary>Anhörung am 2026-09-22; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028717#beratung-2026-09-22-Bezirksvertretung%20Hardtberg</id>
@@ -807,5 +791,21 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#260422"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026057"/>
 <summary>Anhörung am 2026-05-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026083#vorlage</id>
+<title>Neue Vorlage 260432: Neukonzeption öffentliche Brunnenanlagen</title>
+<updated>2026-05-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#260432"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026083"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025551#beratung-2026-05-07-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 210766-02 ST Große Anfrage der Volt-Gruppe: Bordsteinabsenkungen</title>
+<updated>2026-05-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#210766-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025551"/>
+<summary>Kenntnisnahme am 2026-05-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
