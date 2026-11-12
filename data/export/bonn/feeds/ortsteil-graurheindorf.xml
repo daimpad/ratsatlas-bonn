@@ -121,14 +121,6 @@
 <summary>Entscheidung am 2026-09-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029532#vorlage</id>
-<title>Neue Vorlage 261792: CDU-SPD-FDP-Kooperation-Antrag: Park&amp;Ride an der Nordbrücke</title>
-<updated>2026-09-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#261792"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029532"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029533#vorlage</id>
 <title>Neue Vorlage 261793: SPD-FDP: Freigabe der Römerstraße für den Straßenverkehr</title>
 <updated>2026-09-22T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#253620-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024290"/>
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2023393#beratung-2025-09-08-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 252707-02 ST Neubau Amt für Umwelt und Stadtgrün hier: Beantwortung der in Ziffer 2) des Änderungsantrages 252707-01 AA sowie von Stv. Schmitt -BBB- in der Sitzung gestellten Fragen</title>
+<updated>2025-09-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#252707-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023393"/>
+<summary>Kenntnisnahme am 2025-09-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

@@ -169,14 +169,6 @@
 <summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029853#vorlage</id>
-<title>Neue Vorlage 261886: Städtepartnerschaft Bonn - Oxford; Zuschuss für die Arbeitsgemeinschaft Christlicher Kirchen Bonn (ACK)</title>
-<updated>2026-10-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261886"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029853"/>
-<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Bonn · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029842#vorlage</id>
 <title>Neue Vorlage 261528-03 ST: Jahreswirtschaftsbericht 2026 - ergänzende Unterlage</title>
 <updated>2026-10-19T00:00:00Z</updated>
@@ -806,6 +798,14 @@
 <updated>2026-08-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261391-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028700"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028614#vorlage</id>
+<title>Neue Vorlage 261093-02 ST: Sanierungskosten bei der Stadthalle Bad Godesberg - Stellungnahme der Verwaltung</title>
+<updated>2026-07-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261093-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028614"/>
 <summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

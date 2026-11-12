@@ -9,6 +9,22 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030201#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
+<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 261753-01 AA Änderungsantrag der Grünen: CDU/SPD-Antrag: Öffentliche Toilette am Nachbarschaftszentrum Berg Antrag zur Vorlage 261753</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#261753-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030201"/>
+<summary>Entscheidung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030041#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
+<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 261646-01 AA CDU/SPD-Änderungsantrag: Gewährung von Zuschüssen an Vereine für das Jahr 2026 Antrag zur Vorlage 261646</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#261646-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030041"/>
+<summary>Entscheidung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029469#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
 <title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 261756 CDU/SPD-Antrag: Entwässerungsgraben und Grünschnitt am Lärmschutzwall Brüser Berg</title>
 <updated>2026-11-10T00:00:00Z</updated>
@@ -23,6 +39,22 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#261755"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029468"/>
 <summary>Anregung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029466#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
+<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 261753 CDU/SPD-Antrag: Öffentliche Toilette am Nachbarschaftszentrum Berg</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#261753"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029466"/>
+<summary>Entscheidung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029190#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
+<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 261646 Gewährung von Zuschüssen an Vereine für das Jahr 2026</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#261646"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029190"/>
+<summary>Entscheidung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030339#vorlage</id>
@@ -775,37 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#253583-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023848"/>
 <summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023822#beratung-2025-09-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „erledigt durch Stellungnahme der Verwaltung“ – 253583 Bürgerantrag: Bau eines Wartehäuschens für die Haltestelle Borsigallee</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#253583"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023822"/>
-<summary>Entscheidung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023612#beratung-2025-09-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253321-01 ST Grüne/SPD-Große Anfrage: Fußgängerüberweg Reamurstraße/Edisonallee</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#253321-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023612"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023208#beratung-2025-09-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253321 Grüne/SPD-Große Anfrage: Fußgängerüberweg Reamurstraße/Edisonallee</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#253321"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023208"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024197#vorlage</id>
-<title>Neue Vorlage 240581-18 AA: CDU-Änderungsantrag: Beschlussvorlage "Regionales Fahrradmietsystem" Antrag zur Vorlage 240581-17</title>
-<updated>2025-09-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#240581-18%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024197"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 </feed>

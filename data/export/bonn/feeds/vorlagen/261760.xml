@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/261760</id>
 <title>Vorlage 261760: CDU/SPD-Große Anfrage: Bau eines Kunstrasenplatzes in Lengsdorf</title>
 <subtitle>Verlauf der Vorlage 261760: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-09-21T00:00:00Z</updated>
+<updated>2026-11-10T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/261760.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261760"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029473#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
+<title>Bezirksvertretung Hardtberg: „vertagt - mit Maßgabe“ – 261760 CDU/SPD-Große Anfrage: Bau eines Kunstrasenplatzes in Lengsdorf</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261760"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029473"/>
+<summary>Kenntnisnahme am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029473#vorlage</id>
 <title>Neue Vorlage 261760: CDU/SPD-Große Anfrage: Bau eines Kunstrasenplatzes in Lengsdorf</title>

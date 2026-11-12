@@ -16320,7 +16320,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261594-01	kein Ort						
 261595	Titel ohne gemeinsamen Ort, nicht verortet						
 261596	Titel ohne gemeinsamen Ort, nicht verortet						
-261599	verortet	Hauptteil	volltext_strasse+hausnummer	Thusneldastraße	Bonn-Castell	mittel	1
 261599-01 ST	nur in Anlagen genannt, nicht verortet						
 261600	Titel ohne gemeinsamen Ort, nicht verortet						
 261601	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16498,8 +16497,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261791-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
 261791-02 AA	kein Ort						
 261791-03 AA	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Bad Godesberg		niedrig	1
-261792	verortet	Hauptteil	volltext_strasse	Römerstraße	Bonn-Castell	mittel	1
-261792	verortet	Hauptteil	volltext_strasse	Römerstraße	Graurheindorf	mittel	1
 261792-01 ST	verortet	Hauptteil	volltext_strasse	Niederkasseler Straße	Geislar	mittel	1
 261792-01 ST	verortet	Hauptteil	volltext_strasse	Niederkasseler Straße	Schwarzrheindorf / Vilich-Rheindorf	mittel	1
 261792-01 ST	verortet	Hauptteil	volltext_strasse	Römerstraße	Bonn-Castell	mittel	1
@@ -16577,7 +16574,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261885	kein Ort						
 261885-01 ST	kein Ort						
 261885-03 AA	kein Ort						
-261886	kein Ort						
 261888	kein Ort						
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Südstadt	niedrig	1
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Weststadt	niedrig	1

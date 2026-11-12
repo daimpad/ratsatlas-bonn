@@ -24464,6 +24464,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über die Verkehrsführung am Endenicher Ei (B56). Erste Erfahrungen mit dem neuen Geh- und Radweg sollen ab dem 5. Februar 2025 vorliegen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-11"
    }
   },
   {
