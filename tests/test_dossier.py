@@ -130,6 +130,20 @@ class Seite(unittest.TestCase):
         self.assertNotIn("o. Ä..", html)
         self.assertNotIn("og:image", html)  # ohne PNG kein Vorschaubild
 
+    def test_drucksache_mit_eigener_seite(self):
+        # interne Links für Suchmaschinen (13.11.2026): Drucksache → Seite je Vorgang, Karte als Zusatz;
+        # ohne eigene Seite bleibt der Link auf die Karte
+        cache = {**CACHE, "d": {**CACHE["d"], "seite": True}}
+        d = dossier.daten(K, cache, {"d": "ortsteil:endenich", "c": "ohne:2026"}, MEETINGS, "2026-10-25", {})
+        zeilen = {r["reference"]: r for s in d["straenge"] for r in s["vorlagen"]}
+        self.assertTrue(zeilen["261285"]["seite"])
+        self.assertNotIn("seite", zeilen["261033"])
+        self.assertIn('<td><a href="../../vorgang/261285/">261285</a></td>', dossier._row("../../", zeilen["261285"]))
+        self.assertIn('<a href="../../?gebiet=ortsteil:endenich#261285">Karte</a>', dossier._row("../../", zeilen["261285"]))
+        ohne = dossier._row("../../", zeilen["261033"])
+        self.assertIn('<td><a href="../../?gebiet=ohne:2026#261033">261033</a></td>', ohne)
+        self.assertNotIn(">Karte</a>", ohne)
+
     def test_ohne_daten_keine_seite(self):
         with tempfile.TemporaryDirectory() as tmp:
             self.assertEqual(dossier.write(K, Path(tmp), "https://example.org/", gebietsseiten._page), [])

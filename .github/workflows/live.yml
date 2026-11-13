@@ -67,6 +67,8 @@ jobs:
             check "${base}haushalt/" "Investitionsmaßnahmen"
             check "${base}thema/" "<h1>Themen"
             check "${base}ortsteil/endenich/" "Ratsvorlagen in Endenich"
+            # interne Links auf die Seiten je Vorgang (seit 13.11.2026; vorher nur über die Sitemap erreichbar)
+            check "${base}ortsteil/endenich/" 'href="../../vorgang/'
             check "${base}teilen/" "Bilder zum Ratsatlas Bonn"
             feed="${base}data/export/bonn/feeds/ganz-bonn.xml"
             n=$(curl -fsSL --retry 3 --retry-delay 10 "$feed" | python3 -c 'import sys, xml.etree.ElementTree as ET

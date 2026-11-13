@@ -217,6 +217,7 @@ def _eintrag(p, home, today):
     return {
         "reference": p["reference"], "date": p.get("date"), "paper_type": p.get("paper_type"), "name": p.get("name"),
         "amt": p.get("amt"), "stand": p.get("stand"), "web": p.get("web"), "gebiet": home,
+        **({"seite": True} if p.get("seite") else {}),   # eigene Seite je Vorgang (vorgangsseiten.py)
         "letzte_beratung": last and {"gremium": last["gremium"], "date": proc.local_day(last["start_date"]),
                                      "result": last["result"]},
         "naechste_beratung": naechste and {"gremium": naechste["gremium"],
@@ -417,6 +418,10 @@ def _map(root, gebiet, ref):
 
 
 def _ref(root, r):
+    """Drucksache: Seite je Vorgang, wenn es sie gibt (interne Links für Suchmaschinen, 13.11.2026), sonst die Karte."""
+    if r.get("seite"):
+        from .export import slug   # hier, weil export.py dieses Modul einbindet
+        return f'<a href="{root}vorgang/{slug(r["reference"])}/">{escape(r["reference"])}</a>'
     url = _map(root, r.get("gebiet"), r["reference"])
     return f'<a href="{escape(url)}">{escape(r["reference"])}</a>' if url else escape(r["reference"])
 
@@ -430,6 +435,8 @@ def _row(root, r):
         verlauf.append(f'als Nächstes: {escape(nb["gremium"] or "")} am {_date(nb["date"])}')
     return (f'      <tr><td>{_date(r["date"])}</td><td>{_ref(root, r)}</td>'
             f'<td>{escape(r["name"] or "")}<br><small>{escape(r["paper_type"] or "")}'
+            + (f' · <a href="{escape(_map(root, r["gebiet"], r["reference"]))}">Karte</a>'
+               if r.get("seite") and r.get("gebiet") else "")
             + (f' · <a href="{escape(r["web"])}">Original</a>' if r.get("web") else "")
             + f' · Grund: {escape(r["grund"])}</small></td>'
             f'<td>{escape(r["stand"] or "")}' + (f'<br><small>{"<br>".join(verlauf)}</small>' if verlauf else "")

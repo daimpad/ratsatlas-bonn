@@ -74,6 +74,7 @@ class Seiten(unittest.TestCase):
             seo.write(site, "https://ris-bonn.example/")
             page = (site / "vorgang" / "261856" / "index.html").read_text(encoding="utf-8")
             folge = (site / "vorgang" / "261856-01-st" / "index.html").read_text(encoding="utf-8")
+            gebiet = (site / "ortsteil" / "endenich" / "index.html").read_text(encoding="utf-8")
             self.assertFalse((site / "vorgang" / "250001").exists())
             index = [e.text for e in ET.parse(site / "sitemap.xml").getroot().iter(f"{{{seo.NS}}}loc")]
             vorgaenge = ET.parse(site / seo.SITEMAP_VORGAENGE).getroot()
@@ -108,6 +109,28 @@ class Seiten(unittest.TestCase):
         self.assertIn("Begriffe auf dieser Seite", page)
         self.assertNotRegex(page, r"<script")
         self.assertNotIn("Endenicher Straße\"", page)   # keine Fundstelle als Zitat
+        # interne Links (Search Console 13.11.2026): die Gebietsseite verlinkt die Drucksache auf ihre Seite je Vorgang,
+        # die Karte bleibt als Zusatz; Vorlagen ohne eigene Seite weiter auf die Karte
+        self.assertIn('<a href="../../vorgang/261856/">261856</a>', gebiet)
+        self.assertIn('<a href="../../?gebiet=ortsteil:endenich#261856">Karte</a>', gebiet)
+
+    def test_themenseiten_verlinkt(self):
+        from pipeline.themenseiten import verkehr
+        with tempfile.TemporaryDirectory() as tmp:
+            site = _site(tmp)
+            d = site / "data" / "export" / "bonn" / "dossiers"
+            d.mkdir()
+            (d / f"{verkehr.THEMA.key}.json").write_text(json.dumps(
+                {"straenge": [{"key": "rad", "vorlagen": [{"reference": "261856"}]},
+                              {"key": "weitere", "vorlagen": [{"reference": "261856"}]}]}), encoding="utf-8")
+            self.assertEqual(vorgangsseiten.themen_je_vorlage(d.parent),
+                             {"261856": [(verkehr.THEMA.titel, verkehr.THEMA.pfad)]})
+            vorgangsseiten.write(site, "https://ris-bonn.example/", lambda *a: a[4])
+            page = (site / "vorgang" / "261856" / "index.html").read_text(encoding="utf-8")
+            folge = (site / "vorgang" / "261856-01-st" / "index.html").read_text(encoding="utf-8")
+        self.assertIn(f'<dt>Themenseite</dt><dd><a href="../../{verkehr.THEMA.pfad}">{verkehr.THEMA.titel}</a> '
+                      '<span class="pb-abgeleitet">abgeleitet</span></dd>', page)
+        self.assertNotIn("<dt>Themenseite</dt>", folge)
 
     def test_ohne_gebietsdaten_keine_seiten(self):
         with tempfile.TemporaryDirectory() as tmp:
