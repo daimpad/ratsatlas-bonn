@@ -11802,6 +11802,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241177-06	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	niedrig	1
 241177-07 ST	kein Ort						
 241177-09 ST	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	mittel	3
+241177-10	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
+241177-10	verortet	Hauptteil	volltext_strasse	Lambareneweg	Nordstadt	mittel	5
+241177-10	verortet	Hauptteil	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	4
 241177-11 ST	kein Ort						
 241177-12 AA	kein Ort						
 241177-13 AA	kein Ort						
@@ -12486,7 +12489,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241913	kein Ort						
 241914	kein Ort						
 241914-01 ST	kein Ort						
-241915	nur in Anlagen genannt, nicht verortet						
 241916	kein Ort						
 241916-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Hoholz	Hoholz	niedrig	1
 241916-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Lessenich/Meßdorf	Lessenich/Meßdorf	niedrig	1
@@ -12576,6 +12578,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
+242029	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Alt-Godesberg	mittel	1
 242031	kein Ort						
 242032	kein Ort						
 242034	kein Ort						
@@ -14881,7 +14884,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260302	Titel ohne gemeinsamen Ort, nicht verortet						
 260303	kein Ort						
 260305	kein Ort						
-260305-01 ST	kein Ort						
 260306	kein Ort						
 260307	kein Ort						
 260308	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
