@@ -29,6 +29,16 @@ Grundlage: Phase 0, `phase0/BERICHT.md`, Abschnitt 4 (Option 4, gestufte Einfüh
 - `tests/test_vorgangsseiten.py` (Regel, Inhalt, Links, Sitemap), `tests/browser/vorgang.test.mjs` (Link aus dem Vorgang, Rückweg zur Karte, axe bei 1440 und 390 px ohne Verstöße, kein waagrechter Bildlauf).
 - `live.yml` prüft `sitemap-vorgaenge.xml` und die erste Seite daraus.
 
+## Interne Links (13.11.2026)
+
+Befund der Search Console vom 13.11.2026 (Export „Gültig“, Stand 08.11.): 31 Seiten indexiert, davon keine Seite je Vorgang. Die Seiten je Vorgang waren nur über die Sitemap erreichbar; Gebiets- und Themenseiten verlinkten jede Vorlage auf die Karte (`?gebiet=…#Drucksache`, kanonisch die Startseite), allein die Verkehrsseite über 1.000-mal. Zwei solche Kartenadressen hatte Google selbst indexiert.
+
+Umgesetzt (Plan vom Auftraggeber freigegeben, Schritte 1, 2 und 4; Schritt 3, Kartenadressen in `robots.txt` ausnehmen, erst nach erneuter Auswertung):
+
+- Gebietsseiten (`gebietsseiten.vorgang_url`) und Themenseiten (`dossier._ref`, Feld `seite` je Vorlage in `dossiers/<key>.json`): die Drucksache verlinkt auf `vorgang/<drucksache>/`, daneben „Karte“; Vorlagen ohne eigene Seite (etwa aus der Einwohnerschaft) weiter auf die Karte. Probe mit den Daten vom 13.11.2026: Endenich 13 von 20 Zeilen, Verkehr und Mobilität 765 Links.
+- Seiten je Vorgang: Zeile „Themenseite“ mit Links auf die Themenseiten, in deren Strängen die Vorlage steht (abgeleitet; `vorgangsseiten.themen_je_vorlage`); Ortsteile waren schon verlinkt.
+- `live.yml`: die Ortsteilseite Endenich muss auf eine Seite je Vorgang verlinken.
+
 ## Offen
 
 - Search Console nach vier bis acht Wochen auswerten (aufgenommen, „gecrawlt – nicht indexiert“); danach Entscheidung über Stufe 2 (weitere Vorlagen) oder Kurzfassungen auf den Seiten.

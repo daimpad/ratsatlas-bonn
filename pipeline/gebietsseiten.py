@@ -10,6 +10,7 @@ from html import escape
 from urllib.parse import quote
 
 from . import begriffsseite, topics
+from .export import slug
 
 LATEST = 20
 CSP = ("default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self'; "
@@ -85,6 +86,15 @@ def _page(site_url, path, title, description, body, root, head=""):
 """)
 
 
+def vorgang_url(p, root, map_url):
+    """Drucksache mit eigener Seite (Feld „seite“ aus dem Export) → vorgang/<drucksache>/, sonst der Vorgang auf der
+    Karte. Interne Links auf die Seiten je Vorgang, damit Suchmaschinen sie nicht nur über die Sitemap finden
+    (Befund Search Console 13.11.2026: 0 von rund 7.100 Seiten je Vorgang indexiert)."""
+    if p.get("seite"):
+        return f"{root}vorgang/{slug(p['reference'])}/"
+    return f"{map_url}#{quote(p['reference'])}"
+
+
 def _area_body(kind_label, name, bezirk, key, papers, root):
     stand = Counter(p["stand"] for p in papers)
     # alle Themen einer Vorlage zählen, wie die Karte (gebietszahlen.shares); das erste Thema folgt nur der
@@ -95,8 +105,9 @@ def _area_body(kind_label, name, bezirk, key, papers, root):
     map_url = f"{root}?gebiet={quote(key, safe=':')}"
     where = f"{name}" + (f" (Stadtbezirk {bezirk})" if bezirk else "")
     rows = "\n".join(
-        f'      <tr><td>{_date(p.get("date"))}</td><td><a href="{map_url}#{quote(p["reference"])}">{escape(p["reference"])}</a></td>'
+        f'      <tr><td>{_date(p.get("date"))}</td><td><a href="{vorgang_url(p, root, map_url)}">{escape(p["reference"])}</a></td>'
         f'<td>{escape(p["name"])}<br><small>{escape(p["paper_type"])}'
+        + (f' · <a href="{map_url}#{quote(p["reference"])}">Karte</a>' if p.get("seite") else "")
         + (f' · <a href="{escape(p["web"])}">Original</a>' if p.get("web") else "")
         + f'</small></td><td>{escape(p["stand"])}</td></tr>'
         for p in latest)

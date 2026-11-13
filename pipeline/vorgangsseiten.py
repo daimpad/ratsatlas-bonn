@@ -94,7 +94,7 @@ def _bezug(r, seiten):
     return f"        <li>{ziel}: {escape(r.get('name') or '')} <small>({datum}{escape(r.get('paper_type') or '')})</small></li>"
 
 
-def body(p, key, seiten, ortsteile):
+def body(p, key, seiten, ortsteile, themen=()):
     ref = p["reference"]
     zeile = lambda dt, dd: f"      <dt>{dt}</dt><dd>{dd}</dd>"
     angaben = [zeile("Drucksache", escape(ref)), zeile("Art", escape(p["paper_type"] or "–")),
@@ -118,6 +118,9 @@ def body(p, key, seiten, ortsteile):
     if orte:
         angaben.append(zeile("Ort", "; ".join(t for t, _ in orte)
                              + (' <span class="pb-abgeleitet">abgeleitet</span>' if any(a for _, a in orte) else "")))
+    if themen:   # Themenseiten, in deren Strängen die Vorlage steht (abgeleitet nach den Regeln der Seite)
+        angaben.append(zeile("Themenseite", ", ".join(f'<a href="{ROOT}{escape(pfad)}">{escape(titel)}</a>' for titel, pfad in themen)
+                             + ' <span class="pb-abgeleitet">abgeleitet</span>'))
     plaene = [x["nr"] for x in p.get("plans") or [] if x.get("nr")]
     if plaene:
         angaben.append(zeile("Bebauungsplan", escape(", ".join(dict.fromkeys(plaene)))))
@@ -156,6 +159,24 @@ def _kurz(text):
     return text if len(text) <= TITEL_MAX else text[:TITEL_MAX].rsplit(" ", 1)[0] + " …"
 
 
+def themen_je_vorlage(base):
+    """Drucksache → [(Titel, Pfad)] der Themenseiten, in deren Strängen sie steht (aus dossiers/<key>.json des Exports).
+    Links von den Seiten je Vorgang auf die Themenseiten (interne Vernetzung, 13.11.2026)."""
+    from .themenseiten import ALLE
+    out = {}
+    for t in ALLE:
+        datei = base / "dossiers" / f"{t.key}.json"
+        if not datei.exists():
+            continue
+        d = json.loads(datei.read_text(encoding="utf-8"))
+        for s in d.get("straenge") or []:
+            for v in s.get("vorlagen") or []:
+                ziel = (t.titel, t.pfad)
+                if ziel not in out.setdefault(v["reference"], []):
+                    out[v["reference"]].append(ziel)
+    return out
+
+
 def write(site, site_url, page):
     """Schreibt die Seiten je Vorgang; gibt [(Pfad relativ zu site_url, lastmod)] für die Sitemap zurück."""
     base = site / "data" / "export" / "bonn"
@@ -163,6 +184,7 @@ def write(site, site_url, page):
         return []
     alle, gebiet, ortsteile = _vorlagen(base)
     seiten = {ref for ref, p in alle.items() if p.get("seite")}
+    themen = themen_je_vorlage(base)
     out = []
     for ref in sorted(seiten):
         p = alle[ref]
@@ -174,7 +196,7 @@ def write(site, site_url, page):
         datei = site / pfad / "index.html"
         datei.parent.mkdir(parents=True, exist_ok=True)
         datei.write_text(page(site_url, pfad, f"{ref} {_kurz(p['name'] or '')} – Ratsatlas Bonn", beschreibung,
-                              body(p, gebiet[ref], seiten, ortsteile), ROOT), encoding="utf-8")
+                              body(p, gebiet[ref], seiten, ortsteile, themen.get(ref, ())), ROOT), encoding="utf-8")
         out.append((pfad, lastmod(p)))
     print(f"Seiten je Vorgang: {len(out)}")
     return out
