@@ -6,18 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sitzungen Rat\, Ausschüsse und Bezirksvertretungen Bonn
 X-WR-TIMEZONE:Europe/Berlin
 BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005621
-DTSTAMP:20261013T150000Z
-DTSTART:20261013T150000Z
-SUMMARY:Bezirksvertretung Bonn
-DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung: https://www.b
- onn.sitzung-online.de/public/TO010?SILFDNR=2005621\nEinladung: https://www
- .bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3229208&OTYP=41\nQue
- lle: OParl-API der Stadt Bonn (CC0 1.0)
-STATUS:CONFIRMED
-URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005621
-END:VEVENT
-BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005646
 DTSTAMP:20261014T150000Z
 DTSTART:20261014T150000Z
@@ -95,6 +83,15 @@ STATUS:CONFIRMED
 URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005587
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006772
+DTSTAMP:20261116T180000Z
+DTSTART:20261116T180000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005859
 DTSTAMP:20261117T170000Z
 DTSTART:20261117T170000Z
@@ -125,9 +122,11 @@ DTSTAMP:20261126T170000Z
 DTSTART:20261126T170000Z
 SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
- be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
- Bonn (CC0 1.0)
+ be\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=
+ 2005746\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=1
+ 08&DOLFDNR=3259662&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005746
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005612

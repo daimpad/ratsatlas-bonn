@@ -823,6 +823,8 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 261790	keine Änderung						mistral-large-latest
 261791	keine Änderung						mistral-large-latest
 261791-01 ST	geändert	neu	llm_objekt	Stadthalle Bad Godesberg	Alt-Godesberg	niedrig	mistral-large-latest
+261792	geändert	herabgestuft	volltext_strasse	Römerstraße	Graurheindorf	niedrig	mistral-large-latest
+261792	geändert	herabgestuft	volltext_strasse	Römerstraße	Bonn-Castell	niedrig	mistral-large-latest
 261792-01 ST	geändert	bestätigt	volltext_strasse	Niederkasseler Straße	Schwarzrheindorf / Vilich-Rheindorf	mittel	mistral-large-latest
 261792-01 ST	geändert	bestätigt	volltext_strasse	Niederkasseler Straße	Geislar	mittel	mistral-large-latest
 261792-01 ST	geändert	neu	llm_objekt	Römerbad	Bonn-Castell	niedrig	mistral-large-latest
@@ -877,6 +879,7 @@ drucksache	befund	aktion	methode	ort	ortsteil	konfidenz	modell
 261882	keine Änderung						mistral-large-latest
 261883	keine Änderung						mistral-large-latest
 261885	keine Änderung						mistral-large-latest
+261886	keine Änderung						mistral-large-latest
 261890	geändert	neu	llm_objekt	Bonn Hauptbahnhof	Bonn-Zentrum	niedrig	mistral-large-latest
 261890	geändert	bestätigt	volltext_strasse+kreuzung	Wesselstraße	Bonn-Zentrum	mittel	mistral-large-latest
 261890	geändert	bestätigt	volltext_strasse+kreuzung	Maximilianstraße	Bonn-Zentrum	mittel	mistral-large-latest

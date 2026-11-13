@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-holtorf</id>
 <title>Ratsatlas Bonn – Holtorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Holtorf</subtitle>
-<updated>2026-11-10T00:00:00Z</updated>
+<updated>2026-11-12T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-holtorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030444#vorlage</id>
+<title>Neue Vorlage 262176: Bürgerantrag: Tempo 30 im Bereich der Pützchens Chaussee</title>
+<updated>2026-11-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#262176"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030444"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029625#vorlage</id>
 <title>Neue Vorlage 261823: Fällgenehmigung für zwei Himalaya-Zedern auf dem Grundstück Saynstr. [Hausnummer ausgelassen], 53229 Bonn</title>
@@ -166,7 +174,7 @@
 <updated>2026-05-07T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#260702-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026741"/>
-<summary>Stellungnahme der Verwaltung · federführend: 10 Personal- und Organisationsamt · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: Dezernat I · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026312#beratung-2026-04-29-Bezirksvertretung%20Beuel</id>
@@ -222,7 +230,7 @@
 <updated>2026-03-26T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#260513"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026258"/>
-<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+<summary>Informationsbrief · federführend: 01-1 OB-Büro · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2024769#beratung-2026-03-04-Bezirksvertretung%20Beuel</id>
@@ -350,7 +358,7 @@
 <updated>2025-06-10T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#241781"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019593"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023176#vorlage</id>
@@ -382,7 +390,7 @@
 <updated>2025-04-23T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#240841-002%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021966"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung teilt mit, dass in der Löwenburgstraße kaum zu schnelle Autos gemessen wurden. Sie lehnt deshalb bauliche Maßnahmen zur Verkehrsberuhigung zwischen Hausnummer 90 und 115 ab. Der Bürgerantrag wird damit abgeschlossen.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022263#vorlage</id>
@@ -406,7 +414,7 @@
 <updated>2025-03-17T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#252701-001%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021864"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung teilt mit, dass sie den Antrag auf einen grünen Pfeil für Radfahrende an der Kreuzung Siegburger Straße/Pützchens Chaussee vorerst nicht umsetzen kann. Die Polizei und die Bezirksregierung Köln sehen noch Klärungsbedarf, auch wegen einer geplanten Umgestaltung der Kreuzung. Die Verwaltung prüft das Anliegen aber weiter.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021834#beratung-2025-03-12-Bezirksvertretung%20Beuel</id>
@@ -438,7 +446,7 @@
 <updated>2025-03-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#252701"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021837"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021834#vorlage</id>
@@ -446,7 +454,7 @@
 <updated>2025-03-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#241697-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021834"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Fraktion BBB schlägt vor, die Verwaltung soll Anwohner der Straße Am Berghang zu einem Gespräch einladen. Dort soll eine „Knüppelstufenanlage“ als Alternative zum Zaun am Bolzplatz vorgestellt und die Meinung der Bürger erfragt werden. Danach soll die Verwaltung einen Beschlussvorschlag vorlegen.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021192#vorlage</id>
@@ -510,7 +518,7 @@
 <updated>2024-10-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#241697"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019439"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 Bürgerbüro · Stand: entschieden</summary>
+<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2018227#beratung-2024-09-26-Rat</id>
@@ -566,7 +574,7 @@
 <updated>2024-08-26T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#241472"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018837"/>
-<summary>Informationsbrief · federführend: 01-1 Bürgerbüro · Stand: offen</summary>
+<summary>Informationsbrief · federführend: 01-1 OB-Büro · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2017506#beratung-2024-08-22-Ausschuss%20f%C3%BCr%20Umwelt%2C%20Klima%20und%20Lokale%20Agenda</id>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#240681-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017506"/>
 <summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die CDU-Fraktion fragt nach Fassadenbegrünung an städtischen Gebäuden. Die Verwaltung teilt mit: Einige ältere Schulen und Turnhallen haben begrünte Fassaden, genaue Flächen sind nicht erfasst. Bei acht neuen Gebäuden – darunter Schulen, Kitas und eine Feuerwache – ist Begrünung geplant. Kosten hängen vom System ab und liegen zwischen 100 und 1.000 Euro pro Quadratmeter.</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2017442#vorlage</id>
-<title>Neue Vorlage 240841-01 ST: Bürgerantrag: Verkehrsberuhigende bauliche Maßnahmen für den Streckenabschnitt Löwenburgstraße [Hausnummer ausgelassen]</title>
-<updated>2024-06-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#240841-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017442"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung gibt ihre Einschätzung zu einem Bürgerantrag für verkehrsberuhigende Maßnahmen in der Löwenburgstraße (Hausnummern 90 bis 115). Sie wird zunächst die Geschwindigkeit mit Seitenradar messen und die Bezirksvertretung später über mögliche Schritte informieren.</summary>
 </entry>
 </feed>

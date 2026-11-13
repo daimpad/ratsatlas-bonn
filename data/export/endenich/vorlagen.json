@@ -1214,7 +1214,7 @@
    "name": "Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Păun-Platz",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2026-10-06",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029745",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3232221&OTYP=41",
    "responsibility": [
@@ -1223,8 +1223,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -1340,7 +1340,7 @@
    "name": "Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Păun-Platz",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2026-10-06",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029749",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3232239&OTYP=41",
    "responsibility": [
@@ -1349,8 +1349,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -1466,7 +1466,7 @@
    "name": "Bürgerantrag: Optimierung der Verkehrssicherheit im Bereich der Einmündung „Am Burggraben“/„Pastoratsgasse“ in Bonn-Endenich",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2026-10-05",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029726",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3232022&OTYP=41",
    "responsibility": [
@@ -1475,8 +1475,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -1884,7 +1884,7 @@
    "name": "Bürgerantrag: Modellprojekt „Schwammstadt“ - klimagerechte Umgestaltung und Förderung des Radverkehrs im Teilabschnitt Endenicher Straße [Hausnummer ausgelassen]",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2026-09-29",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029456",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3215885&OTYP=41",
    "responsibility": [
@@ -1893,8 +1893,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -5852,10 +5852,10 @@
      "position": 0,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005617",
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005621",
      "gremium": "Bezirksvertretung Bonn",
      "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2026-06-23T15:00:00.000Z",
+     "start_date": "2026-10-13T15:00:00.000Z",
      "cancelled": 0,
      "number": "6.38.1",
      "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
@@ -5935,7 +5935,7 @@
      "role": "Kenntnisnahme",
      "status": "belegt",
      "source": "oparl-bonn",
-     "date": "2026-06-23",
+     "date": "2026-10-13",
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
      "number": "6.38.1",
@@ -7017,7 +7017,7 @@
    "name": "Bürgerantrag: Entschärfung der Gefahrenstelle für Radfahrer am Ende des Radschutzstreifen Endenicher Allee in Höhe der [Hausnummer ausgelassen]",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2026-04-22",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026718",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3112704&OTYP=41",
    "responsibility": [
@@ -7026,8 +7026,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -7811,10 +7811,10 @@
      "position": 0,
      "role": "Entscheidung",
      "authoritative": 1,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005617",
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005621",
      "gremium": "Bezirksvertretung Bonn",
      "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2026-06-23T15:00:00.000Z",
+     "start_date": "2026-10-13T15:00:00.000Z",
      "cancelled": 0,
      "number": "6.38",
      "result": "bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt",
@@ -7911,7 +7911,7 @@
      "role": "Entscheidung",
      "status": "belegt",
      "source": "oparl-bonn",
-     "date": "2026-06-23",
+     "date": "2026-10-13",
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
      "number": "6.38",
@@ -10706,7 +10706,7 @@
    "name": "Bürgerantrag: Antrag auf Einrichtung von Zebrastreifen und Geschwindigkeitsbegrenzung in der Straße „Am Propsthof“",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-11-27",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024776",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3053890&OTYP=41",
    "responsibility": [
@@ -10715,8 +10715,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -11012,7 +11012,7 @@
    "name": "Bürgerantrag: Antrag auf Wiedererrichtung einer Bronze-Skulptur in der Theodor-Brinkmann-Straße",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-11-10",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024565",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3048247&OTYP=41",
    "responsibility": [
@@ -11021,8 +11021,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -11705,7 +11705,7 @@
    "name": "Bürgerantrag: Erweiterung des verkehrsberuhigten Bereichs \"Am Klostergarten\"",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-10-06",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024355",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3041337&OTYP=41",
    "responsibility": [
@@ -11714,8 +11714,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -14368,7 +14368,7 @@
    "name": "Bürgerantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-08-05",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023856",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3015305&OTYP=41",
    "responsibility": [
@@ -14377,8 +14377,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -14713,7 +14713,7 @@
    "name": "Bürgerantrag: Anpassung der Verkehrsführung der Straße „Am Burggraben“ in 53121 Bonn-Endenich",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-07-25",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023772",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3013100&OTYP=41",
    "responsibility": [
@@ -14722,8 +14722,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -16545,7 +16545,7 @@
    "name": "Bürgerantrag: Einrichtung einer Ladezone vor der Frongasse [Hausnummer ausgelassen] in Endenich",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-06-05",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023155",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2982796&OTYP=41",
    "responsibility": [
@@ -16554,8 +16554,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -17307,6 +17307,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass ein Fußgängerüberweg an der Robert-Havemann-Straße/Am Propsthof gebaut wird. Der Standort verbindet ein Neubaugebiet mit einer Bushaltestelle und einem Radweg.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -18314,7 +18319,7 @@
    "name": "Bürgerantrag: Bau einer \"Plateau-Aufpflasterung“ für den gesamten Bereich des verkehrsberuhigten Bereiches \"Am Klostergarten\"",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-05-05",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022676",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2964379&OTYP=41",
    "responsibility": [
@@ -18323,8 +18328,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -18636,6 +18641,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung nimmt Stellung zu einem Bürgerantrag, der ein Gutachten zu Gesundheitsfolgen durch den Ausbau der A 565 und den neuen Universitäts-Campus Endenich fordert. Sie leitet den Antrag an die Bezirksregierung Köln weiter, da das Planfeststellungsverfahren für die Autobahn noch läuft. Beim Bebauungsplan für den Campus wird der Antrag als frühzeitige Stellungnahme berücksichtigt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -18643,7 +18653,7 @@
    "name": "Informationsbrief - Öffentlichkeitsbeteiligung zum Bebauungsplanverfahrens Nr. 6421-1 \"Universitäts-Campus Endenich\"",
    "paper_type": "Informationsbrief",
    "date": "2025-04-24",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022560",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2962053&OTYP=41",
    "responsibility": [
@@ -18652,8 +18662,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -20379,6 +20389,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, ein Vergabeverfahren für die Sanierung von 45 Baumstandorten in der Nordstadt, Weststadt und Endenich einzuleiten. Es sollen Alleebäume gepflanzt und Grünflächen insektenfreundlich gestaltet werden; ein Parkplatz in der Mozartstraße entfällt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -20515,6 +20530,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über die Parkplatzsituation an der Endenicher Straße. Sie prüft bereits eine Anwohnerparkregelung für Endenich und arbeitet an Lösungen, um private Parkplätze für Anwohner nutzbar zu machen. Kurzfristige Änderungen sind nicht möglich. Der Rat soll die Stellungnahme zur Kenntnis nehmen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -20688,6 +20708,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, die Fällung einer Walnuss auf einem Baugrundstück in Bonn zu genehmigen. Der Baum steht einem geplanten Mehrfamilienhaus im Weg. Als Ausgleich soll später ein neuer Laubbaum gepflanzt werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -20845,6 +20870,11 @@
      "aus"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Deutsche Bahn und go.Rheinland informieren: Die Elektrifizierung der S 23 (Voreifelbahn) ist in Planung. Ab Juni 2025 beginnen die Hauptarbeiten für Oberleitungen auf der gesamten Strecke. Auch die Brücken „An der Schwarzen Brücke“ und „Am Bleichgraben“ sollen ab Sommer 2025 vorbereitet werden. Die Fertigstellung ist ab 2026 geplant.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -21475,7 +21505,7 @@
    "name": "Bürgerantrag: Einrichtung von Anwohnerparkplätzen im Bereich Endenicher Straße",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-03-11",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021884",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2933875&OTYP=41",
    "responsibility": [
@@ -21484,8 +21514,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -21806,6 +21836,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über die Verzögerung bei sozialen Erhaltungssatzungen („Milieuschutz“). Sie erklärt, dass die Vorbereitung erst 2024 begann, weil Personal fehlte. Im ersten Halbjahr 2025 wird eine gesamtstädtische Untersuchung durchgeführt, deren Ergebnisse im Sommer vorgestellt werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -21950,6 +21985,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung erklärt, dass der Steinweg Teil eines geplanten überbezirklichen Radnetzes ist und nicht nur lokal entschieden werden kann. Sie empfiehlt, die Zuständigkeit zu klären, falls die Bezirksvertretung ihre Entscheidungskompetenz behalten will. Die Bezirksvertretung soll bis März 2025 einen Beschlussvorschlag machen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -22107,7 +22147,7 @@
    "name": "Bürgerantrag: Optimierung der Parksituation im Bereich Endenicher Straße durch die Einführung von Anwohnerparken",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-03-06",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021822",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2930600&OTYP=41",
    "responsibility": [
@@ -22116,8 +22156,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -22556,6 +22596,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass an der Straßenecke Am Benderberg/Zur Marterkapelle neue Markierungen angebracht wurden. Wie 2023 beschlossen, sind beide Kurvenbereiche nun markiert und die alte Markierung verkürzt. Die Arbeiten sind seit Februar 2025 abgeschlossen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -22877,6 +22922,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass die beschlossenen Maßnahmen zur Beschleunigung der Buslinie 631 umgesetzt sind. Die Pünktlichkeit stieg von 64,5 % (2018) auf 81,5 % (2024), trotz Umleitungen. Betroffen sind Strecken in Poppelsdorf/Endenich, die Eduard-Otto-Straße, Markusplatz und Alfred-Bucherer-Straße.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -23008,6 +23058,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Fraktion BBB beantragt, die Planung für den Endenicher Park zu ändern. Sie fordert, keine 19 Bäume und Gebüsche zu entfernen, sondern sie regelmäßig zurückzuschneiden. Falls die Verwaltung Fällungen für nötig hält, soll sie diese vorher vor Ort begründen. Der Park in Endenich ist betroffen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -23015,7 +23070,7 @@
    "name": "Bürgerantrag: Parkraumkonzept zur Verbesserung der Parkplatzsituation im Bereich Endenicher Straße [Hausnummer ausgelassen]",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-02-26",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021739",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2927937&OTYP=41",
    "responsibility": [
@@ -23024,8 +23079,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -23191,7 +23246,7 @@
    "name": "Wöchentlicher Halt des Sparkassenbusses auf dem Parkplatz Magdalenenplatz in Endenich",
    "paper_type": "Mitteilungsvorlage",
    "date": "2025-02-21",
-   "amt": "01-4 Referat Beteiligungsmanagement",
+   "amt": "Dezernat OB",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021639",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2921639&OTYP=41",
    "responsibility": [
@@ -23200,8 +23255,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-4 Referat Beteiligungsmanagement",
-     "name": "01-4 Referat Beteiligungsmanagement"
+     "label": "Dezernat OB",
+     "name": "Stabsstelle BMzA"
     }
    ],
    "originators": [
@@ -23320,6 +23375,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Sparkasse KölnBonn teilt mit: Sie hat die Genehmigung für einen Sparkassenbus auf dem Parkplatz Magdalenenplatz in Endenich erhalten. Wann der Bus startet und wie er eingesetzt wird, ist noch unklar. Über einen SB-Standort wird mit der Volksbank verhandelt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -23505,6 +23565,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, in der Endenicher Straße zwischen Haydnstraße und Wittelsbacher Ring nachts (22–6 Uhr) Tempo 30 einzuführen, um Lärm zu reduzieren. Tagsüber soll es bei Tempo 50 bleiben, da die Straße wichtig für den Verkehr ist. Der ursprüngliche Bürgerantrag auf ganztägiges Tempo 30 wird abgelehnt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -23936,6 +24001,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung gibt die Stellungnahme von go.Rheinland zur Elektrifizierung der S 23 wieder. Die Bauarbeiten auf der Voreifelstrecke beginnen im Juni 2025, die Brücken im Meßdorfer Feld werden ab Sommer 2025 vorbereitet. Die Stadt Bonn hat auf eine zügige Umsetzung gedrängt, kann aber Verzögerungen durch Fachkräftemangel nicht beeinflussen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-12"
    }
   },
   {
@@ -24476,7 +24546,7 @@
    "name": "Bürgerantrag: Anbringung eines Hinweisschildes am Straßenschild \"Hermann-Wandersleb-Ring\"",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2025-01-27",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019059",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2811933&OTYP=41",
    "responsibility": [
@@ -24485,8 +24555,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -26693,7 +26763,7 @@
    "name": "Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte “Ausbau der A 565” und “Universitäts-Campus Endenich” auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u.a.",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2024-12-17",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020736",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2884023&OTYP=41",
    "responsibility": [
@@ -26702,8 +26772,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -26915,7 +26985,7 @@
    "name": "Bürgerantrag: Einrichtung eines Fußgängerübergang oder alternativ einer Lichtsignalanlage im Bereich Am Propsthof/Robert-Havemann-Straße",
    "paper_type": "Anregungen und Beschwerden",
    "date": "2024-12-06",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020596",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2879608&OTYP=41",
    "responsibility": [
@@ -26924,8 +26994,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -29279,6 +29349,14 @@
      "derived": 0,
      "label": "01-2 Ratsbüro",
      "name": "01-2 Ratsbüro"
+    },
+    {
+     "kind": "fachlich",
+     "method": "stellungnahme",
+     "evidence": "241999-01",
+     "derived": 1,
+     "label": "Dezernat OB",
+     "name": "Stabsstelle BMzA"
     }
    ],
    "originators": [
@@ -32849,7 +32927,7 @@
    "name": "Informationsbrief - Kanalsanierung Kapellenstraße",
    "paper_type": "Informationsbrief",
    "date": "2024-10-15",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019709",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2836856&OTYP=41",
    "responsibility": [
@@ -32858,8 +32936,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -34983,7 +35061,7 @@
    "name": "Informationsbrief - Abwasserkanal Auf dem Hügel von Haus Nr. 23 bis Haus Nr. 69",
    "paper_type": "Informationsbrief",
    "date": "2024-08-21",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018786",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2793430&OTYP=41",
    "responsibility": [
@@ -34992,8 +35070,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -56901,7 +56979,7 @@
      "evidence": null,
      "derived": 0,
      "label": "02 Amt für Internationales und globale Nachhaltigkeit",
-     "name": "02 Amt für Internationales und globale Nachhaltigkeit"
+     "name": "02 Amt für Internationales, Bund- und Länderangelegenheiten"
     }
    ],
    "originators": [
@@ -57234,7 +57312,7 @@
      "evidence": null,
      "derived": 0,
      "label": "02 Amt für Internationales und globale Nachhaltigkeit",
-     "name": "02 Amt für Internationales und globale Nachhaltigkeit"
+     "name": "02 Amt für Internationales, Bund- und Länderangelegenheiten"
     }
    ],
    "originators": [
@@ -87498,7 +87576,7 @@
    "name": "Bürgerantrag: Begrünung vor Haus Hainstraße [Hausnummer ausgelassen] in Bonn-Endenich",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2021-09-08",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2002636",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2118733&OTYP=41",
    "responsibility": [
@@ -87507,8 +87585,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -90053,7 +90131,7 @@
    "name": "Bürgerantrag: Parksituation am Schmittenpfädchen in Bonn-Endenich",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2021-07-28",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001984",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2086387&OTYP=41",
    "responsibility": [
@@ -90062,8 +90140,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -90199,7 +90277,7 @@
    "name": "Bürgerantrag: Barrierefreie Gestaltung der Straßenübergänge Endenicher Straße und Weberstraße",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2021-07-27",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001976",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2086347&OTYP=41",
    "responsibility": [
@@ -90208,8 +90286,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -90891,7 +90969,7 @@
    "name": "Bürgerantrag: Optimierung Parksituation vor Ärztehaus Endenicher Allee [Hausnummer ausgelassen]",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2021-06-29",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001664",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2077486&OTYP=41",
    "responsibility": [
@@ -90900,8 +90978,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -93558,7 +93636,7 @@
    "name": "Bürgerantrag: Gerhard-Domagk-Straße + Linienführung 631/632",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2021-06-01",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001230",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2056157&OTYP=41",
    "responsibility": [
@@ -93567,8 +93645,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -94034,7 +94112,7 @@
    "name": "Bürgerantrag: Zebrastreifen/Einrichtung eines Ampel-Übergangs Auf dem Hügel",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2021-05-20",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2001053",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2046407&OTYP=41",
    "responsibility": [
@@ -94043,8 +94121,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -96260,7 +96338,7 @@
    "name": "Bürgerantrag: Einrichten einer \"Brötchentaste\" am Parkautomaten Parkplatz Magdalenenstraße in Bonn-Endenich",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2021-04-08",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000209",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2008161&OTYP=41",
    "responsibility": [
@@ -96269,8 +96347,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -96407,7 +96485,7 @@
    "name": "Bürgerbrief - Straßenerneuerung Endenicher Allee",
    "paper_type": "Bürgerbrief",
    "date": "2021-03-31",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2000097",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2004186&OTYP=41",
    "responsibility": [
@@ -96416,8 +96494,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -97069,7 +97147,7 @@
    "name": "Bürgerantrag: Gerhard-Domagk-Straße + Linienführung 631/632",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2021-03-17",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10355",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=270270&OTYP=41",
    "responsibility": [
@@ -97078,8 +97156,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -97251,7 +97329,7 @@
    "name": "Bürgerantrag: Bewohnerparken in der Endenicher Allee",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2021-03-05",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=10171",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=267866&OTYP=41",
    "responsibility": [
@@ -97260,8 +97338,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -101938,7 +102016,7 @@
    "name": "Bürgerantrag: Verkehrswende an der Endenicher Allee",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-11-17",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8708",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=229097&OTYP=41",
    "responsibility": [
@@ -101947,8 +102025,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -102677,7 +102755,7 @@
    "name": "Bürgerantrag: Entfernung von Fahrbahnkissen in der Alfred-Bucherer-Straße [Hausnummer ausgelassen]",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-10-08",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8280",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=221223&OTYP=41",
    "responsibility": [
@@ -102686,8 +102764,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -103606,7 +103684,7 @@
    "name": "Bürgerantrag: Ausweitung Bewohnerparken auf der Endenicher Allee und benachbarte Seitenstraßen",
    "paper_type": "Stellungnahme der Verwaltung",
    "date": "2020-10-01",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8189",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=219762&OTYP=41",
    "responsibility": [
@@ -103615,8 +103693,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -103768,7 +103846,7 @@
    "name": "Bürgerantrag: Installation einer stationären Geschwindigkeitsüberwachungsanlage in der Straße \"Auf dem Hügel\" in Bonn-Endenich",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-09-29",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7730",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=198060&OTYP=41",
    "responsibility": [
@@ -103777,8 +103855,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -104228,7 +104306,7 @@
    "name": "Bürgerantrag: Gestaltung Endenicher Allee zwischen Bundesautobahn und Alfred-Bucherer-Str.",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-09-18",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8132",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=217342&OTYP=41",
    "responsibility": [
@@ -104237,8 +104315,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -104389,7 +104467,7 @@
    "name": "Bürgerantrag: Ausbauplanung Endenicher Allee",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-09-18",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=8134",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=217381&OTYP=41",
    "responsibility": [
@@ -104398,8 +104476,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -105190,7 +105268,7 @@
    "name": "Bürgerantrag: Aussetzung der Anwohnerparkregelung im Musikerviertel (Endenicher Allee und benachbarte Seitenstraßen)",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-08-18",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7728",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=198036&OTYP=41",
    "responsibility": [
@@ -105199,8 +105277,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -105800,7 +105878,7 @@
    "name": "Bürgerbrief: Kanalsanierung Konradstraße",
    "paper_type": "Bürgerbrief",
    "date": "2020-08-12",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7701",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=196870&OTYP=41",
    "responsibility": [
@@ -105809,8 +105887,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -106600,7 +106678,7 @@
    "name": "Bürgerantrag: Ausweitung Bewohnerparken auf der Endenicher Allee und benachbarte Seitenstraßen",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-07-29",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=7243",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=181378&OTYP=41",
    "responsibility": [
@@ -106609,8 +106687,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -107405,7 +107483,7 @@
    "name": "Bürgerantrag: Fahrradstraße im Wiesenweg",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-07-10",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6988",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=180011&OTYP=41",
    "responsibility": [
@@ -107414,8 +107492,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -108030,7 +108108,7 @@
    "name": "Bürgerantrag: Gestaltung Endenicher Allee zwischen Hosenträgerbrücke und Alfred-Bucherer-Straße",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-07-06",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6911",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=179049&OTYP=41",
    "responsibility": [
@@ -108039,8 +108117,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -108191,7 +108269,7 @@
    "name": "Bürgerbrief: Bewohnerparken Endenicher Straße",
    "paper_type": "Bürgerbrief",
    "date": "2020-07-03",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6905",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=178931&OTYP=41",
    "responsibility": [
@@ -108200,8 +108278,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -110024,7 +110102,7 @@
    "name": "Umsetzung der Leitlinien Bürgerbeteiligung - Veröffentlichung der Vorhabenliste",
    "paper_type": "Beschlussvorlage",
    "date": "2020-05-15",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6133",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=146329&OTYP=41",
    "responsibility": [
@@ -110033,8 +110111,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -111709,7 +111787,7 @@
    "name": "Umfrage im Rahmen der Fortschreibung des Lärmaktionsplans",
    "paper_type": "Mitteilungsvorlage",
    "date": "2020-04-03",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=5387",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=114597&OTYP=41",
    "responsibility": [
@@ -111718,8 +111796,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -114234,7 +114312,7 @@
    "name": "Bürgerantrag: Verkehrsplanung Alfred-Bucherer-Straße",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-02-17",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4826",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=96575&OTYP=41",
    "responsibility": [
@@ -114243,8 +114321,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -115741,7 +115819,7 @@
    "name": "Bürgerbrief: Kanalerneuerung Endenicher Allee zwischen BAB 565 und Alfred-Bucherer-Straße",
    "paper_type": "Bürgerbrief",
    "date": "2020-02-06",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4603",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=88827&OTYP=41",
    "responsibility": [
@@ -115750,8 +115828,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -116125,7 +116203,7 @@
    "name": "Bürgerantrag: Lennépark Bonn-Endenich",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-02-05",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=4608",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=88996&OTYP=41",
    "responsibility": [
@@ -116134,8 +116212,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -118052,7 +118130,7 @@
    "name": "Umsetzung der Leitlinien Bürgerbeteiligung - Veröffentlichung der Vorhabenliste",
    "paper_type": "Beschlussvorlage",
    "date": "2020-01-13",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3525",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=59832&OTYP=41",
    "responsibility": [
@@ -118061,8 +118139,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [
@@ -118659,7 +118737,7 @@
    "name": "Bürgerantrag: Veränderung Ampelschaltung Hermann-Wandersleb-Ring / Effertzstr.",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2020-01-02",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3494",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=59164&OTYP=41",
    "responsibility": [
@@ -118668,8 +118746,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -118820,7 +118898,7 @@
    "name": "Bürgerantrag : Einbahnstraßenregelung Brahmsstraße Endenich",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2019-12-17",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3516",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=59276&OTYP=41",
    "responsibility": [
@@ -118829,8 +118907,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -119642,7 +119720,7 @@
    "name": "Bürgerantrag: Bewohnerparken im Bereich Euskirchener Str. [Hausnummer ausgelassen]",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2019-11-27",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3235",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=46746&OTYP=41",
    "responsibility": [
@@ -119651,8 +119729,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -120348,7 +120426,7 @@
    "name": "Bürgerantrag: Verkehrsberuhigung Endenich und Musikerviertel",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2019-11-22",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3145",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=42878&OTYP=41",
    "responsibility": [
@@ -120357,8 +120435,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -120507,7 +120585,7 @@
    "name": "Bürgerantrag: Einrichtung eines Fahrradweges/-Streifens in der Gerhard-Domagk-Straße",
    "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
    "date": "2019-11-22",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=3157",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=43023&OTYP=41",
    "responsibility": [
@@ -120516,8 +120594,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     },
     {
      "kind": "fachlich",
@@ -123520,7 +123598,7 @@
    "name": "Einladung zur Kinder- und Anwohnerbefragung zur Gestaltung des Endenicher Parks",
    "paper_type": "Bürgerbrief",
    "date": "2019-10-21",
-   "amt": "01-1 Bürgerbüro",
+   "amt": "01-1 OB-Büro",
    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=928",
    "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=7526&OTYP=41",
    "responsibility": [
@@ -123529,8 +123607,8 @@
      "method": "underDirectionOf",
      "evidence": null,
      "derived": 0,
-     "label": "01-1 Bürgerbüro",
-     "name": "01-1 Bürgerbüro"
+     "label": "01-1 OB-Büro",
+     "name": "01-1 OB-Büro"
     }
    ],
    "originators": [

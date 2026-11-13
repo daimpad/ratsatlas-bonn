@@ -11802,9 +11802,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241177-06	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	niedrig	1
 241177-07 ST	kein Ort						
 241177-09 ST	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	mittel	3
-241177-10	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
-241177-10	verortet	Hauptteil	volltext_strasse	Lambareneweg	Nordstadt	mittel	5
-241177-10	verortet	Hauptteil	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	4
 241177-11 ST	kein Ort						
 241177-12 AA	kein Ort						
 241177-13 AA	kein Ort						
@@ -12579,7 +12576,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 242027-01	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	niedrig	1
-242029	verortet	Hauptteil	volltext_strasse+hausnummer	Koblenzer Straße	Alt-Godesberg	mittel	1
 242031	kein Ort						
 242032	kein Ort						
 242034	kein Ort						
@@ -15439,6 +15435,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260772-01 AA	kein Ort						
 260772-02 ST	kein Ort						
 260772-03 AA	kein Ort						
+260772-04 ST	kein Ort						
 260778	kein Ort						
 260780	kein Ort						
 260780-01 ST	kein Ort						
@@ -15779,6 +15776,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261100	verortet	Hauptteil	volltext_strasse+ortsteil	Václav-Havel-Platz	Endenich	mittel	3
 261100-01	verortet	Hauptteil	volltext_strasse	Simone-Veil-Straße	Endenich	mittel	1
 261101	kein Ort						
+261101-01 ST	verortet	Hauptteil	volltext_strasse	Oppelner Straße	Tannenbusch	niedrig	1
+261101-01 ST	verortet	Hauptteil	volltext_strasse	Turmstraße	Plittersdorf	mittel	2
 261103	kein Ort						
 261103-01 ST	kein Ort						
 261103-02 AA	kein Ort						
@@ -16320,6 +16319,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261594-01	kein Ort						
 261595	Titel ohne gemeinsamen Ort, nicht verortet						
 261596	Titel ohne gemeinsamen Ort, nicht verortet						
+261599	verortet	Hauptteil	volltext_strasse+hausnummer	Thusneldastraße	Bonn-Castell	mittel	1
 261599-01 ST	nur in Anlagen genannt, nicht verortet						
 261600	Titel ohne gemeinsamen Ort, nicht verortet						
 261601	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16438,10 +16438,12 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261705	kein Ort						
 261708	Titel ohne gemeinsamen Ort, nicht verortet						
 261713	Titel ohne gemeinsamen Ort, nicht verortet						
+261714	kein Ort						
 261720	nur in Anlagen genannt, nicht verortet						
 261722	Titel ohne gemeinsamen Ort, nicht verortet						
 261724	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 261724-01 AA	kein Ort						
+261724-02 ST	kein Ort						
 261725	kein Ort						
 261727	Liste (24 Ortsteile), nicht verortet	Hauptteil					
 261727-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Graurheindorfer Straße	Bonn-Castell	niedrig	1
@@ -16497,6 +16499,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261791-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
 261791-02 AA	kein Ort						
 261791-03 AA	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Bad Godesberg		niedrig	1
+261792	verortet	Hauptteil	volltext_strasse	Römerstraße	Bonn-Castell	mittel	1
+261792	verortet	Hauptteil	volltext_strasse	Römerstraße	Graurheindorf	mittel	1
 261792-01 ST	verortet	Hauptteil	volltext_strasse	Niederkasseler Straße	Geislar	mittel	1
 261792-01 ST	verortet	Hauptteil	volltext_strasse	Niederkasseler Straße	Schwarzrheindorf / Vilich-Rheindorf	mittel	1
 261792-01 ST	verortet	Hauptteil	volltext_strasse	Römerstraße	Bonn-Castell	mittel	1
@@ -16551,6 +16555,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261849	kein Ort						
 261849-01 AA	kein Ort						
 261849-02 AA	kein Ort						
+261849-03 ST	kein Ort						
 261851	nur in Anlagen genannt, nicht verortet						
 261853	kein Ort						
 261853-01 ST	kein Ort						
@@ -16574,6 +16579,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261885	kein Ort						
 261885-01 ST	kein Ort						
 261885-03 AA	kein Ort						
+261886	kein Ort						
 261888	kein Ort						
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Südstadt	niedrig	1
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Weststadt	niedrig	1
@@ -16653,8 +16659,10 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261990	kein Ort						
 261991	kein Ort						
 261991-01 ST	kein Ort						
+261991-02 AA	kein Ort						
 261993	nur in Anlagen genannt, nicht verortet						
 261994	kein Ort						
+261994-02 AA	kein Ort						
 261995	kein Ort						
 261995-01 ST	kein Ort						
 262000	nur in Anlagen genannt, nicht verortet						
@@ -16684,6 +16692,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262056	verortet	Hauptteil	volltext_strasse+kreuzung	Hochstadenring	Nordstadt	mittel	1
 262057	Titel ohne gemeinsamen Ort, nicht verortet						
 262058	kein Ort						
+262058-01 ST	kein Ort						
 262064	nur in Anlagen genannt, nicht verortet						
 262065	kein Ort						
 262070	nur in Anlagen genannt, nicht verortet						
@@ -16722,12 +16731,14 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262120	kein Ort						
 262122	kein Ort						
 262126	kein Ort						
+262127	Titel ohne gemeinsamen Ort, nicht verortet						
 262129	verortet	Hauptteil	volltext_strasse+kreuzung	Joseph-Schumpeter-Allee	Oberkassel	mittel	1
 262129	verortet	Hauptteil	volltext_strasse+kreuzung	Joseph-Schumpeter-Allee	Ramersdorf	mittel	1
 262129	verortet	Hauptteil	volltext_strasse+kreuzung	Landgrabenweg	Ramersdorf	mittel	2
 262129	verortet	Hauptteil	volltext_strasse+kreuzung	Oberkasseler Ufer	Oberkassel	mittel	1
 262130	kein Ort						
 262131	kein Ort						
+262135	kein Ort						
 262136	Titel ohne gemeinsamen Ort, nicht verortet						
 262138	kein Ort						
 262139	kein Ort						
@@ -16740,3 +16751,12 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262166	verortet	Hauptteil	volltext_strasse	Theaterplatz	Alt-Godesberg	mittel	1
 262168	Titel ohne gemeinsamen Ort, nicht verortet						
 262169	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
+262171	verortet	Hauptteil	volltext_strasse	Combahnstraße	Beuel-Mitte	mittel	2
+262171	verortet	Hauptteil	volltext_strasse	Hauptstraße	Holzlar	mittel	1
+262171	verortet	Hauptteil	volltext_strasse	Professor-Neu-Allee	Beuel-Mitte	mittel	6
+262171	verortet	Hauptteil	volltext_strasse+ortsteil	Niederkasseler Straße	Schwarzrheindorf / Vilich-Rheindorf	mittel	2
+262172	kein Ort						
+262174	verortet	Hauptteil	volltext_strasse+kreuzung	Ettenhausener Straße	Holzlar	mittel	2
+262174	verortet	Hauptteil	volltext_strasse+kreuzung	Rodeweg	Holzlar	mittel	1
+262186	Liste (8 Ortsteile), nicht verortet	Hauptteil					
+262187	kein Ort						

@@ -98,7 +98,7 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 261088	beratung: Bezirksvertretung Bonn (Entscheidung)	2026-06-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 261088	folgevorlage: 261088-01 ST	2026-08-31	oparl-bonn	belegt	Stellungnahme der Verwaltung
 260576-01 ST	datum_vorlage	2026-05-26	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-260576-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2026-06-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+260576-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2026-10-13	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260546-01 ST	datum_vorlage	2026-05-18	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 260546-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2026-05-19	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260745-01 ST	datum_vorlage	2026-05-13	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
@@ -131,7 +131,7 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 260567-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2026-04-21	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260576	datum_vorlage	2026-04-01	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 260576	folgevorlage: 260576-01 ST	2026-05-26	oparl-bonn	belegt	Stellungnahme der Verwaltung
-260576	beratung: Bezirksvertretung Bonn (Entscheidung)	2026-06-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+260576	beratung: Bezirksvertretung Bonn (Entscheidung)	2026-10-13	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260579	datum_vorlage	2026-04-01	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 260579	beratung: Bezirksvertretung Bonn (Entscheidung)	2026-06-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260545	datum_vorlage	2026-03-31	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert

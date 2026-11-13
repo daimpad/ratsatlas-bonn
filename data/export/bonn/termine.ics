@@ -6,29 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sitzungen Rat\, Ausschüsse und Bezirksvertretungen Bonn
 X-WR-TIMEZONE:Europe/Berlin
 BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005621
-DTSTAMP:20261013T150000Z
-DTSTART:20261013T150000Z
-SUMMARY:Bezirksvertretung Bonn
-DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung: https://www.b
- onn.sitzung-online.de/public/TO010?SILFDNR=2005621\nEinladung: https://www
- .bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3229208&OTYP=41\nQue
- lle: OParl-API der Stadt Bonn (CC0 1.0)
-STATUS:CONFIRMED
-URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005621
-END:VEVENT
-BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005888
-DTSTAMP:20261013T160000Z
-DTSTART:20261013T160000Z
-SUMMARY:Ausschuss für Digitalisierung\, Dienstleistung und Verwaltungsmode
- rnisierung (abgesagt)
-DESCRIPTION:Sitzung des Ausschusses für Digitalisierung\, Dienstleistung u
- nd Verwaltungsmodernisierung\nTagesordnung noch nicht veröffentlicht.\nQu
- elle: OParl-API der Stadt Bonn (CC0 1.0)
-STATUS:CANCELLED
-END:VEVENT
-BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005646
 DTSTAMP:20261014T150000Z
 DTSTART:20261014T150000Z
@@ -232,6 +209,15 @@ STATUS:CONFIRMED
 URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005587
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006772
+DTSTAMP:20261116T180000Z
+DTSTART:20261116T180000Z
+SUMMARY:Rat
+DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005758
 DTSTAMP:20261117T170000Z
 DTSTART:20261117T170000Z
@@ -360,9 +346,11 @@ DTSTAMP:20261126T170000Z
 DTSTART:20261126T170000Z
 SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
- be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
- Bonn (CC0 1.0)
+ be\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=
+ 2005746\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=1
+ 08&DOLFDNR=3259662&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005746
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005839
@@ -370,8 +358,11 @@ DTSTAMP:20261126T170000Z
 DTSTART:20261126T170000Z
 SUMMARY:Ausschuss für Mobilität und Verkehr
 DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
- ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+ ng: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005839\nEinla
+ dung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=325
+ 9808&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005839
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005994
@@ -678,15 +669,6 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006751
-DTSTAMP:20270216T160000Z
-DTSTART:20270216T160000Z
-SUMMARY:Betriebsausschuss SGB
-DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
- röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006549
 DTSTAMP:20270217T160000Z
 DTSTART:20270217T160000Z
@@ -841,6 +823,15 @@ DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006770
+DTSTAMP:20270317T160000Z
+DTSTART:20270317T160000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006486
 DTSTAMP:20270318T170000Z
 DTSTART:20270318T170000Z
@@ -922,15 +913,6 @@ SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
 DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
  beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
  t Bonn (CC0 1.0)
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006753
-DTSTAMP:20270421T150000Z
-DTSTART:20270421T150000Z
-SUMMARY:Betriebsausschuss SGB
-DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
- röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1077,6 +1059,15 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006771
+DTSTAMP:20270525T150000Z
+DTSTART:20270525T150000Z
+SUMMARY:Betriebsausschuss SGB
+DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
+ röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006573
 DTSTAMP:20270526T160000Z
 DTSTART:20270526T160000Z
@@ -1206,15 +1197,6 @@ DTSTART:20270618T140000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
  g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006755
-DTSTAMP:20270624T150000Z
-DTSTART:20270624T150000Z
-SUMMARY:Betriebsausschuss SGB
-DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
- röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1521,15 +1503,6 @@ DTSTART:20271007T160000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
  tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006756
-DTSTAMP:20271012T150000Z
-DTSTART:20271012T150000Z
-SUMMARY:Betriebsausschuss SGB
-DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
- röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
