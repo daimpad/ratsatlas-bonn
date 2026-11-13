@@ -164,6 +164,14 @@ button.card:hover, a.card:hover { transform: translateY(-2px); box-shadow: var(-
 .theme-links a:hover, .theme-links a:focus-visible { background: rgba(124, 58, 237, 0.08); color: var(--accent-ink); }
 .theme-links .icon { color: var(--accent-ink); }
 .mega-more { margin: 8px 0 0 10px; font-size: 14px; }
+/* Menü „Über“: kleine Kacheln mit Symbol links (drei Gruppen) */
+.cards-sm { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
+.card-sm { grid-template-columns: 34px minmax(0, 1fr); column-gap: 12px; row-gap: 2px; padding: 12px 14px; border-radius: 14px; }
+.card-sm .card-icon { grid-row: span 2; width: 34px; height: 34px; border-radius: 10px; }
+.card-sm .card-icon .icon { width: 18px; height: 18px; }
+.card-sm .card-title { font-size: 14px; }
+.card-sm .card-text { font-size: 12.5px; }
+.mega-label-first { margin-top: 0; }
 .mega-more a { color: var(--accent-ink); font-weight: 600; }
 @media (max-width: 700px) { .mega-split, .theme-links { grid-template-columns: minmax(0, 1fr); } }
 
@@ -676,7 +684,7 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
   .toggle, .menu-btn { padding: 0 8px; }
   .nav-group + .nav-group, .nav-area + .nav-group { padding-left: 6px; }
 }
-@media (min-width: 1280px) and (max-width: 1599px) {  /* Menüs mit Namen, Ansichten und Assistent nur als Symbol (Name bleibt für Screenreader) */
+@media (min-width: 1280px) and (max-width: 1439px) {  /* Menüs mit Namen, Ansichten und Assistent nur als Symbol (Name bleibt für Screenreader) */
   .toggle > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .toggle { padding: 0 10px; }
 }

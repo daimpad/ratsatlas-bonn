@@ -199,7 +199,7 @@
     el.dataset.trigger = trigger ? trigger.id || "" : "";
     document.querySelectorAll(`[data-mega="${id}"]`).forEach((b) => b.setAttribute("aria-expanded", "true"));
     if (id === "mega-suche") fillChips();
-    if (id === "mega-mitmachen" || id === "mega-hilfe") fillMitmachen();   // Feeds und Hinweis-Link nach Gebiet und Vorgang
+    if (id === "mega-mitmachen" || id === "mega-ueber") fillMitmachen();   // Feeds und Hinweis-Link nach Gebiet und Vorgang
     if (MOBILE.matches) SHEETS.forEach((s) => !document.getElementById(s).hidden && setPanel(s, false));
   }
   function closeMega(returnFocus) {
@@ -305,7 +305,7 @@
     const a = e.target.closest?.("a[href]");
     if (a && /^https?:$/.test(a.protocol) && a.host !== location.host && !a.target) { a.target = "_blank"; a.rel = a.rel || "noopener"; }
   }, true);
-  // „Was ist neu?“ in einem eigenen Fenster (aus „Über“ und dem Menü „Hilfe“)
+  // „Was ist neu?“ in einem eigenen Fenster (aus dem Dialog und dem Menü „Über“)
   document.addEventListener("click", (e) => {
     if (e.target.closest("[data-neu]")) { closeMega(); if ($("#about").open) $("#about").close(); $("#neu").showModal(); }
     if (e.target.closest("[data-close-dialog]")) e.target.closest("dialog").close();
@@ -2129,7 +2129,7 @@
     if (b) { const p = papers.find((x) => x.reference === b.dataset.ref); if (p) { closePanel("panel-termine"); select(p); } }
   });
 
-  // --- Menüs „Mitmachen“ und „Hilfe“: Abonnieren und Hinweise ------------------------------------------
+  // --- Menüs „Mitmachen“ und „Über“: Abonnieren und Hinweise ------------------------------------------
   function fillMitmachen() {
     if (!area) return;
     const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
@@ -2143,7 +2143,7 @@
     $("#cta-feed-text").textContent = `Neue Vorlagen und Beratungsergebnisse aus ${where} im Feed-Reader erhalten${selected ? ", oder nur den gewählten Vorgang" : ""}.`;
     const report = $("#cta-report");
     report.href = selected ? reportLink(selected) : `${REPO}/issues/new/choose`;
-    report.lastChild.textContent = selected ? `Hinweis zu ${selected.reference}` : "Hinweis geben";
+    report.querySelector(".card-title").textContent = selected ? `Hinweis zu ${selected.reference}` : "Hinweis geben";
   }
 
   // --- Suche in der Leiste mit Schnellfiltern (Mega-Menü „Suche“) ----------------------------------
@@ -2436,7 +2436,7 @@
       tl.select(papers.find((p) => p.reference === hoverRef), true);
     });
     $("#papers").addEventListener("mouseleave", () => { hoverRef = null; if (tl) tl.select(selected); });
-    // Menü „Mitmachen“: Termine; Menüs „Themen und Geld“ und „Wer entscheidet“: Kennzahlen, Verfahrenswege, Prozesse
+    // Menü „Mitmachen“: Termine; Menüs „Themen“ und „Wer entscheidet“: Kennzahlen, Verfahrenswege, Prozesse
     if (zeit) $("#cta-termine").addEventListener("click", () => { setPanel("panel-termine", true); showTermine(); focusPanel("panel-termine"); });
     else $("#cta-termine").hidden = true;
     $("#cta-mitmachen").addEventListener("click", () => { closeMega(); setPanel("panel-mitmachen", true); focusPanel("panel-mitmachen"); });

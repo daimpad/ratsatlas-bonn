@@ -1,4 +1,4 @@
-"""Hauptleiste (Entscheidung 13.11.2026): das Menü „Themen und Geld“ nennt genau die veröffentlichten Themenseiten."""
+"""Hauptleiste (Entscheidung 13.11.2026): das Menü „Themen“ nennt genau die veröffentlichten Themenseiten."""
 import re
 import unittest
 from pathlib import Path
@@ -22,7 +22,7 @@ class Navigation(unittest.TestCase):
 
     def test_vier_menues(self):
         self.assertEqual(re.findall(r'class="menu-btn" data-mega="([^"]+)"', self.html),
-                         ["mega-themen", "mega-entscheiden", "mega-mitmachen", "mega-hilfe"])
+                         ["mega-themen", "mega-entscheiden", "mega-mitmachen", "mega-ueber"])
         for alt in ("mega-auswertung", "mega-daten", "mega-verstehen", 'data-panel="panel-detail"', 'data-panel="panel-prozesse"'):
             self.assertNotIn(alt, self.html)
 
