@@ -12489,6 +12489,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241913	kein Ort						
 241914	kein Ort						
 241914-01 ST	kein Ort						
+241915	nur in Anlagen genannt, nicht verortet						
 241916	kein Ort						
 241916-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Hoholz	Hoholz	niedrig	1
 241916-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Lessenich/Meßdorf	Lessenich/Meßdorf	niedrig	1
@@ -14884,6 +14885,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260302	Titel ohne gemeinsamen Ort, nicht verortet						
 260303	kein Ort						
 260305	kein Ort						
+260305-01 ST	kein Ort						
 260306	kein Ort						
 260307	kein Ort						
 260308	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
