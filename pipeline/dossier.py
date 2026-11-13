@@ -574,7 +574,7 @@ def _kasten(a, root, h, anker, ueberschrift):
     <ul>
 {sitze}{ohne}
     </ul>
-    <p><a href="{root}?prozesse=gremien&amp;gremium={escape(a["id"])}">Alle Mitglieder mit Namen im Reiter „Prozesse“</a></p>
+    <p><a href="{root}?prozesse=gremien&amp;gremium={escape(a["id"])}">Alle Mitglieder mit Namen unter „Wer entscheidet“</a></p>
 {akkordeon.mehr("Quelle", f'<p>Laufende Mitgliedschaften laut OParl-API der Stadt Bonn (CC0), Stand {_date(a["stichtag"])}. Die Fraktion ist aus der Mitgliedschaft in einer Fraktion abgeleitet; die Quelle nennt nicht, für wen jemand im Ausschuss sitzt.</p>')}"""
 
 
