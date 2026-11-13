@@ -68,7 +68,7 @@ test("Start: Übersicht über ganz Bonn, Fenster „Los geht's“, ohne Verstö�
   assert.equal(await page.locator("#detail .intro-actions").count(), 0);
   assert.deepEqual(await page.evaluate(() => [...document.querySelectorAll(".map-stack > details")].map((d) => [d.className, d.open])),
     [["nav-legend", false], ["map-legend", false], ["map-legend map-sources", false]]);
-  assert.equal(await page.locator("#mega-daten #sources").count(), 0, "Quellen nicht mehr im Menü „Daten“");
+  assert.equal(await page.locator("#mega-hilfe #sources").count(), 0, "Quellen nicht im Menü „Hilfe“");
   assert.equal(await page.locator(".nav-label-bz").count(), 4, "Namen der vier Stadtbezirke");
   assert.ok(!/gebiet=/.test(page.url()), "die Übersicht schreibt kein Gebiet in die Adresse");
   assert.deepEqual(await axe(page), []);
@@ -262,12 +262,12 @@ test("Mobil: Hamburger-Menü mit Gebiet, Flächen und Menüs; Esc schließt Men�
   assert.equal(await burger.getAttribute("aria-expanded"), "true");
   assert.ok(await page.locator("#f-area").isVisible());
   assert.ok(await page.locator('.toggle[data-panel="panel-list"]').isVisible());
-  await page.locator('#nav-more [data-mega="mega-auswertung"]').click();
-  assert.ok(await page.locator("#nav-more #mega-auswertung").isVisible(), "Menü klappt im Blatt auf");
+  await page.locator('#nav-more [data-mega="mega-themen"]').click();
+  assert.ok(await page.locator("#nav-more #mega-themen").isVisible(), "Menü klappt im Blatt auf");
   assert.deepEqual(await axe(page), []);
   await page.keyboard.press("Escape");
-  assert.equal(await page.locator("#mega-auswertung").isVisible(), false);
-  assert.equal(await page.locator("#nav-more #mega-auswertung").count(), 0, "Menü wieder an seinem Platz");
+  assert.equal(await page.locator("#mega-themen").isVisible(), false);
+  assert.equal(await page.locator("#nav-more #mega-themen").count(), 0, "Menü wieder an seinem Platz");
   await page.keyboard.press("Escape");
   assert.equal(await burger.getAttribute("aria-expanded"), "false");
   assert.equal(await page.evaluate(() => document.activeElement.id), "nav-burger");
@@ -277,10 +277,9 @@ test("Mobil: Hamburger-Menü mit Gebiet, Flächen und Menüs; Esc schließt Men�
 
 test("Mobil: Ebenen, Legenden und Quellen im Blatt „Karte“, ohne Verstöße", async () => {
   const page = await open("", { width: 390, height: 844 });
-  // auf dem Telefon liegt das Fenster „Los geht's“ über der Karte; erst schließen (Schalter hinter ☰)
-  await page.locator("#nav-burger").click();
-  await page.locator('.toggle[data-panel="panel-detail"]').click();
-  assert.equal(await page.locator("#nav-burger").getAttribute("aria-expanded"), "false", "Wahl schließt das Hamburger-Menü");
+  // auf dem Telefon liegt das Fenster „Los geht's“ über der Karte; erst schließen (eigener Knopf, kein Schalter in der Leiste)
+  await page.locator('[data-close="panel-detail"]').click();
+  assert.equal(await page.locator("#panel-detail").isVisible(), false);
   const menu = page.locator(".map-menu");
   assert.equal(await menu.getAttribute("aria-expanded"), "false");
   assert.match(await menu.textContent(), /^Karte/);
@@ -308,6 +307,8 @@ test("Mobil: Ebenen, Legenden und Quellen im Blatt „Karte“, ohne Verstöße"
 
 test("Über und „Was ist neu?“: gestraffter Dialog, eigenes Fenster, ohne Verstöße", async () => {
   const page = await open();
+  await page.keyboard.press("Escape");
+  await page.locator('.menu-btn[data-mega="mega-hilfe"]').click();   // „Über den Ratsatlas“ steht im Menü „Hilfe“
   await page.locator("#about-open").click();
   const about = page.locator("#about");
   assert.ok(await about.isVisible());
@@ -324,12 +325,33 @@ test("Über und „Was ist neu?“: gestraffter Dialog, eigenes Fenster, ohne Ve
   assert.deepEqual(await axe(page), []);
   await page.keyboard.press("Escape");
   assert.equal(await neu.evaluate((d) => d.open), false);
-  // auch über das Menü „Daten“
-  await page.locator('.menu-btn[data-mega="mega-daten"]').click();
-  await page.locator("#mega-daten [data-neu]").click();
+  // auch über das Menü „Hilfe“
+  await page.locator('.menu-btn[data-mega="mega-hilfe"]').click();
+  await page.locator("#mega-hilfe [data-neu]").click();
   assert.ok(await neu.isVisible());
   await neu.locator("[data-close-dialog]").click();
   assert.equal(await neu.evaluate((d) => d.open), false);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+});
+
+test("Menüs „Wer entscheidet“ und „Themen und Geld“: Karten öffnen Verfahren, Gremien, Ämter und Zahlen", async () => {
+  const page = await open();
+  await page.keyboard.press("Escape");
+  for (const [tab, id] of [["gremien", "tab-pz-gremien"], ["aemter", "tab-pz-aemter"], ["verfahren", "tab-pz-verfahren"]]) {
+    await page.locator('.menu-btn[data-mega="mega-entscheiden"]').click();
+    await page.locator(`#mega-entscheiden [data-pz-tab="${tab}"]`).click();
+    await page.waitForFunction((i) => !document.getElementById("panel-prozesse").hidden && document.getElementById(i)?.getAttribute("aria-selected") === "true", id);
+    assert.equal(await page.locator("#mega-entscheiden").isVisible(), false, "Menü schließt");
+  }
+  assert.deepEqual(await axe(page), []);
+  await page.keyboard.press("Escape");
+  assert.equal(await page.locator("#panel-prozesse").isVisible(), false);
+  assert.equal(await page.evaluate(() => document.activeElement.dataset.mega), "mega-entscheiden", "Fokus zurück auf den Menüeintrag");
+  await page.locator('.menu-btn[data-mega="mega-themen"]').click();
+  assert.equal(await page.locator("#mega-themen .theme-links a").count(), 10);
+  await page.locator('#mega-themen [data-open-tab="stats"]').click();
+  assert.ok(await page.locator("#panel-auswertung").isVisible());
   assert.deepEqual(page.errors, []);
   await page.close();
 });
@@ -350,7 +372,7 @@ test("Ratsassistent: erst beim Öffnen geladen, ohne Verstöße", async () => {
 
 test("Tour: alle Schritte bis zum Ende", async () => {
   const page = await open();
-  await page.locator(".tour-cta[data-tour]").click();   // Knopf im Startfenster (ein weiterer steht im Menü „Verstehen“)
+  await page.locator(".tour-cta[data-tour]").click();   // Knopf im Startfenster (ein weiterer steht im Menü „Hilfe“)
   const titles = [];
   for (let i = 0; i < 30; i++) {
     // Schritte mit Ladevorgang zeigen „Einen Moment …“, bis Gebiet oder Vorgang geladen sind
@@ -365,7 +387,8 @@ test("Tour: alle Schritte bis zum Ende", async () => {
       return !el || !el.offsetParent || el.textContent !== t || document.querySelector("#tour-text").textContent.startsWith("Einen Moment");
     }, title);
   }
-  assert.ok(titles.length >= 15, `nur ${titles.length} Schritte: ${titles.join(" | ")}`);
+  assert.ok(titles.length >= 14, `nur ${titles.length} Schritte: ${titles.join(" | ")}`);
+  for (const t of ["Menü „Wer entscheidet“", "Menü „Themen und Geld“", "Menü „Mitmachen“", "Menü „Hilfe“"]) assert.ok(titles.includes(t), t);
   assert.ok(titles.includes("Der Vorgang"), "Schritt mit dem Beispielvorgang");
   assert.equal(await page.locator(".tour-card").isVisible(), false, "Tour ist beendet");
   assert.deepEqual(page.errors, []);
@@ -389,23 +412,26 @@ test("Liste in Schritten zu 50: „Weitere anzeigen“ ergänzt 50 Einträge, Fo
   await page.close();
 });
 
-test("Menü „Verstehen“: Einfache Sprache, Begriffe, Verlässlichkeit und Tour; nicht mehr unter „Daten“", async () => {
+test("Leiste: Ansichten, vier Menüs und Assistent; Menü „Hilfe“ mit Lesehilfen, Tour und „Über den Ratsatlas“", async () => {
   for (const width of [1440, 390]) {
     const page = await open("", { width, height: 900 });
     await page.keyboard.press("Escape");
+    assert.deepEqual(await page.locator(".nav .menu-btn[data-mega]").evaluateAll((bs) => bs.map((b) => b.dataset.mega)),
+      ["mega-themen", "mega-entscheiden", "mega-mitmachen", "mega-hilfe"]);
+    assert.equal(await page.locator('.toggle[data-panel="panel-detail"], .toggle[data-panel="panel-prozesse"]').count(), 0, "kein Schalter für Vorgang und Prozesse");
     if (width < 900) await page.locator("#nav-burger").click();   // Telefon: Menüs hinter ☰
-    await page.locator('.menu-btn[data-mega="mega-verstehen"]').click();
-    const m = page.locator("#mega-verstehen");
+    await page.locator('.menu-btn[data-mega="mega-hilfe"]').click();
+    const m = page.locator("#mega-hilfe");
     assert.ok(await m.isVisible());
-    if (width < 900) assert.ok(await page.locator("#nav-more #mega-verstehen").count(), "klappt im Hamburger-Menü auf");
+    if (width < 900) assert.ok(await page.locator("#nav-more #mega-hilfe").count(), "klappt im Hamburger-Menü auf");
     assert.equal(await m.locator('a[href="einfach/"]').count(), 1);
     assert.equal(await m.locator('a[href="begriffe/"]').count(), 1);
     assert.equal(await m.locator("[data-tour]").count(), 1);
-    assert.deepEqual(await axe(page), [], `Menü Verstehen (${width} px)`);
+    assert.equal(await m.locator("#about-open, [data-neu], #cta-report, a[href='teilen/'], a[href='rss/']").count(), 5);
+    assert.deepEqual(await axe(page), [], `Menü Hilfe (${width} px)`);
     await m.locator('[data-about="pruefung"]').click();
     assert.ok(await page.locator("#about").evaluate((d) => d.open));
     await page.keyboard.press("Escape");
-    assert.equal(await page.locator('#mega-daten a[href="begriffe/"], #mega-daten a[href="einfach/"], #mega-daten [data-about]').count(), 0);
     // Leiste ohne Überlauf
     assert.ok(await page.evaluate(() => { const n = document.querySelector(".nav"); return n.scrollWidth <= n.clientWidth + 1; }));
     assert.deepEqual(page.errors, []);

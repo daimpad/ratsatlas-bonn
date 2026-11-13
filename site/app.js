@@ -146,10 +146,11 @@
   function closePanel(id) {
     setPanel(id, false);
     const t = toggleFor(id);
-    // Auswertung, Termine und Mitmachen haben keine Schaltfläche in der Leiste: Fokus zurück auf das öffnende Element,
-    // sonst auf den Eintrag im Menü (Code-Prüfung 23.10.2026: Fokus lag danach auf <body>)
+    // Vorgang, Auswertung, Prozesse, Termine und Mitmachen haben keine Schaltfläche in der Leiste: Fokus zurück auf das
+    // öffnende Element, sonst auf den Eintrag im Menü (Code-Prüfung 23.10.2026: Fokus lag danach auf <body>)
     const back = t && t.offsetParent ? t : opener[id]?.isConnected && opener[id].offsetParent ? opener[id]
-      : document.querySelector(`[data-mega][aria-controls="${{ "panel-auswertung": "mega-auswertung", "panel-termine": "mega-mitmachen", "panel-mitmachen": "mega-mitmachen" }[id] || ""}"]`);
+      : id === "panel-detail" ? toggleFor("panel-list")
+      : document.querySelector(`[data-mega][aria-controls="${{ "panel-auswertung": "mega-themen", "panel-prozesse": "mega-entscheiden", "panel-termine": "mega-mitmachen", "panel-mitmachen": "mega-mitmachen" }[id] || ""}"]`);
     if (back) back.focus();
   }
   document.addEventListener("click", (e) => {
@@ -198,7 +199,7 @@
     el.dataset.trigger = trigger ? trigger.id || "" : "";
     document.querySelectorAll(`[data-mega="${id}"]`).forEach((b) => b.setAttribute("aria-expanded", "true"));
     if (id === "mega-suche") fillChips();
-    if (id === "mega-mitmachen") fillMitmachen();
+    if (id === "mega-mitmachen" || id === "mega-hilfe") fillMitmachen();   // Feeds und Hinweis-Link nach Gebiet und Vorgang
     if (MOBILE.matches) SHEETS.forEach((s) => !document.getElementById(s).hidden && setPanel(s, false));
   }
   function closeMega(returnFocus) {
@@ -238,7 +239,7 @@
   burger.addEventListener("click", () => setNav(!navIsOpen()));
   // Wahl eines Eintrags schließt das Blatt (Flächen, Seiten, Dialoge, Tour, Links)
   navMore.addEventListener("click", (e) => {
-    if (MOBILE.matches && e.target.closest(".toggle, [data-show], [data-panel], #about-open, [data-about], [data-neu], [data-tour], a[href]")) setNav(false);
+    if (MOBILE.matches && e.target.closest(".toggle, [data-show], [data-panel], [data-pz-tab], [data-open-tab], #about-open, [data-about], [data-neu], [data-tour], a[href]")) setNav(false);
   });
   $("#f-area").addEventListener("change", () => { if (MOBILE.matches) setNav(false); });
   // Tippen außerhalb der Leiste schließt das Blatt
@@ -304,7 +305,7 @@
     const a = e.target.closest?.("a[href]");
     if (a && /^https?:$/.test(a.protocol) && a.host !== location.host && !a.target) { a.target = "_blank"; a.rel = a.rel || "noopener"; }
   }, true);
-  // „Was ist neu?“ in einem eigenen Fenster (aus „Über“ und dem Menü „Daten“)
+  // „Was ist neu?“ in einem eigenen Fenster (aus „Über“ und dem Menü „Hilfe“)
   document.addEventListener("click", (e) => {
     if (e.target.closest("[data-neu]")) { closeMega(); if ($("#about").open) $("#about").close(); $("#neu").showModal(); }
     if (e.target.closest("[data-close-dialog]")) e.target.closest("dialog").close();
@@ -2128,7 +2129,7 @@
     if (b) { const p = papers.find((x) => x.reference === b.dataset.ref); if (p) { closePanel("panel-termine"); select(p); } }
   });
 
-  // --- Menü „Mitmachen“: Abonnieren und Hinweise ----------------------------------------------------
+  // --- Menüs „Mitmachen“ und „Hilfe“: Abonnieren und Hinweise ------------------------------------------
   function fillMitmachen() {
     if (!area) return;
     const where = area.kind === "ohne" ? `Vorlagen ohne Ortsbezug ${area.key}` : area.name;
@@ -2435,11 +2436,16 @@
       tl.select(papers.find((p) => p.reference === hoverRef), true);
     });
     $("#papers").addEventListener("mouseleave", () => { hoverRef = null; if (tl) tl.select(selected); });
-    // Menü „Mitmachen“: Termine; Menü „Auswertung“: Reiter Kennzahlen und Verfahrenswege
+    // Menü „Mitmachen“: Termine; Menüs „Themen und Geld“ und „Wer entscheidet“: Kennzahlen, Verfahrenswege, Prozesse
     if (zeit) $("#cta-termine").addEventListener("click", () => { setPanel("panel-termine", true); showTermine(); focusPanel("panel-termine"); });
     else $("#cta-termine").hidden = true;
     $("#cta-mitmachen").addEventListener("click", () => { closeMega(); setPanel("panel-mitmachen", true); focusPanel("panel-mitmachen"); });
     document.querySelectorAll("[data-open-tab]").forEach((b) => b.addEventListener("click", () => openAuswertung(b.dataset.openTab)));
+    document.querySelectorAll("[data-pz-tab]").forEach((b) => b.addEventListener("click", () => {
+      closeMega();
+      setPanel("panel-prozesse", true);
+      openProzesse({ tab: b.dataset.pzTab }).then(() => focusPanel("panel-prozesse"));
+    }));
     $("#tab-stats").addEventListener("click", () => openAuswertung("stats"));
     $("#tab-wege").addEventListener("click", () => openAuswertung("wege"));
     $("#panel-auswertung .tabs").addEventListener("keydown", (e) => {
