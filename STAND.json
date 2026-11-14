@@ -3,30 +3,30 @@
   "abruf": "2026-10-21T05:32:33+00:00",
   "anzahl": 46,
   "erfolg": false,
-  "fehler": "Thema 14698: 10 Versuche ohne gültige Antwort (HTTP Error 502: Bad Gateway)",
+  "fehler": "Thema 14698: 10 Versuche ohne gültige Antwort (HTTP Error 504: Gateway Time-out)",
   "inhalt": "0f26418124031d71",
   "thema": 14698,
-  "versuch": "2026-11-13T05:25:08+00:00",
+  "versuch": "2026-11-14T05:24:22+00:00",
   "versuche": 1
  },
  "geplant_30_tage": {
   "abruf": "2026-10-21T05:32:33+00:00",
   "anzahl": 46,
   "erfolg": false,
-  "fehler": "Thema 14755: 10 Versuche ohne gültige Antwort (HTTP Error 502: Bad Gateway)",
+  "fehler": "Thema 14755: 10 Versuche ohne gültige Antwort (HTTP Error 504: Gateway Time-out)",
   "inhalt": "11c062e9ebb89b7b",
   "thema": 14755,
-  "versuch": "2026-11-13T05:25:08+00:00",
+  "versuch": "2026-11-14T05:24:22+00:00",
   "versuche": 1
  },
  "tagesaktuell": {
   "abruf": "2026-10-21T05:32:33+00:00",
   "anzahl": 7,
   "erfolg": false,
-  "fehler": "Thema 14403: 10 Versuche ohne gültige Antwort (HTTP Error 502: Bad Gateway)",
+  "fehler": "Thema 14403: 10 Versuche ohne gültige Antwort (HTTP Error 504: Gateway Time-out)",
   "inhalt": "d06c071bad4a7280",
   "thema": 14403,
-  "versuch": "2026-11-13T05:25:08+00:00",
+  "versuch": "2026-11-14T05:24:22+00:00",
   "versuche": 1
  }
 }
