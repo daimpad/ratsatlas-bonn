@@ -911,10 +911,10 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "number": "4.1",
+     "result": "ungeändert beschlossen - mit Protokollnotiz",
+     "public": 1,
+     "status": "beraten"
     }
    ],
    "superordinated": [
@@ -972,7 +972,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029806",
-   "stand": "offen",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "umwelt",
@@ -1019,8 +1019,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "number": "4.1",
+     "result": "ungeändert beschlossen - mit Protokollnotiz",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     }
    ],
    "soll": {

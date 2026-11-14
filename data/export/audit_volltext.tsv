@@ -16642,6 +16642,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261939	verortet	Hauptteil	volltext_strasse+ortsteil	Wolfstraße	Nordstadt	mittel	2
 261941	kein Ort						
 261941-01 ST	kein Ort						
+261943	kein Ort						
 261944	kein Ort						
 261953	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
 261953	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
@@ -16666,6 +16667,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261991-02 AA	kein Ort						
 261993	nur in Anlagen genannt, nicht verortet						
 261994	kein Ort						
+261994-01 ST	kein Ort						
 261994-02 AA	kein Ort						
 261995	kein Ort						
 261995-01 ST	kein Ort						
@@ -16673,6 +16675,12 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262001	kein Ort						
 262001-01 ST	kein Ort						
 262004	Titel ohne gemeinsamen Ort, nicht verortet						
+262006	verortet	Hauptteil	volltext_strasse	Robert-Koch-Straße	Poppelsdorf	mittel	2
+262006	verortet	Hauptteil	volltext_strasse	Robert-Koch-Straße	Venusberg	mittel	2
+262006	verortet	Hauptteil	volltext_strasse+kreuzung	Auerberger Allee	Auerberg	mittel	1
+262006	verortet	Hauptteil	volltext_strasse+kreuzung	Auerberger Mitte	Auerberg	mittel	3
+262006	verortet	Hauptteil	volltext_strasse+kreuzung	Kopenhagener Straße	Auerberg	mittel	3
+262006	verortet	Hauptteil	volltext_strasse+kreuzung	Pariser Straße	Auerberg	mittel	2
 262007	Titel ohne gemeinsamen Ort, nicht verortet						
 262008	nur in Anlagen genannt, nicht verortet						
 262009	kein Ort						
@@ -16688,6 +16696,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262026	kein Ort						
 262030	nur in Anlagen genannt, nicht verortet						
 262031	Titel ohne gemeinsamen Ort, nicht verortet						
+262031-01	Titel ohne gemeinsamen Ort, nicht verortet						
 262036	kein Ort						
 262037	kein Ort						
 262050	kein Ort						
@@ -16711,6 +16720,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262080	kein Ort						
 262082	Liste (7 Ortsteile), nicht verortet	Hauptteil					
 262084	kein Ort						
+262084-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	mittel	1
 262092	kein Ort						
 262093	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
 262093	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	1
@@ -16742,12 +16752,14 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262129	verortet	Hauptteil	volltext_strasse+kreuzung	Oberkasseler Ufer	Oberkassel	mittel	1
 262130	kein Ort						
 262131	kein Ort						
+262131-01 ST	kein Ort						
 262135	kein Ort						
 262136	Titel ohne gemeinsamen Ort, nicht verortet						
 262138	kein Ort						
 262139	kein Ort						
 262143	Titel ohne gemeinsamen Ort, nicht verortet						
 262154	kein Ort						
+262156	Titel ohne gemeinsamen Ort, nicht verortet						
 262159	Titel ohne gemeinsamen Ort, nicht verortet						
 262163	kein Ort						
 262165	verortet	Hauptteil	volltext_strasse+ortsteil	Beueler Straße	Vilich- Müldorf	mittel	4

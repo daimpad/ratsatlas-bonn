@@ -174,13 +174,13 @@ drucksache	feld	export	oparl_api	ergebnis
 210274-01 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/227	https://www.bonn.sitzung-online.de/oparl/organizations/at/227	ok
 210274-01 ST	beratungen	1	1	ok
 210274-01 ST	orte_stufe_a			ok
-200612	reference	200612	200612	ok
-200612	name	Bürgerantrag: Essbare Stadt Bonn - Projekt BEEThoven	Bürgerantrag: Essbare Stadt Bonn - Projekt BEEThoven	ok
-200612	date	2020-04-03	2020-04-03	ok
-200612	paper_type	Bürgerantrag § 24 GO - Öffentlich	Bürgerantrag § 24 GO - Öffentlich	ok
-200612	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	ok
-200612	beratungen	1	1	ok
-200612	orte_stufe_a			ok
+190275	reference	190275	190275	ok
+190275	name	Bürgerantrag: Wiedereinführung der ursprünglichen Streckenführung der Buslinie 550 durch Schwarzrheindorf und Beuel (alt: 1912783)	Bürgerantrag: Wiedereinführung der ursprünglichen Streckenführung der Buslinie 550 durch Schwarzrheindorf und Beuel (alt: 1912783)	ok
+190275	date	2019-10-23	2019-10-23	ok
+190275	paper_type	Bürgerantrag § 24 GO - Öffentlich	Bürgerantrag § 24 GO - Öffentlich	ok
+190275	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/147	https://www.bonn.sitzung-online.de/oparl/organizations/at/147	ok
+190275	beratungen	2	2	ok
+190275	orte_stufe_a			ok
 253455	reference	253455	253455	ok
 253455	name	Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Marktstraße in Bonn-Pützchen	Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Marktstraße in Bonn-Pützchen	ok
 253455	date	2025-08-27	2025-08-27	ok
@@ -188,13 +188,13 @@ drucksache	feld	export	oparl_api	ergebnis
 253455	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	ok
 253455	beratungen	1	1	ok
 253455	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/22502	https://www.bonn.sitzung-online.de/oparl/locations/22502	ok
-200504	reference	200504	200504	ok
-200504	name	Veränderungen bei der Förderung Kultureller Projekte ab 2021	Veränderungen bei der Förderung Kultureller Projekte ab 2021	ok
-200504	date	2020-03-13	2020-03-13	ok
-200504	paper_type	Mitteilungsvorlage	Mitteilungsvorlage	ok
-200504	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/21	https://www.bonn.sitzung-online.de/oparl/organizations/at/21	ok
-200504	beratungen	1	1	ok
-200504	orte_stufe_a			ok
+190251	reference	190251	190251	ok
+190251	name	Verkehrsführung Ortskern Pützchen (alt: 1311373NV3, FF: Amt 33)	Verkehrsführung Ortskern Pützchen (alt: 1311373NV3, FF: Amt 33)	ok
+190251	date	2019-10-23	2019-10-23	ok
+190251	paper_type	Beschlussvorlage	Beschlussvorlage	ok
+190251	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/142	https://www.bonn.sitzung-online.de/oparl/organizations/at/142	ok
+190251	beratungen	1	1	ok
+190251	orte_stufe_a			ok
 232164	reference	232164	232164	ok
 232164	name	Einleitung des Vergabeverfahrens zur Erneuerung von Palisaden und Einfassungen auf Spielplätzen im gesamten Bonner Stadtgebiet 2024	Einleitung des Vergabeverfahrens zur Erneuerung von Palisaden und Einfassungen auf Spielplätzen im gesamten Bonner Stadtgebiet 2024	ok
 232164	date	2023-12-08	2023-12-08	ok
@@ -244,13 +244,13 @@ drucksache	feld	export	oparl_api	ergebnis
 240679-07 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
 240679-07 AA	beratungen	1	1	ok
 240679-07 AA	orte_stufe_a			ok
-201986	reference	201986	201986	ok
-201986	name	Punkte der nichtöffentlichen Sitzung	Punkte der nichtöffentlichen Sitzung	ok
-201986	date	2020-11-17	2020-11-17	ok
-201986	paper_type	Tagesordnungspunkte in nichtöffentlicher Sitzung	Tagesordnungspunkte in nichtöffentlicher Sitzung	ok
-201986	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/140	https://www.bonn.sitzung-online.de/oparl/organizations/at/140	ok
-201986	beratungen	1	1	ok
-201986	orte_stufe_a			ok
+201843-1 ST	reference	201843-1 ST	201843-1 ST	ok
+201843-1 ST	name	Entfernung Umlaufsperren Glückstraße	Entfernung Umlaufsperren Glückstraße	ok
+201843-1 ST	date	2020-11-20	2020-11-20	ok
+201843-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
+201843-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	ok
+201843-1 ST	beratungen	1	1	ok
+201843-1 ST	orte_stufe_a			ok
 230497-04 AA	reference	230497-04 AA	230497-04 AA	ok
 230497-04 AA	name	Änderungsantrag der AfD-Fraktion zum BBB-Antrag: Aufnahme des verstorbenen Papst Benedikt in die Bonner Straßenbenennungsliste	Änderungsantrag der AfD-Fraktion zum BBB-Antrag: Aufnahme des verstorbenen Papst Benedikt in die Bonner Straßenbenennungsliste	ok
 230497-04 AA	date	2025-11-12	2025-11-12	ok
@@ -258,13 +258,13 @@ drucksache	feld	export	oparl_api	ergebnis
 230497-04 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
 230497-04 AA	beratungen	1	1	ok
 230497-04 AA	orte_stufe_a			ok
-190783	reference	190783	190783	ok
-190783	name	Errichtung von zwei Trockenmauern und eines Fahrradständers auf dem Grundstück des Baudenkmals Mühlenstumpf, An der Rheindorfer Burg [Hausnummer ausgelassen], Bonn	Errichtung von zwei Trockenmauern und eines Fahrradständers auf dem Grundstück des Baudenkmals Mühlenstumpf, An der Rheindorfer Burg [Hausnummer ausgelassen], Bonn	ok
-190783	date	2019-11-18	2019-11-18	ok
-190783	paper_type	Beschlussvorlage	Beschlussvorlage	ok
-190783	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/222	https://www.bonn.sitzung-online.de/oparl/organizations/at/222	ok
-190783	beratungen	1	1	ok
-190783	orte_stufe_a			ok
+190782	reference	190782	190782	ok
+190782	name	Einleitung des Vergabeverfahrens zur Baumersatzpflanzung in Bad Godesberg – Villenviertel und Rüngsdorf	Einleitung des Vergabeverfahrens zur Baumersatzpflanzung in Bad Godesberg – Villenviertel und Rüngsdorf	ok
+190782	date	2019-11-22	2019-11-22	ok
+190782	paper_type	Beschlussvorlage	Beschlussvorlage	ok
+190782	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/239	https://www.bonn.sitzung-online.de/oparl/organizations/at/239	ok
+190782	beratungen	1	1	ok
+190782	orte_stufe_a			ok
 211403-01 ST	reference	211403-01 ST	211403-01 ST	ok
 211403-01 ST	name	Ausbau Rita-Maiburg-Straße in Bonn-Lengsdorf	Ausbau Rita-Maiburg-Straße in Bonn-Lengsdorf	ok
 211403-01 ST	date	2021-10-04	2021-10-04	ok
@@ -272,13 +272,13 @@ drucksache	feld	export	oparl_api	ergebnis
 211403-01 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/224	https://www.bonn.sitzung-online.de/oparl/organizations/at/224	ok
 211403-01 ST	beratungen	1	1	ok
 211403-01 ST	orte_stufe_a			ok
-201310-1 ST	reference	201310-1 ST	201310-1 ST	ok
-201310-1 ST	name	Islamische Grabstätten / Islamischer Friedhof	Islamische Grabstätten / Islamischer Friedhof	ok
-201310-1 ST	date	2020-07-31	2020-07-31	ok
-201310-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-201310-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/92	https://www.bonn.sitzung-online.de/oparl/organizations/at/92	ok
-201310-1 ST	beratungen	1	1	ok
-201310-1 ST	orte_stufe_a			ok
+201490	reference	201490	201490	ok
+201490	name	Zustand des Baumbestandes in der Stadt Bonn	Zustand des Baumbestandes in der Stadt Bonn	ok
+201490	date	2020-07-28	2020-07-28	ok
+201490	paper_type	Große Anfrage	Große Anfrage	ok
+201490	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+201490	beratungen	2	2	ok
+201490	orte_stufe_a			ok
 240343	reference	240343	240343	ok
 240343	name	CDU-Antrag: Verkehrsführung Kaiserstraße	CDU-Antrag: Verkehrsführung Kaiserstraße	ok
 240343	date	2024-02-22	2024-02-22	ok
@@ -335,17 +335,17 @@ drucksache	feld	export	oparl_api	ergebnis
 220880	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/328	https://www.bonn.sitzung-online.de/oparl/organizations/at/328	ok
 220880	beratungen	1	1	ok
 220880	orte_stufe_a			ok
-190857-1 ST	reference	190857-1 ST	190857-1 ST	ok
-190857-1 ST	name	Verspätungen bei SWB Bus und Bahn	Verspätungen bei SWB Bus und Bahn	ok
-190857-1 ST	date	2019-12-10	2019-12-10	ok
-190857-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-190857-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	ok
-190857-1 ST	beratungen	1	1	ok
-190857-1 ST	orte_stufe_a			ok
-201057	reference	201057	201057	ok
-201057	name	Aufstellung und öffentliche Auslegung, Bebauungsplan Nr. 6420-2, Stadtbezirk Bonn, Ortsteil Poppelsdorf, Rudolf-Stöcker-Weg/ Mordkapellenpfad	Aufstellung und öffentliche Auslegung, Bebauungsplan Nr. 6420-2, Stadtbezirk Bonn, Ortsteil Poppelsdorf, Rudolf-Stöcker-Weg/ Mordkapellenpfad	ok
-201057	date	2020-07-27	2020-07-27	ok
-201057	paper_type	Beschlussvorlage	Beschlussvorlage	ok
-201057	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/228	https://www.bonn.sitzung-online.de/oparl/organizations/at/228	ok
-201057	beratungen	3	3	ok
-201057	orte_stufe_a			ok
+190886-1 ST	reference	190886-1 ST	190886-1 ST	ok
+190886-1 ST	name	Bürgerantrag: Kreisverkehr/Lichtsignalanlage im Kreuzungsbereich Kölnstraße/Otto-Hahn-Straße in Buschdorf	Bürgerantrag: Kreisverkehr/Lichtsignalanlage im Kreuzungsbereich Kölnstraße/Otto-Hahn-Straße in Buschdorf	ok
+190886-1 ST	date	2019-12-17	2019-12-17	ok
+190886-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
+190886-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	ok
+190886-1 ST	beratungen	1	1	ok
+190886-1 ST	orte_stufe_a			ok
+190326-1 AA	reference	190326-1 AA	190326-1 AA	ok
+190326-1 AA	name	Öffentlich-rechtlicher Vertrag über Mobilitätsmaßnahmen des Universitätsklinikums Bonn (UKB) - Inbenutzungnahme von 90 Pkw-Stellplätzen im Parkhaus-Mitte auf dem UKB-Gelände Venusberg (Alt 1912686AA3)	Öffentlich-rechtlicher Vertrag über Mobilitätsmaßnahmen des Universitätsklinikums Bonn (UKB) - Inbenutzungnahme von 90 Pkw-Stellplätzen im Parkhaus-Mitte auf dem UKB-Gelände Venusberg (Alt 1912686AA3)	ok
+190326-1 AA	date	2019-10-17	2019-10-17	ok
+190326-1 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
+190326-1 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/143	https://www.bonn.sitzung-online.de/oparl/organizations/at/143	ok
+190326-1 AA	beratungen	2	2	ok
+190326-1 AA	orte_stufe_a			ok

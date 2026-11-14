@@ -6,32 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sitzungen Rat\, Ausschüsse und Bezirksvertretungen Bonn
 X-WR-TIMEZONE:Europe/Berlin
 BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005646
-DTSTAMP:20261014T150000Z
-DTSTART:20261014T150000Z
-SUMMARY:Bezirksvertretung Beuel
-DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung: https://www.
- bonn.sitzung-online.de/public/TO010?SILFDNR=2005646\nEinladung: https://ww
- w.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3230473&OTYP=41\nQu
- elle: OParl-API der Stadt Bonn (CC0 1.0)
-STATUS:CONFIRMED
-URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005646
-END:VEVENT
-BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005880
-DTSTAMP:20261014T160000Z
-DTSTART:20261014T160000Z
-DTEND:20261014T165200Z
-SUMMARY:Ausschuss für Wissenschaft\, Europa und Internationales
-DESCRIPTION:Sitzung des Ausschusses für Wissenschaft\, Europa und Internat
- ionales\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SIL
- FDNR=2005880\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOC
- TYP=108&DOLFDNR=3229938&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0
- )
-STATUS:CONFIRMED
-URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005880
-END:VEVENT
-BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005871
 DTSTAMP:20261103T173500Z
 DTSTART:20261103T173500Z
@@ -100,9 +74,12 @@ UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006772
 DTSTAMP:20261116T180000Z
 DTSTART:20261116T180000Z
 SUMMARY:Rat
-DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
- elle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung des Rates\nTagesordnung: https://www.bonn.sitzung-onlin
+ e.de/public/TO010?SILFDNR=2006772\nEinladung: https://www.bonn.sitzung-onl
+ ine.de/public/doc?DOCTYP=108&DOLFDNR=3262304&OTYP=41\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006772
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005620

@@ -3,18 +3,26 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-tannenbusch</id>
 <title>Ratsatlas Bonn – Tannenbusch</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Tannenbusch</subtitle>
-<updated>2026-11-11T00:00:00Z</updated>
+<updated>2026-11-12T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-tannenbusch.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028398#beratung-2026-11-12-Rat</id>
+<title>Rat: „vertagt“ – 261101-01 ST Große Anfrage-Grüne: Fördermittelvergabe VEBOWAG</title>
+<updated>2026-11-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261101-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028398"/>
+<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028398#vorlage</id>
 <title>Neue Vorlage 261101-01 ST: Große Anfrage-Grüne: Fördermittelvergabe VEBOWAG</title>
 <updated>2026-11-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261101-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028398"/>
-<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030266#vorlage</id>
@@ -94,7 +102,7 @@
 <updated>2026-10-27T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261242-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029674"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030100#vorlage</id>
@@ -146,7 +154,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029591#beratung-2026-09-24-Rat</id>
-<title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 253210-05 AA Änderungsantrag Grüne Fraktion - Bebauungsplan 6224-3 "Im Rosenfeld" - Beschluss über das überarbeitete städtebauliche Konzept und die weiteren Schritte im Bebauungsplanverfahren Antrag zur Vorlage 253210</title>
+<title>Rat: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 253210-05 AA Änderungsantrag Grüne Fraktion - Bebauungsplan 6224-3 "Im Rosenfeld" - Beschluss über das überarbeitete städtebauliche Konzept und die weiteren Schritte im Bebauungsplanverfahren Antrag zur Vorlage 253210</title>
 <updated>2026-09-24T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#253210-05%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029591"/>
@@ -346,11 +354,11 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028144#beratung-2026-07-09-Rat</id>
-<title>Rat: „vertagt“ – 261242 Große Anfrage - BSW/SBI-Gruppe: Verkehrssicherheit an der Ausfahrt der A565, Anschlussstelle Bonn-Tannenbusch (Nr. 6), Querungsstelle Lievelingsweg</title>
+<title>Rat: „zur Kenntnis genommen - mit Protokollnotiz“ – 261242 Große Anfrage - BSW/SBI-Gruppe: Verkehrssicherheit an der Ausfahrt der A565, Anschlussstelle Bonn-Tannenbusch (Nr. 6), Querungsstelle Lievelingsweg</title>
 <updated>2026-07-09T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261242"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028144"/>
-<summary>Kenntnisnahme am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Kenntnisnahme am 2026-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027880#beratung-2026-07-07-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
@@ -550,7 +558,7 @@
 <updated>2026-06-17T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261242"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028144"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027748#beratung-2026-06-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#260792"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026829"/>
 <summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026899#vorlage</id>
-<title>Neue Vorlage 231184-03 ST: Stellungnahme zum SPD-Bezirksfraktion-Antrag: Stand der Prüfung eines Fußgängerüberwegs in Tannenbusch</title>
-<updated>2026-05-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#231184-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026899"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
