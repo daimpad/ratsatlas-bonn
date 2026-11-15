@@ -15632,7 +15632,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260970	kein Ort						
 260970-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Argelanderstraße	Südstadt	niedrig	1
 260970-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Ermekeilstraße	Südstadt	niedrig	1
-260971	kein Ort						
 260971-01 ST	kein Ort						
 260972	nur in Anlagen genannt, nicht verortet						
 260974	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16319,7 +16318,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261590	nur in Anlagen genannt, nicht verortet						
 261592	nur in Anlagen genannt, nicht verortet						
 261593	nur in Anlagen genannt, nicht verortet						
-261594	kein Ort						
 261594-01	kein Ort						
 261595	Titel ohne gemeinsamen Ort, nicht verortet						
 261596	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16709,6 +16707,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262064	nur in Anlagen genannt, nicht verortet						
 262065	kein Ort						
 262070	nur in Anlagen genannt, nicht verortet						
+262072	Titel ohne gemeinsamen Ort, nicht verortet						
 262074	Titel ohne gemeinsamen Ort, nicht verortet						
 262075	verortet	Hauptteil	volltext_strasse	Derlestraße	Duisdorf	niedrig	1
 262075	verortet	Hauptteil	volltext_strasse	Ludwig-Erhard-Allee	Hochkreuz	mittel	2
@@ -16730,6 +16729,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262094	Titel ohne gemeinsamen Ort, nicht verortet						
 262095	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Holtorf	niedrig	1
 262095	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1
+262097	Titel ohne gemeinsamen Ort, nicht verortet						
 262104	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 262106	verortet	Hauptteil	volltext_strasse	Salierweg	Graurheindorf	mittel	2
 262107	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1

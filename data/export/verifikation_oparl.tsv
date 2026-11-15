@@ -174,27 +174,27 @@ drucksache	feld	export	oparl_api	ergebnis
 210274-01 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/227	https://www.bonn.sitzung-online.de/oparl/organizations/at/227	ok
 210274-01 ST	beratungen	1	1	ok
 210274-01 ST	orte_stufe_a			ok
-190275	reference	190275	190275	ok
-190275	name	Bürgerantrag: Wiedereinführung der ursprünglichen Streckenführung der Buslinie 550 durch Schwarzrheindorf und Beuel (alt: 1912783)	Bürgerantrag: Wiedereinführung der ursprünglichen Streckenführung der Buslinie 550 durch Schwarzrheindorf und Beuel (alt: 1912783)	ok
-190275	date	2019-10-23	2019-10-23	ok
-190275	paper_type	Bürgerantrag § 24 GO - Öffentlich	Bürgerantrag § 24 GO - Öffentlich	ok
-190275	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/147	https://www.bonn.sitzung-online.de/oparl/organizations/at/147	ok
-190275	beratungen	2	2	ok
-190275	orte_stufe_a			ok
-253455	reference	253455	253455	ok
-253455	name	Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Marktstraße in Bonn-Pützchen	Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Marktstraße in Bonn-Pützchen	ok
-253455	date	2025-08-27	2025-08-27	ok
-253455	paper_type	Anregungen und Beschwerden	Anregungen und Beschwerden	ok
-253455	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	ok
-253455	beratungen	1	1	ok
-253455	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/22502	https://www.bonn.sitzung-online.de/oparl/locations/22502	ok
-190251	reference	190251	190251	ok
-190251	name	Verkehrsführung Ortskern Pützchen (alt: 1311373NV3, FF: Amt 33)	Verkehrsführung Ortskern Pützchen (alt: 1311373NV3, FF: Amt 33)	ok
-190251	date	2019-10-23	2019-10-23	ok
-190251	paper_type	Beschlussvorlage	Beschlussvorlage	ok
-190251	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/142	https://www.bonn.sitzung-online.de/oparl/organizations/at/142	ok
-190251	beratungen	1	1	ok
-190251	orte_stufe_a			ok
+190277	reference	190277	190277	ok
+190277	name	"Einleitung des Vergabeverfahrens ""Kunsttransport zur Ausstellung Sound and Silence"""	"Einleitung des Vergabeverfahrens ""Kunsttransport zur Ausstellung Sound and Silence"""	ok
+190277	date	2019-10-25	2019-10-25	ok
+190277	paper_type	Beschlussvorlage: Einleitung	Beschlussvorlage: Einleitung	ok
+190277	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/66	https://www.bonn.sitzung-online.de/oparl/organizations/at/66	ok
+190277	beratungen	1	1	ok
+190277	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/21905	https://www.bonn.sitzung-online.de/oparl/locations/21905	ok
+252856-05 AA	reference	252856-05 AA	252856-05 AA	ok
+252856-05 AA	name	Änderungsantrag: Erhalt der Sporthalle J des Friedrich-List-Berufskolleg – Änderungsantrag zur Prioritätenliste für Projekte/Maßnahmen im SGB, DS-Nr. 252856	Änderungsantrag: Erhalt der Sporthalle J des Friedrich-List-Berufskolleg – Änderungsantrag zur Prioritätenliste für Projekte/Maßnahmen im SGB, DS-Nr. 252856	ok
+252856-05 AA	date	2025-07-03	2025-07-03	ok
+252856-05 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
+252856-05 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+252856-05 AA	beratungen	1	1	ok
+252856-05 AA	orte_stufe_a			ok
+200300-1 AA	reference	200300-1 AA	200300-1 AA	ok
+200300-1 AA	name	Neuausrichtung der Qualifizierung von Tagespflegepersonen im Rahmen der Qualitätssicherung und Weiterentwicklung der Kindertagespflege in Bonn - Kooperationsvertrag 2019 Antrag zur Vorlage 200300	Neuausrichtung der Qualifizierung von Tagespflegepersonen im Rahmen der Qualitätssicherung und Weiterentwicklung der Kindertagespflege in Bonn - Kooperationsvertrag 2019 Antrag zur Vorlage 200300	ok
+200300-1 AA	date	2020-03-10	2020-03-10	ok
+200300-1 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
+200300-1 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+200300-1 AA	beratungen	1	1	ok
+200300-1 AA	orte_stufe_a			ok
 232164	reference	232164	232164	ok
 232164	name	Einleitung des Vergabeverfahrens zur Erneuerung von Palisaden und Einfassungen auf Spielplätzen im gesamten Bonner Stadtgebiet 2024	Einleitung des Vergabeverfahrens zur Erneuerung von Palisaden und Einfassungen auf Spielplätzen im gesamten Bonner Stadtgebiet 2024	ok
 232164	date	2023-12-08	2023-12-08	ok
@@ -209,13 +209,13 @@ drucksache	feld	export	oparl_api	ergebnis
 200532-02	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
 200532-02	beratungen	1	1	ok
 200532-02	orte_stufe_a			ok
-241330-01 IB	reference	241330-01 IB	241330-01 IB	ok
-241330-01 IB	name	"Informationsbrief - Absage Veranstaltung ""Bonn rollt!"" am Sonntag, 15. September 2024"	"Informationsbrief - Absage Veranstaltung ""Bonn rollt!"" am Sonntag, 15. September 2024"	ok
-241330-01 IB	date	2024-09-06	2024-09-06	ok
-241330-01 IB	paper_type	Informationsbrief	Informationsbrief	ok
-241330-01 IB	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	ok
-241330-01 IB	beratungen	4	4	ok
-241330-01 IB	orte_stufe_a			ok
+241445-01 ST	reference	241445-01 ST	241445-01 ST	ok
+241445-01 ST	name	Stellungnahme zu dem Bürgerantrag: Elternbeitragssatzung fair gestalten	Stellungnahme zu dem Bürgerantrag: Elternbeitragssatzung fair gestalten	ok
+241445-01 ST	date	2024-09-09	2024-09-09	ok
+241445-01 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
+241445-01 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/24	https://www.bonn.sitzung-online.de/oparl/organizations/at/24	ok
+241445-01 ST	beratungen	1	1	ok
+241445-01 ST	orte_stufe_a			ok
 230784	reference	230784	230784	ok
 230784	name	Anti-Diskriminierungs-Fortbildungen und Sensibilisierungsarbeit in Öffentlichen Diensten der Stadt	Anti-Diskriminierungs-Fortbildungen und Sensibilisierungsarbeit in Öffentlichen Diensten der Stadt	ok
 230784	date	2023-05-23	2023-05-23	ok
@@ -237,34 +237,34 @@ drucksache	feld	export	oparl_api	ergebnis
 240020-01 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
 240020-01 AA	beratungen	2	2	ok
 240020-01 AA	orte_stufe_a			ok
-240679-07 AA	reference	240679-07 AA	240679-07 AA	ok
-240679-07 AA	name	Fortschreibung des Nahverkehrsplanes – Maßnahmen zum Fahrplanwechsel im Dezember 2024 Antrag zur Vorlage 240679	Fortschreibung des Nahverkehrsplanes – Maßnahmen zum Fahrplanwechsel im Dezember 2024 Antrag zur Vorlage 240679	ok
-240679-07 AA	date	2024-06-20	2024-06-20	ok
-240679-07 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
-240679-07 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
-240679-07 AA	beratungen	1	1	ok
-240679-07 AA	orte_stufe_a			ok
-201843-1 ST	reference	201843-1 ST	201843-1 ST	ok
-201843-1 ST	name	Entfernung Umlaufsperren Glückstraße	Entfernung Umlaufsperren Glückstraße	ok
-201843-1 ST	date	2020-11-20	2020-11-20	ok
-201843-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-201843-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	ok
-201843-1 ST	beratungen	1	1	ok
-201843-1 ST	orte_stufe_a			ok
-230497-04 AA	reference	230497-04 AA	230497-04 AA	ok
-230497-04 AA	name	Änderungsantrag der AfD-Fraktion zum BBB-Antrag: Aufnahme des verstorbenen Papst Benedikt in die Bonner Straßenbenennungsliste	Änderungsantrag der AfD-Fraktion zum BBB-Antrag: Aufnahme des verstorbenen Papst Benedikt in die Bonner Straßenbenennungsliste	ok
-230497-04 AA	date	2025-11-12	2025-11-12	ok
-230497-04 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
-230497-04 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
-230497-04 AA	beratungen	1	1	ok
-230497-04 AA	orte_stufe_a			ok
-190782	reference	190782	190782	ok
-190782	name	Einleitung des Vergabeverfahrens zur Baumersatzpflanzung in Bad Godesberg – Villenviertel und Rüngsdorf	Einleitung des Vergabeverfahrens zur Baumersatzpflanzung in Bad Godesberg – Villenviertel und Rüngsdorf	ok
-190782	date	2019-11-22	2019-11-22	ok
-190782	paper_type	Beschlussvorlage	Beschlussvorlage	ok
-190782	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/239	https://www.bonn.sitzung-online.de/oparl/organizations/at/239	ok
-190782	beratungen	1	1	ok
-190782	orte_stufe_a			ok
+240581-02 AA	reference	240581-02 AA	240581-02 AA	ok
+240581-02 AA	name	"Koalitionsänderungsantrag: Beschlussvorlage ""Regionales Fahrradmietsystem"" Antrag zur Vorlage 240581"	"Koalitionsänderungsantrag: Beschlussvorlage ""Regionales Fahrradmietsystem"" Antrag zur Vorlage 240581"	ok
+240581-02 AA	date	2024-06-20	2024-06-20	ok
+240581-02 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
+240581-02 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+240581-02 AA	beratungen	1	1	ok
+240581-02 AA	orte_stufe_a			ok
+201989	reference	201989	201989	ok
+201989	name	Bürgerantrag: Beleuchtung des Fußball- und Basketballplatzes in der Bonner Rheinaue	Bürgerantrag: Beleuchtung des Fußball- und Basketballplatzes in der Bonner Rheinaue	ok
+201989	date	2020-11-17	2020-11-17	ok
+201989	paper_type	Bürgerantrag § 24 GO - Öffentlich	Bürgerantrag § 24 GO - Öffentlich	ok
+201989	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	ok
+201989	beratungen	1	1	ok
+201989	orte_stufe_a			ok
+253951	reference	253951	253951	ok
+253951	name	CDU-Anfrage: Umgang mit Baumpflanzungen und -ersatzmaßnahmen im Stadtbezirk Hardtberg – Auswirkungen auf private Anlieger und Transparenz der Entscheidungsprozesse	CDU-Anfrage: Umgang mit Baumpflanzungen und -ersatzmaßnahmen im Stadtbezirk Hardtberg – Auswirkungen auf private Anlieger und Transparenz der Entscheidungsprozesse	ok
+253951	date	2025-11-12	2025-11-12	ok
+253951	paper_type	Große Anfrage	Große Anfrage	ok
+253951	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+253951	beratungen	1	1	ok
+253951	orte_stufe_a			ok
+190786	reference	190786	190786	ok
+190786	name	Sicherheit in städtischen Liegenschaften	Sicherheit in städtischen Liegenschaften	ok
+190786	date	2019-11-15	2019-11-15	ok
+190786	paper_type	Große Anfrage	Große Anfrage	ok
+190786	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+190786	beratungen	1	1	ok
+190786	orte_stufe_a			ok
 211403-01 ST	reference	211403-01 ST	211403-01 ST	ok
 211403-01 ST	name	Ausbau Rita-Maiburg-Straße in Bonn-Lengsdorf	Ausbau Rita-Maiburg-Straße in Bonn-Lengsdorf	ok
 211403-01 ST	date	2021-10-04	2021-10-04	ok
@@ -272,13 +272,13 @@ drucksache	feld	export	oparl_api	ergebnis
 211403-01 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/224	https://www.bonn.sitzung-online.de/oparl/organizations/at/224	ok
 211403-01 ST	beratungen	1	1	ok
 211403-01 ST	orte_stufe_a			ok
-201490	reference	201490	201490	ok
-201490	name	Zustand des Baumbestandes in der Stadt Bonn	Zustand des Baumbestandes in der Stadt Bonn	ok
-201490	date	2020-07-28	2020-07-28	ok
-201490	paper_type	Große Anfrage	Große Anfrage	ok
-201490	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
-201490	beratungen	2	2	ok
-201490	orte_stufe_a			ok
+190638-2 ST	reference	190638-2 ST	190638-2 ST	ok
+190638-2 ST	name	Bürgerantrag: Verkehrskonzept im Zusammenhang mit anstehenden Bauarbeiten im Ortsteil Vilich	Bürgerantrag: Verkehrskonzept im Zusammenhang mit anstehenden Bauarbeiten im Ortsteil Vilich	ok
+190638-2 ST	date	2020-09-30	2020-09-30	ok
+190638-2 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
+190638-2 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/227	https://www.bonn.sitzung-online.de/oparl/organizations/at/227	ok
+190638-2 ST	beratungen	1	1	ok
+190638-2 ST	orte_stufe_a			ok
 240343	reference	240343	240343	ok
 240343	name	CDU-Antrag: Verkehrsführung Kaiserstraße	CDU-Antrag: Verkehrsführung Kaiserstraße	ok
 240343	date	2024-02-22	2024-02-22	ok
@@ -293,20 +293,20 @@ drucksache	feld	export	oparl_api	ergebnis
 212084	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/135	https://www.bonn.sitzung-online.de/oparl/organizations/at/135	ok
 212084	beratungen	1	1	ok
 212084	orte_stufe_a			ok
-260697-01 ST	reference	260697-01 ST	260697-01 ST	ok
-260697-01 ST	name	Große Anfrage der Grünen: Rückstand der Gebührenabrechnungen bei der Feuerwehr für den Rettungsdienst	Große Anfrage der Grünen: Rückstand der Gebührenabrechnungen bei der Feuerwehr für den Rettungsdienst	ok
-260697-01 ST	date	2026-05-06	2026-05-06	ok
-260697-01 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-260697-01 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/18	https://www.bonn.sitzung-online.de/oparl/organizations/at/18	ok
-260697-01 ST	beratungen	1	1	ok
-260697-01 ST	orte_stufe_a			ok
-260371	reference	260371	260371	ok
-260371	name	CDU-/SPD-Fraktion/FDP-Gruppe-Antrag: Prüfung eines Kombibades am Standort Römerbad	CDU-/SPD-Fraktion/FDP-Gruppe-Antrag: Prüfung eines Kombibades am Standort Römerbad	ok
-260371	date	2026-03-06	2026-03-06	ok
-260371	paper_type	Antrag	Antrag	ok
-260371	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
-260371	beratungen	4	4	ok
-260371	orte_stufe_a			ok
+260789	reference	260789	260789	ok
+260789	name	Große Anfrage der Grünen-Bezirksfraktion: Einrichtung von Fahrradbügeln als laufendes Geschäft der Verwaltung	Große Anfrage der Grünen-Bezirksfraktion: Einrichtung von Fahrradbügeln als laufendes Geschäft der Verwaltung	ok
+260789	date	2026-04-29	2026-04-29	ok
+260789	paper_type	Große Anfrage	Große Anfrage	ok
+260789	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+260789	beratungen	1	1	ok
+260789	orte_stufe_a			ok
+260374	reference	260374	260374	ok
+260374	name	"Stellungnahmen sowie Feststellungsbeschluss zur 199. Änderung des Flächennutzungsplanes ""Rastenweg"" der Bundesstadt Bonn, im Stadtbezirk Beuel, Ortsteil Ramersdorf"	"Stellungnahmen sowie Feststellungsbeschluss zur 199. Änderung des Flächennutzungsplanes ""Rastenweg"" der Bundesstadt Bonn, im Stadtbezirk Beuel, Ortsteil Ramersdorf"	ok
+260374	date	2026-06-02	2026-06-02	ok
+260374	paper_type	Beschlussvorlage	Beschlussvorlage	ok
+260374	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/318	https://www.bonn.sitzung-online.de/oparl/organizations/at/318	ok
+260374	beratungen	4	4	ok
+260374	orte_stufe_a			ok
 231695	reference	231695	231695	ok
 231695	name	Zustand der Außenflächen des Hauses Aennchenplatz 2	Zustand der Außenflächen des Hauses Aennchenplatz 2	ok
 231695	date	2023-09-14	2023-09-14	ok
@@ -321,13 +321,13 @@ drucksache	feld	export	oparl_api	ergebnis
 231600	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/228	https://www.bonn.sitzung-online.de/oparl/organizations/at/228	ok
 231600	beratungen	1	1	ok
 231600	orte_stufe_a			ok
-240986-123 AA	reference	240986-123 AA	240986-123 AA	ok
-240986-123 AA	name	Haushaltsbegleitantrag CDU - Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029 Antrag zur Vorlage 240986 - hier: Einnahmen Beethovenhalle verbessern	Haushaltsbegleitantrag CDU - Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029 Antrag zur Vorlage 240986 - hier: Einnahmen Beethovenhalle verbessern	ok
-240986-123 AA	date	2025-03-18	2025-03-18	ok
-240986-123 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
-240986-123 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
-240986-123 AA	beratungen	1	1	ok
-240986-123 AA	orte_stufe_a			ok
+240581-10 AA	reference	240581-10 AA	240581-10 AA	ok
+240581-10 AA	name	"Beschlussvorlage ""Regionales Fahrradmietsystem"" Antrag zur Vorlage 240581-04"	"Beschlussvorlage ""Regionales Fahrradmietsystem"" Antrag zur Vorlage 240581-04"	ok
+240581-10 AA	date	2025-03-18	2025-03-18	ok
+240581-10 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
+240581-10 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+240581-10 AA	beratungen	1	1	ok
+240581-10 AA	orte_stufe_a			ok
 220880	reference	220880	220880	ok
 220880	name	Bonner Klima-Preis (weiterqualifizierte Maßnahme aus dem Beschluss 200016 Klimanotstand und Umsetzung Klimamaßnahmen)	Bonner Klima-Preis (weiterqualifizierte Maßnahme aus dem Beschluss 200016 Klimanotstand und Umsetzung Klimamaßnahmen)	ok
 220880	date	2022-05-03	2022-05-03	ok
@@ -335,17 +335,17 @@ drucksache	feld	export	oparl_api	ergebnis
 220880	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/328	https://www.bonn.sitzung-online.de/oparl/organizations/at/328	ok
 220880	beratungen	1	1	ok
 220880	orte_stufe_a			ok
-190886-1 ST	reference	190886-1 ST	190886-1 ST	ok
-190886-1 ST	name	Bürgerantrag: Kreisverkehr/Lichtsignalanlage im Kreuzungsbereich Kölnstraße/Otto-Hahn-Straße in Buschdorf	Bürgerantrag: Kreisverkehr/Lichtsignalanlage im Kreuzungsbereich Kölnstraße/Otto-Hahn-Straße in Buschdorf	ok
-190886-1 ST	date	2019-12-17	2019-12-17	ok
-190886-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-190886-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	ok
-190886-1 ST	beratungen	1	1	ok
-190886-1 ST	orte_stufe_a			ok
-190326-1 AA	reference	190326-1 AA	190326-1 AA	ok
-190326-1 AA	name	Öffentlich-rechtlicher Vertrag über Mobilitätsmaßnahmen des Universitätsklinikums Bonn (UKB) - Inbenutzungnahme von 90 Pkw-Stellplätzen im Parkhaus-Mitte auf dem UKB-Gelände Venusberg (Alt 1912686AA3)	Öffentlich-rechtlicher Vertrag über Mobilitätsmaßnahmen des Universitätsklinikums Bonn (UKB) - Inbenutzungnahme von 90 Pkw-Stellplätzen im Parkhaus-Mitte auf dem UKB-Gelände Venusberg (Alt 1912686AA3)	ok
-190326-1 AA	date	2019-10-17	2019-10-17	ok
-190326-1 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
-190326-1 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/143	https://www.bonn.sitzung-online.de/oparl/organizations/at/143	ok
-190326-1 AA	beratungen	2	2	ok
-190326-1 AA	orte_stufe_a			ok
+190913-1 ST	reference	190913-1 ST	190913-1 ST	ok
+190913-1 ST	name	„Vielfalt! Bonner Kultur- und Begegnungsfest“: Beanstandungen und Erhöhung der Strahlkraft	„Vielfalt! Bonner Kultur- und Begegnungsfest“: Beanstandungen und Erhöhung der Strahlkraft	ok
+190913-1 ST	date	2019-12-12	2019-12-12	ok
+190913-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
+190913-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/21	https://www.bonn.sitzung-online.de/oparl/organizations/at/21	ok
+190913-1 ST	beratungen	1	1	ok
+190913-1 ST	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/21114;https://www.bonn.sitzung-online.de/oparl/locations/22049	https://www.bonn.sitzung-online.de/oparl/locations/21114;https://www.bonn.sitzung-online.de/oparl/locations/22049	ok
+201060	reference	201060	201060	ok
+201060	name	"Bürgerantrag: Mehlem, Aktualisierung des Teils 267, Mehlem, des ""Bonner Einzelhandels- und Zentrenkonzept"""	"Bürgerantrag: Mehlem, Aktualisierung des Teils 267, Mehlem, des ""Bonner Einzelhandels- und Zentrenkonzept"""	ok
+201060	date	2020-08-10	2020-08-10	ok
+201060	paper_type	Bürgerantrag § 24 GO - Öffentlich	Bürgerantrag § 24 GO - Öffentlich	ok
+201060	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	ok
+201060	beratungen	1	1	ok
+201060	orte_stufe_a			ok

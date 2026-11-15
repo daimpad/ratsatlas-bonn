@@ -6,18 +6,6 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sitzungen Rat\, Ausschüsse und Bezirksvertretungen Bonn
 X-WR-TIMEZONE:Europe/Berlin
 BEGIN:VEVENT
-UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005993
-DTSTAMP:20261015T150000Z
-DTSTART:20261015T150000Z
-SUMMARY:Beirat Kinder- und Jugendbeteiligung
-DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
- g: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005993\nEinlad
- ung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3232
- 897&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
-STATUS:CONFIRMED
-URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005993
-END:VEVENT
-BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005611
 DTSTAMP:20261104T160000Z
 DTSTART:20261104T160000Z
