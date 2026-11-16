@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/thema/soziales</id>
 <title>Ratsatlas Bonn – Soziales, Gesundheit und Integration</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Soziales, Gesundheit und Integration (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-12T00:00:00Z</updated>
+<updated>2026-11-15T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/soziales.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/soziales-gesundheit-und-integration/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030454#vorlage</id>
+<title>Neue Vorlage 262181: Förderung von Integrationsprojekten im Jahr 2025</title>
+<updated>2026-11-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262181"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030454"/>
+<summary>Mitteilungsvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030447#vorlage</id>
+<title>Neue Vorlage 262179: Förderung von Flüchtlingsprojekten im Jahr 2025</title>
+<updated>2026-11-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262179"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030447"/>
+<summary>Mitteilungsvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030142#beratung-2026-11-12-Rat</id>
 <title>Rat: „vertagt“ – 261989-01 ST Vertagungsbitte zur AfD-Anfrage: Obdachlosenunterkunft in der Karl-Finkelnburg-Straße</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261082-05%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029376"/>
 <summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029352#vorlage</id>
-<title>Neue Vorlage 261704: Grüne Anfrage: Chancengerechtigkeit sichern – Sprachförderung, Bildungszugang und Fachkräftepotenziale Zugewanderter erhalten</title>
-<updated>2026-09-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261704"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029352"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029351#vorlage</id>
-<title>Neue Vorlage 261703: Grüne Anfrage zur Überprüfung von Förderstrukturen, Kooperationen und Betreuungssituationen bei russischsprachigen Bildungs- und Kulturorganisationen im Stadtgebiet</title>
-<updated>2026-09-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261703"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029351"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
 </feed>

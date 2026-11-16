@@ -3,11 +3,51 @@
 <id>tag:allris-bonn,2026:feed/thema/verkehr</id>
 <title>Ratsatlas Bonn – Verkehr und Mobilität</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Verkehr und Mobilität (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-12T00:00:00Z</updated>
+<updated>2026-11-15T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/verkehr.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/verkehr-und-mobilitaet/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030213#vorlage</id>
+<title>Neue Vorlage 262055-01 ST: Große Anfrage: Umsetzung des Beschlusses zum barrierefreien Ausbau der Haltestelle „Am Dickobskreuz“</title>
+<updated>2026-11-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#262055-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030213"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030202#vorlage</id>
+<title>Neue Vorlage 262059: P+R Vilich, hier: Information der DB zur verlängerten Nutzung der Baustelleneinrichtungsfläche</title>
+<updated>2026-11-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262059"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030202"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030170#vorlage</id>
+<title>Neue Vorlage 252749-03: Erweiterung der Steingasse als Folgemaßnahme; hier: teilweise Aufhebung des Beschlusses vom 11.03.2026</title>
+<updated>2026-11-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#252749-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030170"/>
+<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030078#vorlage</id>
+<title>Neue Vorlage 261999: Verzicht auf die Taktverdichtung auf einen 5-Minuten-Takt der Linie 67</title>
+<updated>2026-11-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261999"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030078"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029671#vorlage</id>
+<title>Neue Vorlage 241704-08 ST: BBB- und FDP-Anfrage: Parkraumkonzept Beuel – aktuelle Grundlagen und veränderte Rahmenbedingungen</title>
+<updated>2026-11-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#241704-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029671"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030472#vorlage</id>
 <title>Neue Vorlage 262186: Bericht zu verschiedenen Verkehrsthemen</title>
@@ -767,45 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261872-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030034"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029967#vorlage</id>
-<title>Neue Vorlage 260919-08 ST: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-08%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029967"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029395#vorlage</id>
-<title>Neue Vorlage 261720: Erstellung des Sustainable Urban Mobility Plan (SUMP) für die Bundesstadt Bonn</title>
-<updated>2026-11-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261720"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029395"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030193#vorlage</id>
-<title>Neue Vorlage 262055: Große Anfrage Grüne: Umsetzung des Beschlusses zum barrierefreien Ausbau der Haltestelle „Am Dickobskreuz“</title>
-<updated>2026-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#262055"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030193"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030189#vorlage</id>
-<title>Neue Vorlage 262051: Grüne-Bezirksfraktion-Antrag: Wiederherstellung der Fahrbahnschwellen und Verbesserung der Verkehrsberuhigung im Bereich der Montessori-Schule</title>
-<updated>2026-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262051"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030189"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030187#vorlage</id>
-<title>Neue Vorlage 262049: Grüne-Bezirksfraktion-Antrag: Rechtsabbiegegebot am Erzbergerufer durchsetzen und Radverkehr schützen</title>
-<updated>2026-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#262049"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030187"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 </feed>

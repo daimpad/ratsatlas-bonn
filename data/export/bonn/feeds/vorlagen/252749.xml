@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/252749</id>
 <title>Vorlage 252749: Erweiterung der Steingasse als Folgemaßnahme</title>
 <subtitle>Verlauf der Vorlage 252749: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-03-11T00:00:00Z</updated>
+<updated>2026-11-15T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/252749.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#252749"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2021959#folge-252749-03</id>
+<title>Beschlussvorlage 252749-03: Erweiterung der Steingasse als Folgemaßnahme; hier: teilweise Aufhebung des Beschlusses vom 11.03.2026</title>
+<updated>2026-11-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#252749"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021959"/>
+<summary>Folgevorlage zu 252749</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2021959#beratung-2026-03-11-Bezirksvertretung%20Bad%20Godesberg</id>
 <title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 252749 Erweiterung der Steingasse als Folgemaßnahme</title>

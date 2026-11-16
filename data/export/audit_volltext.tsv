@@ -12454,7 +12454,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241856-01 ST	kein Ort						
 241860	kein Ort						
 241861	verortet	Hauptteil	volltext_strasse+ortsteil	Friedlandstraße	Buschdorf	mittel	1
-241862	Titel ohne gemeinsamen Ort, nicht verortet						
 241867	Titel ohne gemeinsamen Ort, nicht verortet						
 241873	kein Ort						
 241874	nur in Anlagen genannt, nicht verortet						
@@ -15632,6 +15631,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260970	kein Ort						
 260970-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Argelanderstraße	Südstadt	niedrig	1
 260970-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Ermekeilstraße	Südstadt	niedrig	1
+260971	kein Ort						
 260971-01 ST	kein Ort						
 260972	nur in Anlagen genannt, nicht verortet						
 260974	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16318,6 +16318,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261590	nur in Anlagen genannt, nicht verortet						
 261592	nur in Anlagen genannt, nicht verortet						
 261593	nur in Anlagen genannt, nicht verortet						
+261594	kein Ort						
 261594-01	kein Ort						
 261595	Titel ohne gemeinsamen Ort, nicht verortet						
 261596	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16765,6 +16766,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262165	verortet	Hauptteil	volltext_strasse+ortsteil	Beueler Straße	Vilich- Müldorf	mittel	4
 262165	verortet	Hauptteil	volltext_strasse+ortsteil	Schultheißstraße	Vilich	mittel	4
 262166	verortet	Hauptteil	volltext_strasse	Theaterplatz	Alt-Godesberg	mittel	1
+262167	kein Ort						
 262168	Titel ohne gemeinsamen Ort, nicht verortet						
 262169	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
 262171	verortet	Hauptteil	volltext_strasse	Combahnstraße	Beuel-Mitte	mittel	2

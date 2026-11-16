@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/261982-01-st</id>
+<title>Vorlage 261982-01 ST: BBB-Anfrage: Einsparmöglichkeiten im Betrieb der Oper und des Theaters; hier Beratung durch Dritte</title>
+<subtitle>Verlauf der Vorlage 261982-01 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-11-15T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/261982-01-st.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261982-01%20ST"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030311#vorlage</id>
+<title>Neue Vorlage 261982-01 ST: BBB-Anfrage: Einsparmöglichkeiten im Betrieb der Oper und des Theaters; hier Beratung durch Dritte</title>
+<updated>2026-11-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261982-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030311"/>
+<summary>Stellungnahme der Verwaltung · federführend: 46 Theater der Bundesstadt Bonn · Stand: offen</summary>
+</entry>
+</feed>

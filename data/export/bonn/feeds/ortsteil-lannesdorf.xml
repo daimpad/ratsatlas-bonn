@@ -185,14 +185,6 @@
 <summary>Kenntnisnahme am 2026-05-27; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026530#beratung-2026-05-19-Kulturausschuss</id>
-<title>Kulturausschuss: „zur Kenntnis genommen“ – 260659 Regionale Kulturförderung durch den Landschaftsverband Rheinland – Information über die für 2027 eingereichten Anträge und Bericht über die in 2026 geförderten Projekte</title>
-<updated>2026-05-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lannesdorf#260659"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026530"/>
-<summary>Kenntnisnahme am 2026-05-19; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027407#vorlage</id>
 <title>Neue Vorlage 260914: BBB-Anfrage: Ordnungsbehördliche Maßnahmen auf dem Schulhof der Lyngsbergschule</title>
 <updated>2026-05-07T00:00:00Z</updated>
@@ -214,7 +206,7 @@
 <updated>2026-04-29T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lannesdorf#260659"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026530"/>
-<summary>Mitteilungsvorlage · federführend: 41 Kulturamt · Stand: beraten, ohne Entscheidung</summary>
+<summary>Mitteilungsvorlage · federführend: 41 Kulturamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026250#beratung-2026-04-22-Bezirksvertretung%20Bad%20Godesberg</id>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lannesdorf#253141"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022844"/>
 <summary>Beschlussvorlage · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020902#vorlage</id>
+<title>Neue Vorlage 242352: Beschluss zur frühzeitigen Beteiligung der Öffentlichkeit gemäß § 3 Abs. 1 BauGB für die Aufstellung des vorhabenbezogenen Bebauungsplanes Nr. 7114-3 "Mallwitzstraße 18" im Stadtbezirk Bad Godesberg, Ortsteil Lannesdorf</title>
+<updated>2025-05-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lannesdorf#242352"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020902"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, die Bürgerinnen und Bürger frühzeitig über den Bebauungsplan Nr. 7114-3 für ein Bürogebäude in der Mallwitzstraße in Lannesdorf zu informieren. Vorgesehen sind eine zweiwöchige Ausstellung der Pläne vor Ort und online sowie ein Aushang. Der Plan betrifft ein Gewerbegebiet mit bis zu 500 Arbeitsplätzen.</summary>
 </entry>
 </feed>
