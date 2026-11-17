@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/thema/kinder</id>
 <title>Ratsatlas Bonn – Kinder, Jugend und Familie</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Kinder, Jugend und Familie (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-12T00:00:00Z</updated>
+<updated>2026-11-16T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/kinder.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/kinder-jugend-und-familie/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030512#vorlage</id>
+<title>Neue Vorlage 262197: Bürgerantrag: Öffnung der Beethovenhalle für Party-, Tanz- und Jugendkulturveranstaltungen im Großen Saal unter geeigneten Schutzauflagen</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#262197"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030512"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030481#vorlage</id>
+<title>Neue Vorlage 262011-01 ST: SBI-Große Anfrage: Brand in der Oppelner Straße 59 in Bonn-Tannenbusch – Situation der betroffenen Familien und weiterer Unterstützungsbedarf</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#262011-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030481"/>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029228#beratung-2026-11-12-Rat</id>
 <title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 220386-01 Aufhebung des Grundsatzbeschlusses: Schaffung eines Ersatzbaus für die dreigruppige städtische Einrichtung Ossietzkystraße</title>
@@ -135,6 +151,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#260896-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028894"/>
 <summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028868#beratung-2026-10-14-Ausschuss%20f%C3%BCr%20Kinder%2C%20Jugend%20und%20Familie</id>
+<title>Ausschuss für Kinder, Jugend und Familie: „zurückgezogen“ – 261514 Änderung der „Richtlinien zur Förderung der Jugendarbeit – Maßnahmen, Beschaffungen und Investitionen“</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261514"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028868"/>
+<summary>Entscheidung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027689#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:auerberg#261135"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027913"/>
 <summary>Kenntnisnahme am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027825#beratung-2026-07-01-Ausschuss%20f%C3%BCr%20Kinder%2C%20Jugend%20und%20Familie</id>
-<title>Ausschuss für Kinder, Jugend und Familie: „geändert beschlossen“ – 261083 Gewährung eines Zuschusses an den Kinder- und Jugendring Bonn e.V. zur Erweiterung und Professionalisierung des Aufgabenprofils (Partizipation, Demokratiebildung)</title>
-<updated>2026-07-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261083"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027825"/>
-<summary>Entscheidung am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027821#beratung-2026-07-01-Ausschuss%20f%C3%BCr%20Kinder%2C%20Jugend%20und%20Familie</id>
-<title>Ausschuss für Kinder, Jugend und Familie: „ungeändert beschlossen“ – 261081 Förderung des „Be Cool - Sozialkompetenztrainings“ von OLDERS Consult an der Elisabeth-Selbert-Gesamtschule gemäß den Richtlinien zur Förderung von Gewaltprävention</title>
-<updated>2026-07-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:plittersdorf#261081"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027821"/>
-<summary>Entscheidung am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027787#beratung-2026-07-01-Ausschuss%20f%C3%BCr%20Kinder%2C%20Jugend%20und%20Familie</id>
-<title>Ausschuss für Kinder, Jugend und Familie: „ungeändert beschlossen“ – 261069 Neues Familienzentrum in der Bundestadt Bonn zum Kindergartenjahr 2026/2027 Fröbel-Kindergarten Flügelnuss, Deutschherrenstr. 89, 53177 Bonn Träger Fröbel Bildung und Erziehung gemeinnützige GmbH, Salierring 47-53, 50667 Köln</title>
-<updated>2026-07-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:pennenfeld#261069"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027787"/>
-<summary>Entscheidung am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

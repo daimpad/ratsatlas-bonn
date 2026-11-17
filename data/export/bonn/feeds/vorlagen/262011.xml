@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/262011</id>
 <title>Vorlage 262011: SBI-Große Anfrage: Brand in der Oppelner Straße 59 in Bonn-Tannenbusch – Situation der betroffenen Familien und weiterer Unterstützungsbedarf</title>
 <subtitle>Verlauf der Vorlage 262011: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-10-26T00:00:00Z</updated>
+<updated>2026-11-16T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/262011.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#262011"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030100#folge-262011-01%20ST</id>
+<title>Stellungnahme der Verwaltung 262011-01 ST: SBI-Große Anfrage: Brand in der Oppelner Straße 59 in Bonn-Tannenbusch – Situation der betroffenen Familien und weiterer Unterstützungsbedarf</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#262011"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030100"/>
+<summary>Folgevorlage zu 262011</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030100#vorlage</id>
 <title>Neue Vorlage 262011: SBI-Große Anfrage: Brand in der Oppelner Straße 59 in Bonn-Tannenbusch – Situation der betroffenen Familien und weiterer Unterstützungsbedarf</title>

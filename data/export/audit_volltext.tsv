@@ -12454,6 +12454,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241856-01 ST	kein Ort						
 241860	kein Ort						
 241861	verortet	Hauptteil	volltext_strasse+ortsteil	Friedlandstraße	Buschdorf	mittel	1
+241862	Titel ohne gemeinsamen Ort, nicht verortet						
 241867	Titel ohne gemeinsamen Ort, nicht verortet						
 241873	kein Ort						
 241874	nur in Anlagen genannt, nicht verortet						
@@ -14836,6 +14837,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260252	Titel ohne gemeinsamen Ort, nicht verortet						
 260254	kein Ort						
 260254-01 AA	kein Ort						
+260254-02	kein Ort						
 260255	kein Ort						
 260257	verortet	Hauptteil	volltext_strasse	Wilhelmstraße	Bonn-Zentrum	niedrig	1
 260257	verortet	Hauptteil	volltext_strasse+hausnummer	Engeltalstraße	Bonn-Zentrum	niedrig	1
@@ -15632,7 +15634,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260970-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Argelanderstraße	Südstadt	niedrig	1
 260970-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Ermekeilstraße	Südstadt	niedrig	1
 260971	kein Ort						
-260971-01 ST	kein Ort						
 260972	nur in Anlagen genannt, nicht verortet						
 260974	Titel ohne gemeinsamen Ort, nicht verortet						
 260976	kein Ort						
@@ -15747,7 +15748,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261067	kein Ort						
 261068	Titel ohne gemeinsamen Ort, nicht verortet						
 261068-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
-261071	kein Ort						
 261072	kein Ort						
 261073	Titel ohne gemeinsamen Ort, nicht verortet						
 261073-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16528,6 +16528,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261813	kein Ort						
 261813-01 ST	kein Ort						
 261813-02 AA	kein Ort						
+261813-03	kein Ort						
 261814	kein Ort						
 261815	kein Ort						
 261815-01 ST	kein Ort						
@@ -16589,6 +16590,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261890	verortet	Hauptteil	volltext_strasse+kreuzung	Gangolfstraße	Bonn-Zentrum	niedrig	1
 261890	verortet	Hauptteil	volltext_strasse+kreuzung	Maximilianstraße	Bonn-Zentrum	niedrig	1
 261890	verortet	Hauptteil	volltext_strasse+kreuzung	Wesselstraße	Bonn-Zentrum	niedrig	1
+261890-01 AA	kein Ort						
 261891	kein Ort						
 261892	kein Ort						
 261892-01 ST	kein Ort						
@@ -16606,6 +16608,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261901-03 AA	verortet	Hauptteil	volltext_strasse	Schulplatz	Friesdorf	niedrig	1
 261902	Titel ohne gemeinsamen Ort, nicht verortet						
 261907	Titel ohne gemeinsamen Ort, nicht verortet						
+261908	nur in Anlagen genannt, nicht verortet						
 261910	verortet	Hauptteil	volltext_strasse	Remigiusplatz	Bonn-Zentrum	mittel	1
 261910	verortet	Hauptteil	volltext_strasse+kreuzung	Bottlerplatz	Bonn-Zentrum	mittel	1
 261910	verortet	Hauptteil	volltext_strasse+kreuzung	Friedensplatz	Bonn-Zentrum	mittel	1
@@ -16658,18 +16661,22 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261972-01 ST	kein Ort						
 261978	Titel ohne gemeinsamen Ort, nicht verortet						
 261982	kein Ort						
+261982-01 ST	kein Ort						
 261984	Titel ohne gemeinsamen Ort, nicht verortet						
 261988	kein Ort						
 261990	kein Ort						
 261991	kein Ort						
 261991-01 ST	kein Ort						
 261991-02 AA	kein Ort						
+261991-03 ST	kein Ort						
+261991-04 AA	kein Ort						
 261993	nur in Anlagen genannt, nicht verortet						
 261994	kein Ort						
 261994-01 ST	kein Ort						
 261994-02 AA	kein Ort						
 261995	kein Ort						
 261995-01 ST	kein Ort						
+261999	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 262000	nur in Anlagen genannt, nicht verortet						
 262001	kein Ort						
 262001-01 ST	kein Ort						
@@ -16718,9 +16725,11 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262075	verortet	Hauptteil	volltext_strasse+ortsteil	Reichsstraße	Röttgen	mittel	2
 262079	kein Ort						
 262080	kein Ort						
+262081	nur in Anlagen genannt, nicht verortet						
 262082	Liste (7 Ortsteile), nicht verortet	Hauptteil					
 262084	kein Ort						
 262084-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	mittel	1
+262088	kein Ort						
 262092	kein Ort						
 262093	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
 262093	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	1
@@ -16731,6 +16740,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262095	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Holtorf	niedrig	1
 262095	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1
 262097	Titel ohne gemeinsamen Ort, nicht verortet						
+262103	nur in Anlagen genannt, nicht verortet						
 262104	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 262106	verortet	Hauptteil	volltext_strasse	Salierweg	Graurheindorf	mittel	2
 262107	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -16776,5 +16786,11 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262172	kein Ort						
 262174	verortet	Hauptteil	volltext_strasse+kreuzung	Ettenhausener Straße	Holzlar	mittel	2
 262174	verortet	Hauptteil	volltext_strasse+kreuzung	Rodeweg	Holzlar	mittel	1
+262179	kein Ort						
+262181	nur in Anlagen genannt, nicht verortet						
 262186	Liste (8 Ortsteile), nicht verortet	Hauptteil					
 262187	kein Ort						
+262190	Titel ohne gemeinsamen Ort, nicht verortet						
+262192	Titel ohne gemeinsamen Ort, nicht verortet						
+262195	Titel ohne gemeinsamen Ort, nicht verortet						
+262200	kein Ort						

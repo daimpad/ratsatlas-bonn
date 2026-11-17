@@ -3,11 +3,43 @@
 <id>tag:allris-bonn,2026:feed/thema/wirtschaft</id>
 <title>Ratsatlas Bonn – Wirtschaft und Wissenschaft</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Wirtschaft und Wissenschaft (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-15T00:00:00Z</updated>
+<updated>2026-11-16T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/wirtschaft.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/wirtschaft-und-wissenschaft/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030516#vorlage</id>
+<title>Neue Vorlage 261991-04 AA: BSW/SBI Gruppe Änderungsantrag zu "Bonn für das Völkerrecht – Solidarität mit dem Internationalen Strafgerichtshof (IStGH)" Antrag zur Vorlage 261991</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261991-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030516"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030471#vorlage</id>
+<title>Neue Vorlage 262185: Nutzung der Software „FöMi.Kommunal“ für die zukünftige Verwaltung der AWEI-Fördermittel ab 2027</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262185"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030471"/>
+<summary>Mitteilungsvorlage · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030374#vorlage</id>
+<title>Neue Vorlage 262140: Bilanz „30 Jahre UN City Bonn“</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262140"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030374"/>
+<summary>Mitteilungsvorlage · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030268#vorlage</id>
+<title>Neue Vorlage 261809-02 ST: Grüne-Große Anfrage: Europäisches Zentrum für mittelfristige Wettervorhersage (EZMW/ECMWF)</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261809-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030268"/>
+<summary>Stellungnahme der Verwaltung · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030491#vorlage</id>
 <title>Neue Vorlage 261991-03 ST: Antrag von BSW/SBI: Bonn für das Völkerrecht – Solidarität mit dem Internationalen Strafgerichtshof (IStGH)</title>
@@ -775,37 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261528"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028902"/>
 <summary>Mitteilungsvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028881#vorlage</id>
-<title>Neue Vorlage 261522: Firmenjubiläum – Feier – 10 Jahre Digital Hub Region Bonn AG und Startup Week Bonn/Rhein-Sieg</title>
-<updated>2026-08-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261522"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028881"/>
-<summary>Mitteilungsvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028851#vorlage</id>
-<title>Neue Vorlage 261504: Besuch einer estnischen Wirtschaftsdelegation und Unterzeichnung eines Memorandum of Understanding zur Zusammenarbeit im Bereich Cybersicherheit</title>
-<updated>2026-08-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261504"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028851"/>
-<summary>Mitteilungsvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028923#vorlage</id>
-<title>Neue Vorlage 261536: Teilnahme von Bürgermeisterin Dr. Sautter am Bürgermeisterforum zur Bekämpfung von Wüstenbildung und Dürre in Ulan Bator (Mongolei)</title>
-<updated>2026-08-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261536"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028923"/>
-<summary>Mitteilungsvorlage · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028944#vorlage</id>
-<title>Neue Vorlage 261546: Städtepartnerschaft Bonn - Oxford; Zuschuss für Roter Stern Dransdorf e.V.</title>
-<updated>2026-08-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:dransdorf#261546"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028944"/>
-<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Bonn · Stand: offen</summary>
 </entry>
 </feed>
