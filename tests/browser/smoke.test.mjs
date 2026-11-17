@@ -76,7 +76,7 @@ test("Start: Übersicht über ganz Bonn, Fenster „Los geht's“, ohne Verstö�
   await page.close();
 });
 
-test("Start: Block „Aktuell“ mit je höchstens drei Einträgen, Vorlage öffnet den Vorgang, auf dem Telefon eingeklappt", async () => {
+test("Start: Block „Aktuell“ mit je höchstens drei Einträgen, Vorlage öffnet den Vorgang, Rückweg über Logo, Vorgang und Menü, auf dem Telefon eingeklappt", async () => {
   const page = await open();
   const block = page.locator("#detail .aktuell");
   assert.equal(await block.count(), 1, "Block „Aktuell“ im Startfenster");
@@ -88,6 +88,18 @@ test("Start: Block „Aktuell“ mit je höchstens drei Einträgen, Vorlage öff
   await neu.first().click();
   await page.waitForFunction((r) => location.hash === "#" + r, ref);
   assert.equal(await page.locator("#detail-heading").textContent(), "Vorgang");
+  // Rückweg zu „Los geht's“: Logo, Link am Ende des Vorgangs, Kachel im Menü „Mitmachen“; das Gebiet bleibt
+  await page.click("a.brand");
+  assert.equal(await page.locator("#detail-heading").textContent(), "Los geht's");
+  assert.ok(!page.url().includes("#"), "kein Vorgang mehr in der Adresse");
+  await page.locator("#detail .akt-open").first().click();
+  await page.waitForFunction(() => document.querySelector("#detail-heading").textContent === "Vorgang");
+  await page.click("#detail .back-home button");
+  assert.equal(await page.locator("#detail .aktuell").evaluate((d) => d.open), true);
+  await page.click('[data-mega="mega-mitmachen"]');
+  await page.click('#mega-mitmachen [data-home="aktuell"]');
+  assert.equal(await page.locator("#mega-mitmachen").isHidden(), true);
+  assert.equal(await page.locator("#detail-heading").textContent(), "Los geht's");
   assert.deepEqual(page.errors, []);
   await page.close();
   const mobil = await open("", { width: 390, height: 844 });
