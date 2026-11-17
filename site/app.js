@@ -20,7 +20,8 @@
   const MOBILE = matchMedia("(max-width: 900px)");
   const NARROW = matchMedia("(max-width: 1279px)");
   const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const CONF = { hoch: "Ort gesichert", mittel: "Ort erschlossen", niedrig: "Ort unsicher" };
+  // Herkunft der Ortsangabe (Entscheidung des Auftraggebers 17.11.2026; bisher „gesichert / erschlossen / unsicher“)
+  const CONF = { hoch: "Ort belegt", mittel: "Ort erkannt", niedrig: "Ort unklar" };
   const METHOD = {
     oparl_location: "Koordinate der Stadt (OParl)", strasse: "Straßenname im Titel",
     "strasse+ortsteil": "Straßen- und Ortsteilname im Titel", "strasse+bezirk": "Straßenname im Titel, Bezirk eingegrenzt",
@@ -50,10 +51,39 @@
     <li>Sitzungen und Ergebnisse, die OParl-Lite (noch) nicht verknüpft.</li></ul>
     <p class="hint">Abweichungen zwischen Regel und Ablauf sind Befunde, keine Bewertung.</p></details>`;
   // Startfenster „Los geht's“ im Vorgang, solange keine Vorlage gewählt ist; die Tour steht in site/tour.js
-  const INTRO = `<div class="intro">
+  const INTRO = () => `<div class="intro">
     <p class="intro-lead">Was Rat und Bezirksvertretungen der Stadt Bonn beraten – wo, wann, wer und mit welchem Geld.</p>
     <button type="button" class="btn btn-cta tour-cta" data-tour><span class="tour-cta-dot" aria-hidden="true"></span>Tour durch alle Funktionen</button>
-    <p><a href="einfach/">Der Ratsatlas in Einfacher Sprache</a></p></div>${LIMITS}`;
+    <p><a href="einfach/">Der Ratsatlas in Einfacher Sprache</a></p></div>${aktuellHtml()}${LIMITS}`;
+  // Block „Aktuell“ im Startfenster (Entscheidung des Auftraggebers 17.11.2026): je drei nächste Sitzungen und neue
+  // Vorlagen aus index.json (pipeline/export._aktuell); auf dem Telefon eingeklappt
+  const WOCHENTAG = new Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin", weekday: "short" });
+  function aktuellHtml() {
+    const a = index && index.aktuell;
+    if (!a) return "";
+    const h = heute();
+    const sitzungen = a.sitzungen.filter((m) => m.date >= h).slice(0, 3), vorlagen = a.vorlagen.slice(0, 3);
+    if (!sitzungen.length && !vorlagen.length) return "";
+    const tag = (iso) => `${WOCHENTAG.format(new Date(iso + "T12:00:00Z")).replace(".", "")} ${fmtDate(iso)}`;
+    const neuesFenster = '<span class="visually-hidden"> (öffnet in einem neuen Tab)</span>';
+    const s = sitzungen.map((m) => {
+      const web = safeUrl(m.web);
+      const teile = [web ? `<a href="${web}" target="_blank" rel="noopener">Tagesordnung${neuesFenster}</a>` : "Tagesordnung noch nicht veröffentlicht"];
+      if (m.frist && m.frist >= h) teile.push(`Frist für Anträge und Fragen: ${fmtDate(m.frist)} (berechnet)`);
+      return `<li><span class="akt-when">${m.date === h ? "Heute" : tag(m.date)}${m.time ? `, ${esc(m.time)} Uhr` : ""}</span>
+        <span class="akt-title">${esc(m.gremium)}</span><span class="akt-meta">${teile.join(" · ")}</span></li>`;
+    }).join("");
+    const v = vorlagen.map((p) => `<li><button type="button" class="akt-open" data-open-ref="${esc(p.reference)}"${p.area ? ` data-area="${esc(p.area)}"` : ""}>
+        <span class="akt-title">${esc(p.name)}</span>
+        <span class="akt-meta">${fmtDate(p.date)} · ${esc(p.paper_type || "Vorlage")} · ${esc(p.ort)} · ${esc(p.reference)}</span></button></li>`).join("");
+    const oparl = ((index.meta && index.meta.sources) || []).find((x) => x.name === "oparl-bonn");
+    const stand = oparl && oparl.retrieved_at ? fmtDate(oparl.retrieved_at.slice(0, 10)) : "";
+    return `<details class="acc aktuell"${MOBILE.matches ? "" : " open"}><summary>Aktuell in Bonn</summary>
+      ${s ? `<h3 class="akt-h">Nächste Sitzungen</h3><ul class="akt-list">${s}</ul>` : ""}
+      ${zeit ? '<p class="akt-more"><button type="button" class="link-btn" data-open-termine>Alle Termine</button></p>' : ""}
+      ${v ? `<h3 class="akt-h">Neu eingereicht</h3><p class="hint">Die jüngsten Vorlagen aus ganz Bonn, nach Datum.</p><ul class="akt-list">${v}</ul>` : ""}
+      ${stand ? `<p class="hint">Stand der Daten: ${stand}</p>` : ""}</details>`;
+  }
 
   const $ = (s) => document.querySelector(s);
   // Metaangaben eingeklappt (Entscheidung des Auftraggebers 10.11.2026; wie pipeline/akkordeon.py): Quellen, Regeln,
@@ -141,7 +171,7 @@
     shownSite = null;
     if (planLayer) { planLayer.remove(); planLayer = null; }   // Umriss eines zuvor gewählten Vorgangs (Gebietswechsel)
     $("#detail-heading").textContent = "Los geht's";
-    $("#detail").innerHTML = INTRO;
+    $("#detail").innerHTML = INTRO();
   }
   function closePanel(id) {
     setPanel(id, false);
@@ -512,7 +542,7 @@
       },
     });
     new MapStyle().addTo(map);
-    // Farbe der Punkte: Sicherheit der Ortsangabe (Standard) oder Thema; Legende darunter
+    // Farbe der Punkte: Herkunft der Ortsangabe (Standard) oder Thema; Legende darunter
     colorBy = new URLSearchParams(location.search).get("farbe") === "thema" ? "thema" : "sicherheit";
     const ColorBy = L.Control.extend({
       options: { position: "bottomright" },
@@ -1222,7 +1252,7 @@
     if (navLegend) {
       const z = index.zahlen || {}, br = far ? bzBreaks : otBreaks;
       const kk = kKey(navMetric), kd = kk && kQuelle(kk);
-      navLegend.querySelector(":scope > summary").textContent = kk ? kd.titel : navMetric ? `Anteil: ${THEMES[navMetric]}` : "Vorlagen der letzten 12 Monate";
+      navLegend.querySelector(":scope > summary").textContent = "Flächen: " + (kk ? kd.titel : navMetric ? `Anteil ${THEMES[navMetric]}` : `Vorlagen je ${far ? "Stadtbezirk" : "Ortsteil"} (12 Monate)`);
       navLegend.querySelector(".nav-legend-body").innerHTML = kk
         ? `<ol class="nav-ramp">${kRanges(br, kk).map((r, k) => `<li><span class="nav-sw nav-sw${k}" aria-hidden="true"></span>${r}</li>`).join("")}
             <li><span class="nav-sw nav-sw-none" aria-hidden="true"></span>${kOhne(kk)}</li></ol>
@@ -1253,8 +1283,8 @@
   function drawLegend() {
     const rows = colorBy === "thema"
       ? [...Object.entries(THEMES).map(([k, v]) => [THEME_COLOR[k], v]), [NO_THEME, "ohne Thema"]]
-      : [[color("hoch"), "Ort gesichert (Koordinate oder eindeutiger Bebauungsplan der Stadt)"], [color("mittel"), "Ort erschlossen (Name im Titel)"], [color("niedrig"), "Ort unsicher (mehrdeutig)"]];
-    legendEl.innerHTML = `<summary>Legende: ${colorBy === "thema" ? "Thema" : "Sicherheit des Orts"}</summary><ul>${rows
+      : [[color("hoch"), "Ort belegt (Angabe der Stadt: Koordinate oder eindeutiger Bebauungsplan)"], [color("mittel"), "Ort erkannt (Name im Titel oder Text)"], [color("niedrig"), "Ort unklar (mehrdeutig)"]];
+    legendEl.innerHTML = `<summary>Punkte: ${colorBy === "thema" ? "Thema" : "Woher der Ort stammt"}</summary><ul>${rows
       .map(([c, t]) => `<li><span class="swatch" style="background:${c}" aria-hidden="true"></span>${esc(t)}</li>`).join("")}</ul>
       ${colorBy === "thema" ? '<p class="hint">Bei mehreren Themen zählt das erste. Themen sind abgeleitet.</p>' : ""}
       ${planOn ? `<ul><li><span class="swatch swatch-plan" aria-hidden="true"></span>Geltungsbereich eines rechtskräftigen Bebauungsplans (Stadt Bonn)</li></ul>
@@ -2006,7 +2036,12 @@
     const site = e.target.closest("[data-open-site]");
     if (site) { showSite(site.dataset.openSite); return; }
     const ref = e.target.closest("[data-open-ref]");
-    if (ref) { const p = papers.find((x) => x.reference === ref.dataset.openRef); if (p) select(p); else window.risKarte.open(ref.dataset.openRef); return; }
+    if (ref) {
+      const p = papers.find((x) => x.reference === ref.dataset.openRef);
+      if (p) select(p); else if (ref.dataset.area) openGlobal(ref.dataset.openRef, ref.dataset.area); else window.risKarte.open(ref.dataset.openRef);
+      return;
+    }
+    if (e.target.closest("[data-open-termine]") && zeit) { setPanel("panel-termine", true); showTermine(); focusPanel("panel-termine"); return; }
     const erk = e.target.closest(".erkl-btn");
     if (erk) {
       const open = erk.getAttribute("aria-expanded") !== "true";

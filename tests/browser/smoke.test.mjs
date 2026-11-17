@@ -76,6 +76,25 @@ test("Start: Übersicht über ganz Bonn, Fenster „Los geht's“, ohne Verstö�
   await page.close();
 });
 
+test("Start: Block „Aktuell“ mit je höchstens drei Einträgen, Vorlage öffnet den Vorgang, auf dem Telefon eingeklappt", async () => {
+  const page = await open();
+  const block = page.locator("#detail .aktuell");
+  assert.equal(await block.count(), 1, "Block „Aktuell“ im Startfenster");
+  assert.equal(await block.evaluate((d) => d.open), true, "auf dem Desktop aufgeklappt");
+  assert.ok(await block.locator(".akt-list").first().locator("li").count() <= 3);
+  const neu = block.locator(".akt-open");
+  assert.ok(await neu.count() >= 1 && await neu.count() <= 3, "neue Vorlagen");
+  const ref = await neu.first().getAttribute("data-open-ref");
+  await neu.first().click();
+  await page.waitForFunction((r) => location.hash === "#" + r, ref);
+  assert.equal(await page.locator("#detail-heading").textContent(), "Vorgang");
+  assert.deepEqual(page.errors, []);
+  await page.close();
+  const mobil = await open("", { width: 390, height: 844 });
+  assert.equal(await mobil.locator("#detail .aktuell").evaluate((d) => d.open), false, "auf dem Telefon eingeklappt");
+  await mobil.close();
+});
+
 test("Karte: Stadtbezirk anklicken, dann Ortsteil laden", async () => {
   const page = await open();
   let pt = await areaPoint(page);

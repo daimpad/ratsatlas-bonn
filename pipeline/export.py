@@ -269,6 +269,8 @@ def export_all():
     # Abonnieren und Nachnutzen (publish.py)
     home = {}
     for key, ids in areas.items():
+        if key == "gesamt":
+            continue
         for pid in ids:
             home.setdefault(pid, key)
     publish.write_feeds(out / "feeds", areas, cache, names, home, slug, since)
@@ -312,6 +314,7 @@ def export_all():
     flaechen.write(out)
     # Übersichtskarte: Vorlagen der letzten zwölf Monate und auffälliges Thema je Gebiet
     gebietszahlen.annotate(index, areas, cache, stand or datetime.now(timezone.utc).isoformat())
+    index["aktuell"] = _aktuell(cache, home, names, meetings, heute)
     _dump(out / "index.json", {"meta": _meta(db), **index})
     db.close()
     print(f"Bonn: {len(index['ortsteile'])} Ortsteile, {len(index['bezirke'])} Bezirke, "
@@ -391,6 +394,32 @@ def _sample(db, out, ortsteil, n=50, seed=2026):
 
 
 # --- Suche über ganz Bonn: Themen und Parteien -------------------------------------------------------
+
+AKTUELL_SITZUNGEN, AKTUELL_VORLAGEN = 6, 5   # die Seite zeigt je drei; Reserve für Sitzungen, die am Tag vergehen
+
+
+def _ort_kurz(key, names):
+    """Kurzer Ortsname für das Startfenster: Ortsteil, Stadtbezirk oder „stadtweit“."""
+    if not key or key.startswith("ohne:"):
+        return "stadtweit / ohne Ortsbezug"
+    return names[key].split(",")[0]
+
+
+def _aktuell(cache, home, names, meetings, heute):
+    """Startfenster „Los geht's“ (Entscheidung des Auftraggebers 17.11.2026): die nächsten Sitzungen mit Tagesordnung
+    und berechneter Frist (21 Tage vorher, dossier._frist) und die jüngsten Vorlagen aus ganz Bonn, nur nach Datum
+    geordnet. Steht in index.json, damit der Seitenstart keine weitere Datei braucht; Titel wie überall maskiert."""
+    sitzungen = [{"date": m["date"], "time": m["time"], "gremium": m["gremium"], "web": m["web"],
+                  "frist": dossier._frist(m["date"]), "source_object": m["source_object"]}
+                 for m in sorted(meetings, key=lambda m: (m["date"], m["time"] or ""))
+                 if m["date"] >= heute and not m["cancelled"]][:AKTUELL_SITZUNGEN]
+    neu = sorted(((pid, p) for pid, p in cache.items() if p["date"] and p["date"] <= heute),
+                 key=lambda x: (x[1]["date"], x[1]["reference"]), reverse=True)[:AKTUELL_VORLAGEN]
+    vorlagen = [{"reference": p["reference"], "date": p["date"], "paper_type": p["paper_type"], "name": p["name"],
+                 "area": home.get(pid), "ort": _ort_kurz(home.get(pid), names), "seite": bool(p.get("seite"))}
+                for pid, p in neu]
+    return {"heute": heute, "sitzungen": sitzungen, "vorlagen": vorlagen}
+
 
 def _search_index(cache, areas, names):
     """Kompakter Index aller Vorlagen für die Suche über ganz Bonn. Je Zeile: Drucksache, Titel, Datum,
