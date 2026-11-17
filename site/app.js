@@ -51,40 +51,42 @@
     <li>Sitzungen und Ergebnisse, die OParl-Lite (noch) nicht verknüpft.</li></ul>
     <p class="hint">Abweichungen zwischen Regel und Ablauf sind Befunde, keine Bewertung.</p></details>`;
   // Startfenster „Los geht's“ im Vorgang, solange keine Vorlage gewählt ist; die Tour steht in site/tour.js
-  const INTRO = () => `<div class="intro">
+  const INTRO = (offen) => `<div class="intro">
     <p class="intro-lead">Was Rat und Bezirksvertretungen der Stadt Bonn beraten – wo, wann, wer und mit welchem Geld.</p>
     <button type="button" class="btn btn-cta tour-cta" data-tour><span class="tour-cta-dot" aria-hidden="true"></span>Tour durch alle Funktionen</button>
-    <p><a href="einfach/">Der Ratsatlas in Einfacher Sprache</a></p></div>${aktuellHtml()}${LIMITS}`;
-  // Block „Aktuell“ im Startfenster (Entscheidung des Auftraggebers 17.11.2026): je drei nächste Sitzungen und neue
-  // Vorlagen aus index.json (pipeline/export._aktuell); auf dem Telefon eingeklappt
+    <p><a href="einfach/">Der Ratsatlas in Einfacher Sprache</a></p></div>${aktuellHtml(offen)}${LIMITS}`;
+  // Block „Aktuell“ im Startfenster (Entscheidungen des Auftraggebers 17.11.2026): zwei Karten, je drei nächste
+  // Sitzungen (Datumskachel, Tagesordnung als Symbol) und neue Vorlagen (Titel höchstens zwei Zeilen, Art und Ort als
+  // Chips) aus index.json (pipeline/export._aktuell); auf dem Telefon eingeklappt, außer beim Weg über „Aktuell in Bonn“
   const WOCHENTAG = new Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin", weekday: "short" });
-  function aktuellHtml() {
+  const TAG_MONAT = new Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin", day: "numeric", month: "long" });
+  const KURZDATUM = new Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit" });
+  const mittag = (iso) => new Date(iso + "T12:00:00Z");
+  const uhr = (t) => (t ? (t.endsWith(":00") ? `${+t.slice(0, 2)} Uhr` : `${t} Uhr`) : "");
+  function aktuellHtml(offen) {
     const a = index && index.aktuell;
     if (!a) return "";
-    const h = heute();
+    const h = heute(), morgen = new Date(mittag(h).getTime() + 864e5).toISOString().slice(0, 10);
     const sitzungen = a.sitzungen.filter((m) => m.date >= h).slice(0, 3), vorlagen = a.vorlagen.slice(0, 3);
     if (!sitzungen.length && !vorlagen.length) return "";
-    const tag = (iso) => `${WOCHENTAG.format(new Date(iso + "T12:00:00Z")).replace(".", "")} ${fmtDate(iso)}`;
-    const neuesFenster = '<span class="visually-hidden"> (öffnet in einem neuen Tab)</span>';
     const s = sitzungen.map((m) => {
-      const web = safeUrl(m.web);
-      const teile = [web ? `<a href="${web}" target="_blank" rel="noopener">Tagesordnung${neuesFenster}</a>` : "Tagesordnung noch nicht veröffentlicht"];
-      if (m.frist && m.frist >= h) teile.push(`Frist für Anträge und Fragen: ${fmtDate(m.frist)} (berechnet)`);
-      return `<li><span class="akt-when">${m.date === h ? "Heute" : tag(m.date)}${m.time ? `, ${esc(m.time)} Uhr` : ""}</span>
-        <span class="akt-title">${esc(m.gremium)}</span><span class="akt-meta">${teile.join(" · ")}</span></li>`;
+      const web = safeUrl(m.web), wann = m.date === h ? "heute" : m.date === morgen ? "morgen" : TAG_MONAT.format(mittag(m.date));
+      const frist = m.frist && m.frist >= h ? `<span class="akt-chip">Frist für Anträge: ${KURZDATUM.format(mittag(m.frist))} (berechnet)</span>` : "";
+      return `<li class="akt-sitzung"><span class="akt-cal" aria-hidden="true"><b>${+m.date.slice(8)}</b>${WOCHENTAG.format(mittag(m.date)).replace(".", "")}</span>
+        <span class="akt-body"><span class="akt-title">${esc(m.gremium)}</span><span class="akt-meta">${wann}${m.time ? ` · ${uhr(m.time)}` : ""}${web ? "" : " · Tagesordnung folgt"}</span>${frist}</span>
+        ${web ? `<a class="akt-to" href="${web}" target="_blank" rel="noopener" title="Tagesordnung"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden">Tagesordnung ${esc(m.gremium)}, ${fmtDate(m.date)} (neuer Tab)</span></a>` : ""}</li>`;
     }).join("");
     const v = vorlagen.map((p) => `<li><button type="button" class="akt-open" data-open-ref="${esc(p.reference)}"${p.area ? ` data-area="${esc(p.area)}"` : ""}>
-        <span class="akt-title">${esc(p.name)}</span>
-        <span class="akt-meta">${fmtDate(p.date)} · ${esc(p.paper_type || "Vorlage")} · ${esc(p.ort)} · ${esc(p.reference)}</span></button></li>`).join("");
+        <span class="akt-title akt-clamp">${esc(p.name)}</span>
+        <span class="akt-chips"><span class="akt-chip">${esc(p.paper_type || "Vorlage")}</span><span class="akt-chip akt-chip-ort">${esc(p.ort.startsWith("stadtweit") ? "stadtweit" : p.ort)}</span><span class="akt-date">${KURZDATUM.format(mittag(p.date))}</span></span></button></li>`).join("");
     const oparl = ((index.meta && index.meta.sources) || []).find((x) => x.name === "oparl-bonn");
     const stand = oparl && oparl.retrieved_at ? fmtDate(oparl.retrieved_at.slice(0, 10)) : "";
-    return `<details class="acc aktuell"${MOBILE.matches ? "" : " open"}><summary>Aktuell in Bonn</summary>
-      ${s ? `<h3 class="akt-h">Nächste Sitzungen</h3><ul class="akt-list">${s}</ul>` : ""}
-      ${zeit ? '<p class="akt-more"><button type="button" class="link-btn" data-open-termine>Alle Termine</button></p>' : ""}
-      ${v ? `<h3 class="akt-h">Neu eingereicht</h3><p class="hint">Die jüngsten Vorlagen aus ganz Bonn, nach Datum.</p><ul class="akt-list">${v}</ul>` : ""}
-      ${stand ? `<p class="hint">Stand der Daten: ${stand}</p>` : ""}</details>`;
+    const kopf = (icon, titel, zusatz = "") => `<h3 class="akt-h"><span class="akt-icon"><svg class="icon" aria-hidden="true"><use href="#${icon}"/></svg></span>${titel}${zusatz ? ` <span class="akt-zusatz">· ${zusatz}</span>` : ""}</h3>`;
+    return `<details class="aktuell" id="aktuell"${offen || !MOBILE.matches ? " open" : ""}><summary>Aktuell in Bonn${stand ? ` <span class="akt-stand">Stand ${stand}</span>` : ""}</summary>
+      ${s ? `<section class="akt-card akt-card-sitzungen">${kopf("i-calendar", "Nächste Sitzungen")}<ul class="akt-list">${s}</ul>
+        ${zeit ? '<p class="akt-more"><button type="button" class="link-btn" data-open-termine>Alle Termine →</button></p>' : ""}</section>` : ""}
+      ${v ? `<section class="akt-card akt-card-neu">${kopf("i-doc", "Neu eingereicht", "ganz Bonn")}<ul class="akt-list">${v}</ul></section>` : ""}</details>`;
   }
-
   const $ = (s) => document.querySelector(s);
   // Metaangaben eingeklappt (Entscheidung des Auftraggebers 10.11.2026; wie pipeline/akkordeon.py): Quellen, Regeln,
   // Methode; kurze Markierungen „abgeleitet“ an einzelnen Werten bleiben sichtbar
@@ -165,14 +167,37 @@
     const target = el.querySelector("h2[tabindex], .tl-stage, summary");
     if (target) target.focus();
   }
-  function showIntro() {
+  function showIntro(offen) {
     detailSeq++;
     shownPlan = null;
     shownSite = null;
     if (planLayer) { planLayer.remove(); planLayer = null; }   // Umriss eines zuvor gewählten Vorgangs (Gebietswechsel)
     $("#detail-heading").textContent = "Los geht's";
-    $("#detail").innerHTML = INTRO();
+    $("#detail").innerHTML = INTRO(offen);
   }
+  // Rückweg zu „Los geht's“ (Entscheidung des Auftraggebers 17.11.2026): Logo, Kachel „Aktuell in Bonn“ im Menü
+  // „Mitmachen“ und Link am Ende des Vorgangs; Karte, Gebiet und Filter bleiben, wie sie sind
+  function goHome(zuAktuell) {
+    closeMega();
+    setNav(false);
+    OVERLAYS.forEach((id) => { if (!document.getElementById(id).hidden) setPanel(id, false); });
+    selected = null;
+    document.querySelectorAll(".papers button[data-ref]").forEach((b) => b.setAttribute("aria-current", "false"));
+    if (tl) tl.select(null);
+    highlight();
+    showIntro(zuAktuell);
+    syncUrl();
+    setPanel("panel-detail", true);
+    $("#detail").scrollTop = 0;
+    const ziel = zuAktuell && $("#aktuell");
+    if (ziel) { ziel.scrollIntoView({ block: "start" }); ziel.querySelector("summary").focus(); } else $("#detail-heading").focus();
+  }
+  document.addEventListener("click", (e) => {
+    const h = e.target.closest("[data-home]");
+    if (!h) return;
+    e.preventDefault();
+    goHome(h.dataset.home === "aktuell");
+  });
   function closePanel(id) {
     setPanel(id, false);
     const t = toggleFor(id);
@@ -2013,7 +2038,8 @@
         <li>Quellobjekt: ${link(p.source_object, esc(p.source_object)) || esc(p.source_object)}</li>
         <li>Original: ${link(p.web, "Ratsinformationssystem") || "–"}</li>
         ${sources}</ul></details>
-      ${LIMITS}`;
+      ${LIMITS}
+      <p class="back-home"><button type="button" class="link-btn" data-home="aktuell">← Zurück zu „Los geht's“ und „Aktuell in Bonn“</button></p>`;
     $("#announce").textContent = `Vorgang ${p.reference} geöffnet: ${p.name}`;
     fillMitmachen();
     showPlans(p, !fromMap);
