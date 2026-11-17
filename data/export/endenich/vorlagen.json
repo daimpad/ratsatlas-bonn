@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 708,
+  "count": 707,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -4833,138 +4833,6 @@
     "ist": [
      "bv",
      "rat"
-    ],
-    "abweichung": []
-   }
-  },
-  {
-   "reference": "221976-01",
-   "name": "Haltestelle Pastoratsgasse",
-   "paper_type": "Beschlussvorlage",
-   "date": "2026-06-08",
-   "amt": "61 Stadtplanungsamt",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027753",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3146148&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "61 Stadtplanungsamt",
-     "name": "61-3 Stadtverkehr"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/227",
-     "method": "paper_type",
-     "evidence": "Beschlussvorlage",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Entscheidung",
-     "authoritative": 1,
-     "meeting_id": null,
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "221976",
-     "paper_type": "Antrag",
-     "name": "SPD/Grüne/u.w.-Antrag: Aufstellung einer Bank an der Haltstelle Pastoratsgasse",
-     "date": "2022-10-06"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Pastoratsgasse",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.07273,
-     "lat": 50.725757,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Pastoratsgasse",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027753",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027753",
-   "stand": "offen",
-   "themes": [
-    {
-     "theme": "verkehr",
-     "method": "amt",
-     "evidence": "61-3 Stadtverkehr",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Beschlussvorlage",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027753",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2026-06-08",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027753",
-     "note": "datum"
-    },
-    {
-     "typ": "entscheidung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Entscheidung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    }
-   ],
-   "soll": {
-    "verfahren": "antrag-bv",
-    "sicherheit": "hoch",
-    "grund": "Antrag, beraten nur in Bezirksvertretungen",
-    "passung": "passt",
-    "ist": [
-     "bv"
     ],
     "abweichung": []
    }
@@ -68134,14 +68002,6 @@
      "derived": 0,
      "label": "01-2 Ratsbüro",
      "name": "01-2 Ratsbüro"
-    },
-    {
-     "kind": "fachlich",
-     "method": "stellungnahme",
-     "evidence": "221976-01",
-     "derived": 1,
-     "label": "61 Stadtplanungsamt",
-     "name": "61-3 Stadtverkehr"
     }
    ],
    "originators": [
@@ -68187,14 +68047,7 @@
     }
    ],
    "superordinated": [],
-   "subordinated": [
-    {
-     "reference": "221976-01",
-     "paper_type": "Beschlussvorlage",
-     "name": "Haltestelle Pastoratsgasse",
-     "date": "2026-06-08"
-    }
-   ],
+   "subordinated": [],
    "locations": [
     {
      "level": "strasse",
@@ -68214,14 +68067,7 @@
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008688",
    "stand": "entschieden",
-   "themes": [
-    {
-     "theme": "verkehr",
-     "method": "amt",
-     "evidence": "61-3 Stadtverkehr",
-     "confidence": "mittel"
-    }
-   ],
+   "themes": [],
    "parties": [
     "Grüne",
     "SPD"
@@ -68262,15 +68108,6 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Beschlussvorlage",
-     "status": "belegt",
-     "date": "2026-06-08",
-     "source": "oparl-bonn",
-     "reference": "221976-01",
-     "title": "Haltestelle Pastoratsgasse"
     },
     {
      "typ": "vollzug",

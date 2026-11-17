@@ -697,6 +697,22 @@
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029633#vorlage</id>
+<title>Neue Vorlage 261218-01: Dringlichkeitsantrag der Grünen: MEDING:HOME</title>
+<updated>2026-09-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261218-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029633"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029633#beratung-2026-09-28-Rat</id>
+<title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261218-01 Dringlichkeitsantrag der Grünen: MEDING:HOME</title>
+<updated>2026-09-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261218-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029633"/>
+<summary>Entscheidung am 2026-09-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029391#beratung-2026-09-28-Rat</id>
 <title>Rat: „zur Kenntnis genommen“ – 200645-09 ST BBB-Antrag: Haushaltskonsolidierung, hier: Einstellung der Finanzierung des anonymen Krankenversicherungsschutzes; Drucksachengruppe 200645</title>
 <updated>2026-09-28T00:00:00Z</updated>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261121-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029243"/>
 <summary>Stellungnahme der Verwaltung · federführend: 05 Amt für Integration und Vielfalt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029149#beratung-2026-09-17-Hauptausschuss</id>
-<title>Hauptausschuss: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261220-04 ST Antrag-Grüne: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn</title>
-<updated>2026-09-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029149"/>
-<summary>Kenntnisnahme am 2026-09-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029143#beratung-2026-09-17-Hauptausschuss</id>
-<title>Hauptausschuss: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261220-03 AA BBB-Änderungsantrag: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn Antrag zur Vorlage 261220</title>
-<updated>2026-09-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:suedstadt#261220-03%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029143"/>
-<summary>Entscheidung am 2026-09-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

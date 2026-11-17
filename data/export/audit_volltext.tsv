@@ -8957,10 +8957,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 230969	kein Ort						
 230970	nur in Anlagen genannt, nicht verortet						
 230970-01	nur in Anlagen genannt, nicht verortet						
-230971	verortet	Hauptteil	volltext_strasse	Am Hof	Bonn-Zentrum	mittel	3
-230971	verortet	Hauptteil	volltext_strasse	Rathausgasse	Bonn-Zentrum	mittel	3
-230971	verortet	Hauptteil	volltext_strasse	Wesselstraße	Bonn-Zentrum	mittel	2
-230971	verortet	Hauptteil	volltext_strasse+hausnummer	Regina-Pacis-Weg	Bonn-Zentrum	mittel	1
 230972	kein Ort						
 230974	Titel ohne gemeinsamen Ort, nicht verortet						
 230976	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -15634,6 +15630,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260970-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Argelanderstraße	Südstadt	niedrig	1
 260970-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Ermekeilstraße	Südstadt	niedrig	1
 260971	kein Ort						
+260971-01 ST	kein Ort						
 260972	nur in Anlagen genannt, nicht verortet						
 260974	Titel ohne gemeinsamen Ort, nicht verortet						
 260976	kein Ort						
@@ -15748,6 +15745,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261067	kein Ort						
 261068	Titel ohne gemeinsamen Ort, nicht verortet						
 261068-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
+261071	kein Ort						
 261072	kein Ort						
 261073	Titel ohne gemeinsamen Ort, nicht verortet						
 261073-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						

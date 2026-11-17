@@ -130,10 +130,6 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 261146	beratung	Rat (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027944	ungeprüft
 261146	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027944	ungeprüft
 261146	folgevorlage	Stellungnahme der Verwaltung	belegt	2026-06-24		oparl-bonn	261146-01 ST	ungeprüft
-221976-01	initiierung	Beschlussvorlage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027753	ungeprüft
-221976-01	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
-221976-01	veroeffentlichung	Datum der Vorlage	belegt	2026-06-08		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027753	ungeprüft
-221976-01	entscheidung	Bezirksvertretung Bonn (Entscheidung)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027753	ungeprüft
 261100	initiierung	Große Anfrage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027849	ungeprüft
 261100	veroeffentlichung	Datum der Vorlage	belegt	2026-06-08		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027849	ungeprüft
 261100	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt	2026-06-23	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027849	ungeprüft
@@ -1899,7 +1895,6 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 221976	initiierung	Antrag	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2008688	ungeprüft
 221976	veroeffentlichung	Datum der Vorlage	belegt	2022-10-06		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2008688	ungeprüft
 221976	entscheidung	Bezirksvertretung Bonn (Entscheidung)	belegt	2022-10-25	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2008688	ungeprüft
-221976	folgevorlage	Beschlussvorlage	belegt	2026-06-08		oparl-bonn	221976-01	ungeprüft
 221976	vollzug	Umsetzung durch die Verwaltung	unklar				Ob und wann der Beschluss umgesetzt ist, steht in der Beschlusskontrolle; dafür gibt es keine öffentliche Schnittstelle.	ungeprüft
 221989	initiierung	Antrag	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2008715	ungeprüft
 221989	veroeffentlichung	Datum der Vorlage	belegt	2022-10-06		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2008715	ungeprüft

@@ -135,6 +135,7 @@ BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006772
 DTSTAMP:20261116T180000Z
 DTSTART:20261116T180000Z
+DTEND:20261116T214300Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung: https://www.bonn.sitzung-onlin
  e.de/public/TO010?SILFDNR=2006772\nEinladung: https://www.bonn.sitzung-onl

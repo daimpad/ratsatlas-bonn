@@ -501,7 +501,6 @@ drucksache	gebäude oder anlage	art	ortsteil	osm
 231514-01 ST	Godesburg	Sehenswürdigkeit	Alt-Godesberg	way/115092313
 231515	Bernhard-Berzheim-Platz	Park	Ippendorf	way/46230357
 231515-01 ST	Bernhard-Berzheim-Platz	Park	Ippendorf	way/46230357
-231664	Stadthaus	Rathaus	Nordstadt	way/321571291
 231664-01 ST	Stadthaus	Rathaus	Nordstadt	way/321571291
 231664-02	Stadthaus	Rathaus	Nordstadt	way/321571291
 231664-03 ST	Stadthaus	Rathaus	Nordstadt	way/321571291
@@ -701,6 +700,7 @@ drucksache	gebäude oder anlage	art	ortsteil	osm
 242274-03 ST	Ennerthalle	Sporthalle	Küdinghoven	way/45071227
 242274-04 AA	Ennerthalle	Sporthalle	Küdinghoven	way/45071227
 242274-05 AA	Ennerthalle	Sporthalle	Küdinghoven	way/45071227
+242274-06 AA	Ennerthalle	Sporthalle	Küdinghoven	way/45071227
 252357	Sportpark Nord	Stadion	Nordstadt	way/5107070
 252357-01 ST	Sportpark Nord	Stadion	Nordstadt	way/5107070
 252397	Schlossbachschule	Schule	Röttgen	way/54052532
