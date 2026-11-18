@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/201072-07-st</id>
+<title>Vorlage 201072-07 ST: BBB-Anfrage: Bauvorhaben auf dem Grundstück Bonn-Ippendorf, Am Engelspfad [Hausnummer ausgelassen]; Sachstandsanfrage</title>
+<subtitle>Verlauf der Vorlage 201072-07 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-12-10T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/201072-07-st.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ippendorf#201072-07%20ST"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020221#vorlage</id>
+<title>Neue Vorlage 201072-07 ST: BBB-Anfrage: Bauvorhaben auf dem Grundstück Bonn-Ippendorf, Am Engelspfad [Hausnummer ausgelassen]; Sachstandsanfrage</title>
+<updated>2024-12-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ippendorf#201072-07%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020221"/>
+<summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: offen · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung beantwortet eine Anfrage zum Bauvorhaben Am Engelspfad in Bonn-Ippendorf. Der Baubeginn für das ehemalige Gästehaus der Universität Bonn ist am 10.09.2024 erfolgt. Nach der Sanierung entstehen 11 Wohneinheiten, die als öffentlich geförderter Wohnraum nicht unter die Zweckentfremdungssatzung fallen. Eine Genehmigung für Leerstand war nicht nötig.</summary>
+</entry>
+</feed>

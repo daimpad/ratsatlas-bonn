@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/230750-03-aa</id>
+<title>Vorlage 230750-03 AA: CDU-Änderungsantrag: Dialog zum Haushalt 2023/2024, Stadtbezirk Hardtberg Antrag zur Vorlage 230750</title>
+<subtitle>Verlauf der Vorlage 230750-03 AA: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-01-16T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/230750-03-aa.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#230750-03%20AA"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2015590#vorlage</id>
+<title>Neue Vorlage 230750-03 AA: CDU-Änderungsantrag: Dialog zum Haushalt 2023/2024, Stadtbezirk Hardtberg Antrag zur Vorlage 230750</title>
+<updated>2024-01-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#230750-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2015590"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die CDU-Fraktion schlägt vor, den Haushaltsplan für 2023/2024 zu ändern. Vor Bauarbeiten an der Margot-Barnard-Schule sollen Schulleitung und Eltern mitreden. Die Aufstellung von Hundekotbeuteln wird umgesetzt. Die Sanierung von Gittergerüsten in der Fußgängerzone Brüser Berg soll geprüft und später berichtet werden. Betroffen ist der Stadtbezirk Hardtberg.</summary>
+</entry>
+</feed>

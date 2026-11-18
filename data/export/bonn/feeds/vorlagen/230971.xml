@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/230971</id>
+<title>Vorlage 230971: Informationsbrief: Uni trifft City</title>
+<subtitle>Verlauf der Vorlage 230971: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2023-05-16T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/230971.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#230971"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2012267#vorlage</id>
+<title>Neue Vorlage 230971: Informationsbrief: Uni trifft City</title>
+<updated>2023-05-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#230971"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2012267"/>
+<summary>Informationsbrief · federführend: Stabsstellle Bürgerbeteiligung · Stand: offen · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Stadt Bonn lädt Anwohner und Anlieger der Rathausgasse, Am Hof und Wesselstraße zu einer Informationsveranstaltung ein. Thema ist die geplante Umgestaltung dieser Straßen im Rahmen des Projekts „Uni trifft City“. Die Veranstaltung findet am 1. Juni im Festsaal der Universität statt; eine Anmeldung ist erwünscht.</summary>
+</entry>
+</feed>

@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-endenich</id>
 <title>Ratsatlas Bonn – Endenich</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Endenich</subtitle>
-<updated>2026-11-10T00:00:00Z</updated>
+<updated>2026-11-16T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-endenich.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028992#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 260640-01 Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#260640-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028992"/>
+<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028561#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 261263-01 ST Stellungnahme zum Antrag GRÜNE-Fraktion - Fehlende Nahversorgung Baugebiete WestSide und Vogelsang in Endenich-Nord</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261263-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028561"/>
+<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030316#vorlage</id>
 <title>Neue Vorlage 262114: Volt-Anfrage: Feinstaubbelastung (PM2,5 und NO₂), Gesundheitsschutz und planerische Vorsorge in Bonn</title>
@@ -31,6 +47,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261992"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030064"/>
 <summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028561#beratung-2026-11-05-Hauptausschuss</id>
+<title>Hauptausschuss: „zur Kenntnis genommen“ – 261263-01 ST Stellungnahme zum Antrag GRÜNE-Fraktion - Fehlende Nahversorgung Baugebiete WestSide und Vogelsang in Endenich-Nord</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261263-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028561"/>
+<summary>Kenntnisnahme am 2026-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030144#vorlage</id>
@@ -126,7 +150,7 @@
 <updated>2026-10-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#260640-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028992"/>
-<summary>Kenntnisnahme am 2026-10-06; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Kenntnisnahme am 2026-10-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029726#vorlage</id>
@@ -161,12 +185,20 @@
 <summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028561#beratung-2026-09-29-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 261263-01 ST Stellungnahme zum Antrag GRÜNE-Fraktion - Fehlende Nahversorgung Baugebiete WestSide und Vogelsang in Endenich-Nord</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261263-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028561"/>
+<summary>Kenntnisnahme am 2026-09-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028209#beratung-2026-09-29-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
 <title>Ausschuss für Planen, Bauen und Denkmalschutz: „geändert beschlossen“ – 261263 Antrag GRÜNE-Fraktion - Fehlende Nahversorgung Baugebiete WestSide und Vogelsang in Endenich-Nord</title>
 <updated>2026-09-29T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261263"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028209"/>
-<summary>Empfehlung am 2026-09-29; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Empfehlung am 2026-09-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029600#vorlage</id>
@@ -238,7 +270,7 @@
 <updated>2026-09-07T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261263-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028561"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029066#vorlage</id>
@@ -262,7 +294,7 @@
 <updated>2026-08-27T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#260640-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028992"/>
-<summary>Mitteilungsvorlage · federführend: 41 Kulturamt · Stand: in Beratung</summary>
+<summary>Mitteilungsvorlage · federführend: 41 Kulturamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028987#vorlage</id>
@@ -422,7 +454,7 @@
 <updated>2026-06-22T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261263"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028209"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026485#beratung-2026-06-15-Rat</id>
@@ -447,6 +479,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261100"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027849"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027753#vorlage</id>
+<title>Neue Vorlage 221976-01: Haltestelle Pastoratsgasse</title>
+<updated>2026-06-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#221976-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027753"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027892#vorlage</id>
@@ -767,45 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#253797"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024355"/>
 <summary>Entscheidung am 2026-04-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026633#vorlage</id>
-<title>Neue Vorlage 253599-03: BBB-Antrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen] Drucksachengruppe 253599</title>
-<updated>2026-04-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#253599-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026633"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026632#vorlage</id>
-<title>Neue Vorlage 253599-02 AA: BBB-Fraktion-Änderungsantrag: Erhalt von Parkplätzen im Bereich Endenicher Straße [Hausnummer ausgelassen]; Drucksachengruppe 253599</title>
-<updated>2026-04-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#253599-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026632"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025274#vorlage</id>
-<title>Neue Vorlage 253797-01 ST: Stellungnahme zum Bürgerantrag: Erweiterung des verkehrsberuhigten Bereichs "Am Klostergarten"</title>
-<updated>2026-04-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#253797-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025274"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026362#vorlage</id>
-<title>Neue Vorlage 260567-01 ST: Stellungnahme zum Antrag: Überprüfung Fußgängerampel Theodor-Litt-Straße Ecke Hermann-Wandersleb-Ring</title>
-<updated>2026-04-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#260567-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026362"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026371#vorlage</id>
-<title>Neue Vorlage 260579: Grüne-Bezirksfraktion-Prüfauftrag: Maßnahmen zur Erhöhung der Sicherheit im verkehrsberuhigten Bereich auf der Robert- Havemann-Straße und Simone-Veil-Straße</title>
-<updated>2026-04-01T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#260579"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026371"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 </feed>

@@ -42,16 +42,16 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 260745-02 ST	datum_vorlage	2026-09-07	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 260745-02 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 261263-01 ST	datum_vorlage	2026-09-07	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-261263-01 ST	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
-261263-01 ST	beratung: Hauptausschuss (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
-261263-01 ST	beratung: Ausschuss für Planen, Bauen und Denkmalschutz (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
+261263-01 ST	beratung: Ausschuss für Planen, Bauen und Denkmalschutz (Kenntnisnahme)	2026-09-29	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+261263-01 ST	beratung: Hauptausschuss (Kenntnisnahme)	2026-11-05	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+261263-01 ST	beratung: Rat (Kenntnisnahme)	2026-11-16	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 260545-01 ST	datum_vorlage	2026-08-31	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 260545-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 261088-01 ST	datum_vorlage	2026-08-31	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 261088-01 ST	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 260640-01	datum_vorlage	2026-08-27	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
-260640-01	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 260640-01	beratung: Kulturausschuss (Kenntnisnahme)	2026-10-06	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+260640-01	beratung: Rat (Kenntnisnahme)	2026-11-16	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 261573	datum_vorlage	2026-08-24	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 261573	beratung: Ausschuss für Planen, Bauen und Denkmalschutz (Anhörung)			unklar	Beratung ohne verknüpfte Sitzung
 261505	datum_vorlage	2026-08-20	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
@@ -80,6 +80,8 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 261146	beratung: Rat (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 261146	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 261146	folgevorlage: 261146-01 ST	2026-06-24	oparl-bonn	belegt	Stellungnahme der Verwaltung
+221976-01	datum_vorlage	2026-06-08	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+221976-01	beratung: Bezirksvertretung Bonn (Entscheidung)			unklar	Beratung ohne verknüpfte Sitzung
 261100	datum_vorlage	2026-06-08	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 261100	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2026-06-23	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 261100	beratung: Ausschuss für Planen, Bauen und Denkmalschutz (Kenntnisnahme)	2026-07-14	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
@@ -1159,6 +1161,7 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 221980	beratung: Bezirksvertretung Bonn (Anregung)	2022-11-15	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 221976	datum_vorlage	2022-10-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 221976	beratung: Bezirksvertretung Bonn (Entscheidung)	2022-10-25	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+221976	folgevorlage: 221976-01	2026-06-08	oparl-bonn	belegt	Beschlussvorlage
 221989	datum_vorlage	2022-10-06	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 221989	folgevorlage: 221989-01 ST	2022-10-10	oparl-bonn	belegt	Stellungnahme der Verwaltung
 221989	beratung: Ausschuss für Mobilität und Verkehr (Anregung)	2022-10-26	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt

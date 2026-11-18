@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-graurheindorf</id>
 <title>Ratsatlas Bonn – Graurheindorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Graurheindorf</subtitle>
-<updated>2026-11-10T00:00:00Z</updated>
+<updated>2026-11-16T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-graurheindorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028462#beratung-2026-11-16-Rat</id>
+<title>Rat: „ungeändert beschlossen“ – 261332 Stellungnahmen sowie Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 6524-1 “Herseler Straße/Keltenweg“, Stadtbezirk Bonn, Ortsteil Graurheindorf</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#261332"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028462"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029661#beratung-2026-11-10-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
 <title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „vertagt“ – 261837 Große Anfrage - CDU: Anbindung LVR Klinik/Agnesstift durch einen Serviceweg</title>
@@ -121,6 +129,14 @@
 <summary>Beschlussvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028462#beratung-2026-09-29-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 261332 Stellungnahmen sowie Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 6524-1 “Herseler Straße/Keltenweg“, Stadtbezirk Bonn, Ortsteil Graurheindorf</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#261332"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028462"/>
+<summary>Empfehlung am 2026-09-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028484#beratung-2026-09-24-Rat</id>
 <title>Rat: „ungeändert beschlossen“ – 261338 Bilanzielle Übertragung von Grundstücken und Gebäuden von der Stadt Bonn zum SGB</title>
 <updated>2026-09-24T00:00:00Z</updated>
@@ -230,7 +246,7 @@
 <updated>2026-08-17T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#261332"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028462"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028742#vorlage</id>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#252767-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024064"/>
 <summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024473#vorlage</id>
-<title>Neue Vorlage 253863: Informationsbrief - Informationsveranstaltung Klärschlammtransport</title>
-<updated>2025-10-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#253863"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024473"/>
-<summary>Informationsbrief · federführend: 01-1 OB-Büro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024054#vorlage</id>
-<title>Neue Vorlage 253554-01 ST: Kleine Anfrage betr. Klärschlamm</title>
-<updated>2025-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#253554-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024054"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
 </entry>
 </feed>

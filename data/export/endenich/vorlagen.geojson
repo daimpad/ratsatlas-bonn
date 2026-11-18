@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 707,
+  "count": 708,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -857,6 +857,30 @@
     "method": "ortsteil_adjektiv",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027944"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.07273,
+     50.725757
+    ]
+   },
+   "properties": {
+    "reference": "221976-01",
+    "name": "Haltestelle Pastoratsgasse",
+    "paper_type": "Beschlussvorlage",
+    "date": "2026-06-08",
+    "amt": "61 Stadtplanungsamt",
+    "place": "Pastoratsgasse",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027753"
    }
   },
   {

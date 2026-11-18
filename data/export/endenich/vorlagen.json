@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 707,
+  "count": 708,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -2728,25 +2728,25 @@
      "position": 0,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": null,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2006772",
      "gremium": "Rat",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "meeting": "Sitzung des Rates",
+     "start_date": "2026-11-16T18:00:00.000Z",
+     "cancelled": 0,
+     "number": "6.5.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
     },
     {
      "position": 1,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": null,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005586",
      "gremium": "Hauptausschuss",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
+     "meeting": "Sitzung des Hauptausschusses",
+     "start_date": "2026-11-05T17:00:00.000Z",
+     "cancelled": 0,
      "number": "6.2.1",
      "result": "zur Kenntnis genommen",
      "public": 1,
@@ -2756,11 +2756,11 @@
      "position": 2,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": null,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005757",
      "gremium": "Ausschuss für Planen, Bauen und Denkmalschutz",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
+     "meeting": "Sitzung des Ausschusses für Planen, Bauen und Denkmalschutz",
+     "start_date": "2026-09-29T16:00:00.000Z",
+     "cancelled": 0,
      "number": "6.15.1",
      "result": "zur Kenntnis genommen",
      "public": 1,
@@ -2794,7 +2794,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028561",
-   "stand": "in Beratung",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "bauen",
@@ -2835,13 +2835,17 @@
     },
     {
      "typ": "beratung",
-     "label": "Rat",
+     "label": "Ausschuss für Planen, Bauen und Denkmalschutz",
      "role": "Kenntnisnahme",
      "status": "belegt",
      "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "date": "2026-09-29",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.15.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     },
     {
      "typ": "beratung",
@@ -2849,7 +2853,9 @@
      "role": "Kenntnisnahme",
      "status": "belegt",
      "source": "oparl-bonn",
-     "date_status": "unklar",
+     "date": "2026-11-05",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
      "number": "6.2.1",
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
@@ -2857,12 +2863,14 @@
     },
     {
      "typ": "beratung",
-     "label": "Ausschuss für Planen, Bauen und Denkmalschutz",
+     "label": "Rat",
      "role": "Kenntnisnahme",
      "status": "belegt",
      "source": "oparl-bonn",
-     "date_status": "unklar",
-     "number": "6.15.1",
+     "date": "2026-11-16",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "6.5.1",
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite"
@@ -3249,15 +3257,15 @@
      "position": 0,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": null,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2006772",
      "gremium": "Rat",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "meeting": "Sitzung des Rates",
+     "start_date": "2026-11-16T18:00:00.000Z",
+     "cancelled": 0,
+     "number": "7.7",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
     },
     {
      "position": 1,
@@ -3301,7 +3309,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028992",
-   "stand": "in Beratung",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "kultur",
@@ -3342,16 +3350,6 @@
     },
     {
      "typ": "beratung",
-     "label": "Rat",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
-     "typ": "beratung",
      "label": "Kulturausschuss",
      "role": "Kenntnisnahme",
      "status": "belegt",
@@ -3360,6 +3358,20 @@
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
      "number": "9.3",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Rat",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2026-11-16",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "7.7",
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite"
@@ -4511,10 +4523,10 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "number": "6.5",
+     "result": "geändert beschlossen",
+     "public": 1,
+     "status": "beraten"
     },
     {
      "position": 1,
@@ -4572,7 +4584,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028209",
-   "stand": "in Beratung",
+   "stand": "entschieden",
    "themes": [
     {
      "theme": "bauen",
@@ -4612,8 +4624,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "number": "6.5",
+     "result": "geändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     },
     {
      "typ": "beratung",
@@ -4649,6 +4663,12 @@
      "result": "geändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite"
+    },
+    {
+     "typ": "vollzug",
+     "label": "Umsetzung durch die Verwaltung",
+     "status": "unklar",
+     "note": "vollzug"
     }
    ],
    "soll": {
@@ -4833,6 +4853,138 @@
     "ist": [
      "bv",
      "rat"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "221976-01",
+   "name": "Haltestelle Pastoratsgasse",
+   "paper_type": "Beschlussvorlage",
+   "date": "2026-06-08",
+   "amt": "61 Stadtplanungsamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027753",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3146148&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-3 Stadtverkehr"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/227",
+     "method": "paper_type",
+     "evidence": "Beschlussvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": null,
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "221976",
+     "paper_type": "Antrag",
+     "name": "SPD/Grüne/u.w.-Antrag: Aufstellung einer Bank an der Haltstelle Pastoratsgasse",
+     "date": "2022-10-06"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Pastoratsgasse",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.07273,
+     "lat": 50.725757,
+     "stage": "B",
+     "method": "strasse",
+     "confidence": "mittel",
+     "evidence": "Pastoratsgasse",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027753",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027753",
+   "stand": "offen",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "61-3 Stadtverkehr",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Beschlussvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027753",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2026-06-08",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027753",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-bv",
+    "sicherheit": "hoch",
+    "grund": "Antrag, beraten nur in Bezirksvertretungen",
+    "passung": "passt",
+    "ist": [
+     "bv"
     ],
     "abweichung": []
    }
@@ -68002,6 +68154,14 @@
      "derived": 0,
      "label": "01-2 Ratsbüro",
      "name": "01-2 Ratsbüro"
+    },
+    {
+     "kind": "fachlich",
+     "method": "stellungnahme",
+     "evidence": "221976-01",
+     "derived": 1,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-3 Stadtverkehr"
     }
    ],
    "originators": [
@@ -68047,7 +68207,14 @@
     }
    ],
    "superordinated": [],
-   "subordinated": [],
+   "subordinated": [
+    {
+     "reference": "221976-01",
+     "paper_type": "Beschlussvorlage",
+     "name": "Haltestelle Pastoratsgasse",
+     "date": "2026-06-08"
+    }
+   ],
    "locations": [
     {
      "level": "strasse",
@@ -68067,7 +68234,14 @@
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2008688",
    "stand": "entschieden",
-   "themes": [],
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "61-3 Stadtverkehr",
+     "confidence": "mittel"
+    }
+   ],
    "parties": [
     "Grüne",
     "SPD"
@@ -68108,6 +68282,15 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Beschlussvorlage",
+     "status": "belegt",
+     "date": "2026-06-08",
+     "source": "oparl-bonn",
+     "reference": "221976-01",
+     "title": "Haltestelle Pastoratsgasse"
     },
     {
      "typ": "vollzug",

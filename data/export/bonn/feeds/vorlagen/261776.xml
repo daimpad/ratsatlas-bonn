@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/261776</id>
 <title>Vorlage 261776: Volt-Anfrage: Einsatz und Kosten von Microsoft 365 an Bonner Schulen sowie Nutzungsgrad des landeseigenen, kostenfreien Angebots LOGINEO NRW</title>
 <subtitle>Verlauf der Vorlage 261776: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-10-20T00:00:00Z</updated>
+<updated>2026-11-04T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/261776.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261776"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029499#beratung-2026-11-04-Schulausschuss</id>
+<title>Schulausschuss: „zur Kenntnis genommen“ – 261776 Volt-Anfrage: Einsatz und Kosten von Microsoft 365 an Bonner Schulen sowie Nutzungsgrad des landeseigenen, kostenfreien Angebots LOGINEO NRW</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261776"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029499"/>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029499#folge-261776-01%20ST</id>
 <title>Stellungnahme der Verwaltung 261776-01 ST: Einsatz und Kosten von Microsoft 365 an Bonner Schulen sowie Nutzungsgrad des landeseigenen, kostenfreien Angebots LOGINEO NRW</title>

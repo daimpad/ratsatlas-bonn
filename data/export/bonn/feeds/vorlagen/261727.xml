@@ -3,11 +3,35 @@
 <id>tag:allris-bonn,2026:feed/vorlage/261727</id>
 <title>Vorlage 261727: Umsetzung eines Maßnahmenpakets zur Verbesserung des ÖPNV-Angebots sowie der Fahrplanstabilität</title>
 <subtitle>Verlauf der Vorlage 261727: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-10-20T00:00:00Z</updated>
+<updated>2026-11-17T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/261727.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261727"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029410#folge-261727-02</id>
+<title>Antrag 261727-02: GRÜNE Antrag: Beibehaltung der Linienwege der Buslinien 610 und 611</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261727"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029410"/>
+<summary>Folgevorlage zu 261727</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029410#beratung-2026-11-12-Rat</id>
+<title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 261727 Umsetzung eines Maßnahmenpakets zur Verbesserung des ÖPNV-Angebots sowie der Fahrplanstabilität</title>
+<updated>2026-11-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261727"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029410"/>
+<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029410#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „erledigt durch Stellungnahme der Verwaltung“ – 261727 Umsetzung eines Maßnahmenpakets zur Verbesserung des ÖPNV-Angebots sowie der Fahrplanstabilität</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261727"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029410"/>
+<summary>Empfehlung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029410#folge-261727-01%20ST</id>
 <title>Stellungnahme der Verwaltung 261727-01 ST: Umsetzung eines Maßnahmenpakets zur Verbesserung des ÖPNV-Angebots sowie der Fahrplanstabilität</title>
@@ -15,14 +39,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261727"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029410"/>
 <summary>Folgevorlage zu 261727</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029410#beratung-2026-09-24-Rat</id>
-<title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 261727 Umsetzung eines Maßnahmenpakets zur Verbesserung des ÖPNV-Angebots sowie der Fahrplanstabilität</title>
-<updated>2026-09-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261727"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029410"/>
-<summary>Entscheidung am 2026-09-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029410#vorlage</id>

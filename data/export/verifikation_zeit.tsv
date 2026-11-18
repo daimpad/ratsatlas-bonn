@@ -8,14 +8,12 @@ drucksache	pruefung	export	oparl_api	ergebnis
 210302-09	sitzung Bezirksvertretung Bonn	2025-03-11	2025-03-11	ok
 210302-09	sitzung Ausschuss für Mobilität und Verkehr	2025-05-06	2025-05-06	ok
 210302-09	sitzung Rat	2025-07-03	2025-07-03	ok
-190363-2 AA	datum_vorlage	2019-11-05	2019-11-05	ok
-190363-2 AA	beratungen	3	3	ok
-190363-2 AA	sitzung Ausschuss für Planung, Verkehr und Denkmalschutz	2019-11-27	2019-11-27	ok
-190363-2 AA	sitzung Bezirksvertretung Bonn	2019-12-03	2019-12-03	ok
-190363-2 AA	sitzung Rat	2019-12-12	2019-12-12	ok
-190362-3 AA	datum_vorlage	2019-11-25	2019-11-25	ok
-190362-3 AA	beratungen	1	1	ok
-190362-3 AA	sitzung Ausschuss für Planung, Verkehr und Denkmalschutz	2019-11-27	2019-11-27	ok
+190574	datum_vorlage	2019-11-22	2019-11-22	ok
+190574	beratungen	1	1	ok
+190574	sitzung Ausschuss für Planung, Verkehr und Denkmalschutz	2020-03-11	2020-03-11	ok
+190883	datum_vorlage	2019-11-22	2019-11-22	ok
+190883	beratungen	1	1	ok
+190883	sitzung Bezirksvertretung Bonn	2020-03-03	2020-03-03	ok
 220786	datum_vorlage	2022-05-16	2022-05-16	ok
 220786	beratungen	2	2	ok
 220786	sitzung Ausschuss für Umwelt, Klima und Lokale Agenda	2022-05-19	2022-05-19	ok
@@ -23,34 +21,34 @@ drucksache	pruefung	export	oparl_api	ergebnis
 230661-02 ST	datum_vorlage	2023-09-04	2023-09-04	ok
 230661-02 ST	beratungen	1	1	ok
 230661-02 ST	sitzung Bezirksvertretung Bonn	2023-10-17	2023-10-17	ok
-191010-4 ST	datum_vorlage	2020-08-11	2020-08-11	ok
-191010-4 ST	beratungen	1	1	ok
-191010-4 ST	sitzung Bezirksvertretung Bonn	2020-08-25	2020-08-25	ok
-201937	datum_vorlage	2020-11-20	2020-11-20	ok
-201937	beratungen	1	1	ok
-201937	sitzung Bezirksvertretung Bonn	2021-02-02	2021-02-02	ok
-200434	datum_vorlage	2020-04-02	2020-04-02	ok
-200434	beratungen	2	2	ok
-200434	sitzung Bezirksvertretung Bonn	2020-04-21	2020-04-21	ok
-200434	sitzung Rat	2020-05-07	2020-05-07	ok
+201570	datum_vorlage	2020-08-13	2020-08-13	ok
+201570	beratungen	1	1	ok
+201570	sitzung Bezirksvertretung Bonn	2020-11-24	2020-11-24	ok
+201923	datum_vorlage	2020-11-20	2020-11-20	ok
+201923	beratungen	2	2	ok
+201923	sitzung Bezirksvertretung Bonn	2020-11-24	2020-11-24	ok
+201923	sitzung Rat	2020-12-10	2020-12-10	ok
+190936-2 ST	datum_vorlage	2020-02-26	2020-02-26	ok
+190936-2 ST	beratungen	1	1	ok
+190936-2 ST	sitzung Ausschuss für Planung, Verkehr und Denkmalschutz	2020-03-11	2020-03-11	ok
 242202-01 ST	datum_vorlage	2025-05-15	2025-05-15	ok
 242202-01 ST	beratungen	1	1	ok
 242202-01 ST	sitzung Bezirksvertretung Bonn	2025-06-17	2025-06-17	ok
-200671-2 AA	datum_vorlage	2020-06-08	2020-06-08	ok
-200671-2 AA	beratungen	3	3	ok
-200671-2 AA	sitzung Sportausschuss	2020-06-09	2020-06-09	ok
-200671-2 AA	sitzung Bezirksvertretung Bonn	2020-06-16	2020-06-16	ok
-200671-2 AA	sitzung Rat	2020-06-18	2020-06-18	ok
-200211	datum_vorlage	2020-02-10	2020-02-10	ok
-200211	beratungen	1	1	ok
-200211	sitzung Ausschuss für Planung, Verkehr und Denkmalschutz	2020-02-27	2020-02-27	ok
+200797	datum_vorlage	2020-05-14	2020-05-14	ok
+200797	beratungen	3	3	ok
+200797	sitzung Ausschuss für Planung, Verkehr und Denkmalschutz	2020-05-27	2020-05-27	ok
+200797	sitzung Bezirksvertretung Bonn	2020-06-16	2020-06-16	ok
+200797	sitzung Bezirksvertretung Beuel	2020-06-16	2020-06-16	ok
+200206	datum_vorlage	2020-02-05	2020-02-05	ok
+200206	beratungen	1	1	ok
+200206	sitzung Ausschuss für Beteiligung der Bürgerinnen und Bürger und Lokale Agenda	2020-05-28	2020-05-28	ok
 261088	datum_vorlage	2026-06-02	2026-06-02	ok
 261088	beratungen	1	1	ok
 261088	sitzung Bezirksvertretung Bonn	2026-06-23	2026-06-23	ok
-201200	datum_vorlage	2020-07-28	2020-07-28	ok
-201200	beratungen	2	2	ok
-201200	sitzung Ausschuss für Planung, Verkehr und Denkmalschutz	2020-08-26	2020-08-26	ok
-201200	sitzung Bezirksvertretung Bonn	2020-10-06	2020-10-06	ok
+201169	datum_vorlage	2020-07-06	2020-07-06	ok
+201169	beratungen	3	3	ok
+201169	sitzung Betriebsausschuss SGB	2020-08-26	2020-08-26	ok
+201169	sitzung Ausschuss für Umwelt, Klima und Lokale Agenda	2021-06-01	2021-06-01	ok
 253576	datum_vorlage	2025-08-06	2025-08-06	ok
 253576	beratungen	1	1	ok
 253576	sitzung Bezirksvertretung Bonn	2025-10-28	2025-10-28	ok
@@ -62,9 +60,9 @@ drucksache	pruefung	export	oparl_api	ergebnis
 201308-01 AA	sitzung Ausschuss für Wohnen, Planung und Bauen	2021-04-27	2021-04-27	ok
 201308-01 AA	sitzung Bezirksvertretung Bonn	2021-06-15	2021-06-15	ok
 201308-01 AA	sitzung Ausschuss für Wohnen, Planung und Bauen	2021-09-02	2021-09-02	ok
-200178-2 ST	datum_vorlage	2020-12-01	2020-12-01	ok
-200178-2 ST	beratungen	1	1	ok
-200178-2 ST	sitzung Bezirksvertretung Bonn	2021-05-18	2021-05-18	ok
+201424-1 ST	datum_vorlage	2020-10-01	2020-10-01	ok
+201424-1 ST	beratungen	1	1	ok
+201424-1 ST	sitzung Bezirksvertretung Bonn	2020-10-06	2020-10-06	ok
 220157-01 ST	datum_vorlage	2022-03-01	2022-03-01	ok
 220157-01 ST	beratungen	2	2	ok
 220157-01 ST	sitzung Ausschuss für Wohnen, Planung und Bauen	2022-02-23	2022-02-23	ok

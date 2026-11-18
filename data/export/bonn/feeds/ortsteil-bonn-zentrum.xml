@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-bonn-zentrum</id>
 <title>Ratsatlas Bonn – Bonn-Zentrum</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Bonn-Zentrum</subtitle>
-<updated>2026-11-16T00:00:00Z</updated>
+<updated>2026-11-17T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-bonn-zentrum.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030556#vorlage</id>
+<title>Neue Vorlage 261220-09 AA: Volt-/Grüne-/SPD-/Linke-Änderungsantrag zu: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn Antrag zur Vorlage 261220</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-09%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030556"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030457#vorlage</id>
+<title>Neue Vorlage 261740-02 ST: Vertagungsbitte zu Linke Große Anfrage: Schwerlastverkehr im Stadtbezirk Bonn infolge der Sperrung der Nordbrücke</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261740-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030457"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030514#vorlage</id>
 <title>Neue Vorlage 261890-01 AA: Kooperationsantrag Grüne: Verlagerung der Wache GABI in den Bereich des Hauptbahnhofs Antrag zur Vorlage 261890</title>
@@ -23,6 +39,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#262197"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030512"/>
 <summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030374#vorlage</id>
+<title>Neue Vorlage 262140: Bilanz „30 Jahre UN City Bonn“</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#262140"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030374"/>
+<summary>Mitteilungsvorlage · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030461#vorlage</id>
@@ -95,6 +119,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261413-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030158"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028091#beratung-2026-11-10-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „vertagt - mit Maßgabe“ – 261220 Antrag-Grüne: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028091"/>
+<summary>Empfehlung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029923#vorlage</id>
@@ -585,20 +617,12 @@
 <summary>Kenntnisnahme am 2026-09-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028091#beratung-2026-09-15-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
-<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „vertagt - mit Maßgabe“ – 261220 Antrag-Grüne: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn</title>
-<updated>2026-09-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028091"/>
-<summary>Empfehlung am 2026-09-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026425#beratung-2026-09-15-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
 <title>Ausschuss für Mobilität und Verkehr: „ungeändert beschlossen“ – 260613 GRÜNE-Antrag - Maßnahmen zur Sicherung von Gesundheit und Verkehrssicherheit auf den Ausweichrouten der Nordbrücke</title>
 <updated>2026-09-15T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#260613"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026425"/>
-<summary>Empfehlung am 2026-09-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Empfehlung am 2026-09-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025644#beratung-2026-09-15-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261281-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028534"/>
 <summary>Anhörung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028534#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „vertagt“ – 261281-02 AA Volt-Änderungsantrag: Bäderlandschaft sichern! Antrag zur Vorlage 261281</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261281-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028534"/>
-<summary>Anhörung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028172#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „zurückgezogen“ – 261253 Strategische Entwicklung ausgewählter Leerstands- Liegenschaften des SGB zur Schaffung von Wohnraum</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261253"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028172"/>
-<summary>Anhörung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028145#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 261243 Sachstand Öffentliche Toiletten Bonn (Toilettenkonzept ÖTBonn)</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261243"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028145"/>
-<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

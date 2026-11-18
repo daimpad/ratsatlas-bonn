@@ -305,18 +305,24 @@ UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005739
 DTSTAMP:20261201T170000Z
 DTSTART:20261201T170000Z
 SUMMARY:Rechnungsprüfungsausschuss
-DESCRIPTION:Sitzung des Rechnungsprüfungsausschusses\nTagesordnung noch ni
- cht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung des Rechnungsprüfungsausschusses\nTagesordnung: https:
+ //www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005739\nEinladung: http
+ s://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3264094&OTYP=
+ 41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005739
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005865
 DTSTAMP:20261201T170000Z
 DTSTART:20261201T170000Z
 SUMMARY:Kulturausschuss
-DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung noch nicht veröffe
- ntlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung: https://www.bonn.s
+ itzung-online.de/public/TO010?SILFDNR=2005865\nEinladung: https://www.bonn
+ .sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3268289&OTYP=41\nQuelle: 
+ OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005865
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005872
@@ -324,9 +330,11 @@ DTSTAMP:20261201T170000Z
 DTSTART:20261201T170000Z
 SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
 DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
- beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
- t Bonn (CC0 1.0)
+ beit\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDN
+ R=2005872\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP
+ =108&DOLFDNR=3268706&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005872
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005612
@@ -439,6 +447,17 @@ DTSTART:20261217T170000Z
 SUMMARY:Sportausschuss
 DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung noch nicht veröffen
  tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006782
+DTSTAMP:20261231T170000Z
+DTSTART:20261231T170000Z
+SUMMARY:Sammeltermin für den Ausschuss für Sicherheit\, Ordnung und Bevö
+ lkerungsschutz
+DESCRIPTION:Sammeltermin für den Ausschuss für Sicherheit\, Ordnung und B
+ evölkerungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OPar
+ l-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

@@ -3,18 +3,26 @@
 <id>tag:allris-bonn,2026:feed/vorlage/260772-03-aa</id>
 <title>Vorlage 260772-03 AA: FDP-Änderungsantrag: 13. Satzung zur Änderung der Betriebssatzung der Stadt Bonn für die eigenbetriebsähnliche Einrichtung Städtisches Gebäudemanagement Bonn, Maßnahmen zur Beschleunigung von Baumaßnahmen des SGB und Neuausrichtung des Berichtswesens zu Bauvorhaben des SGB Antrag zur Vorlage 260772</title>
 <subtitle>Verlauf der Vorlage 260772-03 AA: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-10-07T00:00:00Z</updated>
+<updated>2026-11-16T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/260772-03-aa.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260772-03%20AA"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029754#beratung-2026-11-16-Rat</id>
+<title>Rat: „abgelehnt“ – 260772-03 AA FDP-Änderungsantrag: 13. Satzung zur Änderung der Betriebssatzung der Stadt Bonn für die eigenbetriebsähnliche Einrichtung Städtisches Gebäudemanagement Bonn, Maßnahmen zur Beschleunigung von Baumaßnahmen des SGB und Neuausrichtung des Berichtswesens zu Bauvorhaben des SGB Antrag zur Vorlage 260772</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260772-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029754"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029754#beratung-2026-10-07-Betriebsausschuss%20SGB</id>
 <title>Betriebsausschuss SGB: „abgelehnt“ – 260772-03 AA FDP-Änderungsantrag: 13. Satzung zur Änderung der Betriebssatzung der Stadt Bonn für die eigenbetriebsähnliche Einrichtung Städtisches Gebäudemanagement Bonn, Maßnahmen zur Beschleunigung von Baumaßnahmen des SGB und Neuausrichtung des Berichtswesens zu Bauvorhaben des SGB Antrag zur Vorlage 260772</title>
 <updated>2026-10-07T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260772-03%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029754"/>
-<summary>Empfehlung am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Empfehlung am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029754#vorlage</id>
@@ -22,6 +30,6 @@
 <updated>2026-10-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260772-03%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029754"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 </feed>

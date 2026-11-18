@@ -112,9 +112,11 @@ DTSTAMP:20261201T170000Z
 DTSTART:20261201T170000Z
 SUMMARY:Ausschuss für Wirtschaft\, Liegenschaften und Arbeit
 DESCRIPTION:Sitzung des Ausschusses für Wirtschaft\, Liegenschaften und Ar
- beit\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stad
- t Bonn (CC0 1.0)
+ beit\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDN
+ R=2005872\nEinladung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP
+ =108&DOLFDNR=3268706&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005872
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005612

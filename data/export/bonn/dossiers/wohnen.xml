@@ -3,11 +3,115 @@
 <id>tag:allris-bonn,2026:feed/thema/wohnen</id>
 <title>Ratsatlas Bonn – Wohnen und Bauen</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Wohnen und Bauen (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-16T00:00:00Z</updated>
+<updated>2026-11-17T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/wohnen.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/wohnen-und-bauen/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030568#vorlage</id>
+<title>Neue Vorlage 260648-03 AA: CDU/SPD/FDP-Änderungsantrag: Ziel- und vorbehaltlicher Zustimmungsbeschluss gemäß § 36a BauGB über die Entwicklung der Fläche „Im Schildchen / Otto-Hahn-Straße“ im Stadtbezirk Bonn, Ortsteil Buschdorf (Bau-Turbo) Antrag zur Vorlage 260648</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:buschdorf#260648-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030568"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030566#vorlage</id>
+<title>Neue Vorlage 262219: Große Anfrage der Grünen Ratsfraktion: Notschlafplätze für Frauen – Zuweisungsverfahren und Unterbringung besonders vulnerabler wohnungsloser Menschen</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#262219"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030566"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029896#vorlage</id>
+<title>Neue Vorlage 261904: Stadthalle Bad Godesberg – Sicherung des Interimsbetriebs und Entwicklung einer langfristigen Perspektive</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261904"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029896"/>
+<summary>Beschlussvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030468#beratung-2026-11-16-Rat</id>
+<title>Rat: „abgelehnt“ – 260919-11 AA Volt-Änderungsantrag: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg Antrag zur Vorlage 260919</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-11%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030468"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029967#beratung-2026-11-16-Rat</id>
+<title>Rat: „nicht abgestimmt“ – 260919-08 ST Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029967"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029812#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 260919-07 ST Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-07%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029812"/>
+<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029801#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 260942-03 ST Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplans Nr. 6422-2 „Innovationsdreieck“, Stadtbezirk Bonn, Ortsteil Weststadt</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#260942-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029801"/>
+<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029591#beratung-2026-11-16-Rat</id>
+<title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 253210-05 AA Änderungsantrag Grüne Fraktion - Bebauungsplan 6224-3 "Im Rosenfeld" - Beschluss über das überarbeitete städtebauliche Konzept und die weiteren Schritte im Bebauungsplanverfahren Antrag zur Vorlage 253210</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:buschdorf#253210-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029591"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029590#beratung-2026-11-16-Rat</id>
+<title>Rat: „nicht abgestimmt“ – 260919-05 AA Änderungsantrag Grüne Fraktion - Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg Antrag zur Vorlage 260919</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029590"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029344#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 261073-01 ST Jahresabschluss 2025 der VEBOWAG</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261073-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029344"/>
+<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029184#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 260919-03 ST Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029184"/>
+<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029080#beratung-2026-11-16-Rat</id>
+<title>Rat: „ungeändert beschlossen“ – 261609 Erlass einer Veränderungssperre für den Geltungsbereich des Bebauungsplans Nr. 7519-14  "An der Ziegelei" im Stadtbezirk Hardtberg, Ortsteil Lengsdorf</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261609"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029080"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029015#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 260919-02 ST Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029015"/>
+<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028890#vorlage</id>
 <title>Neue Vorlage 260957-01 ST: Bonner Baupotenzialregister (B²PR) hier: Aufnahme von Aufstockungs- und Mindernutzungspotenzialen aus dem verwaltungsinternen Innenentwicklungsatlas</title>
@@ -15,6 +119,46 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260957-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028890"/>
 <summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028659#beratung-2026-11-16-Rat</id>
+<title>Rat: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 253210-04 N-Vorlage zum Kooperationsantrag betreffend Bebauungsplan 6224-3 "Im Rosenfeld" - Beschluss über das überarbeitete städtebauliche Konzept und die weiteren Schritte im Bebauungsplanverfahren</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:buschdorf#253210-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028659"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028561#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 261263-01 ST Stellungnahme zum Antrag GRÜNE-Fraktion - Fehlende Nahversorgung Baugebiete WestSide und Vogelsang in Endenich-Nord</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261263-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028561"/>
+<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028552#beratung-2026-11-16-Rat</id>
+<title>Rat: „nicht abgestimmt“ – 260919-01 AA Änderungsantrag CDU/SPD/FDP: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg Antrag zur Vorlage 260919</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028552"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028462#beratung-2026-11-16-Rat</id>
+<title>Rat: „ungeändert beschlossen“ – 261332 Stellungnahmen sowie Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 6524-1 “Herseler Straße/Keltenweg“, Stadtbezirk Bonn, Ortsteil Graurheindorf</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#261332"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028462"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027473#beratung-2026-11-16-Rat</id>
+<title>Rat: „geändert beschlossen“ – 260942 Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplans Nr. 6422-2 „Innovationsdreieck“, Stadtbezirk Bonn, Ortsteil Weststadt</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#260942"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027473"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030295#vorlage</id>
@@ -38,15 +182,7 @@
 <updated>2026-11-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-11%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030468"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030468#beratung-2026-11-12-Rat</id>
-<title>Rat: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260919-11 AA Volt-Änderungsantrag: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg Antrag zur Vorlage 260919</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-11%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030468"/>
-<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030459#vorlage</id>
@@ -54,15 +190,15 @@
 <updated>2026-11-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-10%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030459"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030459#beratung-2026-11-12-Rat</id>
-<title>Rat: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260919-10 AA BBB-Änderungsantrag Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg Antrag zur Vorlage 260919</title>
+<title>Rat: „abgelehnt“ – 260919-10 AA BBB-Änderungsantrag Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg Antrag zur Vorlage 260919</title>
 <updated>2026-11-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-10%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030459"/>
-<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030445#vorlage</id>
@@ -81,6 +217,14 @@
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030209#beratung-2026-11-12-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 261981-01 ST Antrag der Ratsgruppe BSW/SBI: Schutz der Brandbetroffenen in Tannenbusch Mitte (Oppelnerstr. 59) und Bereitstellung geeigneten, bezahlbaren Ersatzwohnraums</title>
+<updated>2026-11-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261981-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030209"/>
+<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030142#beratung-2026-11-12-Rat</id>
 <title>Rat: „vertagt“ – 261989-01 ST Vertagungsbitte zur AfD-Anfrage: Obdachlosenunterkunft in der Karl-Finkelnburg-Straße</title>
 <updated>2026-11-12T00:00:00Z</updated>
@@ -95,6 +239,22 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ruengsdorf#261989"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030061"/>
 <summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030046#beratung-2026-11-12-Rat</id>
+<title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 261981 Antrag der Ratsgruppe BSW/SBI: Schutz der Brandbetroffenen in Tannenbusch Mitte (Oppelnerstr. 59) und Bereitstellung geeigneten, bezahlbaren Ersatzwohnraums</title>
+<updated>2026-11-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261981"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030046"/>
+<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030026#beratung-2026-11-12-Rat</id>
+<title>Rat: „ungeändert beschlossen“ – 261968 Antrag der Grünen Ratsfraktion zum Quartiersmanagement Tannenbusch</title>
+<updated>2026-11-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261968"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030026"/>
+<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029417#beratung-2026-11-12-Rat</id>
@@ -138,7 +298,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027418#beratung-2026-11-12-Rat</id>
-<title>Rat: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260919 Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<title>Rat: „geändert beschlossen“ – 260919 Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
 <updated>2026-11-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027418"/>
@@ -169,12 +329,20 @@
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030421#vorlage</id>
+<title>Neue Vorlage 261201-03 AA: Änderungsantrag CDU, SPD, FDP und BSW/SBI zum Zielbeschluss über die Entwicklung der Fläche „Petrusacker“ im Ortsteil Buschdorf, Stadtbezirk Bonn</title>
+<updated>2026-11-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:buschdorf#261201-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030421"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030418#vorlage</id>
 <title>Neue Vorlage 260919-09 AA: Änderungsantrag CDU, Grüne, SPD, FDP zu Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
 <updated>2026-11-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-09%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030418"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028398#vorlage</id>
@@ -222,7 +390,7 @@
 <updated>2026-11-10T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261968-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030266"/>
-<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030250#vorlage</id>
@@ -246,7 +414,7 @@
 <updated>2026-11-10T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261981-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030209"/>
-<summary>Kenntnisnahme am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Kenntnisnahme am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030046#beratung-2026-11-10-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
@@ -254,7 +422,7 @@
 <updated>2026-11-10T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261981"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030046"/>
-<summary>Empfehlung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Empfehlung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030033#beratung-2026-11-10-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
@@ -270,7 +438,7 @@
 <updated>2026-11-10T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261968"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030026"/>
-<summary>Empfehlung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Empfehlung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030007#beratung-2026-11-10-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
@@ -345,6 +513,14 @@
 <summary>Kenntnisnahme am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029080#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
+<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 261609 Erlass einer Veränderungssperre für den Geltungsbereich des Bebauungsplans Nr. 7519-14  "An der Ziegelei" im Stadtbezirk Hardtberg, Ortsteil Lengsdorf</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261609"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029080"/>
+<summary>Anhörung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028878#vorlage</id>
 <title>Neue Vorlage 261520: 28. Satzung zur Änderung der Hauptsatzung der Bundesstadt Bonn</title>
 <updated>2026-11-10T00:00:00Z</updated>
@@ -361,12 +537,20 @@
 <summary>Empfehlung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026514#beratung-2026-11-10-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
+<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „vertagt“ – 260648 Ziel- und vorbehaltlicher Zustimmungsbeschluss gemäß § 36a BauGB über die Entwicklung der Fläche „Im Schildchen / Otto-Hahn-Straße“ im Stadtbezirk Bonn, Ortsteil Buschdorf (Bau-Turbo)</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:buschdorf#260648"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026514"/>
+<summary>Empfehlung am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030209#vorlage</id>
 <title>Neue Vorlage 261981-01 ST: Antrag der Ratsgruppe BSW/SBI: Schutz der Brandbetroffenen in Tannenbusch Mitte (Oppelnerstr. 59) und Bereitstellung geeigneten, bezahlbaren Ersatzwohnraums</title>
 <updated>2026-11-09T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261981-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030209"/>
-<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: in Beratung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029953#vorlage</id>
@@ -401,6 +585,14 @@
 <summary>Stellungnahme der Verwaltung · federführend: 53 Gesundheitsamt · Stand: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028561#beratung-2026-11-05-Hauptausschuss</id>
+<title>Hauptausschuss: „zur Kenntnis genommen“ – 261263-01 ST Stellungnahme zum Antrag GRÜNE-Fraktion - Fehlende Nahversorgung Baugebiete WestSide und Vogelsang in Endenich-Nord</title>
+<updated>2026-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#261263-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028561"/>
+<summary>Kenntnisnahme am 2026-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030281#vorlage</id>
 <title>Neue Vorlage 261791-03 AA: SPD-Änderungsantrag: Erarbeitung eines modifizierten Raum- und Nutzungsprogramms für eine finanzierbare Sanierung der Stadthalle sowie Überprüfung des Denkmalstatus Antrag zur Vorlage 261791</title>
 <updated>2026-11-04T00:00:00Z</updated>
@@ -425,6 +617,14 @@
 <summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029967#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „ohne Votum“ – 260919-08 ST Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-08%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029967"/>
+<summary>Empfehlung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029911#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 202262-02 BBB-Anfrage: Bauruine auf dem Grundstück Peter-Schwingen-Straße Ecke Muffendorfer Straße, Kennung Flurstücke 05431601700935-05431601700940; Drucksachengruppe 202262</title>
 <updated>2026-11-04T00:00:00Z</updated>
@@ -433,12 +633,52 @@
 <summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029812#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 260919-07 ST Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-07%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029812"/>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029590#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „ohne Votum“ – 260919-05 AA Änderungsantrag Grüne Fraktion - Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg Antrag zur Vorlage 260919</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029590"/>
+<summary>Empfehlung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029184#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 260919-03 ST Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029184"/>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029172#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260787-01 ST FDP-Große Anfrage: Bauliche Maßnahmen Heisterbachst. / Ecke Rheinufer</title>
 <updated>2026-11-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#260787-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029172"/>
 <summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029015#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 260919-02 ST Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029015"/>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028552#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „ohne Votum“ – 260919-01 AA Änderungsantrag CDU/SPD/FDP: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg Antrag zur Vorlage 260919</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028552"/>
+<summary>Empfehlung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027418#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
@@ -470,7 +710,7 @@
 <updated>2026-11-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#260942-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029801"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029659#beratung-2026-11-03-Ausschuss%20f%C3%BCr%20Wirtschaft%2C%20Liegenschaften%20und%20Arbeit</id>
@@ -513,6 +753,14 @@
 <summary>Empfehlung am 2026-11-03; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2026514#beratung-2026-11-03-Ausschuss%20f%C3%BCr%20Wirtschaft%2C%20Liegenschaften%20und%20Arbeit</id>
+<title>Ausschuss für Wirtschaft, Liegenschaften und Arbeit: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 260648 Ziel- und vorbehaltlicher Zustimmungsbeschluss gemäß § 36a BauGB über die Entwicklung der Fläche „Im Schildchen / Otto-Hahn-Straße“ im Stadtbezirk Bonn, Ortsteil Buschdorf (Bau-Turbo)</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:buschdorf#260648"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026514"/>
+<summary>Empfehlung am 2026-11-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030212#vorlage</id>
 <title>Neue Vorlage 261778-01 AA: BBB-Antrag: Bebauungsplan Nr. 8215-44, „Siebengebirgsterrassen“, Deutschherrenstraße, Fuß- und Fahrradweg zur Saint-Cloud-Straße; Drucksachen 1410552, 212209 und 261778</title>
 <updated>2026-11-02T00:00:00Z</updated>
@@ -534,7 +782,7 @@
 <updated>2026-11-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-08%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029967"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029866#vorlage</id>
@@ -559,253 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#211204-04%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030051"/>
 <summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029812#vorlage</id>
-<title>Neue Vorlage 260919-07 ST: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
-<updated>2026-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-07%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029812"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029620#vorlage</id>
-<title>Neue Vorlage 261820: Bebauungsplanverfahren Nr. 6924-3, Wohnpark II in Vilich-Müldorf: Gesetzlich geschützte Biotopflächen und vorläufig gesichertes Überschwemmungsgebiet</title>
-<updated>2026-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf#261820"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029620"/>
-<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029547#vorlage</id>
-<title>Neue Vorlage 261799: Zielbeschluss über die Entwicklung der Flächen „Telekom Dome“ im Stadtbezirk Hardtberg, Ortsteil Duisdorf</title>
-<updated>2026-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261799"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029547"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030050#vorlage</id>
-<title>Neue Vorlage 261763-01: Zukunft Wohn- und Büroanlage Fritz-Bauer-Straße</title>
-<updated>2026-10-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261763-01"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030050"/>
-<summary>Mitteilungsvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029840#vorlage</id>
-<title>Neue Vorlage 261881: ISEK Hardtberg: Auswahl eines Lupenraums zur Erarbeitung eines Lupenraum-ISEK</title>
-<updated>2026-10-26T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#261881"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029840"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030048#vorlage</id>
-<title>Neue Vorlage 261983: Grundstück: Römerstr. [Hausnummer ausgelassen] Neubau eines Appartementhauses mit Tiefgarage Az. 10202/2024 VO</title>
-<updated>2026-10-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-castell#261983"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030048"/>
-<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029984#vorlage</id>
-<title>Neue Vorlage 261942: Grundstück in Bonn, Abtstraße [Hausnummer ausgelassen] - Nutzungsänderung im EG: Verwaltungs- und Dispositionsbüro für ein Mietwagenunternehmen, AZ 40482/2026</title>
-<updated>2026-10-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:geislar#261942"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029984"/>
-<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029980#vorlage</id>
-<title>Neue Vorlage 261940: Grundstück in Lengsdorf, Max-Habermann-Straße [Hausnummer ausgelassen] - Neubau von Mehrfamilienhäusern, AZ: 10419/2026</title>
-<updated>2026-10-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261940"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029980"/>
-<summary>Mitteilungsvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029859#vorlage</id>
-<title>Neue Vorlage 261888: Regionaler Arbeitskreis Region Bundesstadt Bonn (:rak) hier: Abschluss Kooperationsvereinbarung und Arbeitsschwerpunkte</title>
-<updated>2026-10-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261888"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029859"/>
-<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030061#vorlage</id>
-<title>Neue Vorlage 261989: AfD-Anfrage: Obdachlosenunterkunft in der Karl-Finkelnburg-Straße</title>
-<updated>2026-10-22T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ruengsdorf#261989"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030061"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030046#vorlage</id>
-<title>Neue Vorlage 261981: Antrag der Ratsgruppe BSW/SBI: Schutz der Brandbetroffenen in Tannenbusch Mitte (Oppelnerstr. 59) und Bereitstellung geeigneten, bezahlbaren Ersatzwohnraums</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261981"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030046"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030026#vorlage</id>
-<title>Neue Vorlage 261968: Antrag der Grünen Ratsfraktion zum Quartiersmanagement Tannenbusch</title>
-<updated>2026-10-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:tannenbusch#261968"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030026"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030033#vorlage</id>
-<title>Neue Vorlage 261972: Linke-Antrag: Regelhafte Abschlagsgewährung bei fehlenden Wärmezählern/Warmwasserzählern städtischer Wohnungen</title>
-<updated>2026-10-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261972"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030033"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030007#vorlage</id>
-<title>Neue Vorlage 261954: Volt-Anfrage zu Hitzeschutz für Wohnungslose</title>
-<updated>2026-10-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#261954"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030007"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029743#vorlage</id>
-<title>Neue Vorlage 261862: Aufstellung des Bebauungsplan Nr. 6325-1 „Kölnstraße / Otto-Hahn-Straße“</title>
-<updated>2026-10-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:auerberg#261862"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029743"/>
-<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028978#vorlage</id>
-<title>Neue Vorlage 261568: Potenzialstudie „Natürliche CO2-Senken in der Bundesstadt Bonn“ und konkrete Umsetzungsansätze im laufenden Verwaltungsgeschäft</title>
-<updated>2026-10-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:roettgen#261568"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028978"/>
-<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029562#beratung-2026-10-16-Beirat%20B%C3%BCrgerbeteiligung</id>
-<title>Beirat Bürgerbeteiligung: „geändert beschlossen“ – 261805 Veröffentlichung der Vorhabenliste: 164702 - Aufstellung des vorhabenbezogenen Bebauungsplans „Gartenstraße“</title>
-<updated>2026-10-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261805"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029562"/>
-<summary>Empfehlung am 2026-10-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029911#vorlage</id>
-<title>Neue Vorlage 202262-02: BBB-Anfrage: Bauruine auf dem Grundstück Peter-Schwingen-Straße Ecke Muffendorfer Straße, Kennung Flurstücke 05431601700935-05431601700940; Drucksachengruppe 202262</title>
-<updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#202262-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029911"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029562#beratung-2026-10-15-Beirat%20Kinder-%20und%20Jugendbeteiligung</id>
-<title>Beirat Kinder- und Jugendbeteiligung: „geändert beschlossen“ – 261805 Veröffentlichung der Vorhabenliste: 164702 - Aufstellung des vorhabenbezogenen Bebauungsplans „Gartenstraße“</title>
-<updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261805"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029562"/>
-<summary>Empfehlung am 2026-10-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029344#vorlage</id>
-<title>Neue Vorlage 261073-01 ST: Jahresabschluss 2025 der VEBOWAG</title>
-<updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261073-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029344"/>
-<summary>Stellungnahme der Verwaltung · federführend: Dezernat OB · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028615#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261299-01 ST Grüne/Volt-Antrag: Verbesserung der Aufenthaltsqualität in der Friedrich-Breuer-Straße zur Verbesserung der Geschäftssituation des Beueler Gewerbes - hier: Stellungnahme der Verwaltung</title>
-<updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261299-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028615"/>
-<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028612#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „ungeändert beschlossen“ – 261390 Stellungnahmen sowie Satzungsbeschluss zum Zwecke der Aufhebung des Bebauungsplans Nr. 8123-1 „Am Ennertbad“, Stadtbezirk Beuel, Ortsteil Pützchen/Bechlinghoven</title>
-<updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:puetzchen-bechlinghoven#261390"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028612"/>
-<summary>Empfehlung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028001#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 261183 Arbeitsprogramm landschaftsarchitektonischer Einzelprojekte im Amt für Umwelt und Stadtgrün, DH 2025/2026</title>
-<updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261183"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028001"/>
-<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029858#vorlage</id>
-<title>Neue Vorlage 261253-01 AA: FDP-Änderungsantrag: Strategische Entwicklung ausgewählter Leerstands- Liegenschaften des SGB zur Schaffung von Wohnraum Antrag zur Vorlage 261253</title>
-<updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261253-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029858"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028736#beratung-2026-10-13-Bezirksvertretung%20Bonn</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 231880-04 ST Vertagungsbitte zu BBB-Anfrage: Mountainbike-Konzept für die Bundesstadt Bonn Drucksachengruppe 231880</title>
-<updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#231880-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028736"/>
-<summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028522#beratung-2026-10-13-Bezirksvertretung%20Bonn</id>
-<title>Bezirksvertretung Bonn: „vertagt“ – 231880-03 BBB-Anfrage: Mountainbike-Konzept für die Bundesstadt Bonn Drucksachengruppe 231880</title>
-<updated>2026-10-13T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#231880-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028522"/>
-<summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029653#vorlage</id>
-<title>Neue Vorlage 261791-01 ST: CDU-Antrag: Erarbeitung eines modifizierten Raum- und Nutzungsprogramms für eine finanzierbare Sanierung der Stadthalle sowie Überprüfung des Denkmalstatus</title>
-<updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261791-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029653"/>
-<summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029502#vorlage</id>
-<title>Neue Vorlage 261778: Bebauungsplan Nr. 8215-44, „Siebengebirgsterrassen“, Deutschherrenstraße, Fuß- und Fahrradweg zur Saint-Cloud-Straße</title>
-<updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#261778"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029502"/>
-<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029384#vorlage</id>
-<title>Neue Vorlage 261715: Stellungnahmen sowie Satzungsbeschluss zum vorhabenbezogenen Bebauungsplan Nr. 6718-4 „Langwarthöfe“, Stadtbezirk Bonn, Ortsteil Dottendorf</title>
-<updated>2026-10-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:dottendorf#261715"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029384"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029818#vorlage</id>
-<title>Neue Vorlage 261875: Informationsbrief – Theaterplatz Bad Godesberg: Archäologische Sondierungen im Vorfeld von ISEK</title>
-<updated>2026-10-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261875"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029818"/>
-<summary>Informationsbrief · federführend: 01-1 OB-Büro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029698#vorlage</id>
-<title>Neue Vorlage 260677-02 ST: Ergänzende Information zu Linke-Bezirksfraktion-Antrag: Zusätzliche Sitzgelegenheiten für den Münsterplatz</title>
-<updated>2026-10-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#260677-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029698"/>
-<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
 </feed>

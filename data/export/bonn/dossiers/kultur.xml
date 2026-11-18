@@ -3,18 +3,34 @@
 <id>tag:allris-bonn,2026:feed/thema/kultur</id>
 <title>Ratsatlas Bonn – Kunst und Kultur</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Kunst und Kultur (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-16T00:00:00Z</updated>
+<updated>2026-11-17T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/kultur.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/kunst-und-kultur/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030230#vorlage</id>
+<title>Neue Vorlage 262068: Bericht über Zusammenarbeit zwischen Theater Bonn und dem Jungen Theater Bonn der Spielzeit 2025/26</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262068"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030230"/>
+<summary>Mitteilungsvorlage · federführend: 46 Theater der Bundesstadt Bonn · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030524#vorlage</id>
 <title>Neue Vorlage 261813-03: Änderung der Haushaltssperre</title>
 <updated>2026-11-16T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261813-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030524"/>
-<summary>Mitteilungsvorlage · federführend: 20 Stadtkämmerei · Stand: offen</summary>
+<summary>Mitteilungsvorlage · federführend: 20 Stadtkämmerei · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030524#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen - mit Protokollnotiz“ – 261813-03 Änderung der Haushaltssperre</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261813-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030524"/>
+<summary>Aktuelle Informationen der Verwaltung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030501#vorlage</id>
@@ -30,7 +46,23 @@
 <updated>2026-11-16T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261921-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030245"/>
-<summary>Stellungnahme der Verwaltung · federführend: Dezernat II · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: Dezernat II · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029933#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 261921 Bericht zur haushaltswirtschaftlichen Lage nach dem 3. Quartal 2026</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261921"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029933"/>
+<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028992#beratung-2026-11-16-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 260640-01 Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#260640-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028992"/>
+<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030311#vorlage</id>
@@ -86,7 +118,7 @@
 <updated>2026-11-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261724-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030348"/>
-<summary>Stellungnahme der Verwaltung · federführend: 42 Stadtbibliothek · Stand: in Beratung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 42 Stadtbibliothek · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030417#vorlage</id>
@@ -118,7 +150,7 @@
 <updated>2026-11-05T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261724"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029402"/>
-<summary>Empfehlung am 2026-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Empfehlung am 2026-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030247#vorlage</id>
@@ -174,7 +206,7 @@
 <updated>2026-10-19T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261921"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029933"/>
-<summary>Mitteilungsvorlage · federführend: Dezernat II · Stand: offen</summary>
+<summary>Mitteilungsvorlage · federführend: Dezernat II · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029876#vorlage</id>
@@ -326,7 +358,7 @@
 <updated>2026-10-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261724"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029402"/>
-<summary>Empfehlung am 2026-10-06; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Empfehlung am 2026-10-06; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029290#beratung-2026-10-06-Kulturausschuss</id>
@@ -342,7 +374,7 @@
 <updated>2026-10-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#260640-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028992"/>
-<summary>Kenntnisnahme am 2026-10-06; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Kenntnisnahme am 2026-10-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025312#beratung-2026-10-06-Kulturausschuss</id>
@@ -430,7 +462,7 @@
 <updated>2026-09-22T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261724"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029402"/>
-<summary>Beschlussvorlage · federführend: 42 Stadtbibliothek · Stand: in Beratung</summary>
+<summary>Beschlussvorlage · federführend: 42 Stadtbibliothek · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029512#vorlage</id>
@@ -775,37 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#260127-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026123"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025312#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „ohne Votum“ – 260127 Zukunft Bonner Bühnen - Grundsatzbeschluss: Bauliche Zukunft der Theaterliegenschaften</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-ost#260127"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025312"/>
-<summary>Anhörung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028992#vorlage</id>
-<title>Neue Vorlage 260640-01: Einrichtung eines wissenschaftlichen Beirates für Gedenkstätte und NS-Dokumentationszentrum</title>
-<updated>2026-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#260640-01"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028992"/>
-<summary>Mitteilungsvorlage · federführend: 41 Kulturamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028986#vorlage</id>
-<title>Neue Vorlage 261572: N-Vorlage zu DS 1912103 Bürgerantrag: Umbenennung der NS-belasteten Straßennamen</title>
-<updated>2026-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261572"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028986"/>
-<summary>Beschlussvorlage · federführend: 41 Kulturamt · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028957#vorlage</id>
-<title>Neue Vorlage 252954-02: Gewährung eines Zuschusses sowie Anmeldung für die Heimatförderung NRW - Aufstellung einer Bronzeskulptur zur Erinnerung an den „Stitze Maenn“</title>
-<updated>2026-08-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#252954-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028957"/>
-<summary>Mitteilungsvorlage · federführend: Bezirksverwaltungsstelle Beuel · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

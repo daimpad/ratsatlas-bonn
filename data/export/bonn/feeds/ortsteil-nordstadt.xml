@@ -3,26 +3,34 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-nordstadt</id>
 <title>Ratsatlas Bonn – Nordstadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Nordstadt</subtitle>
-<updated>2026-11-12T00:00:00Z</updated>
+<updated>2026-11-16T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-nordstadt.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029418#beratung-2026-11-16-Rat</id>
+<title>Rat: „ungeändert beschlossen“ – 252572-01 Sanierung des Hauptgebäudes des Sportparks Nord – Fortführung der Planungsleistungen bis einschließlich Leistungsphase 3 (Entwurfsplanung)</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#252572-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029418"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029403#beratung-2026-11-16-Rat</id>
+<title>Rat: „nicht abgestimmt“ – 261523-02 AA SPD-Fraktion: Öffnung der Bornheimer Straße für Kfz-Verkehr am Knoten Hochstadenring/Bornheimer Straße/ Guido-Westerwelle-Brücke Antrag zur Vorlage 261523</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261523-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029403"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029443#beratung-2026-11-12-Rat</id>
-<title>Rat: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260613-01 ST Stellungnahme GRÜNE-Antrag - Maßnahmen zur Sicherung von Gesundheit und Verkehrssicherheit auf den Ausweichrouten der Nordbrücke</title>
+<title>Rat: „zur Kenntnis genommen“ – 260613-01 ST Stellungnahme GRÜNE-Antrag - Maßnahmen zur Sicherung von Gesundheit und Verkehrssicherheit auf den Ausweichrouten der Nordbrücke</title>
 <updated>2026-11-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#260613-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029443"/>
 <summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029418#beratung-2026-11-12-Rat</id>
-<title>Rat: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 252572-01 Sanierung des Hauptgebäudes des Sportparks Nord – Fortführung der Planungsleistungen bis einschließlich Leistungsphase 3 (Entwurfsplanung)</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#252572-01"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029418"/>
-<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030316#vorlage</id>
@@ -142,7 +150,7 @@
 <updated>2026-10-07T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#252572-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029418"/>
-<summary>Empfehlung am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+<summary>Empfehlung am 2026-10-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029696#vorlage</id>
@@ -198,7 +206,7 @@
 <updated>2026-09-23T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#252572-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029418"/>
-<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: in Beratung</summary>
+<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029382#vorlage</id>
@@ -246,7 +254,15 @@
 <updated>2026-09-15T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261523-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029403"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029403#beratung-2026-09-15-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „abgelehnt“ – 261523-02 AA SPD-Fraktion: Öffnung der Bornheimer Straße für Kfz-Verkehr am Knoten Hochstadenring/Bornheimer Straße/ Guido-Westerwelle-Brücke Antrag zur Vorlage 261523</title>
+<updated>2026-09-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261523-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029403"/>
+<summary>Empfehlung am 2026-09-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028884#vorlage</id>
@@ -254,7 +270,7 @@
 <updated>2026-09-09T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261523"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028884"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028707#beratung-2026-09-09-Ausschuss%20f%C3%BCr%20Finanzen%2C%20Beteiligungen%20und%20Vergabe</id>
@@ -263,6 +279,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261433"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028707"/>
 <summary>Empfehlung am 2026-09-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028753#beratung-2026-09-08-Bezirksvertretung%20Bonn</id>
+<title>Bezirksvertretung Bonn: „vertagt - mit Maßgabe“ – 261454 Bürgerantrag: Sicherstellung und Optimierung öffentlicher Nutzungen für alle Altersgruppen auf dem Frankenbadplatz, insbesondere während kommerzieller Veranstaltungen im Sommer</title>
+<updated>2026-09-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261454"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028753"/>
+<summary>Entscheidung am 2026-09-08; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029117#vorlage</id>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261149"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027947"/>
 <summary>Beschlussvorlage · federführend: 40 Schulamt · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026898#vorlage</id>
-<title>Neue Vorlage 260110-01 ST: Stellungnahme zum Bürgerantrag: Antrag auf Anpassung der geltenden Regeln in der Parkraumbewirtschaftungszone Nordstadt</title>
-<updated>2026-06-08T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#260110-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026898"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027892#vorlage</id>
-<title>Neue Vorlage 253158-01 AA: Volt-Änderungsantrag zu N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte "Ausbau der A565" und "Universitäts-Campus-Endenich" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a. Antrag zur Vorlage 253158</title>
-<updated>2026-06-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#253158-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027892"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027836#vorlage</id>
-<title>Neue Vorlage 261090: SPD-Bezirksfraktion-Große Anfrage: Instandsetzung des Basketballfelds am Frankenbadplatz</title>
-<updated>2026-06-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261090"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027836"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

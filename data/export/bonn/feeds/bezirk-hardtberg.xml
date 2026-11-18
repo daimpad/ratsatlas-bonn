@@ -9,6 +9,14 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030011#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
+<title>Bezirksvertretung Hardtberg: „vertagt“ – 230255-05 Grüne Große Anfrage: Umsetzung des Schwammstadtkonzepts im Stadtbezirk Hardtberg</title>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#230255-05"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030011"/>
+<summary>Kenntnisnahme am 2026-11-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029840#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
 <title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 261881 ISEK Hardtberg: Auswahl eines Lupenraums zur Erarbeitung eines Lupenraum-ISEK</title>
 <updated>2026-11-10T00:00:00Z</updated>
@@ -798,14 +806,6 @@
 <updated>2025-12-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253641-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024264"/>
-<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024252#beratung-2025-12-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253642-02 Hochwasser- und Starkregenschutz im Stadtbezirk Hardtberg; hier: Nachfragen zur Eigenvorsorge</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253642-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024252"/>
 <summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

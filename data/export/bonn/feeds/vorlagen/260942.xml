@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/260942</id>
 <title>Vorlage 260942: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplans Nr. 6422-2 „Innovationsdreieck“, Stadtbezirk Bonn, Ortsteil Weststadt</title>
 <subtitle>Verlauf der Vorlage 260942: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-11-03T00:00:00Z</updated>
+<updated>2026-11-16T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/260942.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#260942"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027473#beratung-2026-11-16-Rat</id>
+<title>Rat: „geändert beschlossen“ – 260942 Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplans Nr. 6422-2 „Innovationsdreieck“, Stadtbezirk Bonn, Ortsteil Weststadt</title>
+<updated>2026-11-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#260942"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027473"/>
+<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027473#folge-260942-03%20ST</id>
 <title>Stellungnahme der Verwaltung 260942-03 ST: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplans Nr. 6422-2 „Innovationsdreieck“, Stadtbezirk Bonn, Ortsteil Weststadt</title>
@@ -15,6 +23,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#260942"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027473"/>
 <summary>Folgevorlage zu 260942</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027473#beratung-2026-09-29-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „geändert beschlossen“ – 260942 Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplans Nr. 6422-2 „Innovationsdreieck“, Stadtbezirk Bonn, Ortsteil Weststadt</title>
+<updated>2026-09-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#260942"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027473"/>
+<summary>Empfehlung am 2026-09-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027473#folge-260942-02%20ST</id>
@@ -33,19 +49,11 @@
 <summary>Folgevorlage zu 260942</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027473#beratung-2026-07-14-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „geändert beschlossen“ – 260942 Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplans Nr. 6422-2 „Innovationsdreieck“, Stadtbezirk Bonn, Ortsteil Weststadt</title>
-<updated>2026-07-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#260942"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027473"/>
-<summary>Empfehlung am 2026-07-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027473#vorlage</id>
 <title>Neue Vorlage 260942: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplans Nr. 6422-2 „Innovationsdreieck“, Stadtbezirk Bonn, Ortsteil Weststadt</title>
 <updated>2026-06-24T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:weststadt#260942"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027473"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
 </entry>
 </feed>

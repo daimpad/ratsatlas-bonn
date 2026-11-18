@@ -3697,7 +3697,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 210451	nur in Anlagen genannt, nicht verortet						
 210453	kein Ort						
 210454	kein Ort						
-210457	kein Ort						
 210459	verortet	Hauptteil	volltext_strasse	Am Hauptbahnhof	Bonn-Zentrum	mittel	2
 210459	verortet	Hauptteil	volltext_strasse	Am Hof	Bonn-Zentrum	niedrig	1
 210459	verortet	Hauptteil	volltext_strasse	Kaiserplatz	Bonn-Zentrum	niedrig	1
@@ -8957,6 +8956,10 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 230969	kein Ort						
 230970	nur in Anlagen genannt, nicht verortet						
 230970-01	nur in Anlagen genannt, nicht verortet						
+230971	verortet	Hauptteil	volltext_strasse	Am Hof	Bonn-Zentrum	mittel	3
+230971	verortet	Hauptteil	volltext_strasse	Rathausgasse	Bonn-Zentrum	mittel	3
+230971	verortet	Hauptteil	volltext_strasse	Wesselstraße	Bonn-Zentrum	mittel	2
+230971	verortet	Hauptteil	volltext_strasse+hausnummer	Regina-Pacis-Weg	Bonn-Zentrum	mittel	1
 230972	kein Ort						
 230974	Titel ohne gemeinsamen Ort, nicht verortet						
 230976	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -10240,7 +10243,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 232211-08	kein Ort						
 232211-09 ST	kein Ort						
 232212	kein Ort						
-232212-01 ST	kein Ort						
 232214	Titel ohne gemeinsamen Ort, nicht verortet						
 232218	kein Ort						
 232219	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -12551,7 +12553,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
 241998	kein Ort						
-241998-01 ST	kein Ort						
 242006	Titel ohne gemeinsamen Ort, nicht verortet						
 242009	Titel ohne gemeinsamen Ort, nicht verortet						
 242011	nur in Anlagen genannt, nicht verortet						
@@ -12632,8 +12633,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242128	Titel ohne gemeinsamen Ort, nicht verortet						
 242129	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 242130	kein Ort						
-242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Ippendorf	Ippendorf	niedrig	1
-242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
 242131	kein Ort						
 242132	kein Ort						
 242133	kein Ort						
@@ -13121,7 +13120,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Samansstraße	Küdinghoven	mittel	7
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Vinzenzstraße	Pützchen/Bechlinghoven	mittel	1
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Wehrhausweg	Küdinghoven	mittel	11
-252646	kein Ort						
 252646-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252647	Titel ohne gemeinsamen Ort, nicht verortet						
 252648	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -14129,6 +14127,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253653	Titel ohne gemeinsamen Ort, nicht verortet						
 253654	verortet	Hauptteil	volltext_ortsteil_adjektiv	Duisdorf	Duisdorf	mittel	1
 253654-02	verortet	Hauptteil	volltext_ortsteil_adjektiv	Duisdorf	Duisdorf	mittel	1
+253654-03	verortet	Hauptteil	volltext_ortsteil_adjektiv	Duisdorf	Duisdorf	mittel	1
 253655	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
 253655	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
 253655-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
@@ -15619,6 +15618,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260953	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	1
 260953	verortet	Hauptteil	volltext_ortsteil_name	Graurheindorf	Graurheindorf	mittel	1
 260957	kein Ort						
+260957-01 ST	kein Ort						
 260959	kein Ort						
 260961	nur in Anlagen genannt, nicht verortet						
 260961-01 AA	kein Ort						
@@ -15949,6 +15949,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261220-06 AA	verortet	Hauptteil	volltext_strasse	Prinz-Albert-Straße	Südstadt	niedrig	1
 261220-07 AA	kein Ort						
 261220-08 AA	kein Ort						
+261220-09 AA	kein Ort						
 261221	kein Ort						
 261221-02 ST	kein Ort						
 261222	kein Ort						
@@ -16519,6 +16520,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261808-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 261809	kein Ort						
 261809-01 ST	kein Ort						
+261809-02 ST	kein Ort						
 261810	kein Ort						
 261810-01 ST	kein Ort						
 261811	kein Ort						
@@ -16616,6 +16618,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261910	verortet	Hauptteil	volltext_strasse+kreuzung	Windeckstraße	Bonn-Zentrum	mittel	1
 261914	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	mittel	1
 261921	kein Ort						
+261921-01 ST	kein Ort						
 261923	kein Ort						
 261923-01 ST	kein Ort						
 261929	kein Ort						
@@ -16663,6 +16666,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261984	Titel ohne gemeinsamen Ort, nicht verortet						
 261988	kein Ort						
 261990	kein Ort						
+261990-01 ST	kein Ort						
 261991	kein Ort						
 261991-01 ST	kein Ort						
 261991-02 AA	kein Ort						
@@ -16695,6 +16699,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262012-01 ST	kein Ort						
 262013	kein Ort						
 262014	kein Ort						
+262014-01 ST	kein Ort						
 262017	kein Ort						
 262020	kein Ort						
 262026	kein Ort						
@@ -16766,6 +16771,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262136	Titel ohne gemeinsamen Ort, nicht verortet						
 262138	kein Ort						
 262139	kein Ort						
+262140	verortet	Hauptteil	volltext_strasse	Friedrichstraße	Bonn-Zentrum	niedrig	1
 262143	Titel ohne gemeinsamen Ort, nicht verortet						
 262154	kein Ort						
 262156	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16786,9 +16792,15 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262174	verortet	Hauptteil	volltext_strasse+kreuzung	Rodeweg	Holzlar	mittel	1
 262179	kein Ort						
 262181	nur in Anlagen genannt, nicht verortet						
+262185	kein Ort						
 262186	Liste (8 Ortsteile), nicht verortet	Hauptteil					
 262187	kein Ort						
 262190	Titel ohne gemeinsamen Ort, nicht verortet						
 262192	Titel ohne gemeinsamen Ort, nicht verortet						
+262194	Titel ohne gemeinsamen Ort, nicht verortet						
 262195	Titel ohne gemeinsamen Ort, nicht verortet						
 262200	kein Ort						
+262202	kein Ort						
+262211	Titel ohne gemeinsamen Ort, nicht verortet						
+262212	Titel ohne gemeinsamen Ort, nicht verortet						
+262219	verortet	Hauptteil	volltext_strasse	Moltkestraße	Alt-Godesberg	mittel	3
