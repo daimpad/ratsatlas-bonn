@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/thema/soziales</id>
 <title>Ratsatlas Bonn – Soziales, Gesundheit und Integration</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Soziales, Gesundheit und Integration (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-17T00:00:00Z</updated>
+<updated>2026-11-18T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/soziales.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/soziales-gesundheit-und-integration/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030532#vorlage</id>
+<title>Neue Vorlage 262203: Landesprogramm „Kommunales Integrationsmanagement“ (KIM NRW): Zuschuss zum Eigenanteil der Träger des KIM-Case Managements für die Jahre 2027 und 2028</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262203"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030532"/>
+<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030353#vorlage</id>
+<title>Neue Vorlage 262132: Tätigkeitsbericht Integration im Leistungsbereich nach dem Asylbewerberleistungsgesetz (AsylbLG)</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262132"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030353"/>
+<summary>Mitteilungsvorlage · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030566#vorlage</id>
 <title>Neue Vorlage 262219: Große Anfrage der Grünen Ratsfraktion: Notschlafplätze für Frauen – Zuweisungsverfahren und Unterbringung besonders vulnerabler wohnungsloser Menschen</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#200645-09%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029391"/>
 <summary>Kenntnisnahme am 2026-09-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029600#vorlage</id>
-<title>Neue Vorlage 253158-03 AA: Volt-Änderungsantrag zur N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte "Ausbau der A565" und "Universitäts-Campus-Endenich" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a. Antrag zur Vorlage 253158</title>
-<updated>2026-09-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#253158-03%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029600"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029600#beratung-2026-09-24-Rat</id>
-<title>Rat: „abgelehnt“ – 253158-03 AA Volt-Änderungsantrag zur N-Vorlage zum Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte "Ausbau der A565" und "Universitäts-Campus-Endenich" auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u. a. Antrag zur Vorlage 253158</title>
-<updated>2026-09-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#253158-03%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029600"/>
-<summary>Entscheidung am 2026-09-24; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

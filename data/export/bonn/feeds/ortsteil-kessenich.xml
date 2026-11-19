@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-kessenich</id>
 <title>Ratsatlas Bonn – Kessenich</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Kessenich</subtitle>
-<updated>2026-11-16T00:00:00Z</updated>
+<updated>2026-11-19T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-kessenich.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030424#vorlage</id>
+<title>Neue Vorlage 261644-02 ST: Vertagungsbitte zum Bürgerantrag: Prüfung der Freihaltung des Straßenbahngleisbereichs zwischen Reuterstraße und Quirinusplatz</title>
+<updated>2026-11-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#261644-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030424"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030352#vorlage</id>
+<title>Neue Vorlage 262061-01 ST: CDU-Bezirksfraktion-Antrag: Parksituation im Bereich der „Flußstraßen“ in Bonn-Kessenich</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#262061-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030352"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030517#vorlage</id>
 <title>Neue Vorlage 262199: Bürgerantrag: Maßnahmen zum Schutz der Anwohnerinnen und Anwohner der Reuterstraße vor erhöhten Feinstaub- und Stickstoffdioxid-Belastungen (NO2)</title>
@@ -111,6 +127,22 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#261327-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028815"/>
 <summary>Kenntnisnahme am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028519#beratung-2026-10-13-Bezirksvertretung%20Bonn</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 261349 Bürgerantrag: Einrichtung eines Fußgängerüberwegs (Zebrastreifen) im Kreuzungsbereich Franz-Lohe-Straße/ August-Bier-Straße</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#261349"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028519"/>
+<summary>Entscheidung am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028441#beratung-2026-10-13-Bezirksvertretung%20Bonn</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 261327 Grüne-Bezirksfraktion-Antrag  zur Beschilderung der Graf-Stauffenberg-Straße zwischen der Einmündung Heinrich-Lützeler-Straße und der Einmündung Im Wingert mit dem Schild Zeichen 277.1 (Verbot des Überholens von einspurigen Fahrzeugen für mehrspurige Kraftfahrzeuge) sowie Markierung der Fahrstreifenbegrenzung mit dem Zeichen 295 (durchgezogene Linie)</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#261327"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028441"/>
+<summary>Entscheidung am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029774#vorlage</id>
@@ -775,37 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#260128"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025316"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025131#beratung-2026-01-20-Bezirksvertretung%20Bonn</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 254025-03 ST ÄA BÜNDNIS 90/DIE GRÜNEN zu DS 254025 Sportanlage Wasserland, Umwandlung Kleinspielfeld, Ertüchtigung Basketballanlage, Fällung von fünf satzungsgeschützten Laubbäumen Antrag zur Vorlage 254025</title>
-<updated>2026-01-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#254025-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025131"/>
-<summary>Kenntnisnahme am 2026-01-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025000#beratung-2026-01-20-Bezirksvertretung%20Bonn</id>
-<title>Bezirksvertretung Bonn: „zurückgezogen“ – 254025-01 AA ÄA BÜNDNIS 90/DIE GRÜNEN zu DS 254025 Sportanlage Wasserland, Umwandlung Kleinspielfeld, Ertüchtigung Basketballanlage, Fällung von fünf satzungsgeschützten Laubbäumen Antrag zur Vorlage 254025</title>
-<updated>2026-01-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#254025-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025000"/>
-<summary>Entscheidung am 2026-01-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024800#beratung-2026-01-20-Bezirksvertretung%20Bonn</id>
-<title>Bezirksvertretung Bonn: „ungeändert beschlossen“ – 254025 Sportanlage Wasserland, Umwandlung Kleinspielfeld, Ertüchtigung Basketballanlage, Fällung von fünf satzungsgeschützten Laubbäumen</title>
-<updated>2026-01-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#254025"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024800"/>
-<summary>Entscheidung am 2026-01-20; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024740#beratung-2026-01-20-Bezirksvertretung%20Bonn</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 240536-02 Tempo 30 im Bereich Kessenicher Straße/Im Bachele</title>
-<updated>2026-01-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#240536-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024740"/>
-<summary>Kenntnisnahme am 2026-01-20; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

@@ -3697,6 +3697,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 210451	nur in Anlagen genannt, nicht verortet						
 210453	kein Ort						
 210454	kein Ort						
+210457	kein Ort						
 210459	verortet	Hauptteil	volltext_strasse	Am Hauptbahnhof	Bonn-Zentrum	mittel	2
 210459	verortet	Hauptteil	volltext_strasse	Am Hof	Bonn-Zentrum	niedrig	1
 210459	verortet	Hauptteil	volltext_strasse	Kaiserplatz	Bonn-Zentrum	niedrig	1
@@ -10243,6 +10244,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 232211-08	kein Ort						
 232211-09 ST	kein Ort						
 232212	kein Ort						
+232212-01 ST	kein Ort						
 232214	Titel ohne gemeinsamen Ort, nicht verortet						
 232218	kein Ort						
 232219	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -12553,6 +12555,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
 241998	kein Ort						
+241998-01 ST	kein Ort						
 242006	Titel ohne gemeinsamen Ort, nicht verortet						
 242009	Titel ohne gemeinsamen Ort, nicht verortet						
 242011	nur in Anlagen genannt, nicht verortet						
@@ -12633,6 +12636,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242128	Titel ohne gemeinsamen Ort, nicht verortet						
 242129	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 242130	kein Ort						
+242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Ippendorf	Ippendorf	niedrig	1
+242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
 242131	kein Ort						
 242132	kein Ort						
 242133	kein Ort						
@@ -13120,6 +13125,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Samansstraße	Küdinghoven	mittel	7
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Vinzenzstraße	Pützchen/Bechlinghoven	mittel	1
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Wehrhausweg	Küdinghoven	mittel	11
+252646	kein Ort						
 252646-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252647	Titel ohne gemeinsamen Ort, nicht verortet						
 252648	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -16230,6 +16236,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261514	kein Ort						
 261514-01 AA	kein Ort						
 261514-02 ST	kein Ort						
+261514-03	kein Ort						
 261515	verortet	Hauptteil	volltext_strasse	Windeckstraße	Bonn-Zentrum	mittel	2
 261515	verortet	Hauptteil	volltext_strasse+hausnummer	Poststraße	Bonn-Zentrum	mittel	2
 261516	kein Ort						
@@ -16596,6 +16603,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261892-01 ST	kein Ort						
 261893	kein Ort						
 261895	kein Ort						
+261895-01 ST	kein Ort						
 261896	kein Ort						
 261897	kein Ort						
 261897-01 ST	kein Ort						
@@ -16701,6 +16709,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262014	kein Ort						
 262014-01 ST	kein Ort						
 262017	kein Ort						
+262017-01 ST	kein Ort						
 262020	kein Ort						
 262026	kein Ort						
 262030	nur in Anlagen genannt, nicht verortet						
@@ -16727,6 +16736,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262075	verortet	Hauptteil	volltext_strasse+ortsteil	Reichsstraße	Lengsdorf	mittel	2
 262075	verortet	Hauptteil	volltext_strasse+ortsteil	Reichsstraße	Röttgen	mittel	2
 262079	kein Ort						
+262079-01 ST	kein Ort						
 262080	kein Ort						
 262081	nur in Anlagen genannt, nicht verortet						
 262082	Liste (7 Ortsteile), nicht verortet	Hauptteil					
@@ -16783,6 +16793,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262167	kein Ort						
 262168	Titel ohne gemeinsamen Ort, nicht verortet						
 262169	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
+262169-01 DA	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 262171	verortet	Hauptteil	volltext_strasse	Combahnstraße	Beuel-Mitte	mittel	2
 262171	verortet	Hauptteil	volltext_strasse	Hauptstraße	Holzlar	mittel	1
 262171	verortet	Hauptteil	volltext_strasse	Professor-Neu-Allee	Beuel-Mitte	mittel	6
@@ -16797,10 +16808,18 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262187	kein Ort						
 262190	Titel ohne gemeinsamen Ort, nicht verortet						
 262192	Titel ohne gemeinsamen Ort, nicht verortet						
+262193	nur in Anlagen genannt, nicht verortet						
 262194	Titel ohne gemeinsamen Ort, nicht verortet						
 262195	Titel ohne gemeinsamen Ort, nicht verortet						
 262200	kein Ort						
 262202	kein Ort						
+262203	kein Ort						
+262204	kein Ort						
 262211	Titel ohne gemeinsamen Ort, nicht verortet						
 262212	Titel ohne gemeinsamen Ort, nicht verortet						
 262219	verortet	Hauptteil	volltext_strasse	Moltkestraße	Alt-Godesberg	mittel	3
+262220	kein Ort						
+262221	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Holtorf	niedrig	1
+262221	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1
+262222	Titel ohne gemeinsamen Ort, nicht verortet						
+262227	Titel ohne gemeinsamen Ort, nicht verortet						

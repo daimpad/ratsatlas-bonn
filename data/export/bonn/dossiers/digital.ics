@@ -112,18 +112,24 @@ UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005612
 DTSTAMP:20261202T160000Z
 DTSTART:20261202T160000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
-DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
- nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung: http
+ s://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005612\nEinladung: ht
+ tps://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3269696&OTY
+ P=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005612
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005647
 DTSTAMP:20261202T160000Z
 DTSTART:20261202T160000Z
 SUMMARY:Bezirksvertretung Beuel
-DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
- röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung: https://www.
+ bonn.sitzung-online.de/public/TO010?SILFDNR=2005647\nEinladung: https://ww
+ w.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3269673&OTYP=41\nQu
+ elle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005647
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005588

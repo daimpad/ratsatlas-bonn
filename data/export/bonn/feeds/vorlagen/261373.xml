@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/261373</id>
 <title>Vorlage 261373: Bürgerantrag: Antrag auf Einrichtung eines Calisthenics-Parks in Lessenich</title>
 <subtitle>Verlauf der Vorlage 261373: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-09-22T00:00:00Z</updated>
+<updated>2026-10-13T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/261373.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lessenich-messdorf#261373"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028576#beratung-2026-10-13-Bezirksvertretung%20Bonn</id>
+<title>Bezirksvertretung Bonn: „geändert beschlossen“ – 261373 Bürgerantrag: Antrag auf Einrichtung eines Calisthenics-Parks in Lessenich</title>
+<updated>2026-10-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lessenich-messdorf#261373"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028576"/>
+<summary>Entscheidung am 2026-10-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028576#folge-261373-01%20ST</id>
 <title>Stellungnahme der Verwaltung 261373-01 ST: Bürgerantrag: Antrag auf Einrichtung eines Calisthenics-Parks in Lessenich</title>

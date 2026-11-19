@@ -3,11 +3,155 @@
 <id>tag:allris-bonn,2026:feed/ohne-2026</id>
 <title>Ratsatlas Bonn – stadtweit / ohne Ortsbezug 2026</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2026</subtitle>
-<updated>2026-11-17T00:00:00Z</updated>
+<updated>2026-11-19T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ohne-2026.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030559#vorlage</id>
+<title>Neue Vorlage 262167-01 ST: CDU-SPD-FDP-Antrag: Evaluierung, Transparenz und zeitgemäße Weiterentwicklung des Netzwerks -Bonn-Botschafter</title>
+<updated>2026-11-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262167-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030559"/>
+<summary>Stellungnahme der Verwaltung · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030500#vorlage</id>
+<title>Neue Vorlage 262064-01 ST: Aktuelle Projekte im Städtischen Gebäudemanagement - Korrektur der Anlage</title>
+<updated>2026-11-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262064-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030500"/>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030594#vorlage</id>
+<title>Neue Vorlage 262227: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262227"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030594"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030588#vorlage</id>
+<title>Neue Vorlage 262222: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262222"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030588"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030573#vorlage</id>
+<title>Neue Vorlage 262220: Sitzungstermine des Betriebsausschusses im Jahr 2027</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262220"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030573"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030534#vorlage</id>
+<title>Neue Vorlage 262204: Eintragung von Toily Kurbanov (UNV) in das Goldene Buch der Stadt Bonn</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262204"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030534"/>
+<summary>Beschlussvorlage · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030532#vorlage</id>
+<title>Neue Vorlage 262203: Landesprogramm „Kommunales Integrationsmanagement“ (KIM NRW): Zuschuss zum Eigenanteil der Träger des KIM-Case Managements für die Jahre 2027 und 2028</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262203"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030532"/>
+<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030519#vorlage</id>
+<title>Neue Vorlage 262017-01 ST: Zentralisierung der IT in der Bonner Stadtverwaltung</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262017-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030519"/>
+<summary>Stellungnahme der Verwaltung · federführend: 10 Personal- und Organisationsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030511#vorlage</id>
+<title>Neue Vorlage 261514-03: Änderung der „Richtlinien zur Förderung der Jugendarbeit – Maßnahmen, Beschaffungen und Investitionen“</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261514-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030511"/>
+<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030498#vorlage</id>
+<title>Neue Vorlage 261895-01 ST: CDU/SPD/FDP-Antrag: BFD bei Feuerwehr Bonn</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261895-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030498"/>
+<summary>Stellungnahme der Verwaltung · federführend: 37 Feuerwehr und Rettungsdienst · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030479#vorlage</id>
+<title>Neue Vorlage 262079-01 ST: Große Anfrage GRÜNE-Fraktion - Nordbrückensperrung - Umleitungsstrecken in Bonn</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262079-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030479"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030460#vorlage</id>
+<title>Neue Vorlage 261840-02 ST: 11. Satzung zur Änderung der Satzung über die Erhebung von Kostenersatz für Leistungen der Feuerwehr der Bundesstadt Bonn</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261840-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030460"/>
+<summary>Stellungnahme der Verwaltung · federführend: 37 Feuerwehr und Rettungsdienst · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030359#vorlage</id>
+<title>Neue Vorlage 262134: Wiederwahl der Schiedsperson für den Teilschiedsamtsbezirk 4</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262134"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030359"/>
+<summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030353#vorlage</id>
+<title>Neue Vorlage 262132: Tätigkeitsbericht Integration im Leistungsbereich nach dem Asylbewerberleistungsgesetz (AsylbLG)</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262132"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030353"/>
+<summary>Mitteilungsvorlage · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030272#vorlage</id>
+<title>Neue Vorlage 262089: Rückblick auf die Veranstaltungen auf dem Frankenbadvorplatz 2026</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262089"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030272"/>
+<summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030231#vorlage</id>
+<title>Neue Vorlage 261092-05 ST: Stellungnahme des Naturschutzbeirats zur Beschlussvorlage "Neufassung der Baumschutzsatzung (BSchS)" DS 261092</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261092-05%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030231"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030151#vorlage</id>
+<title>Neue Vorlage 260504-10 ST: Stellungnahme der Verwaltung zu: BSW/SBI – Große Anfrage (II) zu DS 260504 und zu Maßstäben der Vergütung von Spitzenpositionen in kommunalen Unternehmen</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260504-10%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030151"/>
+<summary>Stellungnahme der Verwaltung · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030086#vorlage</id>
+<title>Neue Vorlage 262005: Öffentlich geförderter Glasfaserausbau – Nachträgliche Genehmigung der Antragstellung nach der Bundesrichtlinie „Gigabit RL-2.0“ (Dunkelgraue Flecken) und Bereitstellung der Eigenanteile im kommenden Doppelhaushalt</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262005"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030086"/>
+<summary>Beschlussvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030543#vorlage</id>
 <title>Neue Vorlage 262212: Tagesordnungspunkte in nichtöffentlicher Sitzung Beirat Kinder- und Jugendbeteiligung 27.11.2026</title>
@@ -103,6 +247,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262068"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030230"/>
 <summary>Mitteilungsvorlage · federführend: 46 Theater der Bundesstadt Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029462#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „zur Kenntnis genommen“ – 260809-03 ST Ergänzende Stellungnahme zu: Verfahrensbeschleunigung in der Bauleitplanung - "Planungsturbo" durch Politik und Verwaltung</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260809-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029462"/>
+<summary>Kenntnisnahme am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030524#vorlage</id>
@@ -655,157 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262131-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030407"/>
 <summary>Stellungnahme der Verwaltung · federführend: 41 Kulturamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030402#vorlage</id>
-<title>Neue Vorlage 262156: Tagesordnungspunkte der nicht öffentlichen Sitzung</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262156"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030402"/>
-<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: II-1 Stabsstelle Konferenzzentrum/Beethovenhalle · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030395#beratung-2026-11-12-Rat</id>
-<title>Rat: „nicht abgestimmt“ – 261865-02 AA Grüner Änderungsantrag: Entwicklung einer kommunalen Strategie „Moderne Seniorenpolitik“ in der Bundesstadt Bonn; Zukunft braucht Erfahrung – Moderne Seniorenpolitik als Querschnittsaufgabe</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261865-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030395"/>
-<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030301#beratung-2026-11-12-Rat</id>
-<title>Rat: „vertagt“ – 211958-08 AA Volt-Änderungsantrag zu BBB-Antrag: Regulierung des E-Scooter Verkehrs in Bonn Antrag zur Vorlage 211958-07</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#211958-08%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030301"/>
-<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030219#beratung-2026-11-12-Rat</id>
-<title>Rat: „zur Kenntnis genommen“ – 261991-01 ST Antrag von BSW/SBI: Bonn für das Völkerrecht – Solidarität mit dem Internationalen Strafgerichtshof (IStGH)</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261991-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030219"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030216#beratung-2026-11-12-Rat</id>
-<title>Rat: „zur Kenntnis genommen“ – 261865-01 ST Entwicklung einer kommunalen Strategie „Moderne Seniorenpolitik“ in der Bundesstadt Bonn Zukunft braucht Erfahrung – Moderne Seniorenpolitik als Querschnittsaufgabe</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261865-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030216"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030184#vorlage</id>
-<title>Neue Vorlage 261994-01 ST: Antrag- Grüne: Weiterentwicklung der Task Force Nordbrücke zum Bonner Mobilitätsrat</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261994-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030184"/>
-<summary>Stellungnahme der Verwaltung · federführend: Dezernat III · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030184#beratung-2026-11-12-Rat</id>
-<title>Rat: „zur Kenntnis genommen“ – 261994-01 ST Antrag- Grüne: Weiterentwicklung der Task Force Nordbrücke zum Bonner Mobilitätsrat</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261994-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030184"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030177#beratung-2026-11-12-Rat</id>
-<title>Rat: „vertagt“ – 261416-03 ST Vertagungsbitte zur BBB-Anfrage „Stilllegung von 60 Stadtbahnen"</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261416-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030177"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030082#beratung-2026-11-12-Rat</id>
-<title>Rat: „vertagt - mit Protokollnotiz“ – 261416-02 BBB-Anfrage „Stilllegung von 60 Stadtbahnen"</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261416-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030082"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030063#vorlage</id>
-<title>Neue Vorlage 261991: Antrag von BSW/SBI: Bonn für das Völkerrecht – Solidarität mit dem Internationalen Strafgerichtshof (IStGH)</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261991"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030063"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030059#beratung-2026-11-12-Rat</id>
-<title>Rat: „vertagt“ – 261988 BBB-Anfrage "Erkenntnisse, Gefahrenabwehrmaßnahmen und behördliche Zusammenarbeit im Vorfeld und Umfeld der Amokfahrt vom 3. Dezember 2025 in der Bonner Innenstadt"</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261988"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030059"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030047#beratung-2026-11-12-Rat</id>
-<title>Rat: „vertagt“ – 261982 BBB-Anfrage: Einsparmöglichkeiten im Betrieb der Oper und des Theaters; hier Beratung durch Dritte</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261982"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030047"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029986#vorlage</id>
-<title>Neue Vorlage 261943: Sitzungstermine des Beirats Kinder- und Jugendbeteiligung im Jahr 2027</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261943"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029986"/>
-<summary>Mitteilungsvorlage · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029954#beratung-2026-11-12-Rat</id>
-<title>Rat: „vertagt“ – 261931 BBB-Fraktion-Große Anfrage: Haushalt; Sachstand finanzwirksame Leistungen an umliegende Gebietskörperschaften bzw. deren Einwohner</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261931"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029954"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029760#beratung-2026-11-12-Rat</id>
-<title>Rat: „geändert beschlossen“ – 261865 Entwicklung einer kommunalen Strategie „Moderne Seniorenpolitik“ in der Bundesstadt Bonn Zukunft braucht Erfahrung – Moderne Seniorenpolitik als Querschnittsaufgabe</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261865"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029760"/>
-<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029705#beratung-2026-11-12-Rat</id>
-<title>Rat: „geändert beschlossen“ – 261849 Bürgerbegehren „Melbbad möglichst schnell wiedereröffnen“</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261849"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029705"/>
-<summary>Entscheidung am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029612#beratung-2026-11-12-Rat</id>
-<title>Rat: „vertagt“ – 260504-09 ST Weitere Stellungnahme zu der Großen Anfrage I zur Vorlage "Eckpunkte von Geschäftsführerverträgen städtischer Beteiligungen"</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260504-09%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029612"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029546#beratung-2026-11-12-Rat</id>
-<title>Rat: „vertagt“ – 260504-03 BSW/SBI – Große Anfrage (II) zu DS 260504 und zu Maßstäben der Vergütung von Spitzenpositionen in kommunalen Unternehmen</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260504-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029546"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029545#beratung-2026-11-12-Rat</id>
-<title>Rat: „vertagt“ – 260504-02 BSW/SBI – Große Anfrage (I) zu DS 260504 und zur demokratischen Steuerung und Kontrolle der Eckpunkte für Geschäftsführer- und Vorstandsverträge städtischer Beteiligungen</title>
-<updated>2026-11-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260504-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029545"/>
-<summary>Kenntnisnahme am 2026-11-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/253164</id>
 <title>Vorlage 253164: Bürgerantrag: Einrichtung einer Einbahnstraße im Bereich Heilsbachstraße zwischen René-Schickele-Straße und Derlestraße</title>
 <subtitle>Verlauf der Vorlage 253164: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-10-20T00:00:00Z</updated>
+<updated>2026-11-19T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/253164.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#253164"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2022899#folge-253164-04%20ST</id>
+<title>Stellungnahme der Verwaltung 253164-04 ST: Grüne Große Anfrage: Aktueller Sachstand zur Erstellung eines Schulwegplans für die Derletalschule</title>
+<updated>2026-11-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#253164"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022899"/>
+<summary>Folgevorlage zu 253164</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022899#folge-253164-03</id>
 <title>Große Anfrage 253164-03: Grüne Große Anfrage: Aktueller Sachstand zur Erstellung eines Schulwegplans für die Derletalschule</title>

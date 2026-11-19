@@ -3,11 +3,51 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-lengsdorf</id>
 <title>Ratsatlas Bonn – Lengsdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Lengsdorf</subtitle>
-<updated>2026-11-16T00:00:00Z</updated>
+<updated>2026-11-18T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-lengsdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030564#vorlage</id>
+<title>Neue Vorlage 262218: CDU/SPD-Große Anfrage: Sachstand Umbaumaßnahmen Freiwillige Feuerwehr Lengsdorf</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#262218"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030564"/>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030561#vorlage</id>
+<title>Neue Vorlage 262216: CDU/SPD-Antrag: Verkehrssicherheit vor der Freiwilligen Feuerwehr Lengsdorf</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#262216"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030561"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030536#vorlage</id>
+<title>Neue Vorlage 262206: Grüne-Antrag: Sanierung der Treppe zwischen Lengsdorfer Hauptstraße und Provinzialstraße</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#262206"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030536"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030164#vorlage</id>
+<title>Neue Vorlage 262039: Gewährung eines Mietzuschusses sowie eines Zuschusses zu den Betriebskosten an den Heimatverein Lengsdorf</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#262039"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030164"/>
+<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029610#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 261819 Grundstück in Bonn, Im Ellig [Hausnummer ausgelassen] - Nutzungsänderung der Grenzgarage (und Abstellraum) als Wohnung Az.: 10501/2026</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261819"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029610"/>
+<summary>Anhörung am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030265#vorlage</id>
 <title>Neue Vorlage 261976-01 ST: CDU/SPD-Antrag: Parksituation für Mitarbeitende des Bundesamts für Bevölkerungsschutz und Katastrophenhilfe (BKK) sowie der Bundesanstalt Technisches Hilfswerk (THW) in 53127 Bonn - Lengsdorf</title>
@@ -142,7 +182,7 @@
 <updated>2026-10-23T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261940"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029980"/>
-<summary>Mitteilungsvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+<summary>Mitteilungsvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030041#vorlage</id>
@@ -182,7 +222,7 @@
 <updated>2026-10-05T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261819"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029610"/>
-<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029190#vorlage</id>
@@ -766,46 +806,6 @@
 <updated>2025-12-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#254019"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024779"/>
-<summary>Entscheidung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024607#beratung-2025-12-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 253947 CDU-Antrag: Sanierung Boulebahnen und Hinweisschilder zu den Spielregeln in der Borsigallee Brüser Berg, auf dem Spielplatz Hardtbergstraße und im Kreuzbergpark in Lengsdorf unter Verwendung von Haushaltsmitteln aus dem Feuerwehrtopf 2025</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#253947"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024607"/>
-<summary>Entscheidung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024542#beratung-2025-12-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 253904 Aufstellungsbeschluss für die 1. Änderung des Bebauungsplans Nr. 7519-14, „An der Ziegelei“ der Bundesstadt Bonn im Stadtbezirk Hardtberg, Ortsteil Lengsdorf</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#253904"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024542"/>
-<summary>Anhörung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024540#beratung-2025-12-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253640-02 Derletalfest und Rock im Tal</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#253640-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024540"/>
-<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024408#beratung-2025-12-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253659-01 ST Umlaufsperre am Ende der Hubert-Maurer-Straße</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#253659-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024408"/>
-<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024284#beratung-2025-12-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 253757 Gewährung eines Mietzuschusses sowie eines Zuschusses zu den Betriebskosten an den Heimatverein Lengsdorf</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#253757"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024284"/>
 <summary>Entscheidung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

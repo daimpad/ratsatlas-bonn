@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 708,
+  "count": 709,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -42,6 +42,146 @@
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
  },
  "papers": [
+  {
+   "reference": "262206",
+   "name": "Grüne-Antrag: Sanierung der Treppe zwischen Lengsdorfer Hauptstraße und Provinzialstraße",
+   "paper_type": "Antrag",
+   "date": "2026-11-18",
+   "amt": "01-2 Ratsbüro",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030536",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3267372&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "01-2 Ratsbüro",
+     "name": "01-2 Ratsbüro"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Grüne",
+     "actor_type": "Fraktion/Gruppe",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/gr/47",
+     "method": "title",
+     "evidence": "Grüne-Antrag",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Entscheidung",
+     "authoritative": 1,
+     "meeting_id": null,
+     "gremium": "Bezirksvertretung Hardtberg",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    }
+   ],
+   "superordinated": [],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "strasse",
+     "name": "Lengsdorfer Hauptstraße",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.06917,
+     "lat": 50.715124,
+     "stage": "B",
+     "method": "strasse",
+     "confidence": "mittel",
+     "evidence": "Lengsdorfer Hauptstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030536",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Provinzialstraße",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.063923,
+     "lat": 50.720473,
+     "stage": "B",
+     "method": "strasse",
+     "confidence": "mittel",
+     "evidence": "Provinzialstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030536",
+     "source": "osm"
+    },
+    {
+     "level": "strasse",
+     "name": "Provinzialstraße",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.067044,
+     "lat": 50.712315,
+     "stage": "B",
+     "method": "strasse",
+     "confidence": "mittel",
+     "evidence": "Provinzialstraße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030536",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030536",
+   "stand": "offen",
+   "themes": [],
+   "parties": [
+    "Grüne"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Antrag",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030536",
+     "actors": [
+      "Grüne"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2026-11-18",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030536",
+     "note": "datum"
+    },
+    {
+     "typ": "entscheidung",
+     "label": "Bezirksvertretung Hardtberg",
+     "role": "Entscheidung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-bv",
+    "sicherheit": "hoch",
+    "grund": "Antrag, beraten nur in Bezirksvertretungen",
+    "passung": "passt",
+    "ist": [
+     "bv"
+    ],
+    "abweichung": []
+   }
+  },
   {
    "reference": "262114",
    "name": "Volt-Anfrage: Feinstaubbelastung (PM2,5 und NO₂), Gesundheitsschutz und planerische Vorsorge in Bonn",
@@ -1615,15 +1755,15 @@
      "position": 0,
      "role": "Kenntnisnahme",
      "authoritative": 0,
-     "meeting_id": null,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005758",
      "gremium": "Ausschuss für Planen, Bauen und Denkmalschutz",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "meeting": "Sitzung des Ausschusses für Planen, Bauen und Denkmalschutz",
+     "start_date": "2026-11-17T17:04:00.000Z",
+     "cancelled": 0,
+     "number": "1.3.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
     },
     {
      "position": 1,
@@ -1667,7 +1807,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029607",
-   "stand": "in Beratung",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -1714,16 +1854,6 @@
     },
     {
      "typ": "beratung",
-     "label": "Ausschuss für Planen, Bauen und Denkmalschutz",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
-     "typ": "beratung",
      "label": "Bezirksvertretung Bonn",
      "role": "Kenntnisnahme",
      "status": "belegt",
@@ -1732,6 +1862,20 @@
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
      "number": "2.5.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    },
+    {
+     "typ": "beratung",
+     "label": "Ausschuss für Planen, Bauen und Denkmalschutz",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2026-11-17",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "1.3.1",
      "result": "zur Kenntnis genommen",
      "stand": "beraten",
      "result_source": "oparl-lite"
@@ -2398,10 +2542,10 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "number": "6.9",
+     "result": "ungeändert beschlossen",
+     "public": 1,
+     "status": "beraten"
     },
     {
      "position": 2,
@@ -2445,7 +2589,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029185",
-   "stand": "offen",
+   "stand": "in Beratung",
    "themes": [
     {
      "theme": "bauen",
@@ -2507,8 +2651,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "number": "6.9",
+     "result": "ungeändert beschlossen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     },
     {
      "typ": "beratung",
@@ -3557,15 +3703,15 @@
      "position": 0,
      "role": "Anregung",
      "authoritative": 0,
-     "meeting_id": null,
+     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2005621",
      "gremium": "Bezirksvertretung Bonn",
-     "meeting": null,
-     "start_date": null,
-     "cancelled": null,
-     "number": null,
+     "meeting": "Sitzung der Bezirksvertretung Bonn",
+     "start_date": "2026-10-13T15:00:00.000Z",
+     "cancelled": 0,
+     "number": "10.3",
      "result": null,
-     "public": null,
-     "status": "offen"
+     "public": 1,
+     "status": "terminiert"
     }
    ],
    "superordinated": [],
@@ -3629,16 +3775,6 @@
      "note": "datum"
     },
     {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Anregung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
-    },
-    {
      "typ": "folgevorlage",
      "label": "Stellungnahme der Verwaltung",
      "status": "belegt",
@@ -3646,6 +3782,19 @@
      "source": "oparl-bonn",
      "reference": "261505-01 ST",
      "title": "SPD-Bezirksfraktion: Einrichtung eines verkehrsberuhigten Bereichs für den gesamten Straßenzug „Am Klostergarten“ im Stadtbezirk Bonn"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Anregung",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date": "2026-10-13",
+     "date_status": "abgeleitet",
+     "date_source": "oparl-lite",
+     "number": "10.3",
+     "stand": "terminiert",
+     "result_source": "oparl-lite"
     }
    ],
    "soll": {
@@ -5035,8 +5184,8 @@
      "meeting": "Sitzung des Ausschusses für Planen, Bauen und Denkmalschutz",
      "start_date": "2026-07-14T16:00:00.000Z",
      "cancelled": 0,
-     "number": "1.7",
-     "result": "vertagt",
+     "number": "1.3",
+     "result": "zur Kenntnis genommen",
      "public": 1,
      "status": "beraten"
     },
@@ -5110,7 +5259,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027849",
-   "stand": "in Beratung",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -5172,11 +5321,10 @@
      "date": "2026-07-14",
      "date_status": "abgeleitet",
      "date_source": "oparl-lite",
-     "number": "1.7",
-     "result": "vertagt",
+     "number": "1.3",
+     "result": "zur Kenntnis genommen",
      "stand": "beraten",
-     "result_source": "oparl-lite",
-     "schleife": true
+     "result_source": "oparl-lite"
     },
     {
      "typ": "folgevorlage",

@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 708,
+  "count": 709,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -43,6 +43,30 @@
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
  },
  "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.063923,
+     50.720473
+    ]
+   },
+   "properties": {
+    "reference": "262206",
+    "name": "Grüne-Antrag: Sanierung der Treppe zwischen Lengsdorfer Hauptstraße und Provinzialstraße",
+    "paper_type": "Antrag",
+    "date": "2026-11-18",
+    "amt": "01-2 Ratsbüro",
+    "place": "Provinzialstraße",
+    "level": "strasse",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "strasse",
+    "confidence": "mittel",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030536"
+   }
+  },
   {
    "type": "Feature",
    "geometry": {
