@@ -136,9 +136,12 @@ UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005588
 DTSTAMP:20261203T170000Z
 DTSTART:20261203T170000Z
 SUMMARY:Hauptausschuss
-DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
- tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung: https://www.bonn.si
+ tzung-online.de/public/TO010?SILFDNR=2005588\nEinladung: https://www.bonn.
+ sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3270161&OTYP=41\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005588
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005628

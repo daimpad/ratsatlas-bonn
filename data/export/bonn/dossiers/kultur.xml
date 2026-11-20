@@ -9,6 +9,14 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030578#vorlage</id>
+<title>Neue Vorlage 261813-04: Mitteilungsvorlage zum Antrag: Änderung der Haushaltssperre</title>
+<updated>2026-11-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261813-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030578"/>
+<summary>Mitteilungsvorlage · federführend: 20 Stadtkämmerei · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030544#vorlage</id>
 <title>Neue Vorlage 262151-01: FDP und Volt - Große Anfrage: Sachstand zur künftigen Unterbringung des Stadtmuseums in der Alten Münsterschule (Windeckstraße 1)</title>
 <updated>2026-11-19T00:00:00Z</updated>
@@ -17,12 +25,28 @@
 <summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030405#vorlage</id>
+<title>Neue Vorlage 261861-01 ST: Grünen-Antrag: Zukunft des Schauspiels</title>
+<updated>2026-11-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261861-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030405"/>
+<summary>Stellungnahme der Verwaltung · federführend: Dezernat IV · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030086#vorlage</id>
 <title>Neue Vorlage 262005: Öffentlich geförderter Glasfaserausbau – Nachträgliche Genehmigung der Antragstellung nach der Bundesrichtlinie „Gigabit RL-2.0“ (Dunkelgraue Flecken) und Bereitstellung der Eigenanteile im kommenden Doppelhaushalt</title>
 <updated>2026-11-18T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262005"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030086"/>
-<summary>Beschlussvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
+<summary>Beschlussvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030086#beratung-2026-11-18-Ausschuss%20f%C3%BCr%20Digitalisierung%2C%20Dienstleistung%20und%20Verwaltungsmodernisierung</id>
+<title>Ausschuss für Digitalisierung, Dienstleistung und Verwaltungsmodernisierung: „ohne Votum“ – 262005 Öffentlich geförderter Glasfaserausbau – Nachträgliche Genehmigung der Antragstellung nach der Bundesrichtlinie „Gigabit RL-2.0“ (Dunkelgraue Flecken) und Bereitstellung der Eigenanteile im kommenden Doppelhaushalt</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262005"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030086"/>
+<summary>Empfehlung am 2026-11-18; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030230#vorlage</id>
@@ -782,30 +806,6 @@
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-ost#260127-21%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028101"/>
-<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027476#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260127-15 ST Ergänzende Stellungnahme der Verwaltung zur Vorlage Zukunft Bonner Bühnen - Grundsatzbeschluss: Bauliche Zukunft der Theaterliegenschaften</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-ost#260127-15%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027476"/>
-<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027476#beratung-2026-09-02-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 260127-15 ST Ergänzende Stellungnahme der Verwaltung zur Vorlage Zukunft Bonner Bühnen - Grundsatzbeschluss: Bauliche Zukunft der Theaterliegenschaften</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-ost#260127-15%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027476"/>
-<summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026349#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260127-05 ST Stellungnahme zur Großen Anfrage der FDP: Zukunft Bonner Bühnen</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-ost#260127-05%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026349"/>
 <summary>Kenntnisnahme am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

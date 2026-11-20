@@ -17,20 +17,20 @@
 <summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030538#vorlage</id>
-<title>Neue Vorlage 262208: Bürgerantrag: Prüfung einer kostenlosen und getrennten Sammelmöglichkeit für 3D-Druck-Abfälle (PLA und PETG) an einem Wertstoffhof der bonnorange AöR</title>
-<updated>2026-11-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262208"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030538"/>
-<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030421#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
 <title>Ausschuss für Planen, Bauen und Denkmalschutz: „geändert beschlossen“ – 261201-03 AA Änderungsantrag CDU, SPD, FDP und BSW/SBI zum Zielbeschluss über die Entwicklung der Fläche „Petrusacker“ im Ortsteil Buschdorf, Stadtbezirk Bonn</title>
 <updated>2026-11-17T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:buschdorf#261201-03%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030421"/>
 <summary>Empfehlung am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029661#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „vertagt“ – 261837 Große Anfrage - CDU: Anbindung LVR Klinik/Agnesstift durch einen Serviceweg</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-castell#261837"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029661"/>
+<summary>Kenntnisnahme am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030520#vorlage</id>
@@ -409,6 +409,14 @@
 <summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029702#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „erledigt durch Stellungnahme der Verwaltung“ – 261555-02 Bürgerantrag: Priorisierung und zeitnahe Umsetzung des Konzepts zur Verbesserung der Toilettensituation im Bereich Herbert-Wehner-Platz/Haupteingang Rheinaue</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261555-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029702"/>
+<summary>Entscheidung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029639#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
 <title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261775-01 ST FDP-Prüfauftrag: Oberirdische Zisternen als Sofortmaßnahme zur Wasserversorgung von Parks und als Löschwasserreserve</title>
 <updated>2026-11-04T00:00:00Z</updated>
@@ -674,7 +682,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029762#beratung-2026-10-15-Ausschuss%20f%C3%BCr%20Sicherheit%2C%20Ordnung%20und%20Bev%C3%B6lkerungsschutz</id>
-<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „vertagt“ – 261525-02 ST Vertagungsbitte zur BBB-Anfrage: Schutz der Bevölkerung vor Waldbränden</title>
+<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „zur Kenntnis genommen“ – 261525-02 ST Vertagungsbitte zur BBB-Anfrage: Schutz der Bevölkerung vor Waldbränden</title>
 <updated>2026-10-15T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261525-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029762"/>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261183"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028001"/>
 <summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027997#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261179 Linke-Antrag: Errichtung einer Calisthenics-Anlage im Bereich des Rheinauenparks in Bonn-Limperich</title>
-<updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:limperich#261179"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027997"/>
-<summary>Entscheidung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

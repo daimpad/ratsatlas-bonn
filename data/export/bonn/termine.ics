@@ -198,8 +198,8 @@ URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006014
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005832
-DTSTAMP:20261119T170000Z
-DTSTART:20261119T170000Z
+DTSTAMP:20261119T170100Z
+DTSTART:20261119T170100Z
 SUMMARY:Sportausschuss
 DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung: https://www.bonn.si
  tzung-online.de/public/TO010?SILFDNR=2005832\nEinladung: https://www.bonn.
@@ -379,19 +379,25 @@ UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005588
 DTSTAMP:20261203T170000Z
 DTSTART:20261203T170000Z
 SUMMARY:Hauptausschuss
-DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
- tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung: https://www.bonn.si
+ tzung-online.de/public/TO010?SILFDNR=2005588\nEinladung: https://www.bonn.
+ sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3270161&OTYP=41\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005588
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006558
 DTSTAMP:20261203T150000Z
 DTSTART:20261203T150000Z
-SUMMARY:Ausschuss für Mobilität und Verkehr mit dem RSK
+SUMMARY:Ausschuss für Mobilität und Verkehr
 DESCRIPTION:Gemeinsame Sitzung des Ausschusses für Mobilität und Verkehr 
- mit dem RSK\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API d
- er Stadt Bonn (CC0 1.0)
+ mit dem RSK\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010
+ ?SILFDNR=2006558\nEinladung: https://www.bonn.sitzung-online.de/public/doc
+ ?DOCTYP=108&DOLFDNR=3272354&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0
+  1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006558
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005988
@@ -468,6 +474,15 @@ SUMMARY:Sammeltermin für den Ausschuss für Sicherheit\, Ordnung und Bevö
 DESCRIPTION:Sammeltermin für den Ausschuss für Sicherheit\, Ordnung und B
  evölkerungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OPar
  l-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006796
+DTSTAMP:20270107T170000Z
+DTSTART:20270107T170000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
+ ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -697,6 +712,15 @@ SUMMARY:Ausschuss für Chancengerechtigkeit und Integration
 DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
  on\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
  Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006797
+DTSTAMP:20270302T170000Z
+DTSTART:20270302T170000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
+ ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1024,6 +1048,15 @@ DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006798
+DTSTAMP:20270520T160000Z
+DTSTART:20270520T160000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
+ ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006701
 DTSTAMP:20270521T140000Z
 DTSTART:20270521T140000Z
@@ -1180,6 +1213,15 @@ DTSTART:20270618T140000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
  g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006799
+DTSTAMP:20270622T160000Z
+DTSTART:20270622T160000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
+ ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1429,6 +1471,15 @@ DESCRIPTION:Sitzung des Ausschusses für Chancengerechtigkeit und Integrati
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006800
+DTSTAMP:20270923T160000Z
+DTSTART:20270923T160000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
+ ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006703
 DTSTAMP:20270924T140000Z
 DTSTART:20270924T140000Z
@@ -1626,6 +1677,15 @@ SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
  be\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt 
  Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006801
+DTSTAMP:20271124T170000Z
+DTSTART:20271124T170000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
+ ng noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

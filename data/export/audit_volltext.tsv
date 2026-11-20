@@ -16791,6 +16791,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262165	verortet	Hauptteil	volltext_strasse+ortsteil	Schultheißstraße	Vilich	mittel	4
 262166	verortet	Hauptteil	volltext_strasse	Theaterplatz	Alt-Godesberg	mittel	1
 262167	kein Ort						
+262167-01 ST	kein Ort						
 262168	Titel ohne gemeinsamen Ort, nicht verortet						
 262169	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
 262169-01 DA	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
@@ -16809,6 +16810,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262190	Titel ohne gemeinsamen Ort, nicht verortet						
 262192	Titel ohne gemeinsamen Ort, nicht verortet						
 262193	nur in Anlagen genannt, nicht verortet						
+262193-01 ST	kein Ort						
 262194	Titel ohne gemeinsamen Ort, nicht verortet						
 262195	Titel ohne gemeinsamen Ort, nicht verortet						
 262200	kein Ort						
@@ -16822,4 +16824,11 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262221	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Holtorf	niedrig	1
 262221	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1
 262222	Titel ohne gemeinsamen Ort, nicht verortet						
+262224	kein Ort						
+262226	kein Ort						
 262227	Titel ohne gemeinsamen Ort, nicht verortet						
+262228	kein Ort						
+262235	kein Ort						
+262238	verortet	Hauptteil	volltext_ortsteil_name	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	niedrig	1
+262238	verortet	Hauptteil	volltext_strasse	Paracelsusstraße	Lannesdorf	niedrig	1
+262241	kein Ort						
