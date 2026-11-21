@@ -70,9 +70,12 @@ STEPS = {
 
 
 def main(argv):
-    if len(argv) != 1 or argv[0] not in (*STEPS, "all"):
+    # Optionen einzelner Schritte („fetch-aufzeichnungen --alle“) lesen die Schritte selbst aus sys.argv; bisher wies
+    # main jeden zweiten Wert ab, die Option war nicht erreichbar (Prüfung November 2026, Nr. 35)
+    schritte = [a for a in argv if not a.startswith("--")]
+    if len(schritte) != 1 or schritte[0] not in (*STEPS, "all"):
         raise SystemExit(__doc__)
-    for step in (["fetch", "build", "export", "kontext", "check", "verify", "package"] if argv[0] == "all" else argv):
+    for step in (["fetch", "build", "export", "kontext", "check", "verify", "package"] if schritte[0] == "all" else schritte):
         print(f"== {step}", flush=True)
         STEPS[step]()
 

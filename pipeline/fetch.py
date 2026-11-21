@@ -56,8 +56,9 @@ def _oparl_list(url, size=100, workers=6):
             results[p] = data
     empty = [p for p in sorted(results) if not results[p] and p < pages]
     items = [item for p in sorted(results) for item in results[p]]
-    # neue Objekte während des Abrufs verschieben die Seiten etwas; leere Seiten oder große Lücken nicht
-    if empty or len(items) < MIN_ANTEIL * total:
+    # neue Objekte während des Abrufs verschieben die Seiten etwas; leere Seiten oder Lücken von mehr als einer Seite
+    # nicht (Prüfung November 2026, Nr. 34: die Grenze von 10 % ließ bei 25.000 Vorlagen rund 2.500 fehlen)
+    if empty or len(items) < total - size:
         raise RuntimeError(f"{url}: unvollständig ({len(items)} von {total} Objekten, leere Seiten: {empty[:5]})")
     return items
 

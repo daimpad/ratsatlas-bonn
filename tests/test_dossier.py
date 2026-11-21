@@ -192,5 +192,16 @@ class GremiumDerSitzung(unittest.TestCase):
         self.assertEqual(gremium_der_sitzung(m, names), "Beirat Kinder- und Jugendbeteiligung")
         m = {"name": "Sitzung des Ausschusses für Neues", "organization": ["gr/999"]}
         self.assertEqual(gremium_der_sitzung(m, names), "Ausschuss für Neues")
+        # Prüfung November 2026 (Nr. 35): Vorsätze und Zusätze im Sitzungsnamen
+        names2 = {**names, "x1": "Kulturausschuss", "x2": "Bezirksvertretung Beuel", "x3": "Ausschuss für Mobilität und Verkehr",
+                  "x4": "Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz", "x5": "Rat"}
+        fall = lambda titel: gremium_der_sitzung({"organization": [], "name": titel}, names2)
+        self.assertEqual(fall("Sondersitzung des Kulturausschuss"), "Kulturausschuss")
+        self.assertEqual(fall("(PÜMA) Sitzung der Bezirksvertretung Beuel"), "Bezirksvertretung Beuel")
+        self.assertEqual(fall("Sammeltermin für den Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz"),
+                         "Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz")
+        self.assertEqual(fall("Ausschuss für Mobilität und Verkehr mit dem Rhein-Sieg-Kreis"), "Ausschuss für Mobilität und Verkehr")
+        self.assertEqual(fall("Kreiswahlausschuss"), "Kreiswahlausschuss")   # kein bekanntes Gremium, „Rat“ zählt nicht als Teil
+        self.assertEqual(fall("Sitzung des Rates"), "Rat")
         self.assertEqual(gremium_der_sitzung({"name": "x", "organization": ["gr/6"]}, names),
                          "Ausschuss für Kinder, Jugend und Familie")

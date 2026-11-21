@@ -17,6 +17,7 @@ permissions:
 jobs:
   live:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       # Ist main inzwischen weiter, folgt ein neuerer Lauf mit eigener Prüfung. Diese Prüfung entfällt dann: Sie
       # würde den älteren Stand mit den Erwartungen des neueren vergleichen, und eine vom neueren Lauf ersetzte
@@ -102,6 +103,24 @@ jobs:
             echo "::error::Datenstand auf bonn.ratsatlas.de ist älter als zwei Tage (${stand:-unbekannt})"; fail=1
           else
             echo "ok  Datenstand $stand"
+          fi
+          # Abruf der Quellen höchstens zwei Tage alt: Der Datenstand oben entsteht täglich neu, auch wenn der Abruf
+          # scheitert und der Lauf aus dem Zwischenspeicher baut (Prüfung November 2026, Nr. 11)
+          alt=$(curl -fsSL https://bonn.ratsatlas.de/data/export/bonn/index.json | python3 -c '
+          import json, sys
+          from datetime import datetime, timezone
+          jetzt = datetime.now(timezone.utc)
+          for s in json.load(sys.stdin)["meta"]["sources"]:
+              if s["name"] in ("oparl-bonn", "oparl-lite"):
+                  t = s.get("retrieved_at")
+                  tage = (jetzt - datetime.fromisoformat(t)).days if t else 999
+                  if tage > 2:
+                      print(s["name"], (t or "unbekannt")[:10])
+          ') || alt="Quellenstand nicht lesbar"
+          if [ -n "$alt" ]; then
+            echo "::error::Abruf der Quellen älter als zwei Tage: $(echo "$alt" | tr '\n' ' ')– der tägliche Lauf baut aus dem Zwischenspeicher"; fail=1
+          else
+            echo "ok  Abruf von oparl-bonn und oparl-lite höchstens zwei Tage alt"
           fi
           # Holt der eigene Server den Branch deploy ab? Gleicher Stand wie im Branch (21.10.2026: Server blieb
           # elf Stunden auf einem älteren Stand, die Prüfung auf zwei Tage bemerkte es nicht)

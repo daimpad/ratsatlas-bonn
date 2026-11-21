@@ -29,6 +29,23 @@ class Liste(unittest.TestCase):
             with self.assertRaises(RuntimeError):
                 fetch._oparl_list("u")
 
+    def test_luecke_von_mehr_als_einer_seite_bricht_ab(self):
+        # Prüfung November 2026 (Nr. 34): bisher durften 10 % fehlen (bei 25.000 Vorlagen rund 2.500)
+        def kurz(fehlend):
+            voll = pages(3000, 100)
+            def get(url):
+                d = voll(url)
+                p = int(url.split("page=")[1].split("&")[0])
+                if p > 1:   # jede weitere Seite liefert einige Objekte zu wenig, keine ist leer
+                    d["data"] = d["data"][:len(d["data"]) - fehlend]
+                return d
+            return get
+        with mock.patch.object(fetch, "get_json", kurz(2)):      # 58 fehlen: neue Objekte während des Abrufs
+            self.assertEqual(len(fetch._oparl_list("u")), 3000 - 58)
+        with mock.patch.object(fetch, "get_json", kurz(5)):      # 145 fehlen: mehr als eine Seite
+            with self.assertRaises(RuntimeError):
+                fetch._oparl_list("u")
+
 
 class Stand(unittest.TestCase):
     def setUp(self):

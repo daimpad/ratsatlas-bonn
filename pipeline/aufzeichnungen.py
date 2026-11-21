@@ -45,7 +45,7 @@ STOPP = {
 }
 # Vorlagen der Einwohnerschaft (wie chat.einwohner): kein Stichwort aus ihrem Titel und dem ihrer Folgevorlagen
 EINWOHNER_ARTEN = {"Bürgerantrag § 24 GO - Öffentlich", "Anregungen und Beschwerden", "Einwohnerfrage", "Bürgerbrief"}
-EINWOHNER_TITEL = re.compile(r"bürgerantrag|einwohner|anregung|beschwerde", re.I)
+EINWOHNER_TITEL = re.compile(r"bürgerantrag|einwohner(?:frage|antr[aä]g)|anregung(?:en)? und beschwerde", re.I)   # wie chat.EINWOHNER_TITEL
 Q_SUCHE = ("query($q:String!,$o:Int){ transcriptPassageSearch(query:$q, limit:100, offset:$o){ totalCount items "
            "{ passage { revision { recording { meeting { id } } } } } } }")
 

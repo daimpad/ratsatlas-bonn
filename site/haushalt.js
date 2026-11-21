@@ -125,7 +125,8 @@
 
   // Ebene aus dem Seitenlink: 1 Produktbereiche, 2 #zoom-XX, 3 #pg-1-XX-YY
   const ebene = (hash) => {
-    const id = decodeURIComponent(hash.replace(/^#/, ""));
+    let id = "";
+    try { id = decodeURIComponent(hash.replace(/^#/, "")); } catch (e) { /* fehlerhaft kodierter Anker: wie ohne Anker */ }
     let m = id.match(/^zoom-(\d\d)$/);
     if (m) return { stufe: 2, id, pb: m[1] };
     m = id.match(/^pg-1-(\d\d)-\d+$/);

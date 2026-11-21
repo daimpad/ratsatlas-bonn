@@ -201,6 +201,9 @@ sind im Datensatz der Stadt nicht enthalten.
 
 Abgeleitete Angaben (Einreichende, fachliche Zuständigkeit, Ortsbezüge der Stufe B und
 „vererbt“) sind in den Feldern method, confidence und evidence gekennzeichnet.
+TSV-Dateien: Tabulator als Trennzeichen, UTF-8. Die Dateien des Exports (Audits, Kurzfassungen) setzen Felder mit
+Anführungszeichen nach CSV-Regeln in Anführungszeichen (innere verdoppelt); bitte mit einem CSV-Leser mit
+Tabulator als Trennzeichen lesen. baustellen_kandidaten.tsv und die Protokolle der Archive schreiben die Felder roh.
 Quellcode und Dokumentation: https://github.com/daimpad/ratsatlas-bonn
 """
 

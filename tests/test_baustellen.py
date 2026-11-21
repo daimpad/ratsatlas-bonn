@@ -75,6 +75,10 @@ class Archiv(unittest.TestCase):
             self.assertNotIn("snapshots/2026/10/21/thema_14403.json", snaps)  # unverändert gegenüber 20.10.
             log = (base / "protokoll.tsv").read_text().splitlines()
             self.assertEqual(log[0].split("\t"), baustellen.LOG_HEAD)
+            # Prüfung November 2026 (Nr. 33): alle Feeds antworten leer → nichts gilt als entfallen
+            rows = self.run_day(base, "2026-10-22", all_feeds([]))
+            self.assertEqual([(r[1], r[2]) for r in rows], [("", "abruf_leer")])
+            self.assertTrue(json.loads((base / "baustellen.json").read_text())["1"]["aktiv"])
 
     def test_kein_feed_abrufbar(self):
         with tempfile.TemporaryDirectory() as tmp:

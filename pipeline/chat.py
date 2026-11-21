@@ -26,7 +26,11 @@ REL_FIELDS = ("reference", "paper_type", "name", "date")
 
 # wie EINWOHNER und EINWOHNER_TITEL in site/chat/tools.js
 EINWOHNER = {"Bürgerantrag § 24 GO - Öffentlich", "Anregungen und Beschwerden", "Einwohnerfrage", "Bürgerbrief"}
-EINWOHNER_TITEL = re.compile(r"bürgerantrag|einwohner|anregung|beschwerde", re.I)
+# Titel, die auf eine Eingabe aus der Einwohnerschaft verweisen („Bürgerantrag: …“ bei Stellungnahmen, „Einwohnerfrage“).
+# Bis November 2026 genügten die Wortteile „einwohner“, „anregung“ und „beschwerde“; damit galten auch
+# „Verfassungsbeschwerde“, „Einwohnermeldeamt“, „sachkundige Einwohner“ oder „Einwohnerzahl“ als Eingaben, und 73
+# Drucksachen samt ihren verbundenen Vorlagen blieben ohne eigene Seite (Prüfung November 2026, Nr. 35).
+EINWOHNER_TITEL = re.compile(r"bürgerantrag|einwohner(?:frage|antr[aä]g)|anregung(?:en)? und beschwerde", re.I)
 
 LUECKEN = [
     "Vorlagen vor Oktober 2019 sind nicht enthalten.",

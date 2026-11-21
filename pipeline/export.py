@@ -549,9 +549,18 @@ def gremium_der_sitzung(m, names, bekannt=None):
     org = (m.get("organization") or [None])[0]
     if names.get(org):
         return names[org]
-    name = _nominativ(re.sub(r"^(Gemeinsame )?Sitzung (des|der) ", "", m.get("name") or ""))
+    # Vorsätze wie „(PÜMA) “, „Sondersitzung des“ oder „Sammeltermin für den“ abstreifen (Prüfung November 2026, Nr. 35:
+    # fünf Sitzungen standen unter dem Namen der Sitzung statt beim Gremium)
+    name = re.sub(r"^\([^)]*\)\s*", "", m.get("name") or "")
+    name = _nominativ(re.sub(r"^(Gemeinsame |Sonder)?[Ss]itzung (des|der) |^Sammeltermin für (den|die|das) ", "", name))
     bekannt = bekannt if bekannt is not None else {_schluessel(n): n for n in sorted(names.values(), key=str)}
-    return bekannt.get(_schluessel(name), name) or "unbekannt"
+    key = _schluessel(name)
+    if key in bekannt:
+        return bekannt[key]
+    # sonst der längste bekannte Gremienname, der als Wortfolge im Sitzungsnamen steht („Ausschuss für Mobilität und
+    # Verkehr mit dem Rhein-Sieg-Kreis“); kurze Namen wie „Rat“ zählen dabei nicht
+    teil = [k for k in bekannt if len(k) >= 12 and re.search(rf"(?:^| ){re.escape(k)}(?: |$)", key)]
+    return bekannt[max(teil, key=len)] if teil else (name or "unbekannt")
 
 
 def _meetings(db):

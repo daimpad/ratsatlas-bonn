@@ -279,10 +279,18 @@ function render(focusDetail) {
 }
 function set(patch, focusDetail) { Object.assign(state, patch); render(focusDetail); }
 
+// Daten laden; ein gescheiterter Abruf wird beim nächsten Öffnen wiederholt (show), statt bis zum Neuladen der Seite
+// bei „nicht verfügbar“ zu bleiben (Prüfung November 2026, Nr. 30)
+let ladend = null;
+function laden() {
+  return (ladend ||= Promise.all([ctx.loadSoll(), fetch(ctx.BONN + "prozessarten.json").then((r) => (r.ok ? r.json() : null)).catch(() => null)])
+    .then(([s, d]) => { soll = s; data = d; }).finally(() => { ladend = null; }));
+}
+
 export async function init(c) {
   ctx = c;
   root = document.getElementById("panel-prozesse");
-  [soll, data] = await Promise.all([ctx.loadSoll(), fetch(ctx.BONN + "prozessarten.json").then((r) => (r.ok ? r.json() : null)).catch(() => null)]);
+  await laden();
   root.querySelector("[role=tablist]").addEventListener("click", (e) => { const t = e.target.closest("[role=tab]"); if (t && t.dataset.tab !== state.tab) set({ tab: t.dataset.tab, q: "" }); });
   root.querySelector("[role=tablist]").addEventListener("keydown", (e) => {
     if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
@@ -340,7 +348,11 @@ export async function init(c) {
 }
 export function show(s) {
   if (s) Object.assign(state, Object.fromEntries(Object.entries(s).filter(([k, v]) => k !== "gremiumName" && v !== undefined && v !== null)));
-  // Gremium per Name (aus „Mitmachen in Bonn“)
-  if (s && s.gremiumName && data) state.gremium = ((data.gremien || []).find((g) => g.name === s.gremiumName) || {}).id || state.gremium;
-  render();
+  const zeigen = () => {
+    // Gremium per Name (aus „Mitmachen in Bonn“)
+    if (s && s.gremiumName && data) state.gremium = ((data.gremien || []).find((g) => g.name === s.gremiumName) || {}).id || state.gremium;
+    render();
+  };
+  zeigen();
+  if (!soll || !data) laden().then(() => { if (soll && data) zeigen(); });   // nach einem gescheiterten Abruf neu versuchen
 }

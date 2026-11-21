@@ -72,6 +72,12 @@ def update(state, results, day):
     for feed, items in results.items():
         for bid, props in items.items():
             seen.setdefault(bid, (props, set()))[1].add(feed)
+    # Leere Antwort aller Feeds bei gemeldeten Baustellen: unplausibel (eine leere FeatureCollection ohne Anzahl gilt
+    # fetch als gültig). Dann wird nichts als entfallen gewertet, wie bei einem gescheiterten Abruf (Prüfung November
+    # 2026, Nr. 33; fetch.py schützt Vorlagen und Pläne ebenso über MIN_ANTEIL).
+    if complete and not seen and any(v.get("aktiv") for v in state.values()):
+        complete = False
+        rows.append([day, "", "abruf_leer", "", "", "", ""])
     for bid, (props, feeds) in seen.items():
         cur = state.get(bid)
         if cur is None:
