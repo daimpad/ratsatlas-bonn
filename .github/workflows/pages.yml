@@ -34,11 +34,11 @@ jobs:
       contents: write   # Branches deploy und kurzfassungen
       pages: read       # configure-pages liest die Einstellungen von GitHub Pages
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false   # kein Token im Arbeitsverzeichnis; Schritte, die schreiben, nennen es selbst
 
-      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
         with:
           python-version: "3.12"
           cache: pip
@@ -48,7 +48,7 @@ jobs:
 
       # Der letzte erfolgreiche Abruf dient als Rückfall, falls eine Quelle nicht antwortet.
       - name: Rohdaten des letzten Laufs
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
         with:
           path: |
             data/raw/papers.jsonl
@@ -66,7 +66,7 @@ jobs:
       # im Repository enthält. Ein Commit an einer dieser Dateien beginnt so mit der Fassung im Repository, statt vom
       # Zwischenspeicher überschrieben zu werden (Code-Prüfung 24.10.2026: bis zum nächsten Montag galt sonst der alte Stand).
       - name: Geodaten und Haltestellen des letzten Abrufs
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
         with:
           path: |
             data/geo/bebauungsplaene_bonn.geojson
@@ -128,7 +128,7 @@ jobs:
 
       # Texte der Hauptdokumente (OParl-Lite) nur zur Verarbeitung (Verortung): eigener Zwischenspeicher, nie veröffentlicht
       - name: Volltexte des letzten Laufs
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
         with:
           path: data/raw/texte.jsonl
           key: texte-${{ github.run_id }}
@@ -146,7 +146,7 @@ jobs:
       # Aufzeichnungen der Sitzungen (Ratstranskripte, bonn.biz): nur Video-Adresse und Dauer je Sitzung; Bestand im
       # Repository und im Zwischenspeicher, abgefragt werden nur neue Sitzungen und solche ohne Aufzeichnung
       - name: Aufzeichnungen des letzten Laufs
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
         with:
           path: |
             data/raw/aufzeichnungen.json
@@ -217,7 +217,7 @@ jobs:
       # Baustellen für die Seite: aus dem Archiv (Branch archiv, täglich 05:23 UTC), sonst direkt aus den Feeds;
       # mögliche Umsetzungen nur mit Konfidenz hoch (vorläufig). Scheitert beides, bleibt die Ebene ausgeblendet.
       - name: Archiv der Baustellen
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false
           ref: archiv
@@ -264,7 +264,7 @@ jobs:
       # Graue Kartenkacheln aus dem Branch kacheln (kacheln.yml, vierteljährlich); fehlt er, zeigt die Seite ersatzweise
       # die OSM-Kacheln grau gefiltert
       - name: Graue Kartenkacheln holen
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false
           ref: kacheln
@@ -327,11 +327,11 @@ jobs:
           git push -q "$url" HEAD:deploy
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b  # v5.0.0
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d  # v6.0.0
 
       # v4.0.0 nennt upload-artifact mit festem Commit (v3.0.1 rief den beweglichen Tag v4 auf); versteckte Dateien
       # nimmt v4 nicht mehr ins Artefakt, _site enthält keine
-      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b  # v4.0.0
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
         with:
           path: "_site"
 
@@ -363,11 +363,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false   # kein Token im Arbeitsverzeichnis; Schritte, die schreiben, nennen es selbst
 
-      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
         with:
           python-version: "3.12"
           cache: pip
@@ -400,11 +400,11 @@ jobs:
     permissions:
       contents: write   # Branch kurzfassungen
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false   # kein Token im Arbeitsverzeichnis; Schritte, die schreiben, nennen es selbst
 
-      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
         with:
           python-version: "3.12"
           cache: pip
@@ -413,7 +413,7 @@ jobs:
         run: pip install --require-hashes -r requirements.txt
 
       - name: Rohdaten dieses Laufs
-        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
         with:
           path: |
             data/raw/papers.jsonl
@@ -427,7 +427,7 @@ jobs:
           restore-keys: raw-
 
       - name: Volltexte dieses Laufs
-        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
         with:
           path: data/raw/texte.jsonl
           key: texte-${{ github.run_id }}
