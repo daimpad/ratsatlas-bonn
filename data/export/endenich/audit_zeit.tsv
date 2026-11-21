@@ -1,4 +1,6 @@
 drucksache	zeitdimension	wert	quelle	status	bemerkung
+241344-04	datum_vorlage	2026-11-20	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
+241344-04	beratung: Bezirksvertretung Bonn (Kenntnisnahme)			unklar	Beratung ohne verknüpfte Sitzung
 262206	datum_vorlage	2026-11-18	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 262206	beratung: Bezirksvertretung Hardtberg (Entscheidung)			unklar	Beratung ohne verknüpfte Sitzung
 262114	datum_vorlage	2026-11-10	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
@@ -629,6 +631,7 @@ drucksache	zeitdimension	wert	quelle	status	bemerkung
 241344	folgevorlage: 241344-02 ST	2024-09-05	oparl-bonn	belegt	Stellungnahme der Verwaltung
 241344	folgevorlage: 241344-03 ST	2024-10-28	oparl-bonn	belegt	Stellungnahme der Verwaltung
 241344	beratung: Bezirksvertretung Bonn (Entscheidung)	2024-11-05	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
+241344	folgevorlage: 241344-04	2026-11-20	oparl-bonn	belegt	Mitteilungsvorlage
 240501-02	datum_vorlage	2024-07-22	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert
 240501-02	beratung: Bezirksvertretung Bonn (Kenntnisnahme)	2024-09-17	oparl-lite	abgeleitet	Sitzung des Gremiums an diesem Tag in der OParl-API der Stadt
 240553-03	datum_vorlage	2024-07-22	oparl-bonn	belegt	Bedeutung des Datums nicht dokumentiert

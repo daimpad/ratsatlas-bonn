@@ -15135,6 +15135,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260504-03	kein Ort						
 260504-08 AA	kein Ort						
 260504-09 ST	kein Ort						
+260504-10 ST	kein Ort						
 260505	verortet	Hauptteil	volltext_strasse	Oxfordstraße	Bonn-Zentrum	niedrig	1
 260512	verortet	Hauptteil	volltext_ortsteil_adjektiv	Oberkassel	Oberkassel	niedrig	1
 260514	kein Ort						
@@ -15433,7 +15434,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260753	kein Ort						
 260756	kein Ort						
 260756-01 AA	kein Ort						
-260756-02 ST	kein Ort						
 260756-03 AA	kein Ort						
 260756-04 AA	kein Ort						
 260769	kein Ort						
@@ -15773,6 +15773,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261092-02 AA	kein Ort						
 261092-03 AA	kein Ort						
 261092-04 AA	kein Ort						
+261092-05 ST	kein Ort						
 261094	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
 261094-02 ST	kein Ort						
 261097	verortet	Hauptteil	volltext_strasse	Friedrichstraße	Bonn-Zentrum	mittel	1
@@ -16044,6 +16045,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261281-11 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
 261281-12 AA	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	mittel	1
 261281-12 AA	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	1
+261281-13 ST	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	mittel	1
+261281-13 ST	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	1
 261285	kein Ort						
 261285-01 ST	kein Ort						
 261286	kein Ort						
@@ -16088,8 +16091,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261305	verortet	Hauptteil	volltext_strasse_mehrdeutig	Rheinaustraße	Limperich	niedrig	1
 261305	verortet	Hauptteil	volltext_strasse_mehrdeutig	Rheinaustraße	Schwarzrheindorf / Vilich-Rheindorf	niedrig	1
 261306	kein Ort						
-261306-01 ST	kein Ort						
 261307	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	2
+261307- 04	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	2
 261307-01 AA	kein Ort						
 261307-02 ST	kein Ort						
 261308	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16439,11 +16442,13 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261700-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
 261700-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
 261700-03 ST	nur in Anlagen genannt, nicht verortet						
+261700-04	kein Ort						
 261701	verortet	Hauptteil	volltext_ortsteil_name	Geislar	Geislar	niedrig	1
 261703	kein Ort						
 261703-01 ST	kein Ort						
 261704	kein Ort						
 261704-01 ST	kein Ort						
+261704-02 ST	kein Ort						
 261705	kein Ort						
 261708	Titel ohne gemeinsamen Ort, nicht verortet						
 261713	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16536,6 +16541,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261813-01 ST	kein Ort						
 261813-02 AA	kein Ort						
 261813-03	kein Ort						
+261813-04	kein Ort						
 261814	kein Ort						
 261815	kein Ort						
 261815-01 ST	kein Ort						
@@ -16558,6 +16564,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261838	Titel ohne gemeinsamen Ort, nicht verortet						
 261840	kein Ort						
 261840-01 AA	kein Ort						
+261840-02 ST	kein Ort						
 261842	kein Ort						
 261845	kein Ort						
 261845-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	niedrig	1
@@ -16571,6 +16578,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261853	kein Ort						
 261853-01 ST	kein Ort						
 261861	kein Ort						
+261861-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 261863	Titel ohne gemeinsamen Ort, nicht verortet						
 261865	kein Ort						
 261865-01 ST	kein Ort						
@@ -16691,6 +16699,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262001	kein Ort						
 262001-01 ST	kein Ort						
 262004	Titel ohne gemeinsamen Ort, nicht verortet						
+262005	kein Ort						
 262006	verortet	Hauptteil	volltext_strasse	Robert-Koch-Straße	Poppelsdorf	mittel	2
 262006	verortet	Hauptteil	volltext_strasse	Robert-Koch-Straße	Venusberg	mittel	2
 262006	verortet	Hauptteil	volltext_strasse+kreuzung	Auerberger Allee	Auerberg	mittel	1
@@ -16725,6 +16734,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262058	kein Ort						
 262058-01 ST	kein Ort						
 262064	nur in Anlagen genannt, nicht verortet						
+262064-01 ST	nur in Anlagen genannt, nicht verortet						
 262065	kein Ort						
 262070	nur in Anlagen genannt, nicht verortet						
 262072	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16743,6 +16753,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262084	kein Ort						
 262084-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	mittel	1
 262088	kein Ort						
+262089	verortet	Hauptteil	volltext_strasse	Adolfstraße	Nordstadt	mittel	1
 262092	kein Ort						
 262093	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
 262093	verortet	Hauptteil	volltext_ortsteil_name	Lengsdorf	Lengsdorf	niedrig	1
@@ -16777,12 +16788,15 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262130	kein Ort						
 262131	kein Ort						
 262131-01 ST	kein Ort						
+262132	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+262134	Liste (7 Ortsteile), nicht verortet	Hauptteil					
 262135	kein Ort						
 262136	Titel ohne gemeinsamen Ort, nicht verortet						
 262138	kein Ort						
 262139	kein Ort						
 262140	verortet	Hauptteil	volltext_strasse	Friedrichstraße	Bonn-Zentrum	niedrig	1
 262143	Titel ohne gemeinsamen Ort, nicht verortet						
+262153	kein Ort						
 262154	kein Ort						
 262156	Titel ohne gemeinsamen Ort, nicht verortet						
 262159	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16832,3 +16846,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262238	verortet	Hauptteil	volltext_ortsteil_name	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	niedrig	1
 262238	verortet	Hauptteil	volltext_strasse	Paracelsusstraße	Lannesdorf	niedrig	1
 262241	kein Ort						
+262243	verortet	Hauptteil	volltext_strasse+hausnummer	Budapester Straße	Bonn-Zentrum	niedrig	1
+262244	kein Ort						
+262245	verortet	Hauptteil	volltext_strasse	Kiefernweg	Venusberg	niedrig	1
+262246	kein Ort						
+262248	kein Ort						

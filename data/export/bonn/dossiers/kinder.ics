@@ -111,8 +111,11 @@ DTSTAMP:20261127T150000Z
 DTSTART:20261127T150000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
- g noch nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+ g: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005994\nEinlad
+ ung: https://www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3272
+ 856&OTYP=41\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005994
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005612

@@ -193,14 +193,6 @@
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028764#vorlage</id>
-<title>Neue Vorlage 261458: Bürgerantrag: Neugestaltung, Beleuchtung und sichere Anbindung des Fußwegs am Landgrabenweg zwischen Ramersdorf und dem Bonner Bogen</title>
-<updated>2026-08-05T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ramersdorf#261458"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028764"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028730#vorlage</id>
 <title>Neue Vorlage 261441: Bürgerantrag: Einrichtung von Tempo 30 im Bereich Joseph-Schumpeter-Allee und Konrad-Zuse-Platz</title>
 <updated>2026-08-03T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ramersdorf#222504-06"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025936"/>
 <summary>Empfehlung am 2026-03-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025936#vorlage</id>
+<title>Neue Vorlage 222504-06: Beendigung Pilotprojekt Eigenreinigung</title>
+<updated>2026-03-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ramersdorf#222504-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025936"/>
+<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: entschieden</summary>
 </entry>
 </feed>

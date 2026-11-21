@@ -297,14 +297,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028689#vorlage</id>
-<title>Neue Vorlage 261422: Informationsbrief - Kanalbauarbeiten im Rosenburgweg, von Haus-Nr. 2 bis Bonner Talweg</title>
-<updated>2026-07-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#261422"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028689"/>
-<summary>Informationsbrief · federführend: 01-1 OB-Büro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028528#vorlage</id>
 <title>Neue Vorlage 211882-01: Versuchsweise Tempo 30 für die Hermann-Milde-Straße</title>
 <updated>2026-07-29T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#230997-05"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025356"/>
 <summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2025316#vorlage</id>
+<title>Neue Vorlage 260128: Bürgerantrag: Antrag auf Umgestaltung, Begrünung und Spielstraße für die Bergstraße zwischen Karl-Barth-Straße und Burbacher Straße</title>
+<updated>2026-01-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kessenich#260128"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025316"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
 </entry>
 </feed>

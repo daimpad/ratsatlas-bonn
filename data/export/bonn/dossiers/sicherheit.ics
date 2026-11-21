@@ -172,6 +172,16 @@ DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006804
+DTSTAMP:20270120T170000Z
+DTSTART:20270120T170000Z
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
+DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
+ ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006592
 DTSTAMP:20270126T170000Z
 DTSTART:20270126T170000Z
@@ -224,6 +234,16 @@ DTEND:20270218T230000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006805
+DTSTAMP:20270223T170000Z
+DTSTART:20270223T170000Z
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
+DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
+ ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -309,6 +329,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006806
+DTSTAMP:20270421T160000Z
+DTSTART:20270421T160000Z
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
+DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
+ ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006594
 DTSTAMP:20270427T160000Z
 DTSTART:20270427T160000Z
@@ -352,6 +382,16 @@ DTSTART:20270513T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006807
+DTSTAMP:20270519T160000Z
+DTSTART:20270519T160000Z
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
+DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
+ ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -416,6 +456,16 @@ DTSTART:20270617T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006808
+DTSTAMP:20270623T160000Z
+DTSTART:20270623T160000Z
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
+DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
+ ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -539,6 +589,16 @@ DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006809
+DTSTAMP:20271012T160000Z
+DTSTART:20271012T160000Z
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
+DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
+ ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006481
 DTSTAMP:20271014T150000Z
 DTSTART:20271014T150000Z
@@ -600,6 +660,16 @@ DTSTART:20271130T160000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
  öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006810
+DTSTAMP:20271201T170000Z
+DTSTART:20271201T170000Z
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
+DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
+ ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
+ r Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

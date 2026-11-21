@@ -1,4 +1,8 @@
 drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruefvermerk
+241344-04	initiierung	Mitteilungsvorlage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2030467	ungeprüft
+241344-04	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
+241344-04	veroeffentlichung	Datum der Vorlage	belegt	2026-11-20		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2030467	ungeprüft
+241344-04	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2030467	ungeprüft
 262206	initiierung	Antrag	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2030536	ungeprüft
 262206	veroeffentlichung	Datum der Vorlage	belegt	2026-11-18		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2030536	ungeprüft
 262206	entscheidung	Bezirksvertretung Hardtberg (Entscheidung)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2030536	ungeprüft
@@ -1031,6 +1035,7 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 241344	folgevorlage	Stellungnahme der Verwaltung	belegt	2024-09-05		oparl-bonn	241344-02 ST	ungeprüft
 241344	folgevorlage	Stellungnahme der Verwaltung	belegt	2024-10-28		oparl-bonn	241344-03 ST	ungeprüft
 241344	entscheidung	Bezirksvertretung Bonn (Entscheidung)	belegt	2024-11-05	abgeleitet	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2018526	ungeprüft
+241344	folgevorlage	Mitteilungsvorlage	belegt	2026-11-20		oparl-bonn	241344-04	ungeprüft
 241344	vollzug	Umsetzung durch die Verwaltung	unklar				Ob und wann der Beschluss umgesetzt ist, steht in der Beschlusskontrolle; dafür gibt es keine öffentliche Schnittstelle.	ungeprüft
 240501-02	initiierung	Mitteilungsvorlage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2017995	ungeprüft
 240501-02	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft

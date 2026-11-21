@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/thema/sicherheit</id>
 <title>Ratsatlas Bonn – Sicherheit und Ordnung</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Sicherheit und Ordnung (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-18T00:00:00Z</updated>
+<updated>2026-11-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/sicherheit.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/sicherheit-und-ordnung/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030626#vorlage</id>
+<title>Neue Vorlage 261307- 04: Grüner Dringlichkeitsantrag zur DS 261307 - Erneute Beratung zur Ausschreibung der Dienstleistungskonzession für den Bonner Wochenmarkt</title>
+<updated>2026-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261307-%2004"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030626"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030596#vorlage</id>
+<title>Neue Vorlage 260754-03: Überwachung und ordnungsrechtliche Maßnahmen bei illegaler Müllentsorgung im Bereich "Auf dem Kirchbüchel"</title>
+<updated>2026-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#260754-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030596"/>
+<summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030564#vorlage</id>
 <title>Neue Vorlage 262218: CDU/SPD-Große Anfrage: Sachstand Umbaumaßnahmen Freiwillige Feuerwehr Lengsdorf</title>
@@ -44,7 +60,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030272#vorlage</id>
 <title>Neue Vorlage 262089: Rückblick auf die Veranstaltungen auf dem Frankenbadvorplatz 2026</title>
 <updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262089"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#262089"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030272"/>
 <summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
 </entry>
@@ -350,6 +366,14 @@
 <updated>2026-11-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260396-06%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029223"/>
+<summary>Empfehlung am 2026-11-03; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028357#beratung-2026-11-03-Ausschuss%20f%C3%BCr%20Wirtschaft%2C%20Liegenschaften%20und%20Arbeit</id>
+<title>Ausschuss für Wirtschaft, Liegenschaften und Arbeit: „ungeändert beschlossen“ – 261307 Ausschreibung eines Dienstleistungskonzessionsvertrages für den Bonner Wochenmarkt</title>
+<updated>2026-11-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261307"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028357"/>
 <summary>Empfehlung am 2026-11-03; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-04%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029149"/>
 <summary>Kenntnisnahme am 2026-09-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029143#beratung-2026-09-17-Hauptausschuss</id>
-<title>Hauptausschuss: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261220-03 AA BBB-Änderungsantrag: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn Antrag zur Vorlage 261220</title>
-<updated>2026-09-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:suedstadt#261220-03%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029143"/>
-<summary>Entscheidung am 2026-09-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029149#vorlage</id>
-<title>Neue Vorlage 261220-04 ST: Antrag-Grüne: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn</title>
-<updated>2026-09-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029149"/>
-<summary>Stellungnahme der Verwaltung · federführend: 50 Amt für Soziales und Wohnen · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029149#beratung-2026-09-15-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
-<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „vertagt“ – 261220-04 ST Antrag-Grüne: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn</title>
-<updated>2026-09-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029149"/>
-<summary>Kenntnisnahme am 2026-09-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/262111</id>
 <title>Vorlage 262111: FDP und CDU Große Anfrage: Kosten externer Beratung</title>
 <subtitle>Verlauf der Vorlage 262111: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-11-06T00:00:00Z</updated>
+<updated>2026-11-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/262111.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262111"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030309#folge-262111-01%20ST</id>
+<title>Stellungnahme der Verwaltung 262111-01 ST: Vertagungsbitte zur FDP und CDU Großen Anfrage: Kosten externer Beratung</title>
+<updated>2026-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262111"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030309"/>
+<summary>Folgevorlage zu 262111</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030309#vorlage</id>
 <title>Neue Vorlage 262111: FDP und CDU Große Anfrage: Kosten externer Beratung</title>

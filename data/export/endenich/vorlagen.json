@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 709,
+  "count": 710,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -42,6 +42,144 @@
   "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
  },
  "papers": [
+  {
+   "reference": "241344-04",
+   "name": "Parken am Endenicher Sportpark - Prüfergebnis",
+   "paper_type": "Mitteilungsvorlage",
+   "date": "2026-11-20",
+   "amt": "61 Stadtplanungsamt",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030467",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3259698&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "61 Stadtplanungsamt",
+     "name": "61-3 Stadtverkehr"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/227",
+     "method": "paper_type",
+     "evidence": "Mitteilungsvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Bezirksvertretung Bonn",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": null,
+     "result": null,
+     "public": null,
+     "status": "offen"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "241344",
+     "paper_type": "Antrag",
+     "name": "CDU-Antrag: Parken am Endenicher Sportpark",
+     "date": "2024-08-05"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "ortsteil_adjektiv",
+     "confidence": "mittel",
+     "evidence": "Endenicher",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030467",
+     "source": "geo-bonn"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030467",
+   "stand": "offen",
+   "themes": [
+    {
+     "theme": "verkehr",
+     "method": "amt",
+     "evidence": "61-3 Stadtverkehr",
+     "confidence": "mittel"
+    },
+    {
+     "theme": "kultur",
+     "method": "stichwort",
+     "evidence": "sport",
+     "confidence": "niedrig"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030467",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2026-11-20",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2030467",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Bonn",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "stand": "offen",
+     "note": "ohne_sitzung"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-bv",
+    "sicherheit": "hoch",
+    "grund": "Antrag, beraten nur in Bezirksvertretungen",
+    "passung": "passt",
+    "ist": [
+     "bv"
+    ],
+    "abweichung": []
+   }
+  },
   {
    "reference": "262206",
    "name": "Grüne-Antrag: Sanierung der Treppe zwischen Lengsdorfer Hauptstraße und Provinzialstraße",
@@ -36606,6 +36744,12 @@
      "paper_type": "Stellungnahme der Verwaltung",
      "name": "CDU-Antrag: Parken am Endenicher Sportpark",
      "date": "2024-10-28"
+    },
+    {
+     "reference": "241344-04",
+     "paper_type": "Mitteilungsvorlage",
+     "name": "Parken am Endenicher Sportpark - Prüfergebnis",
+     "date": "2026-11-20"
     }
    ],
    "locations": [
@@ -36696,6 +36840,15 @@
      "result": "ungeändert beschlossen",
      "stand": "beraten",
      "result_source": "oparl-lite"
+    },
+    {
+     "typ": "folgevorlage",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "date": "2026-11-20",
+     "source": "oparl-bonn",
+     "reference": "241344-04",
+     "title": "Parken am Endenicher Sportpark - Prüfergebnis"
     },
     {
      "typ": "vollzug",

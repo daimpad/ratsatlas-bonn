@@ -593,14 +593,6 @@
 <summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028689#vorlage</id>
-<title>Neue Vorlage 261422: Informationsbrief - Kanalbauarbeiten im Rosenburgweg, von Haus-Nr. 2 bis Bonner Talweg</title>
-<updated>2026-07-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:suedstadt#261422"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028689"/>
-<summary>Informationsbrief · federführend: 01-1 OB-Büro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028654#vorlage</id>
 <title>Neue Vorlage 261411: Grüne-Bezirksfraktion-Antrag: Aufenthaltsqualität in der oberen Poppelsdorfer Allee verbessern – Bänke und Abfallbehälter erneuern</title>
 <updated>2026-07-27T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:suedstadt#260218"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025533"/>
 <summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028210#vorlage</id>
+<title>Neue Vorlage 261264: Grüne-Bezirksfraktion-Antrag: Sichere Radverkehrsachsen während der Nordbrücken-Sperrung – Pflege-, Rückschnitt- und Reinigungsintervalle anpassen</title>
+<updated>2026-06-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:suedstadt#261264"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028210"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 </feed>

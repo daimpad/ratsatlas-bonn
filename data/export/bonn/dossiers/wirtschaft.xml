@@ -3,11 +3,35 @@
 <id>tag:allris-bonn,2026:feed/thema/wirtschaft</id>
 <title>Ratsatlas Bonn – Wirtschaft und Wissenschaft</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Wirtschaft und Wissenschaft (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-19T00:00:00Z</updated>
+<updated>2026-11-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/wirtschaft.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/wirtschaft-und-wissenschaft/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030555#vorlage</id>
+<title>Neue Vorlage 262213: Dienstreise der Bezirksbürgermeisterin Nicole Bonnie anlässlich 80 Jahre Städtepartnerschaft Bonn/Oxford</title>
+<updated>2026-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262213"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030555"/>
+<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030509#vorlage</id>
+<title>Neue Vorlage 262154-01 ST: Linke Große Anfrage: Jahrespartnerschaften</title>
+<updated>2026-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262154-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030509"/>
+<summary>Stellungnahme der Verwaltung · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030446#vorlage</id>
+<title>Neue Vorlage 262178: Städtepartnerschaft Bonn - Oxford; Delegationsbesuch in Oxford anlässlich Feierlichkeiten zum 80-jährigen Städtepartnerschaftsjubiläum</title>
+<updated>2026-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262178"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030446"/>
+<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Bonn · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030559#vorlage</id>
 <title>Neue Vorlage 262167-01 ST: CDU-SPD-FDP-Antrag: Evaluierung, Transparenz und zeitgemäße Weiterentwicklung des Netzwerks -Bonn-Botschafter</title>
@@ -782,30 +806,6 @@
 <updated>2026-09-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261477"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028793"/>
-<summary>Kenntnisnahme am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028788#beratung-2026-09-03-Ausschuss%20f%C3%BCr%20Chancengerechtigkeit%20und%20Integration</id>
-<title>Ausschuss für Chancengerechtigkeit und Integration: „zur Kenntnis genommen“ – 261010-01 ST Stellungnahme zu Unternehmer/innen mit Migrationshintergrund in Bonn</title>
-<updated>2026-09-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261010-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028788"/>
-<summary>Kenntnisnahme am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028725#beratung-2026-09-03-Ausschuss%20f%C3%BCr%20Wirtschaft%2C%20Liegenschaften%20und%20Arbeit</id>
-<title>Ausschuss für Wirtschaft, Liegenschaften und Arbeit: „zur Kenntnis genommen“ – 261297-01 ST Linke Große Anfrage: Bonns wichtigste 150 Unternehmen</title>
-<updated>2026-09-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261297-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028725"/>
-<summary>Kenntnisnahme am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028314#beratung-2026-09-03-Ausschuss%20f%C3%BCr%20Wirtschaft%2C%20Liegenschaften%20und%20Arbeit</id>
-<title>Ausschuss für Wirtschaft, Liegenschaften und Arbeit: „zur Kenntnis genommen“ – 261297 Linke Große Anfrage: Bonns wichtigste 150 Unternehmen</title>
-<updated>2026-09-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261297"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028314"/>
 <summary>Kenntnisnahme am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

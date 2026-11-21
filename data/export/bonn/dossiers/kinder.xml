@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/thema/kinder</id>
 <title>Ratsatlas Bonn – Kinder, Jugend und Familie</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Kinder, Jugend und Familie (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-19T00:00:00Z</updated>
+<updated>2026-11-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/kinder.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/kinder-jugend-und-familie/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030634#vorlage</id>
+<title>Neue Vorlage 262169-02 ST: Übermittagsbetreuung für Kinder: Stellungnahme zur Drucksachengruppe 262169</title>
+<updated>2026-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#262169-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030634"/>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030593#vorlage</id>
 <title>Neue Vorlage 262226: Große Anfrage der Grünen Ratsfraktion zur Beteiligung der Stadt Bonn am Landesförderprogramm 1000 coole Schulen und 1000 coole Kitas</title>
@@ -94,7 +102,7 @@
 <updated>2026-11-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#262018"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030116"/>
-<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030012#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
@@ -150,7 +158,7 @@
 <updated>2026-11-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#231689-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030125"/>
-<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030023#vorlage</id>
@@ -182,7 +190,7 @@
 <updated>2026-10-19T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#261845-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029951"/>
-<summary>Stellungnahme der Verwaltung · federführend: 52 Sport- und Bäderamt · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 52 Sport- und Bäderamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029228#beratung-2026-10-14-Ausschuss%20f%C3%BCr%20Kinder%2C%20Jugend%20und%20Familie</id>
@@ -310,7 +318,7 @@
 <updated>2026-10-01T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261845"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029694"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029585#vorlage</id>
@@ -713,14 +721,6 @@
 <summary>Empfehlung am 2026-07-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028442#beratung-2026-07-07-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „zurückgezogen“ – 261231-02 AA CDU-Änderungsantrag: Ausstattung Jugendzentrum Brüser Berg Antrag zur Vorlage 261231</title>
-<updated>2026-07-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#261231-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028442"/>
-<summary>Entscheidung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028137#beratung-2026-07-07-Bezirksvertretung%20Hardtberg</id>
 <title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 261231-01 ST Grüne-Antrag: Ausstattung Jugendzentrum Brüser Berg</title>
 <updated>2026-07-07T00:00:00Z</updated>
@@ -785,14 +785,6 @@
 <summary>Entscheidung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028442#vorlage</id>
-<title>Neue Vorlage 261231-02 AA: CDU-Änderungsantrag: Ausstattung Jugendzentrum Brüser Berg Antrag zur Vorlage 261231</title>
-<updated>2026-07-06T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#261231-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028442"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027897#vorlage</id>
 <title>Neue Vorlage 261127: Einleitungsbeschluss für das Projekt „Kinderspielplatzkontrolle–Digitales Spielplatzmanagement“</title>
 <updated>2026-07-03T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lessenich-messdorf#260771-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028339"/>
 <summary>Entscheidung am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028231#beratung-2026-07-01-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 261169-01 ST CDU/SPD-Antrag: Umzug der Pumptrack Bahn von Pützchen Sportplatz zur Integrierten Gesamtschule Beuel (IGS)</title>
+<updated>2026-07-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:puetzchen-bechlinghoven#261169-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028231"/>
+<summary>Kenntnisnahme am 2026-07-01; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

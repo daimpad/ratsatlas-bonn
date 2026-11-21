@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-nordstadt</id>
 <title>Ratsatlas Bonn – Nordstadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Nordstadt</subtitle>
-<updated>2026-11-19T00:00:00Z</updated>
+<updated>2026-11-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-nordstadt.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030623#vorlage</id>
+<title>Neue Vorlage 262047-02 ST: Vertagungsbitte zur Großen Anfrage: Demontage von Fahrradbügeln in der Gabelsbergerstraße</title>
+<updated>2026-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#262047-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030623"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030621#vorlage</id>
+<title>Neue Vorlage 262028-02 ST: Vertagungsbitte zum Bürgerantrag: Beibehaltung der Fahrradabstellplätze in der Gabelsbergerstraße</title>
+<updated>2026-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#262028-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030621"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029652#vorlage</id>
 <title>Neue Vorlage 261556-01 ST: Bürgerantrag: Nachnutzungskonzept Frankenbad und Fortschreibung Bäderkonzept: transparente, vollständige und sachgerechte Entscheidungsgrundlagen schaffen!</title>
@@ -15,6 +31,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261556-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029652"/>
 <summary>Stellungnahme der Verwaltung · federführend: 52 Sport- und Bäderamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030272#vorlage</id>
+<title>Neue Vorlage 262089: Rückblick auf die Veranstaltungen auf dem Frankenbadvorplatz 2026</title>
+<updated>2026-11-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#262089"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030272"/>
+<summary>Mitteilungsvorlage · federführend: 33 Bürgerdienste · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029661#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
@@ -215,6 +239,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#260613-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029443"/>
 <summary>Stellungnahme der Verwaltung · federführend: Dezernat III · Stand: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029259#beratung-2026-09-28-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 242046-19 ST Projekt Zukunft Stadthaus-Areal in Bonn: Sachstandsbericht zum Ergebnis des Realisierungswettbewerbs, zur Fortschreibung der Abwicklungsstrategie und zum weiteren Vorgehen im VgV-Verfahren; hier: ergänzende Stellungnahme zu 242046-18</title>
+<updated>2026-09-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#242046-19%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029259"/>
+<summary>Kenntnisnahme am 2026-09-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029600#vorlage</id>
@@ -775,37 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#260657-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026814"/>
 <summary>Kenntnisnahme am 2026-06-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2025295#beratung-2026-06-15-Rat</id>
-<title>Rat: „zur Kenntnis genommen“ – 253419-04 ST Besuchstickets in Gebieten mit flächendeckender kostenpflichtiger Parkraumbewirtschaftung</title>
-<updated>2026-06-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#253419-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025295"/>
-<summary>Kenntnisnahme am 2026-06-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024935#beratung-2026-06-15-Rat</id>
-<title>Rat: „nicht abgestimmt“ – 253419-03 AA Änderungsantrag Grüne/Linke/Volt: Besuchstickets in Gebieten mit flächendeckender kostenpflichtiger Parkraumbewirtschaftung Antrag zur Vorlage 253419</title>
-<updated>2026-06-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#253419-03%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024935"/>
-<summary>Entscheidung am 2026-06-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024933#beratung-2026-06-15-Rat</id>
-<title>Rat: „abgelehnt“ – 253419-02 AA Änderungsantrag der GRÜNEN - Besuchstickets in Gebieten mit flächendeckender kostenpflichtiger Parkraumbewirtschaftung Antrag zur Vorlage 253419</title>
-<updated>2026-06-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#253419-02%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024933"/>
-<summary>Entscheidung am 2026-06-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023511#beratung-2026-06-15-Rat</id>
-<title>Rat: „zur Kenntnis genommen“ – 253419-01 ST Besuchstickets in Gebieten mit flächendeckender kostenpflichtiger Parkraumbewirtschaftung</title>
-<updated>2026-06-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#253419-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023511"/>
-<summary>Kenntnisnahme am 2026-06-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
