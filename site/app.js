@@ -1094,17 +1094,30 @@
     return `<tr><th scope="row">${name}</th>${spalten.map((r, x) => `<td>${zelle((r || [])[i])}${x === 0 ? sLinie(k, r || []) : ""}</td>`).join("")}</tr>`;
   };
   const sKopf = (namen) => `<thead><tr><th scope="col">Kennzahl</th>${namen.map((n) => `<th scope="col">${esc(n).replace("Stadtbezirk ", "Stadt&shy;bezirk ")}</th>`).join("")}</tr></thead>`;
-  async function fillStruktur() {
+  // Der Steckbrief lädt strukturdaten.json (212 KB) erst beim Aufklappen: Bisher holte jeder Start und jeder
+  // Gebietswechsel die Datei für den zugeklappten Kasten (Prüfung November 2026, Nr. 38). Ist sie schon geladen
+  // (Flächenfarbe nach Strukturdaten), erscheint der Inhalt sofort.
+  async function fillStruktur(jetzt) {
     const box = $("#struktur-box");
     if (!box) return;
-    if (!area || !["ortsteil", "bezirk", "bonn"].includes(area.kind)) { box.hidden = true; return; }
+    if (!area || !["ortsteil", "bezirk", "bonn"].includes(area.kind) || !index) { box.hidden = true; return; }
+    if (!struktur && !jetzt && !box.open) {
+      box.innerHTML = `<summary>Strukturdaten zu ${area.kind === "bonn" ? "ganz Bonn" : esc(area.name)}</summary><p class="hint" aria-live="polite">Wird beim Aufklappen geladen …</p>`;
+      box.hidden = false;
+      return;
+    }
+    const fuer = area;
     const d = await ladeStruktur();
-    if (!d || !area) { box.hidden = true; return; }
+    if (area !== fuer) return;   // inzwischen ein anderes Gebiet: dessen Aufruf füllt den Kasten
+    if (!d) {
+      box.innerHTML = `<summary>Strukturdaten zu ${area.kind === "bonn" ? "ganz Bonn" : esc(area.name)}</summary><p class="hint">Die Strukturdaten konnten nicht geladen werden. Bitte später erneut aufklappen.</p>`;
+      return;
+    }
     const m = d.meta, W = d.werte, ids = m.steckbrief, gesamt = (k) => W[k].g;
     let inhalt = "";
     if (area.kind === "ortsteil") {
       const ot = d.ortsteile[area.name], bez = areaBezirk(), sid = STADTBEZIRK_ID[bez];
-      if (!ot) { box.hidden = true; return; }
+      if (!ot) { box.open = false; box.hidden = true; return; }
       const beteiligt = ot.bezirke.filter(([, a]) => a >= 0.05).map(([id, a]) => ({ b: sBezirk(id), a }));
       const bezTabelle = `<table class="kontext-table s-tab s-bezirke">${sKopf(beteiligt.map(({ b }) => `${b.id} ${b.name}`))}
         <tbody>${ids.map((k) => sZeile(k, beteiligt.map(({ b }) => W[k].b[b.id]))).join("")}</tbody></table>
@@ -1132,6 +1145,7 @@
       <p class="hint">Quelle: <a href="${safeUrl(m.url)}">Strukturdatenatlas der Statistikstelle der Bundesstadt Bonn</a>, Stand ${fmtDate(m.datenstand)}, ${esc(m.lizenz.replace(/\s*\(.*\)$/, ""))}. „nicht veröffentlicht“: Fallzahl unter 10 (Bundesagentur für Arbeit). Flächenfarbe auf der Karte: „Flächen färben nach“.</p>`;
     box.hidden = false;
   }
+  $("#struktur-box")?.addEventListener("toggle", (e) => { if (e.currentTarget.open && !e.currentTarget.querySelector("table")) fillStruktur(true); });
   // Stufengrenzen: Ortsteile nach Quintilen, Stadtbezirke in gleichen Abständen bis zum Höchstwert
   function quintiles(values) {
     const v = [...values].sort((a, b) => a - b);
