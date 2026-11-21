@@ -4,7 +4,7 @@ Sätze, Menü „Verstehen“, ohne Laufstatus).
 
 Aus dem Repository gelesen werden: die Schritte der Pipeline aus .github/workflows/pages.yml (Reihenfolge), Name,
 Zeitpunkte und Auslöser aller Workflows, Schritte mit „montags“ oder „am 1. des Monats“ im Namen, die Module der Schritte
-aus pipeline/__main__.py, Quellen und Lizenzen aus config.SOURCES, Pakete aus requirements.txt und
+aus pipeline/__main__.py, Quellen und Lizenzen aus config.SOURCES, Pakete aus requirements.in und
 tests/browser/package.json, Versionen aus site/vendor und den Workflows. Die Erklärungen stehen in diesem Modul;
 tests/test_technikseite.py prüft, dass jeder Schritt, jeder Workflow und jede Quelle eine hat. Keine
 Erzeugungszeitpunkte (stabile Ausgabe).
@@ -220,7 +220,7 @@ def versionen():
     wf = "".join(p.read_text(encoding="utf-8") for p in sorted(WORKFLOWS.glob("*.yml")))
     python = sorted(set(re.findall(r'python-version:\s*"([0-9.]+)"', wf)))
     pakete = [re.split(r"[<>=~ ]", z.strip(), maxsplit=1)[0] for z in
-              (config.ROOT / "requirements.txt").read_text(encoding="utf-8").splitlines() if z.strip() and not z.startswith("#")]
+              (config.ROOT / "requirements.in").read_text(encoding="utf-8").splitlines() if z.strip() and not z.startswith("#")]
     browser = json.loads((config.ROOT / "tests" / "browser" / "package.json").read_text(encoding="utf-8"))["dependencies"]
     leaflet = re.search(r'version="([0-9.]+)"', (config.ROOT / "site" / "vendor" / "leaflet" / "leaflet.min.js")
                         .read_text(encoding="utf-8"))
@@ -554,7 +554,7 @@ def daten(root="../"):
                                                              "Aufgabe (Grafik „Datenfluss“).", CODE + "pipeline/", "Code"),
             ("t-sqlite", "SQLite", "Datenbank eines Laufs; sie wird nicht veröffentlicht, nur ihre Exporte.",
              CODE + "pipeline/build.py", "Code"),
-            *[(f"t-{p}", p, f"Python-Paket aus requirements.txt: {PAKET_TEXT.get(p, '')}".rstrip(": "),
+            *[(f"t-{p}", p, f"Python-Paket aus requirements.in: {PAKET_TEXT.get(p, '')}".rstrip(": "),
                f"https://pypi.org/project/{p}/", "PyPI") for p in v["pakete"]],
         ]),
         ("Daten", [

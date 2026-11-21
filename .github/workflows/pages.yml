@@ -34,6 +34,8 @@ jobs:
       pages: read       # configure-pages liest die Einstellungen von GitHub Pages
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        with:
+          persist-credentials: false   # kein Token im Arbeitsverzeichnis; Schritte, die schreiben, nennen es selbst
 
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
         with:
@@ -41,7 +43,7 @@ jobs:
           cache: pip
 
       - name: Abhängigkeiten
-        run: pip install -r requirements.txt
+        run: pip install --require-hashes -r requirements.txt
 
       # Der letzte erfolgreiche Abruf dient als Rückfall, falls eine Quelle nicht antwortet.
       - name: Rohdaten des letzten Laufs
@@ -216,6 +218,7 @@ jobs:
       - name: Archiv der Baustellen
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
+          persist-credentials: false
           ref: archiv
           path: _archiv
         continue-on-error: true
@@ -262,6 +265,7 @@ jobs:
       - name: Graue Kartenkacheln holen
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
+          persist-credentials: false
           ref: kacheln
           path: _kacheln
         continue-on-error: true
@@ -310,7 +314,9 @@ jobs:
 
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b  # v5.0.0
 
-      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa  # v3.0.1
+      # v4.0.0 nennt upload-artifact mit festem Commit (v3.0.1 rief den beweglichen Tag v4 auf); versteckte Dateien
+      # nimmt v4 nicht mehr ins Artefakt, _site enthält keine
+      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b  # v4.0.0
         with:
           path: "_site"
 
@@ -341,6 +347,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        with:
+          persist-credentials: false   # kein Token im Arbeitsverzeichnis; Schritte, die schreiben, nennen es selbst
 
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
         with:
@@ -348,7 +356,7 @@ jobs:
           cache: pip
 
       - name: Abhängigkeiten
-        run: pip install -r requirements.txt
+        run: pip install --require-hashes -r requirements.txt
 
       - name: Stand von deploy mit Vorgänger holen
         run: |
@@ -373,6 +381,8 @@ jobs:
       contents: write   # Branch kurzfassungen
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        with:
+          persist-credentials: false   # kein Token im Arbeitsverzeichnis; Schritte, die schreiben, nennen es selbst
 
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
         with:
@@ -380,7 +390,7 @@ jobs:
           cache: pip
 
       - name: Abhängigkeiten
-        run: pip install -r requirements.txt
+        run: pip install --require-hashes -r requirements.txt
 
       - name: Rohdaten dieses Laufs
         uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830  # v4.3.0
@@ -403,14 +413,13 @@ jobs:
           key: texte-${{ github.run_id }}
           restore-keys: texte-
 
-      - name: Kurzfassungen erzeugen und sichern (Branch kurzfassungen)
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
-          KURZFASSUNGEN: _kurzfassungen
-          KURZFASSUNG_MAX: ${{ github.event_name == 'push' && '50' || '500' }}
+      # Drei Schritte, damit der Schlüssel des Sprachmodells und das Schreib-Token nie im selben Prozess liegen
+      # (Prüfung November 2026, Nr. 7): holen ohne Token (öffentliches Repository), erzeugen nur mit dem Schlüssel,
+      # sichern nur mit dem Token.
+      - name: Bestand der Kurzfassungen holen (Branch kurzfassungen)
         run: |
-          url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          url="https://github.com/${{ github.repository }}.git"
+          # Exit-Code 2: Branch fehlt; jeder andere Fehler (Netz) bricht ab, statt mit leerem Bestand weiterzumachen
           rc=0; git ls-remote --exit-code --heads "$url" kurzfassungen > /dev/null || rc=$?
           if [ "$rc" -ne 0 ] && [ "$rc" -ne 2 ]; then echo "Abfrage des Branches kurzfassungen gescheitert ($rc)"; exit 1; fi
           if [ "$rc" -eq 0 ]; then
@@ -418,17 +427,28 @@ jobs:
           else
             git init -q -b kurzfassungen _kurzfassungen
           fi
-          # Auch nach einem Fehler (Kontoausfall, Netz) sichern, was bis dahin entstanden ist
-          # Der Schritt endet nach dem Sichern mit dem Ergebnis der Erzeugung: Ein Lauf ohne ein einziges Ergebnis
-          # (Schlüssel, Guthaben, Limit) ist ein Fehler und kein Hinweis (Prüfung November 2026, Nr. 3)
-          rc_k=0; python -m pipeline kurzfassungen || rc_k=$?
-          [ "$rc_k" -eq 0 ] || echo "::error::Kurzfassungen mit Fehler beendet ($rc_k); der Bestand wird gesichert"
+
+      # Ein Lauf ohne ein einziges Ergebnis (Schlüssel, Guthaben, Limit) endet mit Fehler (Prüfung November 2026, Nr. 3);
+      # der Bestand wird im nächsten Schritt trotzdem gesichert
+      - name: Kurzfassungen erzeugen
+        env:
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          KURZFASSUNGEN: _kurzfassungen
+          KURZFASSUNG_MAX: ${{ github.event_name == 'push' && '50' || '500' }}
+        run: python -m pipeline kurzfassungen
+        timeout-minutes: 120
+
+      # Auch nach einem Fehler oder der Zeitgrenze sichern, was bis dahin entstanden ist
+      - name: Kurzfassungen sichern (Branch kurzfassungen)
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          [ -d _kurzfassungen/.git ] || { echo "kein Bestand"; exit 0; }
           cd _kurzfassungen
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          if git diff --cached --quiet; then echo "unverändert"; exit "$rc_k"; fi
+          if git diff --cached --quiet; then echo "unverändert"; exit 0; fi
           git commit -q -m "Kurzfassungen $(date -u +%F)"
-          git push -q "$url" HEAD:kurzfassungen
-          exit "$rc_k"
-        timeout-minutes: 120
+          git push -q "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:kurzfassungen

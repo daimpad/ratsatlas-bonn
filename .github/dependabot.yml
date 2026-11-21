@@ -1,0 +1,26 @@
+# Aktualisierungen der festgelegten Abhängigkeiten als Pull Requests (Prüfung November 2026, Nr. 7 und 24):
+# Aktionen sind auf Commits festgelegt, Python-Pakete und die Pakete der Browser-Tests auf Versionen mit Prüfsummen.
+# Ohne diese Datei altern die Festlegungen unbemerkt.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+      aktionen:
+        patterns: ["*"]
+  - package-ecosystem: pip
+    directories: ["/", "/pipeline/kacheln"]
+    schedule:
+      interval: monthly
+    groups:
+      python:
+        patterns: ["*"]
+  - package-ecosystem: npm
+    directories: ["/tests/browser", "/pipeline/kacheln"]
+    schedule:
+      interval: monthly
+    groups:
+      npm:
+        patterns: ["*"]

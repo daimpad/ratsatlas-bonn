@@ -127,6 +127,11 @@ jobs:
           }
           kopf https://bonn.ratsatlas.de/ X-Content-Type-Options
           kopf https://bonn.ratsatlas.de/ Strict-Transport-Security
+          # Schutz vor dem Einbetten der Seite mit dem Feld für API-Schlüssel (frame-ancestors wirkt nur als Kopfzeile)
+          kopf https://bonn.ratsatlas.de/ Content-Security-Policy
+          # www.bonn.ratsatlas.de soll auf die Hauptadresse weiterleiten (Hinweis; Prüfung November 2026, Nr. 21)
+          www=$(curl -sS --retry 3 --retry-delay 10 -o /dev/null -w '%{http_code}' https://www.bonn.ratsatlas.de/ || true)
+          case "$www" in 301|308) echo "ok  www leitet weiter ($www)";; *) echo "::warning::www.bonn.ratsatlas.de antwortet mit ${www:-ohne Antwort} statt mit einer Weiterleitung";; esac
           kopf https://bonn.ratsatlas.de/data/export/bonn/feeds/ganz-bonn.xml Access-Control-Allow-Origin
           kopf https://bonn.ratsatlas.de/data/export/bonn/index.json Access-Control-Allow-Origin
           # frühere Hauptadresse (bis 04.11.2026): soll mit Pfad dauerhaft auf bonn.ratsatlas.de weiterleiten (Hinweis)
