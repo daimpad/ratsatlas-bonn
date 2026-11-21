@@ -65,3 +65,21 @@ test("Links nur aus Datenfeldern bekannter Stellen, nicht aus wiederholten Einga
   renderMarkdown("[".repeat(64000), { urls });
   assert.ok(Date.now() - t < 1000, "lange Folgen von [ ohne lange Rechenzeit");
 });
+
+test("Links: Aufzeichnungen, Ratstranskripte und Quellen der Zahlen zum Gebiet (Prüfung November 2026, Nr. 17)", () => {
+  const ergebnis = {
+    sitzungen: [{ aufzeichnung: "https://www.youtube.com/watch?v=abc" }],
+    transkripte: "https://bonn.biz/ratstranskripte",
+    fremd: ["https://bonn.biz/ratstranskripte?q=geheim", "https://bonn.biz/anderes", "https://youtube.com.example.org/watch", "https://evil.example/www.youtube.com"],
+    link: "https://www.zensus2022.de/DE/Ergebnisse.html",
+    plan_pdf: "https://stadtplan.bonn.de/mapbender/daten/images/Bebauungsplaene/plan_internet/6322-2%20Teil%20A.pdf",
+  };
+  const urls = collectUrls(ergebnis);
+  assert.deepEqual([...urls].sort(), ["https://bonn.biz/ratstranskripte", "https://stadtplan.bonn.de/mapbender/daten/images/Bebauungsplaene/plan_internet/6322-2%20Teil%20A.pdf",
+    "https://www.youtube.com/watch?v=abc", "https://www.zensus2022.de/DE/Ergebnisse.html"]);
+  const html = renderMarkdown("[Video](https://www.youtube.com/watch?v=abc), [Transkripte](https://bonn.biz/ratstranskripte), [Suche](https://bonn.biz/ratstranskripte?q=geheim)", { urls, refs: new Set() });
+  assert.match(html, /href="https:\/\/www\.youtube\.com\/watch\?v=abc"/);
+  assert.match(html, /href="https:\/\/bonn\.biz\/ratstranskripte"/);
+  assert.ok(!html.includes("q=geheim\""), html);
+});
+

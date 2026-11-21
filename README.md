@@ -58,7 +58,7 @@ flowchart LR
 
 ## ✅ Wie verlässlich sind die Angaben?
 
-- **Orte** tragen eine Sicherheit: 🟢 *gesichert* (Koordinate der Stadt oder eindeutiger Bebauungsplan), 🟠 *erschlossen* (Name im Titel), 🟣 *unsicher* (Name passt auf mehrere Orte). Etwa 57 % der Vorlagen haben keinen erkennbaren Ort.
+- **Orte** zeigen, woher sie stammen: 🟢 *Ort belegt* (Koordinate der Stadt oder eindeutiger Bebauungsplan), 🟠 *Ort erkannt* (Name im Titel oder Text), 🟣 *Ort unklar* (Name passt auf mehrere Orte). Etwa 57 % der Vorlagen haben keinen erkennbaren Ort.
 - **Schritte eines Verfahrens** sind *belegt*, *abgeleitet*, *nicht öffentlich*, *unklar* oder *soll* (vom Regelwerk vorgesehen, in den Daten nicht dokumentiert).
 - **Prüfungen von Hand:** Ort richtig bei 41 von 50 Vorlagen in Endenich (4 teilweise, 5 falsch), Themen passend bei 46 von 49, KI-Kurzfassungen zutreffend bei 18 von 30 und teilweise bei 12, keine falsch. Für jede Themenseite und den Haushalt gibt es einen Prüfbogen. Vorprüfungen durch KI sind als solche gekennzeichnet.
 

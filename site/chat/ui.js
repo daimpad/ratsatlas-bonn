@@ -20,6 +20,7 @@ const TOOL_LABEL = {
   suche_ort: "Orte suchen", liste_sitzungen: "Sitzungen abrufen", hole_gremium_oder_amt: "Gremium oder Amt abrufen",
   erklaere_begriff: "Begriff nachschlagen", datenstand: "Datenstand abrufen",
   suche_bebauungsplan: "Bebauungspläne suchen", suche_baustellen: "Baustellen suchen", hole_kontext: "Zahlen zum Gebiet abrufen",
+  suche_aufzeichnungen: "Aufzeichnungen der Sitzungen suchen",
 };
 
 const store = {
@@ -200,6 +201,7 @@ async function ask(question) {
         toolLine.hidden = true;
         stream.innerHTML = `${text ? `<p class="partial">${esc(text)}</p>` : ""}<p class="msg-error" role="alert">${esc(ev.message)}</p>`;
         status(ev.message);
+        if (ev.kind !== "abort" && !$("#chat-input").value) $("#chat-input").value = q;   // Frage nach einem Fehler nicht verlieren
         if (ev.kind === "config" || ev.status === 401 || ev.status === 403) $("#chat-settings").open = true;
       } else if (ev.type === "done") {
         toolLine.hidden = true;
@@ -209,7 +211,9 @@ async function ask(question) {
         const unbelegt = ev.citations.unbelegt;
         answer.insertAdjacentHTML("beforeend", `${unbelegt.length ? `<p class="msg-warn">Nicht durch abgerufene Daten belegt: ${unbelegt.map(esc).join(", ")}</p>` : ""}
           ${sourceCards(ev.citations.belegt)}${protocolHtml(ev.protocol)}
-          <p class="msg-foot">KI-generiert mit ${esc(ev.model || model())} · Datenstand und Originale prüfen</p>`);
+          ${!ev.text.trim() ? '<p class="msg-warn">Der Assistent hat keine Antwort geliefert. Bitte die Frage anders stellen oder erneut versuchen.</p>' : ""}
+          ${ev.stop === "max_tokens" ? '<p class="msg-warn">Die Antwort wurde an der Längengrenze des Modells abgeschnitten.</p>' : ""}
+          <p class="msg-foot">KI-generiert mit ${esc(ev.model || model())} · Datenstand und Originale prüfen${verbrauch(ev.usage)}</p>`);
         status("Antwort fertig.", `Antwort fertig: ${plain(ev.text).slice(0, 300)}`);
       }
     }
@@ -224,8 +228,22 @@ async function ask(question) {
   }
 }
 
+// Verbrauch je Antwort und im Gespräch (Tokens laut Anbieter): Jede Frage sendet Systemprompt, Werkzeuge und den
+// ganzen Verlauf erneut; ohne Anzeige stiegen die Kosten je Frage unsichtbar (Prüfung November 2026, Nr. 19).
+const ZAHL = new Intl.NumberFormat("de-DE");
+const LANG = 60000;   // Eingabe-Tokens einer Antwort, ab denen „Neues Gespräch“ empfohlen wird
+let gespraech = { eingabe: 0, ausgabe: 0 };
+function verbrauch(u) {
+  if (!u || !(u.eingabe || u.ausgabe)) return "";
+  gespraech = { eingabe: gespraech.eingabe + u.eingabe, ausgabe: gespraech.ausgabe + u.ausgabe };
+  const t = ` · Verbrauch: ${ZAHL.format(u.eingabe)} Eingabe- und ${ZAHL.format(u.ausgabe)} Ausgabe-Tokens`
+    + (gespraech.eingabe > u.eingabe ? ` (Gespräch: ${ZAHL.format(gespraech.eingabe)} und ${ZAHL.format(gespraech.ausgabe)})` : "");
+  return esc(t) + (u.eingabe > LANG ? '</p><p class="msg-warn">Das Gespräch ist lang: Jede weitere Frage sendet den ganzen Verlauf erneut. Mit „Neues Gespräch“ sinken die Kosten.' : "");
+}
+
 function newConversation(message) {
   conv++;
+  gespraech = { eingabe: 0, ausgabe: 0 };
   controller?.abort();
   chat?.reset();
   refs.clear(); cards.clear(); urls.clear(); STATIC_URLS.forEach((u) => urls.add(u));
