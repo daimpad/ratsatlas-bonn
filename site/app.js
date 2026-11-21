@@ -167,6 +167,14 @@
     const target = el.querySelector("h2[tabindex], .tl-stage, summary");
     if (target) target.focus();
   }
+  // Die Schaltfläche zum Einklappen nennt, was die Fläche gerade zeigt („Vorgang einklappen“, „Los geht's einklappen“),
+  // statt des Wortes „Detail“, das sonst nirgends vorkommt (Prüfung November 2026, Nr. 42)
+  {
+    const kopf = $("#detail-heading"), zu = document.querySelector('[data-close="panel-detail"]');
+    const benennen = () => zu.setAttribute("aria-label", `${kopf.textContent.trim() || "Vorgang"} einklappen`);
+    new MutationObserver(benennen).observe(kopf, { childList: true, characterData: true, subtree: true });
+    benennen();
+  }
   function showIntro(offen) {
     detailSeq++;
     shownPlan = null;
@@ -198,15 +206,31 @@
     e.preventDefault();
     goHome(h.dataset.home === "aktuell");
   });
+  // Der Titel ist nur auf dem Telefon sichtbar (auf breiten Bildschirmen steht das Logo in der Leiste); nur dort
+  // gehört sein Link in die Tab-Reihenfolge
+  const titelLink = document.querySelector(".site-title a");
+  const titelFokus = () => { if (titelLink) titelLink.tabIndex = MOBILE.matches ? 0 : -1; };
+  titelFokus();
+  MOBILE.addEventListener("change", titelFokus);
+  let listeVorVorgang = false;   // Telefon: war die Liste offen, als der Vorgang gewählt wurde?
   function closePanel(id) {
     setPanel(id, false);
+    // Telefon: Der Vorgang hat die Liste verdeckt (nur eine Fläche); beim Schließen zurück zur Liste und zum gewählten
+    // Eintrag, statt auf der leeren Karte ohne Fokus zu landen (Prüfung November 2026, Nr. 41)
+    if (id === "panel-detail" && MOBILE.matches && listeVorVorgang && selected) {
+      setPanel("panel-list", true);
+      const eintrag = document.querySelector(`.papers button[data-ref="${CSS.escape(selected.reference)}"]`);
+      if (eintrag) { eintrag.scrollIntoView({ block: "center" }); eintrag.focus(); } else focusPanel("panel-list");
+      return;
+    }
     const t = toggleFor(id);
     // Vorgang, Auswertung, Prozesse, Termine und Mitmachen haben keine Schaltfläche in der Leiste: Fokus zurück auf das
     // öffnende Element, sonst auf den Eintrag im Menü (Code-Prüfung 23.10.2026: Fokus lag danach auf <body>)
     const back = t && t.offsetParent ? t : opener[id]?.isConnected && opener[id].offsetParent ? opener[id]
       : id === "panel-detail" ? toggleFor("panel-list")
       : document.querySelector(`[data-mega][aria-controls="${{ "panel-auswertung": "mega-themen", "panel-prozesse": "mega-entscheiden", "panel-termine": "mega-mitmachen", "panel-mitmachen": "mega-mitmachen" }[id] || ""}"]`);
-    if (back) back.focus();
+    // auf dem Telefon liegen die Schalter im zugeklappten Menü: dann auf die Schaltfläche „Menü“
+    if (back && back.offsetParent) back.focus(); else if (MOBILE.matches) burger.focus(); else if (back) back.focus();
   }
   document.addEventListener("click", (e) => {
     const t = e.target.closest("[data-panel]");
@@ -343,14 +367,27 @@
   });
 
   // --- Über ----------------------------------------------------------------------------------------
-  $("#about-open").addEventListener("click", () => { closeMega(); $("#about").showModal(); });
+  // Dialog öffnen und den Fokus beim Schließen zurückgeben: an das öffnende Element, wenn es noch sichtbar ist, sonst
+  // an das Menü „Über“ bzw. auf dem Telefon an „Menü“ (die Kachel im Menü ist dann zugeklappt; bisher lag der Fokus
+  // nach dem Schließen auf <body>; Prüfung November 2026, Nr. 41)
+  function oeffneDialog(dlg) {
+    const von = document.activeElement;
+    closeMega();
+    if (dlg.open) return;
+    dlg.showModal();
+    dlg.addEventListener("close", () => {
+      const menue = document.querySelector('[data-mega="mega-ueber"]');
+      const ziel = von && von.isConnected && von.offsetParent ? von : menue && menue.offsetParent ? menue : burger;
+      if (ziel && !document.querySelector("dialog[open]")) ziel.focus();
+    }, { once: true });
+  }
+  $("#about-open").addEventListener("click", () => oeffneDialog($("#about")));
   $("#about-close").addEventListener("click", () => $("#about").close());
   $("#about").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
   document.addEventListener("click", (e) => {
     const b = e.target.closest("[data-about]");
     if (!b) return;
-    closeMega();
-    $("#about").showModal();
+    oeffneDialog($("#about"));
     const h = document.getElementById("about-" + b.dataset.about);
     if (h) { h.scrollIntoView({ block: "start" }); h.focus(); }
   });
@@ -362,7 +399,7 @@
   }, true);
   // „Was ist neu?“ in einem eigenen Fenster (aus dem Dialog und dem Menü „Über“)
   document.addEventListener("click", (e) => {
-    if (e.target.closest("[data-neu]")) { closeMega(); if ($("#about").open) $("#about").close(); $("#neu").showModal(); }
+    if (e.target.closest("[data-neu]")) { if ($("#about").open) $("#about").close(); oeffneDialog($("#neu")); }
     if (e.target.closest("[data-close-dialog]")) e.target.closest("dialog").close();
   });
   $("#neu").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
@@ -520,6 +557,14 @@
   function createMap(bounds = BONN_BOUNDS) {
     if (map) return;
     map = L.map("map", { zoomControl: false, scrollWheelZoom: true, minZoom: 10, zoomAnimation: !REDUCED, fadeAnimation: !REDUCED, markerZoomAnimation: !REDUCED });
+    // Flächen und Punkte (SVG-Pfade) nicht in die Tab-Reihenfolge: Leaflet hängt für Tooltips Fokus-Listener an, damit
+    // sind sie in Chromium Tab-Stopps ohne Namen und ohne Funktion bei Enter – 53 im Ortsteil, mit der Ebene
+    // Bebauungspläne über 700 (Prüfung November 2026, Nr. 13). Per Tastatur führen die Auswahl „Gebiet“, die Liste und
+    // die Schaltflächen „… als Liste“ zu denselben Inhalten; Sammelpunkte bleiben erreichbar.
+    map.on("layeradd", (e) => {
+      const el = e.layer.getElement && e.layer.getElement();
+      if (el && el.tagName === "path") el.setAttribute("tabindex", "-1");
+    });
     kachelnSetzen();
     map.fitBounds(bounds, { ...mapPadding(), animate: false });
   }
@@ -532,7 +577,7 @@
   });
   function initMap() {
     createMap();
-    L.control.zoom({ position: "bottomright" }).addTo(map);
+    L.control.zoom({ position: "bottomright", zoomInTitle: "Karte vergrößern", zoomOutTitle: "Karte verkleinern" }).addTo(map);
     // Ganz Bonn ansehen: nur die Ansicht, das Gebiet bleibt; herausgezoomt sind die Stadtbezirke anklickbar
     const Whole = L.Control.extend({
       options: { position: "bottomright" },
@@ -705,7 +750,18 @@
     { const mark = document.createComment("legenden"); mapStack.before(mark); mapToggles.push([mapStack, mark]); }
     placeMapControls();
     MOBILE.addEventListener("change", placeMapControls);
-    cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 40, animate: !REDUCED }).addTo(map);
+    // Sammelpunkte mit Namen für Vorleseprogramme („5 Vorlagen an dieser Stelle, vergrößern“ statt nur „5“); Aussehen
+    // wie die Vorgabe von MarkerCluster (Klassen nach Anzahl)
+    cluster = L.markerClusterGroup({
+      showCoverageOnHover: false, maxClusterRadius: 40, animate: !REDUCED,
+      iconCreateFunction(c) {
+        const n = c.getChildCount();
+        return new L.DivIcon({
+          html: `<div><span aria-hidden="true">${n}</span><span class="visually-hidden">${n} Vorlagen an dieser Stelle, vergrößern</span></div>`,
+          className: `marker-cluster marker-cluster-${n < 10 ? "small" : n < 100 ? "medium" : "large"}`, iconSize: new L.Point(40, 40),
+        });
+      },
+    }).addTo(map);
   }
   function placeMapControls() {
     const mobil = MOBILE.matches;
@@ -2027,6 +2083,8 @@
 
   function select(p, fromMap) {
     detailSeq++;
+    if (MOBILE.matches && !$("#panel-list").hidden) listeVorVorgang = true;
+    else if (MOBILE.matches && $("#panel-detail").hidden) listeVorVorgang = false;
     selected = p;
     shownPlan = null;
     shownSite = null;
@@ -2288,7 +2346,23 @@
   }
   function initSearchBar() {
     const q = $("#q");
-    q.addEventListener("focus", () => openMega("mega-suche"));
+    // Das Suchmenü öffnet sich beim Klick, beim Tippen und mit Pfeil nach unten, nicht schon beim Fokus: Beim
+    // Durchtabben klappte es sonst auf, schob 15 Tab-Stopps ein, blieb offen und verdeckte, was danach den Fokus
+    // hatte; bei schmaler Breite schloss es dabei „Los geht's“ (Prüfung November 2026, Nr. 14).
+    q.addEventListener("click", () => openMega("mega-suche"));
+    q.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowDown") return;
+      e.preventDefault();
+      openMega("mega-suche");
+      $("#mega-suche").querySelector("button, a, input")?.focus();
+    });
+    // verlässt der Fokus Suchfeld und Suchmenü (Tab), schließt das Menü; Klicks außerhalb behandelt der Klick-Listener
+    const verlassen = (e) => {
+      const ziel = e.relatedTarget;
+      if (openMegaId === "mega-suche" && ziel && !ziel.closest("#mega-suche") && !ziel.closest("#nav-search")) closeMega();
+    };
+    $("#nav-search").addEventListener("focusout", verlassen);
+    $("#mega-suche").addEventListener("focusout", verlassen);
     q.addEventListener("input", debounce(() => {
       $("#f-text").value = q.value;
       $("#doc-status").textContent = "";
@@ -2459,7 +2533,48 @@
     state.bezirk = mm ? mm.bezirk : "";
     for (const [k, v] of Object.entries(state)) (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
     url.hash = selected ? encodeURIComponent(selected.reference) : "";
-    history.replaceState(null, "", url);
+    // Verlauf: Wechselt das Gebiet oder der gewählte Vorgang, entsteht ein Eintrag, damit die Zurück-Taste des
+    // Browsers den Vorgang schließt bzw. zum vorigen Gebiet führt, statt die Seite zu verlassen (auf dem Telefon der
+    // übliche Rückweg; Prüfung November 2026, Nr. 15). Filter, Zeitraum und Ebenen ersetzen den Eintrag wie bisher.
+    const key = navKey();
+    if (verlaufKey !== null && !verlaufZurueck && key !== verlaufKey) history.pushState(null, "", url);
+    else history.replaceState(null, "", url);
+    if (verlaufKey !== null) verlaufKey = key;
+  }
+  let verlaufKey = null, verlaufZurueck = false;   // null: Start läuft noch, es entstehen keine Einträge
+  const navKey = () => `${area ? `${area.kind}:${area.key}` : ""}#${selected ? selected.reference : ""}`;
+  // Zurück und Vor: Gebiet und Vorgang aus der Adresse herstellen; die übrigen Angaben der Adresse folgen dem Stand
+  // der Seite (syncUrl am Ende)
+  window.addEventListener("popstate", async () => {
+    if (verlaufKey === null) return;
+    verlaufZurueck = true;
+    try {
+      const params = new URLSearchParams(location.search);
+      let ref = "";
+      try { ref = decodeURIComponent(location.hash.slice(1)); } catch (e) { /* fehlerhafter Anker: wie ohne */ }
+      const gebiet = params.get("gebiet") || DEFAULT_AREA;
+      const ziel = parseArea(gebiet);
+      if (!area || ziel.kind !== area.kind || ziel.key !== area.key) await loadArea(gebiet, true);
+      const p = ref && papers.find((x) => x.reference === ref);
+      if (p) { if (!selected || selected.reference !== ref) select(p); }
+      else if (selected) {
+        selected = null;
+        document.querySelectorAll(".papers button[data-ref]").forEach((b) => b.setAttribute("aria-current", "false"));
+        if (tl) tl.select(null);
+        highlight();
+        showIntro();
+        // Telefon: zurück zur Liste, wenn der Vorgang von dort geöffnet wurde
+        if (MOBILE.matches && !$("#panel-detail").hidden) closePanelNachZurueck();
+      }
+    } finally {
+      verlaufKey = navKey();   // vor syncUrl: der hergestellte Stand ist kein neuer Eintrag (sonst ginge „Vor“ verloren)
+      syncUrl();
+      verlaufZurueck = false;
+    }
+  });
+  function closePanelNachZurueck() {
+    setPanel("panel-detail", false);
+    if (listeVorVorgang) { setPanel("panel-list", true); focusPanel("panel-list"); }
   }
 
   // index.json: fehlt die Datei (404), gibt es nur den Pilot Endenich (lokale Vorschau ohne Export für ganz Bonn).
@@ -2635,6 +2750,7 @@
         verfahren: params.get("verfahren"), gremium: params.get("gremium"), amt: params.get("amt") });
     }
     syncUrl();
+    verlaufKey = navKey();   // Start abgeschlossen: Gebiets- und Vorgangswechsel legen ab jetzt Verlaufseinträge an
   }
   // Schnittstelle für den Ratsassistenten (site/chat/ui.js): Vorlage öffnen, Kontext der Karte
   window.risKarte = {

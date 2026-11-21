@@ -781,7 +781,7 @@ def uebersicht(themen, site, site_url, page):
       <li><strong>{len(kacheln)}</strong> Themen</li>
       <li>Stand <strong>{_date(stand)}</strong></li>
     </ul>
-{akkordeon.mehr("Wie die Themen zugeordnet sind", "<p>Die Zuordnung ist abgeleitet: feste Regeln je Thema, je Vorlage mit Grund, an einer Stichprobe von Hand geprüft. Eine Vorlage kann auf mehreren Themenseiten stehen. Maßgeblich sind die Originale im Ratsinformationssystem.</p>")}    </div>
+{akkordeon.mehr("Wie die Themen zugeordnet sind", "<p>Die Zuordnung ist abgeleitet: feste Regeln je Thema, je Vorlage mit Grund, an einer Stichprobe von Hand geprüft. Eine Vorlage kann auf mehreren Themenseiten stehen. Der Filter „Thema“ der Karte ist etwas anderes: Er ordnet alle Vorlagen seit 2019 grob nach Amt, Ausschuss und Stichwort; gleiche Namen bedeuten deshalb nicht dieselbe Auswahl. Maßgeblich sind die Originale im Ratsinformationssystem.</p>")}    </div>
     <ul class="kacheln">
 {chr(10).join(kacheln)}
     </ul>

@@ -515,7 +515,10 @@ export function createTools({ load, today: fest = null } = {}) {
         anfrage: { gremium: names ? [...names] : null, von, bis, stichwort: wort || null },
         treffer_gesamt: p.treffer_gesamt, seite: p.seite, seiten: p.seiten,
         sitzungen: p.items.map((m) => ({ datum: m.date, gremium: m.gremium, name: m.name, aufzeichnung: m.video, quelle_id: m.source_object })),
-        transkript_suche: TRANSKRIPTE + (wort ? `?q=${encodeURIComponent(wort)}` : ""),
+        // Seite der Ratstranskripte als Link; das Stichwort steht daneben als Text und nicht in der Adresse (die
+        // Oberfläche verlinkt nur Adressen ohne vom Modell gewählte Teile, siehe render.js; Prüfung November 2026, Nr. 17)
+        transkripte: TRANSKRIPTE,
+        suchwort: wort || null,
         hinweise: ["Transkripte automatisch aus den Videoaufzeichnungen erkannt, nicht amtlich; maßgeblich sind Video und Niederschrift.",
           "Der Ratsatlas wertet die Transkripte nicht aus und nennt keine Inhalte von Redebeiträgen; die Stelle zu einer Vorlage ist nicht zugeordnet."],
         quelle: "Ratstranskripte von Mika Baumeister (bonn.biz, CC BY-NC 4.0), nur verlinkt; Sitzungen: OParl-API Stadt Bonn (CC0)",
@@ -590,7 +593,7 @@ export function createTools({ load, today: fest = null } = {}) {
         if (!e) throw new ToolError(`Kein Bebauungsplan „${a.nummer}“ in den Titeln der Vorlagen.`, { hinweis: hinweise[0] });
         return {
           nummer: e.nr, zuordnung: e.treffer, ortsteile: e.ortsteile,
-          plaene: e.plaene.map((v) => ({ plan: v.name, rechtskraeftig_seit: v.inkraft_seit, plan_pdf: v.plan, begruendung_pdf: v.begruendung, evidenz: "belegt (Stadt Bonn)" })),
+          plaene: e.plaene.map((v) => ({ plan: v.name, rechtskraeftig_seit: v.inkraft_seit, plan_pdf: v.plan && encodeURI(v.plan), begruendung_pdf: v.begruendung && encodeURI(v.begruendung), evidenz: "belegt (Stadt Bonn)" })),
           verfahrensschritte: [...d.schritte.map((st) => {
             const hits = e.vorlagen.filter((v) => (v.schritte || []).includes(st.id));
             return { schritt: st.label, fundstelle: st.fundstelle, status: hits.length ? "abgeleitet" : "soll", vorlagen: hits.map((v) => ({ drucksache: v.drucksache, datum: v.datum })) };

@@ -434,10 +434,12 @@ test("suche_aufzeichnungen: Sitzungen mit Video, Suchlink, keine fremden Adresse
   const t = createTools({ today: "2026-10-18", load: async (p) => (p === "bonn/zeit.json" ? structuredClone(zeit) : FILES[p]) });
   const r = await t.run("suche_aufzeichnungen", { stichwort: "Nordbrücke & Co" });
   assert.deepEqual(r.sitzungen.map((m) => [m.quelle_id, m.aufzeichnung]), [["o/m/10", "https://www.youtube.com/watch?v=abc"]]);
-  assert.equal(r.transkript_suche, "https://bonn.biz/ratstranskripte?q=Nordbr%C3%BCcke%20%26%20Co");
+  assert.equal(r.transkripte, "https://bonn.biz/ratstranskripte");   // Seite als Link, das Suchwort nur als Text
+  assert.equal(r.suchwort, "Nordbrücke & Co");
   assert.match(r.hinweise.join(" "), /nicht amtlich/);
   const ohne = await t.run("suche_aufzeichnungen", {});
-  assert.equal(ohne.transkript_suche, "https://bonn.biz/ratstranskripte");
+  assert.equal(ohne.transkripte, "https://bonn.biz/ratstranskripte");
+  assert.equal(ohne.suchwort, null);
   const l = await t.run("liste_sitzungen", { zeitraum: "vergangene" });
   assert.equal(l.sitzungen.find((m) => m.quelle_id === "o/m/10").aufzeichnung, "https://www.youtube.com/watch?v=abc");
   assert.equal(l.sitzungen.find((m) => m.quelle_id === "o/m/11").aufzeichnung, undefined);

@@ -344,8 +344,10 @@ test("Über und „Was ist neu?“: gestraffter Dialog, eigenes Fenster, ohne Ve
   const about = page.locator("#about");
   assert.ok(await about.isVisible());
   const h3 = await about.locator("h3").allTextContents();
-  assert.ok(h3.includes("Wie sicher sind die Angaben?") && h3.includes("Weitere Seiten") && h3.includes("Informiert bleiben"));
-  assert.ok(!h3.some((t) => /verlässlich|Version 1\.0/.test(t)), "keine Doppelung, Neuigkeiten im eigenen Fenster");
+  assert.ok(h3.includes("Wie verlässlich sind die Angaben?") && h3.includes("Weitere Seiten") && h3.includes("Informiert bleiben"));
+  // eine Überschrift zur Verlässlichkeit, im Wortlaut wie die Kachel im Menü „Über“ (Prüfung November 2026, Nr. 42)
+  assert.equal(h3.filter((t) => /verlässlich|Wie sicher/.test(t)).length, 1, "keine Doppelung");
+  assert.ok(!h3.some((t) => /Version 1\.0/.test(t)), "Neuigkeiten im eigenen Fenster");
   assert.equal(await about.locator('a[href="https://paderta.com/"]').count(), 1);
   assert.deepEqual(await axe(page), []);
   await about.locator("[data-neu]").click();
@@ -495,6 +497,46 @@ test("Content-Security-Policy aktiv: Start, Gebiet, Vorgang, Wer entscheidet und
   await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
   await page.goto(SITE + "thema/verkehr-und-mobilitaet/", { waitUntil: "networkidle" });
   assert.deepEqual([...meldungen, ...(await page.evaluate(() => window.__csp || []))], []);
+  await page.close();
+});
+
+test("Tastatur und Verlauf: Suchmenü nicht beim Fokus, Kartenflächen keine Tab-Stopps, Zurück schließt den Vorgang", async () => {
+  // Prüfung November 2026 (Nr. 13, 14, 15, 41)
+  const page = await open("?gebiet=ortsteil:endenich&suche=gebiet");
+  const suche = () => page.evaluate(() => !document.querySelector("#mega-suche").hidden);
+  await page.locator("#q").focus();
+  assert.equal(await suche(), false, "Fokus allein öffnet das Suchmenü nicht");
+  await page.keyboard.press("ArrowDown");
+  assert.equal(await suche(), true);
+  assert.ok(await page.evaluate(() => !!document.activeElement.closest("#mega-suche")), "Fokus im Suchmenü");
+  await page.keyboard.press("Escape");
+  assert.equal(await suche(), false);
+  // Flächen und Punkte der Karte sind nicht in der Tab-Reihenfolge, Sammelpunkte tragen einen Namen
+  const karte = await page.evaluate(() => ({
+    pfade: [...document.querySelectorAll("#map path.leaflet-interactive")].filter((e) => e.getAttribute("tabindex") !== "-1").length,
+    sammel: document.querySelector("#map .marker-cluster")?.textContent || "",
+  }));
+  assert.equal(karte.pfade, 0);
+  assert.match(karte.sammel, /Vorlagen an dieser Stelle/);
+  // Vorgang öffnen legt einen Verlaufseintrag an; Zurück schließt ihn, Vor öffnet ihn wieder
+  await page.locator("#papers li button").first().click();
+  await page.waitForFunction(() => document.querySelector("#detail-heading").textContent === "Vorgang");
+  const ref = await page.evaluate(() => decodeURIComponent(location.hash.slice(1)));
+  assert.equal(await page.getAttribute('[data-close="panel-detail"]', "aria-label"), "Vorgang einklappen");
+  await page.goBack();
+  await page.waitForFunction(() => document.querySelector("#detail-heading").textContent === "Los geht's");
+  assert.equal(await page.evaluate(() => location.hash), "");
+  assert.match(page.url(), /gebiet=ortsteil(%3A|:)endenich/);
+  await page.goForward();
+  await page.waitForFunction(() => document.querySelector("#detail-heading").textContent === "Vorgang");
+  assert.equal(await page.evaluate(() => decodeURIComponent(location.hash.slice(1))), ref);
+  // Dialog „Über“ gibt den Fokus an das Menü zurück
+  await page.locator('.menu-btn[data-mega="mega-ueber"]').click();
+  await page.locator("#about-open").click();
+  await page.keyboard.press("Escape");
+  // das Ereignis „close“ des Dialogs folgt erst nach dem Tastendruck
+  await page.waitForFunction(() => document.activeElement.dataset.mega === "mega-ueber");
+  assert.deepEqual(page.errors, []);
   await page.close();
 });
 

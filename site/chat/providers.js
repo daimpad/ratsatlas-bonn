@@ -80,7 +80,12 @@ export async function* sse(body, signal) {
   try {
     for (;;) {
       if (signal?.aborted) throw signal.reason ?? new DOMException("Abgebrochen", "AbortError");
-      const { value, done } = await reader.read();
+      let value, done;
+      try { ({ value, done } = await reader.read()); } catch (e) {
+        if (e?.name === "AbortError" || signal?.aborted) throw e;
+        // Verbindung mitten in der Antwort abgerissen: als Netzwerkfehler melden, nicht als „unerwarteter Fehler“
+        throw new ProviderError("Die Verbindung zum Anbieter ist während der Antwort abgebrochen. Bitte erneut fragen.", { kind: "network" });
+      }
       buf += done ? decoder.decode() : decoder.decode(value, { stream: true });
       const lines = buf.split(/\r?\n/);
       buf = done ? "" : lines.pop();
