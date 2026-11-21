@@ -4,7 +4,7 @@
   "description": "Browser-Prüfung des Ratsatlas Bonn (Playwright, axe-core); nur für den Workflow tests.yml",
   "type": "module",
   "dependencies": {
-    "axe-core": "4.10.2",
-    "playwright": "1.56.1"
+    "axe-core": "4.14.1",
+    "playwright": "1.65.1"
   }
 }
