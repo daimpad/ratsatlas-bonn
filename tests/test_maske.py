@@ -36,6 +36,66 @@ class Maske(unittest.TestCase):
         self.assertFalse(m.offen("vor der Hausnummer 82", "250001"))
         self.assertIsNone(m(None, "261847"))
 
+    def test_aufzaehlungen_haeuser_und_flurstuecke(self):
+        # Prüfung November 2026 (Nr. 5, 28): Formen aus 241240, 240963, 200240 und Flurstücke; gleich in tools.js
+        m = self.m
+        A = "[Hausnummer ausgelassen]"
+        self.assertEqual(m("im Bereich Reichsstraße 12 oder 14-16", "261847"), f"im Bereich Reichsstraße {A}")
+        self.assertEqual(m("Promenadenweg vor den Häusern Nr. 73 - 89", "261847"), f"Promenadenweg vor den {A}")
+        self.assertEqual(m("Ostseestr. 3 + 5, Gotenstr. 7 sowie 9 & 11", "261847"), f"Ostseestr. {A}, Gotenstr. {A}")
+        self.assertEqual(m("Hofstr 12 in Bonn", "261847"), f"Hofstr {A} in Bonn")
+        # schon nach älteren Regeln ausgeblendet (eingecheckte Audits): der Rest der Aufzählung fällt weg
+        self.assertEqual(m(f"Reichsstraße {A} oder 14-16", "261847"), f"Reichsstraße {A}")
+        self.assertEqual(m("Gemarkung Beuel, Flur 3, Flurstück 1234/5 und 77 - Garage", "261847"),
+                         "Gemarkung Beuel, [Flurstück ausgelassen] - Garage")
+        # bleibt: Postleitzahl, Jahr, Plannummer, Liniennummern ohne Straße
+        for t in ["Reichsstraße 2025", "Bebauungsplan Nr. 7923-2 Reichsstraße", "Buslinien 601, 602 oder 603",
+                  f"Kapitelshof {A}, 53229 Bonn"]:
+            self.assertEqual(m(t, "261847"), t)
+            self.assertFalse(m.offen(t, "261847"), t)
+        self.assertTrue(m.offen("Flurstück 12", "261847"))
+        # Gegenprobe (Warnliste): Zahl kurz hinter einem Straßenwort, die keine Regel erfasst
+        self.assertTrue(m.moeglich("Reichsstraße in Höhe 12", "261847"))
+        self.assertFalse(m.moeglich(f"Reichsstraße {A} - Neubau von 12 Wohnungen im 3. Obergeschoss", "261847"))
+        self.assertFalse(m.moeglich("Reichsstraße in Höhe 12", "250001"))
+
+    def test_tsv_dateien_nachziehen(self):
+        # Prüfung November 2026 (Nr. 2): einmalig gezogene Prüfbögen trugen volle Titel; je Zelle, Urteile bleiben
+        with tempfile.TemporaryDirectory() as d:
+            base = Path(d)
+            (base / "bonn").mkdir()
+            (base / "pruef").mkdir()
+            kopf = "nr\tdrucksache\ttitel\tlink\tstrasse\tzahl\turteil\n"
+            zeilen = ("1\t261847\tBürgerantrag: Reichsstraße 12\thttps://x/VO020?VOLFDNR=12\tReichsstraße\t7\trichtig\n"
+                      "2\t250001\tSanierung Reichsstraße 12\thttps://x\tReichsstraße\t7\tfalsch\n")
+            (base / "pruef" / "stichprobe.tsv").write_text(kopf + zeilen)
+            (base / "bonn" / "kurzfassungen.tsv").write_text(kopf + zeilen)
+            self.assertEqual(maske.tsv_offen(base / "pruef" / "stichprobe.tsv", self.m), ["261847"])
+            self.assertEqual(check.tsv_mit_hausnummer(self.m, base), ["bonn/kurzfassungen.tsv (1)", "pruef/stichprobe.tsv (1)"])
+            self.assertEqual(maske.bestand(self.m, base), {"pruef/stichprobe.tsv": 1})
+            neu = (base / "pruef" / "stichprobe.tsv").read_text().splitlines()
+            self.assertEqual(neu[1], "1\t261847\tBürgerantrag: Reichsstraße [Hausnummer ausgelassen]\thttps://x/VO020?VOLFDNR=12\tReichsstraße\t7\trichtig")
+            self.assertEqual(neu[2], zeilen.splitlines()[1])   # andere Drucksache unverändert, „Reichsstraße<Tab>7“ kein Treffer
+            self.assertEqual(maske.bestand(self.m, base), {})   # zweiter Lauf ändert nichts
+            self.assertEqual((base / "bonn" / "kurzfassungen.tsv").read_text(), kopf + zeilen)   # bonn/ prüft check.py
+
+    def test_pruefung_von_kurzfassungen_und_fundstellen(self):
+        with tempfile.TemporaryDirectory() as d:
+            base = Path(d)
+            (base / "ortsteile").mkdir()
+            (base / "kurzfassungen.tsv").write_text("drucksache\tkurzfassung\n261847\tZwischen den Hausnummern 5 und 9 soll geparkt werden.\n"
+                                                    "250001\tDie Verwaltung schlägt einen Radweg vor.\n")
+            self.assertEqual(check.kurzfassungen_mit_hausnummer(base), ["261847"])
+            vorlage = {"reference": "261847", "name": "Bürgerantrag Reichsstraße [Hausnummer ausgelassen]",
+                       "originators": [{"evidence": "Bürgerantrag Reichsstraße 12"}], "responsibility": [], "plans": [],
+                       "superordinated": [], "subordinated": [{"reference": "231681-12 ST", "name": "Stellungnahme Reichsstraße 5"}]}
+            (base / "ortsteile" / "x.json").write_text(json.dumps({"papers": [vorlage]}))
+            (base / "plaene.json").write_text(json.dumps({"plaene": [{"vorlagen": [
+                {"drucksache": "261847", "titel": "Bürgerantrag", "fundstelle": "Bebauungsplan Reichsstraße 12"}]}]}))
+            self.assertEqual(check.felder_mit_hausnummer(self.m, base), ["231681-12 ST", "261847"])
+            (base / "suche.json").write_text(json.dumps({"rows": [["261847", "Reichsstraße in Höhe 12"]]}))
+            self.assertEqual(check.moegliche_hausnummern(self.m, base), ["261847"])
+
     def test_kette_ueber_folgevorlagen(self):
         db = sqlite3.connect(":memory:")
         db.executescript("""CREATE TABLE paper (id TEXT, reference TEXT, paper_type TEXT, name TEXT);
@@ -70,6 +130,9 @@ class BauordnungUndNaturschutz(unittest.TestCase):
                                       "responsibility": [{"kind": "federfuehrend", "name": "67-6 Untere Naturschutzbehörde"}]}))
         self.assertTrue(maske.privat({"amt_name": "56-3 Untere Naturschutzbehörde"}))
         self.assertFalse(maske.privat({"amt_name": "61 Stadtplanungsamt"}))
+        # Prüfung November 2026 (Nr. 28): Fällgenehmigungen für private Bäume auch bei anderer Federführung
+        self.assertTrue(maske.privat({"amt_name": "Bezirksverwaltungsstelle Bonn", "name": "Erteilte Fällgenehmigungen für private Bäume"}))
+        self.assertFalse(maske.privat({"amt_name": "Bezirksverwaltungsstelle Bonn", "name": "Baumfällungen im Stadtwald"}))
         self.assertFalse(maske.privat({"amt_name": "630 Sonstiges"}))
         self.assertFalse(maske.privat({"amt": "67 Amt für Umwelt und Stadtgrün",
                                        "responsibility": [{"kind": "fachlich", "name": "67-6 Untere Naturschutzbehörde"}]}))

@@ -16,6 +16,7 @@ zum Ortsteil. Meldungen sind Hinweise der Einwohnerschaft an die Verwaltung, kei
 Quelle: Stadt Bonn, https://anliegen.bonn.de, Datensatz „Anliegen- und Mängelmelder Open311“ auf opendata.bonn.de,
 Lizenz CC0 1.0."""
 import json
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -191,8 +192,18 @@ def _zaehlen(meldungen):
     for m in meldungen:
         if m.get("gruppe") in z:
             z[m["gruppe"]] += 1
-    z["gesamt"] = sum(z.values())
-    return {k: (v if v >= UNTER else "unter 3") for k, v in z.items()}
+    gesamt = sum(z.values())
+    out = {k: (v if v >= UNTER else "unter 3") for k, v in z.items()}
+    # Summe: ist eine Gruppe verdeckt, ließe sich ihr Wert aus der genauen Summe zurückrechnen (Prüfung November 2026,
+    # Nr. 28: in 5 von 51 Ortsteilen). Dann steht nur die Summe der sichtbaren Gruppen als Untergrenze.
+    sichtbar = sum(v for v in z.values() if v >= UNTER)
+    if gesamt < UNTER:
+        out["gesamt"] = "unter 3"
+    elif sichtbar < gesamt or any(v < UNTER for v in z.values()):
+        out["gesamt"] = f"mindestens {max(sichtbar, UNTER)}"
+    else:
+        out["gesamt"] = gesamt
+    return out
 
 
 def seite(base=None, out=None, heute=None):
@@ -243,6 +254,10 @@ def pruefen(path=None):
     for name, z in gebiete:
         if set(z) - erlaubt:
             befunde.append(f"Mängelmelder {name}: unerwartete Felder {sorted(set(z) - erlaubt)}")
-        if any(not (v == "unter 3" or (isinstance(v, int) and v >= UNTER)) for v in z.values()):
+        ok = lambda k, v: (v == "unter 3" or (isinstance(v, int) and v >= UNTER)
+                           or (k == "gesamt" and isinstance(v, str) and re.fullmatch(r"mindestens \d+", v)))
+        if any(not ok(k, v) for k, v in z.items()):
             befunde.append(f"Mängelmelder {name}: Wert unter {UNTER} nicht gerundet")
+        if isinstance(z.get("gesamt"), int) and any(z.get(g) == "unter 3" for g in GRUPPEN_FOLGE):
+            befunde.append(f"Mängelmelder {name}: genaue Summe neben einer verdeckten Gruppe (rückrechenbar)")
     return befunde

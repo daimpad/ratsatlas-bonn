@@ -2117,8 +2117,10 @@
   // gleiche Regeln wie pipeline/export.slug und publish.has_paper_feed
   const slug = (s) => String(s).toLowerCase().replace(/[äöüß]/g, (c) => ({ ä: "ae", ö: "oe", ü: "ue", ß: "ss" }[c]))
     .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  // Grenze aus index.json (pipeline/publish.fenster: 24 Monate vor dem Datenstand); ältere Exporte ohne den
+  // Schlüssel: ab dem Vorjahr des Datenstands
   const hasPaperFeed = (p) => Boolean(index && dataStand) &&
-    ((p.date || "") >= `${Number(dataStand.slice(0, 4)) - 1}-01-01` || ["in Beratung", "offen"].includes(p.stand));
+    ((p.date || "") >= (index.feeds_ab || `${Number(dataStand.slice(0, 4)) - 1}-01-01`) || ["in Beratung", "offen"].includes(p.stand));
   function subscribeArea() {
     const box = $("#subscribe");
     // nur den Verweis des vorigen Gebiets entfernen; der Feed über ganz Bonn steht fest im Kopf (index.html)

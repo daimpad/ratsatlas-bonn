@@ -21,7 +21,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import config, sprachmodell, volltext
+from . import config, maske, sprachmodell, volltext
 
 API = "https://api.mistral.ai/v1/chat/completions"
 # Fassung 2 (21.10.2026): großes Modell und genauere Anweisung nach der KI-Vorprüfung der ersten Stichprobe
@@ -71,8 +71,10 @@ def strassen():
 
 
 def hausnummer(kurz):
-    """True, wenn die Kurzfassung eine Hausnummer nennt (Datenschutz, CLAUDE.md 5.2)."""
-    if HAUSNUMMER.search(kurz or ""):
+    """True, wenn die Kurzfassung eine Hausnummer nennt (Datenschutz, CLAUDE.md 5.2). Auch „Hausnummer(n) N“,
+    „vor den Häusern N“ und Flurstücke wie in maske.py (Prüfung November 2026, Nr. 1: 57 veröffentlichte Kurzfassungen
+    mit „zwischen den Hausnummern N und M“ blieben unerkannt)."""
+    if HAUSNUMMER.search(kurz or "") or maske.WORT.search(kurz or "") or maske.FLUR.search(kurz or ""):
         return True
     namen = strassen()
     for m in NACH_NAME.finditer(kurz or ""):
@@ -226,7 +228,6 @@ def pruefe(kurz, text, titel=""):
     """Grund, aus dem eine Kurzfassung verworfen wird, oder None."""
     if not kurz:
         return "zu kurz"
-    # Text der Quelle und Hausnummern zuerst: sonst würde ein zu kurzer Entwurf mit ihnen aufbewahrt (_ergebnis)
     if uebernahme(kurz, text, erlaubt=[titel, *namen()]):
         return f"wörtliche Übernahme von mehr als {UEBERNAHME_WOERTER} Wörtern"
     if hausnummer(kurz):
@@ -268,12 +269,14 @@ def _gegenlesen(titel, text, kurz, schluessel):
 
 
 def _ergebnis(kurz, grund):
-    """Felder eines Ergebnisses. Ein verworfener Entwurf wird aufbewahrt, außer er enthält Text der Quelle oder eine
-    Hausnummer (dann wird nichts gespeichert); er erscheint nirgends und dient nur der erneuten Prüfung."""
+    """Felder eines Ergebnisses. Ein verworfener Entwurf wird nicht mehr aufbewahrt, nur der Grund (Prüfung November
+    2026, Nr. 25: der Branch `kurzfassungen` ist öffentlich, 2.861 Entwürfe mit unbelegten Angaben waren dort lesbar).
+    Das Feld `entwurf` bleibt leer bestehen; vorhandene Entwürfe werden beim nächsten Lauf ein letztes Mal geprüft
+    und dann entfernt. Ändern sich die Regeln, entsteht eine verworfene Kurzfassung erst mit einer neuen Fassung
+    (FASSUNG) neu."""
     if not grund:
         return {"kurzfassung": kurz, "verworfen": None, "entwurf": None}
-    aufbewahren = not (grund.startswith("wörtliche Übernahme") or grund.startswith("Hausnummer"))
-    return {"kurzfassung": None, "verworfen": grund, "entwurf": kurz if aufbewahren else None}
+    return {"kurzfassung": None, "verworfen": grund, "entwurf": None}
 
 
 def laden(verzeichnis=None):
@@ -312,8 +315,8 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
         # Sammellisten nichtöffentlicher Punkte teilen meist nur mit, dass es keine gibt: keine Kurzfassung
         if uri in texts and volltext.allowed(p.get("paperType")) and not volltext.sammelliste(p.get("name")):
             papers.setdefault(uri, p)
-    # vorhandene Kurzfassungen der aktuellen Fassung nach den jeweils geltenden Prüfungen neu bewerten, auch
-    # aufbewahrte Entwürfe (verworfen ohne Text der Quelle), damit geänderte Regeln sie wieder zulassen können
+    # vorhandene Kurzfassungen der aktuellen Fassung nach den jeweils geltenden Prüfungen neu bewerten; früher
+    # aufbewahrte Entwürfe werden dabei ein letztes Mal geprüft und entfernt (_ergebnis)
     for r in have.values():
         kurz = r["kurzfassung"] or r.get("entwurf")
         if r.get("fassung", 1) == FASSUNG and kurz and r.get("datei") in texts and r["datei"] not in papers:
@@ -323,6 +326,9 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
             kurz = ohne_kostensatz(glaetten(kurz), main)
             grund = pruefe(kurz, main, (papers.get(r["datei"]) or {}).get("name") or "")
             r.update(_ergebnis(kurz, grund))
+    for r in have.values():   # Entwürfe ohne Text im Zwischenspeicher: ebenfalls nicht länger aufbewahren
+        if r.get("entwurf"):
+            r["entwurf"] = None
     # ältere Fassungen zuerst (so entsteht die neue Stichprobe aus denselben Vorlagen), danach neue Texte, zuletzt
     # gescheiterte Anfragen (höchstens MAX_VERSUCHE; Code-Prüfung 23.10.2026: eine stets scheiternde Anfrage hielt
     # sonst jeden Lauf an derselben Stelle an)
@@ -334,30 +340,46 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
             + [(uri, p) for uri, p in sorted(papers.items())
                if texts[uri]["sha"] in have and not alt(uri) and erneut(uri)])[:MAX_JE_LAUF]
     tokens = [0, 0]
+    lauf = {"gesendet": 0, "beantwortet": 0, "gescheitert": 0, "abbruch": None}
     try:
-        _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tokens)
+        _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tokens, lauf)
     finally:   # bricht der Lauf ab (Zeitgrenze, Fehler), bleibt das Erzeugte erhalten
         _schreiben(base, have)
     ok = [r for r in have.values() if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG]
-    sprachmodell.protokoll(base, "kurzfassungen", MODELL, len(todo), {"ein": tokens[0], "aus": tokens[1]},
-                           sum(1 for uri, p in todo if have.get(texts[uri]["sha"], {}).get("verworfen")))
-    print(f"Kurzfassungen: {len(todo)} angefragt ({tokens[0]} Eingabe-, {tokens[1]} Ausgabe-Tokens), "
+    # Protokoll: tatsächlich gesendete Anfragen; Fehler = gescheiterte Anfragen und verworfene Kurzfassungen (Prüfung
+    # November 2026, Nr. 3: bisher stand dort die Zahl der geplanten Anfragen, auch wenn keine beantwortet wurde)
+    verworfen = sum(1 for uri, p in todo if have.get(texts[uri]["sha"], {}).get("verworfen"))
+    sprachmodell.protokoll(base, "kurzfassungen", MODELL, lauf["gesendet"], {"ein": tokens[0], "aus": tokens[1]},
+                           lauf["gescheitert"] + verworfen)
+    print(f"Kurzfassungen: {len(todo)} geplant, {lauf['gesendet']} gesendet, {lauf['beantwortet']} beantwortet "
+          f"({tokens[0]} Eingabe-, {tokens[1]} Ausgabe-Tokens), "
           f"{len(ok)} vorhanden, {sum(1 for r in have.values() if r.get('verworfen'))} verworfen, "
           f"{sum(1 for r in have.values() if r.get('fehler'))} gescheitert → {base}")
     _stichprobe(base, ok, papers)
+    if lauf["abbruch"] and not lauf["beantwortet"]:
+        # Kein einziges Ergebnis: der Schritt endet mit Fehler, damit der Ausfall auffällt (vom 13. bis 20.11.2026
+        # blieb er acht Tage unbemerkt, weil der Lauf grün endete). Der Bestand ist gesichert.
+        raise SystemExit(f"Kurzfassungen: Lauf ohne Ergebnis beendet ({lauf['abbruch']}); Konto und Schlüssel "
+                         "beim Anbieter prüfen.")
+    if lauf["abbruch"]:
+        print(f"::warning::Kurzfassungen: Lauf vorzeitig beendet ({lauf['abbruch']}) nach "
+              f"{lauf['beantwortet']} beantworteten Anfragen")
 
 
-def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tokens):
+def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tokens, lauf=None):
+    lauf = lauf if lauf is not None else {"gesendet": 0, "beantwortet": 0, "gescheitert": 0, "abbruch": None}
     serie = []   # (sha, Eintrag vorher) der zuletzt in Folge gescheiterten Anfragen
     for i, (uri, p) in enumerate(todo, 1):
         main, _ = volltext.clean(texts[uri]["text"])
         main = re.sub(r"\s+", " ", main).strip()[:MAX_ZEICHEN]
         titel = f"{p.get('name') or ''} (Art der Vorlage: {p.get('paperType') or 'unbekannt'})"
         sha = texts[uri]["sha"]
+        lauf["gesendet"] += 1
         try:
             kurz, usage = anfrage(titel, main, schluessel)
             kurz = ohne_kostensatz(glaetten(kurz if isinstance(kurz, str) else ""), main)
         except Exception as e:   # ein Fehler beim Anbieter hält den Lauf nicht auf
+            lauf["gescheitert"] += 1
             vorher = have.get(sha) or {}
             konto = isinstance(e, urllib.error.HTTPError) and e.code in KONTO_FEHLER
             if konto or len(serie) + 1 >= SERIE:
@@ -368,6 +390,7 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
                         have.pop(alt_sha, None)
                 grund = f"HTTP {e.code}" if konto else f"{SERIE} Anfragen in Folge gescheitert"
                 print(f"  Lauf beendet: {grund} ({type(e).__name__}); die Dokumente werden im nächsten Lauf angefragt", flush=True)
+                lauf["abbruch"] = grund
                 return
             serie.append((sha, dict(vorher) if vorher else None))
             versuche = vorher.get("versuche", 0) + 1 if vorher.get("fassung", 1) == FASSUNG and vorher.get("fehler") else 1
@@ -378,6 +401,7 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
             print(f"  {p['reference']}: Anfrage gescheitert ({type(e).__name__}, Versuch {versuche})", flush=True)
             continue
         serie.clear()
+        lauf["beantwortet"] += 1
         tokens[0] += usage.get("prompt_tokens", 0)
         tokens[1] += usage.get("completion_tokens", 0)
         geaendert = False
@@ -420,7 +444,8 @@ def fuer_seite(verzeichnis=None):
     """Drucksache → Kurzfassung für den Export, nur wenn freigegeben."""
     if not FREIGEGEBEN:
         return {}
-    # Hausnummern auch hier prüfen: die übrigen Prüfungen laufen nur beim Erzeugen (mit Schlüssel)
+    # Hausnummern auch hier prüfen: die übrigen Prüfungen laufen nur beim Erzeugen (mit Schlüssel). Geprüft wird der
+    # geglättete Text, der erscheint („Straße **12**“ wird erst durch das Glätten zu „Straße 12“).
     return {r["drucksache"]: {"text": glaetten(r["kurzfassung"]), "modell": r["modell"], "erzeugt": r["erzeugt"]}
             for r in laden(verzeichnis).values()
-            if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG and not hausnummer(r["kurzfassung"])}
+            if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG and not hausnummer(glaetten(r["kurzfassung"]))}

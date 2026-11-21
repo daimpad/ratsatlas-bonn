@@ -79,9 +79,25 @@ def _atom(feed_id, title, subtitle, self_url, alt_url, entries):
 OPEN = ("in Beratung", "offen")
 
 
+FENSTER_MONATE = 24
+
+
+def fenster(stand, monate=FENSTER_MONATE):
+    """Beginn des gleitenden Fensters für Feeds und Seiten je Vorgang: `monate` vor dem Datenstand (JJJJ-MM-TT).
+    Bis November 2026 galt „ab dem Vorjahr des Datenstands“; die Grenze sprang damit am 1. Januar um ein ganzes
+    Jahr, und rund 2.100 Seiten und 2.500 Feeds wären zum 01.01.2027 auf einmal entfallen (Prüfung November 2026,
+    Nr. 10). Mit dem gleitenden Fenster entfallen abgeschlossene Vorgänge einzeln, 24 Monate nach ihrem Datum."""
+    d = date.fromisoformat((stand or date.today().isoformat())[:10])
+    m = d.year * 12 + d.month - 1 - monate
+    jahr, monat = divmod(m, 12)
+    tag = min(d.day, [31, 29 if jahr % 4 == 0 and (jahr % 100 or jahr % 400 == 0) else 28, 31, 30, 31, 30, 31, 31,
+                      30, 31, 30, 31][monat])
+    return date(jahr, monat + 1, tag).isoformat()
+
+
 def has_paper_feed(p, since):
-    """Feed je Vorlage nur, wo sich noch etwas ändern kann: Vorlagen ab dem Vorjahr des Datenstands
-    oder noch nicht abgeschlossen (die Seite wendet dieselbe Regel an)."""
+    """Feed je Vorlage nur, wo sich noch etwas ändern kann: Vorlagen der letzten 24 Monate vor dem Datenstand
+    (fenster) oder noch nicht abgeschlossen (die Seite liest die Grenze aus index.json, Schlüssel `feeds_ab`)."""
     return (p["date"] or "") >= since or p["stand"] in OPEN
 
 

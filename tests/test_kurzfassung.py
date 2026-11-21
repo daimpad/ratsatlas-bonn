@@ -50,11 +50,20 @@ class KurzfassungTest(unittest.TestCase):
         self.assertEqual(kurzfassung.pruefe(kurz, text), "Zahl nicht im Text: 2023")
         self.assertIsNone(kurzfassung.pruefe(kurz, text, "Controllingbericht 2023 der Beethovenhalle"))
 
-    def test_entwurf_nur_ohne_text_der_quelle(self):
+    def test_entwurf_wird_nicht_aufbewahrt(self):
+        # Prüfung November 2026, Nr. 25: verworfene Entwürfe standen im öffentlichen Branch kurzfassungen
         self.assertEqual(kurzfassung._ergebnis("Gut.", None), {"kurzfassung": "Gut.", "verworfen": None, "entwurf": None})
-        self.assertEqual(kurzfassung._ergebnis("Mit 99 Bäumen.", "Zahl nicht im Text: 99")["entwurf"], "Mit 99 Bäumen.")
-        self.assertIsNone(kurzfassung._ergebnis("Kopie.", "wörtliche Übernahme von mehr als 6 Wörtern")["entwurf"])
-        self.assertIsNone(kurzfassung._ergebnis("Weg 3.", "Hausnummer genannt")["entwurf"])
+        self.assertEqual(kurzfassung._ergebnis("Mit 99 Bäumen.", "Zahl nicht im Text: 99"),
+                         {"kurzfassung": None, "verworfen": "Zahl nicht im Text: 99", "entwurf": None})
+
+    def test_hausnummer_als_wort_und_flurstueck(self):
+        # Prüfung November 2026, Nr. 1: „zwischen den Hausnummern 51 und 61“ blieb unerkannt (57 Kurzfassungen)
+        for t in ["Der Gehweg an der Meckenheimer Straße zwischen den Hausnummern 51 und 61 soll breiter werden.",
+                  "Vor Haus-Nr. 12 soll ein Baum gefällt werden.", "Die Markierung vor den Häusern Nr. 73 - 89 entfällt.",
+                  "Es geht um das Grundstück Gemarkung Beuel, Flur 3, Flurstück 1234."]:
+            self.assertTrue(kurzfassung.hausnummer(t), t)
+            self.assertEqual(kurzfassung.pruefe(t, TEXT), "Hausnummer genannt")
+        self.assertFalse(kurzfassung.hausnummer("Die Verwaltung nennt keine Hausnummern und keine Häuser."))
 
     def test_pruefe(self):
         gut = "Der Spielplatz in Endenich soll neue Geräte und bessere Wege bekommen. Bezahlt wird das aus dem Haushalt der Stadt."
@@ -168,17 +177,45 @@ class KurzfassungTest(unittest.TestCase):
             with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}), \
                     mock.patch.object(config, "TEXTE", texte), mock.patch.object(config, "PAPERS", papers):
                 for _ in range(3):
-                    kurzfassung.erzeugen(out, anfrage=anfrage)
+                    # Prüfung November 2026, Nr. 3: ein Lauf ohne Ergebnis endet mit Fehler, nicht stillschweigend
+                    with self.assertRaises(SystemExit) as ende:
+                        kurzfassung.erzeugen(out, anfrage=anfrage)
+                    self.assertIn("HTTP 401", str(ende.exception))
                 self.assertEqual(len(calls), 3)                      # je Lauf eine Anfrage, dann Ende
                 self.assertEqual(kurzfassung.laden(out), {})         # kein Dokument als gescheitert vermerkt
+                zeilen = (out / "laeufe.tsv").read_text().splitlines()
+                self.assertEqual(zeilen[-1].split("\t")[3:], ["1", "0", "0", "1"])   # 1 gesendet, 0 Tokens, 1 Fehler
                 fehler[0] = TimeoutError("Netz")                     # Serie gewöhnlicher Fehler
                 calls.clear()
-                kurzfassung.erzeugen(out, anfrage=anfrage)
+                with self.assertRaises(SystemExit):
+                    kurzfassung.erzeugen(out, anfrage=anfrage)
                 self.assertEqual(len(calls), kurzfassung.SERIE)
                 self.assertEqual(kurzfassung.laden(out), {})
                 fehler[0] = None                                     # Schlüssel wieder gültig: alle werden angefragt
                 kurzfassung.erzeugen(out, anfrage=anfrage)
             self.assertEqual(sum(1 for r in kurzfassung.laden(out).values() if r["kurzfassung"] == gut), n)
+
+    def test_abbruch_nach_ergebnissen_ist_nur_ein_hinweis(self):
+        # Kontingent mitten im Lauf erschöpft (429): Bestand bleibt, der Schritt endet ohne Fehler
+        import urllib.error
+        with tempfile.TemporaryDirectory() as d:
+            texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"
+            texte.write_text("\n".join(json.dumps({"uri": f"f{i}", "sha": f"s{i}", "text": TEXT}) for i in range(4)))
+            papers.write_text("\n".join(json.dumps({"reference": f"26000{i}", "name": f"Spielplatz Nr{i}",
+                                                    "paperType": "Antrag", "mainFile": {"id": f"f{i}"}}) for i in range(4)))
+            gut = "Der Spielplatz in Endenich soll neue Geräte und bessere Wege bekommen, bezahlt von der Stadt."
+            calls = []
+            def anfrage(titel, text, key):
+                calls.append(1)
+                if len(calls) > 2:
+                    raise urllib.error.HTTPError("u", 429, "Too Many Requests", {}, None)
+                return gut, {"prompt_tokens": 10, "completion_tokens": 5}
+            out = Path(d) / "kurz"
+            with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}), \
+                    mock.patch.object(config, "TEXTE", texte), mock.patch.object(config, "PAPERS", papers):
+                kurzfassung.erzeugen(out, anfrage=anfrage)
+            self.assertEqual(sum(1 for r in kurzfassung.laden(out).values() if r["kurzfassung"] == gut), 2)
+            self.assertEqual((out / "laeufe.tsv").read_text().splitlines()[-1].split("\t")[3:], ["3", "20", "10", "1"])
 
     def test_erzeugen_nur_neue_und_verwirft_auszuege(self):
         with tempfile.TemporaryDirectory() as d:

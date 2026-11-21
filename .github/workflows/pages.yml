@@ -419,13 +419,16 @@ jobs:
             git init -q -b kurzfassungen _kurzfassungen
           fi
           # Auch nach einem Fehler (Kontoausfall, Netz) sichern, was bis dahin entstanden ist
+          # Der Schritt endet nach dem Sichern mit dem Ergebnis der Erzeugung: Ein Lauf ohne ein einziges Ergebnis
+          # (Schlüssel, Guthaben, Limit) ist ein Fehler und kein Hinweis (Prüfung November 2026, Nr. 3)
           rc_k=0; python -m pipeline kurzfassungen || rc_k=$?
-          [ "$rc_k" -eq 0 ] || echo "::warning::Kurzfassungen mit Fehler beendet ($rc_k)"
+          [ "$rc_k" -eq 0 ] || echo "::error::Kurzfassungen mit Fehler beendet ($rc_k); der Bestand wird gesichert"
           cd _kurzfassungen
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          if git diff --cached --quiet; then echo "unverändert"; exit 0; fi
+          if git diff --cached --quiet; then echo "unverändert"; exit "$rc_k"; fi
           git commit -q -m "Kurzfassungen $(date -u +%F)"
           git push -q "$url" HEAD:kurzfassungen
+          exit "$rc_k"
         timeout-minutes: 120

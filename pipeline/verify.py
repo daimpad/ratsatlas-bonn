@@ -209,6 +209,14 @@ def package(target=None, archive=None):
     """Zip-Paket der Ergebnisse unter data/export/allris-bonn-export.zip."""
     target = Path(target or config.EXPORT / "allris-bonn-export.zip")
     archive = Path(archive or config.BAUSTELLEN_ARCHIV)
+    # Letzter Schritt vor dem Zusammenstellen der Seite: TSV-Dateien, die nach dem Export entstanden sind (Soll-Audit,
+    # Kandidaten, Verifikation), ebenfalls ohne Hausnummern geschützter Drucksachen (Prüfung November 2026, Nr. 2)
+    if config.DB.exists():
+        db = sqlite3.connect(config.DB)
+        geaendert = maske.bestand(maske.aus_db(db))
+        db.close()
+        if geaendert:
+            print("Hausnummern in TSV-Dateien nachgezogen:", ", ".join(f"{k} ({n})" for k, n in geaendert.items()))
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("allris-bonn/LIESMICH.txt", PACKAGE_README)
         z.write(config.ROOT / "data" / "LICENSE-DATA.md", "allris-bonn/LICENSE-DATA.md")

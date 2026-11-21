@@ -18,12 +18,17 @@ const EINWOHNER = new Set(["Bürgerantrag § 24 GO - Öffentlich", "Anregungen u
 const EINWOHNER_TITEL = /bürgerantrag|einwohner|anregung|beschwerde/i;
 // höchstens drei Ziffern: Plannummern wie „7923-2“ sind keine Hausnummern
 // Buchstabenzusatz nur als einzelner Buchstabe („12a“, „12 a“), nicht der Anfang des nächsten Wortes („33 und“)
-const NR = String.raw`\d{1,3}(?:\s?[a-zA-Z](?!\p{L}))?(?:\s*(?:-|–|bis|und|u\.|/|,)\s*\d{1,3}(?:\s?[a-zA-Z](?!\p{L}))?)*(?!\d)`;
-const SUFFIX = String.raw`[\p{L}.-]*(?:straße|strasse|str\.|weg|platz|gasse|allee|ring|ufer|damm|pfad|chaussee|hof|markt|graben|berg|feld)`;
+const NR = String.raw`\d{1,3}(?:\s?[a-zA-Z](?!\p{L}))?(?:\s*(?:-|–|bis|und|u\.|oder|sowie|/|,|\+|&)\s*\d{1,3}(?:\s?[a-zA-Z](?!\p{L}))?)*(?!\d)`;
+const SUFFIX = String.raw`[\p{L}.-]*(?:straße|strasse|str\.?|weg|platz|gasse|allee|ring|ufer|damm|pfad|chaussee|hof|markt|graben|berg|feld)(?!\p{L})`;
 export const OHNE_NR = "[Hausnummer ausgelassen]";
-// „Hausnummer 82“, „Haus-Nr. 264“, „(neben Haus-Nr.) 68“ (wie WORT in pipeline/maske.py; ersetzt samt dem Wort,
-// eine schließende Klammer bleibt stehen; 01.11.2026)
-const WORT = new RegExp(String.raw`\b(?:hausnummern?|hausnr\.?|haus-nr\.?|haus\s+nr\.?)\s*(\))?\s*${NR}`, "giu");
+export const OHNE_FLUR = "[Flurstück ausgelassen]";
+// „Hausnummer 82“, „Haus-Nr. 264“, „(neben Haus-Nr.) 68“, „vor den Häusern Nr. 73 - 89“ (wie WORT in pipeline/maske.py;
+// ersetzt samt dem Wort, eine schließende Klammer bleibt stehen; 01.11.2026, ergänzt 21.11.2026)
+const WORT = new RegExp(String.raw`\b(?:hausnummern?|hausnr\.?|haus-nr\.?|haus\s+nr\.?|häusern?(?:\s+nr\.?)?)\s*(\))?\s*${NR}`, "giu");
+// Rest einer Aufzählung hinter einer Auslassung und Flurstücke (wie REST und FLUR in pipeline/maske.py)
+const REST = new RegExp(String.raw`(\[Hausnummer ausgelassen\])\s*(?:-|–|bis|und|u\.|oder|sowie|/|,|\+|&)\s*${NR}`, "giu");
+const FS = String.raw`\d{1,5}(?:\s*/\s*\d{1,4})?`;
+const FLUR = new RegExp(String.raw`\b(?:flur\s+\d{1,3}\s*,?\s*(?:und\s+)?)?flurstücke?n?s?\s*(?:nr\.?\s*)?${FS}(?:\s*(?:,|und|u\.|sowie|-|–|bis)\s*${FS})*`, "giu");
 const STAENDE = ["entschieden", "beraten, ohne Entscheidung", "in Beratung", "offen", "ohne Beratungsfolge"];
 const THEMEN = ["verkehr", "bauen", "umwelt", "bildung", "kinder", "soziales", "kultur", "wirtschaft", "sicherheit", "beteiligung"];
 const KENNZAHLEN = ["einwohner", "unter_18", "ab_65", "miete", "bodenrichtwert", "haltestellen", "kitas", "kita_plaetze_u3", "kita_plaetze_ue3", "hitze", "ueberschwemmung", "wahlbeteiligung"];
@@ -286,7 +291,7 @@ export function createTools({ load, today: fest = null } = {}) {
       const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
       const names = [...new Set(d.places.filter((p) => p.level === "strasse").map((p) => p.name))].sort((a, b) => b.length - a.length).map(esc);
       const rx = new RegExp(String.raw`((?:${[...names, SUFFIX].join("|")})\s+)(?:nr\.?\s*)?${NR}`, "giu");
-      d._mask = (title, type, ref) => (title && (EINWOHNER.has(type) || EINWOHNER_TITEL.test(title) || ew.has(ref)) ? title.replace(rx, `$1${OHNE_NR}`).replace(WORT, (m, klammer) => OHNE_NR + (klammer || "")) : title);
+      d._mask = (title, type, ref) => (title && (EINWOHNER.has(type) || EINWOHNER_TITEL.test(title) || ew.has(ref)) ? title.replace(rx, `$1${OHNE_NR}`).replace(WORT, (m, klammer) => OHNE_NR + (klammer || "")).replace(REST, "$1").replace(FLUR, OHNE_FLUR) : title);
     }
     return d._mask;
   }
@@ -374,7 +379,7 @@ export function createTools({ load, today: fest = null } = {}) {
         einreichende: p.originators.map((o) => ({ name: o.actor, typ: o.actor_type, status: o.derived ? "abgeleitet" : "belegt", fundstelle: mask(o.evidence, p.paper_type, p.reference) })),
         themen: p.themes.map((t) => ({ thema: label[t.theme] ?? t.theme, status: "abgeleitet", methode: t.method, fundstelle: t.evidence, konfidenz: t.confidence })),
         parteien: p.parties,
-        kurzfassung: p.kurzfassung ? { text: p.kurzfassung.text, status: "abgeleitet", modell: p.kurzfassung.modell,
+        kurzfassung: p.kurzfassung ? { text: mask(p.kurzfassung.text, p.paper_type, p.reference), status: "abgeleitet", modell: p.kurzfassung.modell,
           hinweis: "Mit einem Sprachmodell aus dem Text des Dokuments formuliert, kein Zitat. Einzelheiten können ungenau sein, etwa ob etwas beschlossen oder nur vorgeschlagen ist. Maßgeblich ist das Original." } : null,
         orte: p.locations.slice(0, 10).map(locOf(mask, p)),
         orte_gesamt: p.locations.length,

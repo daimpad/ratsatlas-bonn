@@ -119,7 +119,13 @@ class Seite(unittest.TestCase):
             out = Path(d) / "anliegen.json"
             doc = anliegen.seite(d, out)
             self.assertEqual(doc["ortsteile"]["Endenich"], {"Abfall": 4, "Stadtbild und Grün": "unter 3",
-                                                           "Straßen und Verkehr": "unter 3", "gesamt": 5})
+                                                           "Straßen und Verkehr": "unter 3", "gesamt": "mindestens 4"})
+            # Prüfung November 2026 (Nr. 28): die genaue Summe (5) hätte den verdeckten Wert (1) verraten
+            self.assertEqual(anliegen._zaehlen([{"gruppe": "Abfall"}] * 5 + [{"gruppe": "Stadtbild und Grün"}] * 3
+                                               + [{"gruppe": "Straßen und Verkehr"}] * 4)["gesamt"], 12)
+            self.assertEqual(anliegen._zaehlen([{"gruppe": "Abfall"}] * 2 + [{"gruppe": "Stadtbild und Grün"}] * 2)["gesamt"],
+                             "mindestens 3")
+            self.assertEqual(anliegen._zaehlen([{"gruppe": "Abfall"}] * 2)["gesamt"], "unter 3")
             self.assertEqual((doc["meta"]["von"], doc["meta"]["bis"]), ("2026-07-31", "2026-10-28"))
             self.assertEqual(doc["meta"]["unvollstaendig_vor"], "2026-10-28")
             self.assertNotIn("9-2026", out.read_text(encoding="utf-8"))
