@@ -184,6 +184,21 @@ test("Datenschutz: auch Nummern hinter „Hausnummer“, „Haus-Nr.“ und „S
     `Bürgerantrag: Tempo 30 in Höhe der ${OHNE_NR}, vor ${OHNE_NR} und Frongasse ${OHNE_NR} (neben ${OHNE_NR})`);
 });
 
+test("Datenschutz: Aufzählungen, „Häuser Nr.“, Flurstücke und Kurzfassung (Prüfung November 2026)", async () => {
+  // gleiche Regeln wie pipeline/maske.py (tests/test_maske.py): „oder“, „sowie“, „+“, „vor den Häusern Nr.“, Flurstück
+  const files = structuredClone(FILES);
+  files["bonn/suche.json"].rows[0][1] = "Bürgerantrag: Frongasse 12 oder 14-16, vor den Häusern Nr. 73 - 89, Hofstr 3 + 5 (Flur 3, Flurstück 1234/5)";
+  const kurz = { ...VORLAGE, kurzfassung: { text: "Es geht um Bäume an der Frongasse zwischen den Hausnummern 51 und 61.", modell: "m" } };
+  files["bonn/chat/einwohner.json"] = { drucksachen: ["261088"] };
+  files["bonn/chat/vorlagen/2610.json"] = { papers: { 261088: kurz } };
+  const t = createTools({ today: "2026-10-18", load: async (p) => { if (!(p in files)) throw new Error(`HTTP 404 ${p}`); return structuredClone(files[p]); } });
+  const r = await t.run("suche_vorlagen", {});
+  assert.equal(r.treffer.find((x) => x.drucksache === "261749").titel,
+    `Bürgerantrag: Frongasse ${OHNE_NR}, vor den ${OHNE_NR}, Hofstr ${OHNE_NR} ([Flurstück ausgelassen])`);
+  const v = await t.run("hole_vorlage", { drucksache: "261088" });
+  assert.equal(v.kurzfassung.text, `Es geht um Bäume an der Frongasse zwischen den ${OHNE_NR}.`);
+});
+
 test("hole_vorlage: KI-Kurzfassung als abgeleitet gekennzeichnet", async () => {
   const kurz = { ...VORLAGE, kurzfassung: { text: "Es geht um Bäume.", modell: "m" } };
   const t = createTools({ today: "2026-10-18", load: async (p) => structuredClone(p === "bonn/chat/vorlagen/2610.json" ? { papers: { 261088: kurz } } : FILES[p]) });

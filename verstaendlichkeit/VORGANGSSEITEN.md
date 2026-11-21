@@ -4,7 +4,7 @@ Grundlage: Phase 0, `phase0/BERICHT.md`, Abschnitt 4 (Option 4, gestufte Einfüh
 
 ## Entscheidungen des Auftraggebers (09.11.2026)
 
-- Umfang Stufe 1: Regel der Vorgangsfeeds – Vorlagen ab dem 1. Januar des Vorjahres des Datenstands oder noch „offen“ bzw. „in Beratung“.
+- Umfang Stufe 1: Regel der Vorgangsfeeds – Vorlagen ab dem 1. Januar des Vorjahres des Datenstands oder noch „offen“ bzw. „in Beratung“. Seit 21.11.2026 gleitend: Vorlagen der letzten 24 Monate vor dem Datenstand (`publish.fenster`, Schlüssel `feeds_ab` in `index.json`). Die alte Grenze sprang am 1. Januar um ein Jahr; zum 01.01.2027 wären rund 2.100 Seiten und 2.500 Feeds auf einmal entfallen (Prüfung November 2026, Nr. 10). Abgeschlossene Vorgänge entfallen nun einzeln, 24 Monate nach ihrem Datum.
 - Vorlagen aus der Einwohnerschaft (Bürgeranträge, Anregungen und Beschwerden, Einwohnerfragen, Bürgerbriefe) und alle mit ihnen verbundenen Vorlagen erhalten keine Seite (Kette wie `chat.einwohner`, ohne Bauordnung und Naturschutz; deren Titel sind maskiert).
 
 ## Umsetzung

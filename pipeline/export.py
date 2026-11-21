@@ -103,7 +103,17 @@ def _paper_detail(db, pid):
     d["steps"] = [{k: v for k, v in s.items() if v not in (None, [], False)} for s in proc.steps(d)]
     d["soll"] = soll.lookup(db, p["reference"])
     if p["reference"] in _kurzfassungen():
-        d["kurzfassung"] = _kurzfassungen()[p["reference"]]
+        # bei geschützten Drucksachen zusätzlich dieselbe Auslassung wie im Titel (kurzfassung.hausnummer hat
+        # Kurzfassungen mit Hausnummer schon verworfen; die Maske kennt darüber hinaus alle Straßennamen)
+        k = _kurzfassungen()[p["reference"]]
+        d["kurzfassung"] = {**k, "text": m(k["text"], p["reference"])}
+    # Fundstellen sind Ausschnitte des Titels: dieselbe Auslassung wie im Titel (Prüfung November 2026, Nr. 6:
+    # „Bebauungsplan …allee 41“ und „…str. 1 AZ: …“ standen neben dem ausgeblendeten Titel). Erst hier, damit
+    # Themen, Parteien und Schritte mit denselben Angaben arbeiten wie bisher.
+    for feld in ("originators", "responsibility", "plans"):
+        for x in d[feld]:
+            if x.get("evidence"):
+                x["evidence"] = m(x["evidence"], p["reference"])
     return d
 
 
@@ -151,6 +161,13 @@ def export():
     (config.EXPORT / "glossar.json").write_text(json.dumps(glossar.glossar(), ensure_ascii=False, indent=1) + "\n")
     export_pilot()
     export_all()
+    # Alle TSV-Dateien unter data/export (Audits, einmalig gezogene Prüfbögen) ohne Hausnummern und Flurstücke
+    # geschützter Drucksachen: sie liegen auf der Seite und im Datenpaket (Prüfung November 2026, Nr. 2)
+    db = sqlite3.connect(config.DB)
+    geaendert = maske.bestand(maske.aus_db(db))
+    db.close()
+    if geaendert:
+        print("Hausnummern in TSV-Dateien nachgezogen:", ", ".join(f"{k} ({n})" for k, n in geaendert.items()))
 
 
 def _meta(db, stable=False, **extra):
@@ -185,7 +202,7 @@ def export_all():
     cache = {}
     sources = [dict(r) for r in db.execute("SELECT * FROM source")]
     stand = next((s["retrieved_at"] for s in sources if s["name"] == "oparl-bonn"), None) or ""
-    since = f"{int((stand or datetime.now(timezone.utc).isoformat())[:4]) - 1}-01-01"   # Vorjahr des Datenstands
+    since = publish.fenster(stand or datetime.now(timezone.utc).isoformat())   # 24 Monate vor dem Datenstand
     # Seiten je Vorgang (vorgangsseiten.py, publish.has_page): Feld „seite“ in den Gebietsdateien
     einwohner = set(chat.einwohner(maske.vorlagen(db)))
 
@@ -282,7 +299,8 @@ def export_all():
     kurz = _kurzfassungen()
     if kurz:
         _write_tsv(out / "kurzfassungen.tsv", KURZ_COLUMNS,
-                   [(ref, k["text"], k["modell"], k["erzeugt"], KURZ_HINWEIS) for ref, k in sorted(kurz.items())])
+                   [(ref, _maske(db)(k["text"], ref), k["modell"], k["erzeugt"], KURZ_HINWEIS)
+                    for ref, k in sorted(kurz.items())])
     publish.write_dcat(out / "dcat.jsonld", min(p["date"] for p in cache.values() if p["date"]),
                        stand[:10] or datetime.now(timezone.utc).date().isoformat(), kurzfassungen=bool(kurz))
     n_shards = chat.write_chat(out / "chat", db, cache, meetings, sources, _meta(db, True))
@@ -315,6 +333,7 @@ def export_all():
     # Übersichtskarte: Vorlagen der letzten zwölf Monate und auffälliges Thema je Gebiet
     gebietszahlen.annotate(index, areas, cache, stand or datetime.now(timezone.utc).isoformat())
     index["aktuell"] = _aktuell(cache, home, names, meetings, heute)
+    index["feeds_ab"] = since   # Grenze für Feeds und Seiten je Vorgang (publish.fenster); die Seite liest sie hier
     _dump(out / "index.json", {"meta": _meta(db), **index})
     db.close()
     print(f"Bonn: {len(index['ortsteile'])} Ortsteile, {len(index['bezirke'])} Bezirke, "
@@ -613,10 +632,10 @@ def plan_audit_rows(db, where="", args=()):
         ortsteile = sorted({r[0] for n in names for r in db.execute(
             "SELECT l.ortsteil FROM paper_location pl JOIN location l ON l.id = pl.location_id "
             "WHERE pl.paper_id = ? AND pl.method = 'bebauungsplan' AND l.description = ?", (pid, f"Bebauungsplan {n}"))})
-        back = "; ".join(f"{e} ({m}, {ot or 'ohne Ortsteil'})" for e, m, ot in db.execute(
+        back = "; ".join(f"{_maske(db)(e, ref)} ({m}, {ot or 'ohne Ortsteil'})" for e, m, ot in db.execute(
             "SELECT DISTINCT pp.evidence, pp.method, l.ortsteil FROM plan_precedence pp JOIN location l ON l.id = pp.location_id "
             "WHERE pp.paper_id = ? ORDER BY 1, 3", (pid,)))
-        out.append([ref, _maske(db)(name, ref), nr, ev, match, "; ".join(names) or "nicht im Datensatz",
+        out.append([ref, _maske(db)(name, ref), nr, _maske(db)(ev, ref), match, "; ".join(names) or "nicht im Datensatz",
                     "; ".join(sorted({f["properties"]["inkraft_seit"] or "" for f in hits})), "; ".join(ortsteile),
                     CONFIDENCE.get(match, "–"), back,
                     "ungeprüft" if hits else "kein rechtskräftiger Plan (Verfahren oder aufgehoben)"])

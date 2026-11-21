@@ -1,7 +1,7 @@
 """Statische Seite je Vorgang (vorgang/<drucksache>/), damit Suchmaschinen einzelne Vorlagen finden.
 
 Umfang (Entscheidungen des Auftraggebers 09.11.2026, Phase 0 „Verständlichkeit“, Abschnitt 4): dieselbe Regel wie die
-Vorgangsfeeds (Vorlagen ab dem Vorjahr des Datenstands oder noch offen bzw. in Beratung), ohne Vorlagen aus der
+Vorgangsfeeds (Vorlagen der letzten 24 Monate vor dem Datenstand, publish.fenster, oder noch offen bzw. in Beratung), ohne Vorlagen aus der
 Einwohnerschaft und ihre verbundenen Vorlagen. Der Export setzt dafür das Feld „seite“ (export.export_all); die Seite
 der Karte zeigt denselben Link.
 

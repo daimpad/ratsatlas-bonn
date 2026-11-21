@@ -1,9 +1,10 @@
 """Prüfung: Kennzahlen gegen den Phase-0-Bericht, Verknüpfungsquote, Datenschutz."""
+import csv
 import json
 import re
 import sqlite3
 
-from . import actors, besetzung, config, kontext, maske
+from . import actors, besetzung, config, kontext, kurzfassung, maske
 
 # Werte aus phase0/BERICHT_phase0.md (Abruf 17.10.2026)
 PHASE0 = {
@@ -112,13 +113,30 @@ def check():
 
     print("\nDatenschutz")
     print("Orte mit Hausnummer in Straße oder Beschreibung:", len(with_number), with_number[:5])
-    offen = titel_mit_hausnummer(maske.aus_db(db))
+    m = maske.aus_db(db)
+    offen = titel_mit_hausnummer(m)
     print("Titel aus Einwohnerschaft, Bauordnung und Naturschutz mit Hausnummer in Suche und GeoJSON:", len(offen), offen[:5])
+    # Prüfung November 2026 (Nr. 1, 2, 5, 6): auch Kurzfassungen, Fundstellen und alle TSV-Dateien; dazu eine
+    # gröbere Gegenprobe als Warnliste, weil die Regeln ihre eigenen Lücken nicht finden
+    kurz = kurzfassungen_mit_hausnummer()
+    print("Kurzfassungen mit Hausnummer:", len(kurz), kurz[:5])
+    felder = felder_mit_hausnummer(m)
+    print("Titel und Fundstellen mit Hausnummer in Gebietsdateien und Planregister:", len(felder), felder[:5])
+    tsv = tsv_mit_hausnummer(m)
+    print("TSV-Dateien mit Hausnummer geschützter Drucksachen:", len(tsv), tsv[:5])
+    warn = moegliche_hausnummern(m)
+    print("Warnliste (Zahl kurz hinter Straßenwort oder Auslassung, bitte ansehen):", len(warn), warn[:20])
     db.close()
     if with_number:
         raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Ortsangaben (CLAUDE.md 5.2).")
     if offen:
         raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Titeln aus Einwohnerschaft, Bauordnung oder Naturschutz (maske.py).")
+    if kurz:
+        raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Kurzfassungen (kurzfassung.hausnummer).")
+    if felder:
+        raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in Titeln oder Fundstellen der Gebietsdateien (maske.py).")
+    if tsv:
+        raise SystemExit("Prüfung fehlgeschlagen: Hausnummern in TSV-Dateien unter data/export (maske.bestand).")
 
     print("\nBesetzung der Gremien")
     if config.BESETZUNG.exists():
@@ -149,3 +167,52 @@ def titel_mit_hausnummer(m, base=None):
         offen |= {x["properties"]["reference"] for x in json.loads(f.read_text())["features"]
                   if m.offen(x["properties"].get("name"), x["properties"]["reference"])}
     return sorted(offen)
+
+
+def kurzfassungen_mit_hausnummer(base=None):
+    """Drucksachen, deren veröffentlichte Kurzfassung eine Hausnummer nennt (kurzfassungen.tsv)."""
+    path = (base or config.EXPORT / "bonn") / "kurzfassungen.tsv"
+    if not path.exists():
+        return []
+    with open(path, encoding="utf-8", newline="") as f:
+        rows = list(csv.reader(f, delimiter="\t"))[1:]
+    return sorted(r[0] for r in rows if len(r) > 1 and kurzfassung.hausnummer(r[1]))
+
+
+def felder_mit_hausnummer(m, base=None):
+    """Drucksachen, bei denen in einer Gebietsdatei oder im Planregister noch eine Hausnummer steht: Titel der Vorlage
+    und der verbundenen Vorlagen, Fundstellen (evidence) der Einreichenden, der Zuständigkeit und der Plannummern."""
+    base = base or config.EXPORT / "bonn"
+    offen = set()
+    for ordner in ("ortsteile", "bezirke", "ohne-ortsbezug"):
+        for path in sorted((base / ordner).glob("*.json")) if (base / ordner).exists() else ():
+            for p in json.loads(path.read_text()).get("papers", []):
+                ref = p["reference"]
+                texte = [p.get("name")] + [x.get("evidence") for feld in ("originators", "responsibility", "plans")
+                                           for x in p.get(feld) or []]
+                if any(m.offen(t, ref) for t in texte):
+                    offen.add(ref)
+                offen |= {r["reference"] for feld in ("superordinated", "subordinated") for r in p.get(feld) or []
+                          if m.offen(r.get("name"), r["reference"])}
+    if (path := base / "plaene.json").exists():
+        for plan in json.loads(path.read_text()).get("plaene") or []:
+            offen |= {v["drucksache"] for v in plan.get("vorlagen") or []
+                      if m.offen(v.get("fundstelle"), v["drucksache"]) or m.offen(v.get("titel"), v["drucksache"])}
+    return sorted(offen)
+
+
+def tsv_mit_hausnummer(m, base=None):
+    """TSV-Dateien unter data/export (Audits, Prüfbögen, auch bonn/kurzfassungen.tsv), in denen bei einer geschützten
+    Drucksache noch eine Hausnummer oder ein Flurstück steht; je Datei mit der Zahl der Drucksachen."""
+    base = base or config.EXPORT
+    return [f"{path.relative_to(base)} ({len(refs)})" for path in sorted(base.rglob("*.tsv"))
+            if (refs := maske.tsv_offen(path, m))]
+
+
+def moegliche_hausnummern(m, base=None):
+    """Warnliste: ausgeblendete Titel in suche.json, in denen kurz hinter einem Straßenwort oder einer Auslassung noch
+    eine Zahl steht (maske.GROB). Kein Abbruch: die Liste ist zum Ansehen, nicht jede Zahl ist eine Hausnummer."""
+    path = (base or config.EXPORT / "bonn") / "suche.json"
+    if not path.exists():
+        return []
+    return sorted(r[0] for r in json.loads(path.read_text())["rows"] if m.moeglich(r[1], r[0]))

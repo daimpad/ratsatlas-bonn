@@ -77,6 +77,14 @@ class Feeds(unittest.TestCase):
         links = {e.find(ATOM + "id").text: e.find(ATOM + "link[@rel='alternate']").get("href") for e in eintraege}
         self.assertTrue(links["https://www.bonn.sitzung-online.de/oparl/papers/2#vorlage"].endswith("?gebiet=ohne:2026#261900"))
 
+    def test_fenster_gleitet_24_monate(self):
+        # Prüfung November 2026 (Nr. 10): „ab dem Vorjahr“ sprang am 1. Januar um ein Jahr
+        self.assertEqual(publish.fenster("2026-11-20T04:26:20+00:00"), "2024-11-20")
+        self.assertEqual(publish.fenster("2026-12-31"), "2024-12-31")
+        self.assertEqual(publish.fenster("2027-01-01"), "2025-01-01")   # ein Tag weiter, nicht ein Jahr
+        self.assertEqual(publish.fenster("2028-02-29"), "2026-02-28")   # Schalttag
+        self.assertEqual(publish.fenster("2026-03-31", monate=1), "2026-02-28")
+
     def test_feed_je_vorlage_nur_wo_sich_etwas_aendern_kann(self):
         self.assertTrue(publish.has_paper_feed(PAPER, "2025-01-01"))
         alt = {**PAPER, "date": "2020-01-01", "stand": "entschieden"}
