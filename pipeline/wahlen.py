@@ -33,15 +33,37 @@ FLAECHEN = {"wahlbezirke": "https://stadtplan.bonn.de/geojson?OD=4873",
 DATENSAETZE = ["https://opendata.bonn.de/dataset/c6a47ff2-f49c-455e-a7a0-455247539956",   # Wahlergebnisse
                "https://opendata.bonn.de/dataset/3af508a5-4016-4c8d-9828-c84f0630efa1"]   # Wahl- und Stimmbezirke
 ENDUNGEN = (".csv", ".json", ".geojson", ".zip", ".xlsx")
+# Abgerufen wird nur von den Stellen der Stadt und des Landes, nur über https und nur bis MAX_BYTES je Datei: Die Links
+# stammen aus fremden Seiten, das Ergebnis geht in den öffentlichen Branch `quellen` (Prüfung November 2026, Nr. 22:
+# ein Link wie file:///…#download hätte sonst eine Datei des Rechners dorthin kopiert)
+HOSTS = {"wahlen.bonn.de", "opendata.bonn.de", "stadtplan.bonn.de", "www.bonn.de", "www.wahlergebnisse.nrw",
+         "wahlergebnisse.nrw", "www.it.nrw", "webshop.it.nrw.de"}
+MAX_BYTES = 100 * 1024 * 1024
+
+
+def erlaubt(url):
+    """True für https-Adressen der erlaubten Stellen (HOSTS), ohne Zugangsdaten in der Adresse."""
+    try:
+        t = urllib.parse.urlparse(url)
+    except ValueError:
+        return False
+    return t.scheme == "https" and t.hostname in HOSTS and not t.username and not t.password
 
 
 def _laden(url, tries=4, pause=5):
+    if not erlaubt(url):
+        raise RuntimeError(f"{url}: Adresse nicht erlaubt (nur https, nur {', '.join(sorted(HOSTS))})")
     last = None
     for i in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": config.USER_AGENT})
             with urllib.request.urlopen(req, timeout=180) as r:
-                return r.read(), r.geturl(), r.headers.get("Content-Type", "")
+                if not erlaubt(r.geturl()):   # Weiterleitung auf eine andere Stelle
+                    raise RuntimeError(f"Weiterleitung auf {r.geturl()} nicht erlaubt")
+                inhalt = r.read(MAX_BYTES + 1)
+                if len(inhalt) > MAX_BYTES:
+                    raise RuntimeError(f"größer als {MAX_BYTES // (1024 * 1024)} MB")
+                return inhalt, r.geturl(), r.headers.get("Content-Type", "")
         except Exception as err:   # Verbindungsabbrüche kommen vor
             last = err
             time.sleep(pause * (i + 1))
@@ -53,6 +75,8 @@ def _links(seite, basis):
     out = []
     for href in re.findall(r'href="([^"]+)"', seite):
         u = urllib.parse.urljoin(basis, html.unescape(href))
+        if not erlaubt(u):
+            continue
         if urllib.parse.urlparse(u).path.lower().endswith(ENDUNGEN) or "geojson" in u.lower() or "download" in u.lower():
             out.append(u)
     return list(dict.fromkeys(out))
@@ -108,7 +132,8 @@ def rohdaten(ziel=None):
                 text = inhalt.decode("utf-8", "replace")
                 ziele = _links(text, echt) + [urllib.parse.urljoin(echt, h)
                                                for h in re.findall(r'href="(/dataset/[^"]+/resource/[^"/]+)"', text)]
-                seiten += [(u, tiefe + 1) for u in ziele if "wahl" in u.lower() or "/resource/" in u or "stadtplan" in u]
+                seiten += [(u, tiefe + 1) for u in ziele
+                           if erlaubt(u) and ("wahl" in u.lower() or "/resource/" in u or "stadtplan" in u)]
         else:
             ablegen(echt, inhalt, typ, "datei")
         time.sleep(1)

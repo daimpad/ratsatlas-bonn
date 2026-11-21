@@ -36,5 +36,30 @@ class Lesen(unittest.TestCase):
         self.assertEqual((treffer, ohne_str, ohne_nr), (6, 1, 0))
 
 
+class Abruf(unittest.TestCase):
+    """Prüfung November 2026 (Nr. 22): Links aus fremden Seiten nur zu den Stellen der Stadt und des Landes."""
+
+    def test_nur_https_und_erlaubte_stellen(self):
+        for u in ["https://wahlen.bonn.de/wahlen/KW2025/x/opendata.html", "https://stadtplan.bonn.de/geojson?OD=4873",
+                  "https://opendata.bonn.de/dataset/abc/resource/def"]:
+            self.assertTrue(wahlen.erlaubt(u), u)
+        for u in ["file:///etc/passwd#download", "file:///home/runner/work/x/.git/config#wahl-download",
+                  "http://wahlen.bonn.de/x.csv", "https://wahlen.bonn.de.example.org/x.csv",
+                  "https://example.org/wahl/download.csv", "https://user:geheim@wahlen.bonn.de/x.csv",
+                  "ftp://opendata.bonn.de/x.zip", "https://[kaputt/x.csv", "//example.org/x.csv"]:
+            self.assertFalse(wahlen.erlaubt(u), u)
+
+    def test_links_einer_seite_ohne_fremde_ziele(self):
+        seite = ('<a href="/wahlen/KW2025/daten.csv">Ergebnisse</a> <a href="file:///etc/passwd#download">x</a> '
+                 '<a href="https://example.org/wahl/download.zip">y</a> <a href="http://wahlen.bonn.de/alt.csv">z</a>')
+        self.assertEqual(wahlen._links(seite, "https://wahlen.bonn.de/wahlen/KW2025/opendata.html"),
+                         ["https://wahlen.bonn.de/wahlen/KW2025/daten.csv"])
+
+    def test_laden_lehnt_fremde_adresse_ohne_anfrage_ab(self):
+        with self.assertRaises(RuntimeError):
+            wahlen._laden("file:///etc/hostname#download", tries=1, pause=0)
+
+
+
 if __name__ == "__main__":
     unittest.main()
