@@ -534,7 +534,8 @@ test("Tastatur und Verlauf: Suchmenü nicht beim Fokus, Kartenflächen keine Tab
   await page.locator('.menu-btn[data-mega="mega-ueber"]').click();
   await page.locator("#about-open").click();
   await page.keyboard.press("Escape");
-  assert.equal(await page.evaluate(() => document.activeElement.dataset.mega), "mega-ueber");
+  // das Ereignis „close“ des Dialogs folgt erst nach dem Tastendruck
+  await page.waitForFunction(() => document.activeElement.dataset.mega === "mega-ueber");
   assert.deepEqual(page.errors, []);
   await page.close();
 });
