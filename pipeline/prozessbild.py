@@ -268,11 +268,29 @@ def schreibe_bild(t, d, ordner, seiten_url):
     (ordner / f"{name}.svg").write_text(text, encoding="utf-8")
     try:
         import cairosvg
-        cairosvg.svg2png(bytestring=text.encode("utf-8"), write_to=str(ordner / f"{name}.png"), scale=2)
+        png = cairosvg.svg2png(bytestring=text.encode("utf-8"), scale=2)
     except Exception as e:  # ohne Cairo bleibt es beim SVG; die Seite verweist dann nur darauf
         print(f"Zeitleiste als PNG nicht erzeugt ({type(e).__name__}); nur SVG")
         return False
+    (ordner / f"{name}.png").write_bytes(_palette(png))
     return True
+
+
+def _palette(png, farben=64):
+    """PNG mit Farbpalette statt Vollfarbe: Das Bild besteht aus wenigen Flächenfarben und Schrift und bleibt so
+    gleich lesbar, wird aber rund zwei Drittel kleiner. Die Bilder enthalten den Datenstand und ändern sich täglich;
+    zehn Bilder kosteten 2,3 MB je Tag im Branch deploy (Prüfung November 2026, Nr. 39). Ohne Pillow unverändert."""
+    try:
+        import io
+
+        from PIL import Image
+        bild = Image.open(io.BytesIO(png)).convert("RGB").quantize(colors=farben, method=Image.Quantize.MEDIANCUT,
+                                                                 dither=Image.Dither.NONE)
+        aus = io.BytesIO()
+        bild.save(aus, "PNG", optimize=True)
+        return aus.getvalue() if len(aus.getvalue()) < len(png) else png
+    except Exception:
+        return png
 
 
 def _beschreibung(t, d):

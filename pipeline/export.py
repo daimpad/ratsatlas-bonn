@@ -187,6 +187,14 @@ def slug(name):
     return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
 
 
+def _fuer_gebiet(p):
+    """Vorlage für die Gebietsdateien der Seite: `process` nur mit den Feldern, die die Seite daraus liest (Gremium für
+    den Filter, Ergebnis und Rolle für das Glossar). Alles Übrige der Beratungen steht ausführlicher in `steps`; das
+    volle Feld machte rund 10 % der Gebietsdateien aus (Prüfung November 2026, Nr. 40). Der Pilot-Export und die
+    Verarbeitung in der Pipeline behalten das volle Feld."""
+    return {**p, "process": [{"gremium": s["gremium"], "result": s["result"], "role": s["role"]} for s in p["process"]]}
+
+
 def _dump(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
@@ -240,7 +248,7 @@ def export_all():
             f"JOIN paper p ON p.id = pl.paper_id WHERE l.ortsteil = ? {order}", (name,))]
         _dump(out / "ortsteile" / f"{slug(name)}.json",
               {"meta": _meta(db, True, ortsteil=name, stadtbezirk=bezirk, count=len(ids)),
-               "papers": [detail(i) for i in ids]})
+               "papers": [_fuer_gebiet(detail(i)) for i in ids]})
         index["ortsteile"].append({"name": name, "slug": slug(name), "stadtbezirk": bezirk,
                                    "count": len(ids), "bbox": bbox(ot)})
         areas[f"ortsteil:{slug(name)}"] = ids
@@ -255,7 +263,7 @@ def export_all():
             f"ON l2.id = pl2.location_id WHERE l2.ortsteil IS NOT NULL AND l2.stadtbezirk = ?) {order}",
             (name, name))]
         _dump(out / "bezirke" / f"{slug(name)}.json",
-              {"meta": _meta(db, True, stadtbezirk=name, count=len(ids)), "papers": [detail(i) for i in ids]})
+              {"meta": _meta(db, True, stadtbezirk=name, count=len(ids)), "papers": [_fuer_gebiet(detail(i)) for i in ids]})
         index["bezirke"].append({"name": name, "slug": slug(name), "count": len(ids), "bbox": bbox(bz)})
         areas[f"bezirk:{slug(name)}"] = ids
         names[f"bezirk:{slug(name)}"] = f"Stadtbezirk {name}, ohne genaueren Ort"
@@ -271,7 +279,7 @@ def export_all():
             f"SELECT p.id FROM paper p WHERE substr(p.date, 1, 4) = ? AND p.id NOT IN ({placed}) {order}",
             (year,))]
         _dump(out / "ohne-ortsbezug" / f"{year}.json",
-              {"meta": _meta(db, True, jahr=year, count=len(ids)), "papers": [detail(i) for i in ids]})
+              {"meta": _meta(db, True, jahr=year, count=len(ids)), "papers": [_fuer_gebiet(detail(i)) for i in ids]})
         index["ohne_ortsbezug"].append({"jahr": year, "count": len(ids)})
         areas[f"ohne:{year}"] = ids
         names[f"ohne:{year}"] = f"stadtweit / ohne Ortsbezug {year}"

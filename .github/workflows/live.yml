@@ -148,6 +148,10 @@ jobs:
           kopf https://bonn.ratsatlas.de/ Strict-Transport-Security
           # Schutz vor dem Einbetten der Seite mit dem Feld für API-Schlüssel (frame-ancestors wirkt nur als Kopfzeile)
           kopf https://bonn.ratsatlas.de/ Content-Security-Policy
+          # Große Datendateien sollen komprimiert ausgeliefert werden: vorlagen.geojson ging mit 17,6 MB statt 1,7 MB
+          # hinaus (Prüfung November 2026, Nr. 20; wie die Kopfzeilen eine Einstellung in Plesk)
+          if curl -fsS --retry 3 --retry-delay 10 -H 'Accept-Encoding: gzip, br' -D - -o /dev/null https://bonn.ratsatlas.de/data/export/bonn/vorlagen.geojson | tr -d '\r' | grep -qi '^content-encoding:'; then echo "ok  vorlagen.geojson komprimiert"
+          else echo "::warning::vorlagen.geojson wird unkomprimiert ausgeliefert"; fi
           # www.bonn.ratsatlas.de soll auf die Hauptadresse weiterleiten (Hinweis; Prüfung November 2026, Nr. 21)
           www=$(curl -sS --retry 3 --retry-delay 10 -o /dev/null -w '%{http_code}' https://www.bonn.ratsatlas.de/ || true)
           case "$www" in 301|308) echo "ok  www leitet weiter ($www)";; *) echo "::warning::www.bonn.ratsatlas.de antwortet mit ${www:-ohne Antwort} statt mit einer Weiterleitung";; esac

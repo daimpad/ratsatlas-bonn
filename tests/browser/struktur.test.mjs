@@ -54,6 +54,7 @@ test("Steckbrief: Endenich (zwei Bezirke), Beuel-Mitte (geteilt), ganz Bonn mit 
     await page.locator('.toggle[data-panel="panel-list"]').click();
     await page.waitForSelector("#struktur-box:not([hidden])");
     await page.evaluate(() => { document.querySelector("#struktur-box").open = true; });
+    await page.waitForSelector("#struktur-box table");   // die Daten laden erst beim Aufklappen (Prüfung November 2026, Nr. 38)
     return page.locator("#struktur-box");
   };
   await page.goto(SITE + "?gebiet=ortsteil:endenich", { waitUntil: "networkidle" });

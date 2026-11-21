@@ -117,6 +117,10 @@ class Prozessbild(unittest.TestCase):
             self.assertEqual(png, (Path(tmp) / "kultur-zeitleiste.png").exists())
             if png:
                 self.assertEqual((Path(tmp) / "kultur-zeitleiste.png").read_bytes()[:4], b"\x89PNG")
+                # Prüfung November 2026 (Nr. 39): Farbpalette statt Vollfarbe, damit das täglich neue Bild klein bleibt
+                roh = (Path(tmp) / "kultur-zeitleiste.png").read_bytes()
+                self.assertEqual(roh[25], 3, "Farbtyp 3 = Palette")
+                self.assertLessEqual(len(prozessbild._palette(roh)), len(roh))
 
 
 if __name__ == "__main__":
