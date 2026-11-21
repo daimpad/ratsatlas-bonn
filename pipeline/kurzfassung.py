@@ -253,7 +253,9 @@ def _anfrage(titel, text, schluessel, tries=4, system=ANWEISUNG, zusatz=""):
         try:
             with urllib.request.urlopen(req, timeout=120) as r:
                 d = json.load(r)
-            return d["choices"][0]["message"]["content"].strip(), d.get("usage") or {}
+            return sprachmodell.antworttext(d), d.get("usage") or {}
+        except sprachmodell.AntwortFormat:   # andere Form der Antwort: Wiederholen hilft nicht
+            raise
         except urllib.error.HTTPError as e:
             if e.code in KONTO_FEHLER[:3] or i == tries - 1:   # Schlüssel, Zahlung, Rechte: Wiederholen hilft nicht
                 raise
@@ -359,8 +361,10 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
     if lauf["abbruch"] and not lauf["beantwortet"]:
         # Kein einziges Ergebnis: der Schritt endet mit Fehler, damit der Ausfall auffällt (vom 13. bis 20.11.2026
         # blieb er acht Tage unbemerkt, weil der Lauf grün endete). Der Bestand ist gesichert.
-        raise SystemExit(f"Kurzfassungen: Lauf ohne Ergebnis beendet ({lauf['abbruch']}); Konto und Schlüssel "
-                         "beim Anbieter prüfen.")
+        rat = ("der Anbieter antwortet in einer anderen Form (vermutlich ein anderes Modell hinter dem Namen "
+               f"{MODELL}); über das Modell entscheidet der Auftraggeber" if lauf.get("form")
+               else "Konto und Schlüssel beim Anbieter prüfen")
+        raise SystemExit(f"Kurzfassungen: Lauf ohne Ergebnis beendet ({lauf['abbruch']}); {rat}.")
     if lauf["abbruch"]:
         print(f"::warning::Kurzfassungen: Lauf vorzeitig beendet ({lauf['abbruch']}) nach "
               f"{lauf['beantwortet']} beantworteten Anfragen")
@@ -382,15 +386,17 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
             lauf["gescheitert"] += 1
             vorher = have.get(sha) or {}
             konto = isinstance(e, urllib.error.HTTPError) and e.code in KONTO_FEHLER
-            if konto or len(serie) + 1 >= SERIE:
+            form = isinstance(e, sprachmodell.AntwortFormat)   # betrifft jede Anfrage: Lauf sofort beenden
+            if konto or form or len(serie) + 1 >= SERIE:
                 for alt_sha, v in serie:   # die Serie zählt nicht als Fehler der einzelnen Dokumente
                     if v:
                         have[alt_sha] = v
                     else:
                         have.pop(alt_sha, None)
-                grund = f"HTTP {e.code}" if konto else f"{SERIE} Anfragen in Folge gescheitert"
+                grund = f"HTTP {e.code}" if konto else str(e) if form else f"{SERIE} Anfragen in Folge gescheitert"
                 print(f"  Lauf beendet: {grund} ({type(e).__name__}); die Dokumente werden im nächsten Lauf angefragt", flush=True)
                 lauf["abbruch"] = grund
+                lauf["form"] = form
                 return
             serie.append((sha, dict(vorher) if vorher else None))
             versuche = vorher.get("versuche", 0) + 1 if vorher.get("fassung", 1) == FASSUNG and vorher.get("fehler") else 1

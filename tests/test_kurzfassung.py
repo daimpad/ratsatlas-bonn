@@ -156,6 +156,41 @@ class KurzfassungTest(unittest.TestCase):
             self.assertEqual(rows["260000"]["versuche"], kurzfassung.MAX_VERSUCHE)   # danach nicht mehr angefragt
             self.assertEqual(len(calls), 1 + kurzfassung.MAX_VERSUCHE)
 
+    def test_andere_form_der_antwort_beendet_den_lauf_sofort(self):
+        # 21.11.2026: Der Anbieter lieferte `content` als Liste von Teilen; das fiel nur als AttributeError auf. Solche
+        # Antworten werden nicht übernommen (anderes Modell als das geprüfte), der Lauf endet bei der ersten Anfrage
+        # mit einer Meldung, die Form und Modell nennt, aber nie den Text; kein Dokument wird gesperrt.
+        from pipeline import sprachmodell
+        antwort = {"model": "anderes-modell", "choices": [{"finish_reason": "stop", "message": {"content": [
+            {"type": "thinking", "thinking": [{"type": "text", "text": "GEHEIMER GEDANKE"}]},
+            {"type": "text", "text": "GEHEIME ANTWORT"}]}}]}
+        self.assertEqual(sprachmodell.antworttext({"choices": [{"message": {"content": " Text \n"}}]}), "Text")
+        with self.assertRaises(sprachmodell.AntwortFormat) as f:
+            sprachmodell.antworttext(antwort)
+        self.assertIn("Liste mit Teilen text, thinking", str(f.exception))
+        self.assertIn("anderes-modell", str(f.exception))
+        self.assertNotIn("GEHEIM", str(f.exception))
+        for leer in ({}, {"choices": []}, {"choices": [{"message": {"content": None}}]}):
+            self.assertRaises(sprachmodell.AntwortFormat, sprachmodell.antworttext, leer)
+        with tempfile.TemporaryDirectory() as d:
+            texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"
+            texte.write_text("\n".join(json.dumps({"uri": f"f{i}", "sha": f"s{i}", "text": TEXT}) for i in range(3)))
+            papers.write_text("\n".join(json.dumps({"reference": f"26000{i}", "name": f"Spielplatz Nr{i}",
+                                                    "paperType": "Antrag", "mainFile": {"id": f"f{i}"}}) for i in range(3)))
+            calls = []
+            def anfrage(titel, text, key):
+                calls.append(1)
+                return sprachmodell.antworttext(antwort), {}
+            out = Path(d) / "kurz"
+            with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}), \
+                    mock.patch.object(config, "TEXTE", texte), mock.patch.object(config, "PAPERS", papers):
+                with self.assertRaises(SystemExit) as e:
+                    kurzfassung.erzeugen(out, anfrage=anfrage)
+            self.assertEqual(len(calls), 1)
+            self.assertIn("in einer anderen Form", str(e.exception))
+            self.assertNotIn("Konto und Schlüssel", str(e.exception))
+            self.assertEqual(kurzfassung.laden(out), {})   # nichts gesperrt, nichts als gescheitert gezählt
+
     def test_kontoausfall_beendet_den_lauf_ohne_dokumente_zu_sperren(self):
         # Code-Prüfung 24.10.2026: 401 oder eine Serie von Fehlern zählte als Fehler jedes Dokuments; nach drei Tagen
         # Ausfall wurden die Dokumente nie wieder angefragt

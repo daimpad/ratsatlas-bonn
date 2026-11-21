@@ -20,6 +20,30 @@ def schluessel(anbieter=None):
     return os.environ.get(SCHLUESSEL[anbieter or ANBIETER])
 
 
+class AntwortFormat(ValueError):
+    """Die Antwort enthält keinen Text als Zeichenkette. Mistral liefert bei Modellen mit Denkschritten `content` als
+    Liste von Teilen (`thinking`, `text`) statt als Zeichenkette. Solche Antworten werden nicht übernommen: Die
+    Kurzfassungen sind mit dem bisherigen Modell von Hand geprüft und freigegeben, über ein anderes Modell entscheidet
+    der Auftraggeber (21.11.2026: `mistral-large-latest` antwortet seit dem 13.11.2026 nicht mehr mit einer
+    Zeichenkette; bis dahin fiel das nur als AttributeError auf). Die Meldung nennt Form und Modell, nie den Text."""
+
+
+def antworttext(d):
+    """Text einer Antwort im Format von Mistral; AntwortFormat, wenn `content` keine Zeichenkette ist."""
+    wahl = (d.get("choices") or [{}])[0] if isinstance(d, dict) else {}
+    content = (wahl.get("message") or {}).get("content")
+    if isinstance(content, str):
+        return content.strip()
+    if isinstance(content, list):
+        form = "Liste mit Teilen " + ", ".join(sorted({str(c.get("type")) if isinstance(c, dict) else type(c).__name__
+                                                      for c in content}) or ["(leer)"])
+    else:
+        form = type(content).__name__
+    modell = d.get("model") if isinstance(d, dict) else None
+    raise AntwortFormat(f"Antwort ohne Text als Zeichenkette (content: {form}; Modell laut Antwort: {modell}; "
+                        f"Ende: {wahl.get('finish_reason')})")
+
+
 def frage(system, nutzer, modell, schluessel, max_tokens=400, json_antwort=False, anbieter=None, tries=4):
     """(Antworttext, {"ein": Eingabe-Tokens, "aus": Ausgabe-Tokens}); wiederholt bei Netzfehlern."""
     anbieter = anbieter or ANBIETER
@@ -49,8 +73,7 @@ def frage(system, nutzer, modell, schluessel, max_tokens=400, json_antwort=False
         u = d.get("usage") or {}
         return text.strip(), {"ein": u.get("input_tokens", 0), "aus": u.get("output_tokens", 0)}
     u = d.get("usage") or {}
-    return d["choices"][0]["message"]["content"].strip(), {"ein": u.get("prompt_tokens", 0),
-                                                          "aus": u.get("completion_tokens", 0)}
+    return antworttext(d), {"ein": u.get("prompt_tokens", 0), "aus": u.get("completion_tokens", 0)}
 
 
 def json_aus(text):
