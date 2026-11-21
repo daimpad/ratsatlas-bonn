@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242055</id>
+<title>Vorlage 242055: Grundstück in Bonn-Beuel, Kaiser-Konrad-Straße [Hausnummer ausgelassen] - Neubau eines Mehrfamilienhauses Az.: 458843 (neu 1765/2019)</title>
+<subtitle>Verlauf der Vorlage 242055: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-01-22T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242055.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#242055"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020160#beratung-2025-01-22-Ausschuss%20f%C3%BCr%20Wohnen%2C%20Planung%20und%20Bauen</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „zurückgezogen“ – 242055 Grundstück in Bonn-Beuel, Kaiser-Konrad-Straße [Hausnummer ausgelassen] - Neubau eines Mehrfamilienhauses Az.: 458843 (neu 1765/2019)</title>
+<updated>2025-01-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#242055"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020160"/>
+<summary>Anhörung am 2025-01-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020160#vorlage</id>
+<title>Neue Vorlage 242055: Grundstück in Bonn-Beuel, Kaiser-Konrad-Straße [Hausnummer ausgelassen] - Neubau eines Mehrfamilienhauses Az.: 458843 (neu 1765/2019)</title>
+<updated>2024-12-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#242055"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020160"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, dass der Ausschuss zur Kenntnis nimmt, dass sie den Antrag auf Verlängerung einer Baugenehmigung für ein Grundstück in der Kaiser-Konrad-Straße ablehnen will. Grund ist ein neuer Denkmalschutz für das Gebiet, der den geplanten Abriss des bestehenden Gebäudes verhindert. Das Grundstück liegt im geplanten Denkmalbereich Combahnviertel.</summary>
+</entry>
+</feed>

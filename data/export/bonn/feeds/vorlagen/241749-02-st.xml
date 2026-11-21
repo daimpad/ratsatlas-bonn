@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/241749-02-st</id>
+<title>Vorlage 241749-02 ST: BBB-Änderungsantrag: 46. Satzung zur Änderung der Beitrags- und Gebührenordnung für die Inanspruchnahme der öffentlichen Abwasseranlage (Kanalabgabensatzung)</title>
+<subtitle>Verlauf der Vorlage 241749-02 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-12-12T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/241749-02-st.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#241749-02%20ST"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020397#beratung-2024-12-12-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 241749-02 ST BBB-Änderungsantrag: 46. Satzung zur Änderung der Beitrags- und Gebührenordnung für die Inanspruchnahme der öffentlichen Abwasseranlage (Kanalabgabensatzung)</title>
+<updated>2024-12-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#241749-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020397"/>
+<summary>Kenntnisnahme am 2024-12-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020397#vorlage</id>
+<title>Neue Vorlage 241749-02 ST: BBB-Änderungsantrag: 46. Satzung zur Änderung der Beitrags- und Gebührenordnung für die Inanspruchnahme der öffentlichen Abwasseranlage (Kanalabgabensatzung)</title>
+<updated>2024-11-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#241749-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020397"/>
+<summary>Stellungnahme der Verwaltung · federführend: 21 Kassen- und Steueramt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung erklärt der BBB-Fraktion, warum die Abwassergebühren 2023 niedriger ausfielen als geplant. Durch ein Gerichtsurteil mussten Gebühren für Vorjahre neu berechnet werden, was zu Mindereinnahmen von 9,5 Millionen Euro führte. Zudem wurden frühere Gebührenüberdeckungen aufgelöst, da sie nach neuer Rechtslage nicht mehr zulässig waren.</summary>
+</entry>
+</feed>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242239</id>
+<title>Vorlage 242239: Einleitung des Vergabeverfahrens Umstellung Datenaustausch SPS-PLS von Siemens Sinaut ST7 auf Baade WebConnector für die Pumpwerke PW023,PW040 und PW081 Friedrich Breuer Straße und Rheinaustr.</title>
+<subtitle>Verlauf der Vorlage 242239: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-01-30T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242239.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#242239"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020678#beratung-2025-01-30-Ausschuss%20f%C3%BCr%20Finanzen%2C%20Beteiligungen%20und%20Vergabe</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „ungeändert beschlossen“ – 242239 Einleitung des Vergabeverfahrens Umstellung Datenaustausch SPS-PLS von Siemens Sinaut ST7 auf Baade WebConnector für die Pumpwerke PW023,PW040 und PW081 Friedrich Breuer Straße und Rheinaustr.</title>
+<updated>2025-01-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#242239"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020678"/>
+<summary>Entscheidung am 2025-01-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020678#vorlage</id>
+<title>Neue Vorlage 242239: Einleitung des Vergabeverfahrens Umstellung Datenaustausch SPS-PLS von Siemens Sinaut ST7 auf Baade WebConnector für die Pumpwerke PW023,PW040 und PW081 Friedrich Breuer Straße und Rheinaustr.</title>
+<updated>2024-12-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#242239"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020678"/>
+<summary>Beschlussvorlage: Einleitung · federführend: 66 Tiefbauamt · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, ein Vergabeverfahren für die Umstellung der Datenübertragung bei drei Pumpwerken in der Friedrich-Breuer-Straße und der Rheinaustraße zu starten. Das neue System soll mehr Messdaten wie Stromverbrauch liefern. Die Kosten von 90.000 Euro sind im Haushalt vorgesehen.</summary>
+</entry>
+</feed>

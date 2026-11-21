@@ -61059,16 +61059,11 @@
      "rat"
     ],
     "abweichung": []
-   },
-   "kurzfassung": {
-    "text": "Das Tiefbauamt der Stadt Bonn informiert: Ab dem 24. April 2023 wird im Wiesenweg (Hausnummer 24 bis Autobahn) ein schadhafter Kanal stillgelegt und Anschlüsse umverlegt. Die Straße ist voll gesperrt, Anwohner können bis zur Baustelle vorfahren. Die Arbeiten sollen bis Mitte Juni 2023 dauern.",
-    "modell": "mistral-large-latest",
-    "erzeugt": "2026-11-05"
    }
   },
   {
    "reference": "230595",
-   "name": "Grundstück Bonn, Gerhard-Domagk-Str. [Hausnummer ausgelassen] (Gemarkung Endenich, Flur 1, Flurstück 1008) - Bauvoranfrage K-Uni Bonn, Ersatzneubau AVZII Aktenzeichen: 10927/2022",
+   "name": "Grundstück Bonn, Gerhard-Domagk-Str. [Hausnummer ausgelassen] (Gemarkung Endenich, [Flurstück ausgelassen]) - Bauvoranfrage K-Uni Bonn, Ersatzneubau AVZII Aktenzeichen: 10927/2022",
    "paper_type": "Beschlussvorlage",
    "date": "2023-03-28",
    "amt": "63 Bauordnungsamt",
@@ -67694,11 +67689,6 @@
      "bv"
     ],
     "abweichung": []
-   },
-   "kurzfassung": {
-    "text": "Die Grünen, SPD und andere Fraktionen fordern, dass die Verwaltung in der Verweyenstraße dafür sorgt, dass Gehwege nicht mehr widerrechtlich mit Autos zugeparkt werden. Betroffen ist besonders der Bereich um die Hausnummern 26 bis 30.",
-    "modell": "mistral-large-latest",
-    "erzeugt": "2026-10-31"
    }
   },
   {
@@ -78550,7 +78540,7 @@
   },
   {
    "reference": "220524",
-   "name": "Grundstück Bonn-Endenich, Am Klostergarten [Hausnummer ausgelassen] Gemarkung Endenich, Flur 9, Flurstück 1650 - Errichtung von 16 begrünten Carports mit Photovoltaik Aktenzeichen: 10272/2021",
+   "name": "Grundstück Bonn-Endenich, Am Klostergarten [Hausnummer ausgelassen] Gemarkung Endenich, [Flurstück ausgelassen] - Errichtung von 16 begrünten Carports mit Photovoltaik Aktenzeichen: 10272/2021",
    "paper_type": "Beschlussvorlage",
    "date": "2022-03-21",
    "amt": "63 Bauordnungsamt",
@@ -79657,11 +79647,6 @@
      "bv"
     ],
     "abweichung": []
-   },
-   "kurzfassung": {
-    "text": "Die Verwaltung teilt mit, dass vor einem Ärztehaus in der Endenicher Allee ein Schwerbehindertenparkplatz eingerichtet wird. Dafür wird ein bestehender Parkplatz umgewidmet und neu beschildert. Die Maßnahme findet gegenüber der Hausnummer 96 statt.",
-    "modell": "mistral-large-latest",
-    "erzeugt": "2026-10-28"
    }
   },
   {
@@ -96649,11 +96634,6 @@
      "rat"
     ],
     "abweichung": []
-   },
-   "kurzfassung": {
-    "text": "Die Verwaltung teilt mit, wie das Bauvorhaben am Propsthof (Grundstück Flurstück 1022) weitergeht. Ein Wettbewerbsverfahren ist nicht nötig, da das Projekt zum bestehenden Rahmenplan passt und die Gestaltung mit einem Beirat besprochen wird. Die geplante Straße soll später verlängert werden, Bäume entlang der Straße Am Propsthof werden geprüft.",
-    "modell": "mistral-large-latest",
-    "erzeugt": "2026-11-10"
    }
   },
   {
@@ -121585,7 +121565,7 @@
   },
   {
    "reference": "190305",
-   "name": "Fällgenehmigung für eine Himalaja-Zeder auf dem Grundstück Steinweg 35, 53121 Bonn (Alt 1912856, FF Amt 56)",
+   "name": "Fällgenehmigung für eine Himalaja-Zeder auf dem Grundstück Steinweg [Hausnummer ausgelassen], 53121 Bonn (Alt 1912856, FF Amt 56)",
    "paper_type": "Beschlussvorlage",
    "date": "2019-11-11",
    "amt": "Bezirksverwaltungsstelle Bonn",
@@ -121776,7 +121756,7 @@
   },
   {
    "reference": "190306",
-   "name": "Fällgenehmigung für einen Mammutbaum auf dem Grundstück Steinweg 31, 53121 Bonn (alt: 1912871, FF: Amt 56)",
+   "name": "Fällgenehmigung für einen Mammutbaum auf dem Grundstück Steinweg [Hausnummer ausgelassen], 53121 Bonn (alt: 1912871, FF: Amt 56)",
    "paper_type": "Beschlussvorlage",
    "date": "2019-11-11",
    "amt": "Bezirksverwaltungsstelle Bonn",

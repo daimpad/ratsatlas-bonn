@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242191</id>
+<title>Vorlage 242191: CDU-Dringlichkeitsantrag: Sofortige Beendigung des Projekts Neues Quartier Bundesviertel (NQB)</title>
+<subtitle>Verlauf der Vorlage 242191: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-12-16T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242191.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242191"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020549#beratung-2024-12-16-Rat</id>
+<title>Rat: „geändert beschlossen“ – 242191 CDU-Dringlichkeitsantrag: Sofortige Beendigung des Projekts Neues Quartier Bundesviertel (NQB)</title>
+<updated>2024-12-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242191"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020549"/>
+<summary>Entscheidung am 2024-12-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020549#folge-242191-01%20AA</id>
+<title>Änderungsantrag 242191-01 AA: Koalitionsänderungsantrag: CDU-Dringlichkeitsantrag: Sofortige Beendigung des Projekts Neues Quartier Bundesviertel (NQB) Antrag zur Vorlage 242191</title>
+<updated>2024-12-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242191"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020549"/>
+<summary>Folgevorlage zu 242191</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020549#vorlage</id>
+<title>Neue Vorlage 242191: CDU-Dringlichkeitsantrag: Sofortige Beendigung des Projekts Neues Quartier Bundesviertel (NQB)</title>
+<updated>2024-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242191"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020549"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die CDU-Fraktion fordert dringend, das Projekt Neues Quartier Bundesviertel sofort zu stoppen. Sie verlangt, dass die Stadt vom Kaufvertrag zurücktritt und das Bebauungsplanverfahren für andere Investoren fortsetzt. Die Fraktion begründet dies mündlich.</summary>
+</entry>
+</feed>

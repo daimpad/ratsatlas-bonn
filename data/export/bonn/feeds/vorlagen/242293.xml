@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242293</id>
+<title>Vorlage 242293: Monitoringbericht Schulbauten</title>
+<subtitle>Verlauf der Vorlage 242293: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-02-11T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242293.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242293"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020805#beratung-2025-02-11-Betriebsausschuss%20SGB</id>
+<title>Betriebsausschuss SGB: „zur Kenntnis genommen“ – 242293 Monitoringbericht Schulbauten</title>
+<updated>2025-02-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242293"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020805"/>
+<summary>Kenntnisnahme am 2025-02-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020805#beratung-2025-01-22-Schulausschuss</id>
+<title>Schulausschuss: „zur Kenntnis genommen“ – 242293 Monitoringbericht Schulbauten</title>
+<updated>2025-01-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242293"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020805"/>
+<summary>Kenntnisnahme am 2025-01-22; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020805#vorlage</id>
+<title>Neue Vorlage 242293: Monitoringbericht Schulbauten</title>
+<updated>2024-12-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242293"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020805"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung informiert über den aktuellen Stand aller geplanten Schulbauprojekte für 2024. Der Bericht zeigt Kosten und Zeitpläne bis Juni 2024 und wird online veröffentlicht. Baubeginn und Fertigstellungstermine folgen nach der Genehmigungsplanung.</summary>
+</entry>
+</feed>

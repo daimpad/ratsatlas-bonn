@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242188</id>
+<title>Vorlage 242188: Bürgerantrag: Umwandlung des Sommerbergwegs ab Einmündung Heiderhofring bis einschließlich des Bereichs vor der Kita Sommerberg in eine verkehrsberuhigte Straße (Spielstraße)</title>
+<subtitle>Verlauf der Vorlage 242188: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-06-25T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242188.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:heiderhof#242188"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020542#beratung-2025-06-25-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „geändert beschlossen“ – 242188 Bürgerantrag: Umwandlung des Sommerbergwegs ab Einmündung Heiderhofring bis einschließlich des Bereichs vor der Kita Sommerberg in eine verkehrsberuhigte Straße (Spielstraße)</title>
+<updated>2025-06-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:heiderhof#242188"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020542"/>
+<summary>Entscheidung am 2025-06-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020542#folge-242188-02%20ST</id>
+<title>Stellungnahme der Verwaltung 242188-02 ST: Bürgerantrag: Umwandlung des Sommerbergwegs ab Einmündung Heiderhofring bis einschließlich des Bereichs vor der Kita Sommerberg in eine verkehrsberuhigte Straße (Spielstraße)</title>
+<updated>2025-06-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:heiderhof#242188"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020542"/>
+<summary>Folgevorlage zu 242188</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020542#folge-242188-01%20ST</id>
+<title>Stellungnahme der Verwaltung 242188-01 ST: Bürgerantrag: Umwandlung des Sommerbergwegs ab Einmündung Heiderhofring bis einschließlich des Bereichs vor der Kita Sommerberg in eine verkehrsberuhigte Straße (Spielstraße)</title>
+<updated>2025-02-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:heiderhof#242188"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020542"/>
+<summary>Folgevorlage zu 242188</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020542#vorlage</id>
+<title>Neue Vorlage 242188: Bürgerantrag: Umwandlung des Sommerbergwegs ab Einmündung Heiderhofring bis einschließlich des Bereichs vor der Kita Sommerberg in eine verkehrsberuhigte Straße (Spielstraße)</title>
+<updated>2024-12-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:heiderhof#242188"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020542"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
+</entry>
+</feed>

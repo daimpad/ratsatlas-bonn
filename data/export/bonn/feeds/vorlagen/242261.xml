@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242261</id>
+<title>Vorlage 242261: Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte “Ausbau der A 565” und “Universitäts-Campus Endenich” auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u.a.</title>
+<subtitle>Verlauf der Vorlage 242261: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-05-15T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242261.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#242261"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020736#beratung-2025-05-15-Ausschuss%20f%C3%BCr%20Beteiligung%20der%20B%C3%BCrgerinnen%20und%20B%C3%BCrger</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „ungeändert beschlossen - mit Protokollnotiz“ – 242261 Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte “Ausbau der A 565” und “Universitäts-Campus Endenich” auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u.a.</title>
+<updated>2025-05-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#242261"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020736"/>
+<summary>Entscheidung am 2025-05-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020736#folge-242261-02%20ST</id>
+<title>Stellungnahme der Verwaltung 242261-02 ST: Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte “Ausbau der A 565” und “Universitäts-Campus Endenich” auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u.a.</title>
+<updated>2025-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#242261"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020736"/>
+<summary>Folgevorlage zu 242261</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020736#folge-242261-01%20ST</id>
+<title>Stellungnahme der Verwaltung 242261-01 ST: Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte “Ausbau der A 565” und “Universitäts-Campus Endenich” auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u.a.</title>
+<updated>2025-01-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#242261"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020736"/>
+<summary>Folgevorlage zu 242261</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020736#vorlage</id>
+<title>Neue Vorlage 242261: Bürgerantrag: Umweltmedizinisches Gutachten zu den negativen Folgen der nebeneinanderliegenden Großprojekte “Ausbau der A 565” und “Universitäts-Campus Endenich” auf die Gesundheit der Bevölkerung in den Stadtteilen Endenich, Weststadt, Nordstadt u.a.</title>
+<updated>2024-12-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#242261"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020736"/>
+<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
+</entry>
+</feed>

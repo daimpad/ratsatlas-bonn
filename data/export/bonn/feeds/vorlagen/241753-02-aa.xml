@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/241753-02-aa</id>
+<title>Vorlage 241753-02 AA: BBB-Änderungsantrag zum Bürgerantrag: Verbesserung der Parksituation im Bereich der Straßen Aurelianastraße, Hammstraße, Florusstraße, Auf der Clemensbitze, Fabristraße, Geislarstraße</title>
+<subtitle>Verlauf der Vorlage 241753-02 AA: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/241753-02-aa.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:geislar#241753-02%20AA"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020447#beratung-2024-11-27-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „zurückgezogen“ – 241753-02 AA BBB-Änderungsantrag zum Bürgerantrag: Verbesserung der Parksituation im Bereich der Straßen Aurelianastraße, Hammstraße, Florusstraße, Auf der Clemensbitze, Fabristraße, Geislarstraße</title>
+<updated>2024-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:geislar#241753-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020447"/>
+<summary>Entscheidung am 2024-11-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020447#vorlage</id>
+<title>Neue Vorlage 241753-02 AA: BBB-Änderungsantrag zum Bürgerantrag: Verbesserung der Parksituation im Bereich der Straßen Aurelianastraße, Hammstraße, Florusstraße, Auf der Clemensbitze, Fabristraße, Geislarstraße</title>
+<updated>2024-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:geislar#241753-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020447"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Fraktion BBB schlägt vor, den Bürgerantrag zu ändern: Die Oberbürgermeisterin soll die Straßen Aurelianastraße, Hammstraße, Florusstraße, Auf der Clemensbitze, Fabristraße und Geislarstraße gemeinsam mit den Antragstellern besichtigen, um Parkplätze zu planen. Vor einer Umsetzung soll sie über die Ergebnisse berichten.</summary>
+</entry>
+</feed>

@@ -9128,6 +9128,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 231117	verortet	Hauptteil	volltext_strasse	Clemens-August-Platz	Poppelsdorf	niedrig	2
 231117	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Südstadt	niedrig	1
 231117	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Weststadt	niedrig	1
+231123	Liste (16 Ortsteile), nicht verortet	Hauptteil					
 231124	kein Ort						
 231128	kein Ort						
 231130	nur in Anlagen genannt, nicht verortet						
@@ -11858,6 +11859,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241254-02 AA	kein Ort						
 241255	kein Ort						
 241256	kein Ort						
+241257	kein Ort						
 241257-01	kein Ort						
 241257-02 ST	kein Ort						
 241258	kein Ort						
@@ -12668,7 +12670,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242149-01 ST	kein Ort						
 242149-02 ST	kein Ort						
 242149-03	kein Ort						
-242151	kein Ort						
 242153	Titel ohne gemeinsamen Ort, nicht verortet						
 242155	Titel ohne gemeinsamen Ort, nicht verortet						
 242157	kein Ort						
@@ -12854,6 +12855,12 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242345-03 AA	verortet	Hauptteil	volltext_strasse	Martin-Luther-Allee	Friesdorf	mittel	1
 242345-06	kein Ort						
 242345-07 ST	kein Ort						
+242345-08 ST	verortet	Hauptteil	volltext_strasse	Am Südfriedhof	Dottendorf	niedrig	1
+242345-08 ST	verortet	Hauptteil	volltext_strasse	Am Südfriedhof	Friesdorf	mittel	1
+242345-08 ST	verortet	Hauptteil	volltext_strasse	Hochkreuzallee	Friesdorf	mittel	2
+242345-08 ST	verortet	Hauptteil	volltext_strasse	Rüdesheimer Straße	Friesdorf	mittel	2
+242345-08 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Annaberger Straße	Friesdorf	mittel	3
+242345-08 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kleinefeldsweg	Friesdorf	mittel	1
 252354	kein Ort						
 252355	kein Ort						
 252356	kein Ort						
@@ -15340,6 +15347,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260661-01 ST	kein Ort						
 260661-02 ST	kein Ort						
 260662	Titel ohne gemeinsamen Ort, nicht verortet						
+260663	nur in Anlagen genannt, nicht verortet						
 260675	Liste (9 Ortsteile), nicht verortet	Hauptteil					
 260675-01 ST	verortet	Hauptteil	volltext_strasse	Gotenstraße	Plittersdorf	mittel	5
 260675-01 ST	verortet	Hauptteil	volltext_strasse	Max-Braubach-Straße	Ückesdorf	mittel	1
@@ -16576,6 +16584,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261851	nur in Anlagen genannt, nicht verortet						
 261853	kein Ort						
 261853-01 ST	kein Ort						
+261859	nur in Anlagen genannt, nicht verortet						
 261861	kein Ort						
 261861-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 261863	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16662,6 +16671,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261941-01 ST	kein Ort						
 261943	kein Ort						
 261944	kein Ort						
+261951	nur in Anlagen genannt, nicht verortet						
 261953	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
 261953	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
 261954	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
@@ -16727,6 +16737,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262037	kein Ort						
 262050	kein Ort						
 262051	kein Ort						
+262051-01 ST	kein Ort						
 262056	verortet	Hauptteil	volltext_strasse+kreuzung	Guido-Westerwelle-Brücke	Nordstadt	mittel	1
 262056	verortet	Hauptteil	volltext_strasse+kreuzung	Hochstadenring	Nordstadt	mittel	1
 262057	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16770,6 +16781,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262107	verortet	Hauptteil	volltext_ortsteil_name	Graurheindorf	Graurheindorf	niedrig	1
 262108	kein Ort						
 262111	kein Ort						
+262111-01 ST	kein Ort						
 262114	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
 262114	verortet	Hauptteil	volltext_ortsteil_name	Nordstadt	Nordstadt	niedrig	1
 262114	verortet	Hauptteil	volltext_ortsteil_name	Weststadt	Weststadt	niedrig	1
@@ -16797,6 +16809,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262143	Titel ohne gemeinsamen Ort, nicht verortet						
 262153	kein Ort						
 262154	kein Ort						
+262154-01 ST	kein Ort						
 262156	Titel ohne gemeinsamen Ort, nicht verortet						
 262159	Titel ohne gemeinsamen Ort, nicht verortet						
 262163	kein Ort						
@@ -16808,6 +16821,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262168	Titel ohne gemeinsamen Ort, nicht verortet						
 262169	verortet	Hauptteil	volltext_stadtbezirk_name	Beuel		mittel	1
 262169-01 DA	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+262169-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Heiderhof	Heiderhof	niedrig	1
+262169-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Holzlar	Holzlar	mittel	1
 262171	verortet	Hauptteil	volltext_strasse	Combahnstraße	Beuel-Mitte	mittel	2
 262171	verortet	Hauptteil	volltext_strasse	Hauptstraße	Holzlar	mittel	1
 262171	verortet	Hauptteil	volltext_strasse	Professor-Neu-Allee	Beuel-Mitte	mittel	6
@@ -16815,6 +16830,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262172	kein Ort						
 262174	verortet	Hauptteil	volltext_strasse+kreuzung	Ettenhausener Straße	Holzlar	mittel	2
 262174	verortet	Hauptteil	volltext_strasse+kreuzung	Rodeweg	Holzlar	mittel	1
+262178	kein Ort						
 262179	kein Ort						
 262181	nur in Anlagen genannt, nicht verortet						
 262185	kein Ort						
@@ -16832,6 +16848,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262204	kein Ort						
 262211	Titel ohne gemeinsamen Ort, nicht verortet						
 262212	Titel ohne gemeinsamen Ort, nicht verortet						
+262213	kein Ort						
 262219	verortet	Hauptteil	volltext_strasse	Moltkestraße	Alt-Godesberg	mittel	3
 262220	kein Ort						
 262221	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Holtorf	niedrig	1
@@ -16841,6 +16858,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262226	kein Ort						
 262227	Titel ohne gemeinsamen Ort, nicht verortet						
 262228	kein Ort						
+262229	nur in Anlagen genannt, nicht verortet						
 262235	kein Ort						
 262238	verortet	Hauptteil	volltext_ortsteil_name	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	niedrig	1
 262238	verortet	Hauptteil	volltext_strasse	Paracelsusstraße	Lannesdorf	niedrig	1

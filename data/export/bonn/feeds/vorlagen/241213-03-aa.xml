@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/241213-03-aa</id>
+<title>Vorlage 241213-03 AA: CDU-Änderungsantrag: Beschlussvorlage zu muslimischen Grabfeldern auf dem Nordfriedhof Antrag zur Vorlage 241213</title>
+<subtitle>Verlauf der Vorlage 241213-03 AA: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-12-12T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/241213-03-aa.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:auerberg#241213-03%20AA"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020674#beratung-2024-12-12-Rat</id>
+<title>Rat: „geändert beschlossen“ – 241213-03 AA CDU-Änderungsantrag: Beschlussvorlage zu muslimischen Grabfeldern auf dem Nordfriedhof Antrag zur Vorlage 241213</title>
+<updated>2024-12-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:auerberg#241213-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020674"/>
+<summary>Entscheidung am 2024-12-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020674#vorlage</id>
+<title>Neue Vorlage 241213-03 AA: CDU-Änderungsantrag: Beschlussvorlage zu muslimischen Grabfeldern auf dem Nordfriedhof Antrag zur Vorlage 241213</title>
+<updated>2024-12-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:auerberg#241213-03%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020674"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die CDU-Fraktion schlägt vor, die Planung für muslimische Grabfelder auf dem Nordfriedhof zu prüfen. Die Verwaltung soll dem Fachausschuss Zahlen zu Bestattungen, bestehende Kapazitäten und Erweiterungsmöglichkeiten vorlegen. Zudem soll geprüft werden, ob weitere Friedhöfe – vorrangig in Bad Godesberg – zusätzliche Grabfelder anbieten können.</summary>
+</entry>
+</feed>

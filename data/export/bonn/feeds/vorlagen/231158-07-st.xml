@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/231158-07-st</id>
+<title>Vorlage 231158-07 ST: BBB-Anfrage: Aufstellungsbeschluss zur Denkmalbereichssatzung Muffendorf</title>
+<subtitle>Verlauf der Vorlage 231158-07 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-12-10T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/231158-07-st.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#231158-07%20ST"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020491#beratung-2024-12-10-Unterausschuss%20Denkmalschutz</id>
+<title>Unterausschuss Denkmalschutz: „zur Kenntnis genommen“ – 231158-07 ST BBB-Anfrage: Aufstellungsbeschluss zur Denkmalbereichssatzung Muffendorf</title>
+<updated>2024-12-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#231158-07%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020491"/>
+<summary>Kenntnisnahme am 2024-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020491#vorlage</id>
+<title>Neue Vorlage 231158-07 ST: BBB-Anfrage: Aufstellungsbeschluss zur Denkmalbereichssatzung Muffendorf</title>
+<updated>2024-12-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#231158-07%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020491"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung beantwortet eine Anfrage der BBB-Fraktion zum Denkmalbereich Muffendorf. Sie erklärt, dass der Entwurf der Satzung fast fertig ist und 2025 im Rat vorgestellt wird. Bisher gab es kaum Einwände gegen den Geltungsbereich; eine vorgeschlagene Verkleinerung lehnt die Verwaltung aus fachlichen Gründen ab. Kleine Änderungen sind noch möglich.</summary>
+</entry>
+</feed>

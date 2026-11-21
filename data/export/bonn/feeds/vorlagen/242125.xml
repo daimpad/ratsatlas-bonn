@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242125</id>
+<title>Vorlage 242125: Tagesordnungspunkte der nichtöffentlichen Sitzung</title>
+<subtitle>Verlauf der Vorlage 242125: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-12-10T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242125.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242125"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020333#beratung-2024-12-10-Rechnungspr%C3%BCfungsausschuss</id>
+<title>Rechnungsprüfungsausschuss: „zur Kenntnis genommen“ – 242125 Tagesordnungspunkte der nichtöffentlichen Sitzung</title>
+<updated>2024-12-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242125"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020333"/>
+<summary>Kenntnisnahme am 2024-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020333#vorlage</id>
+<title>Neue Vorlage 242125: Tagesordnungspunkte der nichtöffentlichen Sitzung</title>
+<updated>2024-11-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242125"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020333"/>
+<summary>Mitteilungsvorlage · federführend: 14 Rechnungsprüfungsamt · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

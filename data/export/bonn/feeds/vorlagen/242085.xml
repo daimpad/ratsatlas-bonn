@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242085</id>
+<title>Vorlage 242085: Sitzungstermine 2025 des Projektbeirat Masterplan Innere Stadt 2.0</title>
+<subtitle>Verlauf der Vorlage 242085: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-12-04T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242085.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242085"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020244#beratung-2024-12-04-Projektbeirat%20Masterplan%20Innere%20Stadt%202.0</id>
+<title>Projektbeirat Masterplan Innere Stadt 2.0: „zur Kenntnis genommen“ – 242085 Sitzungstermine 2025 des Projektbeirat Masterplan Innere Stadt 2.0</title>
+<updated>2024-12-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242085"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020244"/>
+<summary>Aktuelle Informationen der Verwaltung am 2024-12-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020244#vorlage</id>
+<title>Neue Vorlage 242085: Sitzungstermine 2025 des Projektbeirat Masterplan Innere Stadt 2.0</title>
+<updated>2024-11-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242085"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020244"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung teilt die geplanten Sitzungstermine des Projektbeirats Masterplan Innere Stadt 2.0 für 2025 mit: 25. Februar, 3. April und 24. Juni, jeweils um 18 Uhr in verschiedenen Sitzungsräumen.</summary>
+</entry>
+</feed>

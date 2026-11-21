@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242251</id>
+<title>Vorlage 242251: Bestellung Umlegungsausschuss</title>
+<subtitle>Verlauf der Vorlage 242251: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-02-13T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242251.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242251"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020717#beratung-2025-02-13-Rat</id>
+<title>Rat: „ungeändert beschlossen“ – 242251 Bestellung Umlegungsausschuss</title>
+<updated>2025-02-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242251"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020717"/>
+<summary>Entscheidung am 2025-02-13; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020717#vorlage</id>
+<title>Neue Vorlage 242251: Bestellung Umlegungsausschuss</title>
+<updated>2024-12-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242251"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020717"/>
+<summary>Beschlussvorlage · federführend: 62 Amt für Bodenmanagement und Geoinformation · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, den Umlegungsausschuss der Stadt Bonn neu zu besetzen. Ab April 2025 soll ein ehemaliger Ministerialdirigent als Vorsitzender und eine Juristin als seine Stellvertreterin für fünf Jahre berufen werden. Der Rat muss dem Vorschlag zustimmen.</summary>
+</entry>
+</feed>

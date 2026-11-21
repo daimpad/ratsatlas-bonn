@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242057-01-st</id>
+<title>Vorlage 242057-01 ST: Bürgerantrag: Wiederaufnahme des alten Linienwegs der Buslinie 635 über die Kautexstraße sowie Wiederaufnahme der Bushaltestelle Ennertstraße (Linie 635)</title>
+<subtitle>Verlauf der Vorlage 242057-01 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-02-12T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242057-01-st.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#242057-01%20ST"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020538#beratung-2025-02-12-Ausschuss%20f%C3%BCr%20Beteiligung%20der%20B%C3%BCrgerinnen%20und%20B%C3%BCrger</id>
+<title>Ausschuss für Beteiligung der Bürgerinnen und Bürger: „zur Kenntnis genommen“ – 242057-01 ST Bürgerantrag: Wiederaufnahme des alten Linienwegs der Buslinie 635 über die Kautexstraße sowie Wiederaufnahme der Bushaltestelle Ennertstraße (Linie 635)</title>
+<updated>2025-02-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#242057-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020538"/>
+<summary>Kenntnisnahme am 2025-02-12; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020538#vorlage</id>
+<title>Neue Vorlage 242057-01 ST: Bürgerantrag: Wiederaufnahme des alten Linienwegs der Buslinie 635 über die Kautexstraße sowie Wiederaufnahme der Bushaltestelle Ennertstraße (Linie 635)</title>
+<updated>2024-12-09T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#242057-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020538"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung erklärt, dass die Buslinie 635 von zwei Verkehrsunternehmen gemeinsam betrieben wird. Daher müssen die Stadt Bonn und der Rhein-Sieg-Kreis noch über den Bürgerantrag zur Rückkehr des alten Linienwegs über die Kautexstraße und der Haltestelle Ennertstraße sprechen. Sie bittet, die Entscheidung zu verschieben.</summary>
+</entry>
+</feed>

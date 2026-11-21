@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/241878-03-st</id>
+<title>Vorlage 241878-03 ST: BBB-Anfrage: Fernverkehr der Deutschen Bahn, Anschluss des Bonner Hauptbahnhofs</title>
+<subtitle>Verlauf der Vorlage 241878-03 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-05-08T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/241878-03-st.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#241878-03%20ST"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020590#beratung-2025-05-08-Rat</id>
+<title>Rat: „zur Kenntnis genommen“ – 241878-03 ST BBB-Anfrage: Fernverkehr der Deutschen Bahn, Anschluss des Bonner Hauptbahnhofs</title>
+<updated>2025-05-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#241878-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020590"/>
+<summary>Kenntnisnahme am 2025-05-08; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020590#beratung-2025-05-06-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 241878-03 ST BBB-Anfrage: Fernverkehr der Deutschen Bahn, Anschluss des Bonner Hauptbahnhofs</title>
+<updated>2025-05-06T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#241878-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020590"/>
+<summary>Kenntnisnahme am 2025-05-06; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020590#vorlage</id>
+<title>Neue Vorlage 241878-03 ST: BBB-Anfrage: Fernverkehr der Deutschen Bahn, Anschluss des Bonner Hauptbahnhofs</title>
+<updated>2024-12-10T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#241878-03%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020590"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung teilt mit, dass sie die Anfrage zum Fernverkehr der Deutschen Bahn und dem Anschluss des Bonner Hauptbahnhofs noch nicht beantworten kann. Sie bittet darum, das Thema in einer späteren Sitzung zu besprechen, weil noch Abstimmungen fehlen.</summary>
+</entry>
+</feed>

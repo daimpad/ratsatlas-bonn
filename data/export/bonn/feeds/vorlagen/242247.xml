@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242247</id>
+<title>Vorlage 242247: Tagesordnungspunkte in nichtöffentlicher Sitzung des Projektbeirates Sanierung Stadthalle Bad Godesberg</title>
+<subtitle>Verlauf der Vorlage 242247: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-01-16T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242247.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#242247"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020707#beratung-2025-01-16-Projektbeirat%20Sanierung%20Stadthalle%20Bad%20Godesberg</id>
+<title>Projektbeirat Sanierung Stadthalle Bad Godesberg: „zur Kenntnis genommen“ – 242247 Tagesordnungspunkte in nichtöffentlicher Sitzung des Projektbeirates Sanierung Stadthalle Bad Godesberg</title>
+<updated>2025-01-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#242247"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020707"/>
+<summary>Kenntnisnahme am 2025-01-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020707#vorlage</id>
+<title>Neue Vorlage 242247: Tagesordnungspunkte in nichtöffentlicher Sitzung des Projektbeirates Sanierung Stadthalle Bad Godesberg</title>
+<updated>2024-12-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#242247"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020707"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

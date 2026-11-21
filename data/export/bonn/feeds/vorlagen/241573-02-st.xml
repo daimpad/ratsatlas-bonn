@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/241573-02-st</id>
+<title>Vorlage 241573-02 ST: Vergünstigter ÖPNV für Jugendgruppen und JuLeiCa-Inhaber:innen</title>
+<subtitle>Verlauf der Vorlage 241573-02 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-12-11T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/241573-02-st.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#241573-02%20ST"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020584#beratung-2024-12-11-Ausschuss%20f%C3%BCr%20Kinder%2C%20Jugend%20und%20Familie</id>
+<title>Ausschuss für Kinder, Jugend und Familie: „zur Kenntnis genommen“ – 241573-02 ST Vergünstigter ÖPNV für Jugendgruppen und JuLeiCa-Inhaber:innen</title>
+<updated>2024-12-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#241573-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020584"/>
+<summary>Kenntnisnahme am 2024-12-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020584#vorlage</id>
+<title>Neue Vorlage 241573-02 ST: Vergünstigter ÖPNV für Jugendgruppen und JuLeiCa-Inhaber:innen</title>
+<updated>2024-12-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#241573-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020584"/>
+<summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung teilt mit, dass sie die Prüfung für vergünstigte ÖPNV-Tickets für Jugendgruppen und JuLeiCa-Inhaber noch nicht abgeschlossen hat. Sie schlägt vor, die Entscheidung zu verschieben.</summary>
+</entry>
+</feed>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242164</id>
+<title>Vorlage 242164: Übersicht über die Entwicklung der Erträge und Aufwendungen des 1. Quartals und über die Abwicklung des Vermögensplanes des Theater Bonn in der Spielzeit 2024/25</title>
+<subtitle>Verlauf der Vorlage 242164: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-01-30T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242164.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242164"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020461#beratung-2025-01-30-Kulturausschuss</id>
+<title>Kulturausschuss: „zur Kenntnis genommen“ – 242164 Übersicht über die Entwicklung der Erträge und Aufwendungen des 1. Quartals und über die Abwicklung des Vermögensplanes des Theater Bonn in der Spielzeit 2024/25</title>
+<updated>2025-01-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242164"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020461"/>
+<summary>Kenntnisnahme am 2025-01-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020461#beratung-2025-01-30-Ausschuss%20f%C3%BCr%20Finanzen%2C%20Beteiligungen%20und%20Vergabe</id>
+<title>Ausschuss für Finanzen, Beteiligungen und Vergabe: „zur Kenntnis genommen“ – 242164 Übersicht über die Entwicklung der Erträge und Aufwendungen des 1. Quartals und über die Abwicklung des Vermögensplanes des Theater Bonn in der Spielzeit 2024/25</title>
+<updated>2025-01-30T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242164"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020461"/>
+<summary>Kenntnisnahme am 2025-01-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020461#vorlage</id>
+<title>Neue Vorlage 242164: Übersicht über die Entwicklung der Erträge und Aufwendungen des 1. Quartals und über die Abwicklung des Vermögensplanes des Theater Bonn in der Spielzeit 2024/25</title>
+<updated>2024-12-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242164"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020461"/>
+<summary>Mitteilungsvorlage · federführend: 46 Theater der Bundesstadt Bonn · Stand: beraten, ohne Entscheidung</summary>
+</entry>
+</feed>

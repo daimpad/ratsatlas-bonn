@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/242237</id>
+<title>Vorlage 242237: Festlegung der Redezeit im Integrationsrat</title>
+<subtitle>Verlauf der Vorlage 242237: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-07-21T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/242237.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242237"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020671#folge-242237-02</id>
+<title>Antrag 242237-02: GfB-Antrag: Aufhebung des Beschlusses (Drucks-Nr.:242237) vom 25.02.2025 und die Streichung §12 Abs.4 der GeschO</title>
+<updated>2026-07-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242237"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020671"/>
+<summary>Folgevorlage zu 242237</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020671#beratung-2025-02-25-Integrationsrat</id>
+<title>Integrationsrat: „geändert beschlossen“ – 242237 Festlegung der Redezeit im Integrationsrat</title>
+<updated>2025-02-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242237"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020671"/>
+<summary>Entscheidung am 2025-02-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020671#folge-242237-01%20ST</id>
+<title>Stellungnahme der Verwaltung 242237-01 ST: Festlegung der Redezeit im Integrationsrat – Stellungnahme zur Maßgabe des Integrationsrates vom 28.01.2025</title>
+<updated>2025-02-13T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242237"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020671"/>
+<summary>Folgevorlage zu 242237</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020671#vorlage</id>
+<title>Neue Vorlage 242237: Festlegung der Redezeit im Integrationsrat</title>
+<updated>2024-12-19T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#242237"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020671"/>
+<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, dass im Integrationsrat ab der nächsten Sitzung jeder Redebeitrag zu einem Tagesordnungspunkt maximal fünf Minuten dauert. Der Integrationsrat kann diese Zeit selbst ändern. Die Regelung soll für faire und geordnete Sitzungen sorgen.</summary>
+</entry>
+</feed>

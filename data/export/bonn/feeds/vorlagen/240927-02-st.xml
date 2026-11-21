@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/240927-02-st</id>
+<title>Vorlage 240927-02 ST: N-Vorlage: Vorstellung Fortschreibung des Kinder- und Jugendförderplans 2026-2030</title>
+<subtitle>Verlauf der Vorlage 240927-02 ST: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-12-11T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/240927-02-st.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#240927-02%20ST"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020446#beratung-2024-12-11-Ausschuss%20f%C3%BCr%20Kinder%2C%20Jugend%20und%20Familie</id>
+<title>Ausschuss für Kinder, Jugend und Familie: „zur Kenntnis genommen“ – 240927-02 ST N-Vorlage: Vorstellung Fortschreibung des Kinder- und Jugendförderplans 2026-2030</title>
+<updated>2024-12-11T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#240927-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020446"/>
+<summary>Kenntnisnahme am 2024-12-11; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020446#vorlage</id>
+<title>Neue Vorlage 240927-02 ST: N-Vorlage: Vorstellung Fortschreibung des Kinder- und Jugendförderplans 2026-2030</title>
+<updated>2024-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#240927-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020446"/>
+<summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung gibt die Stellungnahme der Arbeitsgruppe Jugendförderung zum Entwurf des Kinder- und Jugendförderplans für Bonn von 2026 bis 2030 wieder. Sie legt die Einschätzungen der Gruppe vor, ohne selbst einen Beschluss vorzuschlagen.</summary>
+</entry>
+</feed>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/221795-07</id>
+<title>Vorlage 221795-07: Digitalisierung der Gremienarbeit</title>
+<subtitle>Verlauf der Vorlage 221795-07: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2025-05-08T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/221795-07.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#221795-07"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020754#beratung-2025-05-08-Rat</id>
+<title>Rat: „geändert beschlossen“ – 221795-07 Digitalisierung der Gremienarbeit</title>
+<updated>2025-05-08T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#221795-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020754"/>
+<summary>Entscheidung am 2025-05-08; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020754#beratung-2025-04-29-Hauptausschuss</id>
+<title>Hauptausschuss: „geändert beschlossen“ – 221795-07 Digitalisierung der Gremienarbeit</title>
+<updated>2025-04-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#221795-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020754"/>
+<summary>Empfehlung am 2025-04-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020754#beratung-2025-04-02-Unterausschuss%20f%C3%BCr%20Digitalisierung%20und%20Organisation</id>
+<title>Unterausschuss für Digitalisierung und Organisation: „geändert beschlossen“ – 221795-07 Digitalisierung der Gremienarbeit</title>
+<updated>2025-04-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#221795-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020754"/>
+<summary>Empfehlung am 2025-04-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2020754#vorlage</id>
+<title>Neue Vorlage 221795-07: Digitalisierung der Gremienarbeit</title>
+<updated>2024-12-21T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2024#221795-07"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2020754"/>
+<summary>Beschlussvorlage · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, das Projekt für hybride Gremiensitzungen wegen der angespannten Haushaltslage bis 2026 auszusetzen. Danach soll geprüft werden, ob es weitergeht. Der Ratssaal und weitere Räume wären betroffen.</summary>
+</entry>
+</feed>

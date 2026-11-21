@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
 <id>tag:allris-bonn,2026:feed/vorlage/260310</id>
-<title>Vorlage 260310: Grundstück in Bonn-Mehlem, Etzelstraße, Hildebrandstraße Gemarkung Mehlem, Flur 7, Flurstück 1424 - Errichtung einer Doppelgarage Az.: 40321/2025</title>
+<title>Vorlage 260310: Grundstück in Bonn-Mehlem, Etzelstraße, Hildebrandstraße Gemarkung Mehlem, [Flurstück ausgelassen] - Errichtung einer Doppelgarage Az.: 40321/2025</title>
 <subtitle>Verlauf der Vorlage 260310: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
 <updated>2026-03-24T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/260310.xml"/>
@@ -10,7 +10,7 @@
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025748#beratung-2026-03-24-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 260310 Grundstück in Bonn-Mehlem, Etzelstraße, Hildebrandstraße Gemarkung Mehlem, Flur 7, Flurstück 1424 - Errichtung einer Doppelgarage Az.: 40321/2025</title>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 260310 Grundstück in Bonn-Mehlem, Etzelstraße, Hildebrandstraße Gemarkung Mehlem, [Flurstück ausgelassen] - Errichtung einer Doppelgarage Az.: 40321/2025</title>
 <updated>2026-03-24T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#260310"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025748"/>
@@ -18,7 +18,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025748#vorlage</id>
-<title>Neue Vorlage 260310: Grundstück in Bonn-Mehlem, Etzelstraße, Hildebrandstraße Gemarkung Mehlem, Flur 7, Flurstück 1424 - Errichtung einer Doppelgarage Az.: 40321/2025</title>
+<title>Neue Vorlage 260310: Grundstück in Bonn-Mehlem, Etzelstraße, Hildebrandstraße Gemarkung Mehlem, [Flurstück ausgelassen] - Errichtung einer Doppelgarage Az.: 40321/2025</title>
 <updated>2026-02-27T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#260310"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025748"/>

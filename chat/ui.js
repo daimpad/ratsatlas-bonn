@@ -52,12 +52,20 @@ function fillSettings() {
   $("#chat-remember").checked = keys.remembered(p);
   $("#chat-key-link").hidden = !def.keyUrl;
   if (def.keyUrl) $("#chat-key-link").href = def.keyUrl;
-  if (p === "openrouter" && !def.models.length) {
-    listModels("openrouter").then((list) => {
-      if (provider() === "openrouter") $("#chat-models").innerHTML = list.map((m) => `<option value="${esc(m.id)}">${esc(m.name)}</option>`).join("");
-    }).catch(() => {});
-  }
+  ladeModelle();
   updateState();
+}
+
+// Modellliste von OpenRouter: erst, wenn ein Schlüssel eingetragen ist. Vorher geht keine Anfrage an den Anbieter
+// (Datenschutzerklärung: „Erst dann sendet Ihr Browser …“; Prüfung November 2026, Nr. 27: die Liste wurde schon bei
+// der Wahl des Anbieters und bei jedem späteren Öffnen der Fläche abgerufen). Je Sitzung höchstens einmal.
+let modelleGeladen = false;
+function ladeModelle() {
+  if (modelleGeladen || provider() !== "openrouter" || PROVIDERS.openrouter.models.length || !keys.get("openrouter")) return;
+  modelleGeladen = true;
+  listModels("openrouter").then((list) => {
+    if (provider() === "openrouter") $("#chat-models").innerHTML = list.map((m) => `<option value="${esc(m.id)}">${esc(m.name)}</option>`).join("");
+  }).catch(() => { modelleGeladen = false; });
 }
 
 function configured() {
@@ -247,7 +255,7 @@ function init() {
   });
   $("#chat-model").addEventListener("change", (e) => { prefs.models[provider()] = e.target.value.trim(); savePrefs(); updateState(); });
   $("#chat-base").addEventListener("change", (e) => { prefs.base = e.target.value.trim(); savePrefs(); });
-  const saveKey = () => { keys.set(provider(), $("#chat-key").value, { remember: $("#chat-remember").checked }); updateState(); };
+  const saveKey = () => { keys.set(provider(), $("#chat-key").value, { remember: $("#chat-remember").checked }); updateState(); ladeModelle(); };
   $("#chat-key").addEventListener("input", saveKey);
   $("#chat-remember").addEventListener("change", saveKey);
   $("#chat-key-clear").addEventListener("click", () => { keys.clear(provider()); $("#chat-key").value = ""; $("#chat-remember").checked = false; updateState(); status("Schlüssel gelöscht."); $("#chat-key").focus(); });
