@@ -470,3 +470,31 @@ test("Leiste: Ansichten, vier Menüs und Assistent; Menü „Über“ mit Lesehi
     await page.close();
   }
 });
+
+test("Content-Security-Policy aktiv: Start, Gebiet, Vorgang, Wer entscheidet und Assistent ohne Verstoß", async () => {
+  // Die übrigen Tests laufen mit bypassCSP (für axe). Hier bleibt die CSP der Seite aktiv, damit ein Verstoß auffällt
+  // (Prüfung November 2026, Nr. 44).
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  const meldungen = [];
+  await page.addInitScript(() => {
+    window.__csp = [];
+    document.addEventListener("securitypolicyviolation", (e) => window.__csp.push(`${e.violatedDirective}: ${e.blockedURI}`));
+  });
+  page.on("console", (m) => { if (/Content Security Policy/i.test(m.text())) meldungen.push(m.text()); });
+  page.on("pageerror", (e) => meldungen.push(String(e)));
+  await page.goto(SITE + "?gebiet=ortsteil:endenich&suche=gebiet", { waitUntil: "networkidle" });
+  await page.waitForFunction(() => document.querySelectorAll("#papers li").length > 0);
+  await page.locator("#papers li button").first().click();
+  await page.waitForFunction(() => document.querySelector("#detail-heading")?.textContent === "Vorgang");
+  await page.click('[data-mega="mega-entscheiden"]');
+  await page.click('.card[data-pz-tab="gremien"]');
+  await page.waitForFunction(() => !/Lädt/.test(document.querySelector("#pz-body")?.textContent || "Lädt"));
+  await page.keyboard.press("Escape");
+  await page.click('.toggle[data-panel="panel-assistent"]');
+  await page.waitForFunction(() => document.querySelector("#chat-provider")?.options.length > 0);
+  await page.goto(SITE + "haushalt/", { waitUntil: "networkidle" });
+  await page.goto(SITE + "thema/verkehr-und-mobilitaet/", { waitUntil: "networkidle" });
+  assert.deepEqual([...meldungen, ...(await page.evaluate(() => window.__csp || []))], []);
+  await page.close();
+});
+

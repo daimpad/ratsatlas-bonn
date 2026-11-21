@@ -457,7 +457,7 @@
     if (tl && zeit) {
       const series = zeit.areas[`${area.kind}:${area.key}`] || zeit.areas.gesamt;
       tl.setData({ months: zeit.months, categories: zeit.categories, density: series, meetings: zeit.meetings,
-        terms: zeit.terms, dataStart: zeit.data_start, dataStand });
+        terms: zeit.terms, dataStart: zeit.data_start, dataStand, bezirk: areaBezirk() });
       tl.select(null);
       tl.setSites(areaSites());
     }
@@ -1316,8 +1316,9 @@
         ${planIndexUrl() ? '<button type="button" class="btn btn-soft" id="plan-list">Pläne im Gebiet als Liste</button>' : ""}` : ""}
       ${bauOn && bau ? `<ul><li><span class="site-icon site-aktuell" aria-hidden="true"></span>Baustelle der Stadt, laufend</li>
         <li><span class="site-icon site-geplant" aria-hidden="true"></span>Baustelle der Stadt, geplant</li>
+        <li><span class="site-icon site-abgelaufen" aria-hidden="true"></span>Baustelle der Stadt, gemeldetes Ende verstrichen</li>
         <li><span class="site-icon site-fremd" aria-hidden="true"></span>Baustelle anderer Träger (Versorger, Straßen NRW, Bahn)</li></ul>
-        <p class="hint">Termine unverbindlich; ${bau.meta.archiv_beginn ? `Archiv seit ${fmtDate(bau.meta.archiv_beginn)}` : "aktueller Stand, ohne Archiv"}.</p>
+        <p class="hint">Termine unverbindlich; ${bau.meta.archiv_beginn ? `Archiv seit ${fmtDate(bau.meta.archiv_beginn)}` : "aktueller Stand, ohne Archiv"}.${bauVeraltet() ? ` Die Quelle wurde zuletzt am ${fmtDate(bauVeraltet())} erreicht.` : ""}</p>
         <button type="button" class="btn btn-soft" id="bau-list">Baustellen im Gebiet als Liste</button>` : ""}
       ${kxLegend()}`;
     const b = legendEl.querySelector("#plan-list");
@@ -1343,6 +1344,43 @@
     highlight();
   }
   // gewählte Vorlage auf der Karte hervorheben
+  // Karte so weit hineinzoomen, dass der Punkt einer Vorlage einzeln steht, dann hervorheben. Ersetzt
+  // cluster.zoomToShowLayer (Prüfung November 2026, Nr. 8): Dessen Listener blieb hängen, wenn die Punkte vor dem Ende
+  // der Bewegung neu gezeichnet wurden (Filter oder Gebietswechsel innerhalb einer halben Sekunde), warf danach bei
+  // jeder Kartenbewegung und ließ den nächsten Gebietswechsel bei „Lade Vorlagen …“ stehen. Hier hört genau ein
+  // Listener genau einmal zu und prüft, ob Punkt und Auswahl noch gelten.
+  function zeigeMarker(m, ref) {
+    const gilt = () => selected && selected.reference === ref && (markers.get(ref) || []).includes(m);
+    const auffaechern = () => {
+      if (!gilt()) return;
+      // liegen mehrere Punkte auf derselben Stelle, bleibt die Gruppe bis zur größten Stufe: auffächern
+      const sichtbar = cluster.getVisibleParent(m);
+      if (sichtbar && sichtbar !== m && sichtbar.spiderfy) {
+        cluster.once("spiderfied", () => { if (gilt()) highlight(); });   // erst danach liegt der Punkt auf der Karte
+        sichtbar.spiderfy();
+      }
+      highlight();
+    };
+    // solange die Gruppen ihre Zoom-Bewegung zeichnen, fächert MarkerCluster nicht auf: auf deren Ende warten
+    const fertig = () => { if (cluster._inZoomAnimation) cluster.once("animationend", auffaechern); else auffaechern(); };
+    // Stufe, ab der der Punkt einzeln steht: eine tiefer als die kleinste Gruppe, in der er aufgeht. Geht er bis zur
+    // größten Stufe in einer Gruppe auf (mehrere Punkte auf derselben Stelle, etwa der Mitte einer Straße), genügt
+    // die Stufe, ab der die Gruppe nur noch diesen Stapel enthält; dort wird sie aufgefächert.
+    let gruppe = m.__parent, stufe = map.getZoom();
+    if (gruppe && Number.isFinite(gruppe._zoom)) {
+      if (gruppe._zoom < map.getMaxZoom()) stufe = gruppe._zoom + 1;
+      else {
+        const n = gruppe.getChildCount();
+        while (gruppe.__parent && Number.isFinite(gruppe.__parent._zoom) && gruppe.__parent._zoom >= map.getMinZoom()
+          && gruppe.__parent.getChildCount() === n) gruppe = gruppe.__parent;
+        stufe = gruppe._zoom;
+      }
+    }
+    const ziel = Math.max(map.getZoom(), stufe);
+    if (ziel === map.getZoom() && map.getBounds().pad(-0.1).contains(m.getLatLng())) { fertig(); return; }
+    map.once("moveend", fertig);
+    map.setView(m.getLatLng(), ziel, { animate: !REDUCED });
+  }
   function highlight() {
     for (const [ref, ms] of markers) {
       const on = selected && ref === selected.reference;
@@ -1391,6 +1429,7 @@
     return p.steps.some((s) => (s.typ === "beratung" || s.typ === "entscheidung") && s.date && s.date >= a && s.date <= b);
   }
   function filtered(withRange = true) {
+    if (!area) return [];   // Gebietsdatei beim Start nicht geladen (Fehlermeldung mit „Erneut versuchen“ steht in der Liste)
     const text = $("#f-text").value.trim().toLowerCase(), type = $("#f-type").value, amt = $("#f-amt").value;
     const gremium = $("#f-gremium").value, standF = $("#f-stand").value;
     const theme = $("#f-theme").value, party = $("#f-party").value, rel = $("#f-related").checked;
@@ -1495,6 +1534,7 @@
   }
 
   function render() {
+    if (!area && scope() !== "bonn") return;   // ohne geladenes Gebiet bleibt die Fehlermeldung stehen (Nr. 31)
     $("#f-related-wrap").hidden = !$("#f-party").value;
     $("#more-filters").hidden = scope() === "bonn";
     if (scope() === "bonn") {
@@ -1582,7 +1622,7 @@
   const link = (url, text, cls) => { const u = safeUrl(url); return u ? `<a ${cls ? `class="${cls}" ` : ""}href="${u}" target="_blank" rel="noopener">${text}</a>` : ""; };
   // Bebauungspläne: Geltungsbereiche der Stadt (CC0), erst bei Bedarf geladen
   let plansData = null, planLayer = null;
-  const loadPlans = () => (plansData ||= loadGeo("bplan").catch(() => ({ features: [] })));
+  const loadPlans = () => (plansData ||= loadGeo("bplan").catch(() => { plansData = null; return { features: [] }; }));
   async function showPlans(p, fit) {
     if (planLayer) { planLayer.remove(); planLayer = null; }
     const withArea = (p.plans || []).filter((x) => x.area);
@@ -1630,7 +1670,9 @@
       const want = kxOn.has(k) && visible;
       if (!want) { if (kxLayers[k]) { kxLayers[k].remove(); kxLayers[k] = null; } continue; }
       if (kxLayers[k]) continue;
-      kxData[k] ||= fetch(`${BONN}flaechen/${KX[k].file}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+      // ein gescheiterter Abruf wird nicht gemerkt: der nächste Versuch lädt neu (Prüfung November 2026, Nr. 30)
+      kxData[k] ||= fetch(`${BONN}flaechen/${KX[k].file}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+        .then((d) => { if (!d) kxData[k] = null; return d; });
       const data = await kxData[k];
       if (!data || kxLayers[k] || !kxOn.has(k) || map.getZoom() < KX_ZOOM) continue;
       if (!map.getPane("kontextflaechen")) map.createPane("kontextflaechen").style.zIndex = 360;
@@ -1688,7 +1730,8 @@
   // Register je Plannummer (data/export/bonn/plaene.json): Vorlagen chronologisch, Verfahrensschritte abgeleitet
   let planReg = null;
   const planIndexUrl = () => (index ? BONN + "plaene.json" : null);
-  const loadPlanReg = () => (planReg ||= (planIndexUrl() ? fetch(planIndexUrl()).then((r) => (r.ok ? r.json() : null)).catch(() => null) : Promise.resolve(null)));
+  const loadPlanReg = () => (planReg ||= (planIndexUrl() ? fetch(planIndexUrl()).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+    .then((d) => { if (!d) planReg = null; return d; }) : Promise.resolve(null)));
   const PLAN_MATCH = { eindeutig: "eindeutig zugeordnet", grundnummer: "im Datensatz nur die Grundnummer", mehrdeutig: "mehrere Pläne passen",
     nicht_im_datensatz: "nicht unter den rechtskräftigen Plänen (im Verfahren oder aufgehoben)" };
   // detailSeq: eine langsam geladene Planchronik überschreibt keine neuere Auswahl (Code-Prüfung 23.10.2026)
@@ -1770,8 +1813,13 @@
   }
 
   // --- Baustellen (data/export/bonn/baustellen.json, pipeline/kandidaten.py) -----------------------------
-  const siteState = (b) => (!b.aktiv ? "entfallen" : b.von && b.von > heute() ? "geplant" : "aktuell");
-  const SITE_STATE = { aktuell: "laufend", geplant: "geplant", entfallen: "nicht mehr gemeldet" };
+  // „laufend“ nur, solange das gemeldete Ende nicht verstrichen ist: Antwortet die Quelle nicht, bleiben Baustellen im
+  // Archiv gemeldet, auch wenn ihr Termin abgelaufen ist (Prüfung November 2026, Nr. 33: Stand vom 21.10.2026, alle 46
+  // „laufend“, vier mit Ende vor dem Datenstand)
+  const siteState = (b) => (!b.aktiv ? "entfallen" : b.von && b.von > heute() ? "geplant" : b.bis && b.bis < heute() ? "abgelaufen" : "aktuell");
+  const SITE_STATE = { aktuell: "laufend", geplant: "geplant", abgelaufen: "gemeldetes Ende verstrichen", entfallen: "nicht mehr gemeldet" };
+  // Liegt der letzte Abruf der Quelle mehr als sieben Tage zurück, steht das beim Stand der Baustelle
+  const bauVeraltet = () => { const a = String(bau?.meta?.abruf || "").slice(0, 10); return a && (Date.parse(heute()) - Date.parse(a)) / 864e5 > 7 ? a : null; };
   const siteClass = (b) => (b.fremd ? "site-fremd" : `site-${siteState(b)}`);
   // Punkt in Fläche (gerade-ungerade über alle Ringe, Löcher eingeschlossen)
   function inGeom(lon, lat, g) {
@@ -1833,7 +1881,7 @@
         <dt>Maßnahme</dt><dd>${esc(b.massnahme || "–")}</dd>
         <dt>Träger</dt><dd>${esc(b.traeger || "–")}${b.fremd ? '<br><span class="hint">Anderer Träger: setzt in der Regel keinen Ratsbeschluss um.</span>' : ""}</dd>
         <dt>Zeitraum</dt><dd>${fmtDate(b.von)} – ${fmtDate(b.bis)} <span class="derived">laut Quelle unverbindlich</span></dd>
-        <dt>Stand</dt><dd>${SITE_STATE[state]}${b.entfallen ? ` (seit ${fmtDate(b.entfallen)})` : ""}</dd>
+        <dt>Stand</dt><dd>${SITE_STATE[state]}${b.entfallen ? ` (seit ${fmtDate(b.entfallen)})` : ""}${bauVeraltet() ? `<br><span class="hint">Die Quelle wurde zuletzt am ${fmtDate(bauVeraltet())} erreicht; der Stand kann überholt sein.</span>` : ""}</dd>
         ${b.sperrung ? `<dt>Sperrung</dt><dd>${esc(b.sperrung)}</dd>` : ""}
         <dt>Im Archiv seit</dt><dd>${fmtDate(b.seit)}${b.seit === bau.meta.archiv_beginn ? " (Beginn des Archivs)" : ""}</dd>
       </dl>
@@ -1868,7 +1916,8 @@
   // Soll-Modell (data/export/bonn/soll.json): Verfahren nach Regelwerk aus „Bonn entscheidet“ (MIT) mit Ergänzungen;
   // abgeglichen wird je Vorgang nur, welche Gremienarten beraten haben (pipeline/soll.py)
   let sollData = null;
-  const loadSoll = () => (sollData ||= index ? fetch(BONN + "soll.json").then((r) => (r.ok ? r.json() : null)).catch(() => null) : Promise.resolve(null));
+  const loadSoll = () => (sollData ||= index ? fetch(BONN + "soll.json").then((r) => (r.ok ? r.json() : null)).catch(() => null)
+    .then((d) => { if (!d) sollData = null; return d; }) : Promise.resolve(null));
   const GREMIUM_BAHN = new Set(["bv", "aus", "rat"]);
   const lawLinks = (links) => (links || []).map((l) => link(l.url, esc(l.label))).filter(Boolean).join(" · ");
   function sollStep(st, d, ist) {
@@ -2052,7 +2101,7 @@
       if (b) b.scrollIntoView({ block: "nearest" });
     } else {
       // mit Bebauungsplan zoomt showPlans auf die Planfläche
-      if (ms.length && !(p.plans || []).some((x) => x.area)) cluster.zoomToShowLayer(ms[0], () => { highlight(); map.panTo(ms[0].getLatLng(), { animate: !REDUCED }); });
+      if (ms.length && !(p.plans || []).some((x) => x.area)) zeigeMarker(ms[0], p.reference);
       if (MOBILE.matches) $("#detail h3").focus();
     }
   }
@@ -2413,6 +2462,25 @@
     history.replaceState(null, "", url);
   }
 
+  // index.json: fehlt die Datei (404), gibt es nur den Pilot Endenich (lokale Vorschau ohne Export für ganz Bonn).
+  // Jeder andere Fehler (Netz, Server, kaputte Antwort) wird einmal wiederholt und dann gemeldet: Bisher startete die
+  // Seite dabei stillschweigend im Pilot und zeigte nur Endenich (Prüfung November 2026, Nr. 9).
+  async function ladeIndex() {
+    for (let versuch = 0; ; versuch++) {
+      try {
+        const r = await fetch(BONN + "index.json");
+        if (r.status === 404) return null;
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const d = await r.json();
+        if (!d || !Array.isArray(d.ortsteile)) throw new Error("unvollständige Antwort");
+        return d;
+      } catch (err) {
+        if (versuch >= 1) throw new Error(`Übersicht der Gebiete nicht erreichbar: ${err.message}`);
+        await new Promise((ok) => setTimeout(ok, 800));
+      }
+    }
+  }
+
   // --- Start -----------------------------------------------------------------------------------------
   async function start() {
     // Alle Startdaten gleichzeitig anfordern (index.html lädt sie zusätzlich vorab); ohne Glossar erscheinen
@@ -2423,7 +2491,7 @@
     const startGebiet = new URLSearchParams(location.search).get("gebiet") || DEFAULT_AREA;
     const [gKind, gKey] = startGebiet.split(":");
     // 1. index.json (klein, vorab angefordert) gibt den ersten Ausschnitt; die Kacheln laden sofort
-    const idx = await json(BONN + "index.json");
+    const idx = await ladeIndex();
     createMap(startBounds(idx, startGebiet));
     // 2. alles Übrige nach den sichtbaren Kacheln (höchstens 2,5 s warten)
     await kachelnGeladen(2500);
@@ -2438,8 +2506,8 @@
     index = idx;
     kontext = index && kx && kx.ortsteile ? kx : null;
     anliegen = kontext && an && an.ortsteile ? an : null;
-    zeit = index ? z : null;
-    bau = index && bs && bs.baustellen.length ? bs : null;
+    zeit = index && z && z.months && z.areas ? z : null;   // unvollständige Datei: ohne Zeitleiste statt Abbruch
+    bau = index && bs?.baustellen?.length ? bs : null;
     for (const b of bau ? bau.baustellen : []) for (const c of b.kandidaten) {
       if (!bauByRef.has(c.drucksache)) bauByRef.set(c.drucksache, []);
       bauByRef.get(c.drucksache).push({ b, c });
@@ -2545,6 +2613,15 @@
     if (kxOn.size) drawKx();
     const initial = papers.find((p) => p.reference === ref);
     if (initial) select(initial);
+    // Vorlage aus dem Anker liegt nicht im Gebiet des Links (etwa ein Feed-Link „ohne Ortsbezug“, nachdem die Vorlage
+    // einen Ort erhalten hat, oder ein Anker ohne Gebiet): über den Suchindex ihr Gebiet öffnen, sonst ein Hinweis
+    // (Prüfung November 2026, Nr. 12: bisher erschien stillschweigend „Los geht's“)
+    else if (ref && index && /^[\w .\-]{4,24}$/.test(ref) && await window.risKarte.open(ref)) { /* geöffnet */ }
+    else if (ref && index && /^[\w .\-]{4,24}$/.test(ref)) {
+      showIntro();
+      $("#detail").insertAdjacentHTML("afterbegin", `<p class="hint" role="status">Die Vorlage ${esc(ref)} aus dem Link ist in den Daten nicht enthalten.</p>`);
+      $("#announce").textContent = `Die Vorlage ${ref} aus dem Link ist in den Daten nicht enthalten.`;
+    }
     else if (params.get("plan")) await showPlan(params.get("plan"));
     else if (params.get("baustelle") && bau && bau.baustellen.some((b) => b.id === params.get("baustelle"))) showSite(params.get("baustelle"));
     else showIntro();
@@ -2601,5 +2678,11 @@
     },
   };
 
-  start().catch((err) => { $("#detail").innerHTML = `<p>Die Daten konnten nicht geladen werden (${esc(err.message)}).</p>`; });
+  start().catch((err) => {
+    console.error(err);
+    $("#detail").innerHTML = `<p role="alert">Die Daten konnten nicht geladen werden (${esc(err.message)}).</p>
+      <p><button type="button" class="btn btn-cta" id="neu-laden">Erneut versuchen</button></p>`;
+    $("#neu-laden").addEventListener("click", () => location.reload());
+    setPanel("panel-detail", true);
+  });
 })();

@@ -237,6 +237,27 @@ test("hole_prozesslinie: Schritte mit Evidenzstatus und Erläuterung", async () 
   assert.equal(rat.zeitbezug, undefined);
 });
 
+test("hole_prozesslinie: bei sehr langen Verfahren entfallen zuerst Folgevorlagen, die Entscheidung bleibt", async () => {
+  // Prüfung November 2026 (Nr. 36): die allgemeine Kürzung schnitt die jüngsten Schritte ab (221697 ohne Ratsbeschluss)
+  const lang = "Beratung im Ausschuss mit einem sehr langen Namen und vielen Worten ".repeat(3);
+  const steps = [
+    ...Array.from({ length: 30 }, (_, i) => ({ typ: "beratung", label: `${lang}${i}`, status: "belegt", date: "2026-01-10", result: "vertagt", note: "datum" })),
+    { typ: "entscheidung", label: "Rat", status: "belegt", date: "2026-06-30", result: "geändert beschlossen" },
+    ...Array.from({ length: 40 }, (_, i) => ({ typ: "folgevorlage", label: "Stellungnahme der Verwaltung", status: "belegt", reference: `261088-${i}`, title: lang })),
+  ];
+  const files = { ...FILES, "bonn/chat/vorlagen/2610.json": { papers: { 261088: { ...VORLAGE, steps } } } };
+  const t = createTools({ today: "2026-10-18", load: async (p) => { if (!(p in files)) throw new Error(`HTTP 404 ${p}`); return structuredClone(files[p]); } });
+  const r = await t.run("hole_prozesslinie", { drucksache: "261088" });
+  assert.ok(JSON.stringify(r).length <= MAX_CHARS);
+  assert.ok(!r.gekuerzt);                                            // nicht von hinten gekürzt
+  assert.equal(r.schritte.at(-1).ergebnis, "geändert beschlossen");   // die Entscheidung bleibt
+  assert.equal(r.folgevorlagen_gesamt, 40);
+  assert.equal(r.folgevorlagen_ausgelassen, 40);
+  assert.match(r.schritte_ausgelassen, /frühere Schritte/);          // bei dieser Länge entfallen frühere Beratungen
+  assert.equal(r.schritte[0].nr, 1);
+  assert.equal((await t.run("_prozesslinie", {})).fehler.includes("Unbekanntes Werkzeug"), true);
+});
+
 test("hole_prozesslinie: Soll nach Regelwerk mit Befund und Rechtsgrundlage", async () => {
   const s = (await tools().run("hole_prozesslinie", { drucksache: "261088" })).soll_nach_regelwerk;
   assert.equal(s.verfahren, "Antrag in der Bezirksvertretung");

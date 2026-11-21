@@ -306,6 +306,7 @@ dl.facts dd { min-width: 0; overflow-wrap: anywhere; } dl.facts dd .derived { di
 .site-marker .site-icon { margin: 2px; box-shadow: 0 0 0 1.5px #fff, 0 1px 4px rgba(15, 15, 20, 0.35); }
 .site-aktuell { background: #c2410c; border: 2px solid #7c2d12; }
 .site-geplant { background: #fff; border: 2px dashed #c2410c; }
+.site-abgelaufen { background: #fed7aa; border: 2px solid #9a3412; }
 .site-fremd { background: #8a8a96; border: 2px solid #4b4b55; }
 .map-legend li .site-icon { width: 11px; height: 11px; margin: 0 1px; }
 

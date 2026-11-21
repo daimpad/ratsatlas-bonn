@@ -27,6 +27,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 90   # üblich sind 25 Minuten; ohne Grenze blockierte ein hängender Lauf die Gruppe pages bis zu 6 Stunden
     outputs:
       deploy_sha: ${{ steps.deploy.outputs.sha }}
     permissions:
@@ -295,6 +296,20 @@ jobs:
           else
             git init -q -b deploy _deploy
           fi
+          # Fehlen in diesem Lauf die grauen Kacheln oder die Dateien aus dem Archiv (Branch kacheln bzw. archiv nicht
+          # geladen), bleiben die des letzten Stands, statt dass die Seite einen Tag lang auf die OSM-Kacheln ausweicht
+          # oder Baustellen und Mängelmelder verliert (Prüfung November 2026, Nr. 29). Vor dem Pages-Artefakt, damit
+          # auch der Spiegel sie erhält.
+          if [ ! -f _site/kacheln/stand.json ] && [ -f _deploy/kacheln/stand.json ]; then
+            cp -r _deploy/kacheln _site/kacheln
+            echo "::warning::Graue Kacheln aus dem letzten Stand übernommen (Branch kacheln nicht geladen)"
+          fi
+          for datei in baustellen.json anliegen.json; do
+            if [ ! -f "_site/data/export/bonn/$datei" ] && [ -f "_deploy/data/export/bonn/$datei" ] && [ ! -d _archiv/.git ]; then
+              cp "_deploy/data/export/bonn/$datei" "_site/data/export/bonn/$datei"
+              echo "::warning::$datei aus dem letzten Stand übernommen (Branch archiv nicht geladen)"
+            fi
+          done
           find _deploy -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp -r _site/. _deploy/
           rm -f _deploy/data/export/allris-bonn-export.zip
@@ -322,6 +337,7 @@ jobs:
 
   deploy:
     needs: build
+    timeout-minutes: 20
     runs-on: ubuntu-latest
     permissions:
       pages: write      # GitHub Pages
@@ -345,6 +361,7 @@ jobs:
     needs: build
     if: needs.build.outputs.deploy_sha != ''
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
@@ -375,7 +392,10 @@ jobs:
   # speicher dieses Laufs. 500 je täglichem Lauf (Auftraggeber, 21.10.2026); nach einem Merge nur 50, damit mehrere
   # Merges am Tag die Anfragen nicht vervielfachen.
   kurzfassungen:
-    needs: deploy
+    # nach dem Bau, unabhängig von GitHub Pages: scheiterte dessen Übernahme (am 10.11.2026 drei von acht Läufen),
+    # entfielen bisher die Kurzfassungen des Tages (Prüfung November 2026, Nr. 29)
+    needs: build
+    timeout-minutes: 140
     runs-on: ubuntu-latest
     permissions:
       contents: write   # Branch kurzfassungen

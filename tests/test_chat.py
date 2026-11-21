@@ -36,6 +36,16 @@ class Chat(unittest.TestCase):
         self.assertEqual(len(out), 1)
         self.assertEqual([p[0] for p in out[0]["papers"]], ["261090", "261088"])
 
+    def test_titel_der_einwohnerschaft_ohne_wortteile(self):
+        # Prüfung November 2026 (Nr. 35): „einwohner“, „anregung“ und „beschwerde“ als Wortteile erfassten 73 Drucksachen
+        for t in ["Bürgerantrag: Tempo 30", "Stellungnahme zum Bürgerantrag 261847", "Einwohnerfrage: Bauvorhaben",
+                  "Einwohnerfragen zur Sanierung", "Einwohnerantrag nach § 25 GO", "Anregungen und Beschwerden: Lärm"]:
+            self.assertTrue(chat.EINWOHNER_TITEL.search(t), t)
+        for t in ["Urteil zur Verfassungsbeschwerde gegen das GFG", "Weitergabe von Daten durch das Einwohnermeldeamt",
+                  "Benennung von sachkundigen Einwohnerinnen und Einwohnern", "Feststellung der Einwohnerzahl",
+                  "BBB-Anfrage zum Kulturgarten; hier: Lärmbeschwerden", "Rücknahme der Beschwerde gegen den Beschluss"]:
+            self.assertFalse(chat.EINWOHNER_TITEL.search(t), t)
+
     def test_einwohner_mit_allen_vorlagen_des_vorgangs(self):
         antrag = {**PAPER, "reference": "221454", "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
                   "subordinated": [{"reference": "221454-01 ST"}], "superordinated": []}

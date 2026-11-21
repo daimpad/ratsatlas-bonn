@@ -42,8 +42,12 @@ jobs:
           if [ "$rc" -ne 0 ] && [ "$rc" -ne 2 ]; then echo "Abfrage des Branches quellen gescheitert ($rc)"; exit 1; fi
           if [ "$rc" -eq 0 ]; then git clone -q --depth 1 --branch quellen "$url" _quellen; else git init -q -b quellen _quellen; fi
 
+      # Die Stellen der Stadt antworten dem Workflow seit Oktober 2026 nicht; bis dahin ein Hinweis statt eines
+      # wöchentlich roten Laufs (Prüfung November 2026, Nr. 37). Was abrufbar ist, wird trotzdem gesichert.
       - name: Wahlen 2025 (Ergebnisse nach Stimmbezirk, Wahl- und Stimmbezirke)
+        id: wahlen
         run: python -m pipeline wahlen-rohdaten
+        continue-on-error: true
 
       - name: Sichern
         env:
@@ -56,3 +60,8 @@ jobs:
           if git diff --cached --quiet; then echo "unverändert"; exit 0; fi
           git commit -q -m "Quellen $(date -u +%F)"
           git push -q "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:quellen
+
+      - name: Ergebnis
+        run: |
+          if [ "${{ steps.wahlen.outcome }}" = "success" ]; then echo "::notice::Quellen der Wahl 2025 abgerufen; Branch quellen ansehen"
+          else echo "::warning::Quellen der Wahl 2025 nicht vollständig abrufbar (Stand im Branch quellen, STAND.json)"; fi

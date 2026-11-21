@@ -3,12 +3,15 @@
 # das Archiv beginnt mit dem ersten Lauf.
 # Dazu der Mängelmelder (Ordner anliegen/): je Meldung nur Kategorie, Tag, Ortsteil und Status, weil ältere Meldungen
 # aus der öffentlichen Liste verschwinden (anliegen/phase0/BERICHT.md). Scheitert eine Quelle, wird die andere
-# trotzdem gesichert; der Lauf gilt dann als fehlgeschlagen.
+# trotzdem gesichert und der Lauf meldet einen Hinweis; als fehlgeschlagen gilt er nur, wenn beide Quellen scheitern
+# (Prüfung November 2026, Nr. 37: seit 21.10.2026 antworten die Baustellen-Feeds der Stadt nicht, der Lauf endete
+# deshalb täglich rot, und echte Fehler gingen in den Meldungen unter).
+# Läuft vor dem täglichen Lauf der Seite (04:17 UTC), damit Baustellen und Mängelmelder dort vom selben Tag sind.
 name: Archiv (Baustellen, Mängelmelder)
 
 on:
   schedule:
-    - cron: "23 5 * * *"
+    - cron: "37 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -21,6 +24,7 @@ concurrency:
 jobs:
   archiv:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
@@ -77,4 +81,7 @@ jobs:
         if: steps.baustellen.outcome != 'success' || steps.anliegen.outcome != 'success'
         run: |
           echo "Baustellen: ${{ steps.baustellen.outcome }}, Mängelmelder: ${{ steps.anliegen.outcome }}"
-          exit 1
+          if [ "${{ steps.baustellen.outcome }}" != "success" ] && [ "${{ steps.anliegen.outcome }}" != "success" ]; then
+            echo "::error::Weder Baustellen noch Mängelmelder abrufbar"; exit 1
+          fi
+          echo "::warning::Eine Quelle nicht abrufbar (Baustellen: ${{ steps.baustellen.outcome }}, Mängelmelder: ${{ steps.anliegen.outcome }}); die andere ist gesichert"
