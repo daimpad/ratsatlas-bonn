@@ -1358,6 +1358,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 200433-1 ST	verortet	Hauptteil	volltext_strasse	Burgstraße	Alt-Godesberg	niedrig	1
 200433-1 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Budapester Straße	Bonn-Zentrum	niedrig	1
 200433-1 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Rüdigerstraße	Mehlem	niedrig	1
+200436	kein Ort						
+200436-1 ST	kein Ort						
 200438	kein Ort						
 200438-1 ST	kein Ort						
 200438-2 ST	nur in Anlagen genannt, nicht verortet						
@@ -3394,6 +3396,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 210128-01 ST	verortet	Hauptteil	volltext_strasse	Schulplatz	Friesdorf	niedrig	2
 210128-02	kein Ort						
 210128-03 ST	kein Ort						
+210129	kein Ort						
+210129-01 ST	kein Ort						
 210130	kein Ort						
 210130-01 ST	kein Ort						
 210131	kein Ort						
@@ -3800,6 +3804,16 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 210576	kein Ort						
 210577	kein Ort						
 210579	kein Ort						
+210580	kein Ort						
+210580-01	kein Ort						
+210580-02	kein Ort						
+210580-03	kein Ort						
+210580-04	kein Ort						
+210580-05	kein Ort						
+210580-06	kein Ort						
+210580-07	kein Ort						
+210580-08	kein Ort						
+210580-09	kein Ort						
 210581	kein Ort						
 210583	kein Ort						
 210584	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -4342,6 +4356,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 211211	Titel ohne gemeinsamen Ort, nicht verortet						
 211212	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
 211213	kein Ort						
+211215	kein Ort						
+211215-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Bonn-Castell	Bonn-Castell	niedrig	1
 211217	kein Ort						
 211217-01 ST	verortet	Hauptteil	volltext_strasse	Münsterplatz	Bonn-Zentrum	niedrig	1
 211217-02 ST	kein Ort						
@@ -4409,6 +4425,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 211271	verortet	Hauptteil	volltext_strasse+kreuzung	Wesselstraße	Bonn-Zentrum	mittel	2
 211271	verortet	Hauptteil	volltext_strasse+kreuzung	Wilhelmstraße	Bonn-Zentrum	mittel	1
 211277	kein Ort						
+211279	kein Ort						
 211286	kein Ort						
 211287	nur in Anlagen genannt, nicht verortet						
 211288	nur in Anlagen genannt, nicht verortet						
@@ -5158,6 +5175,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 212150-02	verortet	Hauptteil	volltext_strasse+hausnummer	Argelanderstraße	Südstadt	niedrig	1
 212151	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 212152	Titel ohne gemeinsamen Ort, nicht verortet						
+212153	kein Ort						
 212154	Titel ohne gemeinsamen Ort, nicht verortet						
 212155	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 212157	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -5315,6 +5333,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 212333	kein Ort						
 212334	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
 212336	kein Ort						
+212337	kein Ort						
 212344	kein Ort						
 212346	kein Ort						
 212346-01 AA	kein Ort						
@@ -5322,6 +5341,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 212347-03	Titel ohne gemeinsamen Ort, nicht verortet						
 212347-05	Titel ohne gemeinsamen Ort, nicht verortet						
 212347-08	Titel ohne gemeinsamen Ort, nicht verortet						
+212349	kein Ort						
+212349-01	kein Ort						
 212353	kein Ort						
 212354	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
 212355	kein Ort						
@@ -6556,6 +6577,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 221295	verortet	Hauptteil	volltext_strasse	Koblenzer Straße	Pennenfeld	niedrig	1
 221295	verortet	Hauptteil	volltext_strasse+hausnummer	Waldenburger Ring	Tannenbusch	niedrig	1
 221295	verortet	Hauptteil	volltext_strasse+kreuzung	Schweidnitzer Weg	Tannenbusch	niedrig	1
+221297	kein Ort						
+221297-01 AA	kein Ort						
+221297-02	kein Ort						
 221300	kein Ort						
 221308	kein Ort						
 221308-01 ST	kein Ort						
@@ -8437,6 +8461,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 230515	Titel ohne gemeinsamen Ort, nicht verortet						
 230517	kein Ort						
 230521	Titel ohne gemeinsamen Ort, nicht verortet						
+230522	kein Ort						
+230522-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 230524	Liste (9 Ortsteile), nicht verortet	Hauptteil					
 230524-01	nur in Anlagen genannt, nicht verortet						
 230524-02	verortet	Hauptteil	volltext_strasse+ortsteil	Schieffelingsweg	Duisdorf	niedrig	1
@@ -9647,6 +9673,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 231615	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	mittel	1
 231617	verortet	Hauptteil	volltext_ortsteil_name	Buschdorf	Buschdorf	mittel	1
 231618	kein Ort						
+231619	kein Ort						
 231620	Titel ohne gemeinsamen Ort, nicht verortet						
 231621	kein Ort						
 231624	kein Ort						
@@ -10146,6 +10173,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 232091	kein Ort						
 232092	kein Ort						
 232092-01 ST	kein Ort						
+232097	kein Ort						
 232098	Titel ohne gemeinsamen Ort, nicht verortet						
 232100	kein Ort						
 232100-01 ST	kein Ort						
@@ -10366,6 +10394,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240007	Titel ohne gemeinsamen Ort, nicht verortet						
 240008	kein Ort						
 240010	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+240012	kein Ort						
 240013	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
 240014	kein Ort						
 240015	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -11838,6 +11867,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241218	kein Ort						
 241220	Titel ohne gemeinsamen Ort, nicht verortet						
 241220-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
+241226	kein Ort						
+241226-01 ST	kein Ort						
 241227	kein Ort						
 241227-01 ST	kein Ort						
 241232	verortet	Hauptteil	volltext_strasse	Rheingasse	Bonn-Zentrum	mittel	2
@@ -11928,6 +11959,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241289-02 ST	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
 241289-03 ST	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
 241299	kein Ort						
+241300	kein Ort						
+241300-01	nur in Anlagen genannt, nicht verortet						
 241303	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	2
 241304	verortet	Hauptteil	volltext_strasse+ortsteil	Schlesienstraße	Tannenbusch	niedrig	1
 241305	kein Ort						
@@ -12912,6 +12945,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252402	verortet	Hauptteil	volltext_ortsteil_name	Tannenbusch	Tannenbusch	niedrig	1
 252405	kein Ort						
 252405-01 ST	kein Ort						
+252407	kein Ort						
 252411	Titel ohne gemeinsamen Ort, nicht verortet						
 252412	kein Ort						
 252413	kein Ort						
@@ -13749,6 +13783,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253153	Titel ohne gemeinsamen Ort, nicht verortet						
 253160	kein Ort						
 253160-01 ST	kein Ort						
+253161	kein Ort						
 253162	Titel ohne gemeinsamen Ort, nicht verortet						
 253165	Liste (18 Ortsteile), nicht verortet	Hauptteil					
 253165-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Kolpingstraße	Endenich	mittel	2
@@ -14365,6 +14400,12 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253924	kein Ort						
 253925	verortet	Hauptteil	volltext_strasse+ortsteil	Am Noßbacher Weg	Lannesdorf	mittel	1
 253925-01 ST	verortet	Hauptteil	volltext_strasse	Am Noßbacher Weg	Lannesdorf	mittel	3
+253926	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Hardtberg		niedrig	1
+253926-01 AA	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+253926-02	verortet	Hauptteil	volltext_ortsteil_name	Brüser Berg	Brüser Berg	mittel	1
+253926-02	verortet	Hauptteil	volltext_ortsteil_name	Endenich	Endenich	niedrig	1
+253926-02	verortet	Hauptteil	volltext_ortsteil_name	Poppelsdorf	Poppelsdorf	niedrig	1
+253926-02	verortet	Hauptteil	volltext_strasse+ortsteil	Villemombler Straße	Lengsdorf	mittel	1
 253927	kein Ort						
 253927-01 ST	kein Ort						
 253928	kein Ort						
@@ -14532,6 +14573,20 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 254094	verortet	Hauptteil	volltext_strasse	Leinpfad	Graurheindorf	mittel	1
 254094-01 ST	kein Ort						
 254095	Titel ohne gemeinsamen Ort, nicht verortet						
+260000	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+260000-01 AA	kein Ort						
+260000-02	kein Ort						
+260000-03	kein Ort						
+260000-04	kein Ort						
+260000-05	kein Ort						
+260000-06	kein Ort						
+260000-07 ST	kein Ort						
+260000-08	kein Ort						
+260000-09	kein Ort						
+260000-10	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+260000-11	kein Ort						
+260000-12	kein Ort						
+260000-13	kein Ort						
 260001	kein Ort						
 260001-01	kein Ort						
 260001-02	kein Ort						
@@ -14685,6 +14740,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260111	kein Ort						
 260114	Titel ohne gemeinsamen Ort, nicht verortet						
 260115	Liste (6 Ortsteile), nicht verortet	Hauptteil					
+260116	kein Ort						
+260116-01	kein Ort						
 260117	kein Ort						
 260118	kein Ort						
 260118-01 AA	kein Ort						
@@ -14774,6 +14831,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260150	kein Ort						
 260151	kein Ort						
 260153	kein Ort						
+260154	kein Ort						
+260154-01	kein Ort						
 260155	Titel ohne gemeinsamen Ort, nicht verortet						
 260158	kein Ort						
 260162	kein Ort						
@@ -16647,6 +16706,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261923-01 ST	kein Ort						
 261929	kein Ort						
 261930	kein Ort						
+261931	kein Ort						
 261932	nur in Anlagen genannt, nicht verortet						
 261933	Titel ohne gemeinsamen Ort, nicht verortet						
 261934	kein Ort						

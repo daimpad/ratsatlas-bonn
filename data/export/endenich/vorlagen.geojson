@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 710,
+  "count": 711,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -761,6 +761,30 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028952"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.070351,
+     50.725238
+    ]
+   },
+   "properties": {
+    "reference": "253926-02",
+    "name": "Lärmschutzmaßnahmen Autobahn hier: Mitteilungsvorlage zum Sachstand des Verfahrens",
+    "paper_type": "Mitteilungsvorlage",
+    "date": "2026-08-02",
+    "amt": "67 Amt für Umwelt und Stadtgrün",
+    "place": "Endenich",
+    "level": "ortsteil",
+    "ortsteil": "Endenich",
+    "stage": "B",
+    "method": "volltext_ortsteil_name",
+    "confidence": "niedrig",
+    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028476"
    }
   },
   {

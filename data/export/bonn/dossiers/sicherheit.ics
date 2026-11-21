@@ -162,6 +162,16 @@ DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006782
+DTSTAMP:20261231T170000Z
+DTSTART:20261231T170000Z
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
+DESCRIPTION:Sammeltermin für den Ausschuss für Sicherheit\, Ordnung und B
+ evölkerungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OPar
+ l-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006726
 DTSTAMP:20270120T170000Z
 DTSTART:20270120T170000Z
@@ -531,6 +541,15 @@ DTEND:20270907T220000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006677
+DTSTAMP:20270909T150000Z
+DTSTART:20270909T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:(PÜMA) Sitzung der Bezirksvertretung Beuel\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

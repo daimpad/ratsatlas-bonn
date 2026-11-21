@@ -8,13 +8,21 @@ export const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&a
 // Felder, in denen ein Werkzeugergebnis Eingaben des Modells wiederholt: daraus keine Adressen übernehmen,
 // sonst könnte das Modell (etwa nach einer Anweisung in einem Titel) jede Adresse anklickbar machen
 const ECHO = new Set(["anfrage", "eingabe", "fehler", "technisch", "parameter"]);
-// Nur Adressen dieser Stellen werden Links (Ratsinformationssystem, Stadt Bonn, OParl-Lite, Gesetze, OSM, Projekt)
+// Nur Adressen dieser Stellen werden Links (Ratsinformationssystem, Stadt Bonn, OParl-Lite, Gesetze, OSM, Projekt;
+// seit November 2026 auch die Aufzeichnungen der Sitzungen bei YouTube und die Quellen der Zahlen zum Gebiet: Die
+// Werkzeuge liefern diese Adressen und der Systemprompt verlangt sie, sie erschienen aber als „Link entfernt“;
+// Prüfung November 2026, Nr. 17)
 export const LINK_HOSTS = ["bonn.sitzung-online.de", "bonn.de", "oparl.bonn.machdenstaat.de", "recht.nrw.de",
-  "gesetze-im-internet.de", "openstreetmap.org", "github.com"];
+  "gesetze-im-internet.de", "openstreetmap.org", "github.com", "www.youtube.com", "opengeodata.nrw.de",
+  "zensus2022.de", "vrs.de", "wahlergebnisse.nrw"];
+// Ratstranskripte bei bonn.biz: nur die Seite selbst, ohne Suchwort in der Adresse. Das Suchwort wählt das Modell;
+// als Link wäre es ein (kleiner) Weg, Text aus dem Gespräch per Klick an eine fremde Stelle zu geben.
+const TRANSKRIPTE = "https://bonn.biz/ratstranskripte";
 const hostOk = (url) => {
   try {
-    const h = new URL(url).hostname;
-    return LINK_HOSTS.some((d) => h === d || h.endsWith(`.${d}`));
+    const u = new URL(url);
+    if (url === TRANSKRIPTE) return true;
+    return LINK_HOSTS.some((d) => u.hostname === d || u.hostname.endsWith(`.${d}`));
   } catch (e) { return false; }
 };
 

@@ -108,6 +108,10 @@ drucksache	schritt	bezeichnung	status	datum	datum_status	quelle	fundstelle	pruef
 261553	beratung	Bezirksvertretung Bonn (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028952	ungeprüft
 261553	beratung	Ausschuss für Mobilität und Verkehr (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028952	ungeprüft
 261553	folgevorlage	Stellungnahme der Verwaltung	belegt	2026-10-09		oparl-bonn	261553-01 ST	ungeprüft
+253926-02	initiierung	Mitteilungsvorlage	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028476	ungeprüft
+253926-02	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
+253926-02	veroeffentlichung	Datum der Vorlage	belegt	2026-08-02		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028476	ungeprüft
+253926-02	beratung	Bezirksvertretung Hardtberg (Kenntnisnahme)	belegt		unklar	oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2028476	ungeprüft
 253158-02 ST	initiierung	Stellungnahme der Verwaltung	belegt			oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027912	ungeprüft
 253158-02 ST	vorbereitung	Verwaltungsinterne Vorbereitung	nicht_öffentlich				Erarbeitung, Mitzeichnung und Freigabe der Vorlage in der Verwaltung sind von außen nicht einsehbar.	ungeprüft
 253158-02 ST	veroeffentlichung	Datum der Vorlage	belegt	2026-07-29		oparl-bonn	https://www.bonn.sitzung-online.de/oparl/papers/2027912	ungeprüft

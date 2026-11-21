@@ -20,6 +20,7 @@ const TOOL_LABEL = {
   suche_ort: "Orte suchen", liste_sitzungen: "Sitzungen abrufen", hole_gremium_oder_amt: "Gremium oder Amt abrufen",
   erklaere_begriff: "Begriff nachschlagen", datenstand: "Datenstand abrufen",
   suche_bebauungsplan: "Bebauungspläne suchen", suche_baustellen: "Baustellen suchen", hole_kontext: "Zahlen zum Gebiet abrufen",
+  suche_aufzeichnungen: "Aufzeichnungen der Sitzungen suchen",
 };
 
 const store = {
@@ -141,6 +142,24 @@ function bubble(role, html) {
   return el;
 }
 function scrollDown() { const b = $("#chat-body"); b.scrollTop = b.scrollHeight; }
+// Gestreamten Text höchstens einmal je Bild der Anzeige setzen und nur mitscrollen, wenn die Ansicht unten steht.
+// Bisher setzte jedes Textstück die ganze Antwort neu und erzwang ein Layout: 16 KB kosteten 4,5 s Rechenzeit,
+// 64 KB 75 s, „Abbrechen“ war dann nicht bedienbar (Prüfung November 2026, Nr. 18).
+function streamer(el) {
+  let text = "", geplant = false, fertig = false;
+  const zeichnen = () => {
+    geplant = false;
+    if (fertig) return;
+    const b = $("#chat-body");
+    const unten = b.scrollHeight - b.scrollTop - b.clientHeight < 80;
+    el.textContent = text;
+    if (unten) b.scrollTop = b.scrollHeight;
+  };
+  return {
+    set(t) { text = t; if (!geplant) { geplant = true; requestAnimationFrame(zeichnen); } },
+    ende() { fertig = true; },
+  };
+}
 
 function sourceCards(belegt) {
   const list = belegt.map((r) => [...refs].find((x) => sameRef(x, r)) || r);
@@ -186,22 +205,26 @@ async function ask(question) {
   controller = new AbortController();
   const mine = conv;
   let text = "";
+  const anzeige = streamer(stream);
   try {
     const c = await ensureChat();
     const full = ctx ? `${q}\n\n[Kontext der Seite, von der Nutzer:in freigegeben: ${ctx}]` : q;
     for await (const ev of c.ask(full, { signal: controller.signal })) {
       if (mine !== conv) break;
-      if (ev.type === "text") { text += ev.text; stream.textContent = text; scrollDown(); }
+      if (ev.type === "text") { text += ev.text; anzeige.set(text); }
       else if (ev.type === "tool_start") { toolLine.hidden = false; toolLine.textContent = `${TOOL_LABEL[ev.name] || ev.name} …`; status(`Der Assistent nutzt: ${TOOL_LABEL[ev.name] || ev.name}`); }
       else if (ev.type === "tool_end") { record(ev.result); if (text && !text.endsWith("\n")) { text += "\n\n"; } }
       else if (ev.type === "notice") bubble("note", `<p>${esc(ev.text)}</p>`);
       else if (ev.type === "error") {
+        anzeige.ende();
         stream.removeAttribute("aria-busy");
         toolLine.hidden = true;
         stream.innerHTML = `${text ? `<p class="partial">${esc(text)}</p>` : ""}<p class="msg-error" role="alert">${esc(ev.message)}</p>`;
         status(ev.message);
+        if (ev.kind !== "abort" && !$("#chat-input").value) $("#chat-input").value = q;   // Frage nach einem Fehler nicht verlieren
         if (ev.kind === "config" || ev.status === 401 || ev.status === 403) $("#chat-settings").open = true;
       } else if (ev.type === "done") {
+        anzeige.ende();
         toolLine.hidden = true;
         stream.removeAttribute("aria-busy");
         stream.classList.remove("stream");
@@ -209,11 +232,14 @@ async function ask(question) {
         const unbelegt = ev.citations.unbelegt;
         answer.insertAdjacentHTML("beforeend", `${unbelegt.length ? `<p class="msg-warn">Nicht durch abgerufene Daten belegt: ${unbelegt.map(esc).join(", ")}</p>` : ""}
           ${sourceCards(ev.citations.belegt)}${protocolHtml(ev.protocol)}
-          <p class="msg-foot">KI-generiert mit ${esc(ev.model || model())} · Datenstand und Originale prüfen</p>`);
+          ${!ev.text.trim() ? '<p class="msg-warn">Der Assistent hat keine Antwort geliefert. Bitte die Frage anders stellen oder erneut versuchen.</p>' : ""}
+          ${ev.stop === "max_tokens" ? '<p class="msg-warn">Die Antwort wurde an der Längengrenze des Modells abgeschnitten.</p>' : ""}
+          <p class="msg-foot">KI-generiert mit ${esc(ev.model || model())} · Datenstand und Originale prüfen${verbrauch(ev.usage)}</p>`);
         status("Antwort fertig.", `Antwort fertig: ${plain(ev.text).slice(0, 300)}`);
       }
     }
   } catch (e) {
+    anzeige.ende();
     stream.removeAttribute("aria-busy");
     stream.innerHTML = `<p class="msg-error" role="alert">Der Assistent konnte nicht starten: ${esc(e.message)}</p>`;
     status("Fehler beim Start des Assistenten.");
@@ -224,8 +250,22 @@ async function ask(question) {
   }
 }
 
+// Verbrauch je Antwort und im Gespräch (Tokens laut Anbieter): Jede Frage sendet Systemprompt, Werkzeuge und den
+// ganzen Verlauf erneut; ohne Anzeige stiegen die Kosten je Frage unsichtbar (Prüfung November 2026, Nr. 19).
+const ZAHL = new Intl.NumberFormat("de-DE");
+const LANG = 60000;   // Eingabe-Tokens einer Antwort, ab denen „Neues Gespräch“ empfohlen wird
+let gespraech = { eingabe: 0, ausgabe: 0 };
+function verbrauch(u) {
+  if (!u || !(u.eingabe || u.ausgabe)) return "";
+  gespraech = { eingabe: gespraech.eingabe + u.eingabe, ausgabe: gespraech.ausgabe + u.ausgabe };
+  const t = ` · Verbrauch: ${ZAHL.format(u.eingabe)} Eingabe- und ${ZAHL.format(u.ausgabe)} Ausgabe-Tokens`
+    + (gespraech.eingabe > u.eingabe ? ` (Gespräch: ${ZAHL.format(gespraech.eingabe)} und ${ZAHL.format(gespraech.ausgabe)})` : "");
+  return esc(t) + (u.eingabe > LANG ? '</p><p class="msg-warn">Das Gespräch ist lang: Jede weitere Frage sendet den ganzen Verlauf erneut. Mit „Neues Gespräch“ sinken die Kosten.' : "");
+}
+
 function newConversation(message) {
   conv++;
+  gespraech = { eingabe: 0, ausgabe: 0 };
   controller?.abort();
   chat?.reset();
   refs.clear(); cards.clear(); urls.clear(); STATIC_URLS.forEach((u) => urls.add(u));

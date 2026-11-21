@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 710,
+  "count": 711,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -4125,6 +4125,182 @@
     "passung": "passt",
     "ist": [
      "aus",
+     "bv"
+    ],
+    "abweichung": []
+   }
+  },
+  {
+   "reference": "253926-02",
+   "name": "Lärmschutzmaßnahmen Autobahn hier: Mitteilungsvorlage zum Sachstand des Verfahrens",
+   "paper_type": "Mitteilungsvorlage",
+   "date": "2026-08-02",
+   "amt": "67 Amt für Umwelt und Stadtgrün",
+   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028476",
+   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=3181934&OTYP=41",
+   "responsibility": [
+    {
+     "kind": "federfuehrend",
+     "method": "underDirectionOf",
+     "evidence": null,
+     "derived": 0,
+     "label": "67 Amt für Umwelt und Stadtgrün",
+     "name": "67-7 Untere Umweltbehörde"
+    }
+   ],
+   "originators": [
+    {
+     "actor": "Verwaltung",
+     "actor_type": "Verwaltung",
+     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/303",
+     "method": "paper_type",
+     "evidence": "Mitteilungsvorlage",
+     "derived": 1
+    }
+   ],
+   "process": [
+    {
+     "position": 0,
+     "role": "Kenntnisnahme",
+     "authoritative": 0,
+     "meeting_id": null,
+     "gremium": "Bezirksvertretung Hardtberg",
+     "meeting": null,
+     "start_date": null,
+     "cancelled": null,
+     "number": "12.2",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
+    }
+   ],
+   "superordinated": [
+    {
+     "reference": "253926",
+     "paper_type": "Antrag",
+     "name": "Grüne/Linke Anregung: Lärmschutzmaßnahmen Autobahn",
+     "date": "2025-11-11"
+    }
+   ],
+   "subordinated": [],
+   "locations": [
+    {
+     "level": "ortsteil",
+     "name": "Brüser Berg",
+     "ortsteil": "Brüser Berg",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.04792,
+     "lat": 50.692894,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Brüser Berg",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028476",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Endenich",
+     "ortsteil": "Endenich",
+     "stadtbezirk": "Bonn",
+     "lon": 7.070351,
+     "lat": 50.725238,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Endenich",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028476",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "ortsteil",
+     "name": "Poppelsdorf",
+     "ortsteil": "Poppelsdorf",
+     "stadtbezirk": "Bonn",
+     "lon": 7.088405,
+     "lat": 50.720902,
+     "stage": "B",
+     "method": "volltext_ortsteil_name",
+     "confidence": "niedrig",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Poppelsdorf",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028476",
+     "source": "geo-bonn"
+    },
+    {
+     "level": "strasse",
+     "name": "Villemombler Straße",
+     "ortsteil": "Lengsdorf",
+     "stadtbezirk": "Hardtberg",
+     "lon": 7.063098,
+     "lat": 50.710901,
+     "stage": "B",
+     "method": "volltext_strasse+ortsteil",
+     "confidence": "mittel",
+     "evidence": "im Hauptteil des Hauptdokuments genannt: Villemombler Straße",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028476",
+     "source": "osm"
+    }
+   ],
+   "plans": [],
+   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028476",
+   "stand": "beraten, ohne Entscheidung",
+   "themes": [
+    {
+     "theme": "umwelt",
+     "method": "amt",
+     "evidence": "67 Amt für Umwelt und Stadtgrün",
+     "confidence": "mittel"
+    }
+   ],
+   "parties": [
+    "Verwaltung"
+   ],
+   "steps": [
+    {
+     "typ": "initiierung",
+     "label": "Mitteilungsvorlage",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028476",
+     "actors": [
+      "Verwaltung"
+     ],
+     "actors_status": "abgeleitet"
+    },
+    {
+     "typ": "vorbereitung",
+     "label": "Verwaltungsinterne Vorbereitung",
+     "status": "nicht_öffentlich",
+     "note": "vorbereitung"
+    },
+    {
+     "typ": "veroeffentlichung",
+     "label": "Datum der Vorlage",
+     "status": "belegt",
+     "date": "2026-08-02",
+     "source": "oparl-bonn",
+     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028476",
+     "note": "datum"
+    },
+    {
+     "typ": "beratung",
+     "label": "Bezirksvertretung Hardtberg",
+     "role": "Kenntnisnahme",
+     "status": "belegt",
+     "source": "oparl-bonn",
+     "date_status": "unklar",
+     "number": "12.2",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
+    }
+   ],
+   "soll": {
+    "verfahren": "antrag-bv",
+    "sicherheit": "hoch",
+    "grund": "Antrag, beraten nur in Bezirksvertretungen",
+    "passung": "passt",
+    "ist": [
      "bv"
     ],
     "abweichung": []

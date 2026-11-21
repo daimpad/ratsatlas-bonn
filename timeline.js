@@ -4,7 +4,7 @@
 //   const tl = Timeline.create(container, options)
 //     options.onRange(from, to)    gewählter Zeitraum (ISO-Datum) – entprellt
 //     options.onDate(isoDate)      Klick auf einen Zeitpunkt (Sitzung, Station)
-//   tl.setData({ months, density, meetings, terms, dataStart, dataStand, dimension })
+//   tl.setData({ months, density, meetings, terms, dataStart, dataStand, dimension, bezirk })
 //   tl.setPapers(papers)           Einzelobjekte des Gebiets (für Woche/Tag und Auswahlspur)
 //   tl.select(paper | null)        Stationen einer Vorlage in der Auswahlspur zeigen
 //   tl.setSites(baustellen)        Baustellen des Gebiets als eigene Spur (Zeiträume, Termine unverbindlich)
@@ -24,10 +24,18 @@
     { name: "Woche", span: 35 * DAY, bin: "day", step: 7 * DAY },
     { name: "Tag", span: 10 * DAY, bin: "day", step: DAY },
   ];
-  const PILOT_GREMIEN = ["Bezirksvertretung Bonn", "Rat", "Ausschuss für Mobilität und Verkehr",
-    "Ausschuss für Wohnen, Planung und Bauen", "Hauptausschuss"];
-  const SHORT = { "Bezirksvertretung Bonn": "BV Bonn", "Ausschuss für Mobilität und Verkehr": "Mobilität",
-    "Ausschuss für Wohnen, Planung und Bauen": "Planung", "Hauptausschuss": "Hauptausschuss", "Rat": "Rat" };
+  // Zeilen der Sitzungsspur: Bezirksvertretung des gewählten Gebiets (ohne Gebiet alle vier in einer Zeile), Rat,
+  // Hauptausschuss und die Fachausschüsse für Mobilität und für Planung. Die Namen der Ausschüsse wechseln mit der
+  // Wahlperiode („Wohnen, Planung und Bauen“ bis 2025, „Planen, Bauen und Denkmalschutz“ ab 2026), daher Muster statt
+  // fester Namen (Prüfung November 2026, Nr. 32: die feste Liste aus dem Pilot zeigte überall die Bezirksvertretung
+  // Bonn, und die Zeile „Planung“ endete am 02.09.2025).
+  const zeilen = (bezirk) => [
+    { kurz: bezirk ? `BV ${bezirk}` : "Bezirksvertr.", passt: (g) => (bezirk ? g === `Bezirksvertretung ${bezirk}` : g.startsWith("Bezirksvertretung ")) },
+    { kurz: "Rat", passt: (g) => g === "Rat" },
+    { kurz: "Mobilität", passt: (g) => /^Ausschuss\b.*Mobilität/.test(g) },
+    { kurz: "Planung", passt: (g) => /^Ausschuss\b.*(Planung|Planen)/.test(g) },
+    { kurz: "Hauptausschuss", passt: (g) => g === "Hauptausschuss" },
+  ];
   const NS = "http://www.w3.org/2000/svg";
   const T_CACHE = new Map();  // Datumsangaben werden bei jedem Zeichnen mehrfach umgerechnet
   const t = (iso) => {
@@ -219,15 +227,15 @@
       }
 
       const compact = root.classList.contains("tl-compact");
-      // Sitzungen je Gremium (Pilot), künftige offen, abgesagte durchgestrichen
-      const rows = PILOT_GREMIEN.length, rh = (LAYOUT.meet[1] - LAYOUT.meet[0]) / rows;
-      PILOT_GREMIEN.forEach((g, i) => {
+      // Sitzungen je Gremium (zeilen), künftige offen, abgesagte durchgestrichen
+      const zl = zeilen(data.bezirk), rows = zl.length, rh = (LAYOUT.meet[1] - LAYOUT.meet[0]) / rows;
+      zl.forEach((z, i) => {
         const y = LAYOUT.meet[0] + i * rh + rh / 2;
-        if (lv.bin !== "month") el("text", { x: 4, y: y + 3, class: "tl-label tl-row" }, svg).textContent = SHORT[g];
+        if (lv.bin !== "month") el("text", { x: 4, y: y + 3, class: "tl-label tl-row" }, svg).textContent = z.kurz;
       });
       const today = Date.now();
       for (const m of compact ? [] : data.meetings) {
-        const i = PILOT_GREMIEN.indexOf(m.gremium);
+        const i = zl.findIndex((z) => z.passt(m.gremium || ""));
         if (i < 0) continue;
         const ms = t(m.date);
         if (ms < view[0] || ms > view[1]) continue;
@@ -330,7 +338,10 @@
     }
     function setRange(a, b, silent) {
       if (a > b) [a, b] = [b, a];
-      range = [Math.max(extent[0], a), Math.min(extent[1], b)];
+      // beide Enden in den Bestand holen; liegt der Zeitraum ganz außerhalb, bleibt er geordnet am nächsten Rand
+      // (bisher einzeln geklemmt: ein Zeitraum nach dem Bestand ergab „31.12.9999–01.01.2028“)
+      const klemm = (x) => Math.min(extent[1], Math.max(extent[0], x));
+      range = [klemm(a), klemm(b)];
       draw();
       const text = `${de(range[0])} – ${de(range[1])} · ${countIn(range[0], range[1])} Vorlagen`;
       root.querySelector(".tl-range").textContent = `Zeitraum: ${text}`;

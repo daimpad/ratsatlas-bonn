@@ -484,6 +484,15 @@ DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006677
+DTSTAMP:20270909T150000Z
+DTSTART:20270909T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:(PÜMA) Sitzung der Bezirksvertretung Beuel\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006565
 DTSTAMP:20270914T150000Z
 DTSTART:20270914T150000Z

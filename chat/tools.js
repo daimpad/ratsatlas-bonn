@@ -15,7 +15,7 @@ const TITLE_MAX = 180;
 const YT = /^https:\/\/www\.youtube\.com\//;   // Aufzeichnungen der Sitzungen: nur Video-Adressen bei YouTube
 const TRANSKRIPTE = "https://bonn.biz/ratstranskripte";
 const EINWOHNER = new Set(["Bürgerantrag § 24 GO - Öffentlich", "Anregungen und Beschwerden", "Einwohnerfrage", "Bürgerbrief"]);
-const EINWOHNER_TITEL = /bürgerantrag|einwohner|anregung|beschwerde/i;
+const EINWOHNER_TITEL = /bürgerantrag|einwohner(?:frage|antr[aä]g)|anregung(?:en)? und beschwerde/i;   // wie pipeline/chat.py
 // höchstens drei Ziffern: Plannummern wie „7923-2“ sind keine Hausnummern
 // Buchstabenzusatz nur als einzelner Buchstabe („12a“, „12 a“), nicht der Anfang des nächsten Wortes („33 und“)
 const NR = String.raw`\d{1,3}(?:\s?[a-zA-Z](?!\p{L}))?(?:\s*(?:-|–|bis|und|u\.|oder|sowie|/|,|\+|&)\s*\d{1,3}(?:\s?[a-zA-Z](?!\p{L}))?)*(?!\d)`;
@@ -318,6 +318,36 @@ export function createTools({ load, today: fest = null } = {}) {
     return (d._ortsteile ||= [...new Set(d.places.map((p) => p.ortsteil).filter(Boolean))].sort());
   }
 
+  // Prozesslinie mit höchstens nFolge Folgevorlagen; knapp: ohne die Erläuterungen je Schritt
+  async function prozesslinie(p, g, mask, folge, nFolge, knapp) {
+    const steps = [...p.steps.filter((x) => x.typ !== "folgevorlage" && x.typ !== "vollzug"), ...folge.slice(0, nFolge), ...p.steps.filter((x) => x.typ === "vollzug")];
+    const used = new Set();
+    const out = steps.map((x, i) => {
+      used.add(x.status);
+      const o = { nr: i + 1, schritt: g.schritte[x.typ] ?? x.typ, bezeichnung: x.label, status: x.status };
+      if (x.date) { o.datum = x.date; o.zeitbezug = x.date < today() ? "vergangen" : x.date === today() ? "heute" : "künftig"; }
+      if (x.date_status) o.datum_status = x.date_status;
+      if (x.role) o.rolle = x.role;
+      if (x.result) { o.ergebnis = x.result; o.ergebnis_quelle = x.result_source; }
+      if (x.number) o.top = x.number;
+      if (x.stand && (x.typ === "beratung" || x.typ === "entscheidung")) o.beratungsstatus = x.stand;
+      if (x.actors?.length) { o.einreichende = x.actors; o.einreichende_status = x.actors_status; }
+      if (x.reference) { o.drucksache = x.reference; o.titel = short(mask(x.title, x.label, x.reference)); }
+      if (x.note && !knapp) o.hinweis = g.hinweise[x.note] ?? x.note;
+      if (YT.test(x.aufzeichnung || "")) o.aufzeichnung = x.aufzeichnung;   // Video der Sitzung (nur Verweis)
+      return o;
+    });
+    return {
+      drucksache: p.reference, titel: short(mask(p.name, p.paper_type, p.reference)), stand: p.stand, stand_erklaerung: g.staende[p.stand] ?? null,
+      heute: today(), schritte: out, folgevorlagen_gesamt: folge.length,
+      ...(folge.length > nFolge ? { folgevorlagen_ausgelassen: folge.length - nFolge } : {}),
+      ...(knapp ? { hinweise_je_schritt: "ausgelassen (sehr langes Verfahren)" } : {}),
+      ...(await sollAngaben(p, used)),
+      evidenzstatus: Object.fromEntries([...used].map((k) => [k, g.evidenz[k]])),
+      quelle_id: p.source_object, quelle: "Beratungsfolge: OParl-API Stadt Bonn (CC0); Sitzungsdatum und Ergebnis: OParl-Lite (CC BY 4.0)",
+    };
+  }
+
   const impl = {
     async suche_vorlagen(a) {
       const s = await search();
@@ -398,30 +428,20 @@ export function createTools({ load, today: fest = null } = {}) {
       const g = await glossar();
       const mask = await masker();
       const folge = p.steps.filter((x) => x.typ === "folgevorlage");
-      const steps = [...p.steps.filter((x) => x.typ !== "folgevorlage" && x.typ !== "vollzug"), ...folge.slice(0, 15), ...p.steps.filter((x) => x.typ === "vollzug")];
-      const used = new Set();
-      const out = steps.map((x, i) => {
-        used.add(x.status);
-        const o = { nr: i + 1, schritt: g.schritte[x.typ] ?? x.typ, bezeichnung: x.label, status: x.status };
-        if (x.date) { o.datum = x.date; o.zeitbezug = x.date < today() ? "vergangen" : x.date === today() ? "heute" : "künftig"; }
-        if (x.date_status) o.datum_status = x.date_status;
-        if (x.role) o.rolle = x.role;
-        if (x.result) { o.ergebnis = x.result; o.ergebnis_quelle = x.result_source; }
-        if (x.number) o.top = x.number;
-        if (x.stand && (x.typ === "beratung" || x.typ === "entscheidung")) o.beratungsstatus = x.stand;
-        if (x.actors?.length) { o.einreichende = x.actors; o.einreichende_status = x.actors_status; }
-        if (x.reference) { o.drucksache = x.reference; o.titel = short(mask(x.title, x.label, x.reference)); }
-        if (x.note) o.hinweis = g.hinweise[x.note] ?? x.note;
-        if (YT.test(x.aufzeichnung || "")) o.aufzeichnung = x.aufzeichnung;   // Video der Sitzung (nur Verweis)
-        return o;
-      });
-      return {
-        drucksache: p.reference, titel: short(mask(p.name, p.paper_type, p.reference)), stand: p.stand, stand_erklaerung: g.staende[p.stand] ?? null,
-        heute: today(), schritte: out, folgevorlagen_gesamt: folge.length,
-        ...(await sollAngaben(p, used)),
-        evidenzstatus: Object.fromEntries([...used].map((k) => [k, g.evidenz[k]])),
-        quelle_id: p.source_object, quelle: "Beratungsfolge: OParl-API Stadt Bonn (CC0); Sitzungsdatum und Ergebnis: OParl-Lite (CC BY 4.0)",
-      };
+      // Bei sehr langen Verfahren zuerst Folgevorlagen auslassen: Die allgemeine Kürzung (fit) schneidet Listen von
+      // hinten, dort stehen aber die jüngsten Beratungen und die Entscheidung (Prüfung November 2026, Nr. 36: bei
+      // 221697 fehlte der Ratsbeschluss). Beratungen und Entscheidungen bleiben vollständig.
+      // Reicht das nicht, entfallen die wiederholten Erläuterungen je Schritt (knapp).
+      let erg;
+      for (const [n, knapp] of [[15, false], [8, false], [3, false], [0, false], [0, true]]) {
+        erg = await prozesslinie(p, g, mask, folge, n, knapp);
+        if (JSON.stringify(erg).length <= MAX_CHARS) break;
+      }
+      // immer noch zu lang: frühere Beratungen auslassen (nach den ersten beiden Schritten), die jüngsten bleiben
+      let weg = 0;
+      while (JSON.stringify(erg).length > MAX_CHARS - 80 && erg.schritte.length > 6) { erg.schritte.splice(2, 1); weg += 1; }
+      if (weg) erg.schritte_ausgelassen = `${weg} frühere Schritte nach den ersten beiden`;
+      return erg;
     },
 
     async suche_ort(a) {
@@ -495,7 +515,10 @@ export function createTools({ load, today: fest = null } = {}) {
         anfrage: { gremium: names ? [...names] : null, von, bis, stichwort: wort || null },
         treffer_gesamt: p.treffer_gesamt, seite: p.seite, seiten: p.seiten,
         sitzungen: p.items.map((m) => ({ datum: m.date, gremium: m.gremium, name: m.name, aufzeichnung: m.video, quelle_id: m.source_object })),
-        transkript_suche: TRANSKRIPTE + (wort ? `?q=${encodeURIComponent(wort)}` : ""),
+        // Seite der Ratstranskripte als Link; das Stichwort steht daneben als Text und nicht in der Adresse (die
+        // Oberfläche verlinkt nur Adressen ohne vom Modell gewählte Teile, siehe render.js; Prüfung November 2026, Nr. 17)
+        transkripte: TRANSKRIPTE,
+        suchwort: wort || null,
         hinweise: ["Transkripte automatisch aus den Videoaufzeichnungen erkannt, nicht amtlich; maßgeblich sind Video und Niederschrift.",
           "Der Ratsatlas wertet die Transkripte nicht aus und nennt keine Inhalte von Redebeiträgen; die Stelle zu einer Vorlage ist nicht zugeordnet."],
         quelle: "Ratstranskripte von Mika Baumeister (bonn.biz, CC BY-NC 4.0), nur verlinkt; Sitzungen: OParl-API Stadt Bonn (CC0)",
@@ -570,7 +593,7 @@ export function createTools({ load, today: fest = null } = {}) {
         if (!e) throw new ToolError(`Kein Bebauungsplan „${a.nummer}“ in den Titeln der Vorlagen.`, { hinweis: hinweise[0] });
         return {
           nummer: e.nr, zuordnung: e.treffer, ortsteile: e.ortsteile,
-          plaene: e.plaene.map((v) => ({ plan: v.name, rechtskraeftig_seit: v.inkraft_seit, plan_pdf: v.plan, begruendung_pdf: v.begruendung, evidenz: "belegt (Stadt Bonn)" })),
+          plaene: e.plaene.map((v) => ({ plan: v.name, rechtskraeftig_seit: v.inkraft_seit, plan_pdf: v.plan && encodeURI(v.plan), begruendung_pdf: v.begruendung && encodeURI(v.begruendung), evidenz: "belegt (Stadt Bonn)" })),
           verfahrensschritte: [...d.schritte.map((st) => {
             const hits = e.vorlagen.filter((v) => (v.schritte || []).includes(st.id));
             return { schritt: st.label, fundstelle: st.fundstelle, status: hits.length ? "abgeleitet" : "soll", vorlagen: hits.map((v) => ({ drucksache: v.drucksache, datum: v.datum })) };

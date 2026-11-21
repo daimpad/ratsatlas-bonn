@@ -194,6 +194,16 @@ DESCRIPTION:Sitzung des Ausschusses für Mobilität und Verkehr\nTagesordnu
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006583
+DTSTAMP:20270120T160000Z
+DTSTART:20270120T160000Z
+SUMMARY:Ausschuss für Mobilität und Verkehr
+DESCRIPTION:Gemeinsame Sitzung des Ausschusses für Mobilität und Verkehr 
+ mit dem Rhein-Sieg-Kreis\nTagesordnung noch nicht veröffentlicht.\nQuelle
+ : OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006726
 DTSTAMP:20270120T170000Z
 DTSTART:20270120T170000Z
@@ -540,6 +550,15 @@ DTEND:20270907T220000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006677
+DTSTAMP:20270909T150000Z
+DTSTART:20270909T150000Z
+SUMMARY:Bezirksvertretung Beuel
+DESCRIPTION:(PÜMA) Sitzung der Bezirksvertretung Beuel\nTagesordnung noch 
+ nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

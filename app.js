@@ -167,6 +167,14 @@
     const target = el.querySelector("h2[tabindex], .tl-stage, summary");
     if (target) target.focus();
   }
+  // Die Schaltfläche zum Einklappen nennt, was die Fläche gerade zeigt („Vorgang einklappen“, „Los geht's einklappen“),
+  // statt des Wortes „Detail“, das sonst nirgends vorkommt (Prüfung November 2026, Nr. 42)
+  {
+    const kopf = $("#detail-heading"), zu = document.querySelector('[data-close="panel-detail"]');
+    const benennen = () => zu.setAttribute("aria-label", `${kopf.textContent.trim() || "Vorgang"} einklappen`);
+    new MutationObserver(benennen).observe(kopf, { childList: true, characterData: true, subtree: true });
+    benennen();
+  }
   function showIntro(offen) {
     detailSeq++;
     shownPlan = null;
@@ -198,15 +206,31 @@
     e.preventDefault();
     goHome(h.dataset.home === "aktuell");
   });
+  // Der Titel ist nur auf dem Telefon sichtbar (auf breiten Bildschirmen steht das Logo in der Leiste); nur dort
+  // gehört sein Link in die Tab-Reihenfolge
+  const titelLink = document.querySelector(".site-title a");
+  const titelFokus = () => { if (titelLink) titelLink.tabIndex = MOBILE.matches ? 0 : -1; };
+  titelFokus();
+  MOBILE.addEventListener("change", titelFokus);
+  let listeVorVorgang = false;   // Telefon: war die Liste offen, als der Vorgang gewählt wurde?
   function closePanel(id) {
     setPanel(id, false);
+    // Telefon: Der Vorgang hat die Liste verdeckt (nur eine Fläche); beim Schließen zurück zur Liste und zum gewählten
+    // Eintrag, statt auf der leeren Karte ohne Fokus zu landen (Prüfung November 2026, Nr. 41)
+    if (id === "panel-detail" && MOBILE.matches && listeVorVorgang && selected) {
+      setPanel("panel-list", true);
+      const eintrag = document.querySelector(`.papers button[data-ref="${CSS.escape(selected.reference)}"]`);
+      if (eintrag) { eintrag.scrollIntoView({ block: "center" }); eintrag.focus(); } else focusPanel("panel-list");
+      return;
+    }
     const t = toggleFor(id);
     // Vorgang, Auswertung, Prozesse, Termine und Mitmachen haben keine Schaltfläche in der Leiste: Fokus zurück auf das
     // öffnende Element, sonst auf den Eintrag im Menü (Code-Prüfung 23.10.2026: Fokus lag danach auf <body>)
     const back = t && t.offsetParent ? t : opener[id]?.isConnected && opener[id].offsetParent ? opener[id]
       : id === "panel-detail" ? toggleFor("panel-list")
       : document.querySelector(`[data-mega][aria-controls="${{ "panel-auswertung": "mega-themen", "panel-prozesse": "mega-entscheiden", "panel-termine": "mega-mitmachen", "panel-mitmachen": "mega-mitmachen" }[id] || ""}"]`);
-    if (back) back.focus();
+    // auf dem Telefon liegen die Schalter im zugeklappten Menü: dann auf die Schaltfläche „Menü“
+    if (back && back.offsetParent) back.focus(); else if (MOBILE.matches) burger.focus(); else if (back) back.focus();
   }
   document.addEventListener("click", (e) => {
     const t = e.target.closest("[data-panel]");
@@ -343,14 +367,27 @@
   });
 
   // --- Über ----------------------------------------------------------------------------------------
-  $("#about-open").addEventListener("click", () => { closeMega(); $("#about").showModal(); });
+  // Dialog öffnen und den Fokus beim Schließen zurückgeben: an das öffnende Element, wenn es noch sichtbar ist, sonst
+  // an das Menü „Über“ bzw. auf dem Telefon an „Menü“ (die Kachel im Menü ist dann zugeklappt; bisher lag der Fokus
+  // nach dem Schließen auf <body>; Prüfung November 2026, Nr. 41)
+  function oeffneDialog(dlg) {
+    const von = document.activeElement;
+    closeMega();
+    if (dlg.open) return;
+    dlg.showModal();
+    dlg.addEventListener("close", () => {
+      const menue = document.querySelector('[data-mega="mega-ueber"]');
+      const ziel = von && von.isConnected && von.offsetParent ? von : menue && menue.offsetParent ? menue : burger;
+      if (ziel && !document.querySelector("dialog[open]")) ziel.focus();
+    }, { once: true });
+  }
+  $("#about-open").addEventListener("click", () => oeffneDialog($("#about")));
   $("#about-close").addEventListener("click", () => $("#about").close());
   $("#about").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
   document.addEventListener("click", (e) => {
     const b = e.target.closest("[data-about]");
     if (!b) return;
-    closeMega();
-    $("#about").showModal();
+    oeffneDialog($("#about"));
     const h = document.getElementById("about-" + b.dataset.about);
     if (h) { h.scrollIntoView({ block: "start" }); h.focus(); }
   });
@@ -362,7 +399,7 @@
   }, true);
   // „Was ist neu?“ in einem eigenen Fenster (aus dem Dialog und dem Menü „Über“)
   document.addEventListener("click", (e) => {
-    if (e.target.closest("[data-neu]")) { closeMega(); if ($("#about").open) $("#about").close(); $("#neu").showModal(); }
+    if (e.target.closest("[data-neu]")) { if ($("#about").open) $("#about").close(); oeffneDialog($("#neu")); }
     if (e.target.closest("[data-close-dialog]")) e.target.closest("dialog").close();
   });
   $("#neu").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
@@ -457,7 +494,7 @@
     if (tl && zeit) {
       const series = zeit.areas[`${area.kind}:${area.key}`] || zeit.areas.gesamt;
       tl.setData({ months: zeit.months, categories: zeit.categories, density: series, meetings: zeit.meetings,
-        terms: zeit.terms, dataStart: zeit.data_start, dataStand });
+        terms: zeit.terms, dataStart: zeit.data_start, dataStand, bezirk: areaBezirk() });
       tl.select(null);
       tl.setSites(areaSites());
     }
@@ -520,6 +557,14 @@
   function createMap(bounds = BONN_BOUNDS) {
     if (map) return;
     map = L.map("map", { zoomControl: false, scrollWheelZoom: true, minZoom: 10, zoomAnimation: !REDUCED, fadeAnimation: !REDUCED, markerZoomAnimation: !REDUCED });
+    // Flächen und Punkte (SVG-Pfade) nicht in die Tab-Reihenfolge: Leaflet hängt für Tooltips Fokus-Listener an, damit
+    // sind sie in Chromium Tab-Stopps ohne Namen und ohne Funktion bei Enter – 53 im Ortsteil, mit der Ebene
+    // Bebauungspläne über 700 (Prüfung November 2026, Nr. 13). Per Tastatur führen die Auswahl „Gebiet“, die Liste und
+    // die Schaltflächen „… als Liste“ zu denselben Inhalten; Sammelpunkte bleiben erreichbar.
+    map.on("layeradd", (e) => {
+      const el = e.layer.getElement && e.layer.getElement();
+      if (el && el.tagName === "path") el.setAttribute("tabindex", "-1");
+    });
     kachelnSetzen();
     map.fitBounds(bounds, { ...mapPadding(), animate: false });
   }
@@ -532,7 +577,7 @@
   });
   function initMap() {
     createMap();
-    L.control.zoom({ position: "bottomright" }).addTo(map);
+    L.control.zoom({ position: "bottomright", zoomInTitle: "Karte vergrößern", zoomOutTitle: "Karte verkleinern" }).addTo(map);
     // Ganz Bonn ansehen: nur die Ansicht, das Gebiet bleibt; herausgezoomt sind die Stadtbezirke anklickbar
     const Whole = L.Control.extend({
       options: { position: "bottomright" },
@@ -705,7 +750,18 @@
     { const mark = document.createComment("legenden"); mapStack.before(mark); mapToggles.push([mapStack, mark]); }
     placeMapControls();
     MOBILE.addEventListener("change", placeMapControls);
-    cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 40, animate: !REDUCED }).addTo(map);
+    // Sammelpunkte mit Namen für Vorleseprogramme („5 Vorlagen an dieser Stelle, vergrößern“ statt nur „5“); Aussehen
+    // wie die Vorgabe von MarkerCluster (Klassen nach Anzahl)
+    cluster = L.markerClusterGroup({
+      showCoverageOnHover: false, maxClusterRadius: 40, animate: !REDUCED,
+      iconCreateFunction(c) {
+        const n = c.getChildCount();
+        return new L.DivIcon({
+          html: `<div><span aria-hidden="true">${n}</span><span class="visually-hidden">${n} Vorlagen an dieser Stelle, vergrößern</span></div>`,
+          className: `marker-cluster marker-cluster-${n < 10 ? "small" : n < 100 ? "medium" : "large"}`, iconSize: new L.Point(40, 40),
+        });
+      },
+    }).addTo(map);
   }
   function placeMapControls() {
     const mobil = MOBILE.matches;
@@ -1038,17 +1094,30 @@
     return `<tr><th scope="row">${name}</th>${spalten.map((r, x) => `<td>${zelle((r || [])[i])}${x === 0 ? sLinie(k, r || []) : ""}</td>`).join("")}</tr>`;
   };
   const sKopf = (namen) => `<thead><tr><th scope="col">Kennzahl</th>${namen.map((n) => `<th scope="col">${esc(n).replace("Stadtbezirk ", "Stadt&shy;bezirk ")}</th>`).join("")}</tr></thead>`;
-  async function fillStruktur() {
+  // Der Steckbrief lädt strukturdaten.json (212 KB) erst beim Aufklappen: Bisher holte jeder Start und jeder
+  // Gebietswechsel die Datei für den zugeklappten Kasten (Prüfung November 2026, Nr. 38). Ist sie schon geladen
+  // (Flächenfarbe nach Strukturdaten), erscheint der Inhalt sofort.
+  async function fillStruktur(jetzt) {
     const box = $("#struktur-box");
     if (!box) return;
-    if (!area || !["ortsteil", "bezirk", "bonn"].includes(area.kind)) { box.hidden = true; return; }
+    if (!area || !["ortsteil", "bezirk", "bonn"].includes(area.kind) || !index) { box.hidden = true; return; }
+    if (!struktur && !jetzt && !box.open) {
+      box.innerHTML = `<summary>Strukturdaten zu ${area.kind === "bonn" ? "ganz Bonn" : esc(area.name)}</summary><p class="hint" aria-live="polite">Wird beim Aufklappen geladen …</p>`;
+      box.hidden = false;
+      return;
+    }
+    const fuer = area;
     const d = await ladeStruktur();
-    if (!d || !area) { box.hidden = true; return; }
+    if (area !== fuer) return;   // inzwischen ein anderes Gebiet: dessen Aufruf füllt den Kasten
+    if (!d) {
+      box.innerHTML = `<summary>Strukturdaten zu ${area.kind === "bonn" ? "ganz Bonn" : esc(area.name)}</summary><p class="hint">Die Strukturdaten konnten nicht geladen werden. Bitte später erneut aufklappen.</p>`;
+      return;
+    }
     const m = d.meta, W = d.werte, ids = m.steckbrief, gesamt = (k) => W[k].g;
     let inhalt = "";
     if (area.kind === "ortsteil") {
       const ot = d.ortsteile[area.name], bez = areaBezirk(), sid = STADTBEZIRK_ID[bez];
-      if (!ot) { box.hidden = true; return; }
+      if (!ot) { box.open = false; box.hidden = true; return; }
       const beteiligt = ot.bezirke.filter(([, a]) => a >= 0.05).map(([id, a]) => ({ b: sBezirk(id), a }));
       const bezTabelle = `<table class="kontext-table s-tab s-bezirke">${sKopf(beteiligt.map(({ b }) => `${b.id} ${b.name}`))}
         <tbody>${ids.map((k) => sZeile(k, beteiligt.map(({ b }) => W[k].b[b.id]))).join("")}</tbody></table>
@@ -1076,6 +1145,7 @@
       <p class="hint">Quelle: <a href="${safeUrl(m.url)}">Strukturdatenatlas der Statistikstelle der Bundesstadt Bonn</a>, Stand ${fmtDate(m.datenstand)}, ${esc(m.lizenz.replace(/\s*\(.*\)$/, ""))}. „nicht veröffentlicht“: Fallzahl unter 10 (Bundesagentur für Arbeit). Flächenfarbe auf der Karte: „Flächen färben nach“.</p>`;
     box.hidden = false;
   }
+  $("#struktur-box")?.addEventListener("toggle", (e) => { if (e.currentTarget.open && !e.currentTarget.querySelector("table")) fillStruktur(true); });
   // Stufengrenzen: Ortsteile nach Quintilen, Stadtbezirke in gleichen Abständen bis zum Höchstwert
   function quintiles(values) {
     const v = [...values].sort((a, b) => a - b);
@@ -1316,8 +1386,9 @@
         ${planIndexUrl() ? '<button type="button" class="btn btn-soft" id="plan-list">Pläne im Gebiet als Liste</button>' : ""}` : ""}
       ${bauOn && bau ? `<ul><li><span class="site-icon site-aktuell" aria-hidden="true"></span>Baustelle der Stadt, laufend</li>
         <li><span class="site-icon site-geplant" aria-hidden="true"></span>Baustelle der Stadt, geplant</li>
+        <li><span class="site-icon site-abgelaufen" aria-hidden="true"></span>Baustelle der Stadt, gemeldetes Ende verstrichen</li>
         <li><span class="site-icon site-fremd" aria-hidden="true"></span>Baustelle anderer Träger (Versorger, Straßen NRW, Bahn)</li></ul>
-        <p class="hint">Termine unverbindlich; ${bau.meta.archiv_beginn ? `Archiv seit ${fmtDate(bau.meta.archiv_beginn)}` : "aktueller Stand, ohne Archiv"}.</p>
+        <p class="hint">Termine unverbindlich; ${bau.meta.archiv_beginn ? `Archiv seit ${fmtDate(bau.meta.archiv_beginn)}` : "aktueller Stand, ohne Archiv"}.${bauVeraltet() ? ` Die Quelle wurde zuletzt am ${fmtDate(bauVeraltet())} erreicht.` : ""}</p>
         <button type="button" class="btn btn-soft" id="bau-list">Baustellen im Gebiet als Liste</button>` : ""}
       ${kxLegend()}`;
     const b = legendEl.querySelector("#plan-list");
@@ -1343,6 +1414,43 @@
     highlight();
   }
   // gewählte Vorlage auf der Karte hervorheben
+  // Karte so weit hineinzoomen, dass der Punkt einer Vorlage einzeln steht, dann hervorheben. Ersetzt
+  // cluster.zoomToShowLayer (Prüfung November 2026, Nr. 8): Dessen Listener blieb hängen, wenn die Punkte vor dem Ende
+  // der Bewegung neu gezeichnet wurden (Filter oder Gebietswechsel innerhalb einer halben Sekunde), warf danach bei
+  // jeder Kartenbewegung und ließ den nächsten Gebietswechsel bei „Lade Vorlagen …“ stehen. Hier hört genau ein
+  // Listener genau einmal zu und prüft, ob Punkt und Auswahl noch gelten.
+  function zeigeMarker(m, ref) {
+    const gilt = () => selected && selected.reference === ref && (markers.get(ref) || []).includes(m);
+    const auffaechern = () => {
+      if (!gilt()) return;
+      // liegen mehrere Punkte auf derselben Stelle, bleibt die Gruppe bis zur größten Stufe: auffächern
+      const sichtbar = cluster.getVisibleParent(m);
+      if (sichtbar && sichtbar !== m && sichtbar.spiderfy) {
+        cluster.once("spiderfied", () => { if (gilt()) highlight(); });   // erst danach liegt der Punkt auf der Karte
+        sichtbar.spiderfy();
+      }
+      highlight();
+    };
+    // solange die Gruppen ihre Zoom-Bewegung zeichnen, fächert MarkerCluster nicht auf: auf deren Ende warten
+    const fertig = () => { if (cluster._inZoomAnimation) cluster.once("animationend", auffaechern); else auffaechern(); };
+    // Stufe, ab der der Punkt einzeln steht: eine tiefer als die kleinste Gruppe, in der er aufgeht. Geht er bis zur
+    // größten Stufe in einer Gruppe auf (mehrere Punkte auf derselben Stelle, etwa der Mitte einer Straße), genügt
+    // die Stufe, ab der die Gruppe nur noch diesen Stapel enthält; dort wird sie aufgefächert.
+    let gruppe = m.__parent, stufe = map.getZoom();
+    if (gruppe && Number.isFinite(gruppe._zoom)) {
+      if (gruppe._zoom < map.getMaxZoom()) stufe = gruppe._zoom + 1;
+      else {
+        const n = gruppe.getChildCount();
+        while (gruppe.__parent && Number.isFinite(gruppe.__parent._zoom) && gruppe.__parent._zoom >= map.getMinZoom()
+          && gruppe.__parent.getChildCount() === n) gruppe = gruppe.__parent;
+        stufe = gruppe._zoom;
+      }
+    }
+    const ziel = Math.max(map.getZoom(), stufe);
+    if (ziel === map.getZoom() && map.getBounds().pad(-0.1).contains(m.getLatLng())) { fertig(); return; }
+    map.once("moveend", fertig);
+    map.setView(m.getLatLng(), ziel, { animate: !REDUCED });
+  }
   function highlight() {
     for (const [ref, ms] of markers) {
       const on = selected && ref === selected.reference;
@@ -1391,6 +1499,7 @@
     return p.steps.some((s) => (s.typ === "beratung" || s.typ === "entscheidung") && s.date && s.date >= a && s.date <= b);
   }
   function filtered(withRange = true) {
+    if (!area) return [];   // Gebietsdatei beim Start nicht geladen (Fehlermeldung mit „Erneut versuchen“ steht in der Liste)
     const text = $("#f-text").value.trim().toLowerCase(), type = $("#f-type").value, amt = $("#f-amt").value;
     const gremium = $("#f-gremium").value, standF = $("#f-stand").value;
     const theme = $("#f-theme").value, party = $("#f-party").value, rel = $("#f-related").checked;
@@ -1495,6 +1604,7 @@
   }
 
   function render() {
+    if (!area && scope() !== "bonn") return;   // ohne geladenes Gebiet bleibt die Fehlermeldung stehen (Nr. 31)
     $("#f-related-wrap").hidden = !$("#f-party").value;
     $("#more-filters").hidden = scope() === "bonn";
     if (scope() === "bonn") {
@@ -1582,7 +1692,7 @@
   const link = (url, text, cls) => { const u = safeUrl(url); return u ? `<a ${cls ? `class="${cls}" ` : ""}href="${u}" target="_blank" rel="noopener">${text}</a>` : ""; };
   // Bebauungspläne: Geltungsbereiche der Stadt (CC0), erst bei Bedarf geladen
   let plansData = null, planLayer = null;
-  const loadPlans = () => (plansData ||= loadGeo("bplan").catch(() => ({ features: [] })));
+  const loadPlans = () => (plansData ||= loadGeo("bplan").catch(() => { plansData = null; return { features: [] }; }));
   async function showPlans(p, fit) {
     if (planLayer) { planLayer.remove(); planLayer = null; }
     const withArea = (p.plans || []).filter((x) => x.area);
@@ -1630,7 +1740,9 @@
       const want = kxOn.has(k) && visible;
       if (!want) { if (kxLayers[k]) { kxLayers[k].remove(); kxLayers[k] = null; } continue; }
       if (kxLayers[k]) continue;
-      kxData[k] ||= fetch(`${BONN}flaechen/${KX[k].file}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+      // ein gescheiterter Abruf wird nicht gemerkt: der nächste Versuch lädt neu (Prüfung November 2026, Nr. 30)
+      kxData[k] ||= fetch(`${BONN}flaechen/${KX[k].file}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+        .then((d) => { if (!d) kxData[k] = null; return d; });
       const data = await kxData[k];
       if (!data || kxLayers[k] || !kxOn.has(k) || map.getZoom() < KX_ZOOM) continue;
       if (!map.getPane("kontextflaechen")) map.createPane("kontextflaechen").style.zIndex = 360;
@@ -1688,7 +1800,8 @@
   // Register je Plannummer (data/export/bonn/plaene.json): Vorlagen chronologisch, Verfahrensschritte abgeleitet
   let planReg = null;
   const planIndexUrl = () => (index ? BONN + "plaene.json" : null);
-  const loadPlanReg = () => (planReg ||= (planIndexUrl() ? fetch(planIndexUrl()).then((r) => (r.ok ? r.json() : null)).catch(() => null) : Promise.resolve(null)));
+  const loadPlanReg = () => (planReg ||= (planIndexUrl() ? fetch(planIndexUrl()).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+    .then((d) => { if (!d) planReg = null; return d; }) : Promise.resolve(null)));
   const PLAN_MATCH = { eindeutig: "eindeutig zugeordnet", grundnummer: "im Datensatz nur die Grundnummer", mehrdeutig: "mehrere Pläne passen",
     nicht_im_datensatz: "nicht unter den rechtskräftigen Plänen (im Verfahren oder aufgehoben)" };
   // detailSeq: eine langsam geladene Planchronik überschreibt keine neuere Auswahl (Code-Prüfung 23.10.2026)
@@ -1770,8 +1883,13 @@
   }
 
   // --- Baustellen (data/export/bonn/baustellen.json, pipeline/kandidaten.py) -----------------------------
-  const siteState = (b) => (!b.aktiv ? "entfallen" : b.von && b.von > heute() ? "geplant" : "aktuell");
-  const SITE_STATE = { aktuell: "laufend", geplant: "geplant", entfallen: "nicht mehr gemeldet" };
+  // „laufend“ nur, solange das gemeldete Ende nicht verstrichen ist: Antwortet die Quelle nicht, bleiben Baustellen im
+  // Archiv gemeldet, auch wenn ihr Termin abgelaufen ist (Prüfung November 2026, Nr. 33: Stand vom 21.10.2026, alle 46
+  // „laufend“, vier mit Ende vor dem Datenstand)
+  const siteState = (b) => (!b.aktiv ? "entfallen" : b.von && b.von > heute() ? "geplant" : b.bis && b.bis < heute() ? "abgelaufen" : "aktuell");
+  const SITE_STATE = { aktuell: "laufend", geplant: "geplant", abgelaufen: "gemeldetes Ende verstrichen", entfallen: "nicht mehr gemeldet" };
+  // Liegt der letzte Abruf der Quelle mehr als sieben Tage zurück, steht das beim Stand der Baustelle
+  const bauVeraltet = () => { const a = String(bau?.meta?.abruf || "").slice(0, 10); return a && (Date.parse(heute()) - Date.parse(a)) / 864e5 > 7 ? a : null; };
   const siteClass = (b) => (b.fremd ? "site-fremd" : `site-${siteState(b)}`);
   // Punkt in Fläche (gerade-ungerade über alle Ringe, Löcher eingeschlossen)
   function inGeom(lon, lat, g) {
@@ -1833,7 +1951,7 @@
         <dt>Maßnahme</dt><dd>${esc(b.massnahme || "–")}</dd>
         <dt>Träger</dt><dd>${esc(b.traeger || "–")}${b.fremd ? '<br><span class="hint">Anderer Träger: setzt in der Regel keinen Ratsbeschluss um.</span>' : ""}</dd>
         <dt>Zeitraum</dt><dd>${fmtDate(b.von)} – ${fmtDate(b.bis)} <span class="derived">laut Quelle unverbindlich</span></dd>
-        <dt>Stand</dt><dd>${SITE_STATE[state]}${b.entfallen ? ` (seit ${fmtDate(b.entfallen)})` : ""}</dd>
+        <dt>Stand</dt><dd>${SITE_STATE[state]}${b.entfallen ? ` (seit ${fmtDate(b.entfallen)})` : ""}${bauVeraltet() ? `<br><span class="hint">Die Quelle wurde zuletzt am ${fmtDate(bauVeraltet())} erreicht; der Stand kann überholt sein.</span>` : ""}</dd>
         ${b.sperrung ? `<dt>Sperrung</dt><dd>${esc(b.sperrung)}</dd>` : ""}
         <dt>Im Archiv seit</dt><dd>${fmtDate(b.seit)}${b.seit === bau.meta.archiv_beginn ? " (Beginn des Archivs)" : ""}</dd>
       </dl>
@@ -1868,7 +1986,8 @@
   // Soll-Modell (data/export/bonn/soll.json): Verfahren nach Regelwerk aus „Bonn entscheidet“ (MIT) mit Ergänzungen;
   // abgeglichen wird je Vorgang nur, welche Gremienarten beraten haben (pipeline/soll.py)
   let sollData = null;
-  const loadSoll = () => (sollData ||= index ? fetch(BONN + "soll.json").then((r) => (r.ok ? r.json() : null)).catch(() => null) : Promise.resolve(null));
+  const loadSoll = () => (sollData ||= index ? fetch(BONN + "soll.json").then((r) => (r.ok ? r.json() : null)).catch(() => null)
+    .then((d) => { if (!d) sollData = null; return d; }) : Promise.resolve(null));
   const GREMIUM_BAHN = new Set(["bv", "aus", "rat"]);
   const lawLinks = (links) => (links || []).map((l) => link(l.url, esc(l.label))).filter(Boolean).join(" · ");
   function sollStep(st, d, ist) {
@@ -1978,6 +2097,8 @@
 
   function select(p, fromMap) {
     detailSeq++;
+    if (MOBILE.matches && !$("#panel-list").hidden) listeVorVorgang = true;
+    else if (MOBILE.matches && $("#panel-detail").hidden) listeVorVorgang = false;
     selected = p;
     shownPlan = null;
     shownSite = null;
@@ -2052,7 +2173,7 @@
       if (b) b.scrollIntoView({ block: "nearest" });
     } else {
       // mit Bebauungsplan zoomt showPlans auf die Planfläche
-      if (ms.length && !(p.plans || []).some((x) => x.area)) cluster.zoomToShowLayer(ms[0], () => { highlight(); map.panTo(ms[0].getLatLng(), { animate: !REDUCED }); });
+      if (ms.length && !(p.plans || []).some((x) => x.area)) zeigeMarker(ms[0], p.reference);
       if (MOBILE.matches) $("#detail h3").focus();
     }
   }
@@ -2239,7 +2360,23 @@
   }
   function initSearchBar() {
     const q = $("#q");
-    q.addEventListener("focus", () => openMega("mega-suche"));
+    // Das Suchmenü öffnet sich beim Klick, beim Tippen und mit Pfeil nach unten, nicht schon beim Fokus: Beim
+    // Durchtabben klappte es sonst auf, schob 15 Tab-Stopps ein, blieb offen und verdeckte, was danach den Fokus
+    // hatte; bei schmaler Breite schloss es dabei „Los geht's“ (Prüfung November 2026, Nr. 14).
+    q.addEventListener("click", () => openMega("mega-suche"));
+    q.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowDown") return;
+      e.preventDefault();
+      openMega("mega-suche");
+      $("#mega-suche").querySelector("button, a, input")?.focus();
+    });
+    // verlässt der Fokus Suchfeld und Suchmenü (Tab), schließt das Menü; Klicks außerhalb behandelt der Klick-Listener
+    const verlassen = (e) => {
+      const ziel = e.relatedTarget;
+      if (openMegaId === "mega-suche" && ziel && !ziel.closest("#mega-suche") && !ziel.closest("#nav-search")) closeMega();
+    };
+    $("#nav-search").addEventListener("focusout", verlassen);
+    $("#mega-suche").addEventListener("focusout", verlassen);
     q.addEventListener("input", debounce(() => {
       $("#f-text").value = q.value;
       $("#doc-status").textContent = "";
@@ -2410,7 +2547,67 @@
     state.bezirk = mm ? mm.bezirk : "";
     for (const [k, v] of Object.entries(state)) (v ? url.searchParams.set(k, v) : url.searchParams.delete(k));
     url.hash = selected ? encodeURIComponent(selected.reference) : "";
-    history.replaceState(null, "", url);
+    // Verlauf: Wechselt das Gebiet oder der gewählte Vorgang, entsteht ein Eintrag, damit die Zurück-Taste des
+    // Browsers den Vorgang schließt bzw. zum vorigen Gebiet führt, statt die Seite zu verlassen (auf dem Telefon der
+    // übliche Rückweg; Prüfung November 2026, Nr. 15). Filter, Zeitraum und Ebenen ersetzen den Eintrag wie bisher.
+    const key = navKey();
+    if (verlaufKey !== null && !verlaufZurueck && key !== verlaufKey) history.pushState(null, "", url);
+    else history.replaceState(null, "", url);
+    if (verlaufKey !== null) verlaufKey = key;
+  }
+  let verlaufKey = null, verlaufZurueck = false;   // null: Start läuft noch, es entstehen keine Einträge
+  const navKey = () => `${area ? `${area.kind}:${area.key}` : ""}#${selected ? selected.reference : ""}`;
+  // Zurück und Vor: Gebiet und Vorgang aus der Adresse herstellen; die übrigen Angaben der Adresse folgen dem Stand
+  // der Seite (syncUrl am Ende)
+  window.addEventListener("popstate", async () => {
+    if (verlaufKey === null) return;
+    verlaufZurueck = true;
+    try {
+      const params = new URLSearchParams(location.search);
+      let ref = "";
+      try { ref = decodeURIComponent(location.hash.slice(1)); } catch (e) { /* fehlerhafter Anker: wie ohne */ }
+      const gebiet = params.get("gebiet") || DEFAULT_AREA;
+      const ziel = parseArea(gebiet);
+      if (!area || ziel.kind !== area.kind || ziel.key !== area.key) await loadArea(gebiet, true);
+      const p = ref && papers.find((x) => x.reference === ref);
+      if (p) { if (!selected || selected.reference !== ref) select(p); }
+      else if (selected) {
+        selected = null;
+        document.querySelectorAll(".papers button[data-ref]").forEach((b) => b.setAttribute("aria-current", "false"));
+        if (tl) tl.select(null);
+        highlight();
+        showIntro();
+        // Telefon: zurück zur Liste, wenn der Vorgang von dort geöffnet wurde
+        if (MOBILE.matches && !$("#panel-detail").hidden) closePanelNachZurueck();
+      }
+    } finally {
+      verlaufKey = navKey();   // vor syncUrl: der hergestellte Stand ist kein neuer Eintrag (sonst ginge „Vor“ verloren)
+      syncUrl();
+      verlaufZurueck = false;
+    }
+  });
+  function closePanelNachZurueck() {
+    setPanel("panel-detail", false);
+    if (listeVorVorgang) { setPanel("panel-list", true); focusPanel("panel-list"); }
+  }
+
+  // index.json: fehlt die Datei (404), gibt es nur den Pilot Endenich (lokale Vorschau ohne Export für ganz Bonn).
+  // Jeder andere Fehler (Netz, Server, kaputte Antwort) wird einmal wiederholt und dann gemeldet: Bisher startete die
+  // Seite dabei stillschweigend im Pilot und zeigte nur Endenich (Prüfung November 2026, Nr. 9).
+  async function ladeIndex() {
+    for (let versuch = 0; ; versuch++) {
+      try {
+        const r = await fetch(BONN + "index.json");
+        if (r.status === 404) return null;
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const d = await r.json();
+        if (!d || !Array.isArray(d.ortsteile)) throw new Error("unvollständige Antwort");
+        return d;
+      } catch (err) {
+        if (versuch >= 1) throw new Error(`Übersicht der Gebiete nicht erreichbar: ${err.message}`);
+        await new Promise((ok) => setTimeout(ok, 800));
+      }
+    }
   }
 
   // --- Start -----------------------------------------------------------------------------------------
@@ -2423,7 +2620,7 @@
     const startGebiet = new URLSearchParams(location.search).get("gebiet") || DEFAULT_AREA;
     const [gKind, gKey] = startGebiet.split(":");
     // 1. index.json (klein, vorab angefordert) gibt den ersten Ausschnitt; die Kacheln laden sofort
-    const idx = await json(BONN + "index.json");
+    const idx = await ladeIndex();
     createMap(startBounds(idx, startGebiet));
     // 2. alles Übrige nach den sichtbaren Kacheln (höchstens 2,5 s warten)
     await kachelnGeladen(2500);
@@ -2438,8 +2635,8 @@
     index = idx;
     kontext = index && kx && kx.ortsteile ? kx : null;
     anliegen = kontext && an && an.ortsteile ? an : null;
-    zeit = index ? z : null;
-    bau = index && bs && bs.baustellen.length ? bs : null;
+    zeit = index && z && z.months && z.areas ? z : null;   // unvollständige Datei: ohne Zeitleiste statt Abbruch
+    bau = index && bs?.baustellen?.length ? bs : null;
     for (const b of bau ? bau.baustellen : []) for (const c of b.kandidaten) {
       if (!bauByRef.has(c.drucksache)) bauByRef.set(c.drucksache, []);
       bauByRef.get(c.drucksache).push({ b, c });
@@ -2545,6 +2742,15 @@
     if (kxOn.size) drawKx();
     const initial = papers.find((p) => p.reference === ref);
     if (initial) select(initial);
+    // Vorlage aus dem Anker liegt nicht im Gebiet des Links (etwa ein Feed-Link „ohne Ortsbezug“, nachdem die Vorlage
+    // einen Ort erhalten hat, oder ein Anker ohne Gebiet): über den Suchindex ihr Gebiet öffnen, sonst ein Hinweis
+    // (Prüfung November 2026, Nr. 12: bisher erschien stillschweigend „Los geht's“)
+    else if (ref && index && /^[\w .\-]{4,24}$/.test(ref) && await window.risKarte.open(ref)) { /* geöffnet */ }
+    else if (ref && index && /^[\w .\-]{4,24}$/.test(ref)) {
+      showIntro();
+      $("#detail").insertAdjacentHTML("afterbegin", `<p class="hint" role="status">Die Vorlage ${esc(ref)} aus dem Link ist in den Daten nicht enthalten.</p>`);
+      $("#announce").textContent = `Die Vorlage ${ref} aus dem Link ist in den Daten nicht enthalten.`;
+    }
     else if (params.get("plan")) await showPlan(params.get("plan"));
     else if (params.get("baustelle") && bau && bau.baustellen.some((b) => b.id === params.get("baustelle"))) showSite(params.get("baustelle"));
     else showIntro();
@@ -2558,6 +2764,7 @@
         verfahren: params.get("verfahren"), gremium: params.get("gremium"), amt: params.get("amt") });
     }
     syncUrl();
+    verlaufKey = navKey();   // Start abgeschlossen: Gebiets- und Vorgangswechsel legen ab jetzt Verlaufseinträge an
   }
   // Schnittstelle für den Ratsassistenten (site/chat/ui.js): Vorlage öffnen, Kontext der Karte
   window.risKarte = {
@@ -2601,5 +2808,11 @@
     },
   };
 
-  start().catch((err) => { $("#detail").innerHTML = `<p>Die Daten konnten nicht geladen werden (${esc(err.message)}).</p>`; });
+  start().catch((err) => {
+    console.error(err);
+    $("#detail").innerHTML = `<p role="alert">Die Daten konnten nicht geladen werden (${esc(err.message)}).</p>
+      <p><button type="button" class="btn btn-cta" id="neu-laden">Erneut versuchen</button></p>`;
+    $("#neu-laden").addEventListener("click", () => location.reload());
+    setPanel("panel-detail", true);
+  });
 })();

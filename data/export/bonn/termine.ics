@@ -476,8 +476,7 @@ BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006782
 DTSTAMP:20261231T170000Z
 DTSTART:20261231T170000Z
-SUMMARY:Sammeltermin für den Ausschuss für Sicherheit\, Ordnung und Bevö
- lkerungsschutz
+SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
 DESCRIPTION:Sammeltermin für den Ausschuss für Sicherheit\, Ordnung und B
  evölkerungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OPar
  l-API der Stadt Bonn (CC0 1.0)
@@ -505,7 +504,7 @@ BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006583
 DTSTAMP:20270120T160000Z
 DTSTART:20270120T160000Z
-SUMMARY:Ausschuss für Mobilität und Verkehr mit dem Rhein-Sieg-Kreis
+SUMMARY:Ausschuss für Mobilität und Verkehr
 DESCRIPTION:Gemeinsame Sitzung des Ausschusses für Mobilität und Verkehr 
  mit dem Rhein-Sieg-Kreis\nTagesordnung noch nicht veröffentlicht.\nQuelle
  : OParl-API der Stadt Bonn (CC0 1.0)
@@ -1475,7 +1474,7 @@ BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006677
 DTSTAMP:20270909T150000Z
 DTSTART:20270909T150000Z
-SUMMARY:(PÜMA) Sitzung der Bezirksvertretung Beuel
+SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:(PÜMA) Sitzung der Bezirksvertretung Beuel\nTagesordnung noch 
  nicht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED

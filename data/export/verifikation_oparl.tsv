@@ -27,13 +27,13 @@ drucksache	feld	export	oparl_api	ergebnis
 261096	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
 261096	beratungen	1	1	ok
 261096	orte_stufe_a			ok
-201565	reference	201565	201565	ok
-201565	name	Soziale Erhaltungssatzungen (Milieuschutz) für Nordstadt, Endenich und Kessenich	Soziale Erhaltungssatzungen (Milieuschutz) für Nordstadt, Endenich und Kessenich	ok
-201565	date	2021-02-12	2021-02-12	ok
-201565	paper_type	Antrag	Antrag	ok
-201565	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
-201565	beratungen	4	4	ok
-201565	orte_stufe_a			ok
+201557	reference	201557	201557	ok
+201557	name	Fahrradbrücke über die Straße ‘Am Propsthof‘ im Zuge des Ausbaus der Radpendlerroute Bornheim-Bonn	Fahrradbrücke über die Straße ‘Am Propsthof‘ im Zuge des Ausbaus der Radpendlerroute Bornheim-Bonn	ok
+201557	date	2020-08-25	2020-08-25	ok
+201557	paper_type	Beschlussvorlage	Beschlussvorlage	ok
+201557	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	ok
+201557	beratungen	2	2	ok
+201557	orte_stufe_a			ok
 220663	reference	220663	220663	ok
 220663	name	"Überarbeitung der Anschlusssituation bzgl. Verkehrsversuch: ""Umweltspur"" auf dem Hermann-Wandersleb-Ring"	"Überarbeitung der Anschlusssituation bzgl. Verkehrsversuch: ""Umweltspur"" auf dem Hermann-Wandersleb-Ring"	ok
 220663	date	2022-05-19	2022-05-19	ok
@@ -48,27 +48,27 @@ drucksache	feld	export	oparl_api	ergebnis
 231034-01 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/227	https://www.bonn.sitzung-online.de/oparl/organizations/at/227	ok
 231034-01 ST	beratungen	1	1	ok
 231034-01 ST	orte_stufe_a			ok
-190936-2 ST	reference	190936-2 ST	190936-2 ST	ok
-190936-2 ST	name	Studentischer Wohnraum in Campus Poppelsdorf und Campus Endenich	Studentischer Wohnraum in Campus Poppelsdorf und Campus Endenich	ok
-190936-2 ST	date	2020-02-26	2020-02-26	ok
-190936-2 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-190936-2 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	ok
-190936-2 ST	beratungen	1	1	ok
-190936-2 ST	orte_stufe_a			ok
-190306	reference	190306	190306	ok
-190306	name	Fällgenehmigung für einen Mammutbaum auf dem Grundstück Steinweg [Hausnummer ausgelassen], 53121 Bonn (alt: 1912871, FF: Amt 56)	Fällgenehmigung für einen Mammutbaum auf dem Grundstück Steinweg [Hausnummer ausgelassen], 53121 Bonn (alt: 1912871, FF: Amt 56)	ok
-190306	date	2019-11-11	2019-11-11	ok
-190306	paper_type	Beschlussvorlage	Beschlussvorlage	ok
-190306	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/143	https://www.bonn.sitzung-online.de/oparl/organizations/at/143	ok
-190306	beratungen	2	2	ok
-190306	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/22807;https://www.bonn.sitzung-online.de/oparl/locations/22955;https://www.bonn.sitzung-online.de/oparl/locations/23064	https://www.bonn.sitzung-online.de/oparl/locations/22807;https://www.bonn.sitzung-online.de/oparl/locations/22955;https://www.bonn.sitzung-online.de/oparl/locations/23064	ok
-190883	reference	190883	190883	ok
-190883	name	Bürgerantrag: Einrichtung eines Fahrradweges/-Streifens in der Gerhard-Domagk-Straße	Bürgerantrag: Einrichtung eines Fahrradweges/-Streifens in der Gerhard-Domagk-Straße	ok
-190883	date	2019-11-22	2019-11-22	ok
-190883	paper_type	Bürgerantrag § 24 GO - Öffentlich	Bürgerantrag § 24 GO - Öffentlich	ok
-190883	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	ok
-190883	beratungen	1	1	ok
-190883	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/21621	https://www.bonn.sitzung-online.de/oparl/locations/21621	ok
+200132-1 ST	reference	200132-1 ST	200132-1 ST	ok
+200132-1 ST	name	Förderung von regionalen Schnellbussen	Förderung von regionalen Schnellbussen	ok
+200132-1 ST	date	2020-02-27	2020-02-27	ok
+200132-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
+200132-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	ok
+200132-1 ST	beratungen	1	1	ok
+200132-1 ST	orte_stufe_a			ok
+190305	reference	190305	190305	ok
+190305	name	Fällgenehmigung für eine Himalaja-Zeder auf dem Grundstück Steinweg [Hausnummer ausgelassen], 53121 Bonn (Alt 1912856, FF Amt 56)	Fällgenehmigung für eine Himalaja-Zeder auf dem Grundstück Steinweg [Hausnummer ausgelassen], 53121 Bonn (Alt 1912856, FF Amt 56)	ok
+190305	date	2019-11-11	2019-11-11	ok
+190305	paper_type	Beschlussvorlage	Beschlussvorlage	ok
+190305	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/143	https://www.bonn.sitzung-online.de/oparl/organizations/at/143	ok
+190305	beratungen	2	2	ok
+190305	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/22807;https://www.bonn.sitzung-online.de/oparl/locations/22955;https://www.bonn.sitzung-online.de/oparl/locations/23064	https://www.bonn.sitzung-online.de/oparl/locations/22807;https://www.bonn.sitzung-online.de/oparl/locations/22955;https://www.bonn.sitzung-online.de/oparl/locations/23064	ok
+190876	reference	190876	190876	ok
+190876	name	Bürgerantrag: Verkehrsberuhigung Endenich und Musikerviertel	Bürgerantrag: Verkehrsberuhigung Endenich und Musikerviertel	ok
+190876	date	2019-11-22	2019-11-22	ok
+190876	paper_type	Bürgerantrag § 24 GO - Öffentlich	Bürgerantrag § 24 GO - Öffentlich	ok
+190876	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	ok
+190876	beratungen	1	1	ok
+190876	orte_stufe_a			ok
 252704	reference	252704	252704	ok
 252704	name	Einleitung des Vergabeverfahrens zur Ergänzung des Verkehrsgrüns in Bonn- Nordstadt, -Weststadt und -Endenich	Einleitung des Vergabeverfahrens zur Ergänzung des Verkehrsgrüns in Bonn- Nordstadt, -Weststadt und -Endenich	ok
 252704	date	2025-03-26	2025-03-26	ok
@@ -76,20 +76,20 @@ drucksache	feld	export	oparl_api	ergebnis
 252704	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/293	https://www.bonn.sitzung-online.de/oparl/organizations/at/293	ok
 252704	beratungen	1	1	ok
 252704	orte_stufe_a			ok
-190997-1	reference	190997-1	190997-1	ok
-190997-1	name	Bürgerantrag: Veränderung Ampelschaltung Hermann-Wandersleb-Ring / Effertzstr.	Bürgerantrag: Veränderung Ampelschaltung Hermann-Wandersleb-Ring / Effertzstr.	ok
-190997-1	date	2020-01-13	2020-01-13	ok
-190997-1	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-190997-1	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	ok
-190997-1	beratungen	1	1	ok
-190997-1	orte_stufe_a			ok
-190363-2 AA	reference	190363-2 AA	190363-2 AA	ok
-190363-2 AA	name	Einrichtung von eigenen Fahrspuren für Radfahrer Hier: Verkehrsversuch “Umweltspur“ auf dem Hermann-Wandersleb-Ring (alt: 1912946, FF: Amt 61) Antrag zur Vorlage 190363	Einrichtung von eigenen Fahrspuren für Radfahrer Hier: Verkehrsversuch “Umweltspur“ auf dem Hermann-Wandersleb-Ring (alt: 1912946, FF: Amt 61) Antrag zur Vorlage 190363	ok
-190363-2 AA	date	2019-11-05	2019-11-05	ok
-190363-2 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
-190363-2 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
-190363-2 AA	beratungen	3	3	ok
-190363-2 AA	orte_stufe_a			ok
+191010-1 ST	reference	191010-1 ST	191010-1 ST	ok
+191010-1 ST	name	Bürgerantrag : Einbahnstraßenregelung Brahmsstraße Endenich - Bitte um Vertagung	Bürgerantrag : Einbahnstraßenregelung Brahmsstraße Endenich - Bitte um Vertagung	ok
+191010-1 ST	date	2020-01-13	2020-01-13	ok
+191010-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
+191010-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/190	https://www.bonn.sitzung-online.de/oparl/organizations/at/190	ok
+191010-1 ST	beratungen	1	1	ok
+191010-1 ST	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/21046	https://www.bonn.sitzung-online.de/oparl/locations/21046	ok
+190574	reference	190574	190574	ok
+190574	name	Prioritätensetzung und Transparenz bei Verkehrsuntersuchungen	Prioritätensetzung und Transparenz bei Verkehrsuntersuchungen	ok
+190574	date	2019-11-22	2019-11-22	ok
+190574	paper_type	Antrag	Antrag	ok
+190574	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+190574	beratungen	1	1	ok
+190574	orte_stufe_a			ok
 254017-01 ST	reference	254017-01 ST	254017-01 ST	ok
 254017-01 ST	name	Stellungnahme zum Bürgerantrag: Antrag auf Einrichtung von Zebrastreifen und Geschwindigkeitsbegrenzung in der Straße „Am Propsthof“	Stellungnahme zum Bürgerantrag: Antrag auf Einrichtung von Zebrastreifen und Geschwindigkeitsbegrenzung in der Straße „Am Propsthof“	ok
 254017-01 ST	date	2026-03-24	2026-03-24	ok
@@ -97,13 +97,13 @@ drucksache	feld	export	oparl_api	ergebnis
 254017-01 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/187	https://www.bonn.sitzung-online.de/oparl/organizations/at/187	ok
 254017-01 ST	beratungen	1	1	ok
 254017-01 ST	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/21019;https://www.bonn.sitzung-online.de/oparl/locations/22309	https://www.bonn.sitzung-online.de/oparl/locations/21019;https://www.bonn.sitzung-online.de/oparl/locations/22309	ok
-190310-2 AA	reference	190310-2 AA	190310-2 AA	ok
-190310-2 AA	name	"Genehmigung der Vorentwurfsplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des in Aufstellung befindlichen Bebauungsplanes Nr. 6322-2 ""Am Vogelsang"" in Bonn-Endenich Antrag zur Vorlage 190310"	"Genehmigung der Vorentwurfsplanung zum Ausbau der öffentlichen Erschließungsanlagen im Geltungsbereich des in Aufstellung befindlichen Bebauungsplanes Nr. 6322-2 ""Am Vogelsang"" in Bonn-Endenich Antrag zur Vorlage 190310"	ok
-190310-2 AA	date	2020-01-28	2020-01-28	ok
-190310-2 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
-190310-2 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
-190310-2 AA	beratungen	1	1	ok
-190310-2 AA	orte_stufe_a			ok
+200132	reference	200132	200132	ok
+200132	name	Förderung von regionalen Schnellbussen	Förderung von regionalen Schnellbussen	ok
+200132	date	2020-01-28	2020-01-28	ok
+200132	paper_type	Antrag	Antrag	ok
+200132	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+200132	beratungen	1	1	ok
+200132	orte_stufe_a			ok
 253055	reference	253055	253055	ok
 253055	name	Soziale Erhaltungssatzungen in Bonn. Hier: Ergebnisse gesamtstädtisches Grobscreening und Festlegung des weiteren Vorgehens	Soziale Erhaltungssatzungen in Bonn. Hier: Ergebnisse gesamtstädtisches Grobscreening und Festlegung des weiteren Vorgehens	ok
 253055	date	2025-06-23	2025-06-23	ok
@@ -125,13 +125,13 @@ drucksache	feld	export	oparl_api	ergebnis
 201308-01 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
 201308-01 AA	beratungen	3	3	ok
 201308-01 AA	orte_stufe_a			ok
-200513-1 ST	reference	200513-1 ST	200513-1 ST	ok
-200513-1 ST	name	Gestaltung der Ladenzeile Medinghoven	Gestaltung der Ladenzeile Medinghoven	ok
-200513-1 ST	date	2020-04-23	2020-04-23	ok
-200513-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-200513-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	ok
-200513-1 ST	beratungen	1	1	ok
-200513-1 ST	orte_stufe_a			ok
+200654	reference	200654	200654	ok
+200654	name	Benennung der aus der Teilung der „Rheinschule“ hervorgegangenen beiden eigenständigen Förderschulen in Endenich und in Beuel als „Schule am Hügel“ und „Schule am Rheingarten“ zum Schuljahr 2020/2021	Benennung der aus der Teilung der „Rheinschule“ hervorgegangenen beiden eigenständigen Förderschulen in Endenich und in Beuel als „Schule am Hügel“ und „Schule am Rheingarten“ zum Schuljahr 2020/2021	ok
+200654	date	2020-04-14	2020-04-14	ok
+200654	paper_type	Beschlussvorlage	Beschlussvorlage	ok
+200654	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/20	https://www.bonn.sitzung-online.de/oparl/organizations/at/20	ok
+200654	beratungen	4	4	ok
+200654	orte_stufe_a			ok
 212386	reference	212386	212386	ok
 212386	name	Sofortmaßnahme zur Wiederherstellung von Mindestbreiten auf Gehwegen	Sofortmaßnahme zur Wiederherstellung von Mindestbreiten auf Gehwegen	ok
 212386	date	2022-01-05	2022-01-05	ok

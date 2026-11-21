@@ -92,13 +92,16 @@
   </svg>
 
   <header>
-    <h1 class="site-title" data-home title="Zu „Los geht's“"><img src="favicon.svg?v=2" width="24" height="24" alt=""><span class="marke">Ratsatlas <span class="ort">Bonn</span></span></h1>
+    <!-- auf dem Telefon der sichtbare Titel und Rückweg zu „Los geht's“: als Link, damit er auch per Tastatur und
+         Vorleseprogramm erreichbar ist (bei Zoom 400 % gilt die Telefon-Ansicht) -->
+    <h1 class="site-title"><a href="./" data-home title="Zu „Los geht's“"><img src="favicon.svg?v=2" width="24" height="24" alt=""><span class="marke">Ratsatlas <span class="ort">Bonn</span></span><span class="visually-hidden">: zu „Los geht's“</span></a></h1>
     <nav class="nav glass" aria-label="Hauptmenü">
       <a class="brand" href="./" data-home title="Zu „Los geht's“"><img src="favicon.svg?v=2" width="28" height="28" alt=""><span class="marke">Ratsatlas <span class="ort">Bonn</span></span><span class="visually-hidden">: zu „Los geht's“</span></a>
       <form class="nav-search" id="nav-search" role="search">
         <label class="visually-hidden" for="q">Vorlagen in ganz Bonn suchen</label>
         <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
-        <input type="search" id="q" placeholder="In ganz Bonn suchen …" autocomplete="off" aria-controls="mega-suche">
+        <input type="search" id="q" placeholder="In ganz Bonn suchen …" autocomplete="off" aria-controls="mega-suche" aria-describedby="q-hilfe">
+        <span class="visually-hidden" id="q-hilfe">Tippen oder Pfeil nach unten öffnet Themen und Parteien als Schnellfilter.</span>
       </form>
       <!-- Telefon: Gebiet, Flächen und Menüs hinter ☰ (Entscheidung 02.11.2026); auf breiten Bildschirmen ohne eigene Box -->
       <button type="button" class="nav-burger" id="nav-burger" aria-expanded="false" aria-controls="nav-more">
@@ -141,6 +144,7 @@
       </div>
       <h3 class="mega-label"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg>Themen</h3>
       <div class="chips" id="chips-theme" role="group" aria-label="Thema wählen"></div>
+      <p class="hint mega-hint">Diese Themen ordnen alle Vorlagen seit 2019 grob nach Amt, Ausschuss und Stichwort. Die <a href="thema/">Themenseiten</a> im Menü „Themen“ wählen enger aus und beginnen im November 2025; gleiche Namen bedeuten deshalb nicht dieselbe Auswahl.</p>
       <h3 class="mega-label"><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg>Partei / Fraktion</h3>
       <div class="chips" id="chips-party" role="group" aria-label="Partei oder Fraktion wählen"></div>
       <div class="doc-search">
@@ -451,7 +455,7 @@
       <div class="resizer" data-resize="detail" role="separator" tabindex="0" aria-orientation="vertical" aria-controls="panel-detail" aria-label="Breite des Vorgangs ändern (Pfeiltasten)"></div>
       <div class="panel-head">
         <h2 id="detail-heading" tabindex="-1">Los geht's</h2>
-        <button type="button" class="icon-btn" data-close="panel-detail" aria-label="Detail einklappen">›</button>
+        <button type="button" class="icon-btn" data-close="panel-detail" aria-label="Los geht's einklappen">›</button>
       </div>
       <div class="panel-body detail" id="detail"></div>
     </section>
@@ -549,7 +553,7 @@
         <dt>ohne Beratungsfolge</dt><dd>Für die Vorlage ist keine Beratung in einem Gremium vorgesehen oder erfasst.</dd>
       </dl>
 
-      <h3 id="about-pruefung" tabindex="-1">Wie sicher sind die Angaben?</h3>
+      <h3 id="about-pruefung" tabindex="-1">Wie verlässlich sind die Angaben?</h3>
       <p>Die meisten Angaben stammen unverändert aus dem Ratsinformationssystem. Erschlossene Angaben – etwa der Ort aus dem Titel oder dem Text eines Dokuments, das Datum einer Sitzung oder das Thema – sind als „abgeleitet“ gekennzeichnet; aus Dokumenten zeigt die Karte nur den erkannten Ort, keinen Textauszug. Bei Orten unterscheiden wir: <strong>gesichert</strong> (Koordinate der Stadt oder eindeutig erkannter Bebauungsplan mit Geltungsbereich), <strong>erschlossen</strong> (Straßen- oder Ortsteilname im Titel) und <strong>unsicher</strong> (der Name passt zu mehreren Orten). Wohnadressen von Privatpersonen werden nicht gezeigt. Abgeleitete Angaben werden in Stichproben von Hand geprüft (richtig / teilweise / falsch):</p>
       <ul>
         <li>Ort aus dem Titel, Endenich (50 Vorlagen, 20.10.2026): 41 / 4 / 5; danach zwei Regeln verbessert</li>
