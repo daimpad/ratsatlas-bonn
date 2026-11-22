@@ -21,26 +21,31 @@ def schluessel(anbieter=None):
 
 
 class AntwortFormat(ValueError):
-    """Die Antwort enthält keinen Text als Zeichenkette. Mistral liefert bei Modellen mit Denkschritten `content` als
-    Liste von Teilen (`thinking`, `text`) statt als Zeichenkette. Solche Antworten werden nicht übernommen: Die
-    Kurzfassungen sind mit dem bisherigen Modell von Hand geprüft und freigegeben, über ein anderes Modell entscheidet
-    der Auftraggeber (21.11.2026: `mistral-large-latest` antwortet seit dem 13.11.2026 nicht mehr mit einer
-    Zeichenkette; bis dahin fiel das nur als AttributeError auf). Die Meldung nennt Form und Modell, nie den Text."""
+    """Die Antwort enthält keinen Antworttext. Mistral liefert bei Modellen mit Denkschritten `content` als Liste von
+    Teilen (`thinking`, `text`) statt als Zeichenkette (seit dem 13.11.2026 hinter `mistral-large-latest`; fiel bis
+    zum 21.11.2026 nur als AttributeError auf). Gelesen werden nur die Teile `text`; fehlen sie (etwa weil die
+    Längengrenze schon in den Denkschritten erreicht ist), gilt die Anfrage als gescheitert. Die Meldung nennt Form,
+    Modell und Ende der Antwort, nie ihren Text."""
 
 
 def antworttext(d):
-    """Text einer Antwort im Format von Mistral; AntwortFormat, wenn `content` keine Zeichenkette ist."""
+    """Antworttext im Format von Mistral: die Zeichenkette oder die Teile `text` einer Liste; Denkschritte
+    (`thinking`) werden nie übernommen. AntwortFormat, wenn kein Text enthalten ist."""
     wahl = (d.get("choices") or [{}])[0] if isinstance(d, dict) else {}
     content = (wahl.get("message") or {}).get("content")
-    if isinstance(content, str):
+    if isinstance(content, str) and content.strip():
         return content.strip()
     if isinstance(content, list):
+        text = "".join(c["text"] for c in content
+                       if isinstance(c, dict) and c.get("type") == "text" and isinstance(c.get("text"), str)).strip()
+        if text:
+            return text
         form = "Liste mit Teilen " + ", ".join(sorted({str(c.get("type")) if isinstance(c, dict) else type(c).__name__
                                                       for c in content}) or ["(leer)"])
     else:
-        form = type(content).__name__
+        form = "leere Zeichenkette" if isinstance(content, str) else type(content).__name__
     modell = d.get("model") if isinstance(d, dict) else None
-    raise AntwortFormat(f"Antwort ohne Text als Zeichenkette (content: {form}; Modell laut Antwort: {modell}; "
+    raise AntwortFormat(f"Antwort ohne Text (content: {form}; Modell laut Antwort: {modell}; "
                         f"Ende: {wahl.get('finish_reason')})")
 
 

@@ -45,6 +45,22 @@ KONTO_FEHLER = (401, 402, 403, 429)
 SERIE = 5
 FREIGEGEBEN = True   # Prüfung von Hand der Stichprobe v7 (22.10.2026): 18 zutreffend, 12 teilweise, keine falsch;
 #                       Freigabe durch den Auftraggeber mit geschärftem Hinweis
+# Stand des Modells hinter dem Namen MODELL. 1: Mistral Large bis zum 12.11.2026; mit ihm ist die Stichprobe v7 von
+# Hand geprüft, für ihn gilt die Freigabe. 2: seit dem 13.11.2026 antwortet hinter demselben Namen ein Modell mit
+# Denkschritten (Antwort als Liste von Teilen; bei 220 Tokens kam nur der Denkteil). Entscheidung des Auftraggebers
+# 22.11.2026: Anfrage anpassen, 30 Kurzfassungen als Stichprobe mit KI-Vorprüfung, auf die Seite erst nach seiner
+# Prüfung. Bis dahin entstehen nur die Kurzfassungen der Stichprobe, und ein Lauf ohne Antwort endet mit einem Hinweis
+# statt mit einem Fehler. Freigabe: den Stand in MODELLSTAND_FREIGEGEBEN aufnehmen.
+MODELLSTAND = 2
+MODELLSTAND_FREIGEGEBEN = (1,)
+STICHPROBE_MODELL = 30
+# Denkschritte zählen zur Längengrenze der Antwort; die Kurzfassung selbst bleibt bei höchstens 60 Wörtern (Anweisung).
+# Der Aufwand für Denkschritte wird klein gehalten; nimmt der Anbieter die Angabe nicht an (HTTP 400 oder 422), wird
+# ohne sie angefragt.
+MAX_TOKENS = 3000
+DENKAUFWAND = "low"
+MAX_WOERTER = 90   # ab Modellstand 2: die frühere Grenze von 220 Tokens begrenzte auch die Länge der Kurzfassung
+_ohne_denkaufwand = False
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
 # Absender und Gremien, die in einer Kurzfassung nur stehen dürfen, wenn Titel oder Text sie nennen (KI-Vorprüfung v4:
 # „Die Grünen beantragen“ und „dem Rat vorgelegt“ ohne Beleg)
@@ -244,19 +260,25 @@ def pruefe(kurz, text, titel=""):
 
 
 def _anfrage(titel, text, schluessel, tries=4, system=ANWEISUNG, zusatz=""):
-    body = json.dumps({"model": MODELL, "temperature": 0.2, "max_tokens": 220, "messages": [
+    global _ohne_denkaufwand
+    koerper = {"model": MODELL, "temperature": 0.2, "max_tokens": MAX_TOKENS, "messages": [
         {"role": "system", "content": system},
-        {"role": "user", "content": f"Titel: {titel}\n\nText der Vorlage:\n{text}{zusatz}"}]}).encode()
-    req = urllib.request.Request(API, data=body, headers={"Content-Type": "application/json",
-                                                         "Authorization": f"Bearer {schluessel}"})
+        {"role": "user", "content": f"Titel: {titel}\n\nText der Vorlage:\n{text}{zusatz}"}]}
     for i in range(tries):
+        body = koerper if _ohne_denkaufwand else {**koerper, "reasoning_effort": DENKAUFWAND}
+        req = urllib.request.Request(API, data=json.dumps(body).encode(),
+                                     headers={"Content-Type": "application/json", "Authorization": f"Bearer {schluessel}"})
         try:
             with urllib.request.urlopen(req, timeout=120) as r:
                 d = json.load(r)
             return sprachmodell.antworttext(d), d.get("usage") or {}
-        except sprachmodell.AntwortFormat:   # andere Form der Antwort: Wiederholen hilft nicht
+        except sprachmodell.AntwortFormat:   # Antwort ohne Text: Wiederholen hilft nicht
             raise
         except urllib.error.HTTPError as e:
+            if e.code in (400, 422) and not _ohne_denkaufwand:   # Angabe zum Denkaufwand nicht angenommen
+                _ohne_denkaufwand = True
+                print(f"  Anbieter nimmt reasoning_effort nicht an (HTTP {e.code}); weiter ohne diese Angabe", flush=True)
+                continue
             if e.code in KONTO_FEHLER[:3] or i == tries - 1:   # Schlüssel, Zahlung, Rechte: Wiederholen hilft nicht
                 raise
             time.sleep(2 ** (i + 2))
@@ -341,6 +363,16 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
             + [(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] not in have]
             + [(uri, p) for uri, p in sorted(papers.items())
                if texts[uri]["sha"] in have and not alt(uri) and erneut(uri)])[:MAX_JE_LAUF]
+    # Modellstand noch nicht freigegeben: nur die Stichprobe entsteht (etwas mehr Anfragen, weil ein Teil verworfen wird)
+    probe = MODELLSTAND not in MODELLSTAND_FREIGEGEBEN
+    neue = lambda: [r for r in have.values() if r.get("modellstand", 1) == MODELLSTAND and r["kurzfassung"]
+                    and r.get("fassung", 1) == FASSUNG]
+    if probe:
+        rest = STICHPROBE_MODELL - len(neue())
+        todo = todo[:min(MAX_JE_LAUF, -(-rest * 7 // 5))] if rest > 0 else []
+        if rest <= 0:
+            print(f"::notice::Kurzfassungen: Stichprobe zum Modellstand {MODELLSTAND} liegt vor ({len(neue())}); "
+                  "keine weiteren Anfragen bis zur Prüfung durch den Auftraggeber")
     tokens = [0, 0]
     lauf = {"gesendet": 0, "beantwortet": 0, "gescheitert": 0, "abbruch": None}
     try:
@@ -358,11 +390,17 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
           f"{len(ok)} vorhanden, {sum(1 for r in have.values() if r.get('verworfen'))} verworfen, "
           f"{sum(1 for r in have.values() if r.get('fehler'))} gescheitert → {base}")
     _stichprobe(base, ok, papers)
+    if MODELLSTAND > 1:
+        _stichprobe(base, neue(), papers, f"stichprobe_kurzfassungen_modell{MODELLSTAND}.tsv")
+    if lauf["abbruch"] and not lauf["beantwortet"] and probe:
+        # Entscheidung des Auftraggebers 22.11.2026: bis zur Freigabe des Modellstands kein roter Lauf
+        print(f"::warning::Kurzfassungen: Lauf ohne Ergebnis beendet ({lauf['abbruch']}); der Modellstand "
+              f"{MODELLSTAND} ist noch nicht freigegeben, daher kein Fehler")
+        return
     if lauf["abbruch"] and not lauf["beantwortet"]:
         # Kein einziges Ergebnis: der Schritt endet mit Fehler, damit der Ausfall auffällt (vom 13. bis 20.11.2026
         # blieb er acht Tage unbemerkt, weil der Lauf grün endete). Der Bestand ist gesichert.
-        rat = ("der Anbieter antwortet in einer anderen Form (vermutlich ein anderes Modell hinter dem Namen "
-               f"{MODELL}); über das Modell entscheidet der Auftraggeber" if lauf.get("form")
+        rat = ("der Anbieter antwortet ohne Text; Längengrenze (MAX_TOKENS) und Modell prüfen" if lauf.get("form")
                else "Konto und Schlüssel beim Anbieter prüfen")
         raise SystemExit(f"Kurzfassungen: Lauf ohne Ergebnis beendet ({lauf['abbruch']}); {rat}.")
     if lauf["abbruch"]:
@@ -386,14 +424,14 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
             lauf["gescheitert"] += 1
             vorher = have.get(sha) or {}
             konto = isinstance(e, urllib.error.HTTPError) and e.code in KONTO_FEHLER
-            form = isinstance(e, sprachmodell.AntwortFormat)   # betrifft jede Anfrage: Lauf sofort beenden
-            if konto or form or len(serie) + 1 >= SERIE:
+            form = isinstance(e, sprachmodell.AntwortFormat)   # Antwort ohne Text (etwa nur Denkschritte)
+            if konto or len(serie) + 1 >= SERIE:
                 for alt_sha, v in serie:   # die Serie zählt nicht als Fehler der einzelnen Dokumente
                     if v:
                         have[alt_sha] = v
                     else:
                         have.pop(alt_sha, None)
-                grund = f"HTTP {e.code}" if konto else str(e) if form else f"{SERIE} Anfragen in Folge gescheitert"
+                grund = f"HTTP {e.code}" if konto else f"{SERIE} Anfragen in Folge gescheitert" + (f": {e}" if form else "")
                 print(f"  Lauf beendet: {grund} ({type(e).__name__}); die Dokumente werden im nächsten Lauf angefragt", flush=True)
                 lauf["abbruch"] = grund
                 lauf["form"] = form
@@ -422,8 +460,10 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
             except Exception:   # Gegenlesen gescheitert: erste Fassung wird wie bisher geprüft
                 pass
         grund = pruefe(kurz, main, p.get("name") or "")
+        if not grund and MODELLSTAND > 1 and len(_woerter(kurz)) > MAX_WOERTER:
+            grund = f"zu lang (mehr als {MAX_WOERTER} Wörter)"
         have[sha] = {"sha": sha, "datei": uri, "drucksache": p["reference"],
-                     **_ergebnis(kurz, grund), "modell": MODELL, "fassung": FASSUNG,
+                     **_ergebnis(kurz, grund), "modell": MODELL, "modellstand": MODELLSTAND, "fassung": FASSUNG,
                      "gegengelesen": bool(gegenlesen), "beim_gegenlesen_geaendert": geaendert,
                      "erzeugt": datetime.now(timezone.utc).date().isoformat()}
         time.sleep(0.5)
@@ -431,8 +471,8 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
             _schreiben(base, have)
 
 
-def _stichprobe(base, ok, papers):
-    sample = base / f"stichprobe_kurzfassungen_v{FASSUNG}.tsv"   # Fassung 1: stichprobe_kurzfassungen.tsv
+def _stichprobe(base, ok, papers, name=None):
+    sample = base / (name or f"stichprobe_kurzfassungen_v{FASSUNG}.tsv")   # Fassung 1: stichprobe_kurzfassungen.tsv
     if not sample.exists() and len(ok) >= 30:
         titel = {p["reference"]: (p.get("name"), p.get("web")) for p in papers.values()}
         pick = sorted(random.Random(20261020).sample(ok, 30), key=lambda r: r["drucksache"])
@@ -447,11 +487,12 @@ def _stichprobe(base, ok, papers):
 
 
 def fuer_seite(verzeichnis=None):
-    """Drucksache → Kurzfassung für den Export, nur wenn freigegeben."""
+    """Drucksache → Kurzfassung für den Export, nur wenn freigegeben (auch der Stand des Modells, mit dem sie entstand)."""
     if not FREIGEGEBEN:
         return {}
     # Hausnummern auch hier prüfen: die übrigen Prüfungen laufen nur beim Erzeugen (mit Schlüssel). Geprüft wird der
     # geglättete Text, der erscheint („Straße **12**“ wird erst durch das Glätten zu „Straße 12“).
     return {r["drucksache"]: {"text": glaetten(r["kurzfassung"]), "modell": r["modell"], "erzeugt": r["erzeugt"]}
             for r in laden(verzeichnis).values()
-            if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG and not hausnummer(glaetten(r["kurzfassung"]))}
+            if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG and not hausnummer(glaetten(r["kurzfassung"]))
+            and r.get("modellstand", 1) in MODELLSTAND_FREIGEGEBEN}

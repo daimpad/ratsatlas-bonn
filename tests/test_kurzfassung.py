@@ -12,6 +12,12 @@ TEXT = ("Die Verwaltung schlägt vor, den Spielplatz an der Endenicher Straße n
 
 
 class KurzfassungTest(unittest.TestCase):
+    def setUp(self):
+        # Regelbetrieb: der Stand des Modells ist freigegeben (die Stichprobenphase prüft ModellstandTest)
+        p = mock.patch.object(kurzfassung, "MODELLSTAND_FREIGEGEBEN", (1, kurzfassung.MODELLSTAND))
+        p.start()
+        self.addCleanup(p.stop)
+
     def test_wortliche_uebernahme_wird_erkannt(self):
         self.assertIsNotNone(kurzfassung.uebernahme("Dazu sollen neue Geräte aufgestellt und die Wege erneuert werden.", TEXT))
         self.assertIsNone(kurzfassung.uebernahme("Der Spielplatz bekommt neue Geräte und bessere Wege.", TEXT))
@@ -156,40 +162,43 @@ class KurzfassungTest(unittest.TestCase):
             self.assertEqual(rows["260000"]["versuche"], kurzfassung.MAX_VERSUCHE)   # danach nicht mehr angefragt
             self.assertEqual(len(calls), 1 + kurzfassung.MAX_VERSUCHE)
 
-    def test_andere_form_der_antwort_beendet_den_lauf_sofort(self):
-        # 21.11.2026: Der Anbieter lieferte `content` als Liste von Teilen; das fiel nur als AttributeError auf. Solche
-        # Antworten werden nicht übernommen (anderes Modell als das geprüfte), der Lauf endet bei der ersten Anfrage
-        # mit einer Meldung, die Form und Modell nennt, aber nie den Text; kein Dokument wird gesperrt.
+    def test_antwort_als_liste_von_teilen(self):
+        # 21./22.11.2026: Der Anbieter liefert `content` als Liste von Teilen. Gelesen wird nur der Textteil, nie der
+        # Denkteil; ohne Textteil gilt die Anfrage als gescheitert, die Meldung nennt Form und Modell, nie den Text.
         from pipeline import sprachmodell
-        antwort = {"model": "anderes-modell", "choices": [{"finish_reason": "stop", "message": {"content": [
-            {"type": "thinking", "thinking": [{"type": "text", "text": "GEHEIMER GEDANKE"}]},
-            {"type": "text", "text": "GEHEIME ANTWORT"}]}}]}
-        self.assertEqual(sprachmodell.antworttext({"choices": [{"message": {"content": " Text \n"}}]}), "Text")
+        teile = [{"type": "thinking", "thinking": [{"type": "text", "text": "GEHEIMER GEDANKE"}]},
+                 {"type": "text", "text": " Die Antwort. "}]
+        antwort = lambda content, ende="stop": {"model": "modell-x", "choices": [{"finish_reason": ende,
+                                                                                 "message": {"content": content}}]}
+        self.assertEqual(sprachmodell.antworttext(antwort(" Text \n")), "Text")
+        self.assertEqual(sprachmodell.antworttext(antwort(teile)), "Die Antwort.")
         with self.assertRaises(sprachmodell.AntwortFormat) as f:
-            sprachmodell.antworttext(antwort)
-        self.assertIn("Liste mit Teilen text, thinking", str(f.exception))
-        self.assertIn("anderes-modell", str(f.exception))
+            sprachmodell.antworttext(antwort(teile[:1], "length"))
+        self.assertIn("Liste mit Teilen thinking", str(f.exception))
+        self.assertIn("modell-x", str(f.exception))
+        self.assertIn("length", str(f.exception))
         self.assertNotIn("GEHEIM", str(f.exception))
-        for leer in ({}, {"choices": []}, {"choices": [{"message": {"content": None}}]}):
+        for leer in ({}, {"choices": []}, antwort(None), antwort(""), antwort([])):
             self.assertRaises(sprachmodell.AntwortFormat, sprachmodell.antworttext, leer)
-        with tempfile.TemporaryDirectory() as d:
-            texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"
-            texte.write_text("\n".join(json.dumps({"uri": f"f{i}", "sha": f"s{i}", "text": TEXT}) for i in range(3)))
-            papers.write_text("\n".join(json.dumps({"reference": f"26000{i}", "name": f"Spielplatz Nr{i}",
-                                                    "paperType": "Antrag", "mainFile": {"id": f"f{i}"}}) for i in range(3)))
-            calls = []
-            def anfrage(titel, text, key):
-                calls.append(1)
-                return sprachmodell.antworttext(antwort), {}
-            out = Path(d) / "kurz"
-            with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}), \
-                    mock.patch.object(config, "TEXTE", texte), mock.patch.object(config, "PAPERS", papers):
-                with self.assertRaises(SystemExit) as e:
-                    kurzfassung.erzeugen(out, anfrage=anfrage)
-            self.assertEqual(len(calls), 1)
-            self.assertIn("in einer anderen Form", str(e.exception))
-            self.assertNotIn("Konto und Schlüssel", str(e.exception))
-            self.assertEqual(kurzfassung.laden(out), {})   # nichts gesperrt, nichts als gescheitert gezählt
+
+    def test_anfrage_mit_denkaufwand_und_rueckfall(self):
+        # Denkschritte zählen zur Längengrenze: höhere Grenze, kleiner Denkaufwand; nimmt der Anbieter die Angabe
+        # nicht an (HTTP 400 oder 422), wird ohne sie angefragt und der Lauf merkt sich das
+        import io
+        import urllib.error
+        gesendet = []
+        def urlopen(req, timeout=0):
+            body = json.loads(req.data)
+            gesendet.append(body)
+            if "reasoning_effort" in body:
+                raise urllib.error.HTTPError(req.full_url, 422, "Unprocessable Entity", {}, io.BytesIO(b""))
+            return io.BytesIO(json.dumps({"choices": [{"message": {"content": "Kurz."}}], "usage": {"completion_tokens": 7}}).encode())
+        with mock.patch.object(kurzfassung, "_ohne_denkaufwand", False), \
+                mock.patch.object(kurzfassung.urllib.request, "urlopen", urlopen), mock.patch("builtins.print"):
+            self.assertEqual(kurzfassung._anfrage("Titel", "Text", "k"), ("Kurz.", {"completion_tokens": 7}))
+            self.assertEqual(kurzfassung._anfrage("Titel", "Text", "k")[0], "Kurz.")
+        self.assertEqual([b.get("reasoning_effort") for b in gesendet], [kurzfassung.DENKAUFWAND, None, None])
+        self.assertEqual({b["max_tokens"] for b in gesendet}, {kurzfassung.MAX_TOKENS})
 
     def test_kontoausfall_beendet_den_lauf_ohne_dokumente_zu_sperren(self):
         # Code-Prüfung 24.10.2026: 401 oder eine Serie von Fehlern zählte als Fehler jedes Dokuments; nach drei Tagen
@@ -290,6 +299,73 @@ class KurzfassungTest(unittest.TestCase):
                 kurzfassung.erzeugen(out, anfrage=anfrage)
             self.assertEqual(len(calls), 4)
             self.assertTrue(all(r["fassung"] == kurzfassung.FASSUNG for r in kurzfassung.laden(out).values()))
+
+
+
+class ModellstandTest(unittest.TestCase):
+    """Stichprobenphase (Entscheidung des Auftraggebers 22.11.2026): Kurzfassungen eines noch nicht freigegebenen
+    Modellstands entstehen nur für die Stichprobe und erscheinen nicht auf der Seite."""
+
+    def _lauf(self, d, n, anfrage, bestand=()):
+        texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"
+        texte.write_text("\n".join(json.dumps({"uri": f"f{i}", "sha": f"s{i}", "text": TEXT}) for i in range(n)))
+        papers.write_text("\n".join(json.dumps({"reference": f"26{i:04d}", "name": f"Spielplatz Nr{i}",
+                                                "paperType": "Antrag", "mainFile": {"id": f"f{i}"}}) for i in range(n)))
+        out = Path(d) / "kurz"
+        if bestand:
+            out.mkdir(exist_ok=True)
+            (out / "kurzfassungen.jsonl").write_text("\n".join(json.dumps(r) for r in bestand) + "\n")
+        with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}), mock.patch.object(kurzfassung.time, "sleep"), \
+                mock.patch.object(config, "TEXTE", texte), mock.patch.object(config, "PAPERS", papers), \
+                mock.patch.object(kurzfassung, "MAX_JE_LAUF", 500), mock.patch("builtins.print") as druck:
+            kurzfassung.erzeugen(out, anfrage=anfrage)
+        return out, " ".join(str(c.args[0]) for c in druck.call_args_list if c.args)
+
+    GUT = "Der Spielplatz in Endenich soll neue Geräte und bessere Wege bekommen, bezahlt von der Stadt."
+
+    def test_nur_die_stichprobe_entsteht_und_erscheint_nicht(self):
+        self.assertNotIn(kurzfassung.MODELLSTAND, kurzfassung.MODELLSTAND_FREIGEGEBEN)   # Freigabe ist eine Entscheidung
+        calls = []
+        def anfrage(titel, text, key):
+            calls.append(titel)
+            return self.GUT, {"completion_tokens": 900}
+        alt = {"sha": "alt", "datei": "weg", "drucksache": "250001", "kurzfassung": self.GUT, "verworfen": None,
+               "entwurf": None, "modell": "mistral-large-latest", "fassung": kurzfassung.FASSUNG, "erzeugt": "2026-11-01"}
+        with tempfile.TemporaryDirectory() as d:
+            out, _ = self._lauf(d, 100, anfrage, [alt])
+            erste = len(calls)
+            self.assertEqual(erste, 42)   # 30 für die Stichprobe und ein Zuschlag für Verworfene, nicht alle 100
+            rows = kurzfassung.laden(out)
+            self.assertEqual({r.get("modellstand") for r in rows.values() if r["sha"] != "alt"}, {kurzfassung.MODELLSTAND})
+            self.assertEqual(set(kurzfassung.fuer_seite(out)), {"250001"})   # nur der Bestand des geprüften Modells
+            probe = out / f"stichprobe_kurzfassungen_modell{kurzfassung.MODELLSTAND}.tsv"
+            self.assertEqual(len(probe.read_text(encoding="utf-8").splitlines()), 31)
+            _, text = self._lauf(d, 100, anfrage, list(rows.values()))
+            self.assertEqual(len(calls), erste)   # Stichprobe liegt vor: keine weiteren Anfragen
+            self.assertIn("keine weiteren Anfragen bis zur Prüfung", text)
+            with mock.patch.object(kurzfassung, "MODELLSTAND_FREIGEGEBEN", (1, kurzfassung.MODELLSTAND)):
+                self.assertEqual(len(kurzfassung.fuer_seite(out)), 1 + erste)   # nach der Freigabe erscheinen sie
+
+    def test_lauf_ohne_antwort_ist_nur_ein_hinweis(self):
+        from pipeline import sprachmodell
+        def anfrage(titel, text, key):
+            raise sprachmodell.AntwortFormat("Antwort ohne Text (content: Liste mit Teilen thinking)")
+        with tempfile.TemporaryDirectory() as d:
+            out, text = self._lauf(d, 20, anfrage)   # kein SystemExit
+            self.assertIn("::warning::Kurzfassungen: Lauf ohne Ergebnis beendet", text)
+            self.assertIn("Liste mit Teilen thinking", text)
+            self.assertEqual(kurzfassung.laden(out), {})   # die Serie sperrt kein Dokument
+            with mock.patch.object(kurzfassung, "MODELLSTAND_FREIGEGEBEN", (1, kurzfassung.MODELLSTAND)):
+                with self.assertRaises(SystemExit) as e:   # im Regelbetrieb fällt derselbe Ausfall als Fehler auf
+                    self._lauf(d, 20, anfrage)
+            self.assertIn("ohne Text", str(e.exception))
+
+    def test_zu_lange_antwort_wird_verworfen(self):
+        lang = " ".join(["Der Spielplatz in Endenich bekommt neue Geräte."] * 20)
+        with tempfile.TemporaryDirectory() as d:
+            out, _ = self._lauf(d, 1, lambda t, x, k: (lang, {}))
+            self.assertEqual(next(iter(kurzfassung.laden(out).values()))["verworfen"],
+                             f"zu lang (mehr als {kurzfassung.MAX_WOERTER} Wörter)")
 
 
 if __name__ == "__main__":
