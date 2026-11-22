@@ -173,11 +173,15 @@ class KurzfassungTest(unittest.TestCase):
         self.assertEqual(sprachmodell.antworttext(antwort(" Text \n")), "Text")
         self.assertEqual(sprachmodell.antworttext(antwort(teile)), "Die Antwort.")
         with self.assertRaises(sprachmodell.AntwortFormat) as f:
-            sprachmodell.antworttext(antwort(teile[:1], "length"))
+            sprachmodell.antworttext(antwort(teile[:1]))
         self.assertIn("Liste mit Teilen thinking", str(f.exception))
         self.assertIn("modell-x", str(f.exception))
-        self.assertIn("length", str(f.exception))
         self.assertNotIn("GEHEIM", str(f.exception))
+        for content in (teile[:1], teile, "Ein abgeschnittener Sa"):   # an der Längengrenze: nie ein vollständiger Text
+            with self.assertRaises(sprachmodell.AntwortFormat) as f:
+                sprachmodell.antworttext(antwort(content, "length"))
+            self.assertIn("Längengrenze", str(f.exception))
+            self.assertNotIn("GEHEIM", str(f.exception))
         for leer in ({}, {"choices": []}, antwort(None), antwort(""), antwort([])):
             self.assertRaises(sprachmodell.AntwortFormat, sprachmodell.antworttext, leer)
 
@@ -306,7 +310,7 @@ class ModellstandTest(unittest.TestCase):
     """Stichprobenphase (Entscheidung des Auftraggebers 22.11.2026): Kurzfassungen eines noch nicht freigegebenen
     Modellstands entstehen nur für die Stichprobe und erscheinen nicht auf der Seite."""
 
-    def _lauf(self, d, n, anfrage, bestand=()):
+    def _lauf(self, d, n, anfrage, bestand=(), env=None):
         texte, papers = Path(d) / "texte.jsonl", Path(d) / "papers.jsonl"
         texte.write_text("\n".join(json.dumps({"uri": f"f{i}", "sha": f"s{i}", "text": TEXT}) for i in range(n)))
         papers.write_text("\n".join(json.dumps({"reference": f"26{i:04d}", "name": f"Spielplatz Nr{i}",
@@ -315,7 +319,8 @@ class ModellstandTest(unittest.TestCase):
         if bestand:
             out.mkdir(exist_ok=True)
             (out / "kurzfassungen.jsonl").write_text("\n".join(json.dumps(r) for r in bestand) + "\n")
-        with mock.patch.dict(os.environ, {"MISTRAL_API_KEY": "test"}), mock.patch.object(kurzfassung.time, "sleep"), \
+        umgebung = {k: v for k, v in os.environ.items() if k != "ANTHROPIC_API_KEY"} | {"MISTRAL_API_KEY": "test"} | (env or {})
+        with mock.patch.dict(os.environ, umgebung, clear=True), mock.patch.object(kurzfassung.time, "sleep"), \
                 mock.patch.object(config, "TEXTE", texte), mock.patch.object(config, "PAPERS", papers), \
                 mock.patch.object(kurzfassung, "MAX_JE_LAUF", 500), mock.patch("builtins.print") as druck:
             kurzfassung.erzeugen(out, anfrage=anfrage)
@@ -352,13 +357,81 @@ class ModellstandTest(unittest.TestCase):
             raise sprachmodell.AntwortFormat("Antwort ohne Text (content: Liste mit Teilen thinking)")
         with tempfile.TemporaryDirectory() as d:
             out, text = self._lauf(d, 20, anfrage)   # kein SystemExit
-            self.assertIn("::warning::Kurzfassungen: Lauf ohne Ergebnis beendet", text)
+            self.assertIn("::warning::Kurzfassungen: Lauf mit mistral-large-latest ohne Ergebnis beendet", text)
+            self.assertIn("ANTHROPIC_API_KEY fehlt", text)   # ohne Schlüssel kein Ausweichweg
             self.assertIn("Liste mit Teilen thinking", text)
             self.assertEqual(kurzfassung.laden(out), {})   # die Serie sperrt kein Dokument
             with mock.patch.object(kurzfassung, "MODELLSTAND_FREIGEGEBEN", (1, kurzfassung.MODELLSTAND)):
                 with self.assertRaises(SystemExit) as e:   # im Regelbetrieb fällt derselbe Ausfall als Fehler auf
                     self._lauf(d, 20, anfrage)
             self.assertIn("ohne Text", str(e.exception))
+
+    def test_claude_springt_ein_wenn_mistral_nicht_antwortet(self):
+        # Entscheidungen des Auftraggebers 22.11.2026: Claude Sonnet 5.5 nur, wenn ein Lauf mit Mistral keine Antwort
+        # liefert; auch dessen Kurzfassungen (Modellstand 3) erscheinen erst nach Prüfung der Stichprobe
+        from pipeline import sprachmodell
+        def mistral(titel, text, key):
+            raise sprachmodell.AntwortFormat("Antwort ohne Text (content: Liste mit Teilen thinking)")
+        claude = []
+        def anfrage_claude(titel, text, key):
+            claude.append(key)
+            return self.GUT, {"prompt_tokens": 4000, "completion_tokens": 700}
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(kurzfassung, "_anfrage_claude", anfrage_claude):
+            out, text = self._lauf(d, 100, mistral, env={"ANTHROPIC_API_KEY": "sk-test"})
+            self.assertEqual(len(claude), 42)
+            self.assertEqual(set(claude), {"sk-test"})
+            rows = list(kurzfassung.laden(out).values())
+            self.assertEqual({(r["modell"], r["modellstand"]) for r in rows}, {("claude-sonnet-5-5", 3)})
+            self.assertEqual(kurzfassung.fuer_seite(out), {})   # nicht freigegeben: nichts auf der Seite
+            self.assertTrue((out / "stichprobe_kurzfassungen_modell3.tsv").exists())
+            self.assertFalse((out / "stichprobe_kurzfassungen_modell2.tsv").exists())
+            self.assertIn("Ausweichweg mit claude-sonnet-5-5", text)
+            self.assertIn("je Antwort im Mittel 700, höchstens 700 Ausgabe-Tokens bei einer Grenze von 16000", text)
+            protokoll = (out / "laeufe.tsv").read_text(encoding="utf-8")
+            self.assertIn("claude-sonnet-5-5", protokoll)
+            # nächster Lauf: Mistral wird wieder versucht, Claude nicht mehr (Stichprobe liegt vor)
+            _, text = self._lauf(d, 100, mistral, rows, env={"ANTHROPIC_API_KEY": "sk-test"})
+            self.assertEqual(len(claude), 42)
+            self.assertIn("Stichprobe zum Modellstand 3 (claude-sonnet-5-5) liegt vor", text)
+
+    def test_claude_bleibt_unbenutzt_wenn_mistral_antwortet(self):
+        def anfrage_claude(titel, text, key):
+            raise AssertionError("Claude darf nicht angefragt werden")
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(kurzfassung, "_anfrage_claude", anfrage_claude):
+            out, _ = self._lauf(d, 50, lambda t, x, k: (self.GUT, {"completion_tokens": 900}),
+                                env={"ANTHROPIC_API_KEY": "sk-test"})
+            self.assertEqual({r["modellstand"] for r in kurzfassung.laden(out).values()}, {2})
+
+    def test_anfrage_an_claude(self):
+        # Über das SDK: nur Textteile zählen, Denkschritte nie; abgelehnt, leer oder abgeschnitten gilt als gescheitert;
+        # keine Angabe zur Temperatur (wird von den aktuellen Modellen abgelehnt)
+        from types import SimpleNamespace as N
+        from pipeline import sprachmodell
+        antworten, gesendet = [], []
+        class Messages:
+            def create(self, **kw):
+                gesendet.append(kw)
+                return antworten.pop(0)
+        usage = N(input_tokens=4100, output_tokens=650)
+        teile = [N(type="thinking", thinking="GEHEIMER GEDANKE"), N(type="text", text=" Die Kurzfassung. ")]
+        antworten += [N(content=teile, stop_reason="end_turn", model="claude-sonnet-5-5", usage=usage),
+                      N(content=teile, stop_reason="refusal", model="claude-sonnet-5-5", usage=usage),
+                      N(content=teile, stop_reason="max_tokens", model="claude-sonnet-5-5", usage=usage),
+                      N(content=teile[:1], stop_reason="end_turn", model="claude-sonnet-5-5", usage=usage)]
+        with mock.patch.object(kurzfassung, "_claude", N(messages=Messages())):
+            self.assertEqual(kurzfassung._anfrage_claude("Titel", "Text", "k"),
+                             ("Die Kurzfassung.", {"prompt_tokens": 4100, "completion_tokens": 650}))
+            for _ in range(3):
+                with self.assertRaises(sprachmodell.AntwortFormat) as f:
+                    kurzfassung._anfrage_claude("Titel", "Text", "k")
+                self.assertNotIn("GEHEIM", str(f.exception))
+        kw = gesendet[0]
+        self.assertEqual((kw["model"], kw["max_tokens"], kw["output_config"]),
+                         ("claude-sonnet-5-5", kurzfassung.MAX_TOKENS, {"effort": "medium"}))
+        self.assertEqual(kw["system"], kurzfassung.ANWEISUNG)
+        self.assertNotIn("temperature", kw)
+        self.assertEqual(kurzfassung._status(N(status_code=401)), 401)   # Fehler des SDK: Kontofehler beenden den Lauf
+        self.assertIsNone(kurzfassung._status(TimeoutError()))
 
     def test_zu_lange_antwort_wird_verworfen(self):
         lang = " ".join(["Der Spielplatz in Endenich bekommt neue Geräte."] * 20)

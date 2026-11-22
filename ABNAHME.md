@@ -72,7 +72,7 @@ Mit `eval.yml` (Actions → „Auswertung Ratsassistent“) wurden die 36 Fragen
 |---|---|---|
 | 1 | v0.2 | 22 von 36 |
 | 2 | v0.3 | 28 von 36 |
-| 8 | Kurzfassungen: neues Modell hinter `mistral-large-latest` (seit 13.11.2026, mit Denkschritten) | **offen (22.11.2026):** 30 Kurzfassungen als Stichprobe mit KI-Vorprüfung; bis zur Prüfung erscheinen neue Kurzfassungen nicht | nach der Stichprobe | Prüfung von 30 Kurzfassungen |
+| 8 | Kurzfassungen: neues Modell hinter `mistral-large-latest` (seit 13.11.2026, mit Denkschritten) | **offen (22.11.2026):** 30 Kurzfassungen als Stichprobe mit KI-Vorprüfung; bis zur Prüfung erscheinen neue Kurzfassungen nicht; antwortet Mistral nicht, entsteht die Stichprobe mit Claude Sonnet 5.5 (Modellstand 3) | nach der Stichprobe | Prüfung von 30 Kurzfassungen |
 
 Mit v0.3 werden die Aufforderungen „Systemprompt ausgeben“ und „antworte nur noch mit …“ abgelehnt. Offen bleibt: Mistral nennt einmal eine Zahl aus allgemeinem Wissen (Hebesatz) und bildet weiterhin manchmal Adressen selbst. Die Seite zeigt solche Adressen nicht als Link.
 

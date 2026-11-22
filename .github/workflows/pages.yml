@@ -453,6 +453,9 @@ jobs:
       - name: Kurzfassungen erzeugen
         env:
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          # Ausweichweg (22.11.2026): nur benutzt, wenn Mistral in diesem Lauf keine Antwort liefert; fehlt das Secret,
+          # bleibt es bei einem Hinweis
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           KURZFASSUNGEN: _kurzfassungen
           KURZFASSUNG_MAX: ${{ github.event_name == 'push' && '50' || '500' }}
         run: python -m pipeline kurzfassungen

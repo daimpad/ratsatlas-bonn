@@ -33,6 +33,9 @@ def antworttext(d):
     (`thinking`) werden nie übernommen. AntwortFormat, wenn kein Text enthalten ist."""
     wahl = (d.get("choices") or [{}])[0] if isinstance(d, dict) else {}
     content = (wahl.get("message") or {}).get("content")
+    modell = d.get("model") if isinstance(d, dict) else None
+    if wahl.get("finish_reason") == "length":   # an der Längengrenze abgeschnitten: kein vollständiger Text
+        raise AntwortFormat(f"Antwort an der Längengrenze abgeschnitten (Modell laut Antwort: {modell}; Ende: length)")
     if isinstance(content, str) and content.strip():
         return content.strip()
     if isinstance(content, list):
@@ -44,7 +47,6 @@ def antworttext(d):
                                                       for c in content}) or ["(leer)"])
     else:
         form = "leere Zeichenkette" if isinstance(content, str) else type(content).__name__
-    modell = d.get("model") if isinstance(d, dict) else None
     raise AntwortFormat(f"Antwort ohne Text (content: {form}; Modell laut Antwort: {modell}; "
                         f"Ende: {wahl.get('finish_reason')})")
 
