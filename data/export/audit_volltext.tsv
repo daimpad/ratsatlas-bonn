@@ -13753,7 +13753,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253107	kein Ort						
 253108	kein Ort						
 253108-02 ST	kein Ort						
-253114	kein Ort						
 253115	kein Ort						
 253116	verortet	Hauptteil	volltext_ortsteil_name	Dransdorf	Dransdorf	niedrig	1
 253116	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
@@ -13784,7 +13783,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253153	Titel ohne gemeinsamen Ort, nicht verortet						
 253160	kein Ort						
 253160-01 ST	kein Ort						
-253161	kein Ort						
 253162	Titel ohne gemeinsamen Ort, nicht verortet						
 253165	Liste (18 Ortsteile), nicht verortet	Hauptteil					
 253165-01 AA	verortet	Hauptteil	volltext_strasse+kreuzung	Kolpingstraße	Endenich	mittel	2
