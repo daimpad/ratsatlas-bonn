@@ -11,7 +11,7 @@ Dieser Branch wird täglich vom Workflow `baustellen.yml` im Repository [daimpad
 | Datei | Inhalt |
 |---|---|
 | `baustellen.json` | Zustand je Baustelle (`baustelle_id`): Feeds, erstes und letztes Auftreten, aktiv bzw. entfallen, aktuelle Angaben, Änderungen mit Datum |
-| `protokoll.tsv` | Ereignisse je Abruf: neu, geaendert (Feld, alt, neu), entfallen, wieder_da, abruf_fehlgeschlagen |
+| `protokoll.tsv` | Ereignisse je Abruf: neu, geaendert (Feld, alt, neu), entfallen, wieder_da, abruf_fehlgeschlagen, abruf_leer (alle Feeds leer bei gemeldeten Baustellen: nichts gilt als entfallen) |
 | `snapshots/JJJJ/MM/TT/thema_NNNNN.json` | Momentaufnahme eines Feeds, nur wenn sich der Inhalt gegenüber dem letzten Abruf geändert hat |
 | `STAND.json` | letzter Abruf je Feed: Zeitpunkt, Versuche, Anzahl, Prüfsumme |
 
