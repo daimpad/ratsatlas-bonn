@@ -55,12 +55,24 @@ MODELLSTAND = 2
 MODELLSTAND_FREIGEGEBEN = (1,)
 STICHPROBE_MODELL = 30
 # Denkschritte zählen zur Längengrenze der Antwort; die Kurzfassung selbst bleibt bei höchstens 60 Wörtern (Anweisung).
-# Der Aufwand für Denkschritte wird klein gehalten; nimmt der Anbieter die Angabe nicht an (HTTP 400 oder 422), wird
-# ohne sie angefragt.
-MAX_TOKENS = 3000
+# Die Grenze ist eine Obergrenze, bezahlt werden die tatsächlich erzeugten Tokens; der Lauf nennt Mittel und Höchstwert
+# je Antwort. 3.000 waren dem Auftraggeber zu knapp (22.11.2026), 16.000 lassen auch langen Denkschritten Raum. Der
+# Aufwand für Denkschritte wird klein gehalten; nimmt der Anbieter die Angabe nicht an (HTTP 400 oder 422), wird ohne
+# sie angefragt.
+MAX_TOKENS = 16000
+ZEITLIMIT = 300    # Sekunden je Anfrage; eine Anfrage, die so lange braucht, wird nicht wiederholt
 DENKAUFWAND = "low"
 MAX_WOERTER = 90   # ab Modellstand 2: die frühere Grenze von 220 Tokens begrenzte auch die Länge der Kurzfassung
 _ohne_denkaufwand = False
+# Ausweichweg (Entscheidungen des Auftraggebers 22.11.2026): Liefert ein Lauf mit Mistral keine einzige Antwort, erzeugt
+# derselbe Lauf die Stichprobe mit Claude Sonnet 5.5 (Modellstand 3, Secret ANTHROPIC_API_KEY). Antwortet Mistral,
+# bleibt Claude unbenutzt. Auch dieser Stand erscheint erst nach Prüfung der Stichprobe und Freigabe. Ein Ausweichmodell
+# bei abgelehnten Anfragen ist bewusst nicht eingeschaltet: Die Freigabe gilt je Modell, eine Kurzfassung eines dritten
+# Modells unter diesem Namen wäre nicht geprüft; eine abgelehnte Anfrage gilt als gescheitert.
+AUSWEICHSTAND = 3
+MODELL_CLAUDE = os.environ.get("KURZFASSUNG_MODELL_CLAUDE", "claude-sonnet-5-5")
+AUFWAND_CLAUDE = "medium"   # Denkaufwand; bei Claude Sonnet 5.5 ausdrücklich zu setzen (Voreinstellung „high“)
+_claude = None
 VERZEICHNIS = Path(os.environ.get("KURZFASSUNGEN", config.ROOT / "_kurzfassungen"))
 # Absender und Gremien, die in einer Kurzfassung nur stehen dürfen, wenn Titel oder Text sie nennen (KI-Vorprüfung v4:
 # „Die Grünen beantragen“ und „dem Rat vorgelegt“ ohne Beleg)
@@ -269,10 +281,10 @@ def _anfrage(titel, text, schluessel, tries=4, system=ANWEISUNG, zusatz=""):
         req = urllib.request.Request(API, data=json.dumps(body).encode(),
                                      headers={"Content-Type": "application/json", "Authorization": f"Bearer {schluessel}"})
         try:
-            with urllib.request.urlopen(req, timeout=120) as r:
+            with urllib.request.urlopen(req, timeout=ZEITLIMIT) as r:
                 d = json.load(r)
             return sprachmodell.antworttext(d), d.get("usage") or {}
-        except sprachmodell.AntwortFormat:   # Antwort ohne Text: Wiederholen hilft nicht
+        except (sprachmodell.AntwortFormat, TimeoutError):   # ohne Text oder zu langsam: Wiederholen hilft nicht
             raise
         except urllib.error.HTTPError as e:
             if e.code in (400, 422) and not _ohne_denkaufwand:   # Angabe zum Denkaufwand nicht angenommen
@@ -286,6 +298,29 @@ def _anfrage(titel, text, schluessel, tries=4, system=ANWEISUNG, zusatz=""):
             if i == tries - 1:
                 raise
             time.sleep(2 ** (i + 2))
+
+
+def _anfrage_claude(titel, text, schluessel, system=ANWEISUNG):
+    """Kurzfassung mit Claude über das SDK von Anthropic (Ausweichweg). Der Schlüssel kommt aus ANTHROPIC_API_KEY;
+    das SDK wiederholt Netzfehler, 429 und 5xx selbst. Denkschritte gehören nicht zur Antwort: gelesen werden nur die
+    Textteile. Eine abgelehnte, leere oder an der Längengrenze abgeschnittene Antwort gilt als gescheitert."""
+    global _claude
+    if _claude is None:
+        import anthropic   # nur für diesen Weg nötig
+        _claude = anthropic.Anthropic(timeout=float(ZEITLIMIT), max_retries=2)
+    r = _claude.messages.create(
+        model=MODELL_CLAUDE, max_tokens=MAX_TOKENS, system=system, output_config={"effort": AUFWAND_CLAUDE},
+        messages=[{"role": "user", "content": f"Titel: {titel}\n\nText der Vorlage:\n{text}"}])
+    kurz = "".join(b.text for b in r.content if b.type == "text").strip()
+    if r.stop_reason != "end_turn" or not kurz:
+        raise sprachmodell.AntwortFormat(f"Antwort ohne verwertbaren Text (Modell laut Antwort: {r.model}; "
+                                         f"Ende: {r.stop_reason})")
+    return kurz, {"prompt_tokens": r.usage.input_tokens, "completion_tokens": r.usage.output_tokens}
+
+
+def _status(e):
+    """HTTP-Status eines Fehlers der Anfrage (urllib oder SDK von Anthropic), sonst None."""
+    return e.code if isinstance(e, urllib.error.HTTPError) else getattr(e, "status_code", None)
 
 
 def _gegenlesen(titel, text, kurz, schluessel):
@@ -359,43 +394,60 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
     alt = lambda uri: have[texts[uri]["sha"]].get("fassung", 1) < FASSUNG
     erneut = lambda uri: (have[texts[uri]["sha"]].get("fehler")
                           and have[texts[uri]["sha"]].get("versuche", 1) < MAX_VERSUCHE)
-    todo = ([(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] in have and alt(uri)]
-            + [(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] not in have]
-            + [(uri, p) for uri, p in sorted(papers.items())
-               if texts[uri]["sha"] in have and not alt(uri) and erneut(uri)])[:MAX_JE_LAUF]
-    # Modellstand noch nicht freigegeben: nur die Stichprobe entsteht (etwas mehr Anfragen, weil ein Teil verworfen wird)
-    probe = MODELLSTAND not in MODELLSTAND_FREIGEGEBEN
-    neue = lambda: [r for r in have.values() if r.get("modellstand", 1) == MODELLSTAND and r["kurzfassung"]
-                    and r.get("fassung", 1) == FASSUNG]
-    if probe:
-        rest = STICHPROBE_MODELL - len(neue())
-        todo = todo[:min(MAX_JE_LAUF, -(-rest * 7 // 5))] if rest > 0 else []
-        if rest <= 0:
-            print(f"::notice::Kurzfassungen: Stichprobe zum Modellstand {MODELLSTAND} liegt vor ({len(neue())}); "
-                  "keine weiteren Anfragen bis zur Prüfung durch den Auftraggeber")
-    tokens = [0, 0]
-    lauf = {"gesendet": 0, "beantwortet": 0, "gescheitert": 0, "abbruch": None}
-    try:
-        _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tokens, lauf)
-    finally:   # bricht der Lauf ab (Zeitgrenze, Fehler), bleibt das Erzeugte erhalten
-        _schreiben(base, have)
-    ok = [r for r in have.values() if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG]
-    # Protokoll: tatsächlich gesendete Anfragen; Fehler = gescheiterte Anfragen und verworfene Kurzfassungen (Prüfung
-    # November 2026, Nr. 3: bisher stand dort die Zahl der geplanten Anfragen, auch wenn keine beantwortet wurde)
-    verworfen = sum(1 for uri, p in todo if have.get(texts[uri]["sha"], {}).get("verworfen"))
-    sprachmodell.protokoll(base, "kurzfassungen", MODELL, lauf["gesendet"], {"ein": tokens[0], "aus": tokens[1]},
-                           lauf["gescheitert"] + verworfen)
-    print(f"Kurzfassungen: {len(todo)} geplant, {lauf['gesendet']} gesendet, {lauf['beantwortet']} beantwortet "
-          f"({tokens[0]} Eingabe-, {tokens[1]} Ausgabe-Tokens), "
-          f"{len(ok)} vorhanden, {sum(1 for r in have.values() if r.get('verworfen'))} verworfen, "
-          f"{sum(1 for r in have.values() if r.get('fehler'))} gescheitert → {base}")
-    _stichprobe(base, ok, papers)
-    if MODELLSTAND > 1:
-        _stichprobe(base, neue(), papers, f"stichprobe_kurzfassungen_modell{MODELLSTAND}.tsv")
+    def lauf_mit(stand, modell, key, anfrage):
+        """Ein Durchgang mit einem Modellstand; gibt (Zähler des Laufs, Stichprobenphase?) zurück."""
+        todo = ([(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] in have and alt(uri)]
+                + [(uri, p) for uri, p in sorted(papers.items()) if texts[uri]["sha"] not in have]
+                + [(uri, p) for uri, p in sorted(papers.items())
+                   if texts[uri]["sha"] in have and not alt(uri) and erneut(uri)])[:MAX_JE_LAUF]
+        # Modellstand noch nicht freigegeben: nur die Stichprobe entsteht (etwas mehr Anfragen, weil ein Teil verworfen wird)
+        probe = stand not in MODELLSTAND_FREIGEGEBEN
+        neue = lambda: [r for r in have.values() if r.get("modellstand", 1) == stand and r["kurzfassung"]
+                        and r.get("fassung", 1) == FASSUNG]
+        if probe:
+            rest = STICHPROBE_MODELL - len(neue())
+            todo = todo[:min(MAX_JE_LAUF, -(-rest * 7 // 5))] if rest > 0 else []
+            if rest <= 0:
+                print(f"::notice::Kurzfassungen: Stichprobe zum Modellstand {stand} ({modell}) liegt vor ({len(neue())}); "
+                      "keine weiteren Anfragen bis zur Prüfung durch den Auftraggeber")
+        tokens = [0, 0]
+        lauf = {"gesendet": 0, "beantwortet": 0, "gescheitert": 0, "abbruch": None, "max_aus": 0}
+        try:
+            _erzeugen_alle(todo, texts, have, base, key, anfrage, gegenlesen, tokens, lauf, stand, modell)
+        finally:   # bricht der Lauf ab (Zeitgrenze, Fehler), bleibt das Erzeugte erhalten
+            _schreiben(base, have)
+        ok = [r for r in have.values() if r["kurzfassung"] and r.get("fassung", 1) == FASSUNG]
+        # Protokoll: tatsächlich gesendete Anfragen; Fehler = gescheiterte Anfragen und verworfene Kurzfassungen (Prüfung
+        # November 2026, Nr. 3: bisher stand dort die Zahl der geplanten Anfragen, auch wenn keine beantwortet wurde)
+        verworfen = sum(1 for uri, p in todo if have.get(texts[uri]["sha"], {}).get("verworfen"))
+        sprachmodell.protokoll(base, "kurzfassungen", modell, lauf["gesendet"], {"ein": tokens[0], "aus": tokens[1]},
+                               lauf["gescheitert"] + verworfen)
+        je = f"; je Antwort im Mittel {tokens[1] // lauf['beantwortet']}, höchstens {lauf['max_aus']} Ausgabe-Tokens " \
+             f"bei einer Grenze von {MAX_TOKENS}" if lauf["beantwortet"] else ""
+        print(f"Kurzfassungen ({modell}): {len(todo)} geplant, {lauf['gesendet']} gesendet, {lauf['beantwortet']} "
+              f"beantwortet ({tokens[0]} Eingabe-, {tokens[1]} Ausgabe-Tokens{je}), "
+              f"{len(ok)} vorhanden, {sum(1 for r in have.values() if r.get('verworfen'))} verworfen, "
+              f"{sum(1 for r in have.values() if r.get('fehler'))} gescheitert → {base}")
+        _stichprobe(base, ok, papers)
+        if stand > 1:
+            _stichprobe(base, neue(), papers, f"stichprobe_kurzfassungen_modell{stand}.tsv")
+        return lauf, probe
+
+    lauf, probe = lauf_mit(MODELLSTAND, MODELL, schluessel, anfrage)
     if lauf["abbruch"] and not lauf["beantwortet"] and probe:
         # Entscheidung des Auftraggebers 22.11.2026: bis zur Freigabe des Modellstands kein roter Lauf
-        print(f"::warning::Kurzfassungen: Lauf ohne Ergebnis beendet ({lauf['abbruch']}); der Modellstand "
+        print(f"::warning::Kurzfassungen: Lauf mit {MODELL} ohne Ergebnis beendet ({lauf['abbruch']}); der Modellstand "
               f"{MODELLSTAND} ist noch nicht freigegeben, daher kein Fehler")
+        if AUSWEICHSTAND and AUSWEICHSTAND != MODELLSTAND and AUSWEICHSTAND not in MODELLSTAND_FREIGEGEBEN:
+            key = os.environ.get("ANTHROPIC_API_KEY")
+            if not key:
+                print("::notice::Kurzfassungen: Ausweichweg über Claude nicht möglich – ANTHROPIC_API_KEY fehlt")
+                return
+            print(f"Kurzfassungen: Ausweichweg mit {MODELL_CLAUDE} (Modellstand {AUSWEICHSTAND})")
+            zweiter, _ = lauf_mit(AUSWEICHSTAND, MODELL_CLAUDE, key, _anfrage_claude)
+            if zweiter["abbruch"] and not zweiter["beantwortet"]:
+                print(f"::warning::Kurzfassungen: auch der Lauf mit {MODELL_CLAUDE} blieb ohne Ergebnis "
+                      f"({zweiter['abbruch']})")
         return
     if lauf["abbruch"] and not lauf["beantwortet"]:
         # Kein einziges Ergebnis: der Schritt endet mit Fehler, damit der Ausfall auffällt (vom 13. bis 20.11.2026
@@ -408,7 +460,9 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
               f"{lauf['beantwortet']} beantworteten Anfragen")
 
 
-def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tokens, lauf=None):
+def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tokens, lauf=None, stand=None,
+                   modell=None):
+    stand, modell = stand or MODELLSTAND, modell or MODELL
     lauf = lauf if lauf is not None else {"gesendet": 0, "beantwortet": 0, "gescheitert": 0, "abbruch": None}
     serie = []   # (sha, Eintrag vorher) der zuletzt in Folge gescheiterten Anfragen
     for i, (uri, p) in enumerate(todo, 1):
@@ -423,7 +477,7 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
         except Exception as e:   # ein Fehler beim Anbieter hält den Lauf nicht auf
             lauf["gescheitert"] += 1
             vorher = have.get(sha) or {}
-            konto = isinstance(e, urllib.error.HTTPError) and e.code in KONTO_FEHLER
+            konto = _status(e) in KONTO_FEHLER
             form = isinstance(e, sprachmodell.AntwortFormat)   # Antwort ohne Text (etwa nur Denkschritte)
             if konto or len(serie) + 1 >= SERIE:
                 for alt_sha, v in serie:   # die Serie zählt nicht als Fehler der einzelnen Dokumente
@@ -431,7 +485,7 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
                         have[alt_sha] = v
                     else:
                         have.pop(alt_sha, None)
-                grund = f"HTTP {e.code}" if konto else f"{SERIE} Anfragen in Folge gescheitert" + (f": {e}" if form else "")
+                grund = f"HTTP {_status(e)}" if konto else f"{SERIE} Anfragen in Folge gescheitert" + (f": {e}" if form else "")
                 print(f"  Lauf beendet: {grund} ({type(e).__name__}); die Dokumente werden im nächsten Lauf angefragt", flush=True)
                 lauf["abbruch"] = grund
                 lauf["form"] = form
@@ -439,7 +493,7 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
             serie.append((sha, dict(vorher) if vorher else None))
             versuche = vorher.get("versuche", 0) + 1 if vorher.get("fassung", 1) == FASSUNG and vorher.get("fehler") else 1
             have[sha] = {**vorher, "sha": sha, "datei": uri, "drucksache": p["reference"], "kurzfassung": None,
-                         "verworfen": None, "entwurf": None, "modell": MODELL, "fassung": FASSUNG,
+                         "verworfen": None, "entwurf": None, "modell": modell, "fassung": FASSUNG,
                          "fehler": f"Anfrage gescheitert: {type(e).__name__}", "versuche": versuche,
                          "erzeugt": datetime.now(timezone.utc).date().isoformat()}
             print(f"  {p['reference']}: Anfrage gescheitert ({type(e).__name__}, Versuch {versuche})", flush=True)
@@ -448,6 +502,7 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
         lauf["beantwortet"] += 1
         tokens[0] += usage.get("prompt_tokens", 0)
         tokens[1] += usage.get("completion_tokens", 0)
+        lauf["max_aus"] = max(lauf.get("max_aus", 0), usage.get("completion_tokens", 0))
         geaendert = False
         if gegenlesen and kurz:
             try:
@@ -460,10 +515,10 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
             except Exception:   # Gegenlesen gescheitert: erste Fassung wird wie bisher geprüft
                 pass
         grund = pruefe(kurz, main, p.get("name") or "")
-        if not grund and MODELLSTAND > 1 and len(_woerter(kurz)) > MAX_WOERTER:
+        if not grund and stand > 1 and len(_woerter(kurz)) > MAX_WOERTER:
             grund = f"zu lang (mehr als {MAX_WOERTER} Wörter)"
         have[sha] = {"sha": sha, "datei": uri, "drucksache": p["reference"],
-                     **_ergebnis(kurz, grund), "modell": MODELL, "modellstand": MODELLSTAND, "fassung": FASSUNG,
+                     **_ergebnis(kurz, grund), "modell": modell, "modellstand": stand, "fassung": FASSUNG,
                      "gegengelesen": bool(gegenlesen), "beim_gegenlesen_geaendert": geaendert,
                      "erzeugt": datetime.now(timezone.utc).date().isoformat()}
         time.sleep(0.5)

@@ -574,7 +574,8 @@ def daten(root="../"):
 PAKET_TEXT = {"shapely": "Geometrie, etwa ob ein Punkt in einem Ortsteil liegt",
               "pyproj": "Umrechnung zwischen Koordinatensystemen",
               "pyshp": "Lesen von Shapefiles, etwa der Kontextdaten",
-              "cairosvg": "Bild der Themenseite als PNG zum Teilen"}
+              "cairosvg": "Bild der Themenseite als PNG zum Teilen",
+              "anthropic": "Kurzfassungen mit Claude, falls Mistral nicht antwortet"}
 
 
 def _liste(eintraege, root):
