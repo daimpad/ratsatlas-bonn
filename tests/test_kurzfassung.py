@@ -328,8 +328,16 @@ class ModellstandTest(unittest.TestCase):
 
     GUT = "Der Spielplatz in Endenich soll neue Geräte und bessere Wege bekommen, bezahlt von der Stadt."
 
+    def setUp(self):
+        # Stichprobenphase: der Modellstand ist noch nicht freigegeben (Stand 2 ist es seit dem 23.11.2026)
+        p = mock.patch.object(kurzfassung, "MODELLSTAND_FREIGEGEBEN", (1,))
+        p.start()
+        self.addCleanup(p.stop)
+
+    def test_claude_ist_ein_eigener_stand(self):
+        self.assertNotIn(kurzfassung.AUSWEICHSTAND, (1, 2))   # Claude (Stand 3) bleibt ungeprüft und unveröffentlicht
+
     def test_nur_die_stichprobe_entsteht_und_erscheint_nicht(self):
-        self.assertNotIn(kurzfassung.MODELLSTAND, kurzfassung.MODELLSTAND_FREIGEGEBEN)   # Freigabe ist eine Entscheidung
         calls = []
         def anfrage(titel, text, key):
             calls.append(titel)
@@ -393,6 +401,23 @@ class ModellstandTest(unittest.TestCase):
             _, text = self._lauf(d, 100, mistral, rows, env={"ANTHROPIC_API_KEY": "sk-test"})
             self.assertEqual(len(claude), 42)
             self.assertIn("Stichprobe zum Modellstand 3 (claude-sonnet-5-5) liegt vor", text)
+
+    def test_claude_springt_auch_im_regelbetrieb_ein_und_der_ausfall_bleibt_ein_fehler(self):
+        from pipeline import sprachmodell
+        def mistral(titel, text, key):
+            raise sprachmodell.AntwortFormat("Antwort ohne Text")
+        claude = []
+        def anfrage_claude(titel, text, key):
+            claude.append(1)
+            return self.GUT, {"completion_tokens": 700}
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(kurzfassung, "_anfrage_claude", anfrage_claude), \
+                mock.patch.object(kurzfassung, "MODELLSTAND_FREIGEGEBEN", (1, 2)):
+            with self.assertRaises(SystemExit):
+                self._lauf(d, 100, mistral, env={"ANTHROPIC_API_KEY": "sk-test"})
+            self.assertEqual(len(claude), 42)   # Stichprobe mit Claude, nicht die volle Menge
+            rows = kurzfassung.laden(Path(d) / "kurz").values()
+            self.assertEqual({r["modellstand"] for r in rows}, {3})
+            self.assertEqual(kurzfassung.fuer_seite(Path(d) / "kurz"), {})
 
     def test_claude_bleibt_unbenutzt_wenn_mistral_antwortet(self):
         def anfrage_claude(titel, text, key):
