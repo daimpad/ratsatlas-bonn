@@ -99,6 +99,22 @@ class Maske:
         return self._betroffen(titel, ref) and bool(GROB.search(titel))
 
 
+class _Alle:
+    """Jede Drucksache gilt als geschützt."""
+
+    def __contains__(self, ref):
+        return True
+
+
+def fuer_alle(strassen=None):
+    """Maske für Prüfbögen, bei denen die geschützten Drucksachen nicht bekannt sind (Branch `kurzfassungen`, ohne
+    Datenbank): Sie blendet Hausnummern und Flurstücke in jedem Titel aus. Ein Prüfbogen braucht die Nummer nicht,
+    der Link führt zum Original."""
+    m = Maske((), strassen)
+    m.refs = _Alle()
+    return m
+
+
 # Gegenprobe: Zahl kurz hinter einem Straßenwort oder einer Auslassung, dazwischen nur Bindewörter und Satzzeichen
 # („… oder 12“, „in Höhe 7“, „vor den Häusern 3“); Ordnungszahlen, Dezimalzahlen und Zahlen mit Einheit zählen nicht
 _BINDE = r"(?:und|oder|sowie|bis|u\.|nr\.?|no\.?|vor|neben|gegenüber|höhe|haus|häusern?|den|der|dem|in|von|ab|zwischen)"

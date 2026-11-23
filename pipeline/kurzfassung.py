@@ -363,6 +363,7 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
         return
     base = Path(verzeichnis or VERZEICHNIS)
     base.mkdir(parents=True, exist_ok=True)
+    _stichproben_nachziehen(base)
     have = laden(base)
     texts = {}
     if config.TEXTE.exists():
@@ -526,10 +527,24 @@ def _erzeugen_alle(todo, texts, have, base, schluessel, anfrage, gegenlesen, tok
             _schreiben(base, have)
 
 
+def _stichproben_nachziehen(base):
+    """Hausnummern und Flurstücke in den Titeln vorhandener Stichproben ausblenden (einmalig wirksam, danach ohne
+    Änderung); Urteile und Anmerkungen bleiben."""
+    m, n = maske.fuer_alle(), 0
+    for path in sorted(Path(base).glob("stichprobe_*.tsv")):
+        n += maske.tsv_nachziehen(path, m)
+    if n:
+        print(f"Stichproben: in {n} Zeilen Hausnummer oder Flurstück ausgeblendet")
+    return n
+
+
 def _stichprobe(base, ok, papers, name=None):
     sample = base / (name or f"stichprobe_kurzfassungen_v{FASSUNG}.tsv")   # Fassung 1: stichprobe_kurzfassungen.tsv
     if not sample.exists() and len(ok) >= 30:
-        titel = {p["reference"]: (p.get("name"), p.get("web")) for p in papers.values()}
+        # Titel ohne Hausnummer und Flurstück: der Branch `kurzfassungen` ist öffentlich (23.11.2026: die Stichprobe zum
+        # Modellstand 2 und sechs ältere trugen Titel privater Baugrundstücke mit Hausnummer)
+        m = maske.fuer_alle()
+        titel = {p["reference"]: (m(p.get("name"), p["reference"]), p.get("web")) for p in papers.values()}
         pick = sorted(random.Random(20261020).sample(ok, 30), key=lambda r: r["drucksache"])
         with open(sample, "w", encoding="utf-8", newline="") as f:
             w = csv.writer(f, delimiter="\t", lineterminator="\n")
