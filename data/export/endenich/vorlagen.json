@@ -20406,6 +20406,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass die Großanzeige am Bahnhof Endenich Nord seit dem 19.03.2025 die Abfahrtszeiten und das Gleis der Linie S23 korrekt anzeigt. Das Zug-Symbol fehlt noch, der Hersteller wurde aber bereits kontaktiert, um den Fehler schnell zu beheben.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-22"
    }
   },
   {
