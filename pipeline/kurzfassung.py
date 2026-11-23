@@ -52,7 +52,9 @@ FREIGEGEBEN = True   # Prüfung von Hand der Stichprobe v7 (22.10.2026): 18 zutr
 # Prüfung. Bis dahin entstehen nur die Kurzfassungen der Stichprobe, und ein Lauf ohne Antwort endet mit einem Hinweis
 # statt mit einem Fehler. Freigabe: den Stand in MODELLSTAND_FREIGEGEBEN aufnehmen.
 MODELLSTAND = 2
-MODELLSTAND_FREIGEGEBEN = (1,)
+# Stand 2 freigegeben am 23.11.2026: Stichprobe mit KI-Vorprüfung 23 plausibel, 7 teilweise, keine falsch; die sieben
+# „teilweise“ lagen dem Auftraggeber einzeln vor, er hat alle Urteile übernommen (pruefung_kurzfassungen_modell2.tsv)
+MODELLSTAND_FREIGEGEBEN = (1, 2)
 STICHPROBE_MODELL = 30
 # Denkschritte zählen zur Längengrenze der Antwort; die Kurzfassung selbst bleibt bei höchstens 60 Wörtern (Anweisung).
 # Die Grenze ist eine Obergrenze, bezahlt werden die tatsächlich erzeugten Tokens; der Lauf nennt Mittel und Höchstwert
@@ -435,22 +437,25 @@ def erzeugen(verzeichnis=None, anfrage=_anfrage, gegenlesen=None):
         return lauf, probe
 
     lauf, probe = lauf_mit(MODELLSTAND, MODELL, schluessel, anfrage)
-    if lauf["abbruch"] and not lauf["beantwortet"] and probe:
-        # Entscheidung des Auftraggebers 22.11.2026: bis zur Freigabe des Modellstands kein roter Lauf
-        print(f"::warning::Kurzfassungen: Lauf mit {MODELL} ohne Ergebnis beendet ({lauf['abbruch']}); der Modellstand "
-              f"{MODELLSTAND} ist noch nicht freigegeben, daher kein Fehler")
-        if AUSWEICHSTAND and AUSWEICHSTAND != MODELLSTAND and AUSWEICHSTAND not in MODELLSTAND_FREIGEGEBEN:
-            key = os.environ.get("ANTHROPIC_API_KEY")
-            if not key:
-                print("::notice::Kurzfassungen: Ausweichweg über Claude nicht möglich – ANTHROPIC_API_KEY fehlt")
-                return
+    ohne = bool(lauf["abbruch"]) and not lauf["beantwortet"]
+    if ohne and AUSWEICHSTAND and AUSWEICHSTAND != MODELLSTAND and AUSWEICHSTAND not in MODELLSTAND_FREIGEGEBEN:
+        # Ausweichweg: die Stichprobe mit Claude entsteht, sobald ein Lauf mit Mistral ganz ohne Antwort bleibt, auch
+        # im Regelbetrieb; der Ausfall selbst wird unten weiter gemeldet
+        key = os.environ.get("ANTHROPIC_API_KEY")
+        if not key:
+            print("::notice::Kurzfassungen: Ausweichweg über Claude nicht möglich – ANTHROPIC_API_KEY fehlt")
+        else:
             print(f"Kurzfassungen: Ausweichweg mit {MODELL_CLAUDE} (Modellstand {AUSWEICHSTAND})")
             zweiter, _ = lauf_mit(AUSWEICHSTAND, MODELL_CLAUDE, key, _anfrage_claude)
             if zweiter["abbruch"] and not zweiter["beantwortet"]:
                 print(f"::warning::Kurzfassungen: auch der Lauf mit {MODELL_CLAUDE} blieb ohne Ergebnis "
                       f"({zweiter['abbruch']})")
+    if ohne and probe:
+        # Entscheidung des Auftraggebers 22.11.2026: bis zur Freigabe eines Modellstands kein roter Lauf
+        print(f"::warning::Kurzfassungen: Lauf mit {MODELL} ohne Ergebnis beendet ({lauf['abbruch']}); der Modellstand "
+              f"{MODELLSTAND} ist noch nicht freigegeben, daher kein Fehler")
         return
-    if lauf["abbruch"] and not lauf["beantwortet"]:
+    if ohne:
         # Kein einziges Ergebnis: der Schritt endet mit Fehler, damit der Ausfall auffällt (vom 13. bis 20.11.2026
         # blieb er acht Tage unbemerkt, weil der Lauf grün endete). Der Bestand ist gesichert.
         rat = ("der Anbieter antwortet ohne Text; Längengrenze (MAX_TOKENS) und Modell prüfen" if lauf.get("form")
