@@ -3,11 +3,67 @@
 <id>tag:allris-bonn,2026:feed/ganz-bonn</id>
 <title>Ratsatlas Bonn – ganz Bonn</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: ganz Bonn</subtitle>
-<updated>2026-11-20T00:00:00Z</updated>
+<updated>2026-11-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ganz-bonn.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bonn:ganz"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030649#vorlage</id>
+<title>Neue Vorlage 262250: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262250"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030649"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030648#vorlage</id>
+<title>Neue Vorlage 242274-07 AA: FDP-Änderungsantrag: Standort und ausreichende Beleuchtung für eine sichere Fahrradabstellanlage; FDP und BBB Antrag: Ausweisung von zusätzlichen Parkplätze an der Ennerthalle Antrag zur Vorlage 242274</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kuedinghoven#242274-07%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030648"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030642#vorlage</id>
+<title>Neue Vorlage 261791-04 AA: Grüne-Änderungsantrag: Paradigmenwechsel bei der Sanierung der Stadthalle – vorhandene bauliche Strukturen bestmöglich nutzen</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261791-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030642"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030626#vorlage</id>
+<title>Neue Vorlage 261307-04: Grüner Dringlichkeitsantrag zur DS 261307 - Erneute Beratung zur Ausschreibung der Dienstleistungskonzession für den Bonner Wochenmarkt</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261307-04"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030626"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030510#vorlage</id>
+<title>Neue Vorlage 262196: Punkte der nichtöffentlichen Sitzung</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262196"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030510"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030335#vorlage</id>
+<title>Neue Vorlage 262048-01 ST: Antrag: Unerlaubte Geradeausfahrten auf der Bornheimer Straße verhindern</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#262048-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030335"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030140#vorlage</id>
+<title>Neue Vorlage 262032: Sachstand Guido-Westerwelle-Brücke</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#262032"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030140"/>
+<summary>Einwohnerfrage · federführend: Bezirksverwaltungsstelle Bonn · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030641#vorlage</id>
 <title>Neue Vorlage 262248: Sitzungstermine des Ausschusses für Ordnung, Sicherheit und Bevölkerungsschutz im Jahr 2027</title>
@@ -63,14 +119,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#262243"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030627"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030626#vorlage</id>
-<title>Neue Vorlage 261307- 04: Grüner Dringlichkeitsantrag zur DS 261307 - Erneute Beratung zur Ausschreibung der Dienstleistungskonzession für den Bonner Wochenmarkt</title>
-<updated>2026-11-20T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261307-%2004"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030626"/>
-<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030623#vorlage</id>
@@ -759,53 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261817"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029602"/>
 <summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030568#vorlage</id>
-<title>Neue Vorlage 260648-03 AA: CDU/SPD/FDP-Änderungsantrag: Ziel- und vorbehaltlicher Zustimmungsbeschluss gemäß § 36a BauGB über die Entwicklung der Fläche „Im Schildchen / Otto-Hahn-Straße“ im Stadtbezirk Bonn, Ortsteil Buschdorf (Bau-Turbo) Antrag zur Vorlage 260648</title>
-<updated>2026-11-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:buschdorf#260648-03%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030568"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030568#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 260648-03 AA CDU/SPD/FDP-Änderungsantrag: Ziel- und vorbehaltlicher Zustimmungsbeschluss gemäß § 36a BauGB über die Entwicklung der Fläche „Im Schildchen / Otto-Hahn-Straße“ im Stadtbezirk Bonn, Ortsteil Buschdorf (Bau-Turbo) Antrag zur Vorlage 260648</title>
-<updated>2026-11-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:buschdorf#260648-03%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030568"/>
-<summary>Entscheidung am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030566#vorlage</id>
-<title>Neue Vorlage 262219: Große Anfrage der Grünen Ratsfraktion: Notschlafplätze für Frauen – Zuweisungsverfahren und Unterbringung besonders vulnerabler wohnungsloser Menschen</title>
-<updated>2026-11-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#262219"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030566"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030556#vorlage</id>
-<title>Neue Vorlage 261220-09 AA: Volt-/Grüne-/SPD-/Linke-Änderungsantrag zu: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn Antrag zur Vorlage 261220</title>
-<updated>2026-11-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-09%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030556"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030556#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Sicherheit%2C%20Ordnung%20und%20Bev%C3%B6lkerungsschutz</id>
-<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „vertagt“ – 261220-09 AA Volt-/Grüne-/SPD-/Linke-Änderungsantrag zu: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn Antrag zur Vorlage 261220</title>
-<updated>2026-11-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-09%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030556"/>
-<summary>Empfehlung am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030543#vorlage</id>
-<title>Neue Vorlage 262212: Tagesordnungspunkte in nichtöffentlicher Sitzung Beirat Kinder- und Jugendbeteiligung 27.11.2026</title>
-<updated>2026-11-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262212"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030543"/>
-<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: offen</summary>
 </entry>
 </feed>

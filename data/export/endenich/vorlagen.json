@@ -18796,6 +18796,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, dass die Oberbürgermeisterin oder der Oberbürgermeister künftig über Entscheidungen zu bereits fertigen Erschließungsanlagen entscheidet. Für noch unfertige Anlagen bleibt der Ausschuss für Mobilität und Verkehr zuständig.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-23"
    }
   },
   {
@@ -19489,6 +19494,11 @@
     "passung": "nur Beirat",
     "ist": [],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Der Arbeitskreis des Naturschutzbeirates gibt eine Stellungnahme zur Neugestaltung des Endenicher Parks ab. Er fordert, den Endenicher Bach und Überschwemmungsbereiche freizuhalten, auf neue Wege und Kunstrasen zu verzichten sowie nur einheimische Pflanzen zu verwenden. Stattdessen sollen Naturerlebnisbereiche erhalten und die Beleuchtung auf nutzergesteuerte niedrige Lampen umgestellt werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-23"
    }
   },
   {
@@ -20703,6 +20713,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Koalition beantragt, die Umweltspur auf dem Hermann-Wandersleb-Ring Richtung Stadtmitte dauerhaft zu belassen und stadtauswärts in eine Bussonderspur umzuwandeln. Zudem sollen Maßnahmen für den Radverkehr umgesetzt und die Verkehrsführung nach einem Jahr überprüft werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-23"
    }
   },
   {

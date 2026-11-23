@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-nordstadt</id>
 <title>Ratsatlas Bonn – Nordstadt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Nordstadt</subtitle>
-<updated>2026-11-20T00:00:00Z</updated>
+<updated>2026-11-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-nordstadt.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030335#vorlage</id>
+<title>Neue Vorlage 262048-01 ST: Antrag: Unerlaubte Geradeausfahrten auf der Bornheimer Straße verhindern</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#262048-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030335"/>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030140#vorlage</id>
+<title>Neue Vorlage 262032: Sachstand Guido-Westerwelle-Brücke</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#262032"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030140"/>
+<summary>Einwohnerfrage · federführend: Bezirksverwaltungsstelle Bonn · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030623#vorlage</id>
 <title>Neue Vorlage 262047-02 ST: Vertagungsbitte zur Großen Anfrage: Demontage von Fahrradbügeln in der Gabelsbergerstraße</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#254068-05"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027748"/>
 <summary>Empfehlung am 2026-06-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026821#beratung-2026-06-16-Rechnungspr%C3%BCfungsausschuss</id>
-<title>Rechnungsprüfungsausschuss: „zur Kenntnis genommen“ – 260698-01 ST Große Anfrage von BSW/SBI: Abrechnungsrückstände und nicht realisierte Einnahmen – insbesondere im Bereich Rettungsdienst</title>
-<updated>2026-06-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#260698-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026821"/>
-<summary>Kenntnisnahme am 2026-06-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026814#beratung-2026-06-16-Rechnungspr%C3%BCfungsausschuss</id>
-<title>Rechnungsprüfungsausschuss: „zur Kenntnis genommen“ – 260657-01 ST FDP - Große Anfrage: Abrechnungsrückständen und offenen Forderungen</title>
-<updated>2026-06-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#260657-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026814"/>
-<summary>Kenntnisnahme am 2026-06-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

@@ -3,19 +3,11 @@
 <id>tag:allris-bonn,2026:feed/thema/klima</id>
 <title>Ratsatlas Bonn – Klima und Umwelt</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Klima und Umwelt (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-19T00:00:00Z</updated>
+<updated>2026-11-18T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/klima.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/klima-und-umwelt/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029547#beratung-2026-11-19-Sportausschuss</id>
-<title>Sportausschuss: „ungeändert beschlossen - mit Maßgabe“ – 261799 Zielbeschluss über die Entwicklung der Flächen „Telekom Dome“ im Stadtbezirk Hardtberg, Ortsteil Duisdorf</title>
-<updated>2026-11-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261799"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029547"/>
-<summary>Anhörung am 2026-11-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030231#vorlage</id>
 <title>Neue Vorlage 261092-05 ST: Stellungnahme des Naturschutzbeirats zur Beschlussvorlage "Neufassung der Baumschutzsatzung (BSchS)" DS 261092</title>
@@ -39,14 +31,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-castell#261837"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029661"/>
 <summary>Kenntnisnahme am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029547#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 261799 Zielbeschluss über die Entwicklung der Flächen „Telekom Dome“ im Stadtbezirk Hardtberg, Ortsteil Duisdorf</title>
-<updated>2026-11-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261799"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029547"/>
-<summary>Entscheidung am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030520#vorlage</id>
@@ -537,14 +521,6 @@
 <summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029547#vorlage</id>
-<title>Neue Vorlage 261799: Zielbeschluss über die Entwicklung der Flächen „Telekom Dome“ im Stadtbezirk Hardtberg, Ortsteil Duisdorf</title>
-<updated>2026-10-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261799"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029547"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030023#vorlage</id>
 <title>Neue Vorlage 252800-02: Neubau einer 4-gruppigen Kindertagesstätte in 53119 Bonn Tannenbusch, Stolpstr./ Ecke Oppelner Str. Fällung eines städtischen Baumes im Baugenehmigungsverfahren</title>
 <updated>2026-10-27T00:00:00Z</updated>
@@ -807,5 +783,29 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#260742-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028292"/>
 <summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028239#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „vertagt - mit Maßgabe“ – 261273 FDP-Antrag: Wiederbepflanzung der leerstehenden Baumbeete in der Combahnstraße</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261273"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028239"/>
+<summary>Entscheidung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028001#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 261183 Arbeitsprogramm landschaftsarchitektonischer Einzelprojekte im Amt für Umwelt und Stadtgrün, DH 2025/2026</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261183"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028001"/>
+<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2027997#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261179 Linke-Antrag: Errichtung einer Calisthenics-Anlage im Bereich des Rheinauenparks in Bonn-Limperich</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:limperich#261179"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027997"/>
+<summary>Entscheidung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

@@ -169,14 +169,6 @@
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028715#vorlage</id>
-<title>Neue Vorlage 261437: Informationsbrief: Kanalerneuerung Elsa-Brändström-Straße - Vorübergehende Unterbrechung der Bauarbeiten</title>
-<updated>2026-07-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:limperich#261437"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028715"/>
-<summary>Informationsbrief · federführend: 01-1 OB-Büro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026159#beratung-2026-07-13-Rat</id>
 <title>Rat: „zur Kenntnis genommen“ – 260462 Seilbahn hier: Sachstand und weitere Projektschritte</title>
 <updated>2026-07-13T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:limperich#241411"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018669"/>
 <summary>Entscheidung am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2018749#beratung-2024-09-25-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 241187-01 ST Antrag CDU Bezirksfraktion Beuel: Wohnbebauung Königswinterer Str. [Hausnummer ausgelassen]</title>
+<updated>2024-09-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:limperich#241187-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018749"/>
+<summary>Kenntnisnahme am 2024-09-25; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

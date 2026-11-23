@@ -273,14 +273,6 @@
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028752#vorlage</id>
-<title>Neue Vorlage 261453: Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Geislarstraße und Öffnung der Einbahnstraße im Bereich Stiftsstraße zwischen Dixstraße und Wittestraße für den Radverkehr</title>
-<updated>2026-08-04T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#261453"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028752"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028731#vorlage</id>
 <title>Neue Vorlage 261442: Bürgerantrag: Öffnung der Einbahnstraße im Bereich Stiftsstraße/Bergheimer Straße/Dixstraße/Wittestraße für Fahrräder entgegen der Fahrtrichtung</title>
 <updated>2026-08-03T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#253792"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024343"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2024234#vorlage</id>
+<title>Neue Vorlage 253385-04 AA: Änderungsantrag der Koalition: Wohnbauliche Entwicklung im Bereich ‚Kommentalweg‘ im Stadtbezirk Bonn-Beuel, Ortsteil Vilich-Rheindorf Antrag zur Vorlage 253385</title>
+<updated>2025-09-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#253385-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024234"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 </feed>

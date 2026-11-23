@@ -3,11 +3,35 @@
 <id>tag:allris-bonn,2026:feed/ohne-2026</id>
 <title>Ratsatlas Bonn – stadtweit / ohne Ortsbezug 2026</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2026</subtitle>
-<updated>2026-11-20T00:00:00Z</updated>
+<updated>2026-11-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ohne-2026.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030649#vorlage</id>
+<title>Neue Vorlage 262250: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262250"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030649"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 50 Amt für Soziales und Wohnen · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030642#vorlage</id>
+<title>Neue Vorlage 261791-04 AA: Grüne-Änderungsantrag: Paradigmenwechsel bei der Sanierung der Stadthalle – vorhandene bauliche Strukturen bestmöglich nutzen</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261791-04%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030642"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030510#vorlage</id>
+<title>Neue Vorlage 262196: Punkte der nichtöffentlichen Sitzung</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262196"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030510"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030641#vorlage</id>
 <title>Neue Vorlage 262248: Sitzungstermine des Ausschusses für Ordnung, Sicherheit und Bevölkerungsschutz im Jahr 2027</title>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261714"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029381"/>
 <summary>Aktuelle Informationen der Verwaltung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029344#beratung-2026-11-16-Rat</id>
-<title>Rat: „zur Kenntnis genommen“ – 261073-01 ST Jahresabschluss 2025 der VEBOWAG</title>
-<updated>2026-11-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261073-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029344"/>
-<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029331#beratung-2026-11-16-Rat</id>
-<title>Rat: „zur Kenntnis genommen“ – 261563-01 ST Antrag der BSW/SBI-Gruppe: Überprüfung der organisatorischen Leistungsfähigkeit des Amtes für Soziales und Wohnen</title>
-<updated>2026-11-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261563-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029331"/>
-<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028965#beratung-2026-11-16-Rat</id>
-<title>Rat: „erledigt durch Stellungnahme der Verwaltung“ – 261563 Antrag der BSW/SBI-Gruppe: Überprüfung der organisatorischen Leistungsfähigkeit des Amtes für Soziales und Wohnen</title>
-<updated>2026-11-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261563"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028965"/>
-<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

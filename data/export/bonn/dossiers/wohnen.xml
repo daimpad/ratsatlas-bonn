@@ -33,14 +33,6 @@
 <summary>Stellungnahme der Verwaltung · federführend: 63 Bauordnungsamt · Stand: offen</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029547#beratung-2026-11-19-Sportausschuss</id>
-<title>Sportausschuss: „ungeändert beschlossen - mit Maßgabe“ – 261799 Zielbeschluss über die Entwicklung der Flächen „Telekom Dome“ im Stadtbezirk Hardtberg, Ortsteil Duisdorf</title>
-<updated>2026-11-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261799"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029547"/>
-<summary>Anhörung am 2026-11-19; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030214#vorlage</id>
 <title>Neue Vorlage 261911-01 ST: Einwohnerfrage: Bauvorhaben am Rande des Meßdorfer Feldes</title>
 <updated>2026-11-18T00:00:00Z</updated>
@@ -119,14 +111,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261819"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029610"/>
 <summary>Anhörung am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029547#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „ungeändert beschlossen“ – 261799 Zielbeschluss über die Entwicklung der Flächen „Telekom Dome“ im Stadtbezirk Hardtberg, Ortsteil Duisdorf</title>
-<updated>2026-11-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261799"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029547"/>
-<summary>Entscheidung am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029462#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
@@ -807,5 +791,21 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#260787-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029172"/>
 <summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029015#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 260919-02 ST Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029015"/>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028552#beratung-2026-11-04-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „ohne Votum“ – 260919-01 AA Änderungsantrag CDU/SPD/FDP: Stellungnahmen sowie Satzungsbeschluss zum Bebauungsplan Nr. 6618-1 "UKB", Stadtbezirk Bonn, Ortsteil Venusberg Antrag zur Vorlage 260919</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260919-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028552"/>
+<summary>Empfehlung am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

@@ -9154,6 +9154,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 231117	verortet	Hauptteil	volltext_strasse	Clemens-August-Platz	Poppelsdorf	niedrig	2
 231117	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Südstadt	niedrig	1
 231117	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Weststadt	niedrig	1
+231123	Liste (16 Ortsteile), nicht verortet	Hauptteil					
 231124	kein Ort						
 231128	kein Ort						
 231130	nur in Anlagen genannt, nicht verortet						
@@ -11830,9 +11831,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241177-06	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	niedrig	1
 241177-07 ST	kein Ort						
 241177-09 ST	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	mittel	3
-241177-10	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
-241177-10	verortet	Hauptteil	volltext_strasse	Lambareneweg	Nordstadt	mittel	5
-241177-10	verortet	Hauptteil	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	4
 241177-11 ST	kein Ort						
 241177-12 AA	kein Ort						
 241177-13 AA	kein Ort						
@@ -12667,7 +12665,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242127-04 ST	kein Ort						
 242128	Titel ohne gemeinsamen Ort, nicht verortet						
 242129	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
-242130	kein Ort						
 242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Ippendorf	Ippendorf	niedrig	1
 242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
 242131	kein Ort						
@@ -15816,7 +15813,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261067	kein Ort						
 261068	Titel ohne gemeinsamen Ort, nicht verortet						
 261068-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
-261071	kein Ort						
 261072	kein Ort						
 261073	Titel ohne gemeinsamen Ort, nicht verortet						
 261073-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16158,9 +16154,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261306	kein Ort						
 261306-01 ST	kein Ort						
 261307	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	2
-261307- 04	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	2
 261307-01 AA	kein Ort						
 261307-02 ST	kein Ort						
+261307-04	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	2
 261308	Titel ohne gemeinsamen Ort, nicht verortet						
 261309	Titel ohne gemeinsamen Ort, nicht verortet						
 261311	Titel ohne gemeinsamen Ort, nicht verortet						
