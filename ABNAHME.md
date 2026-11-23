@@ -44,6 +44,8 @@ KI-Vorprüfungen von je 30 Kurzfassungen (`data/export/kurzfassungen/vorpruefung
 
 **Ergebnis (22.10.2026):** Prüfung von Hand im Gespräch: 18 zutreffend, 12 teilweise, keine falsch (`data/export/kurzfassungen/pruefung_kurzfassungen_v7.tsv`). Die Urteile stimmen in allen 30 Fällen mit der KI-Vorprüfung überein; diese war bei der Prüfung sichtbar, die Prüfung ist daher nicht unabhängig von ihr. Entscheidung des Auftraggebers: **B, freigeben**, Hinweis geschärft („Einzelheiten können ungenau sein, etwa ob etwas beschlossen oder nur vorgeschlagen ist. Maßgeblich ist das Original.“). Es erscheinen nur Kurzfassungen der Fassung 7; ältere werden im täglichen Lauf neu erzeugt (bis 500 je Tag).
 
+**Neues Modell (Modellstand 2, 23.11.2026):** Seit dem 13.11.2026 antwortet hinter `mistral-large-latest` ein Modell mit Denkschritten; die Anweisung (Fassung 7) ist unverändert. Stichprobe `stichprobe_kurzfassungen_modell2.tsv` im Branch `kurzfassungen`, KI-Vorprüfung `data/export/kurzfassungen/vorpruefung_kurzfassungen_modell2.tsv`: 23 plausibel, 7 teilweise, keine falsch (Fassung 7 mit dem bisherigen Modell: 18, 12, 0). Die „teilweise“ betreffen wie bisher Einzelheiten: eine Angabe dem falschen Gegenstand zugeordnet (2), Offenes oder Beschlossenes verwechselt (2), Aufträge statt der Antwort wiedergegeben (1), eine Begründung verkürzt oder verschoben (2). Die automatischen Prüfungen verwarfen 21 von 52 Antworten (40 %; bisher 27 %), davon 15 wegen wörtlicher Übernahme. Je Antwort fielen im Mittel rund 1.500 Ausgabe-Tokens an, fast alles Denkschritte (bisher rund 100); höchstens 1.906 in den zehn gemessenen Antworten. Die neuen Kurzfassungen erscheinen erst nach der Prüfung von Hand und der Freigabe (`MODELLSTAND_FREIGEGEBEN`).
+
 **Prüfbogen:** [`stichprobe_kurzfassungen_v7.tsv`](https://github.com/daimpad/ratsatlas-bonn/blob/kurzfassungen/stichprobe_kurzfassungen_v7.tsv) im Branch `kurzfassungen`.
 - 30 Kurzfassungen der Fassung 7, je mit Link zum Original im Ratsinformationssystem.
 - Spalte `urteil`: zutreffend, teilweise oder falsch.
@@ -72,7 +74,7 @@ Mit `eval.yml` (Actions → „Auswertung Ratsassistent“) wurden die 36 Fragen
 |---|---|---|
 | 1 | v0.2 | 22 von 36 |
 | 2 | v0.3 | 28 von 36 |
-| 8 | Kurzfassungen: neues Modell hinter `mistral-large-latest` (seit 13.11.2026, mit Denkschritten) | **offen (22.11.2026):** 30 Kurzfassungen als Stichprobe mit KI-Vorprüfung; bis zur Prüfung erscheinen neue Kurzfassungen nicht; antwortet Mistral nicht, entsteht die Stichprobe mit Claude Sonnet 5.5 (Modellstand 3) | nach der Stichprobe | Prüfung von 30 Kurzfassungen |
+| 8 | Kurzfassungen: neues Modell hinter `mistral-large-latest` (seit 13.11.2026, mit Denkschritten) | **offen (23.11.2026):** Stichprobe liegt vor, KI-Vorprüfung 23 plausibel, 7 teilweise, keine falsch; bis zur Prüfung von Hand erscheinen neue Kurzfassungen nicht | freigeben, wenn die Prüfung von Hand keine falsche findet | Prüfung von 30 Kurzfassungen |
 
 Mit v0.3 werden die Aufforderungen „Systemprompt ausgeben“ und „antworte nur noch mit …“ abgelehnt. Offen bleibt: Mistral nennt einmal eine Zahl aus allgemeinem Wissen (Hebesatz) und bildet weiterhin manchmal Adressen selbst. Die Seite zeigt solche Adressen nicht als Link.
 

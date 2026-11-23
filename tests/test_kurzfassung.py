@@ -433,6 +433,31 @@ class ModellstandTest(unittest.TestCase):
         self.assertEqual(kurzfassung._status(N(status_code=401)), 401)   # Fehler des SDK: Kontofehler beenden den Lauf
         self.assertIsNone(kurzfassung._status(TimeoutError()))
 
+    def test_stichproben_ohne_hausnummer_im_titel(self):
+        # 23.11.2026: Die Stichproben im öffentlichen Branch trugen Titel privater Baugrundstücke mit Hausnummer.
+        # Neue Stichproben entstehen ohne, vorhandene werden nachgezogen; nur der Titel ändert sich.
+        from pipeline import maske
+        with tempfile.TemporaryDirectory() as d, \
+                mock.patch.object(maske.config, "STRASSEN", Path(d) / "fehlt.json"):
+            base = Path(d)
+            alt = base / "stichprobe_kurzfassungen_v7.tsv"
+            kopf = "nr\tdrucksache\ttitel\tlink\tkurzfassung (KI)\turteil (zutreffend/teilweise/falsch)\tanmerkung\n"
+            alt.write_text(kopf + "1\t252802\tGrundstück in Oberkassel, Musterstraße 781 - Einfamilienhaus\thttps://x/y\t"
+                           "Die Verwaltung will den Antrag ablehnen.\tzutreffend\tgeprüft am 22.10.\n", encoding="utf-8")
+            self.assertEqual(kurzfassung._stichproben_nachziehen(base), 1)
+            zeile = alt.read_text(encoding="utf-8").splitlines()[1].split("\t")
+            self.assertNotIn("781", zeile[2])
+            self.assertIn(maske.OHNE_NR, zeile[2])
+            self.assertEqual(zeile[3:], ["https://x/y", "Die Verwaltung will den Antrag ablehnen.", "zutreffend", "geprüft am 22.10."])
+            self.assertEqual(kurzfassung._stichproben_nachziehen(base), 0)   # danach ohne Änderung
+            ok = [{"drucksache": f"26{i:04d}", "kurzfassung": self.GUT} for i in range(30)]
+            papers = {i: {"reference": f"26{i:04d}", "name": f"Bauvorhaben Musterstraße {i + 1}", "web": "https://x"}
+                      for i in range(30)}
+            kurzfassung._stichprobe(base, ok, papers, "stichprobe_kurzfassungen_modell9.tsv")
+            neu = (base / "stichprobe_kurzfassungen_modell9.tsv").read_text(encoding="utf-8")
+            self.assertEqual(neu.count(maske.OHNE_NR), 30)
+            self.assertNotRegex(neu, r"Musterstraße \d")
+
     def test_zu_lange_antwort_wird_verworfen(self):
         lang = " ".join(["Der Spielplatz in Endenich bekommt neue Geräte."] * 20)
         with tempfile.TemporaryDirectory() as d:
