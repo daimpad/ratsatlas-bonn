@@ -11831,6 +11831,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241177-06	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	niedrig	1
 241177-07 ST	kein Ort						
 241177-09 ST	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	mittel	3
+241177-10	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
+241177-10	verortet	Hauptteil	volltext_strasse	Lambareneweg	Nordstadt	mittel	5
+241177-10	verortet	Hauptteil	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	4
 241177-11 ST	kein Ort						
 241177-12 AA	kein Ort						
 241177-13 AA	kein Ort						
@@ -12665,6 +12668,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242127-04 ST	kein Ort						
 242128	Titel ohne gemeinsamen Ort, nicht verortet						
 242129	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
+242130	kein Ort						
 242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Ippendorf	Ippendorf	niedrig	1
 242130-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
 242131	kein Ort						
@@ -15813,6 +15817,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261067	kein Ort						
 261068	Titel ohne gemeinsamen Ort, nicht verortet						
 261068-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
+261071	kein Ort						
 261072	kein Ort						
 261073	Titel ohne gemeinsamen Ort, nicht verortet						
 261073-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						

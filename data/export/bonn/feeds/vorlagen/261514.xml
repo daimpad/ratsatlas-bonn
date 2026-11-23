@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/261514</id>
 <title>Vorlage 261514: Änderung der „Richtlinien zur Förderung der Jugendarbeit – Maßnahmen, Beschaffungen und Investitionen“</title>
 <subtitle>Verlauf der Vorlage 261514: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-11-18T00:00:00Z</updated>
+<updated>2026-11-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/261514.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261514"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028868#folge-261514-04%20AA</id>
+<title>Änderungsantrag 261514-04 AA: Änderungsantrag zur Änderung der „Richtlinien zur Förderung der Jugendarbeit – Maßnahmen, Beschaffungen und Investitionen“ – Anpassung nach Stellungnahme AG 78 Jugendförderung</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261514"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028868"/>
+<summary>Folgevorlage zu 261514</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028868#folge-261514-03</id>
 <title>Beschlussvorlage 261514-03: Änderung der „Richtlinien zur Förderung der Jugendarbeit – Maßnahmen, Beschaffungen und Investitionen“</title>

@@ -20129,6 +20129,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung beantwortet die Große Anfrage zum Gehweg in der Gerhard-Domagk-Straße. Die Maßnahme ist inzwischen umgesetzt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-23"
    }
   },
   {
@@ -20552,6 +20557,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Koalition beantragt, dass im Kottenforst keine Ökopunkte mehr durch Vermehrung von Laubmischwald entstehen. Ein Teil der Punkte soll stattdessen für die ökologische Aufwertung der Rheingärten genutzt werden, zum Beispiel für Blühstreifen an Ackerrändern.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-23"
    }
   },
   {

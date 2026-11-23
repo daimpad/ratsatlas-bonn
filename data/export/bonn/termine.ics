@@ -501,6 +501,16 @@ DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006811
+DTSTAMP:20270119T170000Z
+DTSTART:20270119T170000Z
+SUMMARY:Ausschuss für Wissenschaft\, Europa und Internationales
+DESCRIPTION:Sitzung des Ausschusses für Wissenschaft\, Europa und Internat
+ ionales\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der S
+ tadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006583
 DTSTAMP:20270120T160000Z
 DTSTART:20270120T160000Z
@@ -713,6 +723,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006812
+DTSTAMP:20270224T170000Z
+DTSTART:20270224T170000Z
+SUMMARY:Ausschuss für Wissenschaft\, Europa und Internationales
+DESCRIPTION:Sitzung des Ausschusses für Wissenschaft\, Europa und Internat
+ ionales\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der S
+ tadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006630
 DTSTAMP:20270225T170000Z
 DTSTART:20270225T170000Z
@@ -890,6 +910,16 @@ DTSTART:20270408T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
  elle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006813
+DTSTAMP:20270413T160000Z
+DTSTART:20270413T160000Z
+SUMMARY:Ausschuss für Wissenschaft\, Europa und Internationales
+DESCRIPTION:Sitzung des Ausschusses für Wissenschaft\, Europa und Internat
+ ionales\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der S
+ tadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1094,6 +1124,16 @@ DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006814
+DTSTAMP:20270519T160000Z
+DTSTART:20270519T160000Z
+SUMMARY:Ausschuss für Wissenschaft\, Europa und Internationales
+DESCRIPTION:Sitzung des Ausschusses für Wissenschaft\, Europa und Internat
+ ionales\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der S
+ tadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006798
 DTSTAMP:20270520T160000Z
 DTSTART:20270520T160000Z
@@ -1278,6 +1318,16 @@ SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
 DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
  ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
  r Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006815
+DTSTAMP:20270623T160000Z
+DTSTART:20270623T160000Z
+SUMMARY:Ausschuss für Wissenschaft\, Europa und Internationales
+DESCRIPTION:Sitzung des Ausschusses für Wissenschaft\, Europa und Internat
+ ionales\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der S
+ tadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1517,6 +1567,16 @@ DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006816
+DTSTAMP:20270922T160000Z
+DTSTART:20270922T160000Z
+SUMMARY:Ausschuss für Wissenschaft\, Europa und Internationales
+DESCRIPTION:Sitzung des Ausschusses für Wissenschaft\, Europa und Internat
+ ionales\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der S
+ tadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006575
 DTSTAMP:20270923T160000Z
 DTSTART:20270923T160000Z
@@ -1667,6 +1727,16 @@ DTSTART:20271019T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
  öffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006817
+DTSTAMP:20271020T160000Z
+DTSTART:20271020T160000Z
+SUMMARY:Ausschuss für Wissenschaft\, Europa und Internationales
+DESCRIPTION:Sitzung des Ausschusses für Wissenschaft\, Europa und Internat
+ ionales\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API der S
+ tadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
