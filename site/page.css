@@ -400,3 +400,18 @@ body:has(.tl-raster) :is(.page-head, .page, .page-foot-inner) { width: min(1120p
 .tl-datei small { font-weight: 500; }
 .tl-groesse { font-weight: 400; color: var(--muted); font-size: 12px; }
 @media (max-width: 600px) { .tl-tabelle td { display: flex !important; } .page .tl-tabelle th { width: auto !important; } }
+
+/* Seite „Rat im Video“ (pipeline/ratimvideo.py) */
+.riv-zahl { font-size: 14px; font-weight: 500; color: var(--muted); margin-left: 6px; }
+.riv-liste { list-style: none; margin: 8px 0 12px; padding: 0; }
+.riv-sitzung { padding: 12px 0; border-top: 1px solid rgba(15, 15, 20, 0.08); }
+.riv-sitzung:first-child { border-top: 0; }
+.page .riv-h { font-size: 16px; margin: 0 0 2px; }
+.riv-meta { margin: 0; font-size: 14px; color: var(--muted); }
+.riv-ohne .riv-h { color: var(--muted); font-weight: 500; }
+.riv-vorlagen { margin-top: 8px; font-size: 14px; }
+.riv-vorlagen summary { cursor: pointer; font-weight: 600; color: var(--accent-ink); }
+.riv-vorlagen ul { margin: 6px 0 0; padding-left: 18px; }
+.riv-vorlagen li { margin: 3px 0; }
+.riv-top { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.riv-ref { font-size: 12px; color: var(--muted); }

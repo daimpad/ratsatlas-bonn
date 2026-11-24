@@ -87,6 +87,7 @@
       <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
       <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 8.5-8.5M16 7l2.5 2.5M18.5 4.5 21 7"/></symbol>
       <symbol id="i-new" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="13" height="13" rx="2.5"/><path d="M15.5 10.5 21 7.5v9l-5.5-3"/></symbol>
       <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
     </defs>
   </svg>
@@ -152,6 +153,7 @@
         <p class="hint" id="doc-status" aria-live="polite"></p>
         <p class="hint">Fragt die Volltextsuche von OParl-Lite (machdenstaat) ab, erst nach dem Klick. Gezeigt werden die Vorlagen, kein Textausschnitt; bisher hat nur ein Teil der Dokumente einen Text.</p>
       </div>
+      <p class="mega-transkripte"><svg class="icon" aria-hidden="true"><use href="#i-video"/></svg><a href="https://bonn.biz/ratstranskripte" target="_blank" rel="noopener">In den Ratstranskripten suchen<span class="visually-hidden"> (bonn.biz, neuer Tab)</span></a> <span class="hint">automatisch erkannt, nicht amtlich</span> · <a href="rat-im-video/">Rat im Video</a></p>
       <div class="mega-foot">
         <button type="button" class="btn btn-ghost" id="mega-reset">Filter zurücksetzen</button>
         <button type="button" class="btn btn-cta" id="mega-show"><svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>Treffer in der Liste zeigen</button>
@@ -210,6 +212,10 @@
           <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span>
           <span class="card-title">Verfahrenswege in Zahlen</span>
           <span class="card-text">Welche Gremien welche Vorlagenart beraten und wie Verfahren meist enden, für ganz Bonn.</span></button>
+        <a class="card card-wide" href="rat-im-video/">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-video"/></svg></span>
+          <span class="card-title">Rat im Video</span>
+          <span class="card-text">Aufzeichnungen der Ratssitzungen seit 2021, mit Suche im Transkript und den beratenen Vorlagen.</span></a>
       </div>
     </section>
 
@@ -620,8 +626,9 @@
         <li>„Mitmachen in Bonn“: nächste Sitzungen und Fristen je Stadtbezirk.</li>
         <li>Mehr Orte: aus dem Text der Dokumente und aus Namen von Gebäuden und Anlagen im Titel.</li>
       </ul>
-      <p>Seit Version 1.0 (Stand 17.11.2026):</p>
+      <p>Seit Version 1.0 (Stand 24.11.2026):</p>
       <ul>
+        <li>Neue Seite <a href="rat-im-video/">Rat im Video</a>: alle Sitzungen des Rates seit 2021 mit Video, Suche im Transkript (bonn.biz, nicht amtlich) und den beratenen Vorlagen; zu finden im Menü „Wer entscheidet“, im Suchmenü und unter „Aktuell in Bonn“.</li>
         <li>Im Fenster „Los geht's“ steht jetzt „Aktuell in Bonn“: die nächsten drei Sitzungen mit Tagesordnung und die drei jüngsten Vorlagen aus ganz Bonn. Auf dem Telefon ist der Block eingeklappt. Zurück zu „Los geht's“ führen das Logo, die Kachel „Aktuell in Bonn“ im Menü „Mitmachen“ und ein Link am Ende jedes Vorgangs.</li>
         <li>Klarere Legenden: „Punkte: Woher der Ort stammt“ unterscheidet Orte, die belegt (Angabe der Stadt), erkannt (Name im Titel oder Text) oder unklar sind; „Flächen: Vorlagen je Ortsteil (12 Monate)“ zeigt die Verteilung der Vorlagen.</li>
         <li>Neu geordnete Leiste: links die Ansichten (Vorlagen, Zeitleiste), rechts vier Menüs – „Themen“ (Themenseiten, Haushalt, Zahlen zum Gebiet), „Wer entscheidet“ (Verfahren, Gremien, Ämter), „Mitmachen“ und „Über“ (Lesehilfen, Über den Ratsatlas, Daten und Bilder). Der Vorgang öffnet sich, wenn Sie eine Vorlage wählen.</li>

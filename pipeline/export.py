@@ -445,7 +445,11 @@ def _aktuell(cache, home, names, meetings, heute):
     vorlagen = [{"reference": p["reference"], "date": p["date"], "paper_type": p["paper_type"], "name": p["name"],
                  "area": home.get(pid), "ort": _ort_kurz(home.get(pid), names), "seite": bool(p.get("seite"))}
                 for pid, p in neu]
-    return {"heute": heute, "sitzungen": sitzungen, "vorlagen": vorlagen}
+    # letzte Sitzung mit Aufzeichnung (Seite „Rat im Video“, Entscheidung des Auftraggebers 24.11.2026)
+    video = next(({"date": m["date"], "gremium": m["gremium"], "video": m["video"]}
+                  for m in sorted(meetings, key=lambda m: (m["date"], m["time"] or ""), reverse=True)
+                  if m.get("video") and m["date"] <= heute and not m["cancelled"]), None)
+    return {"heute": heute, "sitzungen": sitzungen, "vorlagen": vorlagen, "video": video}
 
 
 def _search_index(cache, areas, names):

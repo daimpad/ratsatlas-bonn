@@ -10,8 +10,8 @@ Ohne Erzeugungszeitpunkte, damit sich der Branch deploy nur bei Inhaltsänderung
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-from . import (begriffsseite, teilenseite, config, dossier, einfachseite, gebietsseiten, haushaltsseite, rssseite, technikseite,
-               vorgangsseiten)
+from . import (begriffsseite, teilenseite, config, dossier, einfachseite, gebietsseiten, haushaltsseite, ratimvideo, rssseite,
+               technikseite, vorgangsseiten)
 from .themenseiten import ALLE as THEMENSEITEN
 
 DEFAULT_URL = "https://daimpad.github.io/ratsatlas-bonn/"  # Platzhalter in site/, wird durch SITE_URL ersetzt
@@ -64,6 +64,7 @@ def write(site=Path("_site"), site_url=None):
     themen += einfachseite.write(site, site_url, gebietsseiten._page)
     themen += technikseite.write(site, site_url, gebietsseiten._page)
     themen += teilenseite.write(site, site_url, gebietsseiten._page)
+    themen += ratimvideo.write(site, site_url, gebietsseiten._page)
     vorgaenge = vorgangsseiten.write(site, site_url, gebietsseiten._page)
     (site / SITEMAP_SEITEN).write_text(sitemap(site_url, [*themen, *areas]), encoding="utf-8")
     dateien = [SITEMAP_SEITEN]

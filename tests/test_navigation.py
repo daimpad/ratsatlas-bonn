@@ -26,6 +26,13 @@ class Navigation(unittest.TestCase):
         for alt in ("mega-auswertung", "mega-daten", "mega-verstehen", 'data-panel="panel-detail"', 'data-panel="panel-prozesse"'):
             self.assertNotIn(alt, self.html)
 
+    def test_rat_im_video(self):
+        """Seite „Rat im Video“ (24.11.2026): Kachel im Menü „Wer entscheidet“, Link im Suchmenü."""
+        for menu in ("mega-entscheiden", "mega-suche"):
+            m = re.search(rf'<section class="mega glass" id="{menu}".*?</section>', self.html, re.S)
+            self.assertIn('href="rat-im-video/"', m.group(0))
+        self.assertIn('href="https://bonn.biz/ratstranskripte"', self.html)
+
 
 if __name__ == "__main__":
     unittest.main()

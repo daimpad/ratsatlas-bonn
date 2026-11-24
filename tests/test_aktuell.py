@@ -30,6 +30,13 @@ class Aktuell(unittest.TestCase):
         self.assertEqual([x["ort"] for x in v], ["stadtweit / ohne Ortsbezug", "Stadtbezirk Beuel", "Endenich"])
         self.assertTrue(v[0]["seite"])
 
+    def test_letzte_aufzeichnung(self):
+        ms = [{**sitzung("2026-11-12"), "video": "https://www.youtube.com/watch?v=a"},
+              {**sitzung("2026-12-12"), "video": "https://www.youtube.com/watch?v=b"}, sitzung("2026-11-16")]
+        self.assertEqual(export._aktuell({}, {}, {}, ms, "2026-11-17")["video"],
+                         {"date": "2026-11-12", "gremium": "Rat", "video": "https://www.youtube.com/watch?v=a"})
+        self.assertIsNone(export._aktuell({}, {}, {}, [sitzung("2026-11-16")], "2026-11-17")["video"])
+
 
 if __name__ == "__main__":
     unittest.main()
