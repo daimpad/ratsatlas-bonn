@@ -1,0 +1,16 @@
+{
+ "abruf": "2026-11-24T12:13:23+00:00",
+ "kreiswanderungsmatrix": {
+  "url": "https://www.statistikportal.de/sites/default/files/2026-10/KWM_GES_NAT_ALT_2025.zip",
+  "seite": "https://www.statistikportal.de/de/veroeffentlichungen/kreiswanderungsmatrix",
+  "berichtsjahr": 2025,
+  "datei": "KWM_GES_NAT_ALT_2025.csv"
+ },
+ "wegweiser": {
+  "url": "https://www.wegweiser-kommune.de/data-api/rest/statistics/data/…+bonn+2006-2023",
+  "jahre": "2006–2023"
+ },
+ "vg2500": {
+  "url": "https://daten.gdz.bkg.bund.de/produkte/vg/vg2500/aktuell/vg2500_12-31.utm32s.shape.zip"
+ }
+}
