@@ -99,6 +99,11 @@ jobs:
             # interne Links auf die Seiten je Vorgang (seit 13.11.2026; vorher nur über die Sitemap erreichbar)
             check "${base}ortsteil/endenich/" 'href="../../vorgang/'
             check "${base}teilen/" "Bilder zum Ratsatlas Bonn"
+            # Seiten vom 24.11.2026: Rat im Video, Zu- und Wegzüge, Bonn in 3D (Seite und Daten der Säulen)
+            check "${base}rat-im-video/" "<h1>Rat im Video"
+            check "${base}zu-und-wegzuege/" "<h1>Zu- und Wegzüge"
+            check "${base}3d/" "<h1>Bonn in 3D"
+            check "${base}3d/orte.json" '"ortsteile"'
             feed="${base}data/export/bonn/feeds/ganz-bonn.xml"
             n=$(curl -fsSL --retry 3 --retry-delay 10 "$feed" | python3 -c 'import sys, xml.etree.ElementTree as ET
           r = ET.parse(sys.stdin).getroot(); a = "{http://www.w3.org/2005/Atom}"
@@ -112,6 +117,15 @@ jobs:
               echo "ok  ${base}kacheln/"
             else
               echo "::warning::${base}kacheln/ fehlt oder ist unvollständig (Rückfall auf OSM-Kacheln)"
+            fi
+          done
+          # Gebäude für 3d/ (gebaeude.yml, vierteljährlich); fehlen sie, zeigt die Seite nur die Säulen: nur Hinweis
+          for base in https://bonn.ratsatlas.de/ https://daimpad.github.io/ratsatlas-bonn/; do
+            if curl -fsSL --retry 3 --retry-delay 10 "${base}3d/gebaeude/stand.json" | grep -q '"gebaeude"' \
+              && curl -fsSIL --retry 3 --retry-delay 10 "${base}3d/gebaeude/endenich.json" > /dev/null; then
+              echo "ok  ${base}3d/gebaeude/"
+            else
+              echo "::warning::${base}3d/gebaeude/ fehlt (3D ohne Gebäude)"
             fi
           done
           check https://bonn.ratsatlas.de/robots.txt "Sitemap: https://bonn.ratsatlas.de/sitemap.xml"
