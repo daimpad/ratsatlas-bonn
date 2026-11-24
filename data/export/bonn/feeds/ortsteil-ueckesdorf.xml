@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-ueckesdorf</id>
 <title>Ratsatlas Bonn – Ückesdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Ückesdorf</subtitle>
-<updated>2026-11-09T00:00:00Z</updated>
+<updated>2026-11-24T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-ueckesdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ueckesdorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030670#vorlage</id>
+<title>Neue Vorlage 262259: Bürgerantrag: Markierung von Pkw-Parkflächen auf dem südlichen Seitenstreifen des Höhlenweges in Bonn-Ückesdorf</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ueckesdorf#262259"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030670"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030278#vorlage</id>
 <title>Neue Vorlage 262093: Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ueckesdorf#240293"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016010"/>
 <summary>Anhörung am 2024-04-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2016010#beratung-2024-03-21-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%20und%20Gesundheit</id>
-<title>Ausschuss für Soziales, Migration und Gesundheit: „ungeändert beschlossen“ – 240293 Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
-<updated>2024-03-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:ueckesdorf#240293"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016010"/>
-<summary>Entscheidung am 2024-03-21; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

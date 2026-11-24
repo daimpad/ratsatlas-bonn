@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-alt-godesberg</id>
 <title>Ratsatlas Bonn – Alt-Godesberg</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Alt-Godesberg</subtitle>
-<updated>2026-11-23T00:00:00Z</updated>
+<updated>2026-11-24T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-alt-godesberg.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030672#vorlage</id>
+<title>Neue Vorlage 261307-05 AA: Änderungsantrag Linke/Grüne: Aussetzung der Neuausschreibung des Bonner Wochenmarktes und Überprüfung der Organisations- und Kostenstruktur; Ausschreibung eines Dienstleistungskonzessionsvertrages für den Bonner Wochenmarkt, Antrag zur Vorlage 261307-04</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261307-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030672"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030663#vorlage</id>
+<title>Neue Vorlage 262256: Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Moltkestraße/Friederich-Ebert-Straße</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#262256"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030663"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030626#vorlage</id>
 <title>Neue Vorlage 261307-04: Grüner Dringlichkeitsantrag zur DS 261307 - Erneute Beratung zur Ausschreibung der Dienstleistungskonzession für den Bonner Wochenmarkt</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#231642-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028116"/>
 <summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027948#vorlage</id>
-<title>Neue Vorlage 261125-01 ST: Containerstandort Parkplatz Auf dem Godesberg – Prüfauftrag Verlegung, Wartungsintervall und Kontrollmechanismus</title>
-<updated>2026-06-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261125-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027948"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028140#vorlage</id>
-<title>Neue Vorlage 261239: Veranstaltungen zu 30 Jahre UN-Stadt Bonn</title>
-<updated>2026-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261239"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028140"/>
-<summary>Mitteilungsvorlage · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

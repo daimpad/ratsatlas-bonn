@@ -9,6 +9,30 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030671#vorlage</id>
+<title>Neue Vorlage 261529-10 AA: CDU/Grüne-Änderungsantrag: Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz Antrag zur Vorlage 261529</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261529-10%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030671"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030668#vorlage</id>
+<title>Neue Vorlage 254049-02 AA: FDP-Änderungsantrag zu DS 254049-01: Anpassungen der Fahrradstraße "Pützchensweg" Antrag zur Vorlage 254049</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:kuedinghoven#254049-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030668"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030663#vorlage</id>
+<title>Neue Vorlage 262256: Bürgerantrag: Einrichtung eines Zebrastreifens im Bereich Moltkestraße/Friederich-Ebert-Straße</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#262256"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030663"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030659#vorlage</id>
 <title>Neue Vorlage 262254: Bürgerantrag: Antrag auf Prüfung und Einrichtung einer baulichen Maßnahme zur Geschwindigkeitsreduzierung in der Lyngsbergstraße in Bonn-Muffendorf</title>
 <updated>2026-11-24T00:00:00Z</updated>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261714"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029381"/>
 <summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030411#vorlage</id>
-<title>Neue Vorlage 262159: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
-<updated>2026-11-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262159"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030411"/>
-<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 66 Tiefbauamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030408#vorlage</id>
-<title>Neue Vorlage 262157: CDU-SPD Bezirksfraktionen: Verkehrssicherheit in der Straße „Auf dem Grendt“ verbessern</title>
-<updated>2026-11-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#262157"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030408"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030379#vorlage</id>
-<title>Neue Vorlage 262144: Bürgerantrag: Verbesserung des Stadtbahnverkehrs der Linie 66 im Bereich Bonn-Oberkassel</title>
-<updated>2026-11-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:oberkassel#262144"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030379"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: offen</summary>
 </entry>
 </feed>

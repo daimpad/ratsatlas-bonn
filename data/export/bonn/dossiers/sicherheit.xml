@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/thema/sicherheit</id>
 <title>Ratsatlas Bonn – Sicherheit und Ordnung</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Sicherheit und Ordnung (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-23T00:00:00Z</updated>
+<updated>2026-11-24T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/sicherheit.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/sicherheit-und-ordnung/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030672#vorlage</id>
+<title>Neue Vorlage 261307-05 AA: Änderungsantrag Linke/Grüne: Aussetzung der Neuausschreibung des Bonner Wochenmarktes und Überprüfung der Organisations- und Kostenstruktur; Ausschreibung eines Dienstleistungskonzessionsvertrages für den Bonner Wochenmarkt, Antrag zur Vorlage 261307-04</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:alt-godesberg#261307-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030672"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030626#vorlage</id>
 <title>Neue Vorlage 261307-04: Grüner Dringlichkeitsantrag zur DS 261307 - Erneute Beratung zur Ausschreibung der Dienstleistungskonzession für den Bonner Wochenmarkt</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:friesdorf#261256-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029286"/>
 <summary>Stellungnahme der Verwaltung · federführend: 52 Sport- und Bäderamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029149#beratung-2026-09-17-Hauptausschuss</id>
-<title>Hauptausschuss: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261220-04 ST Antrag-Grüne: Maßnahmen zur Bewältigung des gestiegenen Drogenkonsums (insbes. Crack) und zur Stärkung der Versorgungs- und Beratungsstrukturen in Bonn</title>
-<updated>2026-09-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#261220-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029149"/>
-<summary>Kenntnisnahme am 2026-09-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

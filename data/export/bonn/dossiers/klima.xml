@@ -9,6 +9,30 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030682#vorlage</id>
+<title>Neue Vorlage 261929-01 AA: Änderungsantrag Linke: 49. Satzung zur Änderung der Gebührenordnung über die Abfallentsorgung in der Bundesstadt Bonn Antrag zur Vorlage 261929</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261929-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030682"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030680#vorlage</id>
+<title>Neue Vorlage 261700-05 AA: Grüner Änderungsantrag: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2027 Antrag zur Vorlage 261700</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#261700-05%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030680"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030678#vorlage</id>
+<title>Neue Vorlage 261701-01 AA: Grüner Änderungsantrag: 4. Satzung zur Änderung der Satzung über das Friedhofs- und Begräbniswesen der Bundesstadt Bonn Antrag zur Vorlage 261701</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:geislar#261701-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030678"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030661#vorlage</id>
 <title>Neue Vorlage 262255: Bürgerantrag: Austausch der Mülleimer auf dem Meßdorfer Feld gegen tiergeschützte Abfallbehälter</title>
 <updated>2026-11-24T00:00:00Z</updated>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261323"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028420"/>
 <summary>Entscheidung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028292#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 260742-02 ST Bürgerantrag: Antrag auf Maßnahmen zur Sicherstellung von Sauberkeit, Ordnung und Umweltverträglichkeit im Veranstaltungsbereich der Osterkirmes in Bonn-Beuel und angrenzenden Schutzgebieten Ergänzung zur STN DS260742-01</title>
-<updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#260742-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028292"/>
-<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028239#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „vertagt - mit Maßgabe“ – 261273 FDP-Antrag: Wiederbepflanzung der leerstehenden Baumbeete in der Combahnstraße</title>
-<updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261273"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028239"/>
-<summary>Entscheidung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028001#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 261183 Arbeitsprogramm landschaftsarchitektonischer Einzelprojekte im Amt für Umwelt und Stadtgrün, DH 2025/2026</title>
-<updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261183"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028001"/>
-<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

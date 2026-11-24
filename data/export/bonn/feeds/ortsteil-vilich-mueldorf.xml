@@ -329,14 +329,6 @@
 <summary>Entscheidung am 2025-08-27; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 <entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024058#vorlage</id>
-<title>Neue Vorlage 253693: Informationsbrief - Kanalsanierung Kölnstraße</title>
-<updated>2025-08-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf#253693"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024058"/>
-<summary>Informationsbrief · federführend: 01-1 OB-Büro · Stand: offen</summary>
-</entry>
-<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023563#vorlage</id>
 <title>Neue Vorlage 253433-01 ST: Bürgerantrag: Installation einer Geschwindigkeitsanzeige an der Bundesgrenzschutzstraße</title>
 <updated>2025-07-14T00:00:00Z</updated>
@@ -807,5 +799,13 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf#240961-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017596"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung erklärt, wie mit dem Bürgerantrag zur Änderung des Bebauungsplans 8025-12 umgegangen wird. Sie prüft den Antrag und gibt eine Empfehlung an den Rat und die zuständigen Ausschüsse. Der Ausschuss für Beteiligung soll dies nur zur Kenntnis nehmen.</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2016628#beratung-2024-06-05-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „ungeändert beschlossen“ – 240568 Fällgenehmigung für eine Blut-Buche auf dem Grundstück Am Herrengarten [Hausnummer ausgelassen], 53229 Bonn</title>
+<updated>2024-06-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf#240568"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2016628"/>
+<summary>Entscheidung am 2024-06-05; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

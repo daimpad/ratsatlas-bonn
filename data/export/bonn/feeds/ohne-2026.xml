@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ohne-2026</id>
 <title>Ratsatlas Bonn – stadtweit / ohne Ortsbezug 2026</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: stadtweit / ohne Ortsbezug 2026</subtitle>
-<updated>2026-11-23T00:00:00Z</updated>
+<updated>2026-11-24T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ohne-2026.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030682#vorlage</id>
+<title>Neue Vorlage 261929-01 AA: Änderungsantrag Linke: 49. Satzung zur Änderung der Gebührenordnung über die Abfallentsorgung in der Bundesstadt Bonn Antrag zur Vorlage 261929</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261929-01%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030682"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030671#vorlage</id>
+<title>Neue Vorlage 261529-10 AA: CDU/Grüne-Änderungsantrag: Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz Antrag zur Vorlage 261529</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261529-10%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030671"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030655#vorlage</id>
 <title>Neue Vorlage 262251: FDP-Große Anfrage: Kosten der Nutzung der Flutlichtanlagen</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261218-01"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029633"/>
 <summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029484#beratung-2026-11-16-Rat</id>
-<title>Rat: „zur Kenntnis genommen“ – 260001-02 Nachbenennung - Ausschussvorsitze nach § 58 Abs. 5 GO NRW</title>
-<updated>2026-11-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260001-02"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029484"/>
-<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029424#beratung-2026-11-16-Rat</id>
-<title>Rat: „zur Kenntnis genommen“ – 261734 Bewilligung über- und außerplanmäßiger Aufwendungen und Auszahlungen gemäß § 83 (1) GO NRW bzw. § 85 (1) GO NRW durch den Stadtkämmerer - Liste 7/2026</title>
-<updated>2026-11-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261734"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029424"/>
-<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
