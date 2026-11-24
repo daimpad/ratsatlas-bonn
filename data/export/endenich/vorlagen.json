@@ -15782,6 +15782,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung beantwortet eine Große Anfrage der Grünen-Bezirksfraktion zum Quartier West.Side und teilt mit, dass es keine rechtliche Handhabe gibt, Bauverpflichtungen oder Nutzungen für die Fläche nördlich des Václav-Havel-Platzes oder das Gebäude B vorzuschreiben. Der Vorhabenträger erfüllt die Ausbauleistungen der öffentlichen Flächen bis Ende Juli; die Fertigstellung kann die Verwaltung nur durch Gespräche mit den Investoren fördern.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
@@ -16500,6 +16505,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Ein Änderungsantrag beantragt, die Bushaltestelle „Kolpingstraße“ zum Fahrplanwechsel im Dezember 2025 in „Vili-Viorel-Păun-Platz“ umzubenennen. Nach dem Neubau „Am Vogelsang“ grenzt die Haltestelle nicht mehr an die Kolpingstraße, sondern an den gleichnamigen Platz.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {

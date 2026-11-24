@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-godesberg-villenviertel</id>
 <title>Ratsatlas Bonn – Godesberg-Villenviertel</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Godesberg-Villenviertel</subtitle>
-<updated>2026-11-19T00:00:00Z</updated>
+<updated>2026-11-24T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-godesberg-villenviertel.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030385#vorlage</id>
+<title>Neue Vorlage 262146: Grunstück in Bonn, Roonstraße [Hausnummer ausgelassen] - Errichtung eines Dreifamilienhauses Az.: 40388/2026</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#262146"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030385"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030545#vorlage</id>
 <title>Neue Vorlage 261857-01 ST: Erneuerung der Straßenbeleuchtung im Villenviertel</title>
@@ -398,7 +406,7 @@
 <updated>2025-07-14T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#253510"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023686"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die CDU-Fraktion beantragt, dass die Verwaltung Spielgeräte auf dem Gelände der KGS Beethovenschule schnell repariert. Dazu gehören das Fußballnetz, der Basketballkorb, die Reckstange und wenn möglich ein Ersatzteil für die Motorik-Schleife.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023282#beratung-2025-07-10-Ausschuss%20f%C3%BCr%20Umwelt%2C%20Klima%20und%20Lokale%20Agenda</id>
@@ -446,7 +454,7 @@
 <updated>2025-07-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#252856-05%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023558"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Ein Änderungsantrag beantragt, die Sporthalle J an der Augustastraße zu erhalten und zu sanieren sowie am Standort Halle F am Godesberger Bach eine Einfeldsporthalle zu errichten. Damit soll der Beschluss vom 8. Mai 2025 geändert werden.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023558#beratung-2025-07-03-Rat</id>
@@ -518,7 +526,7 @@
 <updated>2025-06-13T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#253389"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023327"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die BBB-Fraktion beantragt, das Bürogebäude in der Karl-Finkelburg-Straße wieder als Verwaltungsstandort für städtische Mitarbeiter zu nutzen. Dafür sollen angemietete Fremdobjekte schrittweise abgemietet werden. Übergangsweise könnten dort Verwaltungseinheiten untergebracht werden, die wegen Sanierungen ausziehen müssen.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023134#vorlage</id>
@@ -798,14 +806,6 @@
 <updated>2024-10-30T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#241264-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019722"/>
-<summary>Kenntnisnahme am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019213#beratung-2024-10-30-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen“ – 241561-01 ST Antrag für einen zukunftsfähigen Schulhof Paul-Klee-Schule</title>
-<updated>2024-10-30T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#241561-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019213"/>
 <summary>Kenntnisnahme am 2024-10-30; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

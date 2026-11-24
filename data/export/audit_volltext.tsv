@@ -10272,7 +10272,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 232211-08	kein Ort						
 232211-09 ST	kein Ort						
 232212	kein Ort						
-232212-01 ST	kein Ort						
 232214	Titel ohne gemeinsamen Ort, nicht verortet						
 232218	kein Ort						
 232219	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -12698,6 +12697,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 242147	kein Ort						
 242148-07	kein Ort						
 242148-08 ST	kein Ort						
+242148-09 ST	kein Ort						
 242149	kein Ort						
 242149-01 ST	kein Ort						
 242149-02 ST	kein Ort						
@@ -14180,6 +14180,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253655-01 AA	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	mittel	1
 253657	kein Ort						
 253658	verortet	Hauptteil	volltext_strasse+hausnummer	Europaring	Duisdorf	mittel	1
+253658-01 ST	kein Ort						
 253661	kein Ort						
 253661-01 ST	kein Ort						
 253661-02 ST	kein Ort						
@@ -14196,6 +14197,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 253684	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 253685	kein Ort						
 253686	kein Ort						
+253686-01 ST	kein Ort						
 253686-02 ST	kein Ort						
 253686-03	verortet	Hauptteil	volltext_ortsteil_adjektiv	Mehlem	Mehlem	niedrig	1
 253686-04 ST	verortet	Hauptteil	volltext_ortsteil_adjektiv	Mehlem	Mehlem	niedrig	1
@@ -15814,6 +15816,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261067	kein Ort						
 261068	Titel ohne gemeinsamen Ort, nicht verortet						
 261068-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						
+261071	kein Ort						
 261072	kein Ort						
 261073	Titel ohne gemeinsamen Ort, nicht verortet						
 261073-01 ST	Titel ohne gemeinsamen Ort, nicht verortet						

@@ -9,6 +9,22 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030684#vorlage</id>
+<title>Neue Vorlage 262263: Bürgerantrag: Beweissicherung am Gebäude Nonnenpfad [Hausnummer ausgelassen] vor Beginn der Ausschachtungsarbeiten und Anwendung erschütterungsfreier Bauverfahren</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262263"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030684"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030683#vorlage</id>
+<title>Neue Vorlage 262262: Dringlichkeitsantrag von CDU-SPD: Schließung von 3 evangelischen Kitas im Bonner Westen</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262262"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030683"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030682#vorlage</id>
 <title>Neue Vorlage 261929-01 AA: Änderungsantrag Linke: 49. Satzung zur Änderung der Gebührenordnung über die Abfallentsorgung in der Bundesstadt Bonn Antrag zur Vorlage 261929</title>
 <updated>2026-11-24T00:00:00Z</updated>
@@ -103,6 +119,46 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#262254"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030659"/>
 <summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030640#vorlage</id>
+<title>Neue Vorlage 242046-20: Sachstandsbericht zur weiteren Projektentwicklung „Zukunft Stadthaus-Areal in Bonn“</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#242046-20"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030640"/>
+<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030622#vorlage</id>
+<title>Neue Vorlage 262240: Bürgerantrag: Begrenzung der Gebäudehöhe im Neubaugebiet Gartenstraße auf maximal zwei Vollgeschosse</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262240"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030622"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030565#vorlage</id>
+<title>Neue Vorlage 261454-02 ST: Stellungnahme des Nachtbürgermeisters zum Bürgerantrag: Sicherstellung und Optimierung öffentlicher Nutzungen für alle Altersgruppen auf dem Frankenbadplatz, insbesondere während kommerzieller Veranstaltungen im Sommer</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:nordstadt#261454-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030565"/>
+<summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030385#vorlage</id>
+<title>Neue Vorlage 262146: Grunstück in Bonn, Roonstraße [Hausnummer ausgelassen] - Errichtung eines Dreifamilienhauses Az.: 40388/2026</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#262146"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030385"/>
+<summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029689#vorlage</id>
+<title>Neue Vorlage 261841: 11. Satzung zur Änderung der Satzung über die Erhebung von Gebühren für die Durchführung der Brandverhütungsschau in der Bundesstadt Bonn</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261841"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029689"/>
+<summary>Beschlussvorlage · federführend: 37 Feuerwehr und Rettungsdienst · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029547#vorlage</id>
@@ -751,61 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262203"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030532"/>
 <summary>Anhörung am 2026-11-18; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030519#vorlage</id>
-<title>Neue Vorlage 262017-01 ST: Zentralisierung der IT in der Bonner Stadtverwaltung</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262017-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030519"/>
-<summary>Stellungnahme der Verwaltung · federführend: 10 Personal- und Organisationsamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030519#beratung-2026-11-18-Ausschuss%20f%C3%BCr%20Digitalisierung%2C%20Dienstleistung%20und%20Verwaltungsmodernisierung</id>
-<title>Ausschuss für Digitalisierung, Dienstleistung und Verwaltungsmodernisierung: „zur Kenntnis genommen“ – 262017-01 ST Zentralisierung der IT in der Bonner Stadtverwaltung</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262017-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030519"/>
-<summary>Kenntnisnahme am 2026-11-18; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030511#vorlage</id>
-<title>Neue Vorlage 261514-03: Änderung der „Richtlinien zur Förderung der Jugendarbeit – Maßnahmen, Beschaffungen und Investitionen“</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261514-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030511"/>
-<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030498#vorlage</id>
-<title>Neue Vorlage 261895-01 ST: CDU/SPD/FDP-Antrag: BFD bei Feuerwehr Bonn</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261895-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030498"/>
-<summary>Stellungnahme der Verwaltung · federführend: 37 Feuerwehr und Rettungsdienst · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030482#vorlage</id>
-<title>Neue Vorlage 261917-01 ST: FDP-Große Anfrage: Sanierung des Bad Godesberger Tunnels</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:bad-godesberg#261917-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030482"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030479#vorlage</id>
-<title>Neue Vorlage 262079-01 ST: Große Anfrage GRÜNE-Fraktion - Nordbrückensperrung - Umleitungsstrecken in Bonn</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262079-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030479"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030465#vorlage</id>
-<title>Neue Vorlage 262169-01 DA: BBB-Dringlichkeitsantrag Übermittagsbetreuung für Kinder Drucksachenfolge 262169</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#262169-01%20DA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030465"/>
-<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 </feed>

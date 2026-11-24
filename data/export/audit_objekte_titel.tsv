@@ -501,7 +501,6 @@ drucksache	gebäude oder anlage	art	ortsteil	osm
 231514-01 ST	Godesburg	Sehenswürdigkeit	Alt-Godesberg	way/115092313
 231515	Bernhard-Berzheim-Platz	Park	Ippendorf	way/46230357
 231515-01 ST	Bernhard-Berzheim-Platz	Park	Ippendorf	way/46230357
-231664	Stadthaus	Rathaus	Nordstadt	way/321571291
 231664-01 ST	Stadthaus	Rathaus	Nordstadt	way/321571291
 231664-02	Stadthaus	Rathaus	Nordstadt	way/321571291
 231664-03 ST	Stadthaus	Rathaus	Nordstadt	way/321571291
@@ -688,6 +687,7 @@ drucksache	gebäude oder anlage	art	ortsteil	osm
 242046-17	Stadthaus	Rathaus	Nordstadt	way/321571291
 242046-18	Stadthaus	Rathaus	Nordstadt	way/321571291
 242046-19 ST	Stadthaus	Rathaus	Nordstadt	way/321571291
+242046-20	Stadthaus	Rathaus	Nordstadt	way/321571291
 242052	Haus der Jugend	Bürgerhaus	Kessenich	way/33070866
 242052-01 ST	Haus der Jugend	Bürgerhaus	Kessenich	way/33070866
 242069	Sportpark Nord	Stadion	Nordstadt	way/5107070
@@ -845,6 +845,7 @@ drucksache	gebäude oder anlage	art	ortsteil	osm
 261435	LVR-Klinik Bonn	Krankenhaus	Bonn-Castell	way/16101829
 261454	Frankenbadplatz	Spielplatz	Nordstadt	way/533632345
 261454-01 ST	Frankenbadplatz	Spielplatz	Nordstadt	way/533632345
+261454-02 ST	Frankenbadplatz	Spielplatz	Nordstadt	way/533632345
 261461	Stadtgarten	Park	Südstadt	way/102199953
 261485	Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung	Öffentliches Gebäude	Gronau	relation/451932
 261485	Villa Hammerschmidt	Sehenswürdigkeit	Gronau	way/108762526
