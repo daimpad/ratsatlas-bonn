@@ -50,6 +50,7 @@ STEPS = {
     "wahlen-rohdaten": wahlen.rohdaten,  # auf Knopfdruck (quellen.yml): Quelldateien der Wahl 2025 in den Branch quellen
     "wahlen-ausschnitt": wahlen.ausschnitt,  # einmalig: Wahl 2025 je Stimmbezirk und Zuordnung zum Ortsteil (Übergang)
     "kontext-ausschnitte": kontext.ausschnitte,  # einmalig: Ausschnitte für Bonn (Zensus, Bodenrichtwerte, Klima, ...)
+    "wanderung": lambda: __import__("pipeline.wanderung", fromlist=["ausschnitt"]).ausschnitt(),  # auf Knopfdruck: Zu- und Fortzüge (Kreiswanderungsmatrix, Wegweiser, VG2500) nach data/wanderung/
     "strukturdaten": strukturdaten.schritt,  # auf Knopfdruck: Strukturdatenatlas und Wegweiser nach data/strukturdaten/
     "strukturdaten-seite": strukturdaten.seite,  # täglich (nach kontext): kompakte Fassung für die Seite
     "strukturdaten-verifikation": strukturdaten.verifikation,  # einmalig, lokal (pdftotext): Stichprobe von 20 Werten
