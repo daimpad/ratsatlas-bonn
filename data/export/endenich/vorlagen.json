@@ -14850,6 +14850,11 @@
     "passung": "nur Beirat",
     "ist": [],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass der Naturschutzbeirat zum Bebauungsplan „Universitäts-Campus Endenich“ angehört wird. In der nächsten Sitzung informiert sie den Beirat über dessen Stellungnahme und die der Unteren Naturschutzbehörde. Beide Stellungnahmen sind der Vorlage beigefügt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {

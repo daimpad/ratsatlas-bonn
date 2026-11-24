@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/vorlage/231758</id>
 <title>Vorlage 231758: Kleine Anfrage der Volt-Fraktion zu den Aufwendungen für Kultur und Sport in Bonn</title>
 <subtitle>Verlauf der Vorlage 231758: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2023-09-26T00:00:00Z</updated>
+<updated>2023-11-20T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/231758.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2023#231758"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2013920#folge-231758-01%20ST</id>
+<title>Stellungnahme der Verwaltung 231758-01 ST: Kleine Anfrage der Volt-Fraktion zu den Aufwendungen für Kultur und Sport in Bonn</title>
+<updated>2023-11-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2023#231758"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2013920"/>
+<summary>Folgevorlage zu 231758</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2013920#vorlage</id>
 <title>Neue Vorlage 231758: Kleine Anfrage der Volt-Fraktion zu den Aufwendungen für Kultur und Sport in Bonn</title>

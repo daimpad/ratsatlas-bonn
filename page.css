@@ -446,7 +446,27 @@ body:has(.tl-raster) :is(.page-head, .page, .page-foot-inner) { width: min(1120p
 .d3-wahl { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; }
 .d3-wahl select { font: inherit; padding: 7px 8px; border-radius: 10px; border: 1px solid rgba(15, 15, 20, 0.2); background: #fff; }
 .d3-rahmen { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid rgba(15, 15, 20, 0.1); background: #f4f4f6; }
-#d3-karte { height: min(70vh, 640px); }
+#d3-karte { height: 72vh; min-height: 420px; max-height: 900px; }
+.d3-voll { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; background: var(--accent-ink); color: #fff; border-color: transparent; }
+.d3-voll[hidden] { display: none; }
+.d3-sym { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+/* Vollbild (Entscheidung des Auftraggebers 24.11.2026): Karte über das ganze Fenster oder den ganzen Bildschirm,
+   Bedienleiste und Statuszeile schweben im Glass-Stil darüber */
+html.d3-gesperrt, html.d3-gesperrt body { overflow: hidden; }
+.d3-buehne.ist-voll { position: fixed; inset: 0; z-index: 1000; margin: 0; background: #f4f4f6; }
+.d3-buehne.ist-voll .d3-rahmen { position: absolute; inset: 0; border: 0; border-radius: 0; }
+.d3-buehne.ist-voll #d3-karte { height: 100%; min-height: 0; max-height: none; }
+.d3-buehne.ist-voll .d3-leiste { position: absolute; z-index: 2; top: max(12px, env(safe-area-inset-top)); left: max(12px, env(safe-area-inset-left)); right: 56px; margin: 0; padding: 8px; width: max-content; max-width: calc(100% - 80px); border-radius: 16px; background: rgba(255, 255, 255, 0.82); -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4); border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 8px 28px rgba(15, 15, 20, 0.16); }
+.d3-buehne.ist-voll .d3-voll { margin-left: 0; }
+.d3-buehne.ist-voll .d3-hinweis { position: absolute; z-index: 2; left: max(12px, env(safe-area-inset-left)); bottom: max(30px, env(safe-area-inset-bottom)); margin: 0; padding: 6px 10px; max-width: calc(100% - 24px); border-radius: 10px; color: var(--text); background: rgba(255, 255, 255, 0.82); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.d3-buehne.ist-voll .d3-hinweis:empty { display: none; }
+@media (max-width: 700px) {
+  .d3-buehne.ist-voll .d3-leiste { flex-wrap: nowrap; overflow-x: auto; right: 12px; max-width: none; width: auto; gap: 6px; padding: 6px; }
+  .d3-buehne.ist-voll .d3-knopf { flex: none; padding: 8px 10px; font-size: 13px; }
+  .d3-buehne.ist-voll .d3-voll { order: -1; }   /* „Vollbild beenden“ zuerst sichtbar, die Leiste scrollt seitlich */
+  .d3-buehne.ist-voll .d3-wahl { flex: none; font-size: 13px; }
+  .d3-buehne.ist-voll .maplibregl-ctrl-top-right { top: 64px; }
+}
 #d3-karte:focus-visible { outline: 3px solid var(--accent-fill); outline-offset: -3px; }
 .d3-ohne { margin: 0; padding: 24px 16px; }
 .d3-hinweis { font-size: 14px; color: var(--muted); min-height: 1.4em; }
@@ -459,4 +479,4 @@ body:has(.tl-raster) :is(.page-head, .page, .page-foot-inner) { width: min(1120p
 .d3-pop { margin: 0; padding-left: 16px; max-height: 220px; overflow-y: auto; font-size: 13px; }
 .d3-pop span { color: var(--muted); }
 .maplibregl-ctrl-attrib a { text-decoration: underline; }
-@media (max-width: 700px) { #d3-karte { height: 62vh; } }
+@media (max-width: 700px) { #d3-karte { height: 64vh; min-height: 360px; } }

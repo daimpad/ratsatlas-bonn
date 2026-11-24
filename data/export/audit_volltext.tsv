@@ -10272,6 +10272,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 232211-08	kein Ort						
 232211-09 ST	kein Ort						
 232212	kein Ort						
+232212-01 ST	kein Ort						
 232214	Titel ohne gemeinsamen Ort, nicht verortet						
 232218	kein Ort						
 232219	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -13164,7 +13165,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Samansstraße	Küdinghoven	mittel	7
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Vinzenzstraße	Pützchen/Bechlinghoven	mittel	1
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Wehrhausweg	Küdinghoven	mittel	11
-252646	kein Ort						
 252646-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252647	Titel ohne gemeinsamen Ort, nicht verortet						
 252648	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -15622,7 +15622,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260912	kein Ort						
 260912-01 ST	kein Ort						
 260915	verortet	Hauptteil	volltext_strasse+hausnummer	Kurfürstenallee	Alt-Godesberg	mittel	2
-260915-01 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Kurfürstenallee	Alt-Godesberg	mittel	2
 260917	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
 260917-01	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
 260917-02 ST	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
