@@ -316,8 +316,11 @@ test("Mobil: Ebenen, Legenden und Quellen im Blatt „Karte“, ohne Verstöße"
   assert.match(await menu.textContent(), /^Karte/);
   assert.equal(await page.locator(".map-plans").isVisible(), false, "Ebenen stecken im Blatt");
   assert.equal(await page.locator("#sources").isVisible(), false, "Legenden und Quellen stecken im Blatt");
-  assert.ok(await page.locator(".map-whole").isVisible(), "„Ganz Bonn ansehen“ bleibt sichtbar");
-  assert.equal((await page.locator(".map-whole").boundingBox()).width, 44, "als Symbol");
+  assert.ok(await page.locator(".map-whole:not(.map-3d)").isVisible(), "„Ganz Bonn ansehen“ bleibt sichtbar");
+  assert.equal((await page.locator(".map-whole:not(.map-3d)").boundingBox()).width, 44, "als Symbol");
+  // „In 3D ansehen“: Symbol wie „Ganz Bonn ansehen“, führt in die Vollansicht der Seite 3d/ (Entscheidung 24.11.2026)
+  assert.equal((await page.locator(".map-3d").boundingBox()).width, 44, "3D als Symbol");
+  assert.equal(await page.locator(".map-3d").getAttribute("href"), "3d/?ansicht=bonn&vollbild=1");
   assert.ok((await page.locator(".leaflet-control-attribution").boundingBox()).height < 24, "Quellenzeile einzeilig");
   await menu.click();
   assert.equal(await menu.getAttribute("aria-expanded"), "true");

@@ -53,6 +53,8 @@ class Orte(unittest.TestCase):
         self.assertIn('href="?ortsteil=endenich"', html)
         self.assertIn("WebGL fehlt", html)
         self.assertIn("dl-de/zero-2.0", html)
+        self.assertIn('id="d3-buehne"', html)   # Vollbild: Leiste, Karte und Statuszeile in einer Bühne
+        self.assertIn('id="d3-voll"', html)
         orte = json.loads((site / "3d" / "orte.json").read_text())
         self.assertEqual(orte["ortsteile"][0]["orte"][0][3][1][1], "<b>A</b>")   # Titel wie in den Gebietsdateien; escapt die Seite
 

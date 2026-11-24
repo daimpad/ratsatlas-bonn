@@ -72,20 +72,24 @@ def body(d, gebaeude_stand):
     zeitraum = f"{d['seit'][8:10]}.{d['seit'][5:7]}.{d['seit'][:4]} bis {d['bis'][8:10]}.{d['bis'][5:7]}.{d['bis'][:4]}" if d.get("bis") else "letzte 12 Monate"
     return f"""    <h1>Bonn in 3D</h1>
     <p class="lead">Wo in Bonn wie viel beraten wird – die Vorlagen der letzten 12 Monate als Säulen zwischen den Gebäuden der Stadt.</p>
+    <div class="d3-buehne" id="d3-buehne">
     <div class="d3-leiste" role="group" aria-label="Ansicht">
       <button type="button" class="d3-knopf" data-ansicht="vorort" aria-pressed="true">Vorlagen vor Ort</button>
       <button type="button" class="d3-knopf" data-ansicht="bonn" aria-pressed="false">Ganz Bonn</button>
       <label class="d3-wahl">Ortsteil <select id="d3-ortsteil"></select></label>
       <button type="button" class="d3-knopf d3-leise" id="d3-neigung" aria-pressed="false">Schräg ansehen</button>
       <button type="button" class="d3-knopf d3-leise" id="d3-zurueck">Ansicht zurücksetzen</button>
+      <button type="button" class="d3-knopf d3-voll" id="d3-voll" aria-pressed="false" hidden><svg class="d3-sym" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span>Vollbild</span></button>
     </div>
     <div class="d3-rahmen">
       <div id="d3-karte" role="region" aria-label="3D-Karte. Dieselben Angaben stehen in der Liste unter der Karte und in der Tabelle aller Ortsteile." tabindex="0"></div>
       <p class="d3-ohne" id="d3-ohne" hidden>Ihr Browser kann die 3D-Karte nicht zeigen (WebGL fehlt). Die Liste und die Tabelle unten enthalten dieselben Angaben; die <a href="../">Hauptkarte</a> zeigt alle Vorlagen.</p>
     </div>
     <p class="d3-hinweis" id="d3-status" aria-live="polite"></p>
+    </div>
     <details class="hh-mehr" open><summary>So lesen Sie die Karte</summary>
-      <p><strong>Vorlagen vor Ort:</strong> Jede Säule steht an einem Ort, den eine Vorlage nennt (Straße, Gebäude oder Angabe der Stadt), und ist umso höher, je mehr Vorlagen dort beraten wurden. Die Farbe zeigt das Thema der jüngsten Vorlage. Ein Klick auf eine Säule nennt die Vorlagen; „Im Ratsatlas öffnen“ führt zum Vorgang.</p>
+      <p><strong>Vorlagen vor Ort:</strong> Jede Säule steht an einem Ort, den eine Vorlage nennt (Straße, Gebäude oder Angabe der Stadt), und ist umso höher, je mehr Vorlagen dort beraten wurden. Die Farbe zeigt das Thema der jüngsten Vorlage. Ein Klick auf eine Säule nennt die Vorlagen; der Titel führt zum Vorgang.</p>
+      <p><strong>Vollbild:</strong> „Vollbild“ zeigt die Karte auf dem ganzen Bildschirm, die Bedienung bleibt oben. Zurück mit „Vollbild beenden“ oder der Taste Esc. Mit der Maus: ziehen verschiebt, rechte Taste oder Strg und ziehen dreht und neigt; auf dem Telefon mit zwei Fingern.</p>
       <p><strong>Ganz Bonn:</strong> Eine Säule je Ortsteil, so hoch wie die Zahl der Vorlagen mit Ortsbezug in den letzten 12 Monaten. Ein Klick wechselt zu diesem Ortsteil.</p>
       <p>Die Höhe einer Säule sagt nichts über die Bedeutung eines Vorhabens. Vorlagen ohne genauen Ort fehlen in der Ansicht „Vorlagen vor Ort“.</p>
       <ul class="d3-legende">{legende}</ul>

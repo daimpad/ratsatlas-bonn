@@ -602,6 +602,20 @@
       },
     });
     new Whole().addTo(map);
+    // In 3D ansehen: öffnet die Seite 3d/ in der Vollansicht, beim gewählten Ortsteil mit diesem (Entscheidung 24.11.2026)
+    const Drei = L.Control.extend({
+      options: { position: "bottomright" },
+      onAdd() {
+        const b = L.DomUtil.create("a", "map-style map-whole map-3d");
+        b.id = "map-3d";
+        b.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#i-3d"/></svg><span class="map-whole-text">In 3D ansehen</span>';
+        b.title = "Gebäude und Vorlagen als 3D-Karte im Vollbild (Seite „Bonn in 3D“)";
+        b.href = link3d();
+        L.DomEvent.disableClickPropagation(b);
+        return b;
+      },
+    });
+    new Drei().addTo(map);
     // Kartenhintergrund standardmäßig grau, damit die Marker hervortreten; die Wahl merkt sich der Browser
     const MapStyle = L.Control.extend({
       options: { position: "bottomright" },
@@ -2251,8 +2265,14 @@
   // Schlüssel: ab dem Vorjahr des Datenstands
   const hasPaperFeed = (p) => Boolean(index && dataStand) &&
     ((p.date || "") >= (index.feeds_ab || `${Number(dataStand.slice(0, 4)) - 1}-01-01`) || ["in Beratung", "offen"].includes(p.stand));
+  // Ziel des Knopfs „In 3D ansehen“: Ortsteil in 3D, sonst die Ansicht „Ganz Bonn“ (3d/ kennt nur Ortsteile)
+  function link3d() {
+    return area && area.kind === "ortsteil" ? `3d/?ortsteil=${encodeURIComponent(area.key)}&vollbild=1` : "3d/?ansicht=bonn&vollbild=1";
+  }
   function subscribeArea() {
     const box = $("#subscribe");
+    const d3 = $("#map-3d");
+    if (d3) d3.href = link3d();
     // nur den Verweis des vorigen Gebiets entfernen; der Feed über ganz Bonn steht fest im Kopf (index.html)
     document.querySelectorAll('link[rel="alternate"][data-gebiet]').forEach((l) => l.remove());
     if (!index || area.kind === "bonn") {
