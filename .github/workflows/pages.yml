@@ -275,6 +275,19 @@ jobs:
         run: |
           if [ -f _kacheln/kacheln/stand.json ]; then cp -r _kacheln/kacheln _site/; else echo "keine Kacheln, Rückfall auf OSM"; fi
 
+      # Gebäude für 3d/ aus dem Branch gebaeude (gebaeude.yml, vierteljährlich); fehlt er, zeigt 3d/ nur die Säulen
+      - name: Gebäude für 3D holen
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+          ref: gebaeude
+          path: _gebaeude
+        continue-on-error: true
+
+      - name: Gebäude für 3D in die Seite
+        run: |
+          if [ -f _gebaeude/3d/gebaeude/stand.json ]; then mkdir -p _site/3d && cp -r _gebaeude/3d/gebaeude _site/3d/; else echo "keine Gebäude für 3D"; fi
+
       - name: Auffindbarkeit (robots.txt, sitemap.xml, Adressen für SITE_URL)
         run: python -m pipeline seo
 
@@ -303,6 +316,10 @@ jobs:
           if [ ! -f _site/kacheln/stand.json ] && [ -f _deploy/kacheln/stand.json ]; then
             cp -r _deploy/kacheln _site/kacheln
             echo "::warning::Graue Kacheln aus dem letzten Stand übernommen (Branch kacheln nicht geladen)"
+          fi
+          if [ ! -f _site/3d/gebaeude/stand.json ] && [ -f _deploy/3d/gebaeude/stand.json ]; then
+            mkdir -p _site/3d && cp -r _deploy/3d/gebaeude _site/3d/gebaeude
+            echo "::warning::Gebäude für 3D aus dem letzten Stand übernommen (Branch gebaeude nicht geladen)"
           fi
           for datei in baustellen.json anliegen.json; do
             if [ ! -f "_site/data/export/bonn/$datei" ] && [ -f "_deploy/data/export/bonn/$datei" ] && [ ! -d _archiv/.git ]; then
