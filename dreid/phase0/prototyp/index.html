@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D-Prototyp – Ratsatlas Bonn (Phase 0)</title>
+  <link rel="stylesheet" href="node_modules/maplibre-gl/dist/maplibre-gl.css">
+  <style>
+    html, body { margin: 0; height: 100%; font: 14px/1.4 Inter, system-ui, sans-serif; color: #0f0f14; background: #fafaff; }
+    #map { position: absolute; inset: 0; }
+    .panel { position: absolute; top: 12px; left: 12px; max-width: 320px; padding: 12px 14px; border-radius: 14px;
+      background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(10px); box-shadow: 0 8px 24px rgba(30, 20, 60, 0.15); }
+    .panel h1 { font-size: 16px; margin: 0 0 4px; }
+    .panel p { margin: 4px 0; color: #5a5a68; font-size: 13px; }
+    .seg { display: flex; gap: 6px; margin-top: 8px; }
+    .seg button { font: inherit; padding: 6px 10px; border-radius: 10px; border: 1px solid rgba(124, 58, 237, 0.35); background: #fff; color: #6d28d9; cursor: pointer; }
+    .seg button[aria-pressed="true"] { background: #6d28d9; color: #fff; }
+  </style>
+</head>
+<body>
+  <div id="map" role="region" aria-label="3D-Karte (Prototyp). Dieselben Angaben stehen auf der Hauptkarte in der Liste."></div>
+  <div class="panel">
+    <h1>3D-Prototyp (Phase 0)</h1>
+    <p id="info">Wird geladen …</p>
+    <div class="seg" role="group" aria-label="Ansicht">
+      <button type="button" data-v="endenich" aria-pressed="true">Endenich: Gebäude und Vorlagen</button>
+      <button type="button" data-v="bonn" aria-pressed="false">Ganz Bonn: Vorlagen je Ortsteil</button>
+    </div>
+  </div>
+  <script type="module">
+    import * as ml from "./node_modules/maplibre-gl/dist/maplibre-gl.mjs";   // Prototyp: npm install maplibre-gl@6.19.0 im selben Ordner
+    const maplibregl = ml.default || ml;
+    if (maplibregl.setWorkerUrl) maplibregl.setWorkerUrl(new URL("./node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs", import.meta.url).href);
+    const t0 = performance.now();
+    window.__ready = false;
+    const map = new maplibregl.Map({
+      container: "map", center: [7.0705, 50.7255], zoom: 15.6, pitch: 58, bearing: -20, maxPitch: 75,
+      style: { version: 8, sources: { grau: { type: "raster", tiles: [location.origin + "/kacheln/{z}/{x}/{y}.png"], tileSize: 256, minzoom: 10, maxzoom: 16,
+        attribution: "© OpenStreetMap-Mitwirkende (ODbL), Protomaps · Gebäude: Geobasis NRW, 3D-Gebäudemodell LoD1 (dl-de/zero-2.0)" } },
+        layers: [{ id: "grau", type: "raster", source: "grau" }] },
+    });
+    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }));
+    const j = (u) => fetch(u).then((r) => r.json());
+    map.on("load", async () => {
+      const [geb, vor, ot] = await Promise.all([j("data/endenich_gebaeude.geojson"), j("data/endenich_vorlagen.geojson"), j("data/ortsteile_saeulen.geojson")]);
+      map.addSource("geb", { type: "geojson", data: geb });
+      map.addLayer({ id: "geb", type: "fill-extrusion", source: "geb", paint: {
+        "fill-extrusion-color": "#d8d6e0", "fill-extrusion-height": ["get", "h"], "fill-extrusion-opacity": 0.9 } });
+      map.addSource("vor", { type: "geojson", data: vor });
+      map.addLayer({ id: "vor", type: "fill-extrusion", source: "vor", paint: {
+        "fill-extrusion-color": ["get", "farbe"], "fill-extrusion-height": ["get", "h"], "fill-extrusion-base": 0, "fill-extrusion-opacity": 0.95 } });
+      map.addSource("ot", { type: "geojson", data: ot });
+      map.addLayer({ id: "ot", type: "fill-extrusion", source: "ot", layout: { visibility: "none" }, paint: {
+        "fill-extrusion-color": ["interpolate", ["linear"], ["get", "n"], 0, "#ddd6fe", 60, "#a78bfa", 200, "#6d28d9"],
+        "fill-extrusion-height": ["*", ["get", "n"], 12], "fill-extrusion-opacity": 0.85 } });
+      map.once("idle", () => {
+        const ms = Math.round(performance.now() - t0);
+        document.getElementById("info").textContent = `${geb.features.length} Gebäude (Höhe aus LoD1), ${vor.features.reduce((a, f) => a + f.properties.n, 0)} Vorlagen der letzten 12 Monate an ${vor.features.length} Orten als Säulen (Höhe nach Zahl, Farbe nach Thema). Fertig nach ${ms} ms.`;
+        window.__ready = ms;
+      });
+    });
+    document.querySelectorAll(".seg button").forEach((b) => b.addEventListener("click", () => {
+      const bonn = b.dataset.v === "bonn";
+      document.querySelectorAll(".seg button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+      ["geb", "vor"].forEach((id) => map.setLayoutProperty(id, "visibility", bonn ? "none" : "visible"));
+      map.setLayoutProperty("ot", "visibility", bonn ? "visible" : "none");
+      map.easeTo(bonn ? { center: [7.115, 50.715], zoom: 11.4, pitch: 55, bearing: -15 } : { center: [7.0705, 50.7255], zoom: 15.6, pitch: 58, bearing: -20 });
+    }));
+  </script>
+</body>
+</html>
