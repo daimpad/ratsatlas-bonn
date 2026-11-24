@@ -16657,6 +16657,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung teilt mit, dass es zum Fußweg zwischen WestSide und Auf dem Hügel im Baugebiet Am Vogelsang keine neuen Erkenntnisse gibt. Der Weg steht frühestens 2028 zur Verfügung, da der Vorhabenträger die Verkehrssicherungspflicht trägt und eine frühere Freigabe aus Sicherheitsgründen nicht möglich ist.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
