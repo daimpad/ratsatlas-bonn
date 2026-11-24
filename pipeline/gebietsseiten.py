@@ -70,6 +70,7 @@ def _page(site_url, path, title, description, body, root, head=""):
         <ul>
           <li><a href="{root}einfach/">Einfache Sprache</a></li>
           <li><a href="{root}gebiete/">Alle Gebiete</a></li>
+          <li><a href="{root}rat-im-video/">Rat im Video</a></li>
           <li><a href="{root}rss/">Abonnieren (RSS)</a></li>
           <li><a href="{root}teilen/">Teilen und Presse</a></li>
         </ul>
