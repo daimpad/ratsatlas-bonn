@@ -102,6 +102,9 @@ WORKFLOW_TEXT = {
                                "quellen ab."),
     "kacheln.yml": ("Kartenkacheln", "Erzeugt vierteljährlich die grauen Kartenkacheln für Bonn aus OpenStreetMap-Daten "
                                      "und legt sie im Branch kacheln ab."),
+    "gebaeude.yml": ("Gebäude für 3D", "Lädt vierteljährlich das 3D-Gebäudemodell des Landes für Bonn, legt je Ortsteil "
+                                       "Grundriss und Höhe ab und speichert sie im Branch gebaeude für die Seite „Bonn "
+                                       "in 3D“."),
     "tests.yml": ("Tests", "Prüft jede Änderung am Code: Python-Tests, Browser-Tests mit Playwright und "
                            "Barrierefreiheit mit axe."),
     "eval.yml": ("Auswertung Assistent", "Stellt dem Ratsassistenten einen Katalog von Fragen und wertet die Antworten "

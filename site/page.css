@@ -437,3 +437,26 @@ body:has(.tl-raster) :is(.page-head, .page, .page-foot-inner) { width: min(1120p
 .tab-scroll { overflow-x: auto; }
 .wz-schmal { display: none; }
 @media (max-width: 600px) { .wz-breit { display: none; } .wz-schmal { display: block; } }
+
+/* Seite „Bonn in 3D“ (pipeline/dreidseite.py, site/dreid.js) */
+.d3-leiste { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0; }
+.d3-knopf { font: 600 14px/1 Inter, system-ui, sans-serif; padding: 9px 12px; border-radius: 10px; border: 1px solid rgba(124, 58, 237, 0.35); background: #fff; color: var(--accent-ink); cursor: pointer; }
+.d3-knopf[aria-pressed="true"]:not(.d3-leise) { background: var(--accent-ink); color: #fff; }
+.d3-leise { font-weight: 500; }
+.d3-wahl { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; }
+.d3-wahl select { font: inherit; padding: 7px 8px; border-radius: 10px; border: 1px solid rgba(15, 15, 20, 0.2); background: #fff; }
+.d3-rahmen { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid rgba(15, 15, 20, 0.1); background: #f4f4f6; }
+#d3-karte { height: min(70vh, 640px); }
+#d3-karte:focus-visible { outline: 3px solid var(--accent-fill); outline-offset: -3px; }
+.d3-ohne { margin: 0; padding: 24px 16px; }
+.d3-hinweis { font-size: 14px; color: var(--muted); min-height: 1.4em; }
+.d3-legende { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 14px; padding: 0; margin: 8px 0 0; font-size: 13px; }
+.d3-legende li { display: flex; align-items: center; gap: 6px; }
+.d3-legende span { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+.d3-vorlagen { padding-left: 18px; font-size: 15px; }
+.d3-vorlagen li { margin: 4px 0; }
+.d3-pop-h { margin: 0 0 4px; font-weight: 600; }
+.d3-pop { margin: 0; padding-left: 16px; max-height: 220px; overflow-y: auto; font-size: 13px; }
+.d3-pop span { color: var(--muted); }
+.maplibregl-ctrl-attrib a { text-decoration: underline; }
+@media (max-width: 700px) { #d3-karte { height: 62vh; } }
