@@ -16307,6 +16307,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261514-01 AA	kein Ort						
 261514-02 ST	kein Ort						
 261514-03	kein Ort						
+261514-04 AA	kein Ort						
 261515	verortet	Hauptteil	volltext_strasse	Windeckstraße	Bonn-Zentrum	mittel	2
 261515	verortet	Hauptteil	volltext_strasse+hausnummer	Poststraße	Bonn-Zentrum	mittel	2
 261516	kein Ort						
@@ -16580,6 +16581,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261791-01 ST	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
 261791-02 AA	kein Ort						
 261791-03 AA	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Bad Godesberg		niedrig	1
+261791-04 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Bad Godesberg		mittel	1
 261792	verortet	Hauptteil	volltext_strasse	Römerstraße	Bonn-Castell	mittel	1
 261792	verortet	Hauptteil	volltext_strasse	Römerstraße	Graurheindorf	mittel	1
 261792-01 ST	verortet	Hauptteil	volltext_strasse	Niederkasseler Straße	Geislar	mittel	1
@@ -16929,3 +16931,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262245	verortet	Hauptteil	volltext_strasse	Kiefernweg	Venusberg	niedrig	1
 262246	kein Ort						
 262248	kein Ort						
+262250	Titel ohne gemeinsamen Ort, nicht verortet						
+262251	kein Ort						
+262252	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Holtorf	niedrig	1
+262252	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1

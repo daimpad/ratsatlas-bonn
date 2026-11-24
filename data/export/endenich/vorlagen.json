@@ -17519,6 +17519,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, das betriebliche Mobilitätsmanagement moveBonn für Bonner Unternehmen und Verwaltungseinrichtungen dauerhaft über 2026 hinaus fortzuführen. Dafür sollen die Finanzmittel im Haushalt bereitgestellt werden. Die Verwaltung soll zudem für den Haushalt ab 2027 weitere Kosteneinsparungen vorschlagen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-23"
    }
   },
   {
@@ -19979,6 +19984,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung informiert über den Stand der Elektrifizierung der S 23. Ab Juni 2025 beginnen die Hauptarbeiten für die Oberleitung auf der Voreifelbahn, und ab 2026 soll die Strecke schrittweise technisch fertiggestellt werden. Für 2025 sind zudem mehrere Sperrungen auf der Strecke angekündigt.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-23"
    }
   },
   {

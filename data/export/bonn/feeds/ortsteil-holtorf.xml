@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-holtorf</id>
 <title>Ratsatlas Bonn – Holtorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Holtorf</subtitle>
-<updated>2026-11-18T00:00:00Z</updated>
+<updated>2026-11-23T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-holtorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030656#vorlage</id>
+<title>Neue Vorlage 262252: Sitzungstermine des Wissenschafts- und Internationales Ausschusses im Jahr 2027</title>
+<updated>2026-11-23T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#262252"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030656"/>
+<summary>Mitteilungsvorlage · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030587#vorlage</id>
 <title>Neue Vorlage 262221: Termine für die Sitzungen des Rechnungsprüfungsausschusses im Jahr 2027</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#240681-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017506"/>
 <summary>Kenntnisnahme am 2024-06-18; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2017776#vorlage</id>
-<title>Neue Vorlage 241078: Baumaßnahme Holtorfer Bach, Ertüchtigung Hochwasserschutz und Renaturierungsmaßnahmen am Holtorfer Bach; Bereitstellung überplanmäßiger Mittel im investiven Haushalt; Finanzstelle 5660813085210</title>
-<updated>2024-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#241078"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017776"/>
-<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: entschieden</summary>
 </entry>
 </feed>
