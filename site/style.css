@@ -508,6 +508,9 @@ body.detail-closed #timeline-wrap { right: 16px; }
 .map-style[aria-pressed="true"] { background: var(--accent-fill); color: #fff; border-color: transparent; }
 /* „Ganz Bonn ansehen“: auf breiten Bildschirmen als Text, auf dem Telefon als Symbol (siehe unten) */
 .map-whole .icon { display: none; }
+/* „In 3D ansehen“: ein Link im Aussehen der Kartenknöpfe, mit Symbol */
+.map-style.map-3d { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--accent-ink); }
+.map-3d .icon { display: block; width: 16px; height: 16px; }
 /* Blatt „Karte“ (Ebenen, Legenden, Quellen) nur auf dem Telefon */
 .map-sheet { display: none; }
 

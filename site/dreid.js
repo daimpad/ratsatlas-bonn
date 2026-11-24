@@ -85,6 +85,41 @@ async function zeigen() {
   }
 }
 
+// Vollbild (Entscheidung des Auftraggebers 24.11.2026): die Bühne (Leiste, Karte, Statuszeile) füllt das Fenster; auf Klick
+// zusätzlich den Bildschirm, wo der Browser das erlaubt (iPhone: nur das Fenster). ?vollbild=1 öffnet die Seite so
+// (Knopf „In 3D ansehen“ der Hauptkarte); den Bildschirm darf eine Seite nur nach einem Klick belegen.
+let voll = false;
+const vollElement = () => document.fullscreenElement || document.webkitFullscreenElement || null;
+function vollbild(an, bildschirm = false) {
+  voll = an;
+  const buehne = $("#d3-buehne"), knopf = $("#d3-voll");
+  buehne.classList.toggle("ist-voll", an);
+  document.documentElement.classList.toggle("d3-gesperrt", an);
+  knopf.setAttribute("aria-pressed", String(an));
+  knopf.querySelector("span").textContent = an ? "Vollbild beenden" : "Vollbild";
+  if (an && bildschirm) {
+    const f = buehne.requestFullscreen || buehne.webkitRequestFullscreen;
+    try { const r = f && f.call(buehne); if (r && r.catch) r.catch(() => {}); } catch { /* nur das Fenster */ }
+  }
+  if (!an && vollElement()) {
+    const r = (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    if (r && r.catch) r.catch(() => {});
+  }
+  const url = new URL(location.href);
+  if (an) url.searchParams.set("vollbild", "1"); else url.searchParams.delete("vollbild");
+  history.replaceState(null, "", url);
+  if (karte) { karte.resize(); requestAnimationFrame(() => karte.resize()); }
+}
+function vollbildEinrichten() {
+  const knopf = $("#d3-voll");
+  knopf.hidden = false;
+  knopf.addEventListener("click", () => vollbild(!voll, true));
+  const ende = () => { if (!vollElement() && voll) { vollbild(false); knopf.focus(); } else if (karte) karte.resize(); };
+  document.addEventListener("fullscreenchange", ende);
+  document.addEventListener("webkitfullscreenchange", ende);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && voll) { vollbild(false); knopf.focus(); } });
+}
+
 function popup(lngLat, html) {
   new maplibregl.Popup({ maxWidth: "320px", closeButton: true }).setLngLat(lngLat).setHTML(html).addTo(karte);
 }
@@ -102,6 +137,8 @@ async function start() {
     $("#d3-ohne").hidden = false;
     $("#d3-karte").hidden = true;
   } else {
+    vollbildEinrichten();
+    if (p.get("vollbild") === "1") vollbild(true);
     if (maplibregl.setWorkerUrl) maplibregl.setWorkerUrl(new URL("./vendor/maplibre/maplibre-gl-worker.mjs", new URL("..", location.href)).href);
     karte = new maplibregl.Map({
       container: "d3-karte", ...ziel(), pitch: schraeg ? 58 : 0, bearing: schraeg ? -18 : 0, maxPitch: 70, minZoom: 9.5, maxZoom: 18,
