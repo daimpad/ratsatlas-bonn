@@ -63,6 +63,14 @@
   const KURZDATUM = new Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit" });
   const mittag = (iso) => new Date(iso + "T12:00:00Z");
   const uhr = (t) => (t ? (t.endsWith(":00") ? `${+t.slice(0, 2)} Uhr` : `${t} Uhr`) : "");
+  // letzte Ratssitzung mit Aufzeichnung (Seite „Rat im Video“, Entscheidung des Auftraggebers 24.11.2026)
+  function videoZeile(v) {
+    const url = v && /^https:\/\/www\.youtube\.com\//.test(v.video || "") ? esc(v.video) : null;
+    if (!url) return "";
+    return `<p class="akt-video"><svg class="icon" aria-hidden="true"><use href="#i-video"/></svg><span>Zuletzt aufgezeichnet: ${esc(v.gremium)}, ${KURZDATUM.format(mittag(v.date))}<br>
+      <a href="${url}" target="_blank" rel="noopener">Video<span class="visually-hidden"> der Sitzung vom ${fmtDate(v.date)} (YouTube, neuer Tab)</span></a>
+      · <a href="rat-im-video/">Alle Aufzeichnungen</a></span></p>`;
+  }
   function aktuellHtml(offen) {
     const a = index && index.aktuell;
     if (!a) return "";
@@ -84,6 +92,7 @@
     const kopf = (icon, titel, zusatz = "") => `<h3 class="akt-h"><span class="akt-icon"><svg class="icon" aria-hidden="true"><use href="#${icon}"/></svg></span>${titel}${zusatz ? ` <span class="akt-zusatz">· ${zusatz}</span>` : ""}</h3>`;
     return `<details class="aktuell" id="aktuell"${offen || !MOBILE.matches ? " open" : ""}><summary>Aktuell in Bonn${stand ? ` <span class="akt-stand">Stand ${stand}</span>` : ""}</summary>
       ${s ? `<section class="akt-card akt-card-sitzungen">${kopf("i-calendar", "Nächste Sitzungen")}<ul class="akt-list">${s}</ul>
+        ${videoZeile(a.video)}
         ${zeit ? '<p class="akt-more"><button type="button" class="link-btn" data-open-termine>Alle Termine →</button></p>' : ""}</section>` : ""}
       ${v ? `<section class="akt-card akt-card-neu">${kopf("i-doc", "Neu eingereicht", "ganz Bonn")}<ul class="akt-list">${v}</ul></section>` : ""}</details>`;
   }

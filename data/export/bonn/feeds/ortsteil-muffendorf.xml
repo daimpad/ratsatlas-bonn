@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-muffendorf</id>
 <title>Ratsatlas Bonn – Muffendorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Muffendorf</subtitle>
-<updated>2026-11-19T00:00:00Z</updated>
+<updated>2026-11-24T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-muffendorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030659#vorlage</id>
+<title>Neue Vorlage 262254: Bürgerantrag: Antrag auf Prüfung und Einrichtung einer baulichen Maßnahme zur Geschwindigkeitsreduzierung in der Lyngsbergstraße in Bonn-Muffendorf</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#262254"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030659"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030382#vorlage</id>
 <title>Neue Vorlage 202262-03 ST: BBB-Anfrage: Bauruine auf dem Grundstück Peter-Schwingen-Straße Ecke Muffendorfer Straße, Kennung [Flurstück ausgelassen]601700935-05431601700940; DS 202262-02</title>
@@ -574,7 +582,7 @@
 <updated>2025-06-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#212405-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023125"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die BBB-Fraktion fragt nach dem Stand eines Klageverfahrens des Bauherrn eines abgelehnten Bauvorhabens für sechs Einfamilienhäuser in Bonn-Muffendorf, Lehnpütz. Sie will wissen, ob inzwischen neue Bauabsichten vorliegen und ob dafür Genehmigungen beantragt wurden.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023117#vorlage</id>
@@ -582,7 +590,7 @@
 <updated>2025-06-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#231871-07"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023117"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die BBB-Fraktion beantragt, dass die Oberbürgermeisterin bis zur nächsten Sitzung ein Parkraumkonzept für die Muffendorfer Hauptstraße und die anliegenden Straßen vorlegt. Außerdem soll geprüft werden, ob in Muffendorf eine Quartiersgarage oder ein Quartiersparkplatz errichtet werden kann.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2023115#vorlage</id>
@@ -590,7 +598,7 @@
 <updated>2025-06-04T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#231871-06"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023115"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die BBB-Fraktion fragt nach dem Stand des Parkraumkonzepts für die Muffendorfer Hauptstraße und anliegende Straßen. Sie will wissen, wann die Oberbürgermeisterin den Auftrag erfüllt, wie viele Mitarbeiter wie viele Stunden daran gearbeitet haben und ob die Nutzung des Geländes des ehemaligen Landesvermessungsamtes geprüft wurde.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022843#vorlage</id>
@@ -598,7 +606,7 @@
 <updated>2025-05-27T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#253140"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022843"/>
-<summary>Beschlussvorlage · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden</summary>
+<summary>Beschlussvorlage · federführend: Stabsstellle Bürgerbeteiligung · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, die geplante Art der Bürgerbeteiligung zu genehmigen. Das Vorhaben 164691 zur Denkmalbereichssatzung für den historischen Ortskern Muffendorf soll in die Vorhabenliste aufgenommen werden.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022699#beratung-2025-05-08-Rat</id>
@@ -630,7 +638,7 @@
 <updated>2025-05-06T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#241435-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022699"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die CDU-Fraktion beantragt, den bisherigen Aufstellungsbeschluss für eine Denkmalbereichssatzung in Muffendorf aufzuheben und die Verwaltung mit einer überarbeiteten Satzung für den historischen Ortskern zu beauftragen. Bestimmte Straßen wie die Bürvigstraße sollen dabei ausgeschlossen werden. Vor einem neuen Beschluss sollen eine Ortsbegehung und eine Informationsveranstaltung für Eigentümer stattfinden.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022352#vorlage</id>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#240986-62%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021279"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Fraktion BBB beantragt, Geld für den Kauf von Grundstücken und den Bau von Gehwegen am Marienforster Steinweg (zwischen Goldbergweg und Wolkenburgstraße) in den Haushalt 2025/2026 aufzunehmen. Die Kosten sollen aus Mitteln des Klimaplans oder durch Einsparungen bei Gebührenzinsen gedeckt werden.</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2018677#beratung-2025-01-29-Bezirksvertretung%20Bad%20Godesberg</id>
-<title>Bezirksvertretung Bad Godesberg: „zur Kenntnis genommen - mit Maßgabe“ – 231871-04 ST Parkraumkonzept für die Muffendorfer Hauptstraße und anliegende Bereiche</title>
-<updated>2025-01-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#231871-04%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2018677"/>
-<summary>Kenntnisnahme am 2025-01-29; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

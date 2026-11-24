@@ -3,11 +3,43 @@
 <id>tag:allris-bonn,2026:feed/ganz-bonn</id>
 <title>Ratsatlas Bonn – ganz Bonn</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: ganz Bonn</subtitle>
-<updated>2026-11-23T00:00:00Z</updated>
+<updated>2026-11-24T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ganz-bonn.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bonn:ganz"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030667#vorlage</id>
+<title>Neue Vorlage 262258: Bürgerantrag: Verbesserung der Beleuchtung und Wegesicherheit auf den Zugangswegen zur Universitätssportanlage (Nachtigallenweg/Bodelschwinghweg), Bonn-Venusberg</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#262258"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030667"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030661#vorlage</id>
+<title>Neue Vorlage 262255: Bürgerantrag: Austausch der Mülleimer auf dem Meßdorfer Feld gegen tiergeschützte Abfallbehälter</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lessenich-messdorf#262255"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030661"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030659#vorlage</id>
+<title>Neue Vorlage 262254: Bürgerantrag: Antrag auf Prüfung und Einrichtung einer baulichen Maßnahme zur Geschwindigkeitsreduzierung in der Lyngsbergstraße in Bonn-Muffendorf</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:muffendorf#262254"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030659"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029547#vorlage</id>
+<title>Neue Vorlage 261799: Zielbeschluss über die Entwicklung der Flächen „Telekom Dome“ im Stadtbezirk Hardtberg, Ortsteil Duisdorf</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261799"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029547"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030656#vorlage</id>
 <title>Neue Vorlage 262252: Sitzungstermine des Wissenschafts- und Internationales Ausschusses im Jahr 2027</title>
@@ -775,37 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lessenich-messdorf#261911-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030214"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030164#vorlage</id>
-<title>Neue Vorlage 262039: Gewährung eines Mietzuschusses sowie eines Zuschusses zu den Betriebskosten an den Heimatverein Lengsdorf</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#262039"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030164"/>
-<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030151#vorlage</id>
-<title>Neue Vorlage 260504-10 ST: Stellungnahme der Verwaltung zu: BSW/SBI – Große Anfrage (II) zu DS 260504 und zu Maßstäben der Vergütung von Spitzenpositionen in kommunalen Unternehmen</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260504-10%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030151"/>
-<summary>Stellungnahme der Verwaltung · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030086#vorlage</id>
-<title>Neue Vorlage 262005: Öffentlich geförderter Glasfaserausbau – Nachträgliche Genehmigung der Antragstellung nach der Bundesrichtlinie „Gigabit RL-2.0“ (Dunkelgraue Flecken) und Bereitstellung der Eigenanteile im kommenden Doppelhaushalt</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262005"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030086"/>
-<summary>Beschlussvorlage · federführend: 03 Amt für Wirtschaftsförderung · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030086#beratung-2026-11-18-Ausschuss%20f%C3%BCr%20Digitalisierung%2C%20Dienstleistung%20und%20Verwaltungsmodernisierung</id>
-<title>Ausschuss für Digitalisierung, Dienstleistung und Verwaltungsmodernisierung: „ohne Votum“ – 262005 Öffentlich geförderter Glasfaserausbau – Nachträgliche Genehmigung der Antragstellung nach der Bundesrichtlinie „Gigabit RL-2.0“ (Dunkelgraue Flecken) und Bereitstellung der Eigenanteile im kommenden Doppelhaushalt</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262005"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030086"/>
-<summary>Empfehlung am 2026-11-18; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

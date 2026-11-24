@@ -172,9 +172,12 @@ UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005628
 DTSTAMP:20261208T170000Z
 DTSTART:20261208T170000Z
 SUMMARY:Bezirksvertretung Hardtberg
-DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
- t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung: https://
+ www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005628\nEinladung: https:
+ //www.bonn.sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3274695&OTYP=41
+ \nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005628
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005589

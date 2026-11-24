@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-lessenich-messdorf</id>
 <title>Ratsatlas Bonn – Lessenich/Meßdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Lessenich/Meßdorf</subtitle>
-<updated>2026-11-18T00:00:00Z</updated>
+<updated>2026-11-24T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-lessenich-messdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lessenich-messdorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030661#vorlage</id>
+<title>Neue Vorlage 262255: Bürgerantrag: Austausch der Mülleimer auf dem Meßdorfer Feld gegen tiergeschützte Abfallbehälter</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lessenich-messdorf#262255"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030661"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030214#vorlage</id>
 <title>Neue Vorlage 261911-01 ST: Einwohnerfrage: Bauvorhaben am Rande des Meßdorfer Feldes</title>
@@ -742,7 +750,7 @@
 <updated>2025-05-27T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lessenich-messdorf#253215"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022999"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die CDU-Bezirksfraktion stellt eine Große Anfrage zur Fällung zweier geschützter Bäume im Landschaftsschutzgebiet Messdorfer Feld nahe der Weißen Brücke. Sie fragt die Verwaltung nach Gründen, Genehmigung, fehlender Beteiligung der Baumkommission und möglichen Konsequenzen. Die Bäume hatten einen Umfang von etwa 345 und 266 Zentimetern.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2022362#beratung-2025-05-21-Ausschuss%20f%C3%BCr%20Wohnen%2C%20Planung%20und%20Bauen</id>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lessenich-messdorf#241177-07%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021679"/>
 <summary>Kenntnisnahme am 2025-05-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2017996#beratung-2025-05-12-Rat</id>
-<title>Rat: „geändert beschlossen“ – 241177 Koalitionsantrag: Flächenerweiterung des Bonner Tierheims</title>
-<updated>2025-05-12T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lessenich-messdorf#241177"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017996"/>
-<summary>Entscheidung am 2025-05-12; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

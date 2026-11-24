@@ -13840,6 +13840,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, den Bürgerantrag zum Ausbau der A565 zwischen Bonn-Endenich und Bonn-Nord an die Bezirksregierung Köln zu senden und ihn zum Universitätscampus Endenich im Bebauungsplanverfahren als Stellungnahme zu werten, wobei Umweltbelange bei Bedarf gutachterlich untersucht werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
@@ -16173,6 +16178,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, dass der Rat die Ergebnisse des gesamtstädtischen Grobscreenings zur Kenntnis nimmt. Außerdem soll die Verwaltung beauftragt werden, für die Gebiete Nordstadt und Bad Godesberg eine vertiefende Untersuchung vorzubereiten und durchzuführen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
@@ -16797,6 +16807,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung nimmt zum Bürgerantrag für Anwohnerparkplätze im Bereich Endenicher Straße Stellung. Sie verweist auf die gesamtstädtische Parkraumstrategie und erklärt, dass der Abschnitt zwischen Frongasse und Regerstraße bereits geprüft wird, kurzfristige Lösungen aber nicht absehbar sind. Der Rat soll die Stellungnahme zur Kenntnis nehmen und den Antrag für erledigt erklären.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
@@ -17319,6 +17334,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, den Beschluss zu Richtungspfeilen auf der Straße „Auf dem Hügel“ aufzuheben. Polizei und Verwaltung lehnen die Änderung wegen möglicher Gefahren durch Berufsverkehr ab. Dafür wären zusätzliche Beschilderungen mit Mehrkosten nötig.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
@@ -17946,6 +17966,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grünen stellen eine Große Anfrage. Sie wollen wissen, wie der Stand bei der beschlossenen provisorischen Öffnung des Fußwegs ist. Der Weg liegt zwischen WestSide und Auf dem Hügel an der Ostseite der Vogelsang-Neubauten.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
@@ -18313,6 +18338,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung beantwortet einen Bürgerantrag für einen Fußgängerüberweg oder eine Lichtsignalanlage im Bereich Am Propsthof/Robert-Havemann-Straße. Sie verweist auf DS 252760, wo die Prüfung eines Fußgängerüberwegs bereits erfolgt ist. Das Interesse besteht im Zusammenhang mit dem Neubaugebiet west-side-one.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
@@ -18449,6 +18479,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, den Bürgerantrag für eine Aufpflasterung im verkehrsberuhigten Bereich „Am Klostergarten“ abzulehnen. Der Antragsteller soll über die Gründe informiert werden. Damit ist das Verfahren abgeschlossen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
@@ -19393,6 +19428,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Stadt Bonn lädt vom 14. bis 28. Mai 2025 zur Öffentlichkeitsbeteiligung zum Bebauungsplan „Universitäts-Campus Endenich“ ein. Im Ortsteil Endenich soll der bestehende Campus zu einem modernen Lehr- und Forschungsstandort mit studentischem Wohnen ausgebaut werden. Interessierte können sich online oder bei einer Veranstaltung am 15. Mai in der Campusmensa Poppelsdorf informieren und äußern.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
