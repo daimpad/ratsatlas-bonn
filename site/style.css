@@ -922,7 +922,7 @@ mark.unbelegt { background: #fde68a; color: #5c3300; border-radius: 4px; padding
 .aufz-titel { font-weight: 600; font-size: 14px; }
 .aufz-kurz { font-weight: 400; font-size: 12px; color: var(--muted-aufz, #5a5a68); margin-left: 4px; }
 .aufz-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px !important; }
-.aufz-knopf { display: inline-block; font-weight: 600; font-size: 13px; text-decoration: none; padding: 5px 10px; border-radius: 10px;
+.aufz-knopf { display: inline-block; max-width: 100%; overflow-wrap: anywhere; font-weight: 600; font-size: 13px; text-decoration: none; padding: 5px 10px; border-radius: 10px;
   background: var(--accent-ink); color: #fff; }
 .aufz-knopf:hover { background: #5b21b6; }
 .aufz-knopf-leise { background: #fff; color: var(--accent-ink); border: 1px solid rgba(124, 58, 237, 0.35); }

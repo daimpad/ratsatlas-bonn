@@ -146,3 +146,10 @@ class Seiten(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_federfuehrung_ohne_namen(self):
+        # Amt noch nicht in der Liste der Verwaltungsbereiche (262160, 25.11.2026): Seite entsteht mit der Angabe aus „amt“
+        p = _paper("262160", amt="61 Stadtplanungsamt",
+                   responsibility=[{"kind": "federfuehrend", "label": None, "name": None, "derived": 0}])
+        html = vorgangsseiten.body(p, "ohne-ortsbezug/2026", set(), {})
+        self.assertIn("<dt>Federführend</dt><dd>61 Stadtplanungsamt</dd>", html)
