@@ -334,7 +334,10 @@
       if (papers.length) return papers.filter((p) => dim === "vorlage"
         ? p.date && t(p.date) >= a && t(p.date) <= b
         : p.steps.some((s) => s.date && (s.typ === "beratung" || s.typ === "entscheidung") && t(s.date) >= a && t(s.date) <= b)).length;
-      return 0;
+      // ohne Einzelobjekte (Übersicht ganz Bonn): Summe der Monate, die ganz im Zeitraum liegen, aus der Dichte
+      // (Prüfung 25.11.2026, F12: bisher „0 Vorlagen“ unter Balken für ganz Bonn)
+      if (!data) return 0;
+      return bins().filter((x) => x.start >= a - DAY && x.end <= b + 2 * DAY).reduce((s, x) => s + x.total, 0);
     }
     function setRange(a, b, silent) {
       if (a > b) [a, b] = [b, a];
@@ -343,7 +346,8 @@
       const klemm = (x) => Math.min(extent[1], Math.max(extent[0], x));
       range = [klemm(a), klemm(b)];
       draw();
-      const text = `${de(range[0])} – ${de(range[1])} · ${countIn(range[0], range[1])} Vorlagen`;
+      const n = countIn(range[0], range[1]);
+      const text = `${de(range[0])} – ${de(range[1])} · ${papers.length ? "" : "etwa "}${n.toLocaleString("de-DE")} ${dimSel.value === "vorlage" ? "Vorlagen" : "Beratungen"}`;
       root.querySelector(".tl-range").textContent = `Zeitraum: ${text}`;
       clearTimeout(debounce);
       // Ansage erst, wenn die Auswahl zur Ruhe kommt, nicht bei jeder Zeigerbewegung

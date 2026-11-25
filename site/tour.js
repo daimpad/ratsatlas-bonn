@@ -61,7 +61,7 @@
       text: "„Vorlagen“ öffnet die Liste aller Vorlagen im Gebiet, „Zeitleiste“ die Zeitleiste; die Karte bleibt darunter sichtbar. Der Vorgang öffnet sich, sobald Sie eine Vorlage wählen, und schließt mit dem Pfeil oben rechts. Esc schließt die Fläche, in der Sie gerade sind. Viel Freude beim Erkunden." },
   ];
 
-  let steps = [], i = 0, root = null, card = null, spot = null, raf = 0, prevFocus = null, ui = null;
+  let steps = [], i = 0, root = null, card = null, spot = null, raf = 0, prevFocus = null, ui = null, vorher = null;
 
   const shown = (el) => el && el.getClientRects().length > 0 && getComputedStyle(el).visibility !== "hidden";
   const first = (sel) => sel ? [...document.querySelectorAll(sel)].find((el) => shown(el) && inView(el.getBoundingClientRect())) : null;
@@ -104,6 +104,7 @@
     const about = $("#about");
     if (about && about.open) about.close();
     prevFocus = document.activeElement;
+    vorher = ui.zustand ? ui.zustand() : null;
     steps = STEPS.filter((s) => !s.when || s.when());
     ui.menu(null);
     build();
@@ -127,8 +128,13 @@
     if (ui.nav) ui.nav(false);
     root.remove();
     root = null;
-    const back = prevFocus && prevFocus.isConnected && shown(prevFocus) ? prevFocus : $("#detail-heading");
-    if (back) back.focus();
+    // Zustand von vor der Tour wiederherstellen, dann Fokus zurück: auf das auslösende Element, sonst auf die Schaltfläche
+    // „Tour“ im neu gezeichneten Fenster, den Kopf des Fensters oder die Suche (Telefon: nie auf <body>)
+    Promise.resolve(ui.zurueck ? ui.zurueck(vorher) : null).catch(() => {}).then(() => {
+      const ziele = [prevFocus, $("#detail [data-tour]"), $("#detail-heading"), $("#q")];
+      const back = ziele.find((el) => el && el.isConnected && shown(el));
+      if (back) back.focus();
+    });
   }
 
   let goSeq = 0, busy = false;

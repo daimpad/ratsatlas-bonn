@@ -80,6 +80,8 @@ function updateState() {
   $("#chat-settings").hidden = !consent;
   const ok = consent && configured();
   $("#chat-input").disabled = !ok || busy;
+  // Grund im Feld nennen, solange Fragen nicht möglich sind (Prüfung 25.11.2026, F11)
+  $("#chat-input").placeholder = consent && !configured() ? "Erst unter „Einstellungen“ Anbieter, Modell und Schlüssel eintragen" : "Frage zu Bonner Ratsvorgängen …";
   $("#chat-send").disabled = !ok || busy;
   $("#chat-send").hidden = busy;
   $("#chat-stop").hidden = !busy;
