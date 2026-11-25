@@ -172,9 +172,12 @@ UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005752
 DTSTAMP:20261125T000000Z
 DTSTART:20261209T170000Z
 SUMMARY:Schulausschuss
-DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung noch nicht veröffen
- tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+DESCRIPTION:Sitzung des Schulausschusses\nTagesordnung: https://www.bonn.si
+ tzung-online.de/public/TO010?SILFDNR=2005752\nEinladung: https://www.bonn.
+ sitzung-online.de/public/doc?DOCTYP=108&DOLFDNR=3274992&OTYP=41\nQuelle: O
+ Parl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
+URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005752
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005589

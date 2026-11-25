@@ -1,7 +1,7 @@
 {
  "meta": {
   "ortsteil": "Endenich",
-  "count": 711,
+  "count": 710,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -51367,147 +51367,6 @@
    }
   },
   {
-   "reference": "231164-03 ST",
-   "name": "Bürgerantrag: Einrichtung eines Gehweges im Bereich Am Burggraben",
-   "paper_type": "Stellungnahme der Verwaltung",
-   "date": "2023-11-21",
-   "amt": "61 Stadtplanungsamt",
-   "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014821",
-   "main_file": "https://www.bonn.sitzung-online.de/public/doc?DOCTYP=130&DOLFDNR=2632379&OTYP=41",
-   "responsibility": [
-    {
-     "kind": "federfuehrend",
-     "method": "underDirectionOf",
-     "evidence": null,
-     "derived": 0,
-     "label": "61 Stadtplanungsamt",
-     "name": "61-3 Stadtverkehr"
-    }
-   ],
-   "originators": [
-    {
-     "actor": "Verwaltung",
-     "actor_type": "Verwaltung",
-     "organization_id": "https://www.bonn.sitzung-online.de/oparl/organizations/at/227",
-     "method": "paper_type",
-     "evidence": "Stellungnahme der Verwaltung",
-     "derived": 1
-    }
-   ],
-   "process": [
-    {
-     "position": 0,
-     "role": "Kenntnisnahme",
-     "authoritative": 0,
-     "meeting_id": "https://www.bonn.sitzung-online.de/oparl/meetings/2001889",
-     "gremium": "Bezirksvertretung Bonn",
-     "meeting": "Sitzung der Bezirksvertretung Bonn",
-     "start_date": "2023-12-05T16:00:00.000Z",
-     "cancelled": 0,
-     "number": "6.5.3",
-     "result": "zur Kenntnis genommen",
-     "public": 1,
-     "status": "beraten"
-    }
-   ],
-   "superordinated": [
-    {
-     "reference": "231164",
-     "paper_type": "Bürgerantrag § 24 GO - Öffentlich",
-     "name": "Bürgerantrag: Einrichtung eines Gehweges im Bereich Am Burggraben",
-     "date": "2023-07-03"
-    }
-   ],
-   "subordinated": [],
-   "locations": [
-    {
-     "level": "strasse",
-     "name": "Am Burggraben",
-     "ortsteil": "Endenich",
-     "stadtbezirk": "Bonn",
-     "lon": 7.072678,
-     "lat": 50.724117,
-     "stage": "B",
-     "method": "strasse",
-     "confidence": "mittel",
-     "evidence": "Am Burggraben",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014821",
-     "source": "osm"
-    }
-   ],
-   "plans": [],
-   "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014821",
-   "stand": "beraten, ohne Entscheidung",
-   "themes": [
-    {
-     "theme": "verkehr",
-     "method": "amt",
-     "evidence": "61-3 Stadtverkehr",
-     "confidence": "mittel"
-    }
-   ],
-   "parties": [
-    "Verwaltung"
-   ],
-   "steps": [
-    {
-     "typ": "initiierung",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014821",
-     "actors": [
-      "Verwaltung"
-     ],
-     "actors_status": "abgeleitet"
-    },
-    {
-     "typ": "vorbereitung",
-     "label": "Verwaltungsinterne Vorbereitung",
-     "status": "nicht_öffentlich",
-     "note": "vorbereitung"
-    },
-    {
-     "typ": "veroeffentlichung",
-     "label": "Datum der Vorlage",
-     "status": "belegt",
-     "date": "2023-11-21",
-     "source": "oparl-bonn",
-     "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2014821",
-     "note": "datum"
-    },
-    {
-     "typ": "beratung",
-     "label": "Bezirksvertretung Bonn",
-     "role": "Kenntnisnahme",
-     "status": "belegt",
-     "source": "oparl-bonn",
-     "date": "2023-12-05",
-     "date_status": "abgeleitet",
-     "date_source": "oparl-lite",
-     "number": "6.5.3",
-     "result": "zur Kenntnis genommen",
-     "stand": "beraten",
-     "result_source": "oparl-lite"
-    }
-   ],
-   "soll": {
-    "verfahren": "buergerantrag",
-    "sicherheit": "hoch",
-    "grund": "Vorlagenart „Bürgerantrag § 24 GO - Öffentlich“ (§ 24 GO NRW)",
-    "passung": "passt",
-    "ist": [
-     "bv"
-    ],
-    "abweichung": []
-   },
-   "kurzfassung": {
-    "text": "Die Verwaltung nimmt Stellung zu einem Bürgerantrag für einen Gehweg in der Straße Am Burggraben zwischen Pastoratsgasse und Am Cöllenhof. Sie prüft, ob ein verkehrsberuhigter Bereich möglich ist, da die Straße zu schmal für Gehwege neben der geplanten Fahrradstraße ist.",
-    "modell": "mistral-large-latest",
-    "erzeugt": "2026-10-24"
-   }
-  },
-  {
    "reference": "231724-02 ST",
    "name": "Carsharing-Parkplätze auf dem Magdalenenplatz - Stellungnahme der Verwaltung",
    "paper_type": "Stellungnahme der Verwaltung",
@@ -57335,12 +57194,6 @@
      "date": "2023-10-09"
     },
     {
-     "reference": "231164-03 ST",
-     "paper_type": "Stellungnahme der Verwaltung",
-     "name": "Bürgerantrag: Einrichtung eines Gehweges im Bereich Am Burggraben",
-     "date": "2023-11-21"
-    },
-    {
      "reference": "231164-04 AA",
      "paper_type": "Änderungsantrag",
      "name": "SPD-Bezirksfraktion Änderungsantrag: Bürgerantrag: Einrichtung eines Gehweges im Bereich Am Burggraben Antrag zur Vorlage 231164",
@@ -57414,15 +57267,6 @@
      "date": "2023-10-09",
      "source": "oparl-bonn",
      "reference": "231164-02 ST",
-     "title": "Bürgerantrag: Einrichtung eines Gehweges im Bereich Am Burggraben"
-    },
-    {
-     "typ": "folgevorlage",
-     "label": "Stellungnahme der Verwaltung",
-     "status": "belegt",
-     "date": "2023-11-21",
-     "source": "oparl-bonn",
-     "reference": "231164-03 ST",
      "title": "Bürgerantrag: Einrichtung eines Gehweges im Bereich Am Burggraben"
     },
     {

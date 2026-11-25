@@ -218,6 +218,15 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006828
+DTSTAMP:20261125T000000Z
+DTSTART:20270217T170000Z
+SUMMARY:Kulturausschuss
+DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung noch nicht veröffe
+ ntlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006475
 DTSTAMP:20261125T000000Z
 DTSTART:20270217T230000Z
@@ -283,6 +292,15 @@ DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006829
+DTSTAMP:20261125T000000Z
+DTSTART:20270407T160000Z
+SUMMARY:Kulturausschuss
+DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung noch nicht veröffe
+ ntlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006476
 DTSTAMP:20261125T000000Z
 DTSTART:20270408T150000Z
@@ -335,6 +353,15 @@ DTSTART:20270504T160000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
  tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006830
+DTSTAMP:20261125T000000Z
+DTSTART:20270511T160000Z
+SUMMARY:Kulturausschuss
+DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung noch nicht veröffe
+ ntlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -429,6 +456,15 @@ DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006831
+DTSTAMP:20261125T000000Z
+DTSTART:20270707T160000Z
+SUMMARY:Kulturausschuss
+DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung noch nicht veröffe
+ ntlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006563
 DTSTAMP:20261125T000000Z
 DTSTART:20270713T150000Z
@@ -509,6 +545,15 @@ DTSTART:20270914T160000Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
  t veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006832
+DTSTAMP:20261125T000000Z
+DTSTART:20270916T160000Z
+SUMMARY:Kulturausschuss
+DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung noch nicht veröffe
+ ntlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -619,6 +664,15 @@ DTSTART:20271202T170000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
  tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006833
+DTSTAMP:20261125T000000Z
+DTSTART:20271207T170000Z
+SUMMARY:Kulturausschuss
+DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung noch nicht veröffe
+ ntlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT

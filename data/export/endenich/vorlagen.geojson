@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "meta": {
   "ortsteil": "Endenich",
-  "count": 711,
+  "count": 710,
   "sources": [
    {
     "name": "oparl-bonn",
@@ -8609,30 +8609,6 @@
     "method": "strasse",
     "confidence": "mittel",
     "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014896"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     7.072678,
-     50.724117
-    ]
-   },
-   "properties": {
-    "reference": "231164-03 ST",
-    "name": "Bürgerantrag: Einrichtung eines Gehweges im Bereich Am Burggraben",
-    "paper_type": "Stellungnahme der Verwaltung",
-    "date": "2023-11-21",
-    "amt": "61 Stadtplanungsamt",
-    "place": "Am Burggraben",
-    "level": "strasse",
-    "ortsteil": "Endenich",
-    "stage": "B",
-    "method": "strasse",
-    "confidence": "mittel",
-    "web": "https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2014821"
    }
   },
   {

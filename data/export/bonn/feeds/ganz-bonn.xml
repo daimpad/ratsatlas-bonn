@@ -9,12 +9,36 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030697#vorlage</id>
+<title>Neue Vorlage 262271: Informationsbrief - Öffentlichkeitsbeteiligung zum vorhabenbezogenen Bebauungsplan Nr. 6319-2 "An der Ziegelei" im Stadtbezirk Hardtberg, Ortsteil Lengsdorf</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#262271"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030697"/>
+<summary>Informationsbrief · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030692#vorlage</id>
+<title>Neue Vorlage 262268: Bürgerantrag: Reduzierung der Geschosszahl der geplanten Bebauung an der Gartenstraße und Beweissicherung</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262268"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030692"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030691#vorlage</id>
 <title>Neue Vorlage 262267: Tagesordnungspunkte in nichtöffentlicher Sitzung des Schulausschusses am 09.12.2026</title>
 <updated>2026-11-25T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262267"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030691"/>
 <summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 40 Schulamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030689#vorlage</id>
+<title>Neue Vorlage 262266: Bürgerantrag: Gutachten zum Baumbestand am südlichen Nonnenpfad</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262266"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030689"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030684#vorlage</id>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holtorf#262221"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030587"/>
 <summary>Mitteilungsvorlage · federführend: 14 Rechnungsprüfungsamt · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030573#vorlage</id>
-<title>Neue Vorlage 262220: Sitzungstermine des Betriebsausschusses im Jahr 2027</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262220"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030573"/>
-<summary>Mitteilungsvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030564#vorlage</id>
-<title>Neue Vorlage 262218: CDU/SPD-Große Anfrage: Sachstand Umbaumaßnahmen Freiwillige Feuerwehr Lengsdorf</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#262218"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030564"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030563#vorlage</id>
-<title>Neue Vorlage 262217: CDU/SPD-Große Anfrage: Sachstand Aufstellung von Haltestellenwartehäuschen im Hardtberg</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#262217"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030563"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
 </feed>

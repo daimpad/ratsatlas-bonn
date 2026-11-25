@@ -93,6 +93,13 @@
    "anker": "drucksachennummer"
   },
   {
+   "begriff": "Vorgang",
+   "erklaerung": "Im Ratsatlas eine Vorlage zusammen mit ihren Folgevorlagen, etwa Stellungnahmen der Verwaltung, Änderungsanträgen und Mitteilungen. Ein Vorgang trägt die Drucksachennummer der ersten Vorlage. „Drucksache“ ist ein anderes Wort für Vorlage.",
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Felder „superordinatedPaper“ und „subordinatedPaper“; Begriff des Ratsatlas",
+   "gruppe": "vorlagen",
+   "anker": "vorgang"
+  },
+  {
    "begriff": "Beschlussvorlage",
    "erklaerung": "Vorlage der Verwaltung mit einem Beschlussvorschlag, über den ein Gremium entscheidet.",
    "fundstelle": "allgemeine Erklärung",
@@ -371,6 +378,13 @@
    "fundstelle": "§§ 8, 10 BauGB",
    "gruppe": "planung",
    "anker": "bebauungsplan"
+  },
+  {
+   "begriff": "SGB",
+   "erklaerung": "Zwei Bedeutungen: In Gremien- und Amtsnamen wie „Betriebsausschuss SGB“ das Städtische Gebäudemanagement Bonn (Amt 85), das die städtischen Gebäude baut und unterhält, etwa Schulen. Mit einer römischen Zahl wie „SGB II“ oder „SGB VIII“ das Sozialgesetzbuch, etwa Grundsicherung für Arbeitsuchende (II) oder Kinder- und Jugendhilfe (VIII).",
+   "fundstelle": "Ratsinformationssystem der Stadt Bonn (OParl-API), Organisation „85 Städtisches Gebäudemanagement Bonn“ (Kurzname „85 SGB“); Sozialgesetzbuch",
+   "gruppe": "kuerzel",
+   "anker": "sgb"
   }
  ],
  "gruppen": {

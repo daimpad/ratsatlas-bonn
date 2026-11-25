@@ -2270,7 +2270,9 @@
         ${planIndexUrl() ? `<br><button type="button" class="link-btn" data-open-plan="${esc(x.nr)}">Planchronik öffnen</button>` : ""}</li>`).join("")}</ul>` : ""}
       <p class="links">${link(reportLink(p), "Verortung falsch? Hinweis geben", "btn btn-secondary")}
         ${hasPaperFeed(p) ? `<a class="btn btn-soft" href="${BONN}feeds/vorlagen/${slug(p.reference)}.xml" type="application/atom+xml"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg>Diesen Vorgang abonnieren</a>` : ""}
-        ${p.seite ? `<a class="btn btn-soft" href="vorgang/${slug(p.reference)}/">Seite zu dieser Vorlage</a>` : ""}</p>
+        ${p.seite ? `<a class="btn btn-soft" href="vorgang/${slug(p.reference)}/">Seite zu dieser Vorlage</a>` : ""}
+        <button type="button" class="btn btn-soft" data-teilen><svg class="icon" aria-hidden="true"><use href="#i-link"/></svg>Link teilen</button>
+        <span class="teilen-status" role="status"></span></p>
       ${p.superordinated.length ? `<details class="acc"><summary>Bezieht sich auf (${p.superordinated.length})</summary><ul class="related">${rel(p.superordinated)}</ul></details>` : ""}
       <details class="acc"><summary>Quellen dieser Vorlage</summary><ul>
         <li>Quellobjekt: ${link(p.source_object, esc(p.source_object)) || esc(p.source_object)}</li>
@@ -2712,6 +2714,22 @@
       syncUrl();
       verlaufZurueck = false;
     }
+  });
+  // „Link teilen“ im Vorgang (Prüfung 25.11.2026, V2): Teilen-Menü des Geräts, sonst Kopieren mit Rückmeldung
+  document.addEventListener("click", async (e) => {
+    const b = e.target.closest("[data-teilen]");
+    if (!b || !selected) return;
+    const status = b.parentElement.querySelector(".teilen-status");
+    const daten = { title: `${selected.reference} – ${selected.name}`, url: location.href };
+    try {
+      if (navigator.share && MOBILE.matches) { await navigator.share(daten); return; }
+      await navigator.clipboard.writeText(daten.url);
+      status.textContent = "Link kopiert.";
+    } catch (err) {
+      if (err && err.name === "AbortError") return;   // Teilen-Menü geschlossen
+      status.textContent = `Bitte die Adresse oben im Browser kopieren: ${daten.url}`;
+    }
+    setTimeout(() => { if (status.isConnected) status.textContent = ""; }, 6000);
   });
   function closePanelNachZurueck() {
     setPanel("panel-detail", false);

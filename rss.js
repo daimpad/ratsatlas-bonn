@@ -2,6 +2,21 @@
 // Knöpfe verborgen und die Adresse ist ein markierbares Feld. Schlägt das Kopieren fehl, ist der Text markiert und die
 // Meldung nennt die Tastenkombination.
 (() => {
+  // Feed eines Vorgangs oder Gebiets aus der Adresse (?feed=…, Link „Diesen Vorgang abonnieren“ auf den Seiten je
+  // Vorgang; Prüfung 25.11.2026, V8): nur Feeds dieser Seite, sonst bleibt der Feed über ganz Bonn
+  {
+    const q = new URLSearchParams(location.search), f = q.get("feed") || "", name = q.get("name") || "";
+    if (/^data\/export\/bonn\/feeds\/[a-z0-9-]+(?:\/[a-z0-9-]+)?\.xml$/.test(f)) {
+      const url = new URL(`../${f}`, location.href).href;
+      const feld = document.getElementById("rss-url"), titel = document.getElementById("rss-adresse-t");
+      if (feld) feld.value = url;
+      if (titel) titel.textContent = name ? `Feed zu ${name.slice(0, 120)}` : "Feed zu Ihrer Auswahl";
+      const ansehen = document.querySelector(".rss-cta .rss-zweit");
+      if (ansehen) ansehen.href = url;
+      const meta = document.querySelector(".rss-cta .meta");
+      if (meta) meta.textContent = "Neue Beratungen, Ergebnisse und Folgevorlagen zu dieser Auswahl. Ohne Kopierknopf: Adresse im Feld markieren und kopieren (Strg+C, am Mac ⌘+C).";
+    }
+  }
   const taste = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent) ? "⌘+C" : "Strg+C";
 
   function markieren(el) {
