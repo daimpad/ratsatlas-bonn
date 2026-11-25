@@ -2271,7 +2271,9 @@
     ((p.date || "") >= (index.feeds_ab || `${Number(dataStand.slice(0, 4)) - 1}-01-01`) || ["in Beratung", "offen"].includes(p.stand));
   // Ziel des Knopfs „In 3D ansehen“: Ortsteil in 3D, sonst die Ansicht „Ganz Bonn“ (3d/ kennt nur Ortsteile)
   function link3d() {
-    return area && area.kind === "ortsteil" ? `3d/?ortsteil=${encodeURIComponent(area.key)}&vollbild=1` : "3d/?ansicht=bonn&vollbild=1";
+    if (area && area.kind === "ortsteil") return `3d/?ortsteil=${encodeURIComponent(area.key)}&vollbild=1`;
+    if (area && area.kind === "bezirk") return `3d/?ansicht=bonn&bezirk=${encodeURIComponent(area.name)}&vollbild=1`;
+    return "3d/?ansicht=bonn&vollbild=1";
   }
   function subscribeArea() {
     const box = $("#subscribe");

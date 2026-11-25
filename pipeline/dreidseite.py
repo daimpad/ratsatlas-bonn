@@ -81,10 +81,10 @@ def body(d, gebaeude_stand):
       <label class="d3-wahl">Ortsteil <select id="d3-ortsteil"></select></label>
       <button type="button" class="d3-knopf d3-leise" id="d3-neigung" aria-pressed="false">Schräg ansehen</button>
       <button type="button" class="d3-knopf d3-leise" id="d3-zurueck">Ansicht zurücksetzen</button>
-      <button type="button" class="d3-knopf d3-voll" id="d3-voll" aria-pressed="false" hidden><svg class="d3-sym" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span>Vollbild</span></button>
+      <button type="button" class="d3-knopf d3-voll" id="d3-voll" hidden><svg class="d3-sym d3-sym-voll" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><svg class="d3-sym d3-sym-ende" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg><span>Vollbild</span></button>
     </div>
     <div class="d3-rahmen">
-      <div id="d3-karte" role="region" aria-label="3D-Karte. Dieselben Angaben stehen in der Liste unter der Karte und in der Tabelle aller Ortsteile." tabindex="0"></div>
+      <div id="d3-karte" role="region" aria-label="3D-Karte. Dieselben Angaben stehen in der Liste unter der Karte und in der Tabelle aller Ortsteile."></div>
       <p class="d3-ohne" id="d3-ohne" hidden>Ihr Browser kann die 3D-Karte nicht zeigen (WebGL fehlt). Die Liste und die Tabelle unten enthalten dieselben Angaben; die <a href="../">Hauptkarte</a> zeigt alle Vorlagen.</p>
     </div>
     <p class="d3-hinweis" id="d3-status" aria-live="polite"></p>
