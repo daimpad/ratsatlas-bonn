@@ -104,3 +104,22 @@ Entscheidung des Auftraggebers vom 02.11.2026: zuerst messen, dann die Gebietsda
 **Ergebnis:**
 - Im Gebiet sinkt die Blockierzeit um rund 250 ms, die LCP liegt bei 2,8 s; der Wert „vorher“ streute in dieser Messreihe stärker als zuvor (3,4 s in der Messung zur grauen Karte).
 - Der Richtwert von 2,5 s ist noch knapp verfehlt. Das Teilen der Gebietsdatei bleibt als nächster Schritt möglich; nach der Messung spart es im Gebiet höchstens 60–80 ms Rechenzeit.
+
+## Messung 25.11.2026 (live, nach den Prüfungen vom November)
+
+Lighthouse 12.8.2 mobil (simuliert 150 ms RTT, 1,6 Mbit/s, CPU × 4), Hauptadresse mit Komprimierung, je 5 Läufe, Median:
+
+| Seite | LCP | FCP | TBT |
+|---|---|---|---|
+| Start (ganz Bonn) | 2,36 s | 0,97 s | 65 ms |
+| Endenich | 2,26 s | 1,25 s | 261 ms |
+| Themenseite Verkehr (2 Läufe) | 1,3 s | – | 37–142 ms |
+
+- Der Richtwert von 2,5 s für das größte Element ist auf Start und Gebiet erreicht. Eine erste Messreihe mit
+  eingeschalteter Software-Grafik (`--use-gl=angle --use-angle=swiftshader`, nötig nur für die 3D-Seite) ergab
+  2,7 s, 2,9 s und eine Blockierzeit der Themenseite von 2,2 s; diese Werte sind durch die Software-Grafik verfälscht.
+- `defer` für die Skripte der Karte (Lighthouse: „render-blocking“) geprüft und verworfen: FCP lokal 1,56 → 1,21 s,
+  aber die Skripte laden dann mit niedriger Priorität und die Kacheln (LCP) beginnen später; mit
+  `fetchpriority="high"` verschlechtert sich dafür FCP (1,5 → 2,0 s). Lokal schwankte LCP stark (3,5–9,8 s), die
+  Messung an der Hauptadresse ist maßgeblich.
+- Kein weiterer Eingriff nötig; das Teilen der Gebietsdatei bleibt zurückgestellt.

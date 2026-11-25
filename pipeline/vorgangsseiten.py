@@ -99,7 +99,8 @@ def body(p, key, seiten, ortsteile, themen=()):
     zeile = lambda dt, dd: f"      <dt>{dt}</dt><dd>{dd}</dd>"
     angaben = [zeile("Drucksache", escape(ref)), zeile("Art", escape(p["paper_type"] or "–")),
                zeile("Datum", _date(p.get("date")))]
-    feder = [r for r in p.get("responsibility") or [] if r.get("kind") == "federfuehrend"]
+    # ohne Namen (Amt fehlt noch in der Liste der Verwaltungsbereiche) wie ohne Angabe behandeln
+    feder = [r for r in p.get("responsibility") or [] if r.get("kind") == "federfuehrend" and r.get("name")]
     if feder:
         r = feder[0]
         text = escape(r["name"]) + (f" ({escape(r['label'])})" if r.get("label") and r["label"] != r["name"] else "")
