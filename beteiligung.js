@@ -20,7 +20,8 @@ const WEGE = [
 ];
 const BUERGERANTRAG_URL = "https://www.bonn.de/vv/produkte/buergerantrag-anregungen-und-beschwerden-gemaess-24-gemeindeordnung-nrw.php";
 
-let ctx, soll, root, state = { bezirk: "Bonn" };
+// ohne gewähltes Gebiet kein stillschweigend vorgewählter Stadtbezirk (Prüfung 25.11.2026, F13)
+let ctx, soll, root, state = { bezirk: null };
 
 const links = (ls) => (ls || []).map((l) => `<a href="${href(l.url)}" target="_blank" rel="noopener">${esc(l.label)}<span class="visually-hidden"> (neuer Tab)</span></a>`).join(" · ");
 const when = (m) => `${deDate(m.date)}${m.time ? `, ${esc(m.time)} Uhr` : ""}`;
@@ -28,7 +29,7 @@ const when = (m) => `${deDate(m.date)}${m.time ? `, ${esc(m.time)} Uhr` : ""}`;
 // nächste Sitzung eines Gremiums (nicht abgesagt), optional erst ab einem Datum
 function next(gremium, from) {
   return (ctx.meetings() || []).filter((m) => m.gremium === gremium && !m.cancelled && m.date >= from)
-    .sort((a, b) => a.date.localeCompare(b.date))[0] || null;
+    .sort((a, b) => a.date.localeCompare(b.date) || (a.time || "").localeCompare(b.time || ""))[0] || null;
 }
 
 function gelegenheiten(bz, today) {
@@ -39,13 +40,14 @@ function gelegenheiten(bz, today) {
   const rat = next("Rat", today);
   const stadt = soll.buergerantrag_ziel?.stadt;
   const stadtSitzung = stadt ? next(stadt, addDays(today, 21)) : null;
-  const row = (label, body) => `<li><span class="bt-when">${label}</span><span>${body}</span></li>`;
+  // je Zeile ein Datum zum Sortieren: die Liste steht in zeitlicher Folge (Prüfung 25.11.2026, F13)
+  const row = (datum, label, body) => ({ datum, html: `<li><span class="bt-when">${label}</span><span>${body}</span></li>` });
   const items = [
-    sitzung && row(when(sitzung), `Nächste Sitzung der ${esc(bv)}${sitzung.web ? ` · <a href="${href(sitzung.web)}" target="_blank" rel="noopener">Tagesordnung<span class="visually-hidden"> (neuer Tab)</span></a>` : " · Tagesordnung noch nicht veröffentlicht"}`),
-    frist && row(`bis ${deDate(addDays(frist.date, -21))}`, `Einwohnerfrage oder Bürgerantrag für die Sitzung der ${esc(bv)} am ${deDate(frist.date)} einreichen`),
-    stadtSitzung && row(`bis ${deDate(addDays(stadtSitzung.date, -21))}`, `Bürgerantrag zu einem stadtweiten Anliegen für den ${esc(stadt)} am ${deDate(stadtSitzung.date)}`),
-    rat && row(when(rat), "Nächste Sitzung des Rates, öffentlich und im Livestream"),
-  ].filter(Boolean);
+    sitzung && row(`${sitzung.date} ${sitzung.time || ""}`, when(sitzung), `Nächste Sitzung der ${esc(bv)}${sitzung.web ? ` · <a href="${href(sitzung.web)}" target="_blank" rel="noopener">Tagesordnung<span class="visually-hidden"> (neuer Tab)</span></a>` : " · Tagesordnung noch nicht veröffentlicht"}`),
+    frist && row(addDays(frist.date, -21), `bis ${deDate(addDays(frist.date, -21))}`, `Einwohnerfrage oder Bürgerantrag für die Sitzung der ${esc(bv)} am ${deDate(frist.date)} einreichen`),
+    stadtSitzung && row(addDays(stadtSitzung.date, -21), `bis ${deDate(addDays(stadtSitzung.date, -21))}`, `Bürgerantrag zu einem stadtweiten Anliegen für den ${esc(stadt)} am ${deDate(stadtSitzung.date)}`),
+    rat && row(`${rat.date} ${rat.time || ""}`, when(rat), "Nächste Sitzung des Rates, öffentlich und im Livestream"),
+  ].filter(Boolean).sort((a, b) => a.datum.localeCompare(b.datum)).map((x) => x.html);
   return `<section class="bt-next" aria-labelledby="bt-next-h"><h3 id="bt-next-h">Nächste Gelegenheiten im Stadtbezirk ${esc(bz)}</h3>
     ${items.length ? `<ul class="bt-dates">${items.join("")}</ul>` : '<p class="hint">Im Sitzungskalender ist noch keine kommende Sitzung eingetragen.</p>'}
     <p class="hint">Fristen <span class="derived">abgeleitet</span></p><details class="acc acc-meta"><summary>So sind die Fristen berechnet</summary><p class="hint">Fristen berechnet aus den Sitzungsterminen (21 Tage vor der Sitzung); maßgeblich sind Einladung und Geschäftsordnung.</p></details>
@@ -82,8 +84,8 @@ function render() {
   if (!soll) { body.innerHTML = '<p class="hint">Das Regelwerk ist nicht verfügbar.</p>'; return; }
   // heutiges Datum in Bonn, nicht UTC
   const today = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(new Date()), bz = state.bezirk;
-  body.innerHTML = `<label class="bt-pick">Ihr Stadtbezirk <select id="bt-bezirk">${BEZIRKE.map((b) => `<option${b === bz ? " selected" : ""}>${esc(b)}</option>`).join("")}</select></label>
-    ${gelegenheiten(bz, today)}${zeitstrahl()}${wege(bz, today)}
+  body.innerHTML = `<label class="bt-pick">Ihr Stadtbezirk <select id="bt-bezirk">${bz ? "" : '<option value="" selected disabled>Stadtbezirk wählen …</option>'}${BEZIRKE.map((b) => `<option${b === bz ? " selected" : ""}>${esc(b)}</option>`).join("")}</select></label>
+    ${bz ? gelegenheiten(bz, today) : '<p class="hint">Wählen Sie Ihren Stadtbezirk: Dann erscheinen die nächsten Sitzungen der Bezirksvertretung und die Fristen zum Einreichen.</p>'}${zeitstrahl()}${bz ? wege(bz, today) : ""}
     <p class="hint">Welche Wege bei einem bestimmten Vorgang offen sind, zeigt dort der Abschnitt „Selbst mitwirken“.</p><details class="acc acc-meta"><summary>Grundlage</summary><p class="hint">Vereinfachte Darstellung nach der Geschäftsordnung des Rates, der Hauptsatzung, der Gemeindeordnung NRW und dem Baugesetzbuch; keine Rechtsauskunft.</p></details>`;
   ctx.onState({ ...state });
 }

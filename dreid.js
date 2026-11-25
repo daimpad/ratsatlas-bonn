@@ -12,7 +12,20 @@ const DATUM = new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "2-digit
 const fmt = (iso) => (iso ? DATUM.format(new Date(iso + "T12:00:00Z")) : "");
 const STANDARD = "endenich";   // Pilot-Ortsteil
 
-let daten, karte, ansicht = "vorort", ot = null, schraeg = !SCHMAL, geb = new Map();
+// Bereich der grauen Kacheln, den alle Zoomstufen abdecken (wie KACHEL_RAHMEN in site/app.js): außerhalb keine Abrufe
+const KACHEL_BEREICH = [6.9873, 50.6007, 7.2455, 50.8059];
+const GEB_HOECHSTENS = 6;   // Gebäude so vieler Ortsteile im Speicher (je bis zu 2 MB; Prüfung 25.11.2026)
+// deutsche Texte der Bedienelemente (Prüfung 25.11.2026, WCAG 3.1.2)
+const LOCALE = {
+  "Map.Title": "Karte", "Popup.Close": "Schließen", "NavigationControl.ZoomIn": "Vergrößern",
+  "NavigationControl.ZoomOut": "Verkleinern", "NavigationControl.ResetBearing": "Ausrichtung nach Norden zurücksetzen (ziehen zum Drehen und Neigen)",
+  "AttributionControl.ToggleAttribution": "Quellen ein- oder ausblenden", "AttributionControl.MapFeedback": "Rückmeldung zur Karte",
+  "FullscreenControl.Enter": "Vollbild", "FullscreenControl.Exit": "Vollbild beenden", "LogoControl.Title": "MapLibre",
+  "CooperativeGesturesHandler.WindowsHelpText": "Strg und Scrollen zum Zoomen", "CooperativeGesturesHandler.MacHelpText": "⌘ und Scrollen zum Zoomen",
+  "CooperativeGesturesHandler.MobileHelpText": "Mit zwei Fingern bewegen",
+};
+
+let daten, karte, ansicht = "vorort", ot = null, bezirk = null, schraeg = !SCHMAL, geb = new Map(), aufruf = 0;
 
 function webgl() {
   try { const c = document.createElement("canvas"); return !!(c.getContext("webgl2") || c.getContext("webgl")); } catch { return false; }
@@ -35,24 +48,47 @@ function saeulenBonn() {
     properties: { i, n: o.n12, h: Math.max(30, o.n12 * 14) },
     geometry: { type: "Polygon", coordinates: quadrat(o.lon, o.lat, 170) } })) };
 }
+// Gebäude eines Ortsteils; null, wenn die Datei fehlt oder nicht lesbar ist (dann ohne Speicher: der nächste Aufruf
+// versucht es erneut). Höchstens GEB_HOECHSTENS Ortsteile bleiben im Speicher.
 async function gebaeude(slug) {
-  if (!geb.has(slug)) {
-    geb.set(slug, fetch(`gebaeude/${encodeURIComponent(slug)}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null)
-      .then((d) => ({ type: "FeatureCollection", features: (d ? d.gebaeude : []).map(([h, ring]) => ({ type: "Feature", properties: { h },
-        geometry: { type: "Polygon", coordinates: [ring] } })) })));
+  if (geb.has(slug)) {
+    const g = geb.get(slug);
+    geb.delete(slug); geb.set(slug, g);   // zuletzt benutzt ans Ende
+    return g;
   }
-  return geb.get(slug);
+  const g = fetch(`gebaeude/${encodeURIComponent(slug)}.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+    .then((d) => (d && Array.isArray(d.gebaeude) ? { type: "FeatureCollection", features: d.gebaeude.map(([h, ring]) => ({ type: "Feature",
+      properties: { h }, geometry: { type: "Polygon", coordinates: [ring] } })) } : null));
+  geb.set(slug, g);
+  const fertig = await g;
+  if (!fertig) geb.delete(slug);
+  while (geb.size > GEB_HOECHSTENS) geb.delete(geb.keys().next().value);
+  return fertig;
 }
 function kamera(ziel) {
   const opt = { ...ziel, pitch: schraeg ? (ansicht === "bonn" ? 50 : 58) : 0, bearing: schraeg ? -18 : 0 };
   if (REDUCED) karte.jumpTo(opt); else karte.easeTo({ ...opt, duration: 900 });
 }
+const imBezirk = () => daten.ortsteile.filter((o) => o.stadtbezirk === bezirk);
 function ziel() {
+  if (ansicht === "bonn" && bezirk && imBezirk().length) {
+    const os = imBezirk(), lon = os.map((o) => o.lon), lat = os.map((o) => o.lat);
+    const kamera = karte && karte.cameraForBounds([[Math.min(...lon), Math.min(...lat)], [Math.max(...lon), Math.max(...lat)]], { padding: SCHMAL ? 60 : 120 });
+    return kamera ? { center: kamera.center, zoom: Math.min(kamera.zoom, 13.5) } : { center: [lon.reduce((a, b) => a + b) / lon.length, lat.reduce((a, b) => a + b) / lat.length], zoom: 12.5 };
+  }
   if (ansicht === "bonn") return { center: [7.115, 50.715], zoom: SCHMAL ? 10.2 : 11.2 };
   return { center: [ot.lon, ot.lat], zoom: SCHMAL ? 14.4 : 15.2 };
 }
 
+function listeBonn() {
+  const os = (bezirk ? imBezirk() : daten.ortsteile).slice().sort((a, b) => b.n12 - a.n12 || a.name.localeCompare(b.name, "de"));
+  $("#d3-liste-h").textContent = bezirk ? `Ortsteile im Stadtbezirk ${bezirk}` : "Ortsteile in ganz Bonn";
+  $("#d3-liste").innerHTML = `<p>Vorlagen mit Ortsbezug, ${esc(zeitraum())}. Ein Name öffnet den Ortsteil in 3D.</p>
+    <ul class="d3-vorlagen">${os.map((o) => `<li><a href="?ortsteil=${encodeURIComponent(o.slug)}" data-ot="${esc(o.slug)}">${esc(o.name)}</a> <span class="hint">${o.n12} Vorlagen</span></li>`).join("")}</ul>`;
+}
+
 function liste() {
+  if (ansicht === "bonn") { listeBonn(); return; }
   const n = ot.orte.reduce((a, x) => a + x[3].length, 0);
   $("#d3-liste-h").textContent = `Vorlagen in ${ot.name}`;
   if (!ot.orte.length) { $("#d3-liste").innerHTML = `<p>Keine Vorlage mit genauem Ort in ${esc(ot.name)} im Zeitraum ${esc(zeitraum())}.</p>`; return; }
@@ -62,40 +98,58 @@ function liste() {
 }
 
 async function zeigen() {
+  const nr = ++aufruf;   // spätere Aufrufe gewinnen (Wettlauf beim schnellen Wechsel; Prüfung 25.11.2026)
+  const bonn = ansicht === "bonn";
+  if (!bonn) bezirk = null;
   document.querySelectorAll("[data-ansicht]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.ansicht === ansicht)));
-  $("#d3-ortsteil").value = ot.slug;
+  $("#d3-ortsteil").value = bonn ? "" : ot.slug;   // in „Ganz Bonn“ ist kein Ortsteil gewählt
   liste();
   const url = new URL(location.href);
-  url.searchParams.set("ortsteil", ot.slug);
-  if (ansicht === "bonn") url.searchParams.set("ansicht", "bonn"); else url.searchParams.delete("ansicht");
+  if (bonn) url.searchParams.delete("ortsteil"); else url.searchParams.set("ortsteil", ot.slug);
+  if (bonn) url.searchParams.set("ansicht", "bonn"); else url.searchParams.delete("ansicht");
+  if (bonn && bezirk) url.searchParams.set("bezirk", bezirk); else url.searchParams.delete("bezirk");
   history.replaceState(null, "", url);
   if (!karte) return;
-  const bonn = ansicht === "bonn";
+  document.querySelectorAll(".maplibregl-popup").forEach((el) => el.remove());
   karte.getSource("bonn").setData(saeulenBonn());
   karte.getSource("vor").setData(bonn ? { type: "FeatureCollection", features: [] } : saeulenVorOrt(ot));
   ["vor"].forEach((id) => karte.setLayoutProperty(id, "visibility", bonn ? "none" : "visible"));
   karte.setLayoutProperty("bonn", "visibility", bonn ? "visible" : "none");
   karte.setLayoutProperty("geb", "visibility", bonn ? "none" : "visible");
   kamera(ziel());
-  $("#d3-status").textContent = bonn ? `Ganz Bonn: Säulen je Ortsteil, ${zeitraum()}.` : `${ot.name}: Gebäude werden geladen …`;
+  $("#d3-status").textContent = bonn ? `${bezirk ? `Stadtbezirk ${bezirk}` : "Ganz Bonn"}: Säulen je Ortsteil, ${zeitraum()}.` : `${ot.name}: Gebäude werden geladen …`;
   if (!bonn) {
-    const g = await gebaeude(ot.slug);
-    karte.getSource("geb").setData(g);
-    $("#d3-status").textContent = `${ot.name}: ${g.features.length.toLocaleString("de-DE")} Gebäude, Vorlagen an ${ot.orte.length} Orten (${zeitraum()}).`;
+    const leer = { type: "FeatureCollection", features: [] };
+    karte.getSource("geb").setData(leer);   // keine Gebäude des vorigen Ortsteils stehen lassen
+    const name = ot.name, g = await gebaeude(ot.slug);
+    if (nr !== aufruf) return;   // inzwischen anderer Ortsteil oder andere Ansicht
+    karte.getSource("geb").setData(g || leer);
+    $("#d3-status").textContent = g
+      ? `${name}: ${g.features.length.toLocaleString("de-DE")} Gebäude, Vorlagen an ${ot.orte.length} Orten (${zeitraum()}).`
+      : `${name}: Die Gebäude konnten nicht geladen werden; die Säulen der Vorlagen stehen ohne Gebäude. Vorlagen an ${ot.orte.length} Orten (${zeitraum()}).`;
   }
 }
 
 // Vollbild (Entscheidung des Auftraggebers 24.11.2026): die Bühne (Leiste, Karte, Statuszeile) füllt das Fenster; auf Klick
 // zusätzlich den Bildschirm, wo der Browser das erlaubt (iPhone: nur das Fenster). ?vollbild=1 öffnet die Seite so
 // (Knopf „In 3D ansehen“ der Hauptkarte); den Bildschirm darf eine Seite nur nach einem Klick belegen.
-let voll = false;
+let voll = false, traege = [];
 const vollElement = () => document.fullscreenElement || document.webkitFullscreenElement || null;
+// Im Vollbild ist die übrige Seite nicht erreichbar (inert): keine Tab-Stopps hinter der Karte (Prüfung 25.11.2026)
+function rest(an) {
+  traege.forEach((el) => { el.inert = false; });
+  traege = [];
+  if (!an) return;
+  for (let el = $("#d3-buehne"); el && el.parentElement; el = el.parentElement) {
+    for (const g of el.parentElement.children) if (g !== el && !g.inert && g.tagName !== "SCRIPT") { g.inert = true; traege.push(g); }
+  }
+}
 function vollbild(an, bildschirm = false) {
   voll = an;
   const buehne = $("#d3-buehne"), knopf = $("#d3-voll");
   buehne.classList.toggle("ist-voll", an);
   document.documentElement.classList.toggle("d3-gesperrt", an);
-  knopf.setAttribute("aria-pressed", String(an));
+  rest(an);
   knopf.querySelector("span").textContent = an ? "Vollbild beenden" : "Vollbild";
   if (an && bildschirm) {
     const f = buehne.requestFullscreen || buehne.webkitRequestFullscreen;
@@ -109,15 +163,27 @@ function vollbild(an, bildschirm = false) {
   if (an) url.searchParams.set("vollbild", "1"); else url.searchParams.delete("vollbild");
   history.replaceState(null, "", url);
   if (karte) { karte.resize(); requestAnimationFrame(() => karte.resize()); }
+  leisteMessen();
+}
+function leisteMessen() {
+  const l = document.querySelector(".d3-leiste");
+  if (l) $("#d3-buehne").style.setProperty("--d3-leiste-h", `${l.offsetTop + l.offsetHeight + 8}px`);
 }
 function vollbildEinrichten() {
   const knopf = $("#d3-voll");
   knopf.hidden = false;
   knopf.addEventListener("click", () => vollbild(!voll, true));
   const ende = () => { if (!vollElement() && voll) { vollbild(false); knopf.focus(); } else if (karte) karte.resize(); };
+  addEventListener("resize", () => { if (voll) leisteMessen(); });
   document.addEventListener("fullscreenchange", ende);
   document.addEventListener("webkitfullscreenchange", ende);
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && voll) { vollbild(false); knopf.focus(); } });
+  // Esc schließt zuerst ein offenes Popup, erst danach das Vollbild
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    const pop = document.querySelectorAll(".maplibregl-popup");
+    if (pop.length) { pop.forEach((el) => el.remove()); e.preventDefault(); return; }
+    if (voll) { vollbild(false); knopf.focus(); }
+  });
 }
 
 function popup(lngLat, html) {
@@ -125,14 +191,15 @@ function popup(lngLat, html) {
 }
 
 async function start() {
-  daten = await fetch("orte.json").then((r) => r.json());
+  daten = await fetch("orte.json").then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); });
   const wahl = $("#d3-ortsteil");
-  wahl.innerHTML = [...daten.ortsteile].sort((a, b) => a.name.localeCompare(b.name, "de")).map((o) => `<option value="${esc(o.slug)}">${esc(o.name)}</option>`).join("");
+  wahl.innerHTML = '<option value="" disabled>Ortsteil wählen …</option>' + [...daten.ortsteile].sort((a, b) => a.name.localeCompare(b.name, "de")).map((o) => `<option value="${esc(o.slug)}">${esc(o.name)}</option>`).join("");
   const p = new URLSearchParams(location.search);
   ot = daten.ortsteile.find((o) => o.slug === p.get("ortsteil")) || daten.ortsteile.find((o) => o.slug === STANDARD) || daten.ortsteile[0];
   ansicht = p.get("ansicht") === "bonn" ? "bonn" : "vorort";
+  bezirk = ansicht === "bonn" && daten.ortsteile.some((o) => o.stadtbezirk === p.get("bezirk")) ? p.get("bezirk") : null;
+  // fester Name, Zustand nur über aria-pressed (WCAG 4.1.2; Prüfung 25.11.2026)
   $("#d3-neigung").setAttribute("aria-pressed", String(schraeg));
-  $("#d3-neigung").textContent = schraeg ? "Von oben ansehen" : "Schräg ansehen";
   if (!webgl()) {
     $("#d3-ohne").hidden = false;
     $("#d3-karte").hidden = true;
@@ -141,9 +208,9 @@ async function start() {
     if (p.get("vollbild") === "1") vollbild(true);
     if (maplibregl.setWorkerUrl) maplibregl.setWorkerUrl(new URL("./vendor/maplibre/maplibre-gl-worker.mjs", new URL("..", location.href)).href);
     karte = new maplibregl.Map({
-      container: "d3-karte", ...ziel(), pitch: schraeg ? 58 : 0, bearing: schraeg ? -18 : 0, maxPitch: 70, minZoom: 9.5, maxZoom: 18,
+      container: "d3-karte", ...ziel(), pitch: schraeg ? 58 : 0, bearing: schraeg ? -18 : 0, maxPitch: 70, minZoom: 9.5, maxZoom: 18, locale: LOCALE,
       style: { version: 8, sources: { grau: { type: "raster", tiles: [new URL("../kacheln/{z}/{x}/{y}.png", location.href).href.replace(/%7B/g, "{").replace(/%7D/g, "}")],
-        tileSize: 256, minzoom: 10, maxzoom: 16, attribution: "© OpenStreetMap-Mitwirkende (ODbL), Protomaps · Gebäude: Geobasis NRW (dl-de/zero-2.0)" } },
+        tileSize: 256, minzoom: 10, maxzoom: 16, bounds: KACHEL_BEREICH, attribution: "© OpenStreetMap-Mitwirkende (ODbL), Protomaps · Gebäude: Geobasis NRW (dl-de/zero-2.0)" } },
         layers: [{ id: "grau", type: "raster", source: "grau" }] },
       attributionControl: { compact: true },
     });
@@ -169,12 +236,17 @@ async function start() {
       karte.on("mouseleave", id, () => { karte.getCanvas().style.cursor = ""; });
     }
   }
-  document.querySelectorAll("[data-ansicht]").forEach((b) => b.addEventListener("click", () => { ansicht = b.dataset.ansicht; zeigen(); }));
+  document.querySelectorAll("[data-ansicht]").forEach((b) => b.addEventListener("click", () => { ansicht = b.dataset.ansicht; if (ansicht === "bonn") bezirk = null; zeigen(); }));
+  $("#d3-liste").addEventListener("click", (e) => {
+    const a = e.target.closest("[data-ot]");
+    if (!a) return;
+    e.preventDefault();
+    ot = daten.ortsteile.find((o) => o.slug === a.dataset.ot) || ot; ansicht = "vorort"; zeigen();
+  });
   wahl.addEventListener("change", () => { ot = daten.ortsteile.find((o) => o.slug === wahl.value); ansicht = "vorort"; zeigen(); });
   $("#d3-neigung").addEventListener("click", (e) => {
     schraeg = !schraeg;
     e.currentTarget.setAttribute("aria-pressed", String(schraeg));
-    e.currentTarget.textContent = schraeg ? "Von oben ansehen" : "Schräg ansehen";
     if (karte) kamera({});
   });
   $("#d3-zurueck").addEventListener("click", () => karte && kamera(ziel()));

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/241663</id>
+<title>Vorlage 241663: Neues Quartier Bundesviertel – Wettbewerb Freianlagengestaltung nach RPW</title>
+<subtitle>Verlauf der Vorlage 241663: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2024-12-12T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/241663.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#241663"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019329#beratung-2024-12-12-Rat</id>
+<title>Rat: „zurückgezogen“ – 241663 Neues Quartier Bundesviertel – Wettbewerb Freianlagengestaltung nach RPW</title>
+<updated>2024-12-12T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#241663"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019329"/>
+<summary>Entscheidung am 2024-12-12; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019329#beratung-2024-11-05-Bezirksvertretung%20Bonn</id>
+<title>Bezirksvertretung Bonn: „ohne Votum“ – 241663 Neues Quartier Bundesviertel – Wettbewerb Freianlagengestaltung nach RPW</title>
+<updated>2024-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#241663"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019329"/>
+<summary>Empfehlung am 2024-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019329#beratung-2024-10-31-Ausschuss%20f%C3%BCr%20Umwelt%2C%20Klima%20und%20Lokale%20Agenda</id>
+<title>Ausschuss für Umwelt, Klima und Lokale Agenda: „ohne Votum“ – 241663 Neues Quartier Bundesviertel – Wettbewerb Freianlagengestaltung nach RPW</title>
+<updated>2024-10-31T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#241663"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019329"/>
+<summary>Empfehlung am 2024-10-31; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019329#beratung-2024-10-29-Ausschuss%20f%C3%BCr%20Wohnen%2C%20Planung%20und%20Bauen</id>
+<title>Ausschuss für Wohnen, Planung und Bauen: „ohne Votum - mit Maßgabe“ – 241663 Neues Quartier Bundesviertel – Wettbewerb Freianlagengestaltung nach RPW</title>
+<updated>2024-10-29T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#241663"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019329"/>
+<summary>Empfehlung am 2024-10-29; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2019329#vorlage</id>
+<title>Neue Vorlage 241663: Neues Quartier Bundesviertel – Wettbewerb Freianlagengestaltung nach RPW</title>
+<updated>2024-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#241663"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019329"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+</entry>
+</feed>

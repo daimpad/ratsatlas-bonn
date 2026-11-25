@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/202299</id>
+<title>Vorlage 202299: Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn</title>
+<subtitle>Verlauf der Vorlage 202299: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2021-03-18T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/202299.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9522#beratung-2021-03-18-Rat</id>
+<title>Rat: „zurückgezogen“ – 202299 Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn</title>
+<updated>2021-03-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9522"/>
+<summary>Entscheidung am 2021-03-18; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9522#folge-202299-04%20AA</id>
+<title>Änderungsantrag 202299-04 AA: Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn Antrag zur Vorlage 202299</title>
+<updated>2021-03-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9522"/>
+<summary>Folgevorlage zu 202299</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9522#beratung-2021-03-17-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „geändert beschlossen“ – 202299 Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn</title>
+<updated>2021-03-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9522"/>
+<summary>Empfehlung am 2021-03-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9522#beratung-2021-03-16-Bezirksvertretung%20Hardtberg</id>
+<title>Bezirksvertretung Hardtberg: „abgelehnt“ – 202299 Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn</title>
+<updated>2021-03-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9522"/>
+<summary>Empfehlung am 2021-03-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9522#beratung-2021-03-02-Bezirksvertretung%20Bonn</id>
+<title>Bezirksvertretung Bonn: „vertagt“ – 202299 Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn</title>
+<updated>2021-03-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9522"/>
+<summary>Empfehlung am 2021-03-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9522#folge-202299-03%20ST</id>
+<title>Stellungnahme der Verwaltung 202299-03 ST: Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn</title>
+<updated>2021-02-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9522"/>
+<summary>Folgevorlage zu 202299</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9522#beratung-2021-02-04-Rat</id>
+<title>Rat: „verwiesen“ – 202299 Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn</title>
+<updated>2021-02-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9522"/>
+<summary>Entscheidung am 2021-02-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9522#folge-202299-01%20ST</id>
+<title>Stellungnahme der Verwaltung 202299-01 ST: Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn</title>
+<updated>2021-02-03T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9522"/>
+<summary>Folgevorlage zu 202299</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9522#folge-202299-02%20AA</id>
+<title>Änderungsantrag 202299-02 AA: Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn Antrag zur Vorlage 202299</title>
+<updated>2021-02-02T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9522"/>
+<summary>Folgevorlage zu 202299</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/9522#vorlage</id>
+<title>Neue Vorlage 202299: Antrag zur Änderung der Geschäftsordnung des Rates der Bundesstadt Bonn</title>
+<updated>2021-01-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2021#202299"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=9522"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+</feed>

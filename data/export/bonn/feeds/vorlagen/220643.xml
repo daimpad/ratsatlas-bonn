@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/220643</id>
+<title>Vorlage 220643: Koalitions-Antrag: Runder Tisch Bonner Märkte</title>
+<subtitle>Verlauf der Vorlage 220643: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2022-04-28T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/220643.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2022#220643"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2005843#beratung-2022-04-28-Hauptausschuss</id>
+<title>Hauptausschuss: „zurückgezogen“ – 220643 Koalitions-Antrag: Runder Tisch Bonner Märkte</title>
+<updated>2022-04-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2022#220643"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005843"/>
+<summary>Entscheidung am 2022-04-28; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2005843#beratung-2022-04-26-Ausschuss%20f%C3%BCr%20Europa%2C%20Internationales%2C%20Wissenschaft%2C%20Wirtschaft%20und%20Arbeit</id>
+<title>Ausschuss für Europa, Internationales, Wissenschaft, Wirtschaft und Arbeit: „ungeändert beschlossen“ – 220643 Koalitions-Antrag: Runder Tisch Bonner Märkte</title>
+<updated>2022-04-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2022#220643"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005843"/>
+<summary>Empfehlung am 2022-04-26; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2005843#folge-220643-01%20ST</id>
+<title>Stellungnahme der Verwaltung 220643-01 ST: Runder Tisch Bonner Märkte; Stellungnahme zum Antrag</title>
+<updated>2022-04-20T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2022#220643"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005843"/>
+<summary>Folgevorlage zu 220643</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2005843#vorlage</id>
+<title>Neue Vorlage 220643: Koalitions-Antrag: Runder Tisch Bonner Märkte</title>
+<updated>2022-03-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2022#220643"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2005843"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Koalition beantragt, einen „Runden Tisch Bonner Märkte“ einzurichten. Dort sollen Marktbeschicker, Verwaltung und Politik über die Zukunft der Märkte sprechen und Verbesserungen vereinbaren. Die Verwaltung soll prüfen, ob auch Wochenmarktstände und mobile Händler teilnehmen können, und die Treffen vorbereiten.</summary>
+</entry>
+</feed>

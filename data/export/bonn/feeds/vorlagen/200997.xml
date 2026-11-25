@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/200997</id>
+<title>Vorlage 200997: Förderprogramm zur klimafreundlichen Begrünung von Bauten in der klimatisch hochbelasteten Bundesstadt Bonn.</title>
+<subtitle>Verlauf der Vorlage 200997: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2020-09-01T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/200997.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:poppelsdorf#200997"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6341#beratung-2020-09-01-Rat</id>
+<title>Rat: „zurückgezogen“ – 200997 Förderprogramm zur klimafreundlichen Begrünung von Bauten in der klimatisch hochbelasteten Bundesstadt Bonn.</title>
+<updated>2020-09-01T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:poppelsdorf#200997"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6341"/>
+<summary>Entscheidung am 2020-09-01; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6341#beratung-2020-08-18-Ausschuss%20f%C3%BCr%20Umwelt%20und%20Verbraucherschutz</id>
+<title>Ausschuss für Umwelt und Verbraucherschutz: „zurückgezogen“ – 200997 Förderprogramm zur klimafreundlichen Begrünung von Bauten in der klimatisch hochbelasteten Bundesstadt Bonn.</title>
+<updated>2020-08-18T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:poppelsdorf#200997"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6341"/>
+<summary>Empfehlung am 2020-08-18; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6341#folge-200997-2%20ST</id>
+<title>Stellungnahme der Verwaltung 200997-2 ST: Förderprogramm zur klimafreundlichen Begrünung von Bauten in der klimatisch hochbelasteten Bundesstadt Bonn.</title>
+<updated>2020-07-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:poppelsdorf#200997"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6341"/>
+<summary>Folgevorlage zu 200997</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6341#beratung-2020-06-22-Rat</id>
+<title>Rat: „verwiesen - mit Maßgabe“ – 200997 Förderprogramm zur klimafreundlichen Begrünung von Bauten in der klimatisch hochbelasteten Bundesstadt Bonn.</title>
+<updated>2020-06-22T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:poppelsdorf#200997"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6341"/>
+<summary>Entscheidung am 2020-06-22; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/6341#vorlage</id>
+<title>Neue Vorlage 200997: Förderprogramm zur klimafreundlichen Begrünung von Bauten in der klimatisch hochbelasteten Bundesstadt Bonn.</title>
+<updated>2020-05-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:poppelsdorf#200997"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=6341"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
+</entry>
+</feed>

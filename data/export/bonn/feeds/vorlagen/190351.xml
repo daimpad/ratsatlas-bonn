@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/190351</id>
+<title>Vorlage 190351: Aufbau eines Riesenrades in der Bonner Innenstadt anlässlich des Jubiläums "Beethoven 2020" (Alt 1912923, FF: Amt 33)</title>
+<subtitle>Verlauf der Vorlage 190351: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2019-11-07T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/190351.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#190351"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/691#beratung-2019-11-07-Rat</id>
+<title>Rat: „zurückgezogen“ – 190351 Aufbau eines Riesenrades in der Bonner Innenstadt anlässlich des Jubiläums "Beethoven 2020" (Alt 1912923, FF: Amt 33)</title>
+<updated>2019-11-07T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#190351"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=691"/>
+<summary>Entscheidung am 2019-11-07; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/691#beratung-2019-11-05-Bezirksvertretung%20Bonn</id>
+<title>Bezirksvertretung Bonn: „zurückgezogen“ – 190351 Aufbau eines Riesenrades in der Bonner Innenstadt anlässlich des Jubiläums "Beethoven 2020" (Alt 1912923, FF: Amt 33)</title>
+<updated>2019-11-05T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#190351"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=691"/>
+<summary>Anhörung am 2019-11-05; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/691#folge-190351-1%20AA</id>
+<title>Änderungsantrag 190351-1 AA: Aufbau eines Riesenrades in der Bonner Innenstadt anlässlich des Jubiläums "Beethoven 2020" (Alt 1912923, FF: Amt 33) Antrag zur Vorlage 190351</title>
+<updated>2019-10-28T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#190351"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=691"/>
+<summary>Folgevorlage zu 190351</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/691#vorlage</id>
+<title>Neue Vorlage 190351: Aufbau eines Riesenrades in der Bonner Innenstadt anlässlich des Jubiläums "Beethoven 2020" (Alt 1912923, FF: Amt 33)</title>
+<updated>2019-10-16T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#190351"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=691"/>
+<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Bonn · Stand: in Beratung</summary>
+</entry>
+</feed>

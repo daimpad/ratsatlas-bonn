@@ -39,7 +39,7 @@
     "license": "CC0 1.0 (Stadt Bonn, Datensatz „Hausnummern georeferenziert“)"
    }
   ],
-  "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: Stichprobenprüfung von Hand ausstehend."
+  "note": "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind abgeleitet; ebenso Stand, Themen, Parteien und die gekennzeichneten KI-Kurzfassungen. Titel geschützter Drucksachen erscheinen ohne Hausnummer, alle Titel ohne Flurstücksnummer. Die übrigen Felder stammen aus den Quellen. Ergebnisse der Prüfungen von Hand: Dialog „Über“, „Wie sicher sind die Angaben?“."
  },
  "papers": [
   {
@@ -5775,7 +5775,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2027892",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "umwelt",
@@ -21256,7 +21256,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2021913",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "umwelt",
@@ -67113,7 +67113,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2009074",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "bauen",
@@ -81444,7 +81444,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2005271",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -108825,7 +108825,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/6911",
-   "stand": "entschieden",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",

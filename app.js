@@ -146,11 +146,18 @@
   const toggleFor = (id) => document.querySelector(`.toggle[data-panel="${id}"]`);
   // Ratsassistent (site/chat/ui.js und sechs weitere Module) erst laden, wenn die Fläche zum ersten Mal aufgeht
   // oder die Schaltfläche den Fokus bekommt; der Seitenstart braucht ihn nicht
-  let chatReady = null;
+  let chatReady = null, chatDa = false;
   function loadChat() {
-    chatReady ||= import("./chat/ui.js").catch((e) => { chatReady = null; console.error("Ratsassistent nicht geladen", e); });
+    chatReady ||= import("./chat/ui.js").then((m) => { chatDa = true; return m; })
+      .catch((e) => { chatReady = null; console.error("Ratsassistent nicht geladen", e); });
     return chatReady;
   }
+  // „Verstanden“ vor dem Laden des Moduls: Klick merken und nach dem Laden ausführen (Prüfung 25.11.2026, F10)
+  document.getElementById("chat-consent")?.addEventListener("click", (e) => {
+    if (chatDa) return;
+    e.currentTarget.setAttribute("aria-busy", "true");
+    loadChat().then(() => { const b = document.getElementById("chat-consent"); b.removeAttribute("aria-busy"); if (chatDa) b.click(); });
+  });
   const opener = {};   // Element, das eine Fläche ohne eigene Schaltfläche in der Leiste geöffnet hat (Fokus beim Schließen)
   function setPanel(id, open) {
     const el = document.getElementById(id);
@@ -162,6 +169,7 @@
     if (id === "panel-assistent") { document.body.classList.toggle("chat-open", open); if (open) loadChat(); }
     if (id === "panel-prozesse") { if (open) openProzesse(); syncUrl(); }
     if (id === "panel-mitmachen") { if (open) openMitmachen(); syncUrl(); }
+    gebietKnopf();
     if (!open) return;
     closeMega();
     // schmale Bildschirme: nur eine Fläche; mittlere Breiten: Liste oder Vorgang, damit die Zeitleiste Platz hat;
@@ -462,7 +470,20 @@
   }
   // Gebietsdateien, die der Start schon angefordert hat (Gebiet im Link), je Adresse eine Antwort
   const vorab = new Map();
-  async function loadArea(value, keepState) {
+  // Nach einer Gebietswahl durch die Nutzerin (Prüfung 25.11.2026, F1/F2): breite Bildschirme öffnen die Liste;
+  // auf dem Telefon schließt „Los geht's“, die Karte mit den Punkten bleibt frei, ein Knopf über der Leiste öffnet die Liste
+  function nachGebietswahl() {
+    if (MOBILE.matches) { setPanel("panel-detail", false); gebietKnopf(); }
+    else setPanel("panel-list", true);
+  }
+  function gebietKnopf() {
+    const b = $("#gebiet-chip");
+    if (!b) return;
+    const frei = MOBILE.matches && area && area.kind !== "bonn" && SHEETS.every((id) => document.getElementById(id).hidden);
+    b.hidden = !frei;
+    if (frei) b.innerHTML = `<svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>${de(papers.length)} Vorlagen in ${esc(area.kind === "ohne" ? "stadtweit / ohne Ortsbezug" : area.name)} <span class="gebiet-chip-ziel">als Liste</span>`;
+  }
+  async function loadArea(value, keepState, vonNutzer) {
     const seq = ++loadSeq;
     const next = parseArea(value);
     $("#f-area").value = next.kind === "bonn" && value === "bonn:ganz" ? value : `${next.kind}:${next.key}`;
@@ -480,7 +501,7 @@
       if (seq !== loadSeq) return;
       setLoading(false);
       $("#count").innerHTML = `Die Vorlagen für ${esc(next.name)} konnten nicht geladen werden (${esc(err.message)}). <button type="button" class="btn btn-secondary" id="retry">Erneut versuchen</button>`;
-      $("#retry").addEventListener("click", () => loadArea(value, keepState));
+      $("#retry").addEventListener("click", () => loadArea(value, keepState, vonNutzer));
       return;
     }
     // ein späterer Gebietswechsel hat diese Antwort überholt
@@ -496,6 +517,10 @@
       : `Ratsatlas Bonn – Ratsvorlagen ${area.kind === "ohne" ? "ohne Ortsbezug " + area.key : "in " + area.name}`;
     $("#f-conf").hidden = area.kind === "ohne" || area.kind === "bonn";
     fillFilters();
+    // Suchbereich passend zum Gebiet: ohne Gebiet „in ganz Bonn“, nach einer Gebietswahl das Gebiet (Prüfung 25.11.2026, F3)
+    if (area.kind === "bonn") setScope("bonn");
+    else if (vonNutzer) setScope("gebiet");
+    if (vonNutzer && area.kind !== "bonn") nachGebietswahl();   // vor dem Zuschnitt der Karte (Abstände der Flächen)
     drawOutline();
     selected = null;
     shown = LIST_STEP;
@@ -511,6 +536,7 @@
     if (!$("#panel-termine").hidden) showTermine();
     if (!$("#panel-auswertung").hidden && !$("#stats").hidden) showStats();
     render();
+    gebietKnopf();
     syncUrl();
     const stand = meta.sources.map((s) => `${s.name}: ${String(s.retrieved_at || "–").slice(0, 10)}`).join(" · ");
     $("#stand").textContent = `Datenstand: ${stand}${meta.generated_at ? ` · erzeugt ${meta.generated_at.slice(0, 10)}` : ""}`;
@@ -671,7 +697,7 @@
     });
     new PlanToggle().addTo(map);
     // Baustellen der Stadt (Archiv bzw. Feeds); nur mit Gesamtexport
-    bauOn = new URLSearchParams(location.search).get("baustellen") === "1";
+    bauOn = new URLSearchParams(location.search).get("baustellen") === "1" && !(bau && bauAus());
     const BauToggle = L.Control.extend({
       options: { position: "bottomright" },
       onAdd() {
@@ -679,7 +705,7 @@
         b.type = "button";
         b.textContent = "Baustellen";
         b.setAttribute("aria-pressed", String(bauOn));
-        b.hidden = !bau;
+        b.hidden = !bau || bauAus();
         b.addEventListener("click", () => { bauOn = !bauOn; b.setAttribute("aria-pressed", String(bauOn)); drawSites(); syncUrl(); });
         L.DomEvent.disableClickPropagation(b);
         return b;
@@ -722,6 +748,8 @@
         const set = (open) => {
           map.getContainer().classList.toggle("map-menu-open", open); b.setAttribute("aria-expanded", String(open));
           if (open) setNav(false);   // Telefon: nicht zugleich mit dem Hamburger-Menü
+          // Telefon: nur ein Blatt zur Zeit, das Blatt „Karte“ lag sonst unter „Los geht's“ (Prüfung 25.11.2026, F5)
+          if (open && MOBILE.matches) SHEETS.forEach((id) => { if (!document.getElementById(id).hidden) setPanel(id, false); });
         };
         setMapMenu = set;
         // Zahl der eingeschalteten Ebenen; auf dem Telefon heißt der Knopf „Karte“ (Ebenen, Legenden und Quellen)
@@ -1245,7 +1273,7 @@
     updateNav();
     range = null;
     if (tl) tl.reset();
-    loadArea(value);
+    loadArea(value, false, true);
   }
   const otStyle = (layer) => {
     const inFocus = navFocus && layer.feature.properties.bezirk_bez === navFocus;
@@ -1521,9 +1549,55 @@
     if (dim === "vorlage") return p.date >= a && p.date <= b;
     return p.steps.some((s) => (s.typ === "beratung" || s.typ === "entscheidung") && s.date && s.date >= a && s.date <= b);
   }
+  // Suche ohne Rücksicht auf Groß- und Kleinschreibung, ß/ss, Umlaute (ä/ae/a), Leerzeichen und Bindestriche; mehrere
+  // Wörter müssen alle vorkommen (Prüfung 25.11.2026, F4: „Endenicher Strasse“, „Kennedybrucke“, „Rhein Aue“ ergaben 0)
+  const falten = (t) => String(t || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ß/g, "ss")
+    .replace(/[\s\-–‐.,;:/()„“"'’]+/g, "");
+  // Umschreibung „ue“ für „ü“ in der Eingabe: zusätzliche Variante, nur wenn sie lang genug bleibt („Aue“ bleibt „aue“)
+  const varianten = (t) => {
+    const f = falten(t), u = falten(String(t).toLowerCase().replace(/ae/g, "a").replace(/oe/g, "o").replace(/ue/g, "u"));
+    return u !== f && u.length >= 4 ? [f, u] : [f];
+  };
+  function passt(text) {
+    const ganz = varianten(text), woerter = text.split(/\s+/).filter(Boolean).map(varianten);
+    return (heu) => !ganz[0] || ganz.some((g) => heu.includes(g))
+      || (woerter.length > 1 && woerter.every((vs) => vs.some((w) => heu.includes(w))));
+  }
+  const heuVorlage = (p) => (p._heu ??= falten(`${p.name} ${p.reference}`));
+  // Bei 0 Treffern: ähnlich geschriebene Wörter aus den Titeln (Abstand 1–2 Zeichen) als Vorschlag
+  let wortschatz = null;
+  function aehnlich(text) {
+    if (!search) return [];
+    wortschatz ||= [...new Set(search.rows.flatMap((r) => String(r[1]).split(/[^\p{L}\p{N}-]+/u)).filter((w) => w.length >= 5))];
+    const abstand = (a, b) => {
+      if (Math.abs(a.length - b.length) > 2) return 3;
+      let v = Array.from({ length: b.length + 1 }, (_, i) => i);
+      for (let i = 1; i <= a.length; i++) {
+        const w = [i];
+        for (let j = 1; j <= b.length; j++) w[j] = Math.min(v[j] + 1, w[j - 1] + 1, v[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        v = w;
+      }
+      return v[b.length];
+    };
+    const vorschlaege = [];
+    for (const wort of text.split(/\s+/).filter((w) => w.length >= 5)) {
+      const f = falten(wort);
+      const treffer = wortschatz.map((x) => [x, abstand(f, falten(x))]).filter(([, d]) => d > 0 && d <= (f.length >= 9 ? 2 : 1))
+        .sort((a, b) => a[1] - b[1] || a[0].length - b[0].length)[0];
+      if (treffer) vorschlaege.push(text.replace(wort, treffer[0]));
+    }
+    return vorschlaege.slice(0, 2);
+  }
+  function keinTreffer(text, wo) {
+    const v = text ? aehnlich(text) : [];
+    return `<li class="empty-list"><p>${text ? `Keine Vorlage ${wo} passt zu „${esc(text)}“ und den gewählten Filtern.` : `Keine Vorlage ${wo} passt zu Filtern und Zeitraum.`}</p>
+      ${v.length ? `<p>Meinten Sie ${v.map((x) => `<button type="button" class="link-btn" data-vorschlag="${esc(x)}">${esc(x)}</button>`).join(" oder ")}?</p>` : ""}
+      ${text ? '<p class="hint">Tipps: ein kürzeres Wort versuchen (z. B. „Radweg“ statt „Radwege“) oder „Im Text der Dokumente suchen“.</p>' : ""}
+      <button type="button" class="btn btn-secondary" id="reset-filters">Filter und Zeitraum zurücksetzen</button></li>`;
+  }
   function filtered(withRange = true) {
     if (!area) return [];   // Gebietsdatei beim Start nicht geladen (Fehlermeldung mit „Erneut versuchen“ steht in der Liste)
-    const text = $("#f-text").value.trim().toLowerCase(), type = $("#f-type").value, amt = $("#f-amt").value;
+    const text = $("#f-text").value.trim(), type = $("#f-type").value, amt = $("#f-amt").value, treffer = passt(text);
     const gremium = $("#f-gremium").value, standF = $("#f-stand").value;
     const theme = $("#f-theme").value, party = $("#f-party").value, rel = $("#f-related").checked;
     const confs = new Set([...document.querySelectorAll("#f-conf input:checked")].map((i) => i.value));
@@ -1532,7 +1606,7 @@
       (!party || (p.parties || []).includes(party) || (rel && relatedParties(p.reference).has(party))) &&
       (!gremium || p.process.some((s) => s.gremium === gremium)) && (!standF || p.stand === standF) &&
       (area.kind === "ohne" || confs.has(bestConfidence(p))) && (!withRange || inRange(p)) &&
-      (!text || (p.name + " " + p.reference).toLowerCase().includes(text)));
+      (!text || treffer(heuVorlage(p))));
   }
   function resetFilters() {
     const sc = scope();
@@ -1597,9 +1671,11 @@
     }
   }
   function renderGlobal() {
-    const text = $("#f-text").value.trim().toLowerCase(), type = $("#f-type").value, standF = $("#f-stand").value;
+    const roh = $("#f-text").value.trim(), text = roh.toLowerCase(), type = $("#f-type").value, standF = $("#f-stand").value;
     const doc = docHits && docHits.q === text ? docHits.refs : null;
-    const inTitle = (r) => (r[1] + " " + r[0]).toLowerCase().includes(text);
+    search.heu ||= search.rows.map((r) => falten(`${r[1]} ${r[0]}`));
+    const treffer = passt(roh), zeile = new Map(search.rows.map((r, i) => [r, i]));
+    const inTitle = (r) => treffer(search.heu[zeile.get(r)]);
     const theme = search.themes.findIndex((t) => t.id === $("#f-theme").value), party = search.parties.indexOf($("#f-party").value);
     const rel = $("#f-related").checked, ti = search.types.indexOf(type), si = search.stands.indexOf(standF);
     const rows = search.rows.filter((r) => (!type || r[3] === ti) && (!standF || r[4] === si) && (theme < 0 || r[6].includes(theme)) &&
@@ -1613,7 +1689,7 @@
       <span class="meta"><span>${esc(r[0])}</span><span>${fmtDate(r[2])}</span><span>${esc(search.types[r[3]] || "")}</span>
       <span>${esc(search.stands[r[4]])}</span><span class="area-tag">${esc(search.areas[r[5]].name)}</span>${themeTags(r[6].slice(0, 2).map((i) => search.themes[i].id))}${doc && text && !inTitle(r) ? '<span class="doc-tag">im Dokument erwähnt</span>' : ""}</span></button></li>`).join("");
     if (rows.length > shown) html += `<li class="more"><button type="button" class="btn btn-secondary" id="more">Weitere ${Math.min(LIST_STEP, rows.length - shown)} von ${rows.length - shown} anzeigen</button></li>`;
-    if (!rows.length) html = `<li class="empty-list"><p>Keine Vorlage in ganz Bonn passt zu Filtern und Zeitraum.</p><button type="button" class="btn btn-secondary" id="reset-filters">Filter und Zeitraum zurücksetzen</button></li>`;
+    if (!rows.length) html = keinTreffer(roh, "in ganz Bonn");
     $("#papers").innerHTML = html;
     // auf der Karte: die Treffer, die im gerade geladenen Gebiet liegen
     const refs = new Set(rows.map((r) => r[0]));
@@ -1630,7 +1706,10 @@
     if (!area && scope() !== "bonn") return;   // ohne geladenes Gebiet bleibt die Fehlermeldung stehen (Nr. 31)
     $("#f-related-wrap").hidden = !$("#f-party").value;
     $("#more-filters").hidden = scope() === "bonn";
-    if (scope() === "bonn") {
+    // Übersicht ganz Bonn ohne Suchwort und Filter: der Suchindex lädt erst bei Bedarf (Ladezeit beim Start)
+    const ohneSuche = area && area.kind === "bonn" && !search && !range
+      && !["#f-text", "#f-theme", "#f-party", "#f-type", "#f-stand"].some((id) => $(id).value.trim());
+    if (scope() === "bonn" && !ohneSuche) {
       if (!search) { $("#count").textContent = "Lade den Suchindex für ganz Bonn …"; loadSearch().then((d) => d && (fillParties(), render())); return; }
       return renderGlobal();
     }
@@ -1647,7 +1726,7 @@
     let html = list.slice(0, shown).map(itemHtml).join("");
     if (list.length > shown) html += `<li class="more"><button type="button" class="btn btn-secondary" id="more">Weitere ${Math.min(LIST_STEP, list.length - shown)} von ${list.length - shown} anzeigen</button></li>`;
     if (!list.length && area.kind === "bonn") html = `<li class="empty-list"><p>Noch kein Gebiet gewählt. Wählen Sie auf der Karte einen Stadtbezirk und einen Ortsteil oder oben ein Gebiet; „in ganz Bonn“ sucht über alle Vorlagen.</p></li>`;
-    else if (!list.length) html = `<li class="empty-list"><p>Keine Vorlage passt zu Gebiet, Filtern und Zeitraum.</p><button type="button" class="btn btn-secondary" id="reset-filters">Filter und Zeitraum zurücksetzen</button></li>`;
+    else if (!list.length) html = keinTreffer($("#f-text").value.trim(), `in ${area.kind === "ohne" ? "den Vorlagen ohne Ortsbezug" : area.name}`);
     $("#papers").innerHTML = html;
     drawMarkers(list);
     if (tl) tl.setPapers(base);
@@ -1679,13 +1758,19 @@
       <p class="aufz-links"><a class="aufz-knopf" href="${esc(s.aufzeichnung)}" target="_blank" rel="noopener">Video der Sitzung<span class="visually-hidden"> (YouTube, neuer Tab)</span></a>
       <a class="aufz-knopf aufz-knopf-leise" href="${esc(q ? TRANSKRIPTE + "?q=" + encodeURIComponent(q) : TRANSKRIPTE)}" target="_blank" rel="noopener">${q ? `Im Transkript suchen: „${esc(q)}“` : "Im Transkript suchen"}<span class="visually-hidden"> (bonn.biz, neuer Tab)</span></a></p>
       <details class="aufz-mehr"><summary>Mehr über die Ratstranskripte erfahren</summary><p>${esc(AUFZ_HINWEIS)}</p></details></div></div>` : "";
+    // Beratung ohne verknüpfte Sitzung: nächste Sitzung dieses Gremiums laut Kalender (Entscheidung des Auftraggebers
+    // 25.11.2026; seit Mitte November verknüpft die Quelle neue Tagesordnungen kaum noch mit den Vorlagen)
+    const naechste = s.note === "ohne_sitzung" && s.label && zeit ? zeit.meetings.filter((m) => m.gremium === s.label && !m.cancelled && m.date >= heute())
+      .sort((x, y) => x.date.localeCompare(y.date) || (x.time || "").localeCompare(y.time || ""))[0] : null;
+    const naechsteHtml = naechste ? `<p class="hint step-naechste">Nächste Sitzung dieses Gremiums laut Kalender: ${fmtDate(naechste.date)}${naechste.time ? `, ${esc(naechste.time)} Uhr` : ""} <span class="derived">abgeleitet</span>.
+      Ob die Vorlage dort beraten wird, zeigt die ${safeUrl(naechste.web) ? `<a href="${safeUrl(naechste.web)}" target="_blank" rel="noopener">Tagesordnung<span class="visually-hidden"> (Ratsinformationssystem, neuer Tab)</span></a>` : "Tagesordnung, sobald sie veröffentlicht ist"}.</p>` : "";
     const gremium = index && (s.typ === "beratung" || s.typ === "entscheidung") && s.label && s.status !== "nicht_öffentlich";
     const label = s.label && s.label !== STEP_LABEL[s.typ]
       ? ": " + (gremium ? `<button type="button" class="link-btn" data-gremium-name="${esc(s.label)}" title="Zuständigkeit und Besetzung im Reiter Prozesse">${esc(s.label)}</button>` : esc(s.label)) : "";
     return `<li class="step${cls}" data-status="${esc(status)}">
       <span class="mark mark-${esc(status)}" aria-hidden="true">${mark}</span>
       <div class="step-head">${esc(STEP_LABEL[s.typ] || s.typ)}${label}<span class="step-status">${esc(STATUS[status])}</span></div>
-      <div class="step-body">${body.join("<br>")}${box}${aufz}</div></li>`;
+      <div class="step-body">${body.join("<br>")}${box}${naechsteHtml}${aufz}</div></li>`;
   }
   function legend() {
     return `<details class="acc"><summary>Legende Evidenzstatus</summary><div class="legend">${["belegt", "abgeleitet", "nicht_öffentlich", "unklar"]
@@ -1912,7 +1997,11 @@
   const siteState = (b) => (!b.aktiv ? "entfallen" : b.von && b.von > heute() ? "geplant" : b.bis && b.bis < heute() ? "abgelaufen" : "aktuell");
   const SITE_STATE = { aktuell: "laufend", geplant: "geplant", abgelaufen: "gemeldetes Ende verstrichen", entfallen: "nicht mehr gemeldet" };
   // Liegt der letzte Abruf der Quelle mehr als sieben Tage zurück, steht das beim Stand der Baustelle
-  const bauVeraltet = () => { const a = String(bau?.meta?.abruf || "").slice(0, 10); return a && (Date.parse(heute()) - Date.parse(a)) / 864e5 > 7 ? a : null; };
+  const bauAlterTage = () => { const a = String(bau?.meta?.abruf || "").slice(0, 10); return a ? (Date.parse(heute()) - Date.parse(a)) / 864e5 : 0; };
+  const bauVeraltet = () => (bauAlterTage() > 7 ? String(bau.meta.abruf).slice(0, 10) : null);
+  // Nach 60 Tagen ohne Abruf keine Ebene und keine Spur in der Zeitleiste mehr (Entscheidung des Auftraggebers
+  // 25.11.2026): der Stand der Baustellen wäre nicht mehr verlässlich; „Mögliche Umsetzung“ im Vorgang bleibt mit Hinweis
+  const bauAus = () => bauAlterTage() > 60;
   const siteClass = (b) => (b.fremd ? "site-fremd" : `site-${siteState(b)}`);
   // Punkt in Fläche (gerade-ungerade über alle Ringe, Löcher eingeschlossen)
   function inGeom(lon, lat, g) {
@@ -1932,7 +2021,7 @@
     return null;
   }
   function areaSites() {
-    if (!bau) return [];
+    if (!bau || bauAus()) return [];
     const f = area && areaFeature();
     return f ? bau.baustellen.filter((b) => inGeom(b.lon, b.lat, f.geometry)) : bau.baustellen;
   }
@@ -2047,7 +2136,12 @@
       ? `<div class="befund"><strong>Befund:</strong> Beraten hat auch ${esc(s.abweichung.map((b) => d.bahnen[b] || b).join(", "))}. Das Regelwerk sieht das für dieses Verfahren nicht vor. Das ist ein Befund, keine Bewertung; das Modell ist vereinfacht.</div>`
       : s.passung === "nur Beirat" ? '<p class="hint">Beraten hat nur ein Beirat. Beiräte bildet das Modell nicht ab; ein Abgleich entfällt.</p>'
       : s.passung === "ohne Beratung" ? '<p class="hint">In den Daten ist keine Beratung verzeichnet; ein Abgleich entfällt.</p>' : "";
-    const body = v ? `<p><strong>${esc(v.titel)}</strong>${v.kurz ? ` – ${esc(v.kurz)}` : ""}<br>
+    // Folgevorlagen: das Soll gilt für den Vorgang der Ausgangsvorlage (wie pipeline/soll.stammnummer; Prüfung 25.11.2026, F6)
+    const stamm = String(p.reference).split("-")[0].trim();
+    const aus = stamm !== p.reference ? papers.find((x) => x.reference === stamm) : null;
+    const vorgangHinweis = stamm !== p.reference
+      ? `<p class="hint">Verfahren des Vorgangs ${aus ? `<button type="button" class="link-btn" data-open-ref="${esc(stamm)}">${esc(stamm)}</button>` : esc(stamm)}${aus ? ` (${esc(aus.paper_type)})` : ""}, zu dem diese ${esc(p.paper_type || "Vorlage")} gehört.</p>` : "";
+    const body = v ? `${vorgangHinweis}<p><strong>${esc(v.titel)}</strong>${v.kurz ? ` – ${esc(v.kurz)}` : ""}<br>
         <span class="derived">Zuordnung abgeleitet: ${esc(s.grund)}; Sicherheit ${esc(s.sicherheit)}</span></p>${befund}
       ${metaAcc("So ist das Soll gebildet", "Schritte nach Regelwerk. Nicht jeder Schritt kommt in jedem Fall vor. Abgeglichen wird nur, ob ein Gremium dieser Art beraten hat.")}
       <ol class="steps">${v.schritte.map((st) => sollStep(st, d, ist)).join("")}</ol>`
@@ -2267,7 +2361,9 @@
     ((p.date || "") >= (index.feeds_ab || `${Number(dataStand.slice(0, 4)) - 1}-01-01`) || ["in Beratung", "offen"].includes(p.stand));
   // Ziel des Knopfs „In 3D ansehen“: Ortsteil in 3D, sonst die Ansicht „Ganz Bonn“ (3d/ kennt nur Ortsteile)
   function link3d() {
-    return area && area.kind === "ortsteil" ? `3d/?ortsteil=${encodeURIComponent(area.key)}&vollbild=1` : "3d/?ansicht=bonn&vollbild=1";
+    if (area && area.kind === "ortsteil") return `3d/?ortsteil=${encodeURIComponent(area.key)}&vollbild=1`;
+    if (area && area.kind === "bezirk") return `3d/?ansicht=bonn&bezirk=${encodeURIComponent(area.name)}&vollbild=1`;
+    return "3d/?ansicht=bonn&vollbild=1";
   }
   function subscribeArea() {
     const box = $("#subscribe");
@@ -2311,7 +2407,8 @@
     const scope = box.querySelector("#termine-scope") ? box.querySelector("#termine-scope").value : "gebiet";
     const today = heute();
     const relevant = (m) => scope === "alle" || !isBV(m.gremium) || !bezirk || m.gremium === `Bezirksvertretung ${bezirk}`;
-    const list = zeit.meetings.filter((m) => m.date >= today && relevant(m));
+    const list = zeit.meetings.filter((m) => m.date >= today && relevant(m))
+      .sort((a, b) => a.date.localeCompare(b.date) || (a.time || "").localeCompare(b.time || ""));   // auch innerhalb eines Tages
     const where = area.kind === "ohne" ? "Vorlagen ohne Ortsbezug" : area.name;
     // Vorlagen des Gebiets, deren Beratung (über OParl-Lite verknüpft) auf dieser Sitzung liegt
     const onAgenda = (m) => papers.filter((p) => p.steps.some((s) => (s.typ === "beratung" || s.typ === "entscheidung") && s.date === m.date && s.label === m.gremium));
@@ -2376,7 +2473,7 @@
     $("#chips-theme").innerHTML = Object.entries(THEMES).map(([k, v]) => chip(v, theme === k, `data-theme="${k}"`, local ? counts[k] || 0 : null)).join("");
     const parties = [...$("#f-party").options].map((o) => o.value).filter(Boolean);
     $("#chips-party").innerHTML = parties.map((v) => chip(v === "Koalition" ? "Koalition (gemeinsam)" : v, party === v, `data-party="${esc(v)}"`)).join("")
-      || '<span class="hint">Im gewählten Gebiet gibt es keine zugeordneten Einreichenden.</span>';
+      || `<span class="hint">${local ? "Im gewählten Gebiet gibt" : "Es gibt"} keine zugeordneten Einreichenden.</span>`;
     document.querySelectorAll(".scope-switch [data-scope]").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.scope === scope())));
     $("#mega-count").textContent = $("#count").textContent;
   }
@@ -2429,6 +2526,7 @@
       if (pa) { $("#f-party").value = $("#f-party").value === pa.dataset.party ? "" : pa.dataset.party; return applyFromBar(); }
     });
     $("#mega-show").addEventListener("click", () => { setPanel("panel-list", true); closeMega(); focusPanel("panel-list"); });
+    $("#gebiet-chip").addEventListener("click", () => { setPanel("panel-list", true); focusPanel("panel-list"); });
     $("#doc-search").addEventListener("click", runDocSearch);
     $("#mega-reset").addEventListener("click", () => { q.value = ""; resetFilters(); fillChips(); });
     if (!index) document.querySelector(".scope-switch").hidden = true;
@@ -2545,7 +2643,7 @@
       });
       return m;
     }).catch((e) => { mmReady = null; console.warn("Mitmachen nicht geladen", e); return null; });   // beim nächsten Öffnen erneut
-    return mmReady.then((m) => { if (m) m.show(s || { bezirk: mmState ? mmState.bezirk : areaBezirk() || "Bonn" }); return m; });
+    return mmReady.then((m) => { if (m) m.show(s || { bezirk: (mmState && mmState.bezirk) || areaBezirk() || null }); return m; });
   }
 
   // --- URL-Zustand -----------------------------------------------------------------------------------
@@ -2699,7 +2797,7 @@
       render();
       syncUrl();
     });
-    $("#f-area").addEventListener("change", (e) => { range = null; if (tl) tl.reset(); loadArea(e.target.value); });
+    $("#f-area").addEventListener("change", (e) => { range = null; if (tl) tl.reset(); loadArea(e.target.value, false, true); });
     $("#papers").addEventListener("click", (e) => {
       if (e.target.closest("#more")) {
         // Fokus auf den ersten neu gezeigten Eintrag, damit Tastatur und Vorleseprogramm an der Stelle weitermachen
@@ -2711,6 +2809,8 @@
         return;
       }
       if (e.target.closest("#reset-filters")) { resetFilters(); return; }
+      const vs = e.target.closest("[data-vorschlag]");
+      if (vs) { $("#f-text").value = vs.dataset.vorschlag; if (scope() === "bonn") $("#q").value = vs.dataset.vorschlag; shown = LIST_STEP; render(); syncUrl(); focusPanel("panel-list"); return; }
       const g = e.target.closest("button[data-gref]");
       if (g) { openGlobal(g.dataset.gref, g.dataset.area); return; }
       const b = e.target.closest("button[data-ref]");
@@ -2785,7 +2885,7 @@
     else showIntro();
     if (params.get("mitmachen") === "1") {
       setPanel("panel-mitmachen", true);
-      await openMitmachen({ bezirk: params.get("bezirk") || areaBezirk() || "Bonn" });
+      await openMitmachen({ bezirk: params.get("bezirk") || areaBezirk() || null });
     }
     if (["verfahren", "gremien", "aemter"].includes(params.get("prozesse"))) {
       setPanel("panel-prozesse", true);
@@ -2814,6 +2914,28 @@
       mapMenu(open) { const b = document.querySelector(".map-menu"); if (b && (b.getAttribute("aria-expanded") === "true") !== open) b.click(); },
       menu(id) { if (id) openMega(id); else closeMega(); },
       nav(open) { if (MOBILE.matches || !open) setNav(open); },
+      // Zustand vor der Tour und Rückkehr dorthin (Prüfung 25.11.2026, F15: Beispielgebiet, Liste, Zeitleiste und
+      // Beispielvorgang blieben nach „Fertig“ offen)
+      zustand() {
+        return { gebiet: area ? `${area.kind}:${area.key}` : null, ref: selected ? selected.reference : null,
+          offen: SHEETS.filter((id) => !document.getElementById(id).hidden) };
+      },
+      async zurueck(z) {
+        if (!z) return;
+        if (z.gebiet && area && `${area.kind}:${area.key}` !== z.gebiet) await loadArea(z.gebiet, true);
+        const p = z.ref && papers.find((x) => x.reference === z.ref);
+        if (p) select(p);
+        else {   // auch nach einem Gebietswechsel ohne Auswahl wieder „Los geht's“ statt des Beispielvorgangs
+          selected = null;
+          document.querySelectorAll(".papers button[data-ref]").forEach((b) => b.setAttribute("aria-current", "false"));
+          if (tl) tl.select(null);
+          highlight();
+          showIntro();
+          syncUrl();
+        }
+        SHEETS.forEach((id) => { if (!z.offen.includes(id) && !document.getElementById(id).hidden) setPanel(id, false); });
+        z.offen.forEach((id) => { if (document.getElementById(id).hidden) setPanel(id, true); });
+      },
       // Beispielgebiet der Tour vorab laden, solange die ersten Schritte laufen
       prefetch() { if (area && area.kind === "bonn" && index) fetch(`${BONN}ortsteile/bonn-zentrum.json`).catch(() => {}); },
       async example() {
