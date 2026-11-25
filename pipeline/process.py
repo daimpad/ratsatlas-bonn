@@ -26,7 +26,8 @@ NICHTOEFFENTLICH_TYPE = "Tagesordnungspunkte in nichtöffentlicher Sitzung"
 SCHLEIFE = ("vertagt", "verwiesen", "nicht aufgenommen", "weitere Lesung")
 # Ergebnisse, die eine Beratung abschließen, ohne dass das Gremium entschieden hat (Code-Prüfung 24.10.2026:
 # „nicht abgestimmt“ einer entscheidenden Beratung galt als Entscheidung, 326 Vorlagen)
-KEIN_BESCHLUSS = ("nicht abgestimmt", "ohne Votum")
+# „zurückgezogen“: das Verfahren endet ohne Entscheidung (Entscheidung des Auftraggebers 25.11.2026)
+KEIN_BESCHLUSS = ("nicht abgestimmt", "ohne Votum", "zurückgezogen")
 VOLLZUG = ("beschlossen",)
 
 # Erläuterungen; in den Exporten steht nur der Schlüssel (`note`), die Texte stehen in der Seite.

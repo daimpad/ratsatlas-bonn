@@ -71,7 +71,7 @@ class StandUndWeg(unittest.TestCase):
         self.assertEqual(process.stand(p), "in Beratung")
 
     def test_ohne_abstimmung_ist_nicht_entschieden(self):
-        for r in ("nicht abgestimmt", "ohne Votum - mit Maßgabe"):
+        for r in ("nicht abgestimmt", "ohne Votum - mit Maßgabe", "zurückgezogen"):   # 25.11.2026
             p = paper(process_=[cons("Rat", "Entscheidung", True, result=r)])
             self.assertEqual(process.stand(p), "beraten, ohne Entscheidung", r)
         p = paper(process_=[cons("Rat", "Entscheidung", True, result="weitere Lesung erforderlich")])

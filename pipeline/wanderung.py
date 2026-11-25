@@ -16,6 +16,8 @@ import csv
 import io
 import json
 import math
+import shutil
+import sys
 import tempfile
 import urllib.request
 import zipfile
@@ -82,7 +84,7 @@ def _hole(url, timeout=180):
 
 
 def _tsv(pfad, felder, zeilen):
-    with open(pfad, "w", encoding="utf-8", newline="") as f:
+    with open(pfad, "w", encoding="utf-8", newline="") as f:   # in ausschnitt() in einen neuen Ordner
         w = csv.DictWriter(f, felder, delimiter="\t", lineterminator="\n")
         w.writeheader()
         for z in zeilen:
@@ -115,8 +117,13 @@ def kreise_region(shp_zip):
 
 
 def ausschnitt(ordner=ORDNER, hole=_hole):
-    """Schritt `wanderung`: Quellen laden und die Auszüge für Bonn ablegen."""
-    ordner.mkdir(parents=True, exist_ok=True)
+    """Schritt `wanderung`: Quellen laden und die Auszüge für Bonn ablegen. Alle Dateien entstehen erst in einem
+    neuen Ordner und ersetzen den alten Stand nur zusammen (Prüfung 25.11.2026: ein abgebrochener Lauf ließ sonst
+    einzelne Dateien fehlen oder halb geschrieben)."""
+    ziel = ordner
+    ordner = ziel.with_name(ziel.name + ".neu")
+    shutil.rmtree(ordner, ignore_errors=True)
+    ordner.mkdir(parents=True)
     zeit = datetime.now(timezone.utc).isoformat(timespec="seconds")
     z = zipfile.ZipFile(io.BytesIO(hole(KWM)))
     name = next(n for n in z.namelist() if n.lower().endswith(".csv"))
@@ -137,13 +144,31 @@ def ausschnitt(ordner=ORDNER, hole=_hole):
         "abruf": zeit, "kreiswanderungsmatrix": {"url": KWM, "seite": KWM_SEITE, "berichtsjahr": 2025, "datei": name},
         "wegweiser": {"url": WW.format(fu="…"), "jahre": "2006–2023"}, "vg2500": {"url": VG}},
         ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"Wanderung: {len(partner)} Partnerkreise, {len(reihe)} Werte der Zeitreihe → {ordner}")
+    ziel.mkdir(parents=True, exist_ok=True)
+    for datei in ordner.iterdir():
+        datei.replace(ziel / datei.name)
+    ordner.rmdir()
+    print(f"Wanderung: {len(partner)} Partnerkreise, {len(reihe)} Werte der Zeitreihe → {ziel}")
 
 
 def lesen(ordner=ORDNER):
-    """Auszüge für die Seite oder None, solange der Schritt `wanderung` nicht gelaufen ist."""
-    if not (ordner / "partner_2025.tsv").exists():
+    """Auszüge für die Seite oder None, solange der Schritt `wanderung` nicht gelaufen ist oder eine Datei fehlt oder
+    nicht lesbar ist (dann ohne Seite, die Veröffentlichung läuft weiter; Prüfung 25.11.2026)."""
+    if not all((ordner / n).exists() for n in DATEIEN):
+        if (ordner / "partner_2025.tsv").exists():
+            print(f"Wanderung: unvollständiger Stand in {ordner}, Seite entfällt", file=sys.stderr)
         return None
+    try:
+        return _lesen(ordner)
+    except (OSError, ValueError, KeyError) as e:
+        print(f"Wanderung: Stand in {ordner} nicht lesbar ({e}), Seite entfällt", file=sys.stderr)
+        return None
+
+
+DATEIEN = ("partner_2025.tsv", "alter_2025.tsv", "zeitreihe.tsv", "kreise_region.geojson", "STAND.json")
+
+
+def _lesen(ordner):
     def tsv(n):
         with open(ordner / n, encoding="utf-8") as f:
             return list(csv.DictReader(f, delimiter="\t"))
@@ -177,6 +202,41 @@ def _summen(d):
     z = sum(p["zuzuege"] or 0 for p in d["partner"])
     f = sum(p["fortzuege"] or 0 for p in d["partner"])
     return z, f, z - f
+
+
+def _anteil(teil, ganz):
+    return f"{round(100 * teil / ganz)} %" if ganz else "–"
+
+
+def _salden_hinweis(d, s):
+    """Warum die Salden auf der Seite leicht voneinander abweichen (Prüfung 25.11.2026): Kacheln aus den Summen der
+    Zu- und Fortzüge, Altersgruppen und Kreise je aus ihren eigenen, einzeln geschützten Werten."""
+    sa = sum(a["saldo"] for a in d["alter"])
+    sk = sum(p["saldo"] or 0 for p in d["partner"])
+    geheim = sum(1 for p in d["partner"] if None in (p["zuzuege"], p["fortzuege"], p["saldo"]))
+    if sa == s and sk == s and not geheim:
+        return ""
+    return (f'<p class="hint">Die Statistik verändert kleine Zahlen leicht und lässt sehr kleine leer ({geheim} von '
+            f'{len(d["partner"])} Kreisen haben mindestens ein leeres Feld). Deshalb ergeben die Werte je Altersgruppe '
+            f'zusammen {_s(sa)} und die Salden je Kreis zusammen {_s(sk)}, nicht genau {_s(s)}. Die Kacheln oben sind '
+            f'aus den Summen der Zu- und Fortzüge gebildet.</p>')
+
+
+def _satz_alter(alter):
+    """Satz zum Saldo nach Alter aus den Daten (Prüfung 25.11.2026: kein fest geschriebener Befund)."""
+    plus = [a["alter"] for a in alter if a["saldo"] > 0]
+    minus = [a["alter"] for a in alter if a["saldo"] < 0]
+    liste = lambda xs: ", ".join(xs[:-1]) + (" und " if len(xs) > 1 else "") + xs[-1] if xs else ""
+    teile = []
+    if plus:
+        teile.append(f"Mehr Zuzüge als Fortzüge: {liste(plus)}.")
+    if minus:
+        teile.append(f"Mehr Fortzüge als Zuzüge: {liste(minus)}.")
+    zusatz = ""
+    if "18 bis unter 25 Jahre" in plus and {"unter 18 Jahre", "30 bis unter 50 Jahre"} <= set(minus):
+        zusatz = (" Das passt zu einem bekannten Muster: Junge Erwachsene ziehen oft zum Studium oder zur Ausbildung "
+                  "zu, Familien mit Kindern ziehen eher fort.")
+    return "Saldo nach Altersgruppe innerhalb Deutschlands. " + " ".join(teile) + zusatz
 
 
 def _beide(fn, *args):
@@ -337,7 +397,7 @@ def body(d, root):
     _, ws = letzt("wanderungssaldo")
     tab_partner = _tabelle(["Kreis", "Land", "Zuzüge nach Bonn", "Fortzüge aus Bonn", "Saldo"],
                            [[escape(_kurz(x["kreis"])), escape(x["land"]), _n(x["zuzuege"]), _n(x["fortzuege"]), _s(x["saldo"])]
-                            for x in p if max(x["zuzuege"] or 0, x["fortzuege"] or 0) >= 100], "wz-zahlen")
+                            for x in sorted(p, key=lambda x: -((x["zuzuege"] or 0) + (x["fortzuege"] or 0)))], "wz-zahlen")
     tab_alter = _tabelle(["Altersgruppe", "Zuzüge", "Fortzüge", "Saldo"],
                          [[escape(a["alter"]), _n(a["zuzuege"]), _n(a["fortzuege"]), _s(a["saldo"])] for a in d["alter"]], "wz-zahlen")
     jahre = sorted({j for v in reihe.values() for j, _ in v})
@@ -355,21 +415,22 @@ def body(d, root):
       <p class="wz-kachel"><span class="wz-wert" style="color:{FORTZUG}">{_n(f)}</span><span>Fortzüge aus Bonn in andere Kreise Deutschlands, 2025</span></p>
       <p class="wz-kachel"><span class="wz-wert">{_s(s)}</span><span>Saldo innerhalb Deutschlands, 2025</span></p>
     </div>
+    {_salden_hinweis(d, s)}
     <p class="wz-hinweis"><strong>Ohne Ausland:</strong> Zuzüge aus dem Ausland und Fortzüge ins Ausland fehlen in dieser Quelle. Die Stadt Bonn nennt nach ihrem Melderegister für 2025 insgesamt 23.805 Zuzüge und 23.135 Fortzüge (<a href="{STADT_BERICHT}">Jahreswirtschaftsbericht 2026</a>). Beide Zählungen folgen unterschiedlichen Regeln und lassen sich nicht verrechnen.</p>
     <nav class="thema-sprung" aria-labelledby="sprung-h"><h2 id="sprung-h">Auf dieser Seite</h2><p><a href="#woher">Woher und wohin</a> · <a href="#region">Karte der Region</a> · <a href="#alter">Wer zieht</a> · <a href="#entwicklung">Entwicklung seit 2006</a> · <a href="#grenzen">Grenzen</a></p></nav>
 
     <h2 id="woher">Woher und wohin</h2>
-    <p>Bonn tauscht Einwohnerinnen und Einwohner mit {len(p)} Kreisen. Am meisten mit dem Umland: {_n(nz)} Zuzüge aus und {_n(nf)} Fortzüge nach Nordrhein-Westfalen. Die {TOP} Kreise mit dem größten Austausch:</p>
+    <p>Bonn tauscht Einwohnerinnen und Einwohner mit {len(p)} Kreisen, davon {_n(nz)} Zuzüge aus und {_n(nf)} Fortzüge nach Nordrhein-Westfalen ({_anteil(nz + nf, z + f)} des Austauschs). Die {TOP} Kreise mit dem größten Austausch:</p>
 {_beide(balken_partner, p)}
-    <details class="hh-mehr"><summary>Alle Kreise mit mindestens 100 Zu- oder Fortzügen als Tabelle</summary>{tab_partner}</details>
+    <details class="hh-mehr"><summary>Alle Kreise als Tabelle (auch die Werte der Karte)</summary>{tab_partner}</details>
 
     <h2 id="region">Karte der Region</h2>
-    <p>Saldo mit Bonn je Kreis in Nordrhein-Westfalen und Rheinland-Pfalz. Violett: Mehr Menschen ziehen aus Bonn dorthin als umgekehrt. Türkis: Mehr Menschen ziehen von dort nach Bonn.</p>
+    <p>Saldo mit Bonn je Kreis in Nordrhein-Westfalen und Rheinland-Pfalz. Violett: Mehr Menschen ziehen aus Bonn dorthin als umgekehrt. Türkis: Mehr Menschen ziehen von dort nach Bonn. Die Werte jedes Kreises stehen auch in der Tabelle unter „Woher und wohin“.</p>
 {karte_region(d["kreise"], p)}
     {legende_karte()}
 
     <h2 id="alter">Wer zieht</h2>
-    <p>Saldo nach Altersgruppe innerhalb Deutschlands: Junge Erwachsene von 18 bis 24 Jahren ziehen nach Bonn, oft zum Studium. Kinder und Erwachsene von 30 bis 49 Jahren, also häufig Familien, ziehen aus Bonn fort.</p>
+    <p>{escape(_satz_alter(d["alter"]))}</p>
 {_beide(balken_alter, d["alter"])}
     <details class="hh-mehr"><summary>Zahlen je Altersgruppe als Tabelle</summary>{tab_alter}</details>
 

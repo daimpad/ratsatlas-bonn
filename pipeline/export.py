@@ -15,8 +15,9 @@ from .themenseiten import ALLE as THEMENSEITEN
 DERIVED_NOTE = (
     "Einreichende (originators), fachliche Zuständigkeit (responsibility.kind = 'fachlich') und "
     "Ortsbezüge der Stufe B bzw. 'vererbt' (locations.stage, method, confidence, evidence) sind "
-    "abgeleitet; alle übrigen Felder stammen unverändert aus den Quellen. VORLÄUFIGE FASSUNG: "
-    "Stichprobenprüfung von Hand ausstehend."
+    "abgeleitet; ebenso Stand, Themen, Parteien und die gekennzeichneten KI-Kurzfassungen. Titel geschützter "
+    "Drucksachen erscheinen ohne Hausnummer, alle Titel ohne Flurstücksnummer. Die übrigen Felder stammen aus den "
+    "Quellen. Ergebnisse der Prüfungen von Hand: Dialog „Über“, „Wie sicher sind die Angaben?“."
 )
 AUDIT_COLUMNS = ["drucksache", "datum", "vorlagenart", "titel", "stufe", "methode", "ebene", "treffer",
                  "ortsteil", "stadtbezirk", "konfidenz", "fundstelle", "quellobjekt", "pruefstatus"]
