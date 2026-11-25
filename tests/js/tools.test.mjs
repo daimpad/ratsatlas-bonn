@@ -199,6 +199,18 @@ test("Datenschutz: Aufzählungen, „Häuser Nr.“, Flurstücke und Kurzfassung
   assert.equal(v.kurzfassung.text, `Es geht um Bäume an der Frongasse zwischen den ${OHNE_NR}.`);
 });
 
+test("Datenschutz: Flurstückskennzeichen in jedem Titel, „Haus N“ (Prüfung 25.11.2026)", async () => {
+  const files = structuredClone(FILES);
+  files["bonn/suche.json"].rows[0][1] = "Bürgerantrag: Ecke Muffendorfer Straße, Kennung Flurstücke 05300100100123-05300100100124, zwischen Haus 12 und der Kreuzung";
+  files["bonn/suche.json"].rows[1][1] = "Bebauungsplan, Gemarkung Ippendorf, Flur 4, Flurstücke 123/456, 1.234 und 5.678";
+  const t = createTools({ today: "2026-10-18", load: async (p) => { if (!(p in files)) throw new Error(`HTTP 404 ${p}`); return structuredClone(files[p]); } });
+  const r = await t.run("suche_vorlagen", {});
+  assert.equal(r.treffer.find((x) => x.drucksache === "261749").titel,
+    `Bürgerantrag: Ecke Muffendorfer Straße, Kennung [Flurstück ausgelassen], zwischen ${OHNE_NR} und der Kreuzung`);
+  const zweite = files["bonn/suche.json"].rows[1][0];
+  assert.equal(r.treffer.find((x) => x.drucksache === zweite).titel, "Bebauungsplan, Gemarkung Ippendorf, [Flurstück ausgelassen]");
+});
+
 test("hole_vorlage: KI-Kurzfassung als abgeleitet gekennzeichnet", async () => {
   const kurz = { ...VORLAGE, kurzfassung: { text: "Es geht um Bäume.", modell: "m" } };
   const t = createTools({ today: "2026-10-18", load: async (p) => structuredClone(p === "bonn/chat/vorlagen/2610.json" ? { papers: { 261088: kurz } } : FILES[p]) });

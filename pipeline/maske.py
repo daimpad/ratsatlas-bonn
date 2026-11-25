@@ -16,7 +16,11 @@ Ergänzt nach der Prüfung vom November 2026 (pruefung/BERICHT_2026-11.md, Nr. 2
 21.11.2026, Umsetzung wie empfohlen): Aufzählungen mit „oder“, „sowie“, „+“ und „&“, „Häuser(n) (Nr.) N“, „Str“ ohne
 Punkt; Flurstücksnummern (FLUR); Fällgenehmigungen für private Bäume auch bei anderer Federführung (PRIVAT_TITEL);
 dieselbe Regel für Fundstellen (evidence) und für alle TSV-Dateien unter data/export (bestand: auch einmalig gezogene
-Prüfbögen)."""
+Prüfbögen).
+Ergänzt nach der Prüfung vom 25.11.2026 (Freigabe des Auftraggebers, Umsetzung wie empfohlen): Flurstückskennzeichen
+mit Bindestrichen und Tausenderpunkten („0530…-0530…“, „1234-12-123“, „1.234“, „1234. 567“) werden ganz ausgeblendet;
+„FF: Amt 63“ (und 56-3, 67-6) im Titel zählt wie die federführende Stelle; „Haus N“ wie „Haus Nr. N“; Flurstücke
+werden in jedem Titel ausgeblendet, nicht nur bei geschützten Drucksachen (FLUR_ALLE)."""
 import json
 import re
 
@@ -25,6 +29,9 @@ from . import chat, config
 OHNE_NR = "[Hausnummer ausgelassen]"
 # Bauordnungsamt und Untere Naturschutzbehörden: Titel nennen oft private Baugrundstücke mit Hausnummer
 AMT_PRIVAT = re.compile(r"^(?:63(?:\s|-)|56-3\b|67-6\b)")
+# ältere Titel nennen die Federführung selbst („(alt: …, FF: Amt 63)“), auch wenn die Schnittstelle eine andere Stelle
+# führt (190224, 190590)
+FF_PRIVAT = re.compile(r"\bFF:?\s*(?:Amt\s*)?(?:63|56-3|67-6)(?![\d-])", re.I)
 # Fällgenehmigungen für private Bäume führt teils eine Bezirksverwaltungsstelle (z. B. 190302, 190305, 190306)
 PRIVAT_TITEL = re.compile(r"fällgenehmigung", re.I)
 _L = r"[^\W\d_]"   # Buchstabe (wie \p{L})
@@ -38,15 +45,22 @@ SUFFIX = (rf"(?:{_L}|[.-])*(?:straße|strasse|str\.?|weg|platz|gasse|allee|ring|
 # „Hausnummer 82“, „Haus-Nr. 264“, „Haus Nr. 5“, „Hausnummern 36 bis 40“, „(neben Haus-Nr.) 68“ (wie WORT in
 # site/chat/tools.js); eine schließende Klammer bleibt stehen
 # „vor den Häusern Nr. 73 - 89“, „Häuser 12 und 14“ (240963)
-WORT = re.compile(rf"\b(?:hausnummern?|hausnr\.?|haus-nr\.?|haus\s+nr\.?|häusern?(?:\s+nr\.?)?)\s*(\))?\s*{NR}", re.I)
+# „zwischen Haus 12 und …“ (220279)
+WORT = re.compile(rf"\b(?:hausnummern?|hausnr\.?|haus-nr\.?|haus(?:\s+nr\.?)?|häusern?(?:\s+nr\.?)?)\s*(\))?\s*{NR}", re.I)
 # Rest einer Aufzählung hinter einer Auslassung („[Hausnummer ausgelassen] oder 12-14“): entsteht, wenn ein Titel
 # nach älteren Regeln schon ausgeblendet war (eingecheckte Audits und Prüfbögen)
 REST = re.compile(rf"({re.escape(OHNE_NR)})\s*(?:-|–|bis|und|u\.|oder|sowie|/|,|\+|&)\s*{NR}", re.I)
 # Flurstücke bestimmen ein Grundstück wie eine Hausnummer: „Flur 12, Flurstück 345/6“, „Flurstücke 12 und 13“
 OHNE_FLUR = "[Flurstück ausgelassen]"
-_FS = r"\d{1,5}(?:\s*/\s*\d{1,4})?"
-FLUR = re.compile(rf"\b(?:flur\s+\d{{1,3}}\s*,?\s*(?:und\s+)?)?flurstücke?n?s?\s*(?:nr\.?\s*)?{_FS}"
-                  rf"(?:\s*(?:,|und|u\.|sowie|-|–|bis)\s*{_FS})*", re.I)
+# Kennzeichen mit Bindestrichen oder Punkten („0530…-0530…“, „1234-12-123“, „1.234“) gehören ganz dazu (202262-02)
+_FS = r"\d{1,14}(?:[.-]\d{1,14})*(?:\s*/\s*\d{1,6})?"
+FLUR = re.compile(rf"\b(?:flur\s+\d{{1,3}}\s*,?\s*(?:und\s+)?)?flurstücke?n?s?(?:-?nummer|-?nr\.?)?\s*(?:nr\.?\s*)?{_FS}"
+                  rf"(?:\s*(?:,|\.|und|u\.|sowie|-|–|bis)\s*{_FS})*", re.I)
+# Rest einer Nummer hinter einer älteren Auslassung („[Flurstück ausgelassen]0530…-0530…“, „[…]. 567 und 1.234“):
+# entsteht, wenn ein Titel nach den Regeln vor dem 25.11.2026 ausgeblendet war (eingecheckte Audits)
+REST_FLUR = re.compile(rf"({re.escape(OHNE_FLUR)})(?:[\d.\-/]*\d)?(?:\s*(?:,|\.|und|u\.|sowie|-|–|bis)\s*{_FS})*", re.I)
+# Zahl direkt hinter einer Auslassung („[Flurstück ausgelassen]0530…“, „[…]. 567“): Rest einer Nummer (check.py)
+NACH_AUSLASSUNG = re.compile(r"ausgelassen\](?:\d|[.\-/]\s?\d)")
 
 
 def _muster(strassen):
@@ -59,7 +73,9 @@ def privat(p):
     Datenbank: amt_name, Export: responsibility)."""
     namen = [p.get("amt_name"), p.get("amt")] + [r.get("name") for r in p.get("responsibility") or []
                                                  if r.get("kind") == "federfuehrend"]
-    return any(AMT_PRIVAT.match(n or "") for n in namen) or bool(PRIVAT_TITEL.search(p.get("name") or ""))
+    titel = p.get("name") or ""
+    return (any(AMT_PRIVAT.match(n or "") for n in namen) or bool(PRIVAT_TITEL.search(titel))
+            or bool(FF_PRIVAT.search(titel)))
 
 
 class Maske:
@@ -78,12 +94,14 @@ class Maske:
 
     def __call__(self, titel, ref):
         if not self._betroffen(titel, ref):
-            return titel
+            return flur_alle(titel)
         titel = WORT.sub(lambda m: OHNE_NR + (m.group(1) or ""), self.rx.sub(lambda m: m.group(1) + OHNE_NR, titel))
-        return FLUR.sub(OHNE_FLUR, REST.sub(r"\1", titel))
+        return REST_FLUR.sub(r"\1", FLUR.sub(OHNE_FLUR, REST.sub(r"\1", titel)))
 
     def offen(self, titel, ref):
         """Bleibt nach dem Ausblenden eine Hausnummer oder ein Flurstück stehen? (Prüfung in check.py)"""
+        if titel and (FLUR.search(titel) or NACH_AUSLASSUNG.search(titel)):
+            return True   # Flurstücke und Reste hinter einer Auslassung in jedem Titel
         if not self._betroffen(titel, ref):
             return False
         if titel not in self._offen:
@@ -97,6 +115,12 @@ class Maske:
         Bindewörter und Satzzeichen (GROB)? Die Regeln selbst können ihre Lücken nicht finden (Prüfung November 2026,
         Nr. 5)."""
         return self._betroffen(titel, ref) and bool(GROB.search(titel))
+
+
+def flur_alle(titel):
+    """Flurstücke in jedem Titel ausblenden (Entscheidung des Auftraggebers 25.11.2026): sie bestimmen ein Grundstück,
+    auch in Verfahren zu Bebauungsplänen. Ohne „lurst“ im Text bleibt der Titel unverändert (schnell)."""
+    return REST_FLUR.sub(r"\1", FLUR.sub(OHNE_FLUR, titel)) if titel and "lurst" in titel else titel
 
 
 class _Alle:
@@ -129,6 +153,9 @@ def _text(zelle):
     return len(zelle) > 7 and not zelle.startswith(("http://", "https://"))
 
 
+DS = re.compile(r"\d{6}(?:-\d{1,2})?(?: [A-Z]{2,3})?")   # Drucksachennummer wie „202262-03 ST“
+
+
 def tsv_offen(path, m):
     """Drucksachen in einer TSV-Datei, in deren Zeile noch eine Hausnummer oder ein Flurstück steht."""
     offen = set()
@@ -136,8 +163,9 @@ def tsv_offen(path, m):
         for line in f:
             zellen = line.rstrip("\n").split("\t")
             ref = next((c for c in zellen if c in m.refs), None)
-            if ref and any(m.offen(c, ref) for c in zellen if _text(c)):
-                offen.add(ref)
+            # Flurstücke in jeder Zeile (flur_alle), Hausnummern nur bei geschützten Drucksachen
+            if any(m.offen(c, ref) for c in zellen if _text(c)):
+                offen.add(ref or next((c for c in zellen if DS.fullmatch(c)), zellen[0]))
     return sorted(offen)
 
 
@@ -151,7 +179,7 @@ def tsv_nachziehen(path, m):
         ende = line[len(line.rstrip("\r\n")):]
         zellen = line[:len(line) - len(ende)].split("\t")   # je Zelle: kein Treffer über Spaltengrenzen
         ref = next((c for c in zellen if c in m.refs), None)
-        if ref and (neu := "\t".join(m(c, ref) if _text(c) else c for c in zellen) + ende) != line:
+        if (neu := "\t".join(m(c, ref) if _text(c) else c for c in zellen) + ende) != line:
             lines[i] = neu
             n += 1
     if n:
