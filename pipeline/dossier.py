@@ -443,6 +443,9 @@ def _row(root, r):
             + "</td></tr>")
 
 
+LANG, SICHTBAR = 25, 10   # ab LANG Vorlagen in einem Strang nur SICHTBAR offen, der Rest aufklappbar
+
+
 def _tabelle(rows):
     return f"""    <table>
       <thead><tr><th scope="col">Datum</th><th scope="col">Drucksache</th><th scope="col">Titel</th><th scope="col">Stand</th></tr></thead>
@@ -618,6 +621,13 @@ def body(t, d, root):
         elif rows and s.get("eingeklappt"):
             tabelle = (f"    <details>\n      <summary>Alle {len(s['vorlagen'])} Vorlagen anzeigen</summary>\n"
                        f"{tabelle}\n    </details>")
+        elif len(s["vorlagen"]) > LANG:
+            # lange Stränge: die jüngsten sichtbar, die übrigen aufklappbar (Prüfung 25.11.2026, V4: die Verkehrsseite
+            # war auf dem Telefon über 200.000 px hoch)
+            vorne, rest = s["vorlagen"][:SICHTBAR], s["vorlagen"][SICHTBAR:]
+            tabelle = (_tabelle("\n".join(_row(root, r) for r in vorne))
+                       + f"\n    <details class=\"strang-mehr\">\n      <summary>Weitere {len(rest)} Vorlagen anzeigen</summary>\n"
+                       + _tabelle("\n".join(_row(root, r) for r in rest)) + "\n    </details>")
         straenge.append(f"""    <h3 id="{s['key']}">{escape(s['titel'])} ({len(s['vorlagen'])})</h3>
 {akkordeon.mehr("Wie zugeordnet?", f"<p>Regel (abgeleitet): {escape(s['regel'].rstrip('.'))}." + (" Gliederung nach Stadtbezirk aus den Ortsbezügen (abgeleitet)." if rows and any("bezirk" in r for r in s["vorlagen"]) else "") + "</p>", klasse="hh-mehr meta-acc regel-acc")}""" + tabelle)
     inhalt = " · ".join(f'<a href="#{s["key"]}">{escape(s["titel"])}</a>' for s in d["straenge"])

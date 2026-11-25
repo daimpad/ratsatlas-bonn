@@ -41,7 +41,7 @@ const zeitraum = () => (daten.bis ? `${fmt(daten.seit)} bis ${fmt(daten.bis)}` :
 function saeulenVorOrt(o) {
   return { type: "FeatureCollection", features: o.orte.map((x, i) => ({ type: "Feature", id: i,
     properties: { i, n: x[3].length, h: 40 + 28 * x[3].length, farbe: farbe(x[2]) },
-    geometry: { type: "Polygon", coordinates: quadrat(x[0], x[1], 8) } })) };
+    geometry: { type: "Polygon", coordinates: quadrat(x[0], x[1], 12) } })) };   // 24 m breit (Prüfung 25.11.2026, V6)
 }
 function saeulenBonn() {
   return { type: "FeatureCollection", features: daten.ortsteile.map((o, i) => ({ type: "Feature", id: i,
@@ -180,7 +180,7 @@ function vollbildEinrichten() {
   // Esc schließt zuerst ein offenes Popup, erst danach das Vollbild
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
-    const pop = document.querySelectorAll(".maplibregl-popup");
+    const pop = document.querySelectorAll(".maplibregl-popup:not(.d3-tip)");
     if (pop.length) { pop.forEach((el) => el.remove()); e.preventDefault(); return; }
     if (voll) { vollbild(false); knopf.focus(); }
   });
@@ -231,9 +231,19 @@ async function start() {
         `<li><a href="${vorgang(ot, ref)}">${esc(titel || ref)}</a><br><span>${esc(ref)} · ${esc(fmt(datum))}</span></li>`).join("")}</ul>`);
     });
     karte.on("click", "bonn", (e) => { ot = daten.ortsteile[e.features[0].properties.i]; ansicht = "vorort"; zeigen(); });
+    // Name und Zahl beim Überfahren (Prüfung 25.11.2026, V6: in „Ganz Bonn“ standen keine Ortsteilnamen)
+    const hinweis = new maplibregl.Popup({ closeButton: false, closeOnClick: false, className: "d3-tip", offset: 12 });
+    const text = (id, f) => {
+      if (id === "bonn") { const o = daten.ortsteile[f.properties.i]; return `${o.name}: ${o.n12} Vorlagen – Klick öffnet den Ortsteil`; }
+      const n = f.properties.n;
+      return `${n} ${n === 1 ? "Vorlage" : "Vorlagen"} an diesem Ort – Klick nennt sie`;
+    };
     for (const id of ["vor", "bonn"]) {
-      karte.on("mouseenter", id, () => { karte.getCanvas().style.cursor = "pointer"; });
-      karte.on("mouseleave", id, () => { karte.getCanvas().style.cursor = ""; });
+      karte.on("mousemove", id, (e) => {
+        karte.getCanvas().style.cursor = "pointer";
+        hinweis.setLngLat(e.lngLat).setText(text(id, e.features[0])).addTo(karte);
+      });
+      karte.on("mouseleave", id, () => { karte.getCanvas().style.cursor = ""; hinweis.remove(); });
     }
   }
   document.querySelectorAll("[data-ansicht]").forEach((b) => b.addEventListener("click", () => { ansicht = b.dataset.ansicht; if (ansicht === "bonn") bezirk = null; zeigen(); }));
