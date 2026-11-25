@@ -543,3 +543,39 @@ test("Tastatur und Verlauf: Suchmenü nicht beim Fokus, Kartenflächen keine Tab
   await page.close();
 });
 
+
+test("Prüfung 25.11.2026: Gebietswahl, Suche ohne Schreibweisen-Fallen, Mitmachen ohne Vorwahl", async () => {
+  // Telefon: nach der Gebietswahl ist die Karte frei, ein Knopf über der Leiste öffnet die Liste
+  const mobil = await open("", { width: 390, height: 844 });
+  assert.equal(await mobil.locator("#gebiet-chip").isVisible(), false, "ohne Gebiet kein Knopf");
+  await mobil.locator("#nav-burger").click();
+  await mobil.selectOption("#f-area", "ortsteil:endenich");
+  await mobil.waitForFunction(() => !document.querySelector("#gebiet-chip").hidden);
+  assert.equal(await mobil.locator("#panel-detail").isVisible(), false, "„Los geht's“ geschlossen");
+  assert.match(await mobil.locator("#gebiet-chip").textContent(), /Vorlagen in Endenich/);
+  await mobil.locator("#gebiet-chip").click();
+  assert.ok(await mobil.locator("#panel-list").isVisible());
+  assert.equal(await mobil.locator("#gebiet-chip").isVisible(), false);
+  assert.deepEqual(mobil.errors, []);
+  await mobil.close();
+  // breit: ohne Gebiet sucht die Suche in ganz Bonn, ohne den Suchindex beim Start zu laden; nach der Gebietswahl Liste offen
+  const page = await open("");
+  assert.equal(await page.$eval('input[name="scope"]:checked', (x) => x.value), "bonn");
+  assert.equal(await page.evaluate(() => performance.getEntriesByType("resource").some((r) => r.name.includes("suche.json"))), false);
+  await page.selectOption("#f-area", "ortsteil:endenich");
+  await page.waitForFunction(() => !document.querySelector("#panel-list").hidden);
+  assert.equal(await page.$eval('input[name="scope"]:checked', (x) => x.value), "gebiet");
+  // „ss“ für „ß“ findet dieselben Vorlagen
+  await page.fill("#f-text", "Endenicher Straße"); await page.dispatchEvent("#f-text", "input"); await page.waitForTimeout(400);
+  const mitSz = await page.textContent("#count");
+  await page.fill("#f-text", "endenicher strasse"); await page.dispatchEvent("#f-text", "input"); await page.waitForTimeout(400);
+  assert.equal(await page.textContent("#count"), mitSz);
+  assert.doesNotMatch(mitSz, /^0 von/);
+  assert.deepEqual(page.errors, []);
+  await page.close();
+  // Mitmachen ohne Gebiet: kein vorgewählter Stadtbezirk
+  const mm = await open("?mitmachen=1");
+  await mm.waitForSelector("#bt-bezirk");
+  assert.equal(await mm.$eval("#bt-bezirk", (x) => x.value), "");
+  await mm.close();
+});

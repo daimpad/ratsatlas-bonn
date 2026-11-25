@@ -595,7 +595,7 @@ def _meetings(db):
                     "source_object": m["id"]})
         if aufzeichnungen.video(m["id"]):   # Aufzeichnung (Ratstranskripte, bonn.biz): nur Verweis auf das Video
             out[-1]["video"] = aufzeichnungen.video(m["id"])
-    return sorted(out, key=lambda x: x["date"])
+    return sorted(out, key=lambda x: (x["date"], x["time"] or ""))   # am selben Tag nach Uhrzeit (Prüfung 25.11.2026)
 
 
 # --- Prozessebene: typische Wege je Vorlagenart ----------------------------------------------------
