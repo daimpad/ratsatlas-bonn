@@ -2029,7 +2029,6 @@
   <url><loc>https://bonn.ratsatlas.de/vorgang/241177-06/</loc><lastmod>2025-06-04</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/241177-07-st/</loc><lastmod>2025-06-17</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/241177-09-st/</loc><lastmod>2025-05-12</lastmod></url>
-  <url><loc>https://bonn.ratsatlas.de/vorgang/241177-10/</loc><lastmod>2025-04-30</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/241177-11-st/</loc><lastmod>2025-05-12</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/241177-12-aa/</loc><lastmod>2025-05-12</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/241177-13-aa/</loc><lastmod>2025-05-12</lastmod></url>
@@ -2688,9 +2687,10 @@
   <url><loc>https://bonn.ratsatlas.de/vorgang/242331/</loc><lastmod>2025-08-27</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/242331-01-st/</loc><lastmod>2025-08-27</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/242331-02-st/</loc><lastmod>2025-08-27</lastmod></url>
-  <url><loc>https://bonn.ratsatlas.de/vorgang/242332/</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://bonn.ratsatlas.de/vorgang/242332/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/242332-01-aa/</loc><lastmod>2025-04-01</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/242332-02/</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://bonn.ratsatlas.de/vorgang/242332-03-aa/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/242333/</loc><lastmod>2025-02-05</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/242334/</loc><lastmod>2025-12-03</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/242334-01-st/</loc><lastmod>2025-12-03</lastmod></url>
@@ -7533,6 +7533,7 @@
   <url><loc>https://bonn.ratsatlas.de/vorgang/262245/</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/262246/</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/262248/</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://bonn.ratsatlas.de/vorgang/262249/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/262250/</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/262251/</loc><lastmod>2026-11-23</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/262252/</loc><lastmod>2026-11-23</lastmod></url>
@@ -7540,4 +7541,7 @@
   <url><loc>https://bonn.ratsatlas.de/vorgang/262262/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/262267/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://bonn.ratsatlas.de/vorgang/262271/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://bonn.ratsatlas.de/vorgang/262273/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://bonn.ratsatlas.de/vorgang/262274/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://bonn.ratsatlas.de/vorgang/262276/</loc><lastmod>2026-11-25</lastmod></url>
 </urlset>

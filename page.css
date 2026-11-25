@@ -18,6 +18,9 @@ a { color: var(--accent-ink); }
 .page-back { font-weight: 600; text-decoration: none; padding: 8px 14px; border-radius: 12px; background: rgba(124, 58, 237, 0.1); }
 .page { padding: 16px 28px 28px; margin-top: 12px; border-radius: 20px; background: rgba(255, 255, 255, 0.92); box-shadow: 0 8px 32px rgba(15, 15, 20, 0.08); }
 .page h1 { font-size: 32px; line-height: 1.2; letter-spacing: -0.02em; margin: 12px 0 6px; }
+/* lange Wörter und Adressen (z. B. „Öffentlichkeitsbeteiligung“ in Titeln) brechen statt seitlich zu laufen */
+.page { overflow-wrap: break-word; }
+.page h1, .page h2, .page h3 { hyphens: auto; }
 .page h2 { font-size: 20px; letter-spacing: -0.01em; margin: 28px 0 6px; padding-top: 12px; border-top: 1px solid var(--line); }
 .page .lead { font-size: 18px; color: var(--muted); margin-top: 0; }
 .page code { font-size: 14px; background: rgba(124, 58, 237, 0.08); padding: 1px 5px; border-radius: 6px; }
@@ -358,7 +361,7 @@ i.hh-e9, tr.hh-e9 > th::before { background: #b0a48a; }
 .aufz-titel { font-weight: 600; font-size: 14px; }
 .aufz-kurz { font-weight: 400; font-size: 12px; color: var(--muted-aufz, #5a5a68); margin-left: 4px; }
 .aufz-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px !important; }
-.aufz-knopf { display: inline-block; font-weight: 600; font-size: 13px; text-decoration: none; padding: 5px 10px; border-radius: 10px;
+.aufz-knopf { display: inline-block; max-width: 100%; overflow-wrap: anywhere; font-weight: 600; font-size: 13px; text-decoration: none; padding: 5px 10px; border-radius: 10px;
   background: var(--accent-ink); color: #fff; }
 .aufz-knopf:hover { background: #5b21b6; }
 .aufz-knopf-leise { background: #fff; color: var(--accent-ink); border: 1px solid rgba(124, 58, 237, 0.35); }

@@ -10091,6 +10091,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 232011	verortet	Hauptteil	volltext_strasse+ortsteil	Auf dem Hügel	Endenich	mittel	2
 232011	verortet	Hauptteil	volltext_strasse+ortsteil	Siemensstraße	Endenich	mittel	2
 232011-01 ST	kein Ort						
+232012	kein Ort						
 232012-01 ST	kein Ort						
 232012-02 ST	verortet	Hauptteil	volltext_strasse	An der Elisabethkirche	Südstadt	niedrig	1
 232012-02 ST	verortet	Hauptteil	volltext_strasse	Kaiserstraße	Gronau	niedrig	1
@@ -11830,9 +11831,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241177-06	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	niedrig	1
 241177-07 ST	kein Ort						
 241177-09 ST	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	mittel	3
-241177-10	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
-241177-10	verortet	Hauptteil	volltext_strasse	Lambareneweg	Nordstadt	mittel	5
-241177-10	verortet	Hauptteil	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	4
 241177-11 ST	kein Ort						
 241177-12 AA	kein Ort						
 241177-13 AA	kein Ort						

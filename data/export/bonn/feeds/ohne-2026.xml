@@ -9,12 +9,44 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030706#vorlage</id>
+<title>Neue Vorlage 262276: Tagesordnungspunkte in nichtöffentlicher Sitzung</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262276"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030706"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030703#vorlage</id>
+<title>Neue Vorlage 262274: Tagesordnungspunkte der nichtöffentlichen Sitzung des Ausschusses für Beteiligung der Bürgerinnen und Bürger</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262274"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030703"/>
+<summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 01-5 Abteilung Bürgerbeteiligung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030702#vorlage</id>
+<title>Neue Vorlage 262273: Sitzungstermine des Kulturausschusses im Jahr 2027</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262273"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030702"/>
+<summary>Mitteilungsvorlage · federführend: 41 Kulturamt · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030691#vorlage</id>
 <title>Neue Vorlage 262267: Tagesordnungspunkte in nichtöffentlicher Sitzung des Schulausschusses am 09.12.2026</title>
 <updated>2026-11-25T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262267"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030691"/>
 <summary>Tagesordnungspunkte in nichtöffentlicher Sitzung · federführend: 40 Schulamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030643#vorlage</id>
+<title>Neue Vorlage 262249: Sitzungstermine Sportausschuss 2027</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262249"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030643"/>
+<summary>Mitteilungsvorlage · federführend: 52 Sport- und Bäderamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030682#vorlage</id>
@@ -775,37 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261921"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029933"/>
 <summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029912#beratung-2026-11-16-Rat</id>
-<title>Rat: „ungeändert beschlossen“ – 260000-13 Ersatzbenennungen zu Ratsausschüssen und sonstigen Gremien</title>
-<updated>2026-11-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260000-13"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029912"/>
-<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029863#beratung-2026-11-16-Rat</id>
-<title>Rat: „ungeändert beschlossen“ – 221550-17 Stärkung der Stadtentwicklungsgesellschaft mbH (SEG)</title>
-<updated>2026-11-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#221550-17"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029863"/>
-<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029852#beratung-2026-11-16-Rat</id>
-<title>Rat: „abgelehnt“ – 261885 FDP/Grüne-Antrag: Freier ÖPNV am 05. und 06. Dezember 2026 (verkaufsoffener Sonntag)</title>
-<updated>2026-11-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261885"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029852"/>
-<summary>Entscheidung am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029838#beratung-2026-11-16-Rat</id>
-<title>Rat: „zur Kenntnis genommen“ – 261341-01 ST Stellungnahme zum Grünen-Antrag: Bürgerbeteiligung zur Bonner Bäderlandschaft</title>
-<updated>2026-11-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261341-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029838"/>
-<summary>Kenntnisnahme am 2026-11-16; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

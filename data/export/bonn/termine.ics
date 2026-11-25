@@ -797,6 +797,15 @@ DESCRIPTION:Sitzung des Rechnungsprüfungsausschusses\nTagesordnung noch ni
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006834
+DTSTAMP:20261125T000000Z
+DTSTART:20270304T170000Z
+SUMMARY:Sportausschuss
+DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006692
 DTSTAMP:20261125T000000Z
 DTSTART:20270305T150000Z
@@ -1004,6 +1013,15 @@ SUMMARY:Ausschuss für Sicherheit\, Ordnung und Bevölkerungsschutz
 DESCRIPTION:Sitzung des Ausschusses für Sicherheit\, Ordnung und Bevölker
  ungsschutz\nTagesordnung noch nicht veröffentlicht.\nQuelle: OParl-API de
  r Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006835
+DTSTAMP:20261125T000000Z
+DTSTART:20270421T160000Z
+SUMMARY:Sportausschuss
+DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1301,6 +1319,15 @@ DESCRIPTION:Sitzung des Ausschusses für Planen\, Bauen und Denkmalschutz\n
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006836
+DTSTAMP:20261125T000000Z
+DTSTART:20270610T160000Z
+SUMMARY:Sportausschuss
+DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006554
 DTSTAMP:20261125T000000Z
 DTSTART:20270616T150000Z
@@ -1458,6 +1485,15 @@ DTSTART:20270708T150000Z
 SUMMARY:Betriebsausschuss SGB
 DESCRIPTION:Sitzung des Betriebsausschusses SGB\nTagesordnung noch nicht ve
  röffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006837
+DTSTAMP:20261125T000000Z
+DTSTART:20270708T160000Z
+SUMMARY:Sportausschuss
+DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1686,6 +1722,15 @@ DTSTART:20270929T160000Z
 SUMMARY:Rechnungsprüfungsausschuss
 DESCRIPTION:Sitzung des Rechnungsprüfungsausschusses\nTagesordnung noch ni
  cht veröffentlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006838
+DTSTAMP:20261125T000000Z
+DTSTART:20270930T160000Z
+SUMMARY:Sportausschuss
+DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
@@ -1970,6 +2015,15 @@ DTSTART:20271207T170000Z
 SUMMARY:Kulturausschuss
 DESCRIPTION:Sitzung des Kulturausschusses\nTagesordnung noch nicht veröffe
  ntlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006839
+DTSTAMP:20261125T000000Z
+DTSTART:20271207T170000Z
+SUMMARY:Sportausschuss
+DESCRIPTION:Sitzung des Sportausschusses\nTagesordnung noch nicht veröffen
+ tlicht.\nQuelle: OParl-API der Stadt Bonn (CC0 1.0)
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
