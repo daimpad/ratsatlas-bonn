@@ -59,6 +59,33 @@ class Maske(unittest.TestCase):
         self.assertFalse(m.moeglich(f"Reichsstraße {A} - Neubau von 12 Wohnungen im 3. Obergeschoss", "261847"))
         self.assertFalse(m.moeglich("Reichsstraße in Höhe 12", "250001"))
 
+    def test_flurstueckskennzeichen_und_haus(self):
+        # Prüfung 25.11.2026: Formen aus 202262-02, 190118, 220082, 230030 (Ziffern verändert), 220279
+        m = self.m
+        F = "[Flurstück ausgelassen]"
+        self.assertEqual(m("Ecke Muffendorfer Straße, Kennung Flurstücke 05300100100123-05300100100124; DS 202262", "261847"),
+                         f"Ecke Muffendorfer Straße, Kennung {F}; DS 202262")
+        self.assertEqual(m("Peter-Schwingen-Straße, Flurstück 1234-12-123 (alt: 1900123)", "261847"),
+                         f"Peter-Schwingen-Straße, {F} (alt: 1900123)")
+        self.assertEqual(m("Gemarkung Beuel, Flur 3, Flurstücke 1234. 567 - Errichtung", "261847"),
+                         f"Gemarkung Beuel, {F} - Errichtung")
+        self.assertEqual(m("Gemarkung Ippendorf, Flur 4, Flurstücke 123/456, 78, 90, 1.234 und 5.678", "261847"),
+                         f"Gemarkung Ippendorf, {F}")
+        # Entscheidung 25.11.2026: Flurstücke in jedem Titel, Hausnummern nur bei geschützten Drucksachen
+        self.assertEqual(m("Bebauungsplan, Flurstück 1234/5, Reichsstraße 12", "250001"), f"Bebauungsplan, {F}, Reichsstraße 12")
+        self.assertTrue(m.offen("Bebauungsplan, Flurstück 1234/5", "250001"))
+        self.assertTrue(m.offen(f"Kennung {F}05300100100123", "250001"))   # Rest hinter einer Auslassung
+        self.assertTrue(m.offen(f"Gemarkung Beuel, {F}. 567", "250001"))
+        self.assertFalse(m.offen("[Hausnummer ausgelassen], 53113 Bonn", "261847"))
+        self.assertEqual(m("Friedhof Gemarkung Beuel,  Flur 12, Flurstücksnummer 34.", "250001"), "Friedhof Gemarkung Beuel,  [Flurstück ausgelassen].")
+        # ältere Auslassungen in eingecheckten Audits: der Rest der Nummer fällt weg
+        self.assertEqual(m(f"Kennung {F}05300100100123-05300100100124; DS", "250001"), f"Kennung {F}; DS")
+        self.assertEqual(m(f"Gemarkung Beuel, {F}. 567 - Errichtung", "250001"), f"Gemarkung Beuel, {F} - Errichtung")
+        self.assertEqual(m(f"Ippendorf, {F}.123 und 4.567", "250001"), f"Ippendorf, {F}")
+        # „zwischen Haus 12 und …“
+        self.assertEqual(m("Ernst-Moritz-Arndt-Straße zwischen Haus 12 und der Kreuzung", "261847"),
+                         "Ernst-Moritz-Arndt-Straße zwischen [Hausnummer ausgelassen] und der Kreuzung")
+
     def test_tsv_dateien_nachziehen(self):
         # Prüfung November 2026 (Nr. 2): einmalig gezogene Prüfbögen trugen volle Titel; je Zelle, Urteile bleiben
         with tempfile.TemporaryDirectory() as d:
@@ -134,6 +161,11 @@ class BauordnungUndNaturschutz(unittest.TestCase):
         self.assertTrue(maske.privat({"amt_name": "Bezirksverwaltungsstelle Bonn", "name": "Erteilte Fällgenehmigungen für private Bäume"}))
         self.assertFalse(maske.privat({"amt_name": "Bezirksverwaltungsstelle Bonn", "name": "Baumfällungen im Stadtwald"}))
         self.assertFalse(maske.privat({"amt_name": "630 Sonstiges"}))
+        # Prüfung 25.11.2026: Federführung im Titel (190224, 190590), formal eine andere Stelle
+        self.assertTrue(maske.privat({"amt_name": "Bezirksverwaltungsstelle Beuel", "name": "Grundstück in Bonn-Beuel (alt: 1900123NV1, FF: Amt 63)"}))
+        self.assertTrue(maske.privat({"amt_name": "x", "name": "Neubau eines Hotels (FF: Amt 63; alt: 1900123)"}))
+        self.assertFalse(maske.privat({"amt_name": "x", "name": "Bericht (alt: 1900123, FF: Amt 61)"}))
+        self.assertFalse(maske.privat({"amt_name": "x", "name": "Bericht (FF: Amt 630)"}))
         self.assertFalse(maske.privat({"amt": "67 Amt für Umwelt und Stadtgrün",
                                        "responsibility": [{"kind": "fachlich", "name": "67-6 Untere Naturschutzbehörde"}]}))
 
