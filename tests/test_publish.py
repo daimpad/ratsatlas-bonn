@@ -110,6 +110,7 @@ class Kalender(unittest.TestCase):
             publish.write_calendar(path, meetings, today=publish.date(2026, 10, 18))
             raw = path.read_bytes()
         self.assertIn(b"DTSTART:20261104T160000Z", raw)
+        self.assertIn(b"DTSTAMP:20261018T000000Z", raw)   # künftige Sitzung: Tag des Datenstands, nicht der Beginn
         self.assertNotIn(b"DTEND", raw)  # 23:59:59 ist kein echtes Ende
         self.assertTrue(all(len(line) <= 75 for line in raw.split(b"\r\n")))
         self.assertIn("Bezirksvertretung\\, Bad Godesberg\\;".encode(), raw.replace(b"\r\n ", b""))

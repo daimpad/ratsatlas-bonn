@@ -187,7 +187,11 @@ def _utc(ts):
 
 def write_calendar(path, meetings, today=None):
     """Sitzungen ab 30 Tage vor dem Datenstand; abgesagte mit STATUS:CANCELLED."""
-    since = ((today or date.today()) - timedelta(days=30)).isoformat()
+    today = today or date.today()
+    since = (today - timedelta(days=30)).isoformat()
+    # DTSTAMP nie in der Zukunft (RFC 5545; Prüfung 25.11.2026): Beginn der Sitzung, bei künftigen der Tag des
+    # Datenstands; das Fenster hängt ohnehin am Datenstand, eine Uhrzeit des Laufs steht nicht in der Datei
+    stamp = f"{today.strftime('%Y%m%d')}T000000Z"
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Ratsatlas Bonn//Sitzungskalender//DE",
              "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:Sitzungen Rat\\, Ausschüsse und "
              "Bezirksvertretungen Bonn", "X-WR-TIMEZONE:Europe/Berlin"]
@@ -199,7 +203,7 @@ def write_calendar(path, meetings, today=None):
         if m.get("invitation"):
             desc.append(f"Einladung: {m['invitation']}")
         desc.append("Quelle: OParl-API der Stadt Bonn (CC0 1.0)")
-        lines += ["BEGIN:VEVENT", f"UID:{m['source_object']}", f"DTSTAMP:{_utc(m['start'])}",
+        lines += ["BEGIN:VEVENT", f"UID:{m['source_object']}", f"DTSTAMP:{min(_utc(m['start']), stamp)}",
                   f"DTSTART:{_utc(m['start'])}"]
         if m.get("end") and m["end"][11:19] != "23:59:59":
             lines.append(f"DTEND:{_utc(m['end'])}")

@@ -27,14 +27,15 @@ class Orte(unittest.TestCase):
             vorlage("262002", "2026-11-01", 7.05, 50.75, thema="bauen"),
             vorlage("252003", "2025-01-01", 7.06, 50.76),                 # älter als 12 Monate
             vorlage("262004", "2026-09-01", 7.07, 50.76, level="ortsteil"),  # kein genauer Ort
-            vorlage("262005", "2026-09-01", 8.0, 50.76)]}))                # außerhalb der Fläche
+            vorlage("262005", "2026-09-01", 8.0, 50.76),                  # außerhalb der Fläche
+            vorlage("252006", "2025-11-24", 7.08, 50.77)]}))              # Stichtag selbst zählt nicht (wie die Karte)
 
     def tearDown(self):
         self.tmp.cleanup()
 
     def test_orte(self):
         d = dreidseite.orte(self.base, GEO)
-        self.assertEqual(d["seit"], "2025-11-24")
+        self.assertEqual(d["seit"], "2025-11-25")   # Tag nach dem Stichtag, wie gebietszahlen.recent
         o = d["ortsteile"][0]
         self.assertEqual((o["slug"], o["n12"]), ("endenich", 5))
         self.assertEqual(len(o["orte"]), 1)

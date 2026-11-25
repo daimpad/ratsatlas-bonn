@@ -671,7 +671,7 @@
     });
     new PlanToggle().addTo(map);
     // Baustellen der Stadt (Archiv bzw. Feeds); nur mit Gesamtexport
-    bauOn = new URLSearchParams(location.search).get("baustellen") === "1";
+    bauOn = new URLSearchParams(location.search).get("baustellen") === "1" && !(bau && bauAus());
     const BauToggle = L.Control.extend({
       options: { position: "bottomright" },
       onAdd() {
@@ -679,7 +679,7 @@
         b.type = "button";
         b.textContent = "Baustellen";
         b.setAttribute("aria-pressed", String(bauOn));
-        b.hidden = !bau;
+        b.hidden = !bau || bauAus();
         b.addEventListener("click", () => { bauOn = !bauOn; b.setAttribute("aria-pressed", String(bauOn)); drawSites(); syncUrl(); });
         L.DomEvent.disableClickPropagation(b);
         return b;
@@ -1912,7 +1912,11 @@
   const siteState = (b) => (!b.aktiv ? "entfallen" : b.von && b.von > heute() ? "geplant" : b.bis && b.bis < heute() ? "abgelaufen" : "aktuell");
   const SITE_STATE = { aktuell: "laufend", geplant: "geplant", abgelaufen: "gemeldetes Ende verstrichen", entfallen: "nicht mehr gemeldet" };
   // Liegt der letzte Abruf der Quelle mehr als sieben Tage zurück, steht das beim Stand der Baustelle
-  const bauVeraltet = () => { const a = String(bau?.meta?.abruf || "").slice(0, 10); return a && (Date.parse(heute()) - Date.parse(a)) / 864e5 > 7 ? a : null; };
+  const bauAlterTage = () => { const a = String(bau?.meta?.abruf || "").slice(0, 10); return a ? (Date.parse(heute()) - Date.parse(a)) / 864e5 : 0; };
+  const bauVeraltet = () => (bauAlterTage() > 7 ? String(bau.meta.abruf).slice(0, 10) : null);
+  // Nach 60 Tagen ohne Abruf keine Ebene und keine Spur in der Zeitleiste mehr (Entscheidung des Auftraggebers
+  // 25.11.2026): der Stand der Baustellen wäre nicht mehr verlässlich; „Mögliche Umsetzung“ im Vorgang bleibt mit Hinweis
+  const bauAus = () => bauAlterTage() > 60;
   const siteClass = (b) => (b.fremd ? "site-fremd" : `site-${siteState(b)}`);
   // Punkt in Fläche (gerade-ungerade über alle Ringe, Löcher eingeschlossen)
   function inGeom(lon, lat, g) {
@@ -1932,7 +1936,7 @@
     return null;
   }
   function areaSites() {
-    if (!bau) return [];
+    if (!bau || bauAus()) return [];
     const f = area && areaFeature();
     return f ? bau.baustellen.filter((b) => inGeom(b.lon, b.lat, f.geometry)) : bau.baustellen;
   }

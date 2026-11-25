@@ -30,7 +30,9 @@ def orte(base, ortsteile_geo):
     from shapely.geometry import Point, shape
     index = json.loads((base / "index.json").read_text(encoding="utf-8"))
     bis = (index.get("zahlen") or {}).get("bis") or (index.get("aktuell") or {}).get("heute")
-    seit = (date.fromisoformat(bis) - timedelta(days=365)).isoformat() if bis else "0000"
+    # wie gebietszahlen.recent (Flächen der Hauptkarte): Vorlagen nach dem Stichtag, angezeigt ab dem Tag danach
+    grenze = (date.fromisoformat(bis) - timedelta(days=365)).isoformat() if bis else "0000"
+    seit = (date.fromisoformat(grenze) + timedelta(days=1)).isoformat() if bis else "0000"
     flaechen = {f["properties"]["ortsteil_bez"]: shape(f["geometry"]) for f in ortsteile_geo["features"]}
     out = []
     for o in index["ortsteile"]:
@@ -42,7 +44,7 @@ def orte(base, ortsteile_geo):
         datei = base / "ortsteile" / f"{o['slug']}.json"
         papers = json.loads(datei.read_text(encoding="utf-8"))["papers"] if datei.exists() else []
         for p in papers:
-            if (p.get("date") or "") < seit:
+            if (p.get("date") or "") <= grenze:
                 continue
             for loc in p.get("locations") or []:
                 if loc.get("level") in EBENEN and loc.get("lon") and fl.contains(Point(loc["lon"], loc["lat"])):

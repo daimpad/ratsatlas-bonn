@@ -12,7 +12,7 @@ Je Jahr eine Unterseite rat-im-video/<jahr>/ mit den Vorlagen, damit die Übersi
 Seite: rund 950 KB). Keine Erzeugungszeitpunkte (stabile Ausgabe)."""
 import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import date, timedelta
 from html import escape
 
@@ -59,6 +59,9 @@ def daten(base, heute):
                     "video": video, "dauer_min": dauer.get(video),
                     "vorlagen": [{"reference": r, "top": n, "name": alle[r]["name"], "seite": bool(alle[r].get("seite")),
                                   "gebiet": gebiet[r]} for r, n in refs]})
+    tage = Counter((x["date"], x["gremium"]) for x in out)
+    for x in out:
+        x["doppelt"] = tage[(x["date"], x["gremium"])] > 1
     return sorted(out, key=lambda x: (x["date"], x["time"] or ""), reverse=True)
 
 
@@ -77,7 +80,9 @@ def _vorlage(v, root):
 
 
 def _anker(s):
-    return f"s{s['date']}-{slug(s['gremium'])}"
+    # Uhrzeit nur, wenn dasselbe Gremium am selben Tag zweimal tagt (eindeutige IDs; Prüfung 25.11.2026)
+    zeit = f"-{slug(s['time'])}" if s.get("doppelt") and s.get("time") else ""
+    return f"s{s['date']}-{slug(s['gremium'])}{zeit}"
 
 
 def _sitzung(s, mit_vorlagen, root):
@@ -121,7 +126,7 @@ def _quellen(stand, root):
     return (f'    <details class="hh-mehr meta-acc"><summary>Quellen</summary><p>Sitzungen und Beratungen: '
             f'OParl-Schnittstelle der Stadt Bonn (CC0) und OParl-Lite Bonn (CC BY 4.0). Videos: YouTube-Kanal der Stadt '
             f'Bonn. Ratstranskripte: bonn.biz, Mika Baumeister (CC BY-NC 4.0), nur verlinkt.'
-            f'{f" Aufzeichnungen geprüft am {_date(stand)}." if stand else ""}</p></details>\n'
+            f'{f" Neueste Aufzeichnung: Sitzung vom {_date(stand)}." if stand else ""}</p></details>\n'
             f'    <p><a href="{root}">Zur Karte</a> · <a href="{root}begriffe/">Begriffe</a></p>')
 
 
@@ -178,7 +183,9 @@ def write(site, site_url, page):
     index = json.loads((base / "index.json").read_text(encoding="utf-8"))
     heute = (index.get("aktuell") or {}).get("heute") or "9999-12-31"
     sitzungen = daten(base, heute)
-    stand = aufzeichnungen.stand()
+    # Datum der neuesten Sitzung mit Video statt des Prüftags: die Seiten ändern sich nur mit neuen Daten
+    # (Prüfung 25.11.2026: sonst täglich ein Commit im Branch deploy und eine IndexNow-Meldung)
+    stand = max((x["date"] for x in sitzungen if x["video"]), default=None)
     out = site / PFAD / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(page(site_url, PFAD, f"{TITEL}: Aufzeichnungen der Ratssitzungen – Ratsatlas Bonn",

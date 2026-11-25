@@ -65,5 +65,24 @@ class Seite(unittest.TestCase):
             self.assertIn("Melderegister", html)
 
 
+class Robust(unittest.TestCase):
+    """Prüfung 25.11.2026: unvollständiger Stand bricht die Veröffentlichung nicht ab."""
+
+    def test_unvollstaendig(self):
+        import tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as tmp:
+            ordner = Path(tmp)
+            (ordner / "partner_2025.tsv").write_text("ags\tkreis\tland\tzuzuege\tfortzuege\tsaldo\n")
+            self.assertIsNone(wanderung.lesen(ordner))
+            self.assertEqual(wanderung.write(ordner, "https://example.org/", lambda *a: "", ordner), [])
+
+    def test_satz_alter_aus_den_daten(self):
+        alter = [{"alter": "unter 18 Jahre", "saldo": 5}, {"alter": "18 bis unter 25 Jahre", "saldo": -3}]
+        satz = wanderung._satz_alter(alter)
+        self.assertIn("Mehr Zuzüge als Fortzüge: unter 18 Jahre.", satz)
+        self.assertNotIn("Studium", satz)
+
+
 if __name__ == "__main__":
     unittest.main()

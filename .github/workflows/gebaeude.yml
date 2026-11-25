@@ -2,7 +2,8 @@
 # 3D-Gebäudemodell LoD1 von Geobasis NRW (dl-de/zero-2.0) für Bonn laden und je Ortsteil Grundriss und Höhe ablegen
 # (pipeline/gebaeude3d/auszug.py, rund 1,3 GB Download, wenige Minuten). Ablage im Branch `gebaeude` als einzelner
 # Commit, der jeweils ersetzt wird; pages.yml übernimmt die Dateien nach 3d/gebaeude/. Vierteljährlich wie die Kacheln
-# und auf Knopfdruck; danach startet er pages.yml. Bei Pull Requests, die das Skript ändern, läuft er ohne Ablage.
+# und auf Knopfdruck; danach startet er pages.yml. Bei Pull Requests, die das Skript ändern, zählt der Job
+# `probe` nur aus, ohne Schreibrecht und ohne Ablage.
 name: Gebäude für 3D (vierteljährlich und auf Knopfdruck)
 
 on:
@@ -22,7 +23,28 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Pull Requests: nur auszählen, ohne Schreibrecht (Prüfung 25.11.2026)
+  probe:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
+        with:
+          python-version: "3.12"
+
+      - name: Abhängigkeiten
+        run: pip install --require-hashes -r requirements.txt
+
+      - name: Gebäude je Ortsteil
+        run: python -I pipeline/gebaeude3d/auszug.py data/geo/ortsteile_bonn.geojson _gebaeude/3d/gebaeude
+
   gebaeude:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     permissions:
@@ -44,7 +66,6 @@ jobs:
         run: python -I pipeline/gebaeude3d/auszug.py data/geo/ortsteile_bonn.geojson _gebaeude/3d/gebaeude
 
       - name: Branch gebaeude ersetzen (ein Commit, damit der Branch nicht wächst)
-        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -57,7 +78,6 @@ jobs:
           git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:gebaeude
 
       - name: Seite mit den neuen Gebäuden veröffentlichen
-        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run pages.yml --repo "${{ github.repository }}" --ref main

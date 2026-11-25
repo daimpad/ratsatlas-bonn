@@ -284,6 +284,18 @@ jobs:
           path: _gebaeude
         continue-on-error: true
 
+      # Rückfall vor dem Schritt seo (Prüfung 25.11.2026): sonst nennt 3d/ weder Zahl noch Stand der Gebäude
+      - name: Gebäude für 3D aus dem letzten Stand (Branch deploy), wenn der Branch gebaeude fehlt
+        if: hashFiles('_gebaeude/3d/gebaeude/stand.json') == ''
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+          ref: deploy
+          path: _gebaeude
+          sparse-checkout: 3d/gebaeude
+          sparse-checkout-cone-mode: true
+        continue-on-error: true
+
       - name: Gebäude für 3D in die Seite
         run: |
           if [ -f _gebaeude/3d/gebaeude/stand.json ]; then mkdir -p _site/3d && cp -r _gebaeude/3d/gebaeude _site/3d/; else echo "keine Gebäude für 3D"; fi
@@ -361,13 +373,25 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.zweiter.outputs.page_url || steps.erster.outputs.page_url }}
     steps:
       - name: Auf GitHub Pages veröffentlichen
-        id: deployment
+        id: erster
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346  # v5.0.1
         # 20 statt 10 Minuten: GitHub übernahm die Dateien am 10.11.2026 in drei von acht Läufen nicht rechtzeitig
         # („syncing_files“); die Seite auf der Hauptadresse hängt davon nicht ab.
+        with:
+          timeout: 1200000
+        continue-on-error: true
+      # Ein zweiter Versuch nach zwei Minuten (Prüfung 25.11.2026: am 25.11. scheiterte der Lauf an HTTP 500 von
+      # GitHub, der Spiegel blieb einen Tag zurück); scheitert auch er, ist der Job rot
+      - name: Warten vor dem zweiten Versuch
+        if: steps.erster.outcome == 'failure'
+        run: sleep 120
+      - name: Auf GitHub Pages veröffentlichen (zweiter Versuch)
+        id: zweiter
+        if: steps.erster.outcome == 'failure'
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346  # v5.0.1
         with:
           timeout: 1200000
 
