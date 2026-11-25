@@ -13563,6 +13563,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung schlägt vor, im Endenicher Park vier Laubbäume zu fällen und vier neue Bäume zu pflanzen. Die Fällung ist für die Vegetationspause 2025/2026 geplant, damit dort eine neue Entwässerung und barrierefreie Wege gebaut werden können.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {
@@ -14565,6 +14570,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Ein Antrag fordert die Verwaltung auf, in der Alfred-Bucherer-Straße in Bonn Tempo-30-Bodenmarkierungen anzubringen und eine Sperrfläche zu erneuern. Damit soll die Geschwindigkeitsbegrenzung klarer erkennbar sein und die Sicherheit erhöht werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-24"
    }
   },
   {

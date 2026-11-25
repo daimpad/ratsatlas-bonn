@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-roettgen</id>
 <title>Ratsatlas Bonn – Röttgen</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Röttgen</subtitle>
-<updated>2026-11-09T00:00:00Z</updated>
+<updated>2026-11-24T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-roettgen.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:roettgen"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030683#vorlage</id>
+<title>Neue Vorlage 262262: Dringlichkeitsantrag von CDU-SPD: Schließung von 3 evangelischen Kitas im Bonner Westen</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:roettgen#262262"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030683"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030278#vorlage</id>
 <title>Neue Vorlage 262093: Zuschuss an die Kath. Kirchengemeinde St. Maria Magdalena und Christi Auferstehung</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:roettgen#241681-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019502"/>
 <summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: offen · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung beantwortet Fragen zur Brücke über den Katzenlochbach. Die alte Brücke ist stark beschädigt und wird 2025 durch einen Neubau ersetzt. Eine Umleitung ist bereits nutzbar. Für den Neubau sind Genehmigungen wegen des Naturschutzgebiets nötig. Die neue Wegeverbindung soll 2025 fertig sein.</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2019467#vorlage</id>
-<title>Neue Vorlage 241718: CDU-Antrag zwecks Anschaffungen von  Bänken und Sitzgelegenheiten im Kottenforst mit Mitteln der Stiftung Fritz Kirstein</title>
-<updated>2024-10-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:roettgen#241718"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2019467"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die CDU-Fraktion schlägt vor, Mittel der Stiftung Fritz Kirstein 2024 für neue Sitzgelegenheiten zu nutzen: Entweder wird eine Schutzhütte am Schmalen Alleechen saniert und eine Bank-Tisch-Garnitur aufgestellt, oder Bänke und Mülleimer im Kottenforst werden repariert. Die Bezirksvertretung soll entscheiden.</summary>
 </entry>
 </feed>

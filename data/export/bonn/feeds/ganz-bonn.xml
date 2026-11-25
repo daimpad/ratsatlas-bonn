@@ -20,7 +20,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030683#vorlage</id>
 <title>Neue Vorlage 262262: Dringlichkeitsantrag von CDU-SPD: Schließung von 3 evangelischen Kitas im Bonner Westen</title>
 <updated>2026-11-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262262"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:roettgen#262262"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030683"/>
 <summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
 </entry>
@@ -137,6 +137,14 @@
 <summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030572#vorlage</id>
+<title>Neue Vorlage 260735-01 ST: Bürgerantrag: Aufwertung des Parks des Mehlem'schen Hauses</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#260735-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030572"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030565#vorlage</id>
 <title>Neue Vorlage 261454-02 ST: Stellungnahme des Nachtbürgermeisters zum Bürgerantrag: Sicherstellung und Optimierung öffentlicher Nutzungen für alle Altersgruppen auf dem Frankenbadplatz, insbesondere während kommerzieller Veranstaltungen im Sommer</title>
 <updated>2026-11-24T00:00:00Z</updated>
@@ -145,12 +153,44 @@
 <summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030433#vorlage</id>
+<title>Neue Vorlage 261529-09 ST: Bürgerantrag: Prüfung und Verbesserung der Park- und Verkehrssituation am Vili-Viorel-Paun-Platz</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261529-09%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030433"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030416#vorlage</id>
+<title>Neue Vorlage 261757-01 ST: CDU/SPD-Große Anfrage: Unbepflanzte Baumscheiben im Stadtbezirk Hardtberg</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#261757-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030416"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030412#vorlage</id>
+<title>Neue Vorlage 261530-01 ST: Grüne-Antrag: Nordbrückensperrung - Kurzfristige Maßnahmen zum Schutz der Anwohnenden auf den Ausweichrouten</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-castell#261530-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030412"/>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030385#vorlage</id>
 <title>Neue Vorlage 262146: Grunstück in Bonn, Roonstraße [Hausnummer ausgelassen] - Errichtung eines Dreifamilienhauses Az.: 40388/2026</title>
 <updated>2026-11-24T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:godesberg-villenviertel#262146"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030385"/>
 <summary>Beschlussvorlage · federführend: 63 Bauordnungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030131#vorlage</id>
+<title>Neue Vorlage 262024: Fortschritte in der Klimaanpassung</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262024"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030131"/>
+<summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029689#vorlage</id>
@@ -167,6 +207,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261799"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029547"/>
 <summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028959#vorlage</id>
+<title>Neue Vorlage 261558: Öffentlichkeitsbeteiligung im Rahmen der Neuaufstellung des Nahverkehrsplans - geplante Formate</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261558"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028959"/>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030656#vorlage</id>
@@ -759,53 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#262216"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030561"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030560#vorlage</id>
-<title>Neue Vorlage 262215: CDU/SPD-Große Anfrage: Schließung der KiTa JoKi und Auswirkungen auf die KiTa-Platzsituation im Stadtbezirk Hardtberg</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#262215"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030560"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030540#vorlage</id>
-<title>Neue Vorlage 262210: Bürgerantrag: Einführung von Tempo 30 auf dem Abschnitt "Auf der Schleide" zwischen Limpericher Straße und Rudolf-Hahn-Straße</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#262210"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030540"/>
-<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030536#vorlage</id>
-<title>Neue Vorlage 262206: Grüne-Antrag: Sanierung der Treppe zwischen Lengsdorfer Hauptstraße und Provinzialstraße</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:endenich#262206"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030536"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030534#vorlage</id>
-<title>Neue Vorlage 262204: Eintragung von Toily Kurbanov (UNV) in das Goldene Buch der Stadt Bonn</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262204"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030534"/>
-<summary>Beschlussvorlage · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030532#vorlage</id>
-<title>Neue Vorlage 262203: Landesprogramm „Kommunales Integrationsmanagement“ (KIM NRW): Zuschuss zum Eigenanteil der Träger des KIM-Case Managements für die Jahre 2027 und 2028</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262203"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030532"/>
-<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030532#beratung-2026-11-18-Ausschuss%20f%C3%BCr%20Chancengerechtigkeit%20und%20Integration</id>
-<title>Ausschuss für Chancengerechtigkeit und Integration: „ungeändert beschlossen“ – 262203 Landesprogramm „Kommunales Integrationsmanagement“ (KIM NRW): Zuschuss zum Eigenanteil der Träger des KIM-Case Managements für die Jahre 2027 und 2028</title>
-<updated>2026-11-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262203"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030532"/>
-<summary>Anhörung am 2026-11-18; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

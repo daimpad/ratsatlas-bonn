@@ -9,6 +9,14 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030683#vorlage</id>
+<title>Neue Vorlage 262262: Dringlichkeitsantrag von CDU-SPD: Schließung von 3 evangelischen Kitas im Bonner Westen</title>
+<updated>2026-11-24T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#262262"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030683"/>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030667#vorlage</id>
 <title>Neue Vorlage 262258: Bürgerantrag: Verbesserung der Beleuchtung und Wegesicherheit auf den Zugangswegen zur Universitätssportanlage (Nachtigallenweg/Bodelschwinghweg), Bonn-Venusberg</title>
 <updated>2026-11-24T00:00:00Z</updated>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#240754-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024143"/>
 <summary>Kenntnisnahme am 2025-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024143#beratung-2025-12-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 240754-03 Barrierefreier Umbau von Bushaltestellen - Wartehallen</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#240754-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024143"/>
-<summary>Kenntnisnahme am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

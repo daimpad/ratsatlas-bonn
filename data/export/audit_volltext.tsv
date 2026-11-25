@@ -13165,6 +13165,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Samansstraße	Küdinghoven	mittel	7
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Vinzenzstraße	Pützchen/Bechlinghoven	mittel	1
 252645	verortet	Hauptteil	volltext_strasse+ortsteil	Wehrhausweg	Küdinghoven	mittel	11
+252646	kein Ort						
 252646-01 ST	nur einzelne Erwähnung eines Stadtbezirks	Hauptteil					
 252647	Titel ohne gemeinsamen Ort, nicht verortet						
 252648	verortet	Hauptteil	volltext_ortsteil_name	Auerberg	Auerberg	niedrig	1
@@ -15622,6 +15623,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260912	kein Ort						
 260912-01 ST	kein Ort						
 260915	verortet	Hauptteil	volltext_strasse+hausnummer	Kurfürstenallee	Alt-Godesberg	mittel	2
+260915-01 ST	verortet	Hauptteil	volltext_strasse+hausnummer	Kurfürstenallee	Alt-Godesberg	mittel	2
 260917	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
 260917-01	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
 260917-02 ST	verortet	Hauptteil	volltext_strasse	Brüdergasse	Bonn-Zentrum	niedrig	1
@@ -16160,6 +16162,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261307-01 AA	kein Ort						
 261307-02 ST	kein Ort						
 261307-04	verortet	Hauptteil	volltext_strasse	Marktplatz	Alt-Godesberg	niedrig	2
+261307-05 AA	kein Ort						
 261308	Titel ohne gemeinsamen Ort, nicht verortet						
 261309	Titel ohne gemeinsamen Ort, nicht verortet						
 261311	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16509,7 +16512,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261700-02 ST	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
 261700-03 ST	nur in Anlagen genannt, nicht verortet						
 261700-04	kein Ort						
+261700-05 AA	kein Ort						
 261701	verortet	Hauptteil	volltext_ortsteil_name	Geislar	Geislar	niedrig	1
+261701-01 AA	kein Ort						
 261703	kein Ort						
 261703-01 ST	kein Ort						
 261704	kein Ort						
@@ -16706,6 +16711,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261923	kein Ort						
 261923-01 ST	kein Ort						
 261929	kein Ort						
+261929-01 AA	kein Ort						
 261930	kein Ort						
 261931	kein Ort						
 261932	nur in Anlagen genannt, nicht verortet						
@@ -16903,6 +16909,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262193-01 ST	kein Ort						
 262194	Titel ohne gemeinsamen Ort, nicht verortet						
 262195	Titel ohne gemeinsamen Ort, nicht verortet						
+262196	Titel ohne gemeinsamen Ort, nicht verortet						
 262200	kein Ort						
 262202	kein Ort						
 262203	kein Ort						
@@ -16933,3 +16940,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262251	kein Ort						
 262252	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Holtorf	niedrig	1
 262252	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1
+262262	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
+262262	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
+262262	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
+262262	verortet	Hauptteil	volltext_ortsteil_name	Ückesdorf	Ückesdorf	niedrig	1
