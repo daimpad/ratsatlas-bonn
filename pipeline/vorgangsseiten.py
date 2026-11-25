@@ -142,8 +142,10 @@ def body(p, key, seiten, ortsteile, themen=()):
         knoepfe.append(f'<a class="pb-knopf pb-knopf-leise" href="{escape(p["web"])}">Original im Ratsinformationssystem</a>')
     if p.get("main_file"):
         knoepfe.append(f'<a class="pb-knopf pb-knopf-leise" href="{escape(p["main_file"])}">Dokument (PDF)</a>')
-    knoepfe.append(f'<a class="pb-knopf pb-knopf-leise" href="{ROOT}data/export/bonn/feeds/vorlagen/{slug(ref)}.xml" '
-                   'type="application/atom+xml">Diesen Vorgang abonnieren</a>')
+    # über die Seite rss/ mit Anleitung statt direkt auf die XML-Datei (Prüfung 25.11.2026, V8)
+    feed = f"data/export/bonn/feeds/vorlagen/{slug(ref)}.xml"
+    knoepfe.append(f'<a class="pb-knopf pb-knopf-leise" href="{ROOT}rss/?feed={quote(feed, safe="/")}&amp;name='
+                   f'{quote("Vorgang " + ref)}">Diesen Vorgang abonnieren</a>')
     begriffe = begriffsseite.akkordeon([p["paper_type"], stand, *(s.get("result") for s in beratungen)], ROOT)
     return f"""    <h1>{escape(p["name"] or ref)}</h1>
     <p class="lead">{escape(p["paper_type"] or "Vorlage")} {escape(ref)} aus dem Ratsinformationssystem der Stadt Bonn.</p>

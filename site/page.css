@@ -487,3 +487,4 @@ html.d3-gesperrt, html.d3-gesperrt body { overflow: hidden; }
 .d3-pop span { color: var(--muted); }
 .maplibregl-ctrl-attrib a { text-decoration: underline; }
 @media (max-width: 700px) { #d3-karte { height: 64vh; min-height: 360px; } }
+.d3-tip .maplibregl-popup-content { padding: 6px 10px; font: 500 13px/1.3 Inter, system-ui, sans-serif; color: var(--text); }

@@ -99,6 +99,11 @@ BEGRIFFE = [
                        "verlinkt nur das Video und die Suche.", "https://bonn.biz/ratstranskripte/erhebung"),
     ("Drucksachennummer", "Kennung einer Vorlage, z. B. 261798. Zusätze wie „-01“ kennzeichnen zugehörige "
                           "Folgevorlagen.", DATENFELD + ", Feld „reference“"),
+    # Prüfung 25.11.2026 (V3): Begriffe, die auf der Seite stehen, aber im Glossar fehlten
+    ("Vorgang", "Im Ratsatlas eine Vorlage zusammen mit ihren Folgevorlagen, etwa Stellungnahmen der Verwaltung, "
+                "Änderungsanträgen und Mitteilungen. Ein Vorgang trägt die Drucksachennummer der ersten Vorlage. "
+                "„Drucksache“ ist ein anderes Wort für Vorlage.",
+     DATENFELD + ", Felder „superordinatedPaper“ und „subordinatedPaper“; Begriff des Ratsatlas"),
     ("Beschlussvorlage", "Vorlage der Verwaltung mit einem Beschlussvorschlag, über den ein Gremium entscheidet.",
      ALLGEMEIN),
     ("Mitteilungsvorlage", "Vorlage, mit der die Verwaltung ein Gremium informiert; ein Beschluss ist nicht vorgesehen.",
@@ -182,6 +187,11 @@ BEGRIFFE = [
      "Sachaufwand und Transferleistungen.", HAUSHALT + ", Teilergebnispläne Zeile 17"),
     ("Bebauungsplan", "Satzung der Gemeinde, die festlegt, wie Grundstücke in einem Gebiet bebaut und genutzt werden "
      "dürfen.", "§§ 8, 10 BauGB"),
+    ("SGB", "Zwei Bedeutungen: In Gremien- und Amtsnamen wie „Betriebsausschuss SGB“ das Städtische "
+            "Gebäudemanagement Bonn (Amt 85), das die städtischen Gebäude baut und unterhält, etwa Schulen. Mit "
+            "einer römischen Zahl wie „SGB II“ oder „SGB VIII“ das Sozialgesetzbuch, etwa Grundsicherung für "
+            "Arbeitsuchende (II) oder Kinder- und Jugendhilfe (VIII).",
+     DATENFELD + ", Organisation „85 Städtisches Gebäudemanagement Bonn“ (Kurzname „85 SGB“); Sozialgesetzbuch"),
 ]
 GRUPPE = {"Ratstranskript": "verfahren", "Rat": "gremium", "Bezirksvertretung": "gremium", "Ausschuss": "gremium", "Hauptausschuss": "gremium",
           "Fraktion": "gremium", "Anregungen und Beschwerden (Bürgerantrag)": "gremium", "Einwohnerantrag": "gremium",
@@ -190,7 +200,7 @@ GRUPPE = {"Ratstranskript": "verfahren", "Rat": "gremium", "Bezirksvertretung": 
           "Öffentlichkeit von Sitzungen": "verfahren", "Federführendes Amt": "verfahren", "Beratungsfolge": "verfahren",
           "Tagesordnungspunkt": "verfahren", "Stand eines Vorgangs": "verfahren",
           "ST": "kuerzel", "AA": "kuerzel", "DA": "kuerzel", "TOP": "kuerzel", "GO NRW": "kuerzel", "OB": "kuerzel",
-          "BV": "kuerzel", "HA": "kuerzel",
+          "BV": "kuerzel", "HA": "kuerzel", "SGB": "kuerzel",
           "Produktbereich": "haushalt", "Ansatz": "haushalt", "Ordentliche Aufwendungen": "haushalt",
           "Bebauungsplan": "planung"}  # übrige: vorlagen
 # Vorlagenart in den Daten → Begriff (alle Arten, Prüfung in tests/test_chat.py)

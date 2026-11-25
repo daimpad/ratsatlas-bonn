@@ -92,7 +92,8 @@ class Seiten(unittest.TestCase):
         self.assertIn('href="../../?gebiet=ortsteil:endenich#261856"', page)
         self.assertIn('href="https://example.org/vo?x=1&amp;y=2" target="_blank" rel="noopener"', page)
         self.assertIn(">Dokument (PDF)</a>", page)
-        self.assertIn('href="../../data/export/bonn/feeds/vorlagen/261856.xml"', page)
+        # über die Seite rss/ mit Anleitung (Prüfung 25.11.2026)
+        self.assertIn('href="../../rss/?feed=data/export/bonn/feeds/vorlagen/261856.xml&amp;name=Vorgang%20261856"', page)
         self.assertIn("<dt>Federführend</dt><dd>66-1 Verkehr (66 Tiefbauamt)</dd>", page)
         self.assertIn('<dt>Eingereicht von</dt><dd>SPD-Fraktion <span class="pb-abgeleitet">abgeleitet</span></dd>', page)
         # Ort nur mit Namen, ohne Fundstelle; Ortsteil verlinkt auf die Gebietsseite
