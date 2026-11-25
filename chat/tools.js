@@ -24,11 +24,13 @@ export const OHNE_NR = "[Hausnummer ausgelassen]";
 export const OHNE_FLUR = "[Flurstück ausgelassen]";
 // „Hausnummer 82“, „Haus-Nr. 264“, „(neben Haus-Nr.) 68“, „vor den Häusern Nr. 73 - 89“ (wie WORT in pipeline/maske.py;
 // ersetzt samt dem Wort, eine schließende Klammer bleibt stehen; 01.11.2026, ergänzt 21.11.2026)
-const WORT = new RegExp(String.raw`\b(?:hausnummern?|hausnr\.?|haus-nr\.?|haus\s+nr\.?|häusern?(?:\s+nr\.?)?)\s*(\))?\s*${NR}`, "giu");
+// „zwischen Haus 12 und …“ wie „Haus Nr. 12“ (25.11.2026)
+const WORT = new RegExp(String.raw`\b(?:hausnummern?|hausnr\.?|haus-nr\.?|haus(?:\s+nr\.?)?|häusern?(?:\s+nr\.?)?)\s*(\))?\s*${NR}`, "giu");
 // Rest einer Aufzählung hinter einer Auslassung und Flurstücke (wie REST und FLUR in pipeline/maske.py)
 const REST = new RegExp(String.raw`(\[Hausnummer ausgelassen\])\s*(?:-|–|bis|und|u\.|oder|sowie|/|,|\+|&)\s*${NR}`, "giu");
-const FS = String.raw`\d{1,5}(?:\s*/\s*\d{1,4})?`;
-const FLUR = new RegExp(String.raw`\b(?:flur\s+\d{1,3}\s*,?\s*(?:und\s+)?)?flurstücke?n?s?\s*(?:nr\.?\s*)?${FS}(?:\s*(?:,|und|u\.|sowie|-|–|bis)\s*${FS})*`, "giu");
+// Kennzeichen mit Bindestrichen oder Punkten gehören ganz dazu; Flurstücke in jedem Titel (wie flur_alle, 25.11.2026)
+const FS = String.raw`\d{1,14}(?:[.-]\d{1,14})*(?:\s*/\s*\d{1,6})?`;
+const FLUR = new RegExp(String.raw`\b(?:flur\s+\d{1,3}\s*,?\s*(?:und\s+)?)?flurstücke?n?s?(?:-?nummer|-?nr\.?)?\s*(?:nr\.?\s*)?${FS}(?:\s*(?:,|\.|und|u\.|sowie|-|–|bis)\s*${FS})*`, "giu");
 const STAENDE = ["entschieden", "beraten, ohne Entscheidung", "in Beratung", "offen", "ohne Beratungsfolge"];
 const THEMEN = ["verkehr", "bauen", "umwelt", "bildung", "kinder", "soziales", "kultur", "wirtschaft", "sicherheit", "beteiligung"];
 const KENNZAHLEN = ["einwohner", "unter_18", "ab_65", "miete", "bodenrichtwert", "haltestellen", "kitas", "kita_plaetze_u3", "kita_plaetze_ue3", "hitze", "ueberschwemmung", "wahlbeteiligung"];
@@ -291,7 +293,7 @@ export function createTools({ load, today: fest = null } = {}) {
       const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
       const names = [...new Set(d.places.filter((p) => p.level === "strasse").map((p) => p.name))].sort((a, b) => b.length - a.length).map(esc);
       const rx = new RegExp(String.raw`((?:${[...names, SUFFIX].join("|")})\s+)(?:nr\.?\s*)?${NR}`, "giu");
-      d._mask = (title, type, ref) => (title && (EINWOHNER.has(type) || EINWOHNER_TITEL.test(title) || ew.has(ref)) ? title.replace(rx, `$1${OHNE_NR}`).replace(WORT, (m, klammer) => OHNE_NR + (klammer || "")).replace(REST, "$1").replace(FLUR, OHNE_FLUR) : title);
+      d._mask = (title, type, ref) => (title && (EINWOHNER.has(type) || EINWOHNER_TITEL.test(title) || ew.has(ref)) ? title.replace(rx, `$1${OHNE_NR}`).replace(WORT, (m, klammer) => OHNE_NR + (klammer || "")).replace(REST, "$1").replace(FLUR, OHNE_FLUR) : (title && title.includes("lurst") ? title.replace(FLUR, OHNE_FLUR) : title));
     }
     return d._mask;
   }
