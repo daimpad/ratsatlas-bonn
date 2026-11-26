@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-beuel-mitte</id>
 <title>Ratsatlas Bonn – Beuel-Mitte</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Beuel-Mitte</subtitle>
-<updated>2026-11-18T00:00:00Z</updated>
+<updated>2026-11-25T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-beuel-mitte.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030723#vorlage</id>
+<title>Neue Vorlage 261168-02 AA: BBB-Änderungsantrag Anbringung Grünpfeile für rechtsabbiegende Radfahrer in die Ringstraße; Antrag zur Vorlage 261168</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261168-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030723"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030540#vorlage</id>
 <title>Neue Vorlage 262210: Bürgerantrag: Einführung von Tempo 30 auf dem Abschnitt "Auf der Schleide" zwischen Limpericher Straße und Rudolf-Hahn-Straße</title>
@@ -31,6 +39,14 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261157-02%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029783"/>
 <summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261246 Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
+<summary>Empfehlung am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030449#vorlage</id>
@@ -249,6 +265,14 @@
 <summary>Entscheidung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261246 Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
+<summary>Empfehlung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028122#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
 <title>Bezirksvertretung Beuel: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261168-01 ST CDU/SPD-Antrag: Anbringung Grünpfeile für rechtsabbiegende Radfahrer in die Ringstraße</title>
 <updated>2026-10-14T00:00:00Z</updated>
@@ -449,6 +473,14 @@
 <summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: offen</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#beratung-2026-09-15-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „ungeändert beschlossen“ – 261246 Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
+<updated>2026-09-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
+<summary>Empfehlung am 2026-09-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029367#vorlage</id>
 <title>Neue Vorlage 261710: Linke-Große Anfrage: Sachstand und weiteres Vorgehen Wohnbebauung Heckelsbergplatz</title>
 <updated>2026-09-14T00:00:00Z</updated>
@@ -599,14 +631,6 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261246 Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
-<summary>Empfehlung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028049#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261300-02"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028724"/>
 <summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028828#vorlage</id>
-<title>Neue Vorlage 261492: SPD-Große Anfrage: Ausbau des Gehweges an der „Limpericher Straße“ zwischen „Auf dem Grendt“ bis „Küdinghovener Straße“ – Stand der Umsetzung</title>
-<updated>2026-08-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261492"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028828"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028823#vorlage</id>
-<title>Neue Vorlage 261488: Erstellung von provisorischen Rampen für den barrierefreien Zugang zur Personenunterführung Königswinterer Straße / Obere Wilhelmstraße</title>
-<updated>2026-08-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261488"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028823"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028792#vorlage</id>
-<title>Neue Vorlage 242092-05: Errichtung eines Förderzentrums mit dem Schwerpunkt „Geistige Entwicklung“ und einer separaten Dreifachturnhalle mit Tribünen am Standort Rölsdorfstraße; hier: Entwurfsplanung und Kostenberechnung</title>
-<updated>2026-08-11T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#242092-05"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028792"/>
-<summary>Beschlussvorlage · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: entschieden</summary>
 </entry>
 </feed>

@@ -9,6 +9,22 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030717#vorlage</id>
+<title>Neue Vorlage 261324-02 AA: BSW/SBI-Gruppe Änderungsantrag zum Dringlichkeitsantrag: Vorläufige Übersicht kühler Orte und Stand des Hitzeaktionsplans</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261324-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030717"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030716#vorlage</id>
+<title>Neue Vorlage 261700-06 AA: BSW/SBI-Gruppe Änderungsantrag: Gebührenkalkulation des Friedhofs- und Bestattungswesens für das Jahr 2027</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:graurheindorf#261700-06%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030716"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030705#vorlage</id>
 <title>Neue Vorlage 242332-03 AA: Volt-/Grüne-Änderungsantrag: Verkauf von Ökopunkten für den 6-streifigen Ausbau der BAB 565 zwischen der AS BN-Endenich und dem AK BN-Nord Antrag zur Vorlage 242332</title>
 <updated>2026-11-25T00:00:00Z</updated>
@@ -76,7 +92,7 @@
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030131#vorlage</id>
 <title>Neue Vorlage 262024: Fortschritte in der Klimaanpassung</title>
 <updated>2026-11-24T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262024"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:bonn-zentrum#262024"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030131"/>
 <summary>Mitteilungsvorlage · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
 </entry>
@@ -521,6 +537,14 @@
 <summary>Stellungnahme der Verwaltung · federführend: 53 Gesundheitsamt · Stand: beraten, ohne Entscheidung</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028646#beratung-2026-11-04-Bezirksvertretung%20Bad%20Godesberg</id>
+<title>Bezirksvertretung Bad Godesberg: „wg. Sitzungsabbruch nicht behandelt (vertagt)“ – 261407 GRÜNE Große Anfrage: Ausnahmegenehmigungen für Bauen im Überschwemmungsgebiet</title>
+<updated>2026-11-04T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:mehlem#261407"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028646"/>
+<summary>Kenntnisnahme am 2026-11-04; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030243#vorlage</id>
 <title>Neue Vorlage 262077: SPD-Bezirksfraktion-Antrag: Installation eines Trinkbrunnens in Kessenich</title>
 <updated>2026-11-03T00:00:00Z</updated>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261751"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029459"/>
 <summary>Kenntnisnahme am 2026-10-15; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028892#beratung-2026-10-15-Ausschuss%20f%C3%BCr%20Sicherheit%2C%20Ordnung%20und%20Bev%C3%B6lkerungsschutz</id>
-<title>Ausschuss für Sicherheit, Ordnung und Bevölkerungsschutz: „vertagt“ – 261525 BBB-Anfrage: Schutz der Bevölkerung vor Waldbränden</title>
-<updated>2026-10-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261525"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028892"/>
-<summary>Kenntnisnahme am 2026-10-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029886#vorlage</id>
-<title>Neue Vorlage 261555-04 AA: BSW/SBI- Änderungsantrag: Optimierung der Toilettensituation im Bereich Herbert-Wehner-Platz/Haupteingang Rheinaue Antrag zur Vorlage 261555</title>
-<updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:hochkreuz#261555-04%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029886"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2029805#beratung-2026-10-14-Ausschuss%20f%C3%BCr%20Wissenschaft%2C%20Europa%20und%20Internationales</id>
-<title>Ausschuss für Wissenschaft, Europa und Internationales: „zur Kenntnis genommen“ – 261807-01 ST Stellungnahme der Verwaltung zu Grünen-Große Anfrage: Europäische Klimaschutzinitiative „eumayors“</title>
-<updated>2026-10-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261807-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029805"/>
-<summary>Kenntnisnahme am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

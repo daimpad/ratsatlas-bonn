@@ -9,6 +9,30 @@
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030711#vorlage</id>
+<title>Neue Vorlage 262279: Bürgerantrag: Gutachten zu möglichen Gebäudeschäden durch Erschütterungen im Zuge der Bebauung an der Gartenstraße</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262279"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030711"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030709#vorlage</id>
+<title>Neue Vorlage 262278: Bürgerantrag: Keine Tiefgaragenzufahrt über den östlichen Nonnenpfad sowie Prüfung einer Anliegerstraße zur Verkehrsberuhigung</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262278"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030709"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030707#vorlage</id>
+<title>Neue Vorlage 262277: Bürgerantrag: Begrenzung der Gebäudehöhe im Neubaugebiet Gartenstraße auf maximal zwei Vollgeschosse sowie Erstellung eines Verkehrs- und Parkraumgutachtens für den Nonnenpfad</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262277"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030707"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030704#vorlage</id>
 <title>Neue Vorlage 262275: Bürgerantrag: Ausschluss von Baustellenverkehr im Bereich Nonnenpfad</title>
 <updated>2026-11-25T00:00:00Z</updated>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260955"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027512"/>
 <summary>Empfehlung am 2026-05-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026795#beratung-2026-05-28-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
-<title>Ausschuss für Mobilität und Verkehr: „zur Kenntnis genommen“ – 260429-02 ST Stellungnahme zum Antrag CDU-/SPD-Fraktion/FDP-Gruppe: Zukünftige Fahrstrecke des Flughafenbusses SB60</title>
-<updated>2026-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260429-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026795"/>
-<summary>Kenntnisnahme am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026525#beratung-2026-05-28-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
-<title>Ausschuss für Mobilität und Verkehr: „ungeändert beschlossen“ – 260655 P+R-Anlage Vilich: Ergebnisse der Vorplanung, Einplanungsantrag und weiteres Vorgehen</title>
-<updated>2026-05-28T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260655"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026525"/>
-<summary>Empfehlung am 2026-05-28; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027715#vorlage</id>
-<title>Neue Vorlage 241728-03 AA: Grüne-ÄA: Verbesserung der Verkehrssituation im Kreuzungsbereich Adelheidisstr./ Schillerstr./ Am Burgpark Antrag zur Vorlage 241728</title>
-<updated>2026-05-27T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#241728-03%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027715"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
 </entry>
 </feed>

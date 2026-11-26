@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/vorlage/261246</id>
 <title>Vorlage 261246: Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
 <subtitle>Verlauf der Vorlage 261246: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
-<updated>2026-09-24T00:00:00Z</updated>
+<updated>2026-11-17T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/261246.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#beratung-2026-11-17-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
+<title>Ausschuss für Planen, Bauen und Denkmalschutz: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261246 Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
+<updated>2026-11-17T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
+<summary>Empfehlung am 2026-11-17; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#beratung-2026-10-14-Bezirksvertretung%20Beuel</id>
+<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261246 Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
+<updated>2026-10-14T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
+<summary>Empfehlung am 2026-10-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#folge-261246-01%20ST</id>
 <title>Stellungnahme der Verwaltung 261246-01 ST: Vertagungsbitte zum Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
@@ -17,27 +33,19 @@
 <summary>Folgevorlage zu 261246</summary>
 </entry>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#beratung-2026-09-15-Ausschuss%20f%C3%BCr%20Mobilit%C3%A4t%20und%20Verkehr</id>
+<title>Ausschuss für Mobilität und Verkehr: „ungeändert beschlossen“ – 261246 Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
+<updated>2026-09-15T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
+<summary>Empfehlung am 2026-09-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#vorlage</id>
 <title>Neue Vorlage 261246: Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
 <updated>2026-09-02T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
 <summary>Antrag · federführend: 01-2 Ratsbüro · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#beratung-2026-09-02-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261246 Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
-<updated>2026-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
-<summary>Empfehlung am 2026-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028154#beratung-2026-07-14-Ausschuss%20f%C3%BCr%20Planen%2C%20Bauen%20und%20Denkmalschutz</id>
-<title>Ausschuss für Planen, Bauen und Denkmalschutz: „bei Anerkennung der Tagesordnung nicht aufgenommen oder vertagt“ – 261246 Antrag CDU/SPD/FDP (Kooperation): Straßenquerschnitt und Gleislage Friedrich-Breuer-Straße</title>
-<updated>2026-07-14T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:beuel-mitte#261246"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028154"/>
-<summary>Empfehlung am 2026-07-14; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

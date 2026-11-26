@@ -174,13 +174,13 @@ drucksache	feld	export	oparl_api	ergebnis
 210274-01 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/227	https://www.bonn.sitzung-online.de/oparl/organizations/at/227	ok
 210274-01 ST	beratungen	1	1	ok
 210274-01 ST	orte_stufe_a			ok
-200271-1 ST	reference	200271-1 ST	200271-1 ST	ok
-200271-1 ST	name	Maßnahmen auf der Berta-Lungstras-Straße	Maßnahmen auf der Berta-Lungstras-Straße	ok
-200271-1 ST	date	2020-03-19	2020-03-19	ok
-200271-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-200271-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/190	https://www.bonn.sitzung-online.de/oparl/organizations/at/190	ok
-200271-1 ST	beratungen	1	1	ok
-200271-1 ST	orte_stufe_a			ok
+200495	reference	200495	200495	ok
+200495	name	Halteflächen für Lade- und Lieferverkehr in der Quantiusstraße	Halteflächen für Lade- und Lieferverkehr in der Quantiusstraße	ok
+200495	date	2020-03-09	2020-03-09	ok
+200495	paper_type	Antrag	Antrag	ok
+200495	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+200495	beratungen	2	2	ok
+200495	orte_stufe_a			ok
 190692-06 ST	reference	190692-06 ST	190692-06 ST	ok
 190692-06 ST	name	BBB-Antrag: Schulwegsicherung Friedrich-Ebert-Allee (B9) im Bereich der Stadtbahnhaltestelle Ollenhauerstraße	BBB-Antrag: Schulwegsicherung Friedrich-Ebert-Allee (B9) im Bereich der Stadtbahnhaltestelle Ollenhauerstraße	ok
 190692-06 ST	date	2025-07-03	2025-07-03	ok
@@ -188,13 +188,13 @@ drucksache	feld	export	oparl_api	ergebnis
 190692-06 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/158	https://www.bonn.sitzung-online.de/oparl/organizations/at/158	ok
 190692-06 ST	beratungen	2	2	ok
 190692-06 ST	orte_stufe_a			ok
-200378	reference	200378	200378	ok
-200378	name	Bürgerbrief: Restausbau der Warschauer Straße (nördlicher Gehweg/Parkstreifen) und Stichweg zur Osloer Straße	Bürgerbrief: Restausbau der Warschauer Straße (nördlicher Gehweg/Parkstreifen) und Stichweg zur Osloer Straße	ok
-200378	date	2020-02-21	2020-02-21	ok
-200378	paper_type	Bürgerbrief	Bürgerbrief	ok
-200378	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	https://www.bonn.sitzung-online.de/oparl/organizations/at/169	ok
-200378	beratungen	3	3	ok
-200378	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/21227;https://www.bonn.sitzung-online.de/oparl/locations/21627	https://www.bonn.sitzung-online.de/oparl/locations/21227;https://www.bonn.sitzung-online.de/oparl/locations/21627	ok
+191000-1 ST	reference	191000-1 ST	191000-1 ST	ok
+191000-1 ST	name	Bürgerantrag: Verkehrssichernde Maßnahmen für den Fahrradverkehr in der Colmantstr.	Bürgerantrag: Verkehrssichernde Maßnahmen für den Fahrradverkehr in der Colmantstr.	ok
+191000-1 ST	date	2020-04-03	2020-04-03	ok
+191000-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
+191000-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	https://www.bonn.sitzung-online.de/oparl/organizations/at/30	ok
+191000-1 ST	beratungen	1	1	ok
+191000-1 ST	orte_stufe_a			ok
 232164	reference	232164	232164	ok
 232164	name	Einleitung des Vergabeverfahrens zur Erneuerung von Palisaden und Einfassungen auf Spielplätzen im gesamten Bonner Stadtgebiet 2024	Einleitung des Vergabeverfahrens zur Erneuerung von Palisaden und Einfassungen auf Spielplätzen im gesamten Bonner Stadtgebiet 2024	ok
 232164	date	2023-12-08	2023-12-08	ok
@@ -244,13 +244,13 @@ drucksache	feld	export	oparl_api	ergebnis
 240679-07 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
 240679-07 AA	beratungen	1	1	ok
 240679-07 AA	orte_stufe_a			ok
-201841	reference	201841	201841	ok
-201841	name	Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste	Stärkung der Stadtbezirke, der Bezirksverwaltungsstellen und der Bürgerdienste	ok
-201841	date	2020-11-09	2020-11-09	ok
-201841	paper_type	Antrag	Antrag	ok
-201841	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
-201841	beratungen	6	6	ok
-201841	orte_stufe_a			ok
+201836	reference	201836	201836	ok
+201836	name	Benennung des Weges entlang des Rheindorfer Baches zwischen Kölnstraße und Autobahnüberführung A565 in Bonn-Castell	Benennung des Weges entlang des Rheindorfer Baches zwischen Kölnstraße und Autobahnüberführung A565 in Bonn-Castell	ok
+201836	date	2020-10-20	2020-10-20	ok
+201836	paper_type	Beschlussvorlage	Beschlussvorlage	ok
+201836	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/232	https://www.bonn.sitzung-online.de/oparl/organizations/at/232	ok
+201836	beratungen	1	1	ok
+201836	orte_stufe_a	https://www.bonn.sitzung-online.de/oparl/locations/22228	https://www.bonn.sitzung-online.de/oparl/locations/22228	ok
 253855-01 AA	reference	253855-01 AA	253855-01 AA	ok
 253855-01 AA	name	Änderungsantrag der AfD-Fraktion: Fraktionszuwendungen ab 01.11.2025	Änderungsantrag der AfD-Fraktion: Fraktionszuwendungen ab 01.11.2025	ok
 253855-01 AA	date	2025-11-12	2025-11-12	ok
@@ -258,13 +258,13 @@ drucksache	feld	export	oparl_api	ergebnis
 253855-01 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
 253855-01 AA	beratungen	1	1	ok
 253855-01 AA	orte_stufe_a			ok
-190662-1 ST	reference	190662-1 ST	190662-1 ST	ok
-190662-1 ST	name	Verkehrsregelung im Duisdorfer Oberdorf (alt: 1912319ST2, FF: Amt 33)	Verkehrsregelung im Duisdorfer Oberdorf (alt: 1912319ST2, FF: Amt 33)	ok
-190662-1 ST	date	2019-11-08	2019-11-08	ok
-190662-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-190662-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/140	https://www.bonn.sitzung-online.de/oparl/organizations/at/140	ok
-190662-1 ST	beratungen	1	1	ok
-190662-1 ST	orte_stufe_a			ok
+190657	reference	190657	190657	ok
+190657	name	Fahrradständer (alt: 1912911)	Fahrradständer (alt: 1912911)	ok
+190657	date	2019-11-08	2019-11-08	ok
+190657	paper_type	Große Anfrage	Große Anfrage	ok
+190657	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/140	https://www.bonn.sitzung-online.de/oparl/organizations/at/140	ok
+190657	beratungen	1	1	ok
+190657	orte_stufe_a			ok
 211403-01 ST	reference	211403-01 ST	211403-01 ST	ok
 211403-01 ST	name	Ausbau Rita-Maiburg-Straße in Bonn-Lengsdorf	Ausbau Rita-Maiburg-Straße in Bonn-Lengsdorf	ok
 211403-01 ST	date	2021-10-04	2021-10-04	ok
@@ -272,13 +272,13 @@ drucksache	feld	export	oparl_api	ergebnis
 211403-01 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/224	https://www.bonn.sitzung-online.de/oparl/organizations/at/224	ok
 211403-01 ST	beratungen	1	1	ok
 211403-01 ST	orte_stufe_a			ok
-190360	reference	190360	190360	ok
-190360	name	Bürgerantrag : Errichtung von Fahrradparkplätzen vor dem Freibad Friesdorf	Bürgerantrag : Errichtung von Fahrradparkplätzen vor dem Freibad Friesdorf	ok
-190360	date	2019-10-16	2019-10-16	ok
-190360	paper_type	Bürgerantrag § 24 GO - Öffentlich	Bürgerantrag § 24 GO - Öffentlich	ok
-190360	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/147	https://www.bonn.sitzung-online.de/oparl/organizations/at/147	ok
-190360	beratungen	1	1	ok
-190360	orte_stufe_a			ok
+201349	reference	201349	201349	ok
+201349	name	Förderprogramm chance.natur „Natur- und Kulturlandschaft zwischen Siebengebirge und Sieg“	Förderprogramm chance.natur „Natur- und Kulturlandschaft zwischen Siebengebirge und Sieg“	ok
+201349	date	2020-07-29	2020-07-29	ok
+201349	paper_type	Mitteilungsvorlage	Mitteilungsvorlage	ok
+201349	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/28	https://www.bonn.sitzung-online.de/oparl/organizations/at/28	ok
+201349	beratungen	1	1	ok
+201349	orte_stufe_a			ok
 240343	reference	240343	240343	ok
 240343	name	CDU-Antrag: Verkehrsführung Kaiserstraße	CDU-Antrag: Verkehrsführung Kaiserstraße	ok
 240343	date	2024-02-22	2024-02-22	ok
@@ -321,13 +321,13 @@ drucksache	feld	export	oparl_api	ergebnis
 231600	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/228	https://www.bonn.sitzung-online.de/oparl/organizations/at/228	ok
 231600	beratungen	1	1	ok
 231600	orte_stufe_a			ok
-240986-123 AA	reference	240986-123 AA	240986-123 AA	ok
-240986-123 AA	name	Haushaltsbegleitantrag CDU - Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029 Antrag zur Vorlage 240986 - hier: Einnahmen Beethovenhalle verbessern	Haushaltsbegleitantrag CDU - Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029 Antrag zur Vorlage 240986 - hier: Einnahmen Beethovenhalle verbessern	ok
-240986-123 AA	date	2025-03-18	2025-03-18	ok
-240986-123 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
-240986-123 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
-240986-123 AA	beratungen	1	1	ok
-240986-123 AA	orte_stufe_a			ok
+240986-124 AA	reference	240986-124 AA	240986-124 AA	ok
+240986-124 AA	name	Haushaltsbegleitantrag CDU - Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029 Antrag zur Vorlage 240986; hier: Einnahmen WCCB verbessern	Haushaltsbegleitantrag CDU - Einbringung der Haushaltssatzung für die Haushaltsjahre 2025/2026 und des Finanz- und Investitionsprogramms 2024 bis 2029 Antrag zur Vorlage 240986; hier: Einnahmen WCCB verbessern	ok
+240986-124 AA	date	2025-03-18	2025-03-18	ok
+240986-124 AA	paper_type	Änderungsantrag	Änderungsantrag	ok
+240986-124 AA	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+240986-124 AA	beratungen	1	1	ok
+240986-124 AA	orte_stufe_a			ok
 220880	reference	220880	220880	ok
 220880	name	Bonner Klima-Preis (weiterqualifizierte Maßnahme aus dem Beschluss 200016 Klimanotstand und Umsetzung Klimamaßnahmen)	Bonner Klima-Preis (weiterqualifizierte Maßnahme aus dem Beschluss 200016 Klimanotstand und Umsetzung Klimamaßnahmen)	ok
 220880	date	2022-05-03	2022-05-03	ok
@@ -335,17 +335,17 @@ drucksache	feld	export	oparl_api	ergebnis
 220880	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/328	https://www.bonn.sitzung-online.de/oparl/organizations/at/328	ok
 220880	beratungen	1	1	ok
 220880	orte_stufe_a			ok
-190818	reference	190818	190818	ok
-190818	name	Beteiligungsbericht 2018 der Bundesstadt Bonn	Beteiligungsbericht 2018 der Bundesstadt Bonn	ok
-190818	date	2019-11-26	2019-11-26	ok
-190818	paper_type	Mitteilungsvorlage	Mitteilungsvorlage	ok
-190818	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/204	https://www.bonn.sitzung-online.de/oparl/organizations/at/204	ok
-190818	beratungen	2	2	ok
-190818	orte_stufe_a			ok
-190895-2 ST	reference	190895-2 ST	190895-2 ST	ok
-190895-2 ST	name	Bürgerantrag: Maßnahmen zur Förderung gemeinschaftlicher Wohnprojekte als Element nachhaltiger Wohnungspolitik und sozialer Stadtentwicklung	Bürgerantrag: Maßnahmen zur Förderung gemeinschaftlicher Wohnprojekte als Element nachhaltiger Wohnungspolitik und sozialer Stadtentwicklung	ok
-190895-2 ST	date	2020-05-27	2020-05-27	ok
-190895-2 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
-190895-2 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/62	https://www.bonn.sitzung-online.de/oparl/organizations/at/62	ok
-190895-2 ST	beratungen	5	5	ok
-190895-2 ST	orte_stufe_a			ok
+190812	reference	190812	190812	ok
+190812	name	Verwendung nichtgenutzter städtischer Jobtickets: Kostenlose Abgabe an Auszubildende und MitarbeiterInnen im ersten Betriebsjahr	Verwendung nichtgenutzter städtischer Jobtickets: Kostenlose Abgabe an Auszubildende und MitarbeiterInnen im ersten Betriebsjahr	ok
+190812	date	2019-11-21	2019-11-21	ok
+190812	paper_type	Dringlichkeitsantrag	Dringlichkeitsantrag	ok
+190812	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	https://www.bonn.sitzung-online.de/oparl/organizations/at/160	ok
+190812	beratungen	2	2	ok
+190812	orte_stufe_a			ok
+200841-1 ST	reference	200841-1 ST	200841-1 ST	ok
+200841-1 ST	name	Bürgerantrag: Beeinträchtigungen durch Verkehrslärm Königswinterer Straße Oberkassel	Bürgerantrag: Beeinträchtigungen durch Verkehrslärm Königswinterer Straße Oberkassel	ok
+200841-1 ST	date	2020-06-09	2020-06-09	ok
+200841-1 ST	paper_type	Stellungnahme der Verwaltung	Stellungnahme der Verwaltung	ok
+200841-1 ST	under_direction_of	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	https://www.bonn.sitzung-online.de/oparl/organizations/at/35	ok
+200841-1 ST	beratungen	1	1	ok
+200841-1 ST	orte_stufe_a			ok

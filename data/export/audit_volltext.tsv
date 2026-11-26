@@ -10751,7 +10751,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240351-02 DA	kein Ort						
 240351-04 DA	kein Ort						
 240351-05 ST	kein Ort						
-240351-06	kein Ort						
 240352	kein Ort						
 240352-01 ST	kein Ort						
 240355	verortet	Hauptteil	volltext_strasse	Platz der Vereinten Nationen	Gronau	mittel	2
@@ -11831,6 +11830,9 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241177-06	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	niedrig	1
 241177-07 ST	kein Ort						
 241177-09 ST	verortet	Hauptteil	volltext_strasse	Alfterer Straße	Dransdorf	mittel	3
+241177-10	verortet	Hauptteil	volltext_ortsteil_adjektiv	Lessenich/Meßdorf	Lessenich/Meßdorf	mittel	1
+241177-10	verortet	Hauptteil	volltext_strasse	Lambareneweg	Nordstadt	mittel	5
+241177-10	verortet	Hauptteil	volltext_strasse+ortsteil	Alfterer Straße	Dransdorf	mittel	4
 241177-11 ST	kein Ort						
 241177-12 AA	kein Ort						
 241177-13 AA	kein Ort						
@@ -14585,6 +14587,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260000-11	kein Ort						
 260000-12	kein Ort						
 260000-13	kein Ort						
+260000-14	kein Ort						
 260001	kein Ort						
 260001-01	kein Ort						
 260001-02	kein Ort						
@@ -16110,6 +16113,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261281-12 AA	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	1
 261281-13 ST	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	mittel	1
 261281-13 ST	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	1
+261281-14 AA	verortet	Hauptteil	volltext_ortsteil_name	Rüngsdorf	Rüngsdorf	mittel	1
 261285	kein Ort						
 261285-01 ST	kein Ort						
 261286	kein Ort						
@@ -16174,6 +16178,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261321	verortet	Hauptteil	volltext_strasse	Wesselstraße	Bonn-Zentrum	niedrig	1
 261324	kein Ort						
 261324-01 ST	kein Ort						
+261324-02 AA	kein Ort						
 261325	kein Ort						
 261326	Titel ohne gemeinsamen Ort, nicht verortet						
 261333	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16338,6 +16343,12 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261530	verortet	Hauptteil	volltext_strasse+kreuzung	Welschnonnenstraße	Bonn-Zentrum	mittel	1
 261530	verortet	Hauptteil	volltext_strasse+kreuzung	Wilhelmsplatz	Bonn-Zentrum	mittel	1
 261530	verortet	Hauptteil	volltext_strasse+kreuzung	Wilhelmsplatz	Nordstadt	mittel	1
+261530-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Augustusring	Bonn-Castell	mittel	1
+261530-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Kölnstraße	Bonn-Zentrum	mittel	7
+261530-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Langgasse	Bonn-Zentrum	mittel	2
+261530-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Römerstraße	Bonn-Castell	mittel	4
+261530-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Sandkaule	Bonn-Zentrum	mittel	1
+261530-01 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Welschnonnenstraße	Bonn-Zentrum	mittel	1
 261535	Titel ohne gemeinsamen Ort, nicht verortet						
 261536	kein Ort						
 261537	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16351,6 +16362,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261551-01 ST	kein Ort						
 261554	kein Ort						
 261554-01 ST	kein Ort						
+261558	kein Ort						
 261559	kein Ort						
 261559-01 ST	kein Ort						
 261559-02 ST	verortet	Hauptteil	volltext_strasse	Bertha-von-Suttner-Platz	Bonn-Zentrum	niedrig	1
@@ -16510,6 +16522,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261700-03 ST	nur in Anlagen genannt, nicht verortet						
 261700-04	kein Ort						
 261700-05 AA	kein Ort						
+261700-06 AA	kein Ort						
 261701	verortet	Hauptteil	volltext_ortsteil_name	Geislar	Geislar	niedrig	1
 261701-01 AA	kein Ort						
 261703	kein Ort						
@@ -16634,6 +16647,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261840	kein Ort						
 261840-01 AA	kein Ort						
 261840-02 ST	kein Ort						
+261841	kein Ort						
 261842	kein Ort						
 261845	kein Ort						
 261845-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Friesdorf	Friesdorf	niedrig	1
@@ -16793,6 +16807,14 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262017	kein Ort						
 262017-01 ST	kein Ort						
 262020	kein Ort						
+262024	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
+262024	verortet	Hauptteil	volltext_strasse	Budapester Straße	Bonn-Zentrum	niedrig	1
+262024	verortet	Hauptteil	volltext_strasse	Dorotheenstraße	Nordstadt	niedrig	2
+262024	verortet	Hauptteil	volltext_strasse	Nonnstraße	Nordstadt	niedrig	1
+262024	verortet	Hauptteil	volltext_strasse	Rheingasse	Bonn-Zentrum	niedrig	1
+262024	verortet	Hauptteil	volltext_strasse	Robert-Schuman-Platz	Hochkreuz	niedrig	2
+262024	verortet	Hauptteil	volltext_strasse	Stiftsplatz	Bonn-Zentrum	niedrig	2
+262024	verortet	Hauptteil	volltext_strasse+ortsteil	Dorothea-Erxleben-Weg	Vilich- Müldorf	niedrig	1
 262026	kein Ort						
 262030	nur in Anlagen genannt, nicht verortet						
 262031	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16941,3 +16963,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262262	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
 262262	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
 262262	verortet	Hauptteil	volltext_ortsteil_name	Ückesdorf	Ückesdorf	niedrig	1
+262267	Titel ohne gemeinsamen Ort, nicht verortet						
+262273	kein Ort						
+262274	Titel ohne gemeinsamen Ort, nicht verortet						
+262276	Titel ohne gemeinsamen Ort, nicht verortet						
