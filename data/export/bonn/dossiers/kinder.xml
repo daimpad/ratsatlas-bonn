@@ -3,18 +3,42 @@
 <id>tag:allris-bonn,2026:feed/thema/kinder</id>
 <title>Ratsatlas Bonn – Kinder, Jugend und Familie</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Kinder, Jugend und Familie (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-24T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/kinder.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/kinder-jugend-und-familie/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030675#vorlage</id>
+<title>Neue Vorlage 262215-01 ST: CDU/SPD-Große Anfrage: Schließung der KiTa JoKi und Auswirkungen auf die KiTa-Platzsituation im Stadtbezirk Hardtberg</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#262215-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030675"/>
+<summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030466#vorlage</id>
+<title>Neue Vorlage 261959-01 ST: Grüne Große Anfrage: Spielplatz "Auf dem Kirchbüchel"</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:duisdorf#261959-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030466"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029585#beratung-2026-11-25-Ausschuss%20f%C3%BCr%20Kinder%2C%20Jugend%20und%20Familie</id>
+<title>Ausschuss für Kinder, Jugend und Familie: „ungeändert beschlossen“ – 260362-03 Zuschuss nach § 48 KiBiz zur Flexibilisierung der Kinderbetreuungszeiten 2026/2027 hier: Nachtrag für zwei Kindertageseinrichtungen</title>
+<updated>2026-11-25T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#260362-03"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029585"/>
+<summary>Entscheidung am 2026-11-25; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030683#vorlage</id>
 <title>Neue Vorlage 262262: Dringlichkeitsantrag von CDU-SPD: Schließung von 3 evangelischen Kitas im Bonner Westen</title>
 <updated>2026-11-24T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:roettgen#262262"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030683"/>
-<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030385#vorlage</id>
@@ -30,7 +54,7 @@
 <updated>2026-11-23T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261514-04%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030647"/>
-<summary>Änderungsantrag · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+<summary>Änderungsantrag · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030634#vorlage</id>
@@ -38,7 +62,7 @@
 <updated>2026-11-20T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:heiderhof#262169-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030634"/>
-<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030593#vorlage</id>
@@ -70,7 +94,7 @@
 <updated>2026-11-18T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261514-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030511"/>
-<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030465#vorlage</id>
@@ -78,7 +102,7 @@
 <updated>2026-11-18T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:beuel#262169-01%20DA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030465"/>
-<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+<summary>Dringlichkeitsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030512#vorlage</id>
@@ -350,7 +374,7 @@
 <updated>2026-10-01T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:gronau#260362-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029585"/>
-<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+<summary>Beschlussvorlage · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: entschieden</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029210#vorlage</id>
@@ -783,29 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261189"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028032"/>
 <summary>Kenntnisnahme am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027770#beratung-2026-07-07-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 261063 Bürgerantrag: Erneuerung und Weiterentwicklung des Spielplatzes im Brandengarten in Bonn-Lengsdorf</title>
-<updated>2026-07-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261063"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027770"/>
-<summary>Entscheidung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026652#beratung-2026-07-07-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen - mit Protokollnotiz“ – 260718 Schaffung eines dreigruppigen Kita-Neubaus in der Riemannstraße im Ortsteil Brüser Berg durch das Städtische Gebäudemanagement</title>
-<updated>2026-07-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#260718"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026652"/>
-<summary>Anhörung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026162#beratung-2026-07-07-Ausschuss%20f%C3%BCr%20Soziales%2C%20Migration%2C%20Gesundheit%2C%20Wohnen%20und%20Senioren</id>
-<title>Ausschuss für Soziales, Migration, Gesundheit, Wohnen und Senioren: „ungeändert beschlossen - mit Protokollnotiz“ – 260464 Zuschuss an den Verband binationaler Familien und Partnerschaften (iaf) e.V.</title>
-<updated>2026-07-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260464"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026162"/>
-<summary>Entscheidung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

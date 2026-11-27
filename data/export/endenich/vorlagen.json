@@ -8263,6 +8263,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung lehnt den Bürgerantrag ab, die Straße „Am Klostergarten“ auf ganzer Länge als verkehrsberuhigten Bereich auszuweisen. Der etwa 275 Meter lange Abschnitt ist nicht niveaugleich ausgebaut und Fahrbahn sowie Gehweg sind getrennt. Bereits 125 Meter sind als verkehrsberuhigter Bereich ausgewiesen.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-26"
    }
   },
   {
@@ -10760,6 +10765,11 @@
      "rat"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Volt-Fraktion beantragt, dass Taxis für ein Jahr bestimmte Umweltspuren befahren dürfen: die Oxfordstraße und Bornheimer Straße Richtung Alter Friedhof, den Hermann-Wandersleb-Ring in beide Richtungen sowie die Strecke vom Kaiserplatz zum Hauptbahnhof über den Busbahnhof. Nach einem Jahr prüft die Verwaltung die Auswirkungen, und der Rat entscheidet dann über eine dauerhafte Freigabe.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-26"
    }
   },
   {

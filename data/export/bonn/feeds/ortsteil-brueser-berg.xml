@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-brueser-berg</id>
 <title>Ratsatlas Bonn – Brüser Berg</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Brüser Berg</subtitle>
-<updated>2026-11-10T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-brueser-berg.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029302#vorlage</id>
+<title>Neue Vorlage 261650-01 ST: Grüne-Antrag: Radweg auf dem Brüser Damm</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#261650-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029302"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030201#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
 <title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 261753-01 AA Änderungsantrag der Grünen: CDU/SPD-Antrag: Öffentliche Toilette am Nachbarschaftszentrum Berg Antrag zur Vorlage 261753</title>
@@ -542,7 +550,7 @@
 <updated>2026-02-27T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#260240"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025571"/>
-<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: entschieden</summary>
+<summary>Beschlussvorlage · federführend: 05 Amt für Integration und Vielfalt · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, der Evangelischen Kirchengemeinde im Bonner Westen für das erste Halbjahr 2026 bis zu 5.170 Euro für die Koordination der ehrenamtlichen Flüchtlingshilfe zu zahlen. Die Förderung ist vorbehaltlich der weiteren Prüfung im Rahmen der Haushaltsplanung 2027/2028.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025526#vorlage</id>
@@ -558,7 +566,7 @@
 <updated>2026-01-27T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#253555-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025240"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung gibt ihre Stellungnahme zum Bürgerantrag zur Zufahrtsregelung in der Von-Guericke-Allee/Celsiusstraße ab. Sie verweist darauf, dass der Ausschuss für Beteiligung der Bürgerinnen und Bürger zuständig ist und den Antrag ablehnt. Der Antragsteller wird über die Gründe informiert.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025183#beratung-2026-01-27-Bezirksvertretung%20Hardtberg</id>
@@ -582,7 +590,7 @@
 <updated>2026-01-22T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#260027-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025179"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung nimmt zur Großen Anfrage der CDU-Fraktion zu Hundefreilaufflächen Stellung. Sie bittet wegen erhöhten Abstimmungsbedarfs um Vertagung der Anfrage.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025183#vorlage</id>
@@ -590,7 +598,7 @@
 <updated>2026-01-14T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#260031-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025183"/>
-<summary>Stellungnahme der Verwaltung · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung nimmt zum Antrag der Grünen Fraktion zu Mitteln für Empfänge im Stadtbezirk Hardtberg Stellung und teilt mit, dass 2024 und 2025 keine Restmittel im Bezirkshaushalt vorhanden waren. Der Empfang für soziale Dienste wird auf 600 Euro reduziert, andere Empfänge bleiben unverändert. Eine Zusammenlegung von Empfängen lehnt sie ab.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025087#vorlage</id>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#253638"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023943"/>
 <summary>Entscheidung am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2023848#beratung-2025-09-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „zur Kenntnis genommen“ – 253583-01 ST Bürgerantrag: Bau eines Wartehäuschens für die Haltestelle Borsigallee</title>
-<updated>2025-09-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:brueser-berg#253583-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023848"/>
-<summary>Kenntnisnahme am 2025-09-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

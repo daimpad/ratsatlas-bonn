@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
+<id>tag:allris-bonn,2026:feed/vorlage/260703-06</id>
+<title>Vorlage 260703-06: Mitteilungsvorlage zum Antrag der Grünen-Fraktion: Erweiterte Auswertung zum Grundstücksgeschäft Hangelar</title>
+<subtitle>Verlauf der Vorlage 260703-06: Beratungen, Ergebnisse und Folgevorlagen</subtitle>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/vorlagen/260703-06.xml"/>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260703-06"/>
+<author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
+<rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028866#vorlage</id>
+<title>Neue Vorlage 260703-06: Mitteilungsvorlage zum Antrag der Grünen-Fraktion: Erweiterte Auswertung zum Grundstücksgeschäft Hangelar</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260703-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028866"/>
+<summary>Mitteilungsvorlage · federführend: Dezernat OB · Stand: offen</summary>
+</entry>
+</feed>

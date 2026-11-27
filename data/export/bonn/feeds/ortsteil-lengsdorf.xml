@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-lengsdorf</id>
 <title>Ratsatlas Bonn – Lengsdorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Lengsdorf</subtitle>
-<updated>2026-11-25T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-lengsdorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030466#vorlage</id>
+<title>Neue Vorlage 261959-01 ST: Grüne Große Anfrage: Spielplatz "Auf dem Kirchbüchel"</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261959-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030466"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029642#vorlage</id>
+<title>Neue Vorlage 261760-01 ST: CDU/SPD-Große Anfrage: Bau eines Kunstrasenplatzes in Lengsdorf</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#261760-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029642"/>
+<summary>Stellungnahme der Verwaltung · federführend: 52 Sport- und Bäderamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030697#vorlage</id>
 <title>Neue Vorlage 262271: Informationsbrief - Öffentlichkeitsbeteiligung zum vorhabenbezogenen Bebauungsplan Nr. 6319-2 "An der Ziegelei" im Stadtbezirk Hardtberg, Ortsteil Lengsdorf</title>
@@ -710,7 +726,7 @@
 <updated>2026-02-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#260223"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025539"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Fraktion Grüne/Linke stellt eine Große Anfrage. Sie fragt die Verwaltung, wann der Sperrpfosten in der Lengsdorfer Hauptstraße eingebaut wird. Dabei geht es um den Beschluss vom 08.10.2024 zur Vorlage 241631.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025538#vorlage</id>
@@ -774,7 +790,7 @@
 <updated>2026-01-22T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#260027-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025179"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung nimmt zur Großen Anfrage der CDU-Fraktion zu Hundefreilaufflächen Stellung. Sie bittet wegen erhöhten Abstimmungsbedarfs um Vertagung der Anfrage.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025183#vorlage</id>
@@ -782,7 +798,7 @@
 <updated>2026-01-14T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#260031-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025183"/>
-<summary>Stellungnahme der Verwaltung · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung nimmt zum Antrag der Grünen Fraktion zu Mitteln für Empfänge im Stadtbezirk Hardtberg Stellung und teilt mit, dass 2024 und 2025 keine Restmittel im Bezirkshaushalt vorhanden waren. Der Empfang für soziale Dienste wird auf 600 Euro reduziert, andere Empfänge bleiben unverändert. Eine Zusammenlegung von Empfängen lehnt sie ab.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025087#vorlage</id>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#260027"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025087"/>
 <summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024655#vorlage</id>
-<title>Neue Vorlage 253594-03 ST: Regenwasserbehandlungsanlage an der A 565 in der Anschlussstelle Bonn-Lengsdorf: Suchschachtungen im Landschaftsschutzgebiet Hier: Stellungnahme zur Kleinen Anfrage DS 253594-01</title>
-<updated>2025-12-21T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#253594-03%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024655"/>
-<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung nimmt zu einer Kleinen Anfrage Stellung, die Suchschachtungen im Landschaftsschutzgebiet an der A 565 in Bonn-Lengsdorf betrifft. Sie verweist für die Antwort auf die Mitteilungsvorlage DS 253594-02.</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024880#vorlage</id>
-<title>Neue Vorlage 254051: Gewährung eines Zuschusses für den Lengsdorfer Karnevalszug an den Ortsfestausschuss Lengsdorf</title>
-<updated>2025-12-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:lengsdorf#254051"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024880"/>
-<summary>Beschlussvorlage · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, Gruppen beim Lengsdorfer Karnevalszug 2026 zu unterstützen. Fußgruppen sollen 16 Euro, Wagen 32 Euro erhalten – der Rest folgt bei voller Mittel-Freigabe. Die Kosten trägt die Bezirksverwaltungsstelle Hardtberg.</summary>
 </entry>
 </feed>

@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/bezirk-hardtberg</id>
 <title>Ratsatlas Bonn – Stadtbezirk Hardtberg, ohne genaueren Ort</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Stadtbezirk Hardtberg, ohne genaueren Ort</subtitle>
-<updated>2026-11-24T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/bezirk-hardtberg.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030675#vorlage</id>
+<title>Neue Vorlage 262215-01 ST: CDU/SPD-Große Anfrage: Schließung der KiTa JoKi und Auswirkungen auf die KiTa-Platzsituation im Stadtbezirk Hardtberg</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#262215-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030675"/>
+<summary>Stellungnahme der Verwaltung · federführend: 51 Amt für Kinder, Jugend und Familie · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030274#vorlage</id>
+<title>Neue Vorlage 222181-04 ST: CDU/SPD-Große Anfrage: Beschlusskontrolle: CDU-Antrag: Fahrradabstellmöglichkeiten auf waldnahen Parkplätzen</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#222181-04%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030274"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030416#vorlage</id>
 <title>Neue Vorlage 261757-01 ST: CDU/SPD-Große Anfrage: Unbepflanzte Baumscheiben im Stadtbezirk Hardtberg</title>
@@ -42,7 +58,7 @@
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2029840#beratung-2026-11-10-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 261881 ISEK Hardtberg: Auswahl eines Lupenraums zur Erarbeitung eines Lupenraum-ISEK</title>
+<title>Bezirksvertretung Hardtberg: „geändert beschlossen“ – 261881 ISEK Hardtberg: Auswahl eines Lupenraums zur Erarbeitung eines Lupenraum-ISEK</title>
 <updated>2026-11-10T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#261881"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029840"/>
@@ -582,7 +598,7 @@
 <updated>2026-03-05T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#260233-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025834"/>
-<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 85 Städtisches Gebäudemanagement Bonn · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung teilt mit, dass der Schulgarten am Hardtberg-Gymnasium bereits heute genutzt werden kann, da für weiterführende Schulen keine sicherheitstechnischen Anforderungen an eine hohe Einzäunung bestehen. Das SGB hat zudem die Errichtung einer Zaunanlage mit drei Toren geprüft und wird die Kosten ermitteln sowie bis Ende 2026 mitteilen, ob die Maßnahme 2027 umgesetzt werden kann.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025562#beratung-2026-03-03-Bezirksvertretung%20Hardtberg</id>
@@ -614,7 +630,7 @@
 <updated>2026-02-26T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#260221-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025705"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung nimmt zur Großen Anfrage von Grünen und Linken zur Bushaltestelle „Rathaus Hardtberg“ Stellung. Sie kann die Anfrage noch nicht vollständig beantworten, weil Abstimmungen mit SWB Bus und Bahn zu Ziffer 3 noch ausstehen. Deshalb bittet sie um Vertagung in die nächste Sitzung.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025562#vorlage</id>
@@ -622,7 +638,7 @@
 <updated>2026-02-18T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#260210-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025562"/>
-<summary>Stellungnahme der Verwaltung · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: Bezirksverwaltungsstelle Hardtberg · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung nimmt Stellung zum Antrag von CDU und SPD zur Aktualisierung des Verfahrens für die Hardtberg-Medaille. Nur wenn der Antrag angenommen wird, unterstützt die Verwaltung das aktualisierte Verfahren, zum Beispiel bei der Erstellung der nicht-öffentlichen Namensliste.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025557#vorlage</id>
@@ -638,7 +654,7 @@
 <updated>2026-02-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#260221"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025537"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Fraktion Grüne/Linke fragt bei der Verwaltung nach dem Stand zur Bushaltestelle „Rathaus Hardtberg“. Sie möchte wissen, ob ein Standort für die beschlossene zentrale Infotafel gefunden wurde, wann diese aufgestellt wird und ob Infotafeln an allen drei Bussteigen möglich wären.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025525#vorlage</id>
@@ -646,7 +662,7 @@
 <updated>2026-02-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#260210"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025525"/>
-<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die CDU/SPD-Fraktion beantragt eine Aktualisierung des Verfahrens zur Verleihung der Hardtberg-Medaille für Verdienste um den Stadtbezirk Hardtberg. Bis zu zwei Medaillen sollen jährlich an Personen oder in besonderen Fällen an Vereine verliehen werden. Die Bezirksvertretung soll die Entscheidung mit Zweidrittelmehrheit in nicht-öffentlicher Sitzung treffen.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025226#vorlage</id>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253878"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024495"/>
 <summary>Entscheidung am 2025-12-11; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024805#vorlage</id>
-<title>Neue Vorlage 253926-01 AA: CDU-Änderungsantrag: Lärmschutzmaßnahmen Autobahn Antrag zur Vorlage 253926</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253926-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024805"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024805#beratung-2025-12-02-Bezirksvertretung%20Hardtberg</id>
-<title>Bezirksvertretung Hardtberg: „ungeändert beschlossen“ – 253926-01 AA CDU-Änderungsantrag: Lärmschutzmaßnahmen Autobahn Antrag zur Vorlage 253926</title>
-<updated>2025-12-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=bezirk:hardtberg#253926-01%20AA"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024805"/>
-<summary>Anregung am 2025-12-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>

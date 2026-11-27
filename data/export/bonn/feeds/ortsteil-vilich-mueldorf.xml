@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-vilich-mueldorf</id>
 <title>Ratsatlas Bonn – Vilich- Müldorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Vilich- Müldorf</subtitle>
-<updated>2026-11-24T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-vilich-mueldorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030480#vorlage</id>
+<title>Neue Vorlage 261785-02: Stellungnahme der Verwaltung zu: Grüne-Antrag: Baureife Planung zum Ausbau der Adolf-Quad-Straße in Vilich-Müldorf</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf#261785-02"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030480"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028568#vorlage</id>
+<title>Neue Vorlage 221646-09: Weiteres Vorgehen Knotenpunkt B56/Reinold-Hagen-Straße/ Bundesgrenzschutzstraße</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf#221646-09"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028568"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030131#vorlage</id>
 <title>Neue Vorlage 262024: Fortschritte in der Klimaanpassung</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf#240961"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017494"/>
 <summary>Entscheidung am 2024-06-26; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2017824#vorlage</id>
-<title>Neue Vorlage 241059-01 ST: Vergabe der AEIWWA-Fördermittel des Jahres 2024</title>
-<updated>2024-06-19T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf#241059-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017824"/>
-<summary>Stellungnahme der Verwaltung · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung teilt mit, wie die Fördermittel des Jahres 2024 für das Programm AEIWWA verteilt werden sollen. Die genaue Aufteilung steht in einer beigefügten Liste.</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2017743#vorlage</id>
-<title>Neue Vorlage 241059: Vergabe der AEIWWA-Fördermittel des Jahres 2024</title>
-<updated>2024-06-16T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich-mueldorf#241059"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2017743"/>
-<summary>Beschlussvorlage · federführend: 02 Amt für Internationales und globale Nachhaltigkeit · Stand: entschieden</summary>
 </entry>
 </feed>

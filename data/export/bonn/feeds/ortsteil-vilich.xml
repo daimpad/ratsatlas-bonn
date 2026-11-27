@@ -3,18 +3,106 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-vilich</id>
 <title>Ratsatlas Bonn – Vilich</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Vilich</subtitle>
-<updated>2026-11-25T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-vilich.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
 <entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030741#vorlage</id>
+<title>Neue Vorlage 262292: Bürgerantrag: Anpassung der Verkehrserschließung: Tiefgaragenzufahrt im Bereich Gartenstraße/Nonnenpfad</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262292"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030741"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030739#vorlage</id>
+<title>Neue Vorlage 262290: Bürgerantrag: Ausschluss von Baustellenverkehr im Bereich Nonnenpfad und Pilgerweg</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262290"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030739"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030738#vorlage</id>
+<title>Neue Vorlage 262268-01: Bürgerantrag: Reduzierung der Geschosszahl der geplanten Bebauung an der Gartenstraße und Beweissicherung</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262268-01"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030738"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030734#vorlage</id>
+<title>Neue Vorlage 262288: Bürgerantrag: Prüfung der Verträglichkeit geplanter Boardinghouse-Nutzungen im Bereich Gartenstraße mit der nachhaltigen Wohnraumentwicklung</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262288"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030734"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030726#vorlage</id>
+<title>Neue Vorlage 262286: Bürgerantrag: Maßnahmen zur Vermeidung zusätzlicher Verkehrsbelastungen des Nonnenpfades durch die geplante Bebauung im Bereich Gartenstraße</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262286"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030726"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030725#vorlage</id>
+<title>Neue Vorlage 262285: Bürgerantrag: Erstellung und Veröffentlichung von Gutachten zur geplanten Bebauung im Bereich der Gartenstraße</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262285"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030725"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030721#vorlage</id>
+<title>Neue Vorlage 262284: Bürgerantrag: Stellplatzbedarf und Parkraumkonzept für die geplante Bebauung an der Gartenstraße</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262284"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030721"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030720#vorlage</id>
+<title>Neue Vorlage 262283: Bürgerantrag: Verkehrsgutachten zu den Auswirkungen der geplanten Bebauung auf Gartenstraße, Nonnenpfad und Pilgerweg</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262283"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030720"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030718#vorlage</id>
+<title>Neue Vorlage 262282: Bürgerantrag: Schutz der bestehenden Wohnbebauung vor Beeinträchtigungen durch die geplanten Bauarbeiten an der Gartenstraße</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262282"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030718"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030711#vorlage</id>
 <title>Neue Vorlage 262279: Bürgerantrag: Gutachten zu möglichen Gebäudeschäden durch Erschütterungen im Zuge der Bebauung an der Gartenstraße</title>
-<updated>2026-11-25T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262279"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030711"/>
 <summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030692#vorlage</id>
+<title>Neue Vorlage 262268: Bürgerantrag: Reduzierung der Geschosszahl der geplanten Bebauung an der Gartenstraße und Beweissicherung</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262268"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030692"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029677#vorlage</id>
+<title>Neue Vorlage 261774-02 ST: Stellungnahme der Verwaltung zu Bürgerantrag: Antrag zur Überprüfung und Anpassung der Verkehrsführung im Bereich Clemensstraße, Stiftsstraße, Dixstraße, Mirecourtstraße und „Am Köppekreuz“ in Bonn-Vilich-Schwarzrheindorf</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261774-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029677"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030709#vorlage</id>
@@ -46,14 +134,6 @@
 <updated>2026-11-25T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262272"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030698"/>
-<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2030692#vorlage</id>
-<title>Neue Vorlage 262268: Bürgerantrag: Reduzierung der Geschosszahl der geplanten Bebauung an der Gartenstraße und Beweissicherung</title>
-<updated>2026-11-25T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262268"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030692"/>
 <summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
 </entry>
 <entry>
@@ -727,85 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261271"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028237"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028207#vorlage</id>
-<title>Neue Vorlage 261249-01 ST: Bürgerantrag: Antrag zur Lärm- und Emissionsmessung und Einrichtung eines Tempolimits von 30 km/h auf der Sankt Augustiner Straße Beuel - Vertagungsbitte -</title>
-<updated>2026-06-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261249-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028207"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027926#beratung-2026-06-23-Bezirksvertretung%20Bonn</id>
-<title>Bezirksvertretung Bonn: „zur Kenntnis genommen“ – 260809-01 ST Ergänzende Stellungnahme zur Verfahrensbeschleunigung in der Bauleitplanung - "Planungsturbo" durch Politik und Verwaltung</title>
-<updated>2026-06-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260809-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027926"/>
-<summary>Kenntnisnahme am 2026-06-23; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028162#vorlage</id>
-<title>Neue Vorlage 261249: Bürgerantrag: Antrag zur Lärm- und Emissionsmessung und Einrichtung eines Tempolimits von 30 km/h auf der Sankt Augustiner Straße Beuel</title>
-<updated>2026-06-18T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261249"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028162"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027926#vorlage</id>
-<title>Neue Vorlage 260809-01 ST: Ergänzende Stellungnahme zur Verfahrensbeschleunigung in der Bauleitplanung - "Planungsturbo" durch Politik und Verwaltung</title>
-<updated>2026-06-17T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260809-01%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027926"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028044#vorlage</id>
-<title>Neue Vorlage 261193: Bürgerantrag: Antrag auf Optimierung der Verkehrssicherheit im Bereich der Sankt Augustiner Straße/Combahnstraße</title>
-<updated>2026-06-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261193"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028044"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026525#beratung-2026-06-15-Rat</id>
-<title>Rat: „ungeändert beschlossen“ – 260655 P+R-Anlage Vilich: Ergebnisse der Vorplanung, Einplanungsantrag und weiteres Vorgehen</title>
-<updated>2026-06-15T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260655"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026525"/>
-<summary>Entscheidung am 2026-06-15; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027973#vorlage</id>
-<title>Neue Vorlage 261163: Grüne-Anfrage: Entwicklung des Gewerbestandorts Gorch-Fock-Strasse im Beueler Osten</title>
-<updated>2026-06-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261163"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027973"/>
-<summary>Große Anfrage · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027512#beratung-2026-06-03-Beirat%20B%C3%BCrgerbeteiligung</id>
-<title>Beirat Bürgerbeteiligung: „geändert beschlossen“ – 260955 Veröffentlichung der Vorhabenliste: 164698 - Erstellung eines Verkehrskonzeptes für das Gebiet Schwarzrheindorf-Ost und Vilich</title>
-<updated>2026-06-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260955"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027512"/>
-<summary>Empfehlung am 2026-06-03; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026795#beratung-2026-06-02-Hauptausschuss</id>
-<title>Hauptausschuss: „zur Kenntnis genommen“ – 260429-02 ST Stellungnahme zum Antrag CDU-/SPD-Fraktion/FDP-Gruppe: Zukünftige Fahrstrecke des Flughafenbusses SB60</title>
-<updated>2026-06-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260429-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026795"/>
-<summary>Kenntnisnahme am 2026-06-02; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2027512#beratung-2026-05-29-Beirat%20Kinder-%20und%20Jugendbeteiligung</id>
-<title>Beirat Kinder- und Jugendbeteiligung: „geändert beschlossen“ – 260955 Veröffentlichung der Vorhabenliste: 164698 - Erstellung eines Verkehrskonzeptes für das Gebiet Schwarzrheindorf-Ost und Vilich</title>
-<updated>2026-05-29T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#260955"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2027512"/>
-<summary>Empfehlung am 2026-05-29; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

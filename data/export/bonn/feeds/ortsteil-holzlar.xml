@@ -3,18 +3,34 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-holzlar</id>
 <title>Ratsatlas Bonn – Holzlar</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Holzlar</subtitle>
-<updated>2026-11-20T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-holzlar.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030743#vorlage</id>
+<title>Neue Vorlage 262174-02 AA: Änderungsantrag Linke: Bebauung des Geländes der ehemaligen Landwirtschaftskammer Roleber</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#262174-02%20AA"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030743"/>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028568#vorlage</id>
+<title>Neue Vorlage 221646-09: Weiteres Vorgehen Knotenpunkt B56/Reinold-Hagen-Straße/ Bundesgrenzschutzstraße</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#221646-09"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028568"/>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030634#vorlage</id>
 <title>Neue Vorlage 262169-02 ST: Übermittagsbetreuung für Kinder: Stellungnahme zur Drucksachengruppe 262169</title>
 <updated>2026-11-20T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#262169-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030634"/>
-<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 40 Schulamt · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030441#vorlage</id>
@@ -374,7 +390,7 @@
 <updated>2026-05-18T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#260206-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025791"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung nimmt zum Antrag der Grünen Stellung: Nur wenn der Antrag angenommen wird, senkt sie an der Königstraße an der Ecke Kaiserstraße vor der Unterführung den Bordstein ab und bringt Markierungen für Radfahrer*innen sowie eine klare Gehwegmarkierung an. Die Maßnahme kostet etwa 13.000 Euro.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026574#beratung-2026-05-05-Bezirksvertretung%20Hardtberg</id>
@@ -446,7 +462,7 @@
 <updated>2026-04-29T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#260313"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025754"/>
-<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden</summary>
+<summary>Beschlussvorlage · federführend: 61 Stadtplanungsamt · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, an der Siebengebirgsstraße in Roleber (Beuel) die planungsrechtlichen Voraussetzungen für eine Einfach-Sporthalle zu schaffen. Dazu soll ein vorhabenbezogener Bebauungsplan im beschleunigten Verfahren aufgestellt werden. Die Halle soll auf einer städtischen Fläche am Sportplatz Roleber errichtet werden.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025574#beratung-2026-04-29-Ausschuss%20f%C3%BCr%20Beteiligung%20der%20B%C3%BCrgerinnen%20und%20B%C3%BCrger</id>
@@ -558,7 +574,7 @@
 <updated>2026-03-03T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#254097-01%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025832"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Grüne-Bezirksfraktion und die Linke beantragen Änderungen zur Fällgenehmigung für eine Schwarz-Kiefer auf dem Baugrundstück Im Versteck in Bonn. Sie fordern drei Ersatzpflanzungen auf dem Grundstück mit Bäumen aus der GALK-Liste und ausreichend Wurzelraum.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025472#vorlage</id>
@@ -566,7 +582,7 @@
 <updated>2026-02-20T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#253789-02%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025472"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Stellungnahme der Verwaltung empfiehlt, den Bürgerantrag für eine Fußgängerampel am Veilchenweg Ecke Pützhecke in Bonn-Hoholz anzunehmen. Die Grundschule Om Berg wird am Schulwegplanprojekt teilnehmen, um dort eine bessere Querung zu planen. Konkrete Pläne sollen in der zweiten Jahreshälfte 2026 vorgestellt werden.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025574#vorlage</id>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#252693-03%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023633"/>
 <summary>Anregung am 2025-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2022552#beratung-2025-07-09-Sportausschuss</id>
-<title>Sportausschuss: „zur Kenntnis genommen“ – 252693-02 ST Koalitionsantrag: Änderung Bebauungsplan 8423-16</title>
-<updated>2025-07-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#252693-02%20ST"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2022552"/>
-<summary>Kenntnisnahme am 2025-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2021816#beratung-2025-07-09-Sportausschuss</id>
-<title>Sportausschuss: „geändert beschlossen“ – 252693 Koalitionsantrag: Änderung Bebauungsplan 8423-16</title>
-<updated>2025-07-09T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:holzlar#252693"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2021816"/>
-<summary>Anregung am 2025-07-09; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

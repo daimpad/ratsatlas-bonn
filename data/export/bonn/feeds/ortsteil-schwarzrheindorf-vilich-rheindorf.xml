@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-schwarzrheindorf-vilich-rheindorf</id>
 <title>Ratsatlas Bonn – Schwarzrheindorf / Vilich-Rheindorf</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Schwarzrheindorf / Vilich-Rheindorf</subtitle>
-<updated>2026-11-12T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-schwarzrheindorf-vilich-rheindorf.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2029677#vorlage</id>
+<title>Neue Vorlage 261774-02 ST: Stellungnahme der Verwaltung zu Bürgerantrag: Antrag zur Überprüfung und Anpassung der Verkehrsführung im Bereich Clemensstraße, Stiftsstraße, Dixstraße, Mirecourtstraße und „Am Köppekreuz“ in Bonn-Vilich-Schwarzrheindorf</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#261774-02%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029677"/>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030438#vorlage</id>
 <title>Neue Vorlage 262171: Verkehrslenkung im Combahnviertel</title>
@@ -622,7 +630,7 @@
 <updated>2026-03-11T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#260297"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025712"/>
-<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+<summary>Mitteilungsvorlage · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung informiert über den aktuellen Planungsstand der Stadtbahnlinie 17 zwischen Köln, Bonn und Niederkassel. Geplant ist, die Linie von Köln-Sürth über Niederkassel und Bonn-Beuel bis zum Bonner Hauptbahnhof zu verlängern. Für den Abschnitt PFA 6 teilen sich der Rhein-Sieg-Kreis und die Stadt Bonn die Planungskosten je zur Hälfte.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025500#beratung-2026-03-04-Bezirksvertretung%20Beuel</id>
@@ -678,7 +686,7 @@
 <updated>2026-02-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#254037-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025500"/>
-<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 33 Bürgerdienste · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, den Bürgerantrag zur Durchsetzung der 30-km/h-Regelung in der Rheindorfer Straße abzulehnen. Eine Radaranalyse ergab eine Überschreitungsquote von 4,5 Prozent und eine Durchschnittsgeschwindigkeit unter 30 km/h, weshalb derzeit keine weiteren Maßnahmen nötig sind.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025182#vorlage</id>
@@ -686,7 +694,7 @@
 <updated>2026-01-29T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#253447-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025182"/>
-<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung hat den Bürgerantrag zur Verlegung des Zebrastreifens im Bereich Stiftsstraße/Dixstraße geprüft und spricht sich dagegen aus, weil eine Verlegung in die Stiftsstraße hinein Fußgängern einen Umweg bringen würde und die Geschwindigkeit dort bereits gering ist. Die Bezirksvertretung soll die Stellungnahme zur Kenntnis nehmen und den Antrag als erledigt erklären.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025161#vorlage</id>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#253487-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2023905"/>
 <summary>Stellungnahme der Verwaltung · federführend: 61 Stadtplanungsamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung beantwortet eine CDU-Anfrage zur Stadtbahn B56 am Combahnfriedhof und nach Siegburg. Sie teilt mit, dass Verhandlungen mit der Kirchengemeinde noch nicht aufgenommen wurden, ein Baubeginn Ende 2026 nicht realistisch ist und der Rhein-Sieg-Kreis sowie Sankt Augustin und Siegburg der Linienänderung und Taktverdichtung zugestimmt haben.</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024343#vorlage</id>
-<title>Neue Vorlage 253792: Bürgerantrag: Neugestaltung Spielplatz im Bereich der Doppelkirche Schwarzrheindorf/Petrusstraße</title>
-<updated>2025-10-02T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:schwarzrheindorf-vilich-rheindorf#253792"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024343"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: entschieden</summary>
 </entry>
 </feed>

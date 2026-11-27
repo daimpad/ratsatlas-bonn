@@ -10751,6 +10751,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 240351-02 DA	kein Ort						
 240351-04 DA	kein Ort						
 240351-05 ST	kein Ort						
+240351-06	kein Ort						
 240352	kein Ort						
 240352-01 ST	kein Ort						
 240355	verortet	Hauptteil	volltext_strasse	Platz der Vereinten Nationen	Gronau	mittel	2
@@ -12587,7 +12588,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
 241998	kein Ort						
-241998-01 ST	kein Ort						
 242006	Titel ohne gemeinsamen Ort, nicht verortet						
 242009	Titel ohne gemeinsamen Ort, nicht verortet						
 242011	nur in Anlagen genannt, nicht verortet						
@@ -16683,7 +16683,6 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261885-01 ST	kein Ort						
 261885-03 AA	kein Ort						
 261886	kein Ort						
-261888	kein Ort						
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Südstadt	niedrig	1
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Weststadt	niedrig	1
 261890	verortet	Hauptteil	volltext_strasse+kreuzung	Gangolfstraße	Bonn-Zentrum	niedrig	1
@@ -16914,8 +16913,10 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262171	verortet	Hauptteil	volltext_strasse	Professor-Neu-Allee	Beuel-Mitte	mittel	6
 262171	verortet	Hauptteil	volltext_strasse+ortsteil	Niederkasseler Straße	Schwarzrheindorf / Vilich-Rheindorf	mittel	2
 262172	kein Ort						
+262172-01 ST	kein Ort						
 262174	verortet	Hauptteil	volltext_strasse+kreuzung	Ettenhausener Straße	Holzlar	mittel	2
 262174	verortet	Hauptteil	volltext_strasse+kreuzung	Rodeweg	Holzlar	mittel	1
+262174-02 AA	kein Ort						
 262178	kein Ort						
 262179	kein Ort						
 262181	nur in Anlagen genannt, nicht verortet						
@@ -16955,14 +16956,15 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262245	verortet	Hauptteil	volltext_strasse	Kiefernweg	Venusberg	niedrig	1
 262246	kein Ort						
 262248	kein Ort						
+262249	kein Ort						
 262250	Titel ohne gemeinsamen Ort, nicht verortet						
 262251	kein Ort						
 262252	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Holtorf	niedrig	1
 262252	verortet	Hauptteil	volltext_strasse	Oberkasseler Straße	Ramersdorf	niedrig	1
 262262	verortet	Hauptteil	volltext_ortsteil_name	Duisdorf	Duisdorf	niedrig	1
-262262	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	niedrig	1
-262262	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	niedrig	1
-262262	verortet	Hauptteil	volltext_ortsteil_name	Ückesdorf	Ückesdorf	niedrig	1
+262262	verortet	Hauptteil	volltext_ortsteil_name	Röttgen	Röttgen	mittel	1
+262262	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	mittel	1
+262262	verortet	Hauptteil	volltext_ortsteil_name	Ückesdorf	Ückesdorf	mittel	1
 262267	Titel ohne gemeinsamen Ort, nicht verortet						
 262273	kein Ort						
 262274	Titel ohne gemeinsamen Ort, nicht verortet						

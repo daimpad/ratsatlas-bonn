@@ -3,11 +3,27 @@
 <id>tag:allris-bonn,2026:feed/thema/wirtschaft</id>
 <title>Ratsatlas Bonn – Wirtschaft und Wissenschaft</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Wirtschaft und Wissenschaft (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-24T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/wirtschaft.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/wirtschaft-und-wissenschaft/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030727#vorlage</id>
+<title>Neue Vorlage 262172-01 ST: Vertagungsbitte zur Volt-Anfrage: Aktueller Sachstand und Perspektive der EU-Förderung für die Bundesstadt Bonn</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262172-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030727"/>
+<summary>Stellungnahme der Verwaltung · federführend: II-4 Referat Städteförderung · Stand: offen</summary>
+</entry>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028866#vorlage</id>
+<title>Neue Vorlage 260703-06: Mitteilungsvorlage zum Antrag der Grünen-Fraktion: Erweiterte Auswertung zum Grundstücksgeschäft Hangelar</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260703-06"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028866"/>
+<summary>Mitteilungsvorlage · federführend: Dezernat OB · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030667#vorlage</id>
 <title>Neue Vorlage 262258: Bürgerantrag: Verbesserung der Beleuchtung und Wegesicherheit auf den Zugangswegen zur Universitätssportanlage (Nachtigallenweg/Bodelschwinghweg), Bonn-Venusberg</title>
@@ -791,21 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261043-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2029129"/>
 <summary>Stellungnahme der Verwaltung · federführend: 03 Amt für Wirtschaftsförderung · Stand: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028902#beratung-2026-09-03-Ausschuss%20f%C3%BCr%20Wirtschaft%2C%20Liegenschaften%20und%20Arbeit</id>
-<title>Ausschuss für Wirtschaft, Liegenschaften und Arbeit: „zur Kenntnis genommen“ – 261528 Jahreswirtschaftsbericht 2026</title>
-<updated>2026-09-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261528"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028902"/>
-<summary>Aktuelle Informationen der Verwaltung am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028881#beratung-2026-09-03-Ausschuss%20f%C3%BCr%20Wirtschaft%2C%20Liegenschaften%20und%20Arbeit</id>
-<title>Ausschuss für Wirtschaft, Liegenschaften und Arbeit: „zur Kenntnis genommen“ – 261522 Firmenjubiläum – Feier – 10 Jahre Digital Hub Region Bonn AG und Startup Week Bonn/Rhein-Sieg</title>
-<updated>2026-09-03T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#261522"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028881"/>
-<summary>Aktuelle Informationen der Verwaltung am 2026-09-03; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
 </entry>
 </feed>
