@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-venusberg</id>
 <title>Ratsatlas Bonn – Venusberg</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Venusberg</subtitle>
-<updated>2026-11-24T00:00:00Z</updated>
+<updated>2026-11-26T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-venusberg.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2028966#vorlage</id>
+<title>Neue Vorlage 261525-01 ST: BBB-Anfrage: Schutz der Bevölkerung vor Waldbränden</title>
+<updated>2026-11-26T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#261525-01%20ST"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028966"/>
+<summary>Stellungnahme der Verwaltung · federführend: 67 Amt für Umwelt und Stadtgrün · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030683#vorlage</id>
 <title>Neue Vorlage 262262: Dringlichkeitsantrag von CDU-SPD: Schließung von 3 evangelischen Kitas im Bonner Westen</title>
@@ -118,7 +126,7 @@
 <updated>2026-11-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#262006"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030088"/>
-<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: offen</summary>
+<summary>Beschlussvorlage · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027418#beratung-2026-11-12-Rat</id>
@@ -486,7 +494,7 @@
 <updated>2026-05-08T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#260462"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026159"/>
-<summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: in Beratung</summary>
+<summary>Mitteilungsvorlage · federführend: 66 Tiefbauamt · Stand: in Beratung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung informiert über den Stand der Bonner Seilbahn: Die 3,8 Kilometer lange Trasse mit fünf Stationen ist weitgehend festgelegt und das Nutzen-Kosten-Verhältnis beträgt 1,79. Das Planfeststellungsverfahren soll 2028 beginnen, die Fertigstellung ist für 2032 geplant.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2027389#beratung-2026-05-07-Rat</id>
@@ -582,7 +590,7 @@
 <updated>2026-04-17T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#253159-03%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026501"/>
-<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung</summary>
+<summary>Stellungnahme der Verwaltung · federführend: 66 Tiefbauamt · Stand: beraten, ohne Entscheidung · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung teilt mit, dass für den Haager Weg und die Sigmund-Freud-Straße keine Querschnittsänderung möglich ist. Stattdessen werden die Fahrbahnen grundhaft saniert: der Haager Weg 2026 und die Sigmund-Freud-Straße 2027. Der weitere Haager Weg soll bis 2029 saniert werden.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026375#vorlage</id>
@@ -598,7 +606,7 @@
 <updated>2026-03-27T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#221847-14"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026127"/>
-<summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: entschieden</summary>
+<summary>Beschlussvorlage · federführend: 33 Bürgerdienste · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Verwaltung schlägt vor, die Gebührenordnung für Bewohnerparkausweise zu ändern. Ein Ausweis kostet künftig 120 Euro für ein Jahr oder 240 Euro für zwei Jahre. Die Änderung tritt am 1. Januar 2027 in Kraft.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025304#beratung-2026-03-26-Kulturausschuss</id>
@@ -630,7 +638,7 @@
 <updated>2026-03-12T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#221847-13%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026019"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Fraktionen Volt und Linke beantragen, dass die Verwaltung prüft, ob Bewohnerparkausweisgebühren in Bonn künftig nach Fahrzeuggröße berechnet werden. Dabei soll ein aufkommensneutrales Modell mit steigenden Gebühren für größere und breitere Autos geprüft werden, wobei Koblenz als Beispiel dient. Auch die Berücksichtigung des Gewichts soll geprüft werden.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2026019#beratung-2026-03-12-Rat</id>
@@ -694,7 +702,7 @@
 <updated>2026-03-10T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#221847-12%20AA"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2025982"/>
-<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden</summary>
+<summary>Änderungsantrag · federführend: 01-2 Ratsbüro · Stand: entschieden · KI-Kurzfassung (abgeleitet, Einzelheiten können ungenau sein): Die Kooperation beantragt, die Gebühren für Bewohnerparkausweise neu festzulegen: 60 Euro für sechs Monate, 120 Euro für ein Jahr, 240 Euro für zwei Jahre, 25 Euro für Ersatzausweise und 15 Euro bei Änderungen. Eine soziale Staffelung für Bonnausweisinhaber soll entfallen.</summary>
 </entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2025735#vorlage</id>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#240754-03"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024143"/>
 <summary>Kenntnisnahme am 2025-12-15; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2024143#beratung-2025-12-10-Bezirksvertretung%20Beuel</id>
-<title>Bezirksvertretung Beuel: „zur Kenntnis genommen“ – 240754-03 Barrierefreier Umbau von Bushaltestellen - Wartehallen</title>
-<updated>2025-12-10T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:venusberg#240754-03"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2024143"/>
-<summary>Kenntnisnahme am 2025-12-10; Ergebnis laut OParl-Lite. Stand der Vorlage: in Beratung</summary>
 </entry>
 </feed>

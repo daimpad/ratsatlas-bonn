@@ -1527,10 +1527,10 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "number": "1.16.1",
+     "result": "zur Kenntnis genommen",
+     "public": 1,
+     "status": "beraten"
     }
    ],
    "superordinated": [
@@ -1574,7 +1574,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2029611",
-   "stand": "in Beratung",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -1634,8 +1634,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "number": "1.16.1",
+     "result": "zur Kenntnis genommen",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     }
    ],
    "soll": {
@@ -4167,10 +4169,10 @@
      "meeting": null,
      "start_date": null,
      "cancelled": null,
-     "number": null,
-     "result": null,
-     "public": null,
-     "status": "offen"
+     "number": "1.16",
+     "result": "zur Kenntnis genommen - mit Maßgabe",
+     "public": 1,
+     "status": "beraten"
     }
    ],
    "superordinated": [],
@@ -4214,7 +4216,7 @@
    ],
    "plans": [],
    "source_object": "https://www.bonn.sitzung-online.de/oparl/papers/2028952",
-   "stand": "in Beratung",
+   "stand": "beraten, ohne Entscheidung",
    "themes": [
     {
      "theme": "verkehr",
@@ -4266,8 +4268,10 @@
      "status": "belegt",
      "source": "oparl-bonn",
      "date_status": "unklar",
-     "stand": "offen",
-     "note": "ohne_sitzung"
+     "number": "1.16",
+     "result": "zur Kenntnis genommen - mit Maßgabe",
+     "stand": "beraten",
+     "result_source": "oparl-lite"
     },
     {
      "typ": "folgevorlage",
@@ -8418,6 +8422,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Verwaltung gibt ihre Stellungnahme zur Fußgängerampel an der Theodor-Litt-Straße Ecke Hermann-Wandersleb-Ring ab. Mit 27 Sekunden Grün- und Schutzzeit ist die Querung für Fußgänger ausreichend lang, ein Defekt liegt nicht vor. Nach Ostern werden die Schaltungen geprüft und mittelfristig am gesamten Hermann-Wandersleb-Ring neu geplant.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-27"
    }
   },
   {
@@ -8924,6 +8933,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die Grüne-Bezirksfraktion beantragt, den entfernten Straßenbaum am Übergang von Siemensstraße und Auf dem Hügel schnellstmöglich neu zu pflanzen. Außerdem soll der Grünbewuchs am Hang zwischen Verweyenstraße und An der Dransdorfer Mühle verstärkt werden.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-27"
    }
   },
   {
@@ -9386,6 +9400,11 @@
      "bv"
     ],
     "abweichung": []
+   },
+   "kurzfassung": {
+    "text": "Die CDU-Bezirksfraktion beantragt, die im Januar 2026 in Endenich auf Parkplätzen errichteten Fahrradbügel an neue Standorte umzusetzen. Die Standorte sollen im Rahmen eines Ortstermins festgelegt werden, da die Parkplätze für den Einzelhandel wichtig sind.",
+    "modell": "mistral-large-latest",
+    "erzeugt": "2026-11-27"
    }
   },
   {

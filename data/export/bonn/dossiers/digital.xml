@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/thema/digital</id>
 <title>Ratsatlas Bonn – Digitale Verwaltung</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Digitale Verwaltung (Zuordnung abgeleitet)</subtitle>
-<updated>2026-11-18T00:00:00Z</updated>
+<updated>2026-11-27T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/dossiers/digital.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/thema/digitale-verwaltung/"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030748#vorlage</id>
+<title>Neue Vorlage 262295: Grüne-Antrag: Abschlussmeldungen im Mängelmelder</title>
+<updated>2026-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#262295"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030748"/>
+<summary>Antrag · federführend: 01-2 Ratsbüro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030519#vorlage</id>
 <title>Neue Vorlage 262017-01 ST: Zentralisierung der IT in der Bonner Stadtverwaltung</title>
@@ -799,13 +807,5 @@
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260693-01%20ST"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026672"/>
 <summary>Kenntnisnahme am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: beraten, ohne Entscheidung</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2026586#beratung-2026-07-07-Ausschuss%20f%C3%BCr%20Digitalisierung%2C%20Dienstleistung%20und%20Verwaltungsmodernisierung</id>
-<title>Ausschuss für Digitalisierung, Dienstleistung und Verwaltungsmodernisierung: „geändert beschlossen“ – 260693 BBB-Antrag Erhöhung des Einsatzes von Open Source Software und „Software Made in Germany/Europa“ in der Bundesstadt Bonn</title>
-<updated>2026-07-07T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ohne:2026#260693"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2026586"/>
-<summary>Empfehlung am 2026-07-07; Ergebnis laut OParl-Lite. Stand der Vorlage: entschieden</summary>
 </entry>
 </feed>

@@ -3,11 +3,19 @@
 <id>tag:allris-bonn,2026:feed/ortsteil-vilich</id>
 <title>Ratsatlas Bonn – Vilich</title>
 <subtitle>Neue Vorlagen und Beratungsergebnisse: Vilich</subtitle>
-<updated>2026-11-26T00:00:00Z</updated>
+<updated>2026-11-27T00:00:00Z</updated>
 <link rel="self" type="application/atom+xml" href="https://bonn.ratsatlas.de/data/export/bonn/feeds/ortsteil-vilich.xml"/>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich"/>
 <author><name>Ratsatlas Bonn</name><uri>https://bonn.ratsatlas.de/</uri></author>
 <rights>Abgeleitet aus dem Ratsinformationssystem der Stadt Bonn (OParl-API, CC0 1.0) und OParl-Lite Bonn von machdenstaat (Sitzungen und Ergebnisse, CC BY 4.0). Maßgeblich ist das Original.</rights>
+<entry>
+<id>https://www.bonn.sitzung-online.de/oparl/papers/2030742#vorlage</id>
+<title>Neue Vorlage 262293: Bürgerantrag: Antrag auf Vermeidung zusätzlichen Verkehrs auf dem Pilgerweg durch die geplante Bebauung an der Gartenstraße</title>
+<updated>2026-11-27T00:00:00Z</updated>
+<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#262293"/>
+<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2030742"/>
+<summary>Anregungen und Beschwerden · federführend: 01-3 Protokoll, Repräsentation und Bürger-Büro · Stand: offen</summary>
+</entry>
 <entry>
 <id>https://www.bonn.sitzung-online.de/oparl/papers/2030741#vorlage</id>
 <title>Neue Vorlage 262292: Bürgerantrag: Anpassung der Verkehrserschließung: Tiefgaragenzufahrt im Bereich Gartenstraße/Nonnenpfad</title>
@@ -798,14 +806,6 @@
 <updated>2026-06-24T00:00:00Z</updated>
 <link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261282"/>
 <link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028270"/>
-<summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: offen</summary>
-</entry>
-<entry>
-<id>https://www.bonn.sitzung-online.de/oparl/papers/2028237#vorlage</id>
-<title>Neue Vorlage 261271: Bürgerantrag: Errichtung einer Querungshilfe auf der Geislarstraße in Höhe des Vilicher Bachs</title>
-<updated>2026-06-23T00:00:00Z</updated>
-<link rel="alternate" type="text/html" href="https://bonn.ratsatlas.de/?gebiet=ortsteil:vilich#261271"/>
-<link rel="related" type="text/html" href="https://www.bonn.sitzung-online.de/public/VO020?VOLFDNR=2028237"/>
 <summary>Anregungen und Beschwerden · federführend: 01-1 OB-Büro · Stand: offen</summary>
 </entry>
 </feed>

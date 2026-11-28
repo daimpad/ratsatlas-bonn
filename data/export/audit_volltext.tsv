@@ -7624,6 +7624,8 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 222181-01 AA	kein Ort						
 222181-02 ST	kein Ort						
 222181-03	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
+222181-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Derlestraße	Duisdorf	mittel	1
+222181-04 ST	verortet	Hauptteil	volltext_strasse+kreuzung	Wesselheideweg	Duisdorf	mittel	4
 222182	kein Ort						
 222182-01 ST	kein Ort						
 222182-02 AA	verortet	Hauptteil	volltext_stadtbezirk_name	Hardtberg		mittel	1
@@ -12588,6 +12590,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Adenauerallee	Südstadt	niedrig	1
 241997-01 ST	verortet	Hauptteil	volltext_strasse	Bornheimer Straße	Nordstadt	niedrig	1
 241998	kein Ort						
+241998-01 ST	kein Ort						
 242006	Titel ohne gemeinsamen Ort, nicht verortet						
 242009	Titel ohne gemeinsamen Ort, nicht verortet						
 242011	nur in Anlagen genannt, nicht verortet						
@@ -15468,6 +15471,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 260703-03 AA	kein Ort						
 260703-04 AA	kein Ort						
 260703-05 AA	kein Ort						
+260703-06	kein Ort						
 260705	kein Ort						
 260705-01 ST	kein Ort						
 260705-02	kein Ort						
@@ -16326,6 +16330,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261522	kein Ort						
 261524	Titel ohne gemeinsamen Ort, nicht verortet						
 261525	kein Ort						
+261525-01 ST	verortet	Hauptteil	volltext_ortsteil_name	Venusberg	Venusberg	mittel	1
 261525-02 ST	kein Ort						
 261526	kein Ort						
 261528	kein Ort						
@@ -16624,6 +16629,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261813-02 AA	kein Ort						
 261813-03	kein Ort						
 261813-04	kein Ort						
+261813-05 ST	nur in Anlagen genannt, nicht verortet						
 261814	kein Ort						
 261815	kein Ort						
 261815-01 ST	kein Ort						
@@ -16683,6 +16689,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 261885-01 ST	kein Ort						
 261885-03 AA	kein Ort						
 261886	kein Ort						
+261888	kein Ort						
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Südstadt	niedrig	1
 261890	verortet	Hauptteil	volltext_strasse	Poppelsdorfer Allee	Weststadt	niedrig	1
 261890	verortet	Hauptteil	volltext_strasse+kreuzung	Gangolfstraße	Bonn-Zentrum	niedrig	1
@@ -16898,9 +16905,11 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262156	Titel ohne gemeinsamen Ort, nicht verortet						
 262159	Titel ohne gemeinsamen Ort, nicht verortet						
 262163	kein Ort						
+262163-01 ST	kein Ort						
 262165	verortet	Hauptteil	volltext_strasse+ortsteil	Beueler Straße	Vilich- Müldorf	mittel	4
 262165	verortet	Hauptteil	volltext_strasse+ortsteil	Schultheißstraße	Vilich	mittel	4
 262166	verortet	Hauptteil	volltext_strasse	Theaterplatz	Alt-Godesberg	mittel	1
+262166-01 ST	verortet	Hauptteil	volltext_stadtbezirk_adjektiv	Bad Godesberg		niedrig	1
 262167	kein Ort						
 262167-01 ST	kein Ort						
 262168	Titel ohne gemeinsamen Ort, nicht verortet						
@@ -16951,6 +16960,7 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262238	verortet	Hauptteil	volltext_ortsteil_name	Pützchen/Bechlinghoven	Pützchen/Bechlinghoven	niedrig	1
 262238	verortet	Hauptteil	volltext_strasse	Paracelsusstraße	Lannesdorf	niedrig	1
 262241	kein Ort						
+262241-01 ST	kein Ort						
 262243	verortet	Hauptteil	volltext_strasse+hausnummer	Budapester Straße	Bonn-Zentrum	niedrig	1
 262244	kein Ort						
 262245	verortet	Hauptteil	volltext_strasse	Kiefernweg	Venusberg	niedrig	1
@@ -16969,3 +16979,4 @@ drucksache	befund	teil	methode	ort	ortsteil	konfidenz	nennungen
 262273	kein Ort						
 262274	Titel ohne gemeinsamen Ort, nicht verortet						
 262276	Titel ohne gemeinsamen Ort, nicht verortet						
+262295	kein Ort						

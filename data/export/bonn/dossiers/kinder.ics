@@ -97,8 +97,9 @@ URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2006028
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005746
-DTSTAMP:20261126T170000Z
-DTSTART:20261126T170000Z
+DTSTAMP:20261126T170300Z
+DTSTART:20261126T170300Z
+DTEND:20261126T195200Z
 SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
  be\nTagesordnung: https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=
@@ -109,7 +110,7 @@ URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005746
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005994
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261127T150000Z
 DTSTART:20261127T150000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
@@ -121,7 +122,7 @@ URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005994
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005612
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20261202T160000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
 DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung: http
@@ -133,7 +134,7 @@ URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005612
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005647
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20261202T160000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung: https://www.
@@ -145,7 +146,7 @@ URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005647
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005588
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20261203T170000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung: https://www.bonn.si
@@ -157,7 +158,7 @@ URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005588
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005628
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20261208T170000Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung: https://
@@ -169,7 +170,7 @@ URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005628
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2005589
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20261210T160000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung: https://www.bonn.sitzung-onlin
@@ -181,7 +182,7 @@ URL:https://www.bonn.sitzung-online.de/public/TO010?SILFDNR=2005589
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006726
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270120T170000Z
 SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
@@ -191,7 +192,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006698
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270122T150000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
@@ -200,7 +201,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006592
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270126T170000Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
@@ -209,7 +210,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006672
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270127T160000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
@@ -218,7 +219,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006485
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270202T170000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
@@ -227,7 +228,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006600
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270211T170000Z
 SUMMARY:Ausschuss für Kinder\, Jugend und Familie
 DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
@@ -237,7 +238,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006559
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270216T160000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
@@ -246,7 +247,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006549
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270217T160000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
 DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
@@ -255,7 +256,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006475
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270217T230000Z
 DTEND:20270218T230000Z
 SUMMARY:Rat
@@ -265,7 +266,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006673
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270224T160000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
@@ -274,7 +275,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006699
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270226T150000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
@@ -283,7 +284,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006727
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270311T170000Z
 SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
@@ -293,7 +294,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006560
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270316T160000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
@@ -302,7 +303,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006593
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270316T170000Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
@@ -311,7 +312,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006601
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270317T170000Z
 SUMMARY:Ausschuss für Kinder\, Jugend und Familie
 DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
@@ -321,7 +322,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006486
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270318T170000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
@@ -330,7 +331,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006551
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270407T150000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
 DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
@@ -339,7 +340,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006476
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270408T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
@@ -348,7 +349,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006674
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270414T150000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
@@ -357,7 +358,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006700
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270416T140000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
@@ -366,7 +367,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006561
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270420T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
@@ -375,7 +376,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006594
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270427T160000Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
@@ -384,7 +385,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006732
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270427T160000Z
 SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
@@ -394,7 +395,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006487
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270504T160000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
@@ -403,7 +404,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006602
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270505T160000Z
 SUMMARY:Ausschuss für Kinder\, Jugend und Familie
 DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
@@ -413,7 +414,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006552
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270512T150000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
 DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
@@ -422,7 +423,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006477
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270513T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
@@ -431,7 +432,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006701
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270521T140000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
@@ -440,7 +441,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006562
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270525T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
@@ -449,7 +450,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006595
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270601T160000Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
@@ -458,7 +459,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006675
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270602T150000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
@@ -467,7 +468,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006488
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270608T160000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
@@ -476,7 +477,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006554
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270616T150000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
 DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
@@ -485,7 +486,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006728
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270616T160000Z
 SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
@@ -495,7 +496,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006478
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270617T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
@@ -504,7 +505,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006702
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270618T140000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
@@ -513,7 +514,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006596
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270706T160000Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
@@ -522,7 +523,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006605
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270707T160000Z
 SUMMARY:Ausschuss für Kinder\, Jugend und Familie
 DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
@@ -532,7 +533,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006563
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270713T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
@@ -541,7 +542,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006729
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270713T160000Z
 SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
@@ -551,7 +552,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006676
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270714T150000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
@@ -560,7 +561,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006555
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270901T150000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
 DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
@@ -569,7 +570,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006489
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270902T160000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
@@ -578,7 +579,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006479
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270906T220000Z
 DTEND:20270907T220000Z
 SUMMARY:Rat
@@ -588,7 +589,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006677
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270909T150000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:(PÜMA) Sitzung der Bezirksvertretung Beuel\nTagesordnung noch 
@@ -597,7 +598,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006565
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270914T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
@@ -606,7 +607,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006597
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270914T160000Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
@@ -615,7 +616,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006679
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270922T150000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
@@ -624,7 +625,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006606
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270922T160000Z
 SUMMARY:Ausschuss für Kinder\, Jugend und Familie
 DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
@@ -634,7 +635,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006703
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20270924T140000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
@@ -643,7 +644,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006730
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271005T160000Z
 SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
@@ -653,7 +654,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006556
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271006T150000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
 DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
@@ -662,7 +663,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006490
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271007T160000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
@@ -671,7 +672,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006481
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271014T150000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
@@ -680,7 +681,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006567
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271019T150000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
@@ -689,7 +690,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006599
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271116T170000Z
 SUMMARY:Bezirksvertretung Hardtberg
 DESCRIPTION:Sitzung der Bezirksvertretung Hardtberg\nTagesordnung noch nich
@@ -698,7 +699,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006680
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271117T160000Z
 SUMMARY:Bezirksvertretung Beuel
 DESCRIPTION:Sitzung der Bezirksvertretung Beuel\nTagesordnung noch nicht ve
@@ -707,7 +708,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006557
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271124T160000Z
 SUMMARY:Bezirksvertretung Bad Godesberg
 DESCRIPTION:Sitzung der Bezirksvertretung Bad Godesberg\nTagesordnung noch 
@@ -716,7 +717,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006731
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271124T170000Z
 SUMMARY:Ausschuss für Finanzen\, Beteiligungen und Vergabe
 DESCRIPTION:Sitzung des Ausschusses für Finanzen\, Beteiligungen und Verga
@@ -726,7 +727,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006704
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271126T150000Z
 SUMMARY:Beirat Kinder- und Jugendbeteiligung
 DESCRIPTION:Sitzung des Beirates Kinder- und Jugendbeteiligung\nTagesordnun
@@ -735,7 +736,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006568
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271130T160000Z
 SUMMARY:Bezirksvertretung Bonn
 DESCRIPTION:Sitzung der Bezirksvertretung Bonn\nTagesordnung noch nicht ver
@@ -744,7 +745,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006607
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271201T170000Z
 SUMMARY:Ausschuss für Kinder\, Jugend und Familie
 DESCRIPTION:Sitzung des Ausschusses für Kinder-\, Jugend und Familie\nTage
@@ -754,7 +755,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006491
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271202T170000Z
 SUMMARY:Hauptausschuss
 DESCRIPTION:Sitzung des Hauptausschusses\nTagesordnung noch nicht veröffen
@@ -763,7 +764,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:https://www.bonn.sitzung-online.de/oparl/meetings/2006482
-DTSTAMP:20261127T000000Z
+DTSTAMP:20261128T000000Z
 DTSTART:20271209T160000Z
 SUMMARY:Rat
 DESCRIPTION:Sitzung des Rates\nTagesordnung noch nicht veröffentlicht.\nQu
